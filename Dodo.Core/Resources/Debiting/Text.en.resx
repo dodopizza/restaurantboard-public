@@ -1,0 +1,3420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="AccountingPacking" xml:space="preserve">
+    <value>Storage units for inventory</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AddDebiting" xml:space="preserve">
+    <value>Add write-off</value>
+  </data>
+  <data name="AddPeriod" xml:space="preserve">
+    <value>Add period</value>
+  </data>
+  <data name="AddPositionMessage" xml:space="preserve">
+    <value>To add an item, please enter its name</value>
+  </data>
+  <data name="AddTransfer" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddTransfer_Duplicate[1]" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Adoption" xml:space="preserve">
+    <value>Receipt</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllSuppliersText" xml:space="preserve">
+    <value>All suppliers</value>
+  </data>
+  <data name="AllUnitsText" xml:space="preserve">
+    <value>All units</value>
+  </data>
+  <data name="AlphabetFirstLetter" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="AlphabetLastLetter" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="ApplicantCardAddedLabel" xml:space="preserve">
+    <value>Received on</value>
+  </data>
+  <data name="ApplicantCardAddressLabel" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ApplicantCardAgainLabel" xml:space="preserve">
+    <value>Repeatedly</value>
+  </data>
+  <data name="ApplicantCardAnswerLabel" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="ApplicantCardCommentLabel" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ApplicantCardCommentPlaceholder" xml:space="preserve">
+    <value>Comment is required</value>
+  </data>
+  <data name="ApplicantCardDuplicatesLabel" xml:space="preserve">
+    <value>Copies</value>
+  </data>
+  <data name="ApplicantCardFioLabel" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="ApplicantCardHasChildrenLabel" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="ApplicantCardHeader" xml:space="preserve">
+    <value>Candidate application form</value>
+  </data>
+  <data name="ApplicantCardHistoryLabel" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="ApplicantCardHobbyLabel" xml:space="preserve">
+    <value>Hobbies</value>
+  </data>
+  <data name="ApplicantCardInputCommentText" xml:space="preserve">
+    <value>Enter comment here</value>
+  </data>
+  <data name="ApplicantCardLastHistoryLabel" xml:space="preserve">
+    <value>Last {0} application-related events</value>
+  </data>
+  <data name="ApplicantCardLink" xml:space="preserve">
+    <value>Application form</value>
+  </data>
+  <data name="ApplicantCardMedicalBookLabel" xml:space="preserve">
+    <value>Medical certificate</value>
+  </data>
+  <data name="ApplicantCardOpenDuplicateLabel" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ApplicantCardPersonalInfoLabel" xml:space="preserve">
+    <value>Personal inormation</value>
+  </data>
+  <data name="ApplicantCardPhoneLabel" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="ApplicantCardShiftsLabel" xml:space="preserve">
+    <value>Shifts</value>
+  </data>
+  <data name="ApplicantCardSmokingLabel" xml:space="preserve">
+    <value>Smoking</value>
+  </data>
+  <data name="ApplicantCardSourceDescriptionLabel" xml:space="preserve">
+    <value>Source (additional description)</value>
+  </data>
+  <data name="ApplicantCardSourceLabel" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="ApplicantCardStatusLabel" xml:space="preserve">
+    <value>Answer option</value>
+  </data>
+  <data name="ApplicantCardTimeLabel" xml:space="preserve">
+    <value>At what time</value>
+  </data>
+  <data name="ApplicantCardTypeLabel" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ApplicantCardUnitLabel" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="ApplicantCardWhenLabel" xml:space="preserve">
+    <value>When</value>
+  </data>
+  <data name="ApplicantCardWorkExperienceLabel" xml:space="preserve">
+    <value>Work experience</value>
+  </data>
+  <data name="ApplicantCardWorkInfoLabel" xml:space="preserve">
+    <value>Job information</value>
+  </data>
+  <data name="ApplicantFormAddressLabel" xml:space="preserve">
+    <value>Current address</value>
+  </data>
+  <data name="ApplicantFormBirthdayLabel" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="ApplicantFormFirstNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ApplicantFormHasChildrenLabel" xml:space="preserve">
+    <value>Do you have children?</value>
+  </data>
+  <data name="ApplicantFormHeader" xml:space="preserve">
+    <value>Application form</value>
+  </data>
+  <data name="ApplicantFormHint" xml:space="preserve">
+    <value>Fields with asterisk (*) are required</value>
+  </data>
+  <data name="ApplicantFormHobby" xml:space="preserve">
+    <value>Hobbies</value>
+  </data>
+  <data name="ApplicantFormHobbyPlaceholder" xml:space="preserve">
+    <value>Tell us about your interests</value>
+  </data>
+  <data name="ApplicantFormLastNameLabel" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="ApplicantFormMedicalBookLabel" xml:space="preserve">
+    <value>Do you have a valid medical certificate?</value>
+  </data>
+  <data name="ApplicantFormPersonalInfoLabel" xml:space="preserve">
+    <value>Personal inormation</value>
+  </data>
+  <data name="ApplicantFormPhoneLabel" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="ApplicantFormPleaseSelect" xml:space="preserve">
+    <value>Select…</value>
+  </data>
+  <data name="ApplicantFormShiftLabel" xml:space="preserve">
+    <value>Work hours</value>
+  </data>
+  <data name="ApplicantFormSmokingLabel" xml:space="preserve">
+    <value>Smoking?</value>
+  </data>
+  <data name="ApplicantFormSourceLabel" xml:space="preserve">
+    <value>I heard about Dodo Pizza</value>
+  </data>
+  <data name="ApplicantFormTypeLabel" xml:space="preserve">
+    <value>I want to work</value>
+  </data>
+  <data name="ApplicantFormUnitLabel" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="ApplicantFormWorkExperience" xml:space="preserve">
+    <value>Work experience</value>
+  </data>
+  <data name="ApplicantFormWorkExperiencePlaceholder" xml:space="preserve">
+    <value>if you have work experience, please, tell us.</value>
+  </data>
+  <data name="ApplicantFormWorkInfoLabel" xml:space="preserve">
+    <value>Job information</value>
+  </data>
+  <data name="ApplicantInboxStatusLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ApplicantInboxUnitColumn" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="ApplicantInboxVacanciesLabel" xml:space="preserve">
+    <value>Vacancies</value>
+  </data>
+  <data name="ApplicantsInboxActualVacanciesLabel" xml:space="preserve">
+    <value>Relevant vacancies</value>
+  </data>
+  <data name="ApplicantsInboxAddedDateColumn" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="ApplicantsInboxAgainLabel" xml:space="preserve">
+    <value>Repeatedly</value>
+  </data>
+  <data name="ApplicantsInboxAgeColumn" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="ApplicantsInboxAllStatusesText" xml:space="preserve">
+    <value>All statuses</value>
+  </data>
+  <data name="ApplicantsInboxAllTypesText" xml:space="preserve">
+    <value>All vacancies</value>
+  </data>
+  <data name="ApplicantsInboxAnswerAvgTimeLabel" xml:space="preserve">
+    <value>The average speed of answer</value>
+  </data>
+  <data name="ApplicantsInboxCallTab" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="ApplicantsInboxCommonTab" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="ApplicantsInboxDueDateColumn" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="ApplicantsInboxHideFilter" xml:space="preserve">
+    <value>Hide filter</value>
+  </data>
+  <data name="ApplicantsInboxHiredTotal" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="ApplicantsInboxInterviewTab" xml:space="preserve">
+    <value>Interview</value>
+  </data>
+  <data name="ApplicantsInboxLastTab" xml:space="preserve">
+    <value>Most recent activity</value>
+  </data>
+  <data name="ApplicantsInboxLink" xml:space="preserve">
+    <value>Application forms</value>
+  </data>
+  <data name="ApplicantsInboxMedicalBookTotal" xml:space="preserve">
+    <value>Getting MC</value>
+  </data>
+  <data name="ApplicantsInboxMonthTotal" xml:space="preserve">
+    <value>Application forms per month</value>
+  </data>
+  <data name="ApplicantsInboxNewLabel" xml:space="preserve">
+    <value>New today</value>
+  </data>
+  <data name="ApplicantsInboxNewLink" xml:space="preserve">
+    <value>New application</value>
+  </data>
+  <data name="ApplicantsInboxNonSmokingLabel" xml:space="preserve">
+    <value>doesn't smoke</value>
+  </data>
+  <data name="ApplicantsInboxNotAnsweredLabel" xml:space="preserve">
+    <value>Unanswered</value>
+  </data>
+  <data name="ApplicantsInboxRejectTotal" xml:space="preserve">
+    <value>Rejection</value>
+  </data>
+  <data name="ApplicantsInboxReserveTotal" xml:space="preserve">
+    <value>Backup personnel</value>
+  </data>
+  <data name="ApplicantsInboxSearchTab" xml:space="preserve">
+    <value>Search results</value>
+  </data>
+  <data name="ApplicantsInboxSearchText" xml:space="preserve">
+    <value>Search by name or telephone number</value>
+  </data>
+  <data name="ApplicantsInboxShiftFilter" xml:space="preserve">
+    <value>Can work</value>
+  </data>
+  <data name="ApplicantsInboxShiftsColumn" xml:space="preserve">
+    <value>Shifts</value>
+  </data>
+  <data name="ApplicantsInboxShowFilter" xml:space="preserve">
+    <value>show filter</value>
+  </data>
+  <data name="ApplicantsInboxSmokingColumn" xml:space="preserve">
+    <value>Smoking</value>
+  </data>
+  <data name="ApplicantsInboxSmokingLabel" xml:space="preserve">
+    <value>Smoker</value>
+  </data>
+  <data name="ApplicantsInboxStatusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ApplicantsInboxTypeColumn" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ApplicantsStatisticRebuild" xml:space="preserve">
+    <value>Remake</value>
+  </data>
+  <data name="AskDeleteDebiting" xml:space="preserve">
+    <value>Are you sure you want to delete write-off?</value>
+  </data>
+  <data name="AskDeleteSupply" xml:space="preserve">
+    <value>Are you sure you want to delete incoming stock?</value>
+  </data>
+  <data name="AverageCheckTitle" xml:space="preserve">
+    <value>Average check</value>
+  </data>
+  <data name="AverageConsumption" xml:space="preserve">
+    <value>Average consumption</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BasicInformationLabel" xml:space="preserve">
+    <value>General information</value>
+  </data>
+  <data name="BeforeYesterday" xml:space="preserve">
+    <value>the day before yesterday</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="ByDays" xml:space="preserve">
+    <value>By day</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CanceledReportType" xml:space="preserve">
+    <value>order cancelation</value>
+  </data>
+  <data name="CancelOrder" xml:space="preserve">
+    <value>Cancel order</value>
+  </data>
+  <data name="CancelTransaction" xml:space="preserve">
+    <value>Cancel transaction</value>
+  </data>
+  <data name="CashierLabel" xml:space="preserve">
+    <value>POS station</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CertificatesForExpressPizzeriaTooltip" xml:space="preserve">
+    <value>Given out certificates and % of late orders</value>
+  </data>
+  <data name="CertificatesTooltip" xml:space="preserve">
+    <value>Given out certificates and % of late delivery orders</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Select…</value>
+  </data>
+  <data name="ChooseSupplierLabel" xml:space="preserve">
+    <value>Select supplier</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrders" xml:space="preserve">
+    <value>Structure of customer database by number of orders</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrdersDesc" xml:space="preserve">
+    <value>In the table, all customers that were active during the period are are grouped by number of orders. Gray marks a group's share in total quantity of active customers.</value>
+  </data>
+  <data name="ClientDatabaseStructureTitle" xml:space="preserve">
+    <value>Customer database structure</value>
+  </data>
+  <data name="ClientDatabaseStructureTitleNew" xml:space="preserve">
+    <value>New customer base structure</value>
+  </data>
+  <data name="ClientHistoryTitle" xml:space="preserve">
+    <value>Customer history</value>
+  </data>
+  <data name="ClientOrdersTitle" xml:space="preserve">
+    <value>Customer's orders</value>
+  </data>
+  <data name="ComeBack" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CommentPlaceholder" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CommercialInvoiceDate" xml:space="preserve">
+    <value>Shipping date</value>
+  </data>
+  <data name="CommercialInvoiceNumber" xml:space="preserve">
+    <value>Shipping list #</value>
+  </data>
+  <data name="ComparingToDayTooltip" xml:space="preserve">
+    <value>Compared to {0:ddd}, {0:dd MMM yyyy}</value>
+  </data>
+  <data name="ComparingToPeriodTooltip" xml:space="preserve">
+    <value>Compared to period {0:dd MMM yyyy} - {1:dd MMM yyyy}</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Shipped amount doesn't match ordered amount. Continue?</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithShippedAndReceivedDiscrepancies" xml:space="preserve">
+    <value>Received amount doesn't match shipped amount. Continue?</value>
+  </data>
+  <data name="Confirm_YouCandEditRequest" xml:space="preserve">
+    <value>You will not be a ble to edit application after sending. Send application?</value>
+  </data>
+  <data name="ConsumptionQC" xml:space="preserve">
+    <value>Call-Center cost</value>
+  </data>
+  <data name="Corruption" xml:space="preserve">
+    <value>Product spoilage</value>
+  </data>
+  <data name="CostAndUCMenuItem" xml:space="preserve">
+    <value>COGS and UnitCost</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="CountAcronim" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="CountLabel" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>Drivers</value>
+  </data>
+  <data name="CouriersLabel" xml:space="preserve">
+    <value>Drivers</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>Current balance</value>
+  </data>
+  <data name="CurrentDayPlaceholder" xml:space="preserve">
+    <value>press to select</value>
+  </data>
+  <data name="CurrentWeek" xml:space="preserve">
+    <value>This week</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>till</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>Day off</value>
+  </data>
+  <data name="DayOfWeekLabel" xml:space="preserve">
+    <value>Select date</value>
+  </data>
+  <data name="Debiting" xml:space="preserve">
+    <value>Write-offs</value>
+  </data>
+  <data name="DebitingDateFilter" xml:space="preserve">
+    <value>Write-off of supplies on</value>
+  </data>
+  <data name="DebitingMaterial" xml:space="preserve">
+    <value>Written-off supplies</value>
+  </data>
+  <data name="DebitingMaterialLabel" xml:space="preserve">
+    <value>Write-off supplies</value>
+  </data>
+  <data name="DebitingNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="DebitingPizzeria" xml:space="preserve">
+    <value>Store/stock</value>
+  </data>
+  <data name="DebitingReason" xml:space="preserve">
+    <value>Reasons for writing-off</value>
+  </data>
+  <data name="DebitingTime" xml:space="preserve">
+    <value>Write-off date</value>
+  </data>
+  <data name="DebitingWhoDebited" xml:space="preserve">
+    <value>Who performed write-off</value>
+  </data>
+  <data name="Default_Day_Select" xml:space="preserve">
+    <value>day of the week</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Defective product</value>
+  </data>
+  <data name="DefectReportType" xml:space="preserve">
+    <value>defective product</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteShift" xml:space="preserve">
+    <value>Delete shift</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Supply date</value>
+  </data>
+  <data name="DepartmentLevelHoliday" xml:space="preserve">
+    <value>Department holiday</value>
+  </data>
+  <data name="DeprecatedBrowserMessage" xml:space="preserve">
+    <value>Sorry, your browser is outdated. Please, update your browser or download another one.</value>
+  </data>
+  <data name="DeselectAllLabel" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Discrepancy</value>
+  </data>
+  <data name="DodoIS" xml:space="preserve">
+    <value>Dodo IS</value>
+  </data>
+  <data name="DodoISFooterText" xml:space="preserve">
+    <value>Dodo Pizza</value>
+  </data>
+  <data name="Dollar" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>Effective date</value>
+  </data>
+  <data name="EffectivePeriod" xml:space="preserve">
+    <value>Validity period</value>
+  </data>
+  <data name="EfficiencyPercentage" xml:space="preserve">
+    <value>Schedule efficiency</value>
+  </data>
+  <data name="EmployeeCategoryCashier" xml:space="preserve">
+    <value>Cashier</value>
+  </data>
+  <data name="EmployeeCategoryDateWith" xml:space="preserve">
+    <value>Date from</value>
+  </data>
+  <data name="EmployeeCategoryInstructor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="EmployeeCategoryManager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedFailedBeginDate" xml:space="preserve">
+    <value>New category starting date is not specified or has incorrect format</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedNotLargerCurrentDate" xml:space="preserve">
+    <value>Starting date of new category cannot be later than current date</value>
+  </data>
+  <data name="EmployeeCategoryNotSelected" xml:space="preserve">
+    <value>Employee's category isn't specified</value>
+  </data>
+  <data name="EmployeeCategoryPizzmaker" xml:space="preserve">
+    <value>Pizzamaker</value>
+  </data>
+  <data name="EmployeeCategoryTrainee" xml:space="preserve">
+    <value>Trainee</value>
+  </data>
+  <data name="EmployeeComment" xml:space="preserve">
+    <value>Employee comment:</value>
+  </data>
+  <data name="EmployeeCouriersDynamicsAwayColumn" xml:space="preserve">
+    <value>Drivers turnover</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="EmployeeDateJSFormat" xml:space="preserve">
+    <value>dd.mm.yy</value>
+  </data>
+  <data name="EmployeeDateMask" xml:space="preserve">
+    <value>99/99/9999</value>
+  </data>
+  <data name="EmployeeDateTimeCulture" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumn" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumnInfo" xml:space="preserve">
+    <value>Proportion of newly hired employees</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonth" xml:space="preserve">
+    <value>Monthly turnover</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonthInfo" xml:space="preserve">
+    <value>Ratio of employment terminations this month to current employees</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYear" xml:space="preserve">
+    <value>Employee turnover per year</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Ratio of employment terminations YTD to current employees</value>
+  </data>
+  <data name="EmployeeDynamicsFeedbackColumn" xml:space="preserve">
+    <value>Reviews&lt;br/&gt;anonymous/ identified</value>
+  </data>
+  <data name="EmployeeDynamicsHeader" xml:space="preserve">
+    <value>Staff turnover</value>
+  </data>
+  <data name="EmployeeDynamicsHiredColumn" xml:space="preserve">
+    <value>Hired</value>
+  </data>
+  <data name="EmployeeDynamicsMonthColumn" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="EmployeeDynamicsTerminatedColumn" xml:space="preserve">
+    <value>Terminated employment</value>
+  </data>
+  <data name="EmployeeDynamicsWorkedLessThanMonthColumn" xml:space="preserve">
+    <value>Employed for less than a month</value>
+  </data>
+  <data name="EmployeeEditAbsenceTypeLabel" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="EmployeeEditAdditionalPhoneLabel" xml:space="preserve">
+    <value>Additional phone number</value>
+  </data>
+  <data name="EmployeeEditBarcodeLabel" xml:space="preserve">
+    <value>Bar code</value>
+  </data>
+  <data name="EmployeeEditBirthdayLabel" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="EmployeeEditCarBrandLabel" xml:space="preserve">
+    <value>Model of the vehicle</value>
+  </data>
+  <data name="EmployeeEditCarColorLabel" xml:space="preserve">
+    <value>Colour of the car</value>
+  </data>
+  <data name="EmployeeEditCategoryLabel" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="EmployeeEditCharSuffix" xml:space="preserve">
+    <value>symbols</value>
+  </data>
+  <data name="EmployeeEditEmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmployeeEditErrorFoundMessage" xml:space="preserve">
+    <value>The following errors were found</value>
+  </data>
+  <data name="EmployeeEditFacebookProfileLabel" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="EmployeeEditFacebookStatusLabel" xml:space="preserve">
+    <value>Status or description</value>
+  </data>
+  <data name="EmployeeEditFemaleLabel" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="EmployeeEditFirstNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="EmployeeEditGenderLabel" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="EmployeeEditHeader" xml:space="preserve">
+    <value>Edit profile (personal card)</value>
+  </data>
+  <data name="EmployeeEditHireDateLabel" xml:space="preserve">
+    <value>Date of employment</value>
+  </data>
+  <data name="EmployeeEditHolidaysDatesLabel" xml:space="preserve">
+    <value>Vacation period</value>
+  </data>
+  <data name="EmployeeEditHospitalsDatesLabel" xml:space="preserve">
+    <value>Sick-leave period</value>
+  </data>
+  <data name="EmployeeEditLPhotoLabel" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="EmployeeEditMaleLabel" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="EmployeeEditMedicalBookLabel" xml:space="preserve">
+    <value>Medical check-up date</value>
+  </data>
+  <data name="EmployeeEditMedicalBookShelfLifeLabel" xml:space="preserve">
+    <value>Medical certificate till</value>
+  </data>
+  <data name="EmployeeEditNumberLabel" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="EmployeeEditPatronymicLabel" xml:space="preserve">
+    <value>Patronymic</value>
+  </data>
+  <data name="EmployeeEditPersonalInfoLabel" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="EmployeeEditPFRLabel" xml:space="preserve">
+    <value>PFR</value>
+  </data>
+  <data name="EmployeeEditPFRMask" xml:space="preserve">
+    <value>999-999-999 99</value>
+  </data>
+  <data name="EmployeeEditPhoneLabel" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="EmployeeEditPhotoLabel" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="EmployeeEditRequiredFieldsMessage" xml:space="preserve">
+    <value>Fields with asterisk (*) are required</value>
+  </data>
+  <data name="EmployeeEditSecondNameLabel" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="EmployeeEditStateDateFromLabel" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="EmployeeEditStateDescriptionLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EmployeeEditStateTimeFromLabel" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="EmployeeEditStatusLabel" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="EmployeeEditTabNoLabel" xml:space="preserve">
+    <value>Personnel number</value>
+  </data>
+  <data name="EmployeeEditTabNoMask" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="EmployeeEditTerminationDateLabel" xml:space="preserve">
+    <value>Employment termination date</value>
+  </data>
+  <data name="EmployeeEditTerminationReasonLabel" xml:space="preserve">
+    <value>Reason for termination</value>
+  </data>
+  <data name="EmployeeEditTitle" xml:space="preserve">
+    <value>Edit employee</value>
+  </data>
+  <data name="EmployeeEditTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EmployeeEditUnitLabel" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="EmployeeEditWorkInfoLabel" xml:space="preserve">
+    <value>Job information</value>
+  </data>
+  <data name="EmployeeEditYearOfVehicleCarLabel" xml:space="preserve">
+    <value>Year manufactured</value>
+  </data>
+  <data name="EmployeeErrorLoginAlreadyUsed" xml:space="preserve">
+    <value>This phone number has already been specifiedd for another employee</value>
+  </data>
+  <data name="EmployeeErrorNoPhoto" xml:space="preserve">
+    <value>Employee's photo hasn't been added</value>
+  </data>
+  <data name="EmployeeErrorPhoneNumber" xml:space="preserve">
+    <value>You need to enter a valid phone number</value>
+  </data>
+  <data name="EmployeeErrorPhoto" xml:space="preserve">
+    <value>An error occurred while saving image</value>
+  </data>
+  <data name="EmployeeErrorPhotoExtension" xml:space="preserve">
+    <value>Format of photo must be jpg or png</value>
+  </data>
+  <data name="EmployeeErrorPhotoHeight" xml:space="preserve">
+    <value>Height of photo must be {0} px</value>
+  </data>
+  <data name="EmployeeErrorPhotoSize" xml:space="preserve">
+    <value>Size of photo cannot exceed {0}Kb</value>
+  </data>
+  <data name="EmployeeErrorPhotoWidth" xml:space="preserve">
+    <value>Width of photo must be {0} px</value>
+  </data>
+  <data name="EmployeeErrorRole" xml:space="preserve">
+    <value>Unknown type of employee has been specified</value>
+  </data>
+  <data name="EmployeeErrorShiftDateFormat" xml:space="preserve">
+    <value>Date is incorrect</value>
+  </data>
+  <data name="EmployeeErrorShiftEndDate" xml:space="preserve">
+    <value>Shift end date must be later than shift start date</value>
+  </data>
+  <data name="EmployeeErrorShiftTimeFormat" xml:space="preserve">
+    <value>Time is incorrect</value>
+  </data>
+  <data name="EmployeeKitchenDynamicsAwayColumn" xml:space="preserve">
+    <value>Kitchen turnover</value>
+  </data>
+  <data name="EmployeeLabel" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="EmployeeListAgeColumnTitle" xml:space="preserve">
+    <value>Age</value>
+  </data>
+  <data name="EmployeeListBirthdayFemaleLabel" xml:space="preserve">
+    <value>was born</value>
+  </data>
+  <data name="EmployeeListBirthdayMaleLabel" xml:space="preserve">
+    <value>was born</value>
+  </data>
+  <data name="EmployeeListBirthdaysHeader" xml:space="preserve">
+    <value>Birthday today</value>
+  </data>
+  <data name="EmployeeListEmailLabel" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="EmployeeListExperienceColumnTitle" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="EmployeeListHireDate" xml:space="preserve">
+    <value>Date received</value>
+  </data>
+  <data name="EmployeeListHiredLabel" xml:space="preserve">
+    <value>Employed</value>
+  </data>
+  <data name="EmployeeListLessThanDay" xml:space="preserve">
+    <value>Less than a day</value>
+  </data>
+  <data name="EmployeeListMedicalBookLabel" xml:space="preserve">
+    <value>Med.certificate</value>
+  </data>
+  <data name="EmployeeListMedicalBookName" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="EmployeeListMedicalBookRemained" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="EmployeeListMedicalBooks" xml:space="preserve">
+    <value>Medical certificate</value>
+  </data>
+  <data name="EmployeeListMedicalBookType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EmployeeListNameColumnTitle" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="EmployeeListNoBirthdayLabel" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="EmployeeListNoEmailLabel" xml:space="preserve">
+    <value>not specified</value>
+  </data>
+  <data name="EmployeeListNoMedicalBookLabel" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="EmployeeListNoPhoneNumberLabel" xml:space="preserve">
+    <value>not specified</value>
+  </data>
+  <data name="EmployeeListPhoneNumberLabel" xml:space="preserve">
+    <value>telephone</value>
+  </data>
+  <data name="EmployeeListStatusLabel" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="EmployeeListTabNoLabel" xml:space="preserve">
+    <value>personnel number</value>
+  </data>
+  <data name="EmployeeListTerminatedLabel" xml:space="preserve">
+    <value>Terminated employment</value>
+  </data>
+  <data name="EmployeeListTerminationColumnTitle" xml:space="preserve">
+    <value>Reason for termination</value>
+  </data>
+  <data name="EmployeeListTitle" xml:space="preserve">
+    <value>Lists of employees</value>
+  </data>
+  <data name="EmployeeListTypeColumnTitle" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="EmployeeListUnitLabel" xml:space="preserve">
+    <value>store</value>
+  </data>
+  <data name="EmployeeMedicalBooksExpiredText" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="EmployeeMedicalBooksFullNameColumnTitle" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="EmployeeMedicalBooksProlongLink" xml:space="preserve">
+    <value>Extend</value>
+  </data>
+  <data name="EmployeeMedicalBooksRemainedColumnTitle" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="EmployeeMedicalBooksTypeColumnTitle" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="EmployeeMoodWeekLabel" xml:space="preserve">
+    <value>week from {0:dd.MM} to {1:dd:MM}</value>
+  </data>
+  <data name="EmployeeNewLabel" xml:space="preserve">
+    <value>New employee</value>
+  </data>
+  <data name="EmployeeNewTitle" xml:space="preserve">
+    <value>New employee</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYear" xml:space="preserve">
+    <value>Forecasted staff turnover per year</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>YTD turnover divided by the number of already ellapsed months and multiplied by 12</value>
+  </data>
+  <data name="EmployeeSearchLabel" xml:space="preserve">
+    <value>Search for empoyee</value>
+  </data>
+  <data name="EmployeeSearchOpenLink" xml:space="preserve">
+    <value>Open profile</value>
+  </data>
+  <data name="EmployeeSearchPlaceholder" xml:space="preserve">
+    <value>Enter name of the employee</value>
+  </data>
+  <data name="EmployeeShiftNotInScheduleText" xml:space="preserve">
+    <value>out of schedule</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginDateColumnTitle" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginTimeColumnTitle" xml:space="preserve">
+    <value>Start time</value>
+  </data>
+  <data name="EmployeeShiftSettingsCategoryColumnTitle" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseEmployee" xml:space="preserve">
+    <value>Select employee</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndDateColumnTitle" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndTimeColumnTitle" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="EmployeeShiftSettingsTitle" xml:space="preserve">
+    <value>Correction of employee's work hours</value>
+  </data>
+  <data name="EmployeesOnShift" xml:space="preserve">
+    <value>Employees on the shift</value>
+  </data>
+  <data name="EmployeeStatisticsAbsentLabel" xml:space="preserve">
+    <value>Absent</value>
+  </data>
+  <data name="EmployeeStatisticsActiveCountLabel" xml:space="preserve">
+    <value>Working</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationComment" xml:space="preserve">
+    <value>Orientation - in the last 30 days, percentage of new (under 2 months) emloyees that terminated employment.</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationFactorLabel" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="EmployeeStatisticsAddEmployeeLink" xml:space="preserve">
+    <value>To add an employee</value>
+  </data>
+  <data name="EmployeeStatisticsApplicantsLabel" xml:space="preserve">
+    <value>Application forms received</value>
+  </data>
+  <data name="EmployeeStatisticsAwayComment" xml:space="preserve">
+    <value>Turnover-ratio of employment terminations this month to current employees</value>
+  </data>
+  <data name="EmployeeStatisticsAwayFactorLabel" xml:space="preserve">
+    <value>Turnover this month</value>
+  </data>
+  <data name="EmployeeStatisticsFeedbackLabel" xml:space="preserve">
+    <value>Reviews in total/anonymous</value>
+  </data>
+  <data name="EmployeeStatisticsFindBySurname" xml:space="preserve">
+    <value>Search by employee's last name</value>
+  </data>
+  <data name="EmployeeStatisticsHideReasonsForDismissal" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="EmployeeStatisticsHiredTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Hired/fired this month</value>
+  </data>
+  <data name="EmployeeStatisticsHiredThisMonthLabel" xml:space="preserve">
+    <value>Received this month</value>
+  </data>
+  <data name="EmployeeStatisticsHiringReportLink" xml:space="preserve">
+    <value>Dynamic view</value>
+  </data>
+  <data name="EmployeeStatisticsHolidaysCountLabel" xml:space="preserve">
+    <value>Vacation</value>
+  </data>
+  <data name="EmployeeStatisticsHospitalsCountLabel" xml:space="preserve">
+    <value>Sick-leave</value>
+  </data>
+  <data name="EmployeeStatisticsLeaveLabel" xml:space="preserve">
+    <value>Vacation leave application</value>
+  </data>
+  <data name="EmployeeStatisticsListLink" xml:space="preserve">
+    <value>Full list of employees</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookExpiredCountLabel" xml:space="preserve">
+    <value>Med.certificate expired</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookHeader" xml:space="preserve">
+    <value>Med.certificate is expiring</value>
+  </data>
+  <data name="EmployeeStatisticsNormLabel" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="EmployeeStatisticsNormsLabel" xml:space="preserve">
+    <value>Employees' requirements</value>
+  </data>
+  <data name="EmployeeStatisticsOtherAbsenceCountLabel" xml:space="preserve">
+    <value>Other reason</value>
+  </data>
+  <data name="EmployeeStatisticsOtherReasonsForDismissal" xml:space="preserve">
+    <value>Other reasons</value>
+  </data>
+  <data name="EmployeeStatisticsPopularReasonsForDismissal" xml:space="preserve">
+    <value>Most common reasons for termination of employment in the last 12 months</value>
+  </data>
+  <data name="EmployeeStatisticsProductivityLabel" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="EmployeeStatisticsSelectedPizzeria" xml:space="preserve">
+    <value>Select unit</value>
+  </data>
+  <data name="EmployeeStatisticsStuffLabel" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="EmployeeStatisticsSuspendedCountLabel" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="EmployeeStatisticsTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Terminated employment this month</value>
+  </data>
+  <data name="EmployeeStatisticsTitle" xml:space="preserve">
+    <value>Common information</value>
+  </data>
+  <data name="EmployeeStatisticsTotalCountLabel" xml:space="preserve">
+    <value>Employees in total</value>
+  </data>
+  <data name="EmployeeStatisticsWorkedLessThanMonthCountLabel" xml:space="preserve">
+    <value>Employed for less than a month</value>
+  </data>
+  <data name="EmployeesTrainingFailedAddCurrentCategoryStage" xml:space="preserve">
+    <value>You can't assign an already assigned category again</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeTimeMask" xml:space="preserve">
+    <value>4.19375</value>
+  </data>
+  <data name="EmployeeTraining" xml:space="preserve">
+    <value>Training</value>
+  </data>
+  <data name="EmptyTransactionMessage" xml:space="preserve">
+    <value>Unforunately, there were no transactions during the specified period</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Error_CanNotCancel" xml:space="preserve">
+    <value>Can't cancel the order</value>
+  </data>
+  <data name="Error_CouldNotGetYandexTransactions" xml:space="preserve">
+    <value>An error occured while receiving the list of transactions.</value>
+  </data>
+  <data name="Error_RequiedCommentIfRejected" xml:space="preserve">
+    <value>When refusing an application you need to fill in the field comment</value>
+  </data>
+  <data name="Error_YandexTransactionsRangeIsTooBig" xml:space="preserve">
+    <value>The interval between dates can not exceed 1 month.</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="ExpectedDate" xml:space="preserve">
+    <value>Expected by date</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="ExperienceBonus" xml:space="preserve">
+    <value>Premium for experience</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expiration date</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Export in spreadsheet</value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Extra time start date</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Extra-time start time</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Employee's category</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Select types of employees</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Last name, first name of employee</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>End date of extra time</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>End time of extra time</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>Extra time</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>Number of hours</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>Last name, first name of manager</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Fact" xml:space="preserve">
+    <value>Actually</value>
+  </data>
+  <data name="FeatureCardCheckDateLabel" xml:space="preserve">
+    <value>Check date</value>
+  </data>
+  <data name="FeatureCardChooseTime" xml:space="preserve">
+    <value>Specify when you can work</value>
+  </data>
+  <data name="FeatureCardCollapseFilterLink" xml:space="preserve">
+    <value>Minimize filter</value>
+  </data>
+  <data name="FeatureCardDescription" xml:space="preserve">
+    <value>Schedule, where people indicate when they can work</value>
+  </data>
+  <data name="FeatureCardEveningOptionText" xml:space="preserve">
+    <value>in the evening</value>
+  </data>
+  <data name="FeatureCardExpandFilterLink" xml:space="preserve">
+    <value>Maximize filter</value>
+  </data>
+  <data name="FeatureCardFullNamePlaceholder" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="FeatureCardHolidayLabel" xml:space="preserve">
+    <value>Day off</value>
+  </data>
+  <data name="FeatureCardHolidayOptionText" xml:space="preserve">
+    <value>day off</value>
+  </data>
+  <data name="FeatureCardMorningOptionText" xml:space="preserve">
+    <value>in the morning - in the afternoon</value>
+  </data>
+  <data name="FeatureCardNightOptionText" xml:space="preserve">
+    <value>at night</value>
+  </data>
+  <data name="FeatureCardOptionsTitle" xml:space="preserve">
+    <value>Can work</value>
+  </data>
+  <data name="FeatureCardTitle" xml:space="preserve">
+    <value>Availability schedule</value>
+  </data>
+  <data name="FeatureCardWorkdayLabel" xml:space="preserve">
+    <value>Can work</value>
+  </data>
+  <data name="FederalLevelHoliday" xml:space="preserve">
+    <value>National holiday</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>Field {0} is empty</value>
+  </data>
+  <data name="ForecastForSeveralDays" xml:space="preserve">
+    <value>Days left with current stock</value>
+  </data>
+  <data name="FormationOfOrder" xml:space="preserve">
+    <value>Order formation</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="FridayShort" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="From2" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="FromSupplier" xml:space="preserve">
+    <value>From (supplier)</value>
+  </data>
+  <data name="GenericReportType" xml:space="preserve">
+    <value>all types</value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="GoodsProduct" xml:space="preserve">
+    <value>Good/product</value>
+  </data>
+  <data name="Grivna" xml:space="preserve">
+    <value>hryvna</value>
+  </data>
+  <data name="GuiltyPerson" xml:space="preserve">
+    <value>Human factor</value>
+  </data>
+  <data name="HiringReportAdaptationColumnTitle" xml:space="preserve">
+    <value>Orientation index</value>
+  </data>
+  <data name="HiringReportAwayColumnTitle" xml:space="preserve">
+    <value>Turnover coefficient</value>
+  </data>
+  <data name="HiringReportBuildLink" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="HiringReportChooseDateLabel" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="HiringReportChooseUnitLabel" xml:space="preserve">
+    <value>Select unit</value>
+  </data>
+  <data name="HiringReportExcelExportLink" xml:space="preserve">
+    <value>Export in spreadsheet</value>
+  </data>
+  <data name="HiringReportFactColumnTitle" xml:space="preserve">
+    <value>Actual number of employees</value>
+  </data>
+  <data name="HiringReportHiredColumnTitle" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="HiringReportMonthColumnTitle" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="HiringReportTerminatedColumnTitle" xml:space="preserve">
+    <value>Terminated employment</value>
+  </data>
+  <data name="HiringReportWorkedLessThanMonthColumnTitle" xml:space="preserve">
+    <value>Employed for less than a month</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>hour</value>
+  </data>
+  <data name="HourAbbr" xml:space="preserve">
+    <value>h.</value>
+  </data>
+  <data name="Html_ListenDodoFm" xml:space="preserve">
+    <value>LISTEN TO&lt;br&gt;DODOFM.RU</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>Receipts</value>
+  </data>
+  <data name="InputSupplyComposition" xml:space="preserve">
+    <value>Enter content of incoming stock</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Invoice date</value>
+  </data>
+  <data name="InvoiceDate_error" xml:space="preserve">
+    <value>Enter receipt date</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Invoice #</value>
+  </data>
+  <data name="InvoiceNumber_error" xml:space="preserve">
+    <value>Fill out receipt form</value>
+  </data>
+  <data name="IsTransactionCompleted" xml:space="preserve">
+    <value>Payment status</value>
+  </data>
+  <data name="JQGridPageCaption" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="JQGridPageFromCaption" xml:space="preserve">
+    <value>out of</value>
+  </data>
+  <data name="JQGridViewCaption" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Kitchen</value>
+  </data>
+  <data name="KitchenLabel" xml:space="preserve">
+    <value>Kitchen</value>
+  </data>
+  <data name="LabourCostTooltip" xml:space="preserve">
+    <value>Kitchen staff payments % to total sales</value>
+  </data>
+  <data name="LastRevision" xml:space="preserve">
+    <value>Most recent inventory</value>
+  </data>
+  <data name="LastTwelveMonths" xml:space="preserve">
+    <value>Last 12 months</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="LossesAndExceesMenuItem" xml:space="preserve">
+    <value>Losses and surplus</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDate" xml:space="preserve">
+    <value>Launch date</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDateDay" xml:space="preserve">
+    <value>21st of January 2015</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDesc" xml:space="preserve">
+    <value>Loyalty program statistics v2</value>
+  </data>
+  <data name="LoyaltyAnaliticsSystem" xml:space="preserve">
+    <value>Loyalty program</value>
+  </data>
+  <data name="LoyaltyAnalyticsCoverage" xml:space="preserve">
+    <value>Audience reach</value>
+  </data>
+  <data name="LoyaltyAnalyticsDodollarSpending" xml:space="preserve">
+    <value>Dodo-rubles spent</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitations" xml:space="preserve">
+    <value>Dynamics of invites</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitationsComment" xml:space="preserve">
+    <value>This table shows new clients referred by the customer in your region per specified period.</value>
+  </data>
+  <data name="LoyaltyAnalyticsInvitedClientsCount" xml:space="preserve">
+    <value>New customers generated through referral program</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastMonthNewClientsCount" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastWeekNewClientsCount" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="LoyaltyAnalyticsProfit" xml:space="preserve">
+    <value>Referrals' orders</value>
+  </data>
+  <data name="LoyaltyAnalyticsTheySelfClientsCount" xml:space="preserve">
+    <value>New customers generated not through referral program.</value>
+  </data>
+  <data name="LoyaltyAnalyticsTitle" xml:space="preserve">
+    <value>Loyalty program</value>
+  </data>
+  <data name="LoyaltyAnalyticsTodayNewClientsCount" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="LoyaltyAnalyticsTotalSpending" xml:space="preserve">
+    <value>Total sales (roubles+dodo-roubles)</value>
+  </data>
+  <data name="LoyaltyAnalyticsWholeNewClientsCount" xml:space="preserve">
+    <value>New customers generated per period</value>
+  </data>
+  <data name="LoyaltyAnalyticsYesterdayNewClientsCount" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="LunchSettings" xml:space="preserve">
+    <value>Staff meals setup</value>
+  </data>
+  <data name="ManagerSettingScheduleManagerLabel" xml:space="preserve">
+    <value>Schedule manager contacts</value>
+  </data>
+  <data name="ManagerSettingsChoose" xml:space="preserve">
+    <value>Select employee</value>
+  </data>
+  <data name="ManagerSettingsDepartmentDirectorLabel" xml:space="preserve">
+    <value>Division director</value>
+  </data>
+  <data name="ManagerSettingsHeader" xml:space="preserve">
+    <value>Managers' contact info</value>
+  </data>
+  <data name="ManagerSettingsHint" xml:space="preserve">
+    <value>Displayed in employees' personal accounts</value>
+  </data>
+  <data name="ManagerSettingsScheduleManagerLabel" xml:space="preserve">
+    <value>Schedule manager contacts</value>
+  </data>
+  <data name="ManagerSettingsUnitDirectorLabel" xml:space="preserve">
+    <value>Store manager</value>
+  </data>
+  <data name="ManagersLabel" xml:space="preserve">
+    <value>Managers</value>
+  </data>
+  <data name="MarketingActivities" xml:space="preserve">
+    <value>Marketing events</value>
+  </data>
+  <data name="MarketingTitle" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="MateraialRemainingInfoBlock" xml:space="preserve">
+    <value>Data processed as of most recent inventory on</value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Supplies</value>
+  </data>
+  <data name="MaterialConsumption" xml:space="preserve">
+    <value>Consumption of supplies</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialError" xml:space="preserve">
+    <value>More than 15 types of supplies selected</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialMessage" xml:space="preserve">
+    <value>Selecting one unit allows to view a consumption report for all supplies. Selecting two or more units allows to view a report for a maximum of 15 entries. The report period must not exceed 35 days.</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByPeriodError" xml:space="preserve">
+    <value>Period of over 35 days is selected</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByUnitsError" xml:space="preserve">
+    <value>No units selected</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>Defective</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>Staff meals</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="MaterialMeasurements" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Supplies</value>
+  </data>
+  <data name="MaterialsType" xml:space="preserve">
+    <value>Type of supplies</value>
+  </data>
+  <data name="MaterialTransfer" xml:space="preserve">
+    <value>Relocation</value>
+  </data>
+  <data name="MaterialTransferSetup" xml:space="preserve">
+    <value>Relocations set-up</value>
+  </data>
+  <data name="MaterialTypeTransferReportType" xml:space="preserve">
+    <value>relocations</value>
+  </data>
+  <data name="MaterialTypeTransfer_ReceivingDateIsInvalid" xml:space="preserve">
+    <value>Shipping date cennot be after the date received.</value>
+  </data>
+  <data name="MenuAllEmployees" xml:space="preserve">
+    <value>All employees</value>
+  </data>
+  <data name="MenuApplicantsInbox" xml:space="preserve">
+    <value>Application forms</value>
+  </data>
+  <data name="MenuApplicantsStatistic" xml:space="preserve">
+    <value>Applications statistics</value>
+  </data>
+  <data name="MenuCourierSchedule" xml:space="preserve">
+    <value>Drivers' schedule</value>
+  </data>
+  <data name="MenuEmployeeBirthdays" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="MenuEmployeeList" xml:space="preserve">
+    <value>Lists of employees</value>
+  </data>
+  <data name="MenuEmployees" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="MenuEmployeeShiftSettings" xml:space="preserve">
+    <value>Shift correction</value>
+  </data>
+  <data name="MenuEmployeeStatistics" xml:space="preserve">
+    <value>Common information</value>
+  </data>
+  <data name="MenuEmployeeWorkingHours" xml:space="preserve">
+    <value>Work hours</value>
+  </data>
+  <data name="MenuExperienceBonusRates" xml:space="preserve">
+    <value>Experience premium</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>Extra time</value>
+  </data>
+  <data name="MenuFeatureCard" xml:space="preserve">
+    <value>Availability schedule</value>
+  </data>
+  <data name="MenuHiringReport" xml:space="preserve">
+    <value>Staff indicators</value>
+  </data>
+  <data name="MenuManagerSettings" xml:space="preserve">
+    <value>Managers' contacts</value>
+  </data>
+  <data name="MenuMonthlyStatistics" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="MenuOperationalStatistics" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="MenuProductivityNorms" xml:space="preserve">
+    <value>Productivity requirements</value>
+  </data>
+  <data name="MenuReports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="MenuReviews" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+  <data name="MenuSalaryHolidayFactors" xml:space="preserve">
+    <value>Calendar of special days</value>
+  </data>
+  <data name="MenuSalaryNightFactors" xml:space="preserve">
+    <value>Night coefficient</value>
+  </data>
+  <data name="MenuSalaryPremiums" xml:space="preserve">
+    <value>Premiums</value>
+  </data>
+  <data name="MenuSalaryRates" xml:space="preserve">
+    <value>Employees' salary rates</value>
+  </data>
+  <data name="MenuSalaryReport" xml:space="preserve">
+    <value>Payroll</value>
+  </data>
+  <data name="MenuSalaryReportWithExperienceRates" xml:space="preserve">
+    <value>Payments (with experience)</value>
+  </data>
+  <data name="MenuSalaryTaxes" xml:space="preserve">
+    <value>Tax index</value>
+  </data>
+  <data name="MenuSchedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuShiftEmployee" xml:space="preserve">
+    <value>Employees on shift</value>
+  </data>
+  <data name="MenuShiftNorms" xml:space="preserve">
+    <value>Summary analysis</value>
+  </data>
+  <data name="MenuShiftSchedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="MenuShiftSettings" xml:space="preserve">
+    <value>Shift parameters</value>
+  </data>
+  <data name="MenuStaff" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="MenuStocks" xml:space="preserve">
+    <value>Stocks</value>
+  </data>
+  <data name="MenuTimeReport" xml:space="preserve">
+    <value>Actual time</value>
+  </data>
+  <data name="MenuTitle_Ratings" xml:space="preserve">
+    <value>Ratings</value>
+  </data>
+  <data name="MenuVacancyList" xml:space="preserve">
+    <value>Vacancies</value>
+  </data>
+  <data name="MenuZoneSettings" xml:space="preserve">
+    <value>Unit settings</value>
+  </data>
+  <data name="Menu_AuditedInventory" xml:space="preserve">
+    <value>Stock after inventory</value>
+  </data>
+  <data name="Menu_CalculateSMS" xml:space="preserve">
+    <value>Payments via SMS</value>
+  </data>
+  <data name="Menu_Finance" xml:space="preserve">
+    <value>Finance</value>
+  </data>
+  <data name="Menu_FinanceIndicators" xml:space="preserve">
+    <value>Indicators</value>
+  </data>
+  <data name="Menu_HolidaysAndWeekends" xml:space="preserve">
+    <value>Holidays and days off</value>
+  </data>
+  <data name="Menu_InventoryManagement" xml:space="preserve">
+    <value>Inventory Management</value>
+  </data>
+  <data name="Menu_KPI_Productivity" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="Menu_MaterialConsumption" xml:space="preserve">
+    <value>Consumption of supplies</value>
+  </data>
+  <data name="Menu_Metrics" xml:space="preserve">
+    <value>Metrics</value>
+  </data>
+  <data name="Menu_Revenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="Menu_RevenueInHourOnEmployee" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="Menu_RevisionDashboard" xml:space="preserve">
+    <value>Inventory summary</value>
+  </data>
+  <data name="Menu_ShopWindowPauseStatistic" xml:space="preserve">
+    <value>Store display stop</value>
+  </data>
+  <data name="Menu_Suppliers" xml:space="preserve">
+    <value>Suppliers</value>
+  </data>
+  <data name="Menu_TargetsOnMonth" xml:space="preserve">
+    <value>Targets for the month</value>
+  </data>
+  <data name="Menu_TargetsOnYear" xml:space="preserve">
+    <value>Targets for the year</value>
+  </data>
+  <data name="Message_AddedDebiting" xml:space="preserve">
+    <value>Entry added {0}. Qty: {1}. Reason: {2}.</value>
+  </data>
+  <data name="Message_AddedSupply" xml:space="preserve">
+    <value>Incoming supplies entry has been added.</value>
+  </data>
+  <data name="Message_AddedSupplyComposition" xml:space="preserve">
+    <value>Entry added {0} - {1}, amount before VAT - {2}, VAT - {3}, VAT amount - {4}, amount with VAT - {5}, price per unit - {6}, price per 1 kg. - {7}</value>
+  </data>
+  <data name="Message_CantLoadChart" xml:space="preserve">
+    <value>Sorry, the schedule is temporarily unavailable</value>
+  </data>
+  <data name="Message_Comment" xml:space="preserve">
+    <value>Comments: {0}.</value>
+  </data>
+  <data name="Message_DebitingComment" xml:space="preserve">
+    <value>Comments: before - {0}, now - {1}.</value>
+  </data>
+  <data name="Message_DebitingReason" xml:space="preserve">
+    <value>Reason: before {0}, now {1}.</value>
+  </data>
+  <data name="Message_DeletedSupplyComposition" xml:space="preserve">
+    <value>Entry removed {0} - {1}, amount before VAT, VAT amount - {3}, amount with VAT - {4}, price per unit - {5}, price per 1 kg - {6}</value>
+  </data>
+  <data name="Message_EditedDebiting" xml:space="preserve">
+    <value>Entry has been changed {0}.</value>
+  </data>
+  <data name="Message_EnterVacancyFields" xml:space="preserve">
+    <value>Fill out the form</value>
+  </data>
+  <data name="Message_InvalidIntervals" xml:space="preserve">
+    <value>Options haven't been saved, periods less than 4 hours have been selected</value>
+  </data>
+  <data name="Message_MaterialTypeTransferWasEdited" xml:space="preserve">
+    <value>Relocation has been edited. Please try again.</value>
+  </data>
+  <data name="Message_NotChoosedAnyUnit" xml:space="preserve">
+    <value>You haven't specified any stores</value>
+  </data>
+  <data name="Message_RemovedDebiting" xml:space="preserve">
+    <value>Entry {0} has been deleted. Quantity: {1}. Reason: {2}</value>
+  </data>
+  <data name="Message_SupplyChangeCostPerKgForMaterialType" xml:space="preserve">
+    <value>This material's price per kg has changed</value>
+  </data>
+  <data name="Message_SupplyCompositionCount" xml:space="preserve">
+    <value>Quantity: before {0}, now {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerKillogramm" xml:space="preserve">
+    <value>Price per 1 kg before - {1}, now - {0}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerPiece" xml:space="preserve">
+    <value>Price per unit: before - {1}, now - {0}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSaveQuestion" xml:space="preserve">
+    <value>Continue?</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaOfVAT" xml:space="preserve">
+    <value>VAT amount: before {0}, now {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithoutVAT" xml:space="preserve">
+    <value>Amount before VAT: before {0}, now {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithVAT" xml:space="preserve">
+    <value>Amount with VAT: before {0}, now {1}.</value>
+  </data>
+  <data name="Message_TemporarilyUnavailable" xml:space="preserve">
+    <value>Sorry, temporarily unavailable</value>
+  </data>
+  <data name="Message_UpdateSupplyComposition" xml:space="preserve">
+    <value>Entry edited {0} -</value>
+  </data>
+  <data name="MinimalShiftLengthForPersonalFood" xml:space="preserve">
+    <value>Minimum duration of shift to be eligible for free meals.</value>
+  </data>
+  <data name="MinimalShiftToCashier" xml:space="preserve">
+    <value>"Minimum duration of cashier shift"</value>
+  </data>
+  <data name="MinimalShiftToCourier" xml:space="preserve">
+    <value>"Minimum duration of driver shift"</value>
+  </data>
+  <data name="MinimalShiftToKitchenWorker" xml:space="preserve">
+    <value>"Minimum duration of kitchen staff shift"</value>
+  </data>
+  <data name="MinimalShiftToPersonalManager" xml:space="preserve">
+    <value>"Minimum duration of supervisor shift"</value>
+  </data>
+  <data name="MinimumStock" xml:space="preserve">
+    <value>Minimum order</value>
+  </data>
+  <data name="MinuteAbbr" xml:space="preserve">
+    <value>min.</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="MondayShort" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="MonthlySpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="MonthlyStatisticBuildLink" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="MonthlyStatisticByDelivery" xml:space="preserve">
+    <value>Delivery: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByDeliveryWithPercent" xml:space="preserve">
+    <value>Delivery: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByPickup" xml:space="preserve">
+    <value>Carryout: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByPickupWithPercent" xml:space="preserve">
+    <value>Carryout: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByStationary" xml:space="preserve">
+    <value>Restaurant: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByStationaryWithPercent" xml:space="preserve">
+    <value>Restaurant: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticDateFormat" xml:space="preserve">
+    <value>MMMMYY</value>
+  </data>
+  <data name="MonthlyStatisticPercentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheck" xml:space="preserve">
+    <value>Average check</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheckUnitOfMeasure" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="MonthlyStatisticsCertificates" xml:space="preserve">
+    <value>Certificates</value>
+  </data>
+  <data name="MonthlyStatisticsCertificatesUnitOfMeasure" xml:space="preserve">
+    <value>pc.</value>
+  </data>
+  <data name="MonthlyStatisticsCountByLastTwelveMonths" xml:space="preserve">
+    <value>Number of orders in the past 12 months</value>
+  </data>
+  <data name="MonthlyStatisticsCountByPeriod" xml:space="preserve">
+    <value>Number of orders</value>
+  </data>
+  <data name="MonthlyStatisticsDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="MonthlyStatisticsEfficiency" xml:space="preserve">
+    <value>Efficiency</value>
+  </data>
+  <data name="MonthlyStatisticsGrowth" xml:space="preserve">
+    <value>Sales increase</value>
+  </data>
+  <data name="MonthlyStatisticsGrowthUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCost" xml:space="preserve">
+    <value>LC (kitchen)</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCostUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLossesTitle" xml:space="preserve">
+    <value>Losses</value>
+  </data>
+  <data name="MonthlyStatisticsLossesUnit" xml:space="preserve">
+    <value>% (of revenue)</value>
+  </data>
+  <data name="MonthlyStatisticsOrders" xml:space="preserve">
+    <value>Measurements</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersGrowth" xml:space="preserve">
+    <value>Increase of number of orders</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHour" xml:space="preserve">
+    <value>Orders per driver per hour</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHourUnitOfMeasure" xml:space="preserve">
+    <value>qty/per h</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersUnitOfMeasure" xml:space="preserve">
+    <value>pc.</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHour" xml:space="preserve">
+    <value>Pizzas and snacks per person per hour</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>qty/per h</value>
+  </data>
+  <data name="MonthlyStatisticsProductivityTitle" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="MonthlyStatisticsRevenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByLastTwelveMonths" xml:space="preserve">
+    <value>Sales in the past 12 months</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByPeriod" xml:space="preserve">
+    <value>Total sales per</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHour" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>rub./per. h</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueUnitOfMeasure" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="MonthlyStatisticsRevenuPerPerson" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="MonthlyStatisticsSaleTitle" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="MonthlyStatisticsSpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="MonthlyStatisticsSpeedUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsStopSalesTimeTitle" xml:space="preserve">
+    <value>Stop sales</value>
+  </data>
+  <data name="MonthlyStatisticUnitOfMeasureCountShort" xml:space="preserve">
+    <value>pc.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="NewBonus" xml:space="preserve">
+    <value>New premium</value>
+  </data>
+  <data name="NewClientsTitle" xml:space="preserve">
+    <value>New customers</value>
+  </data>
+  <data name="NewRate" xml:space="preserve">
+    <value>New premium</value>
+  </data>
+  <data name="NewRevenue" xml:space="preserve">
+    <value>New arrival</value>
+  </data>
+  <data name="NewTransfer" xml:space="preserve">
+    <value>New relocation</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoAddedPosition" xml:space="preserve">
+    <value>no added items</value>
+  </data>
+  <data name="NoCallCenterFound" xml:space="preserve">
+    <value>Operating call-center not found</value>
+  </data>
+  <data name="NoEmployeeShift" xml:space="preserve">
+    <value>--:--</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>non-applicable</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Nothing was found</value>
+  </data>
+  <data name="NovicesLabel" xml:space="preserve">
+    <value>Trainees</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="NumDay1" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="NumDay2" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="NumDay3" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="NumMonth1" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="NumMonth2" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="NumMonth3" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="NumYear1" xml:space="preserve">
+    <value>year</value>
+  </data>
+  <data name="NumYear2" xml:space="preserve">
+    <value>years</value>
+  </data>
+  <data name="NumYear3" xml:space="preserve">
+    <value>years</value>
+  </data>
+  <data name="OfficeManagerRoleText" xml:space="preserve">
+    <value>Division administrator</value>
+  </data>
+  <data name="OperationalStatistics" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="OperationalStatistics2WeekAgo" xml:space="preserve">
+    <value>2 weeks ago</value>
+  </data>
+  <data name="OperationalStatisticsAssemblyTable" xml:space="preserve">
+    <value>Filling</value>
+  </data>
+  <data name="OperationalStatisticsAveragePreparationOrdersTime" xml:space="preserve">
+    <value>Average order preparation time</value>
+  </data>
+  <data name="OperationalStatisticsCertificates" xml:space="preserve">
+    <value>Certificates</value>
+  </data>
+  <data name="OperationalStatisticsCompositeProductsTable" xml:space="preserve">
+    <value>Snacks</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndComposite" xml:space="preserve">
+    <value>pizzas and snacks</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndCompositeOnEmployee" xml:space="preserve">
+    <value>Number of pizzas and snacks per person per hour</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployee" xml:space="preserve">
+    <value>Number of pizzas per person per hour</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployeeShort" xml:space="preserve">
+    <value>Pizzas per person per hour</value>
+  </data>
+  <data name="OperationalStatisticsCouriersCountAndInQueue" xml:space="preserve">
+    <value>Drivers in total/ waiting</value>
+  </data>
+  <data name="OperationalStatisticsCulture" xml:space="preserve">
+    <value>en-EN</value>
+  </data>
+  <data name="OperationalStatisticsDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="OperationalStatisticsDelayedProducts" xml:space="preserve">
+    <value>Deferred</value>
+  </data>
+  <data name="OperationalStatisticsDelivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryAndPickup" xml:space="preserve">
+    <value>Delivery and carryout</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryWorkTitle" xml:space="preserve">
+    <value>Delivery performance</value>
+  </data>
+  <data name="OperationalStatisticsDontDeliveredOrders" xml:space="preserve">
+    <value>Not dispatched orders</value>
+  </data>
+  <data name="OperationalStatisticsDoughTable" xml:space="preserve">
+    <value>Dough</value>
+  </data>
+  <data name="OperationalStatisticsEmployeesOnShiftNow" xml:space="preserve">
+    <value>Employees on shift now</value>
+  </data>
+  <data name="OperationalStatisticsForCurrentDay" xml:space="preserve">
+    <value>Summary for the day</value>
+  </data>
+  <data name="OperationalStatisticsInProduction" xml:space="preserve">
+    <value>In production</value>
+  </data>
+  <data name="OperationalStatisticsInQueue" xml:space="preserve">
+    <value>On the waiting list</value>
+  </data>
+  <data name="OperationalStatisticsKitchenLoad" xml:space="preserve">
+    <value>Line load</value>
+  </data>
+  <data name="OperationalStatisticsKitchenPizzaLoad" xml:space="preserve">
+    <value>Line load:</value>
+  </data>
+  <data name="OperationalStatisticsKitchenWork" xml:space="preserve">
+    <value>Kitchen performance</value>
+  </data>
+  <data name="OperationalStatisticsLastFourWeek" xml:space="preserve">
+    <value>Last four weeks</value>
+  </data>
+  <data name="OperationalStatisticsNow" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="OperationalStatisticsOrders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OperationalStatisticsOrdersCountOnCourierInHour" xml:space="preserve">
+    <value>Orders per driver per hour</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWork" xml:space="preserve">
+    <value>Orders in progress</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkInStationary" xml:space="preserve">
+    <value>To restaurant</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkOnDelivery" xml:space="preserve">
+    <value>For delivery</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkPickup" xml:space="preserve">
+    <value>Carryout</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkTotalCount" xml:space="preserve">
+    <value>Orders in total</value>
+  </data>
+  <data name="OperationalStatisticsOrdersOnDelivery" xml:space="preserve">
+    <value>Orders for delivery</value>
+  </data>
+  <data name="OperationalStatisticsPackingTable" xml:space="preserve">
+    <value>Packaging</value>
+  </data>
+  <data name="OperationalStatisticsProductivity" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="OperationalStatisticsProductsInWork" xml:space="preserve">
+    <value>Products in progress</value>
+  </data>
+  <data name="OperationalStatisticsRevenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="OperationalStatisticsRevenueDelivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="OperationalStatisticsRevenueOnEmployee" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="OperationalStatisticsRevenuePickup" xml:space="preserve">
+    <value>Carryout</value>
+  </data>
+  <data name="OperationalStatisticsRevenueStationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OperationalStatisticsRevenueTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="OperationalStatisticsRevenueWithCurrency" xml:space="preserve">
+    <value>Sales, rub.</value>
+  </data>
+  <data name="OperationalStatisticsShortCurrency" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="OperationalStatisticsStationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OperationalStatisticsStopSale" xml:space="preserve">
+    <value>Stop of sales</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersCount" xml:space="preserve">
+    <value>Number of late orders</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersPercent" xml:space="preserve">
+    <value>Proportion of late orders</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnDelivery" xml:space="preserve">
+    <value>Orders, delivery</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnStationary" xml:space="preserve">
+    <value>Orders, restaurant</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersTimeOutPercentage" xml:space="preserve">
+    <value>Proportion of late orders</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnDelivery" xml:space="preserve">
+    <value>Sales, delivery</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnStationary" xml:space="preserve">
+    <value>Sales, restaurant</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueTotal" xml:space="preserve">
+    <value>Sales, total</value>
+  </data>
+  <data name="OperationalStatisticsToday" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="OperationalStatisticsTotalRevenueNow" xml:space="preserve">
+    <value>Total sales now</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgo" xml:space="preserve">
+    <value>A week ago</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoInCurrentHour" xml:space="preserve">
+    <value>This time a week ago</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoOnCurrentHour" xml:space="preserve">
+    <value>This time a week ago</value>
+  </data>
+  <data name="OperationalStatisticsYesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="Ordered" xml:space="preserve">
+    <value>Ordered</value>
+  </data>
+  <data name="OrderedCount" xml:space="preserve">
+    <value>Quantity ordered</value>
+  </data>
+  <data name="OrdersCountTitle" xml:space="preserve">
+    <value>Number of orders</value>
+  </data>
+  <data name="OrdersForecastForDay" xml:space="preserve">
+    <value>Forecast for the day</value>
+  </data>
+  <data name="OrdersIncreaseTooltip" xml:space="preserve">
+    <value>Orders increase compared to the same week day last year</value>
+  </data>
+  <data name="OrdersOnCourierInHourTooltip" xml:space="preserve">
+    <value>How many orders are delivered by one driver per hour</value>
+  </data>
+  <data name="OrdersPerTrip" xml:space="preserve">
+    <value>Orders per trip</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="PackageDamaged" xml:space="preserve">
+    <value>Damaged packaging</value>
+  </data>
+  <data name="PenultimateAudit" xml:space="preserve">
+    <value>Second most recent inventory</value>
+  </data>
+  <data name="PeopleAbbr" xml:space="preserve">
+    <value>person(s)</value>
+  </data>
+  <data name="PerformanceAlarm" xml:space="preserve">
+    <value>productivity below the daily target</value>
+  </data>
+  <data name="PerformanceOk" xml:space="preserve">
+    <value>productivity within the daily target</value>
+  </data>
+  <data name="PerformanceYellow" xml:space="preserve">
+    <value>productivity twice the daily target</value>
+  </data>
+  <data name="PersonalFoodReportType" xml:space="preserve">
+    <value>Staff meals</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneNumberMask" xml:space="preserve">
+    <value>#VALUE!</value>
+  </data>
+  <data name="Pizzas and snacks" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="PizzasAndSnacksOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>How many pizzas and snacks per hour per one kitchen employee</value>
+  </data>
+  <data name="PLCaption" xml:space="preserve">
+    <value>P&amp;L</value>
+  </data>
+  <data name="PreviosTwelveMonths" xml:space="preserve">
+    <value>Previous 12 months</value>
+  </data>
+  <data name="PreviousWeek" xml:space="preserve">
+    <value>Last week</value>
+  </data>
+  <data name="PreviousYear" xml:space="preserve">
+    <value>A year ago</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PricePerKillogramm" xml:space="preserve">
+    <value>Price per kg</value>
+  </data>
+  <data name="PricePerKillogrammWithoutVAT" xml:space="preserve">
+    <value>Price per kg without VAT</value>
+  </data>
+  <data name="PricePerPiece" xml:space="preserve">
+    <value>Price per item</value>
+  </data>
+  <data name="PricePerPieceWithoutVAT" xml:space="preserve">
+    <value>Price per unit without VAT</value>
+  </data>
+  <data name="ProductionSpeedBadColumnTitle" xml:space="preserve">
+    <value>Slower</value>
+  </data>
+  <data name="ProductionSpeedGoodColumnTitle" xml:space="preserve">
+    <value>Faster</value>
+  </data>
+  <data name="ProductionSpeedHeader" xml:space="preserve">
+    <value>Preparation speed</value>
+  </data>
+  <data name="ProductionSpeedNormalColumnTitle" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="ProductionSpeedShiftsNames" xml:space="preserve">
+    <value>Morning shift, evening shift, Night shift</value>
+  </data>
+  <data name="ProductShort" xml:space="preserve">
+    <value>&lt;span class="product-short-label"&gt;prod&lt;/span&gt;</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="ReceivedCount" xml:space="preserve">
+    <value>Quantity received</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Removed</value>
+  </data>
+  <data name="RemovePeriod" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ReportByPeriod" xml:space="preserve">
+    <value>period</value>
+  </data>
+  <data name="ReportDay" xml:space="preserve">
+    <value>by days</value>
+  </data>
+  <data name="ReportDayForExcel" xml:space="preserve">
+    <value>Consumption for 7 days</value>
+  </data>
+  <data name="ReportLabel" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ReportMonth" xml:space="preserve">
+    <value>by months</value>
+  </data>
+  <data name="ReportMonthForExcel" xml:space="preserve">
+    <value>Consumption for 7 months</value>
+  </data>
+  <data name="ReportPeriodVariant" xml:space="preserve">
+    <value>Show consumption:</value>
+  </data>
+  <data name="ReportTypeLabel" xml:space="preserve">
+    <value>Select type of consumption</value>
+  </data>
+  <data name="ReportWeek" xml:space="preserve">
+    <value>by weeks</value>
+  </data>
+  <data name="ReportWeekForExcel" xml:space="preserve">
+    <value>Consumption for 7 weeks</value>
+  </data>
+  <data name="ReserveFriday" xml:space="preserve">
+    <value>Back up, Fri</value>
+  </data>
+  <data name="ReserveMonday" xml:space="preserve">
+    <value>Back up, Mon</value>
+  </data>
+  <data name="ReserveSaturday" xml:space="preserve">
+    <value>Back up, Sat</value>
+  </data>
+  <data name="ReserveSunday" xml:space="preserve">
+    <value>Back up, Sun</value>
+  </data>
+  <data name="ReserveThursday" xml:space="preserve">
+    <value>Back up, Thur</value>
+  </data>
+  <data name="ReserveTuesday" xml:space="preserve">
+    <value>Back up, Tue</value>
+  </data>
+  <data name="ReserveWednesday" xml:space="preserve">
+    <value>Back up, Wed</value>
+  </data>
+  <data name="ReturnToSupplies" xml:space="preserve">
+    <value>Back to entering incoming stock</value>
+  </data>
+  <data name="ReturnToTransfers" xml:space="preserve">
+    <value>Beck to entering relocations</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="RevenueCurrency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="RevenueDate" xml:space="preserve">
+    <value>Date of receipt</value>
+  </data>
+  <data name="RevenueFrom" xml:space="preserve">
+    <value>From (supplier)</value>
+  </data>
+  <data name="RevenueIncreaseTooltip" xml:space="preserve">
+    <value>Increase in sales compared to the same week day last year</value>
+  </data>
+  <data name="RevenueInfo" xml:space="preserve">
+    <value>Incoming stock information</value>
+  </data>
+  <data name="RevenueNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="RevenueOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Sales per one kitchen employee per hour</value>
+  </data>
+  <data name="RevenueText" xml:space="preserve">
+    <value>/person per hour</value>
+  </data>
+  <data name="RevenueTo" xml:space="preserve">
+    <value>Where to (location)</value>
+  </data>
+  <data name="RevenueTotal" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="RevenueUser" xml:space="preserve">
+    <value>Received by</value>
+  </data>
+  <data name="RevenueWhoTook" xml:space="preserve">
+    <value>Received by</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="RevisionNotExecuted" xml:space="preserve">
+    <value>No inventories were performed during this period</value>
+  </data>
+  <data name="RevisionNotExecutedYet" xml:space="preserve">
+    <value>Inventory has not been done yet</value>
+  </data>
+  <data name="RevisionSettings" xml:space="preserve">
+    <value>Inventory setup</value>
+  </data>
+  <data name="RomanianLeu" xml:space="preserve">
+    <value>Romanian leu</value>
+  </data>
+  <data name="Ruble" xml:space="preserve">
+    <value>Rouble</value>
+  </data>
+  <data name="SalesReportType" xml:space="preserve">
+    <value>sales</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="SaturdayShort" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>Save and exit</value>
+  </data>
+  <data name="SaveAndSend" xml:space="preserve">
+    <value>Save and send</value>
+  </data>
+  <data name="ScheduleAbsenceLabel" xml:space="preserve">
+    <value>Absent</value>
+  </data>
+  <data name="ScheduleActionsLink" xml:space="preserve">
+    <value>actions</value>
+  </data>
+  <data name="ScheduleAddItemLink" xml:space="preserve">
+    <value>into schedule</value>
+  </data>
+  <data name="ScheduleAllEmployeeTypesLabel" xml:space="preserve">
+    <value>All jobs</value>
+  </data>
+  <data name="ScheduleAvailableTitle" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="ScheduleCategoryLabel" xml:space="preserve">
+    <value>Hourly rate</value>
+  </data>
+  <data name="ScheduleChangeCategoryHeader" xml:space="preserve">
+    <value>Select temporary category of employee</value>
+  </data>
+  <data name="ScheduleChangeCategoryNoneLabel" xml:space="preserve">
+    <value>Don't change category</value>
+  </data>
+  <data name="ScheduleCommentAddLabel" xml:space="preserve">
+    <value>Add comment</value>
+  </data>
+  <data name="ScheduleCommentLabel" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="ScheduleDaySwticher" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="ScheduleDeleteLink" xml:space="preserve">
+    <value>Remove from schedule</value>
+  </data>
+  <data name="ScheduleDescription" xml:space="preserve">
+    <value>Tool for scheduling shifts</value>
+  </data>
+  <data name="ScheduleEveningLabel" xml:space="preserve">
+    <value>Evening</value>
+  </data>
+  <data name="ScheduleFoundLabel" xml:space="preserve">
+    <value>Found</value>
+  </data>
+  <data name="ScheduleHeader" xml:space="preserve">
+    <value>Shift schedule</value>
+  </data>
+  <data name="ScheduleHint" xml:space="preserve">
+    <value>Set the time in the schedule to see lists of available employees</value>
+  </data>
+  <data name="ScheduleHolidayTitle" xml:space="preserve">
+    <value>Day off</value>
+  </data>
+  <data name="ScheduleHoursLabel" xml:space="preserve">
+    <value>employed for</value>
+  </data>
+  <data name="ScheduleHoursSortLabel" xml:space="preserve">
+    <value>Worked hours</value>
+  </data>
+  <data name="ScheduleLastShiftLabel" xml:space="preserve">
+    <value>last shift</value>
+  </data>
+  <data name="ScheduleMorningLabel" xml:space="preserve">
+    <value>Morning</value>
+  </data>
+  <data name="ScheduleMoveLink" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="ScheduleNameSortLabel" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="ScheduleNightLabel" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="ScheduleOtherTitle" xml:space="preserve">
+    <value>The rest</value>
+  </data>
+  <data name="SchedulePizzeriaOption" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="ScheduleProductivityFact" xml:space="preserve">
+    <value>Productivity, actual</value>
+  </data>
+  <data name="ScheduleProductivityForecast" xml:space="preserve">
+    <value>Productivity, forecasted</value>
+  </data>
+  <data name="ScheduleRecommendedTitle" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="ScheduleRemoveItemLink" xml:space="preserve">
+    <value>Remove from schedule</value>
+  </data>
+  <data name="ScheduleSearchAllLink" xml:space="preserve">
+    <value>Search in all units</value>
+  </data>
+  <data name="ScheduleSearchPlaceholder" xml:space="preserve">
+    <value>last name</value>
+  </data>
+  <data name="ScheduleSearchText" xml:space="preserve">
+    <value>Search by last name</value>
+  </data>
+  <data name="ScheduleShift8Option" xml:space="preserve">
+    <value>8-hour shift</value>
+  </data>
+  <data name="ScheduleShiftCountWarning" xml:space="preserve">
+    <value>The employee has {0} shifts a day</value>
+  </data>
+  <data name="ScheduleShiftError" xml:space="preserve">
+    <value>Changes can't be saved. The employee already has a shift from {0} to {1} in unit {2} at station {3}.</value>
+  </data>
+  <data name="ScheduleShiftLengthWarning" xml:space="preserve">
+    <value>Employee has a {0} hour shift</value>
+  </data>
+  <data name="ScheduleShiftSortLabel" xml:space="preserve">
+    <value>Last shift</value>
+  </data>
+  <data name="ScheduleTableTitle" xml:space="preserve">
+    <value>In the schedule</value>
+  </data>
+  <data name="ScheduleTodayText" xml:space="preserve">
+    <value>today</value>
+  </data>
+  <data name="ScheduleUnknownError" xml:space="preserve">
+    <value>Could not save changes. An unknown error occurred.</value>
+  </data>
+  <data name="ScheduleWeekSwitcher" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="ScheduleZoneLabel" xml:space="preserve">
+    <value>MetroStation</value>
+  </data>
+  <data name="SelectAllLabel" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="SelectAvailableView" xml:space="preserve">
+    <value>select required view</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>select date</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>Select company</value>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>select period</value>
+  </data>
+  <data name="SelectPeriodEndDate" xml:space="preserve">
+    <value>Select the end period date</value>
+  </data>
+  <data name="SelectPeriodStartDate" xml:space="preserve">
+    <value>Select the start period date</value>
+  </data>
+  <data name="SelectReasonLabel" xml:space="preserve">
+    <value>Selet reason for write-off</value>
+  </data>
+  <data name="SelectUnitLabel" xml:space="preserve">
+    <value>Select unit</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Send_Duplicate[1]" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SetTarget" xml:space="preserve">
+    <value>set</value>
+  </data>
+  <data name="ShiftDay" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="ShiftEmployeeAwayText" xml:space="preserve">
+    <value>away</value>
+  </data>
+  <data name="ShiftEmployeeCategoryColumnTitle" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ShiftEmployeeCountLabel" xml:space="preserve">
+    <value>Now on shift</value>
+  </data>
+  <data name="ShiftEmployeeFullNameColumnTitle" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="ShiftEmployeeShiftText" xml:space="preserve">
+    <value>on the shift</value>
+  </data>
+  <data name="ShiftEmployeeStatusColumnTitle" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ShiftEmployeeTimeColumnTitle" xml:space="preserve">
+    <value>Shift time</value>
+  </data>
+  <data name="ShiftEmployeeTodayAwayTitle" xml:space="preserve">
+    <value>Left today</value>
+  </data>
+  <data name="ShiftEmployeeTodayShiftTitle" xml:space="preserve">
+    <value>On shift</value>
+  </data>
+  <data name="ShiftEmployeeYesterdayAwayTitle" xml:space="preserve">
+    <value>Left yesterday</value>
+  </data>
+  <data name="ShiftEvening" xml:space="preserve">
+    <value>evening</value>
+  </data>
+  <data name="ShiftMorning" xml:space="preserve">
+    <value>morning-day</value>
+  </data>
+  <data name="ShiftNight" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="ShiftNormsCashierLabel" xml:space="preserve">
+    <value>POS station</value>
+  </data>
+  <data name="ShiftNormsChooseDateLabel" xml:space="preserve">
+    <value>Select date</value>
+  </data>
+  <data name="ShiftNormsCleaningLabel" xml:space="preserve">
+    <value>sanitation</value>
+  </data>
+  <data name="ShiftNormsCouriersLabel" xml:space="preserve">
+    <value>drivers</value>
+  </data>
+  <data name="ShiftNormsDay0Label" xml:space="preserve">
+    <value>Non-standard day</value>
+  </data>
+  <data name="ShiftNormsDeliveryLabel" xml:space="preserve">
+    <value>delivery</value>
+  </data>
+  <data name="ShiftNormsExcelExportLink" xml:space="preserve">
+    <value>Export inspreadsheet</value>
+  </data>
+  <data name="ShiftNormsFillTableLink" xml:space="preserve">
+    <value>Fill out the table</value>
+  </data>
+  <data name="ShiftNormsHeader" xml:space="preserve">
+    <value>Shift number</value>
+  </data>
+  <data name="ShiftNormsKitchenLabel" xml:space="preserve">
+    <value>kitchen</value>
+  </data>
+  <data name="ShiftNormsLastChangedLabel" xml:space="preserve">
+    <value>Most recent modification</value>
+  </data>
+  <data name="ShiftNormsLastChangedNoneLabel" xml:space="preserve">
+    <value>no</value>
+  </data>
+  <data name="ShiftNormsManagersLabel" xml:space="preserve">
+    <value>managers</value>
+  </data>
+  <data name="ShiftNormsNormLabel" xml:space="preserve">
+    <value>Requirement</value>
+  </data>
+  <data name="ShiftNormsNormsLabel" xml:space="preserve">
+    <value>Requirements</value>
+  </data>
+  <data name="ShiftNormsNovicesLabel" xml:space="preserve">
+    <value>trainees</value>
+  </data>
+  <data name="ShiftNormsProductivityColumnTitle" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="ShiftNormsProductivityLabel" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="ShiftNormsRecommendedColumnTitle" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="ShiftNormsSalesForecastColumnTitle" xml:space="preserve">
+    <value>Sales forecast</value>
+  </data>
+  <data name="ShiftNormsSaveLink" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="ShiftNormsTimeColumnTitle" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="ShiftSettingsHeader" xml:space="preserve">
+    <value>Shifts parameters</value>
+  </data>
+  <data name="ShiftSettingsNoNightShift" xml:space="preserve">
+    <value>No night shift</value>
+  </data>
+  <data name="ShiftSettingsShiftOverlapError" xml:space="preserve">
+    <value>Shifts can't overlap</value>
+  </data>
+  <data name="ShiftSettingsTotalTimeError" xml:space="preserve">
+    <value>Total time can't be over 24 hours</value>
+  </data>
+  <data name="Shipment" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="ShippedCount" xml:space="preserve">
+    <value>Quantity shipped</value>
+  </data>
+  <data name="ShippingDate" xml:space="preserve">
+    <value>Shipping date</value>
+  </data>
+  <data name="ShortRuble" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="SpeedTooltip" xml:space="preserve">
+    <value>% of products prepared on time</value>
+  </data>
+  <data name="StaffLanch" xml:space="preserve">
+    <value>Staff meals</value>
+  </data>
+  <data name="StaffOverloaded" xml:space="preserve">
+    <value>Staff is overloaded</value>
+  </data>
+  <data name="Station_Backup" xml:space="preserve">
+    <value>Backup</value>
+  </data>
+  <data name="Station_Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="Station_Sanitation" xml:space="preserve">
+    <value>Sanitation</value>
+  </data>
+  <data name="Station_Trainees" xml:space="preserve">
+    <value>Trainees</value>
+  </data>
+  <data name="Station_СashboxAndHoll" xml:space="preserve">
+    <value>POS station and dining room</value>
+  </data>
+  <data name="StockBalance" xml:space="preserve">
+    <value>Current stock</value>
+  </data>
+  <data name="StockBalanceMenuItem" xml:space="preserve">
+    <value>Current stock</value>
+  </data>
+  <data name="StopSaleTimeTooltip" xml:space="preserve">
+    <value>Total duration of complete stops</value>
+  </data>
+  <data name="Substation_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Substation_Prep" xml:space="preserve">
+    <value>Prep</value>
+  </data>
+  <data name="Substation_SlicingAndPacking" xml:space="preserve">
+    <value>Slicing and packaging</value>
+  </data>
+  <data name="Substation_Supplies" xml:space="preserve">
+    <value>Supplies</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Done!</value>
+  </data>
+  <data name="SummaLabel" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="SummaOfVAT" xml:space="preserve">
+    <value>Sales Tax, $</value>
+  </data>
+  <data name="SummaWithoutVAT" xml:space="preserve">
+    <value>Amount without Sales Tax</value>
+  </data>
+  <data name="SummaWithVAT" xml:space="preserve">
+    <value>Amount with Sales Tax</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="SundayShort" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="SupplierAddDebt" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="SupplierAddDebtTitle" xml:space="preserve">
+    <value>Add amount overdue</value>
+  </data>
+  <data name="SupplierCloseDebt" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="SupplierConfirmDebtClose" xml:space="preserve">
+    <value>Proceed with overdue payment?</value>
+  </data>
+  <data name="SupplierDebt" xml:space="preserve">
+    <value>Overdue balance</value>
+  </data>
+  <data name="SupplierListHeader" xml:space="preserve">
+    <value>Suppliers</value>
+  </data>
+  <data name="SuppliersAndMaterials" xml:space="preserve">
+    <value>Suppliers and supplies</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>Incoming stock</value>
+  </data>
+  <data name="SupplyDebiting" xml:space="preserve">
+    <value>Write-offs</value>
+  </data>
+  <data name="SupplyIncoming" xml:space="preserve">
+    <value>Receipts</value>
+  </data>
+  <data name="SupplyMaterialLabel" xml:space="preserve">
+    <value>Incoming stock</value>
+  </data>
+  <data name="Supply_MaterialUnavailable" xml:space="preserve">
+    <value>Material unavailable at the receiving date is present</value>
+  </data>
+  <data name="Supply_TaraUnavailable" xml:space="preserve">
+    <value>Container was changed to basic measurement unit</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="TargetNotReached" xml:space="preserve">
+    <value>Target not met</value>
+  </data>
+  <data name="TargetsOnMonthElement_Defect" xml:space="preserve">
+    <value>Defective</value>
+  </data>
+  <data name="TargetsOnMonthElement_OrdersOnСourier" xml:space="preserve">
+    <value>Orders per driver per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_PicesOnPeople" xml:space="preserve">
+    <value>Pizzas and snacks per person per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_Piece" xml:space="preserve">
+    <value>pc.</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceManH" xml:space="preserve">
+    <value>qty/ per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceOnСourier" xml:space="preserve">
+    <value>qty/dr. per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnPeople" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnСourier" xml:space="preserve">
+    <value>Sales per driver per hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_RubManH" xml:space="preserve">
+    <value>rub./person-hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_Sertificates" xml:space="preserve">
+    <value>Certificates</value>
+  </data>
+  <data name="TargetsOnMonthElement_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH" xml:space="preserve">
+    <value>tenge/person hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH_Duplicate[1]" xml:space="preserve">
+    <value>Tenge/person hour</value>
+  </data>
+  <data name="TargetsOnMonthElement_ToDefect" xml:space="preserve">
+    <value>Write-offs due to defects</value>
+  </data>
+  <data name="TargetsOnMonthElement_UnaccountedLosses" xml:space="preserve">
+    <value>Unregistered losses</value>
+  </data>
+  <data name="TargetsOnYearElement_EmployeeDynamic" xml:space="preserve">
+    <value>Turnover (staff)</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="TemplateCreating" xml:space="preserve">
+    <value>Create template</value>
+  </data>
+  <data name="Tenge" xml:space="preserve">
+    <value>Tenge</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="ThursdayShort" xml:space="preserve">
+    <value>Thur</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Shift start date</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Shift start time</value>
+  </data>
+  <data name="TimeReportBuildLink" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TimeReportChooseDateLabel" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="TimeReportChooseNameLabel" xml:space="preserve">
+    <value>Last name, first name</value>
+  </data>
+  <data name="TimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Select types of employees</value>
+  </data>
+  <data name="TimeReportChooseUnitLabel" xml:space="preserve">
+    <value>Select unit</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="TimeReportDescription" xml:space="preserve">
+    <value>Actual worked time for salary calculation</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Last name, first name</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Shift end date</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Shift end time</value>
+  </data>
+  <data name="TimeReportExcelExportLink" xml:space="preserve">
+    <value>Export in spreadsheet</value>
+  </data>
+  <data name="TimeReportGroupByEmployee" xml:space="preserve">
+    <value>Group by employee</value>
+  </data>
+  <data name="TimeReportHeader" xml:space="preserve">
+    <value>Actual time</value>
+  </data>
+  <data name="TimeReportInvalidTimePeriod" xml:space="preserve">
+    <value>Time period shouldn't exceed {0} days</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="TimeReportTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="TimeReportWarning" xml:space="preserve">
+    <value>Too much data found for the specified period. Not all data is displayed. Try to nerrow down report conditions.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Title_YouListen" xml:space="preserve">
+    <value>YOU ARE LISTENING TO</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>till</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>today</value>
+  </data>
+  <data name="ToUnit" xml:space="preserve">
+    <value>Where to (location)</value>
+  </data>
+  <data name="TrainingHistory_BeginDateFailedMessage" xml:space="preserve">
+    <value>Effective date of new category must be later than the effective date of previuos category</value>
+  </data>
+  <data name="TrainingHistory_NotDefinedCurrentStage" xml:space="preserve">
+    <value>The current training step has not been defined</value>
+  </data>
+  <data name="TrainingHistory_ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Specify date of employment termination</value>
+  </data>
+  <data name="TransactionCompletedState" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="TransactionDate" xml:space="preserve">
+    <value>Transaction date</value>
+  </data>
+  <data name="TransactionHeader" xml:space="preserve">
+    <value>Transactions management</value>
+  </data>
+  <data name="TransactionID" xml:space="preserve">
+    <value>Transaction ID</value>
+  </data>
+  <data name="TransactionNotCompletedState" xml:space="preserve">
+    <value>Not completed</value>
+  </data>
+  <data name="TransactionOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="TransactionOrderNumber" xml:space="preserve">
+    <value>Order #</value>
+  </data>
+  <data name="TransactionsFromLabel" xml:space="preserve">
+    <value>Transactions from</value>
+  </data>
+  <data name="TransactionStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TransactionSumma" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="TransferCanceled" xml:space="preserve">
+    <value>Relocation {0} request canceled</value>
+  </data>
+  <data name="TransferConfirmed" xml:space="preserve">
+    <value>Application for relocation {0} has been created</value>
+  </data>
+  <data name="TransferCreated" xml:space="preserve">
+    <value>Relocation {0} created</value>
+  </data>
+  <data name="TransferCreationDate" xml:space="preserve">
+    <value>Ordered</value>
+  </data>
+  <data name="TransferDeleted" xml:space="preserve">
+    <value>Relocation {0} request canceled</value>
+  </data>
+  <data name="TransferDestinationUnit" xml:space="preserve">
+    <value>Where</value>
+  </data>
+  <data name="TransferEdited" xml:space="preserve">
+    <value>Relocation {0} saved</value>
+  </data>
+  <data name="TransferExpectedDate" xml:space="preserve">
+    <value>When needed</value>
+  </data>
+  <data name="TransferInfo" xml:space="preserve">
+    <value>Relocation info</value>
+  </data>
+  <data name="TransferItems" xml:space="preserve">
+    <value>Relocated items</value>
+  </data>
+  <data name="TransferLoadTemplate" xml:space="preserve">
+    <value>Load template</value>
+  </data>
+  <data name="TransferMaterialTypesList" xml:space="preserve">
+    <value>Supply</value>
+  </data>
+  <data name="TransferNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="TransferOriginUnit" xml:space="preserve">
+    <value>From whom</value>
+  </data>
+  <data name="TransferReceived" xml:space="preserve">
+    <value>Application for relocation {0} has been received</value>
+  </data>
+  <data name="TransferReceiving'Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="TransferReceivingDate" xml:space="preserve">
+    <value>Date received</value>
+  </data>
+  <data name="TransferReport_Taken" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="TransferReport_TitleHeader" xml:space="preserve">
+    <value>Relocation # {0} on {1}</value>
+  </data>
+  <data name="TransferShipped" xml:space="preserve">
+    <value>Application for relocation {0} has been shipped</value>
+  </data>
+  <data name="TransferShippingAmount" xml:space="preserve">
+    <value>Shipped</value>
+  </data>
+  <data name="TransferSourceUnit" xml:space="preserve">
+    <value>From whom</value>
+  </data>
+  <data name="TransferStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TransferTemplate_AmountIsInvalid" xml:space="preserve">
+    <value>Unacceptable value for supply {0}, {1}</value>
+  </data>
+  <data name="Transfer_EmptyItems" xml:space="preserve">
+    <value>Enter relocated items</value>
+  </data>
+  <data name="Transfer_Incoming" xml:space="preserve">
+    <value>Incoming</value>
+  </data>
+  <data name="Transfer_Incoming_Duplicate[1]" xml:space="preserve">
+    <value>Incoming</value>
+  </data>
+  <data name="Transfer_OrderedQuantityIsInvalid" xml:space="preserve">
+    <value>Field "Ordered" is missing for supply {0}</value>
+  </data>
+  <data name="Transfer_Outcoming" xml:space="preserve">
+    <value>Outgoing</value>
+  </data>
+  <data name="Transfer_Outcoming_Duplicate[1]" xml:space="preserve">
+    <value>Outgoing</value>
+  </data>
+  <data name="Transfer_QuantityIsInvalid" xml:space="preserve">
+    <value>Field "Quantity" for supply {0} contains mistake(s).</value>
+  </data>
+  <data name="Transfer_ReceivedQuantityIsInvalid" xml:space="preserve">
+    <value>Field "Received" is missing for supply {0}</value>
+  </data>
+  <data name="Transfer_Ship" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid" xml:space="preserve">
+    <value>Field "Shipped" is missing for supply {0}</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid_Duplicate[1]" xml:space="preserve">
+    <value>Field "Shipped" is missing for supply {0}.</value>
+  </data>
+  <data name="Transfer_Ship_Duplicate[1]" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="TuesdayShort" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="TypicalReport" xml:space="preserve">
+    <value>by week days</value>
+  </data>
+  <data name="TypicalReportNotificationText" xml:space="preserve">
+    <value>This report will show consumption by days of the week for the past five weeks</value>
+  </data>
+  <data name="UnitateLevelHoliday" xml:space="preserve">
+    <value>Division's holiday</value>
+  </data>
+  <data name="UnitLevelHoliday" xml:space="preserve">
+    <value>Unit holiday</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>Meas. un.</value>
+  </data>
+  <data name="UnitOfMeasureAcromin" xml:space="preserve">
+    <value>Meas. un.</value>
+  </data>
+  <data name="UnitOfMeasureFull" xml:space="preserve">
+    <value>Measurement unit</value>
+  </data>
+  <data name="UnitOfMeasureLabel" xml:space="preserve">
+    <value>Meas. un.</value>
+  </data>
+  <data name="UpCurrentDate" xml:space="preserve">
+    <value>until present</value>
+  </data>
+  <data name="VacancyEditActiveLabel" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="VacancyEditAgeFromLabel" xml:space="preserve">
+    <value>from:</value>
+  </data>
+  <data name="VacancyEditAgeLabel" xml:space="preserve">
+    <value>Preferred age:</value>
+  </data>
+  <data name="VacancyEditAgeToLabel" xml:space="preserve">
+    <value>till:</value>
+  </data>
+  <data name="VacancyEditCategoryLabel" xml:space="preserve">
+    <value>In what capacity will the employee work?</value>
+  </data>
+  <data name="VacancyEditHeader" xml:space="preserve">
+    <value>Edit vacancy</value>
+  </data>
+  <data name="VacancyEditInputNameText" xml:space="preserve">
+    <value>Enter vacancy</value>
+  </data>
+  <data name="VacancyEditNameLabel" xml:space="preserve">
+    <value>who are we searching for:</value>
+  </data>
+  <data name="VacancyEditSmokingLabel" xml:space="preserve">
+    <value>Smoking</value>
+  </data>
+  <data name="VacancyEditSmokingPreferenceText" xml:space="preserve">
+    <value>preferably non-smokers</value>
+  </data>
+  <data name="VacancyEditTypeLabel" xml:space="preserve">
+    <value>Select type:</value>
+  </data>
+  <data name="VacancyEditUnitLabel" xml:space="preserve">
+    <value>Specify stores</value>
+  </data>
+  <data name="VacancyLink_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="VacancyLink_Disabled" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="VacancyListActiveColumn" xml:space="preserve">
+    <value>Active?</value>
+  </data>
+  <data name="VacancyListActiveLabel" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="VacancyListAgeFromLabel" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="VacancyListAgeToLabel" xml:space="preserve">
+    <value>till</value>
+  </data>
+  <data name="VacancyListCriteriaColumn" xml:space="preserve">
+    <value>Criterion</value>
+  </data>
+  <data name="VacancyListFromLabel" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="VacancyListHeader" xml:space="preserve">
+    <value>Vacancies</value>
+  </data>
+  <data name="VacancyListInactiveLabel" xml:space="preserve">
+    <value>Not active</value>
+  </data>
+  <data name="VacancyListNameColumn" xml:space="preserve">
+    <value>Vacancy</value>
+  </data>
+  <data name="VacancyListNewLink" xml:space="preserve">
+    <value>New vacancy</value>
+  </data>
+  <data name="VacancyListNonSmokingLabel" xml:space="preserve">
+    <value>Doesn't smoke</value>
+  </data>
+  <data name="VacancyListSmokingLabel" xml:space="preserve">
+    <value>Smoker</value>
+  </data>
+  <data name="VacancyListToLabel" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="VacancyListTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="VacancyNewHeader" xml:space="preserve">
+    <value>Add new vacancy</value>
+  </data>
+  <data name="ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Specify the employment termination date</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>Sales Tax, %.</value>
+  </data>
+  <data name="VAT amount" xml:space="preserve">
+    <value>Sales Tax, $: before {0}, now {1}.</value>
+  </data>
+  <data name="ViewDebiting" xml:space="preserve">
+    <value>View write-off</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="WednesdayShort" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="Weekdays" xml:space="preserve">
+    <value>Week days</value>
+  </data>
+  <data name="WeekdaysTooltip" xml:space="preserve">
+    <value>Monday - Thursday</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Weekend</value>
+  </data>
+  <data name="Weekends" xml:space="preserve">
+    <value>Days off</value>
+  </data>
+  <data name="WeekendsSettingsAllowToSelect" xml:space="preserve">
+    <value>Allow to choose as a day off</value>
+  </data>
+  <data name="WeekendsSettingsCountInWeek" xml:space="preserve">
+    <value>Days off per week</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartOne" xml:space="preserve">
+    <value>You cannot select more</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartTwo" xml:space="preserve">
+    <value>days off</value>
+  </data>
+  <data name="WeekendsSettingsFailedWeekendsCount" xml:space="preserve">
+    <value>You can't have more than {0} days off per week</value>
+  </data>
+  <data name="WeekendTooltip" xml:space="preserve">
+    <value>Friday - Sunday</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Well done!</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Work experience (in years)</value>
+  </data>
+  <data name="WorkExperienceOfPizzeria" xml:space="preserve">
+    <value>Average employment duration in unit</value>
+  </data>
+  <data name="WorkingHoursEmployeeName" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="WorkingHoursInContextOfUnits" xml:space="preserve">
+    <value>Divided up between units</value>
+  </data>
+  <data name="WorkingHoursTitle" xml:space="preserve">
+    <value>Work hours</value>
+  </data>
+  <data name="WorkingHoursTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="WorkingHoursTotalHours" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="WorkingHoursTotalMinutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>yesterday</value>
+  </data>
+  <data name="ZoneSettingsAddLink" xml:space="preserve">
+    <value>Create station</value>
+  </data>
+  <data name="ZoneSettingsCategoriesLabel" xml:space="preserve">
+    <value>Employees categories</value>
+  </data>
+  <data name="ZoneSettingsDeleteLink" xml:space="preserve">
+    <value>Delete station</value>
+  </data>
+  <data name="ZoneSettingsDescription" xml:space="preserve">
+    <value>Edit workstations</value>
+  </data>
+  <data name="ZoneSettingsEditLink" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="ZoneSettingsHeader" xml:space="preserve">
+    <value>Workstations</value>
+  </data>
+  <data name="ZoneSettingsNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ZoneSettingsNoCategoriesText" xml:space="preserve">
+    <value>no categories</value>
+  </data>
+  <data name="ZoneSettingsPeriod0Option" xml:space="preserve">
+    <value>(no)</value>
+  </data>
+  <data name="ZoneSettingsPeriod14Option" xml:space="preserve">
+    <value>two weeks</value>
+  </data>
+  <data name="ZoneSettingsPeriod30Option" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="ZoneSettingsPeriod7Option" xml:space="preserve">
+    <value>week</value>
+  </data>
+  <data name="ZoneSettingsPeriodLabel" xml:space="preserve">
+    <value>Period of planning the availability schedule</value>
+  </data>
+  <data name="ZoneSettingsShowLink" xml:space="preserve">
+    <value>Show in the schedule</value>
+  </data>
+  <data name="ZoneSettingsSubzonesLabel" xml:space="preserve">
+    <value>Substations</value>
+  </data>
+</root>

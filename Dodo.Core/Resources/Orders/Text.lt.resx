@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Canceled" xml:space="preserve">
+    <value>Atšauktas</value>
+  </data>
+  <data name="ClientMessage_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Komentaras neturi būti ilgesni negu 500 simbolių</value>
+  </data>
+  <data name="ClientMessage_AddressInvalid" xml:space="preserve">
+    <value>Prašome užpildyti visus adreso laukus.</value>
+  </data>
+  <data name="ClientMessage_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Nurodytas adresas neįeina į pristatymo zoną.</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTime" xml:space="preserve">
+    <value>Deja, jūsų nurodytu laiku picerija nedirbs. Picerijos darbo laikas nuo {0} iki {1}</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Įveskite kitą pristatymo laiką. Mes negalime pristatyti užsakymo jūsų nurodytu laiku.</value>
+  </data>
+  <data name="ClientMessage_DeliveryStop" xml:space="preserve">
+    <value>Pristatymas laikinai sustabdytas. Atsiprašome</value>
+  </data>
+  <data name="ClientMessage_EmptyBasket" xml:space="preserve">
+    <value>Jūsų krepšelis tuščias</value>
+  </data>
+  <data name="ClientMessage_InvalidFreeSauces" xml:space="preserve">
+    <value>Prašome pasirinkti nemokamų padažų</value>
+  </data>
+  <data name="ClientMessage_NoteEmpty" xml:space="preserve">
+    <value>Prašome nurodyti, iš kokios sumos jums paruošti grąžą. Ji turi būti ne mažesnė negu užsakymo suma.</value>
+  </data>
+  <data name="ClientMessage_NoteInvalid" xml:space="preserve">
+    <value>Suma, iš kurios paruošti grąžą, turi būti ne mažesnė negu užsakymo suma.</value>
+  </data>
+  <data name="ClientMessage_OrderCostInvalid" xml:space="preserve">
+    <value>Minimali užsakymo suma - {0}</value>
+  </data>
+  <data name="ClientMessage_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Pasirinkite piceriją, iš kurios norite atsiimti užsakymą.</value>
+  </data>
+  <data name="ClientMessage_PizzeriaIsClosed" xml:space="preserve">
+    <value>Deja, nepavyko apmokėti užsakymo. Picerija uždaryta.</value>
+  </data>
+  <data name="ClientMessage_ProductInStopList" xml:space="preserve">
+    <value>Deja {0} neturime. Prašome pašalinti šį produktą iš krepšelio</value>
+  </data>
+  <data name="DefectiveProduct" xml:space="preserve">
+    <value>Brokas</value>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>Pristatytas</value>
+  </data>
+  <data name="DuplicateOrderLine" xml:space="preserve">
+    <value>&lt;b&gt;(dublis)&lt;/b&gt;</value>
+  </data>
+  <data name="InDelivery" xml:space="preserve">
+    <value>Pristatoma</value>
+  </data>
+  <data name="InOven" xml:space="preserve">
+    <value>Krosnis</value>
+  </data>
+  <data name="MessageError_FailedDefectOrderLineMoreTwoDaysAgo" xml:space="preserve">
+    <value>Negalima išbrokuoti produkto, kuris buvo užsakytas daugiau nei prieš 2 dienas</value>
+  </data>
+  <data name="MessageError_PreparationTimeLimitExpired" xml:space="preserve">
+    <value>Negalima grąžinti produkto į virtuvę. Baigėsi pagaminimo laikas.</value>
+  </data>
+  <data name="Message_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Per ilgas adreso aprašymas</value>
+  </data>
+  <data name="Message_AddressEmpty" xml:space="preserve">
+    <value>Neįvestas adresas</value>
+  </data>
+  <data name="Message_AddressInvalid" xml:space="preserve">
+    <value>Neteisingas adresas</value>
+  </data>
+  <data name="Message_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Adresas neįeina į pristatymo zoną</value>
+  </data>
+  <data name="Message_ClientEmpty" xml:space="preserve">
+    <value>Neįvesti kliento duomenys</value>
+  </data>
+  <data name="Message_ClientFromBlackList" xml:space="preserve">
+    <value>Klientas juodajame sąraše</value>
+  </data>
+  <data name="Message_ClientNameEmpty" xml:space="preserve">
+    <value>Neįvestas vardas</value>
+  </data>
+  <data name="Message_DelayedOrderTime" xml:space="preserve">
+    <value>Deja, jūsų nurodytu laiku picerija nedirbs. Picerijos darbo laikas nuo {0} iki {1}</value>
+  </data>
+  <data name="Message_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Neteisingas atidėto užsakymo laikas</value>
+  </data>
+  <data name="Message_DelayedOrderWithoutTime" xml:space="preserve">
+    <value>Nenurodytas atidėto užsakymo laikas.</value>
+  </data>
+  <data name="Message_DeliveryStop" xml:space="preserve">
+    <value>Pristatymas laikinai sustabdytas</value>
+  </data>
+  <data name="Message_EmptyBasket" xml:space="preserve">
+    <value>Krepšelis tuščias</value>
+  </data>
+  <data name="Message_EmptyComposition" xml:space="preserve">
+    <value>Neužpildytas krepšelis</value>
+  </data>
+  <data name="Message_EmptyHouse" xml:space="preserve">
+    <value>Neįvestas namo numeris</value>
+  </data>
+  <data name="Message_EmptyStreetName" xml:space="preserve">
+    <value>Neįvesta gatvė</value>
+  </data>
+  <data name="Message_IncorrectDelayedTime" xml:space="preserve">
+    <value>Neteisingas atidėto užsakymo laikas</value>
+  </data>
+  <data name="Message_IncorrectPersonalOrderSum" xml:space="preserve">
+    <value>Pietų suma viršija maksimalią leistiną reikšmę.</value>
+  </data>
+  <data name="Message_InvalidFreeSauces" xml:space="preserve">
+    <value>Nepasirinkti nemokami padažai</value>
+  </data>
+  <data name="Message_MaxCashPaymentLimitExceeded" xml:space="preserve">
+    <value>Atsiprašome, jūs viršijote maksimalią mokėjimo grynaisiais svetainėje sumą.</value>
+  </data>
+  <data name="Message_NotChoosedProducts" xml:space="preserve">
+    <value>Nepasirinkti produktai pietums.</value>
+  </data>
+  <data name="Message_NoteEmpty" xml:space="preserve">
+    <value>Neįvesta kupiūra</value>
+  </data>
+  <data name="Message_NoteInvalid" xml:space="preserve">
+    <value>Neteisingai įvesta kupiūra</value>
+  </data>
+  <data name="Message_NowPproductIsNotForSale" xml:space="preserve">
+    <value>Šiuo momentu produktas {0} neparduodamas</value>
+  </data>
+  <data name="Message_OrderCostInvalid" xml:space="preserve">
+    <value>Užsakymo suma (neįskaičiuojant suvenyrų) mažesnė negu minimali</value>
+  </data>
+  <data name="Message_OrderWithSimpleProductsOnly" xml:space="preserve">
+    <value>Negalima įforminti atidėtų pietų, jeigu juose nėra produktų iš virtuvės</value>
+  </data>
+  <data name="Message_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Pasirinkite piceriją, iš kurios atsiimti užsakymą</value>
+  </data>
+  <data name="Message_PizzeriaIsClosed" xml:space="preserve">
+    <value>Picerija nedirba</value>
+  </data>
+  <data name="Message_PizzeriaShiftIsClosed" xml:space="preserve">
+    <value>Picerijos pamaina nedirba. Prašome kreiptis į pamainos vadybininką</value>
+  </data>
+  <data name="Message_PizzeriaWorkTypeDisabled" xml:space="preserve">
+    <value>Atsiprašome, picerija negamina užsakymų {0}</value>
+  </data>
+  <data name="Message_ProductInStopList" xml:space="preserve">
+    <value>Produktas yra netiekiamų produktų sąraše: {0}</value>
+  </data>
+  <data name="Message_ProductIsNotOnMenu" xml:space="preserve">
+    <value>Produktas {0} neįeina į meniu</value>
+  </data>
+  <data name="Message_RemakeDefectedOrderFailed" xml:space="preserve">
+    <value>Nepavyko išbrokuoti užsakymo</value>
+  </data>
+  <data name="Message_StationaryStop" xml:space="preserve">
+    <value>Restorano darbas laikinai sustabdytas</value>
+  </data>
+  <data name="Message_TelephoneEmpty" xml:space="preserve">
+    <value>Neįvestas telefono numeris</value>
+  </data>
+  <data name="Message__ClientNameTooLong" xml:space="preserve">
+    <value>Per ilgas vardas</value>
+  </data>
+  <data name="OnColdAssemblyTable" xml:space="preserve">
+    <value>Įdaras (Šaltoji linija)</value>
+  </data>
+  <data name="OnDoughTable" xml:space="preserve">
+    <value>Tešla</value>
+  </data>
+  <data name="OnHotAssemblyTable" xml:space="preserve">
+    <value>Įdaras (Karštoji linija)</value>
+  </data>
+  <data name="OnPackingTable" xml:space="preserve">
+    <value>Įpakavimas</value>
+  </data>
+  <data name="OrderState_Accepted" xml:space="preserve">
+    <value>Priimtas</value>
+  </data>
+  <data name="OrderState_Completed" xml:space="preserve">
+    <value>Atliktas</value>
+  </data>
+  <data name="OrderState_Editing" xml:space="preserve">
+    <value>Redaguojamas</value>
+  </data>
+  <data name="OrderState_Failure" xml:space="preserve">
+    <value>Atsisakymas</value>
+  </data>
+  <data name="OrderState_Kitchen" xml:space="preserve">
+    <value>Darbe</value>
+  </data>
+  <data name="OrderState_OnDelivery" xml:space="preserve">
+    <value>Pristatymas</value>
+  </data>
+  <data name="OrderState_OnTheShelf" xml:space="preserve">
+    <value>Supakuotas</value>
+  </data>
+  <data name="OrderState_Redirect" xml:space="preserve">
+    <value>Persiųsta</value>
+  </data>
+  <data name="OrderState_Storno" xml:space="preserve">
+    <value>Grąžinimas</value>
+  </data>
+  <data name="OrderState_TimeOut" xml:space="preserve">
+    <value>Pavėlavęs</value>
+  </data>
+  <data name="OrderState_Unknow" xml:space="preserve">
+    <value>Neapibrėžtas</value>
+  </data>
+  <data name="OrdersType_Delivery" xml:space="preserve">
+    <value>Pristatymas</value>
+  </data>
+  <data name="OrdersType_Pickup" xml:space="preserve">
+    <value>Paimti</value>
+  </data>
+  <data name="OrdersType_Restaurant" xml:space="preserve">
+    <value>Restoranas</value>
+  </data>
+  <data name="OrdersType_Staff" xml:space="preserve">
+    <value>Personalas</value>
+  </data>
+  <data name="OrdersType_Tracker" xml:space="preserve">
+    <value>Seklys</value>
+  </data>
+  <data name="OrderType_Delivery" xml:space="preserve">
+    <value>Pristatymas</value>
+  </data>
+  <data name="OrderType_DeliveryShortAlias" xml:space="preserve">
+    <value>Prist.</value>
+  </data>
+  <data name="OrderType_PersonaFoodShortAlias" xml:space="preserve">
+    <value>Pers.</value>
+  </data>
+  <data name="OrderType_PersonalFood" xml:space="preserve">
+    <value>Personalo maitinimas</value>
+  </data>
+  <data name="OrderType_PickupShortAlias" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="OrderType_Stationary" xml:space="preserve">
+    <value>Restoranas</value>
+  </data>
+  <data name="OrderType_StationaryShortAlias" xml:space="preserve">
+    <value>Salė</value>
+  </data>
+  <data name="ProductionStage_WaitingMake" xml:space="preserve">
+    <value>Laukia gaminimo</value>
+  </data>
+  <data name="Source_DefectOrder" xml:space="preserve">
+    <value>Brokas</value>
+  </data>
+  <data name="Source_Mobile" xml:space="preserve">
+    <value>Mobilus pasiūlymas</value>
+  </data>
+  <data name="Source_Pizzeria" xml:space="preserve">
+    <value>Picerija</value>
+  </data>
+  <data name="Source_Restaurant" xml:space="preserve">
+    <value>Restoranas</value>
+  </data>
+  <data name="Source_Site" xml:space="preserve">
+    <value>Svetainė</value>
+  </data>
+  <data name="Source_Telephone" xml:space="preserve">
+    <value>Telefonas</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="ValidateMessage_Delivery" xml:space="preserve">
+    <value>pristatymą</value>
+  </data>
+  <data name="ValidateMessage_PersonalFood" xml:space="preserve">
+    <value>Personalo maitinimas</value>
+  </data>
+  <data name="ValidateMessage_Stationary" xml:space="preserve">
+    <value>stacionaras</value>
+  </data>
+  <data name="WaitingDelivery" xml:space="preserve">
+    <value>Laukia išsiuntimo</value>
+  </data>
+  <data name="WaitingMake" xml:space="preserve">
+    <value>Laukiama</value>
+  </data>
+</root>

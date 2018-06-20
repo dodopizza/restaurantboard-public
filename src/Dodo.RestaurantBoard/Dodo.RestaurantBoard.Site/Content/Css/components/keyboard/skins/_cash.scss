@@ -1,0 +1,40 @@
+﻿/// <reference path="../../../../../utils/__utils.scss" />
+/// <reference path="../../../project/_variables.scss" />
+
+// FOR CASH PAYMENT KEYBOARD //
+@mixin keyboard-skin-cash($selector) {
+	#{$selector} {
+		border: none;
+		background: #fff;
+		height: 100%;
+	}
+
+		#{$selector}_row {
+			font-size: 0;
+			text-align: center;
+			height: 25%;
+		}
+
+		#{$selector}_btn {
+			height: 90%;
+			border: 1px solid #ccc;
+			color: #333;
+			text-align: center;
+			font-size: 26px;
+			border-radius: 5px;
+			background: #f2f2f2;
+			@include user-select();
+
+			&:disabled,
+			&[disabled] {
+				color: #ccc;
+			}
+
+			&:before {
+				vertical-align: middle;
+				display: inline-block;
+				height: 100%;
+				content: "";
+			}
+		}
+}

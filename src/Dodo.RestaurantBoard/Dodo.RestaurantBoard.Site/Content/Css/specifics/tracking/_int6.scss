@@ -1,0 +1,114 @@
+﻿#int6 {
+	.content {
+		width: 100%;
+		overflow: hidden;
+		font-size: 2em;
+	}
+
+	.courier_item {
+		border: 3px solid #999999;
+		background-color: #fff974;
+		width: 6.6%;
+		text-align: center;
+		font-size: 0.7em;
+		border-collapse: collapse;
+		outline: 1px solid #999999;
+		cursor: pointer;
+
+		&.himself {
+			background-color: #dededc;
+		}
+	}
+
+	.item {
+		position: relative;
+		width: 20%;
+		height: 30.3%;
+		border: 3px solid #999999;
+		vertical-align: middle;
+		text-align: center;
+		overflow: hidden;
+		cursor: pointer;
+		line-height: 0.9em;
+
+		&.himself {
+			background-color: #dbefb9;
+		}
+	}
+
+	.item_kitchen {
+		background: #eee;
+		cursor: default !important;
+	}
+
+	.numOrder {
+		display: inline-block;
+		padding: 0.35em 0.5em;
+		margin-bottom: 0.2em;
+		background-color: #dededc;
+		font-size: 1.2em;
+	}
+
+	.time {
+		font-size: 0.7em;
+	}
+
+	.address {
+		font-size: 0.64em;
+		color: #9b9b9b;
+		margin-bottom: 1.8em;
+	}
+
+	.himself .address {
+		color: #000;
+	}
+
+	.info {
+		font-size: 0.7em;
+	}
+
+	.prel {
+		.numOrder {
+			width: 100%;
+			padding: 0;
+			font-size: 1.3em;
+			background: none;
+			margin-bottom: 15%;
+		}
+
+		.name {
+			font-size: 0.9em;
+			font-weight: 600;
+		}
+	}
+
+	.item:hover,
+	.courier_item:hover {
+		background-color: #efefef;
+	}
+
+	.item:empty:hover {
+		background-color: #ffffff;
+	}
+
+	.allorders {
+		background: none repeat scroll 0 0 #B8DC7C;
+		font-size: 0.54em;
+		width: 13.2%;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.empty {
+		background: #fff;
+	}
+}
+
+.int6-3 .item {
+	background-color: #dededc;
+}
+
+.int6-3 td:empty {
+	background-color: #ffffff;
+	cursor: default !important;
+}

@@ -1,0 +1,1024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Active (popup window)</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Passive</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Passive (in cart page section)</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ALISA" xml:space="preserve">
+    <value>Final products</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>All days</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountWithOutNDS" xml:space="preserve">
+    <value>Total without VAT</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="AverageCheck" xml:space="preserve">
+    <value>Average check</value>
+  </data>
+  <data name="AverageWorkLoad" xml:space="preserve">
+    <value>Average workload</value>
+  </data>
+  <data name="BadBonus" xml:space="preserve">
+    <value>Slow</value>
+  </data>
+  <data name="BannerPosition_Center" xml:space="preserve">
+    <value>Price in the center</value>
+  </data>
+  <data name="BannerPosition_Left" xml:space="preserve">
+    <value>Price on the left</value>
+  </data>
+  <data name="BannerPosition_None" xml:space="preserve">
+    <value>Without price</value>
+  </data>
+  <data name="BannerPosition_Right" xml:space="preserve">
+    <value>Price on the right</value>
+  </data>
+  <data name="BannerPricePrefix" xml:space="preserve">
+    <value>Price prefix</value>
+  </data>
+  <data name="BasicData" xml:space="preserve">
+    <value>Initial data</value>
+  </data>
+  <data name="BeginDate" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="BonusAction" xml:space="preserve">
+    <value>Promotion</value>
+  </data>
+  <data name="BonusActionDescription" xml:space="preserve">
+    <value>Promotion description</value>
+  </data>
+  <data name="BonusActionEndPoint" xml:space="preserve">
+    <value>Trend</value>
+  </data>
+  <data name="BonusActionName" xml:space="preserve">
+    <value>Promotion name</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProduct" xml:space="preserve">
+    <value>Order contains any product from list \"{0}\"</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProductInAmount" xml:space="preserve">
+    <value>Order contains a greater or equal to {0} amount of any products from list {1}</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_BigPizzas" xml:space="preserve">
+    <value>Order contains a greater or equal to {1} amount of large pizzas</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_Combo" xml:space="preserve">
+    <value>Order contains a greater or equal to {0} amount of combos "{0}"</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ComboMultiple" xml:space="preserve">
+    <value>Order contains a greater or equal to {1} amount of combo(s) {0}</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_Default" xml:space="preserve">
+    <value>Type: {0} ObjectType: {1} ConcreteObject: {2} ConditionSize: {3}</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_FromCategory" xml:space="preserve">
+    <value>Order contains a greater or equal to {1} amount of products from category \"{0}\"</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_MediumPizzas" xml:space="preserve">
+    <value>Order contains a greater or equal to {0} amount of medium pizzas</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmount" xml:space="preserve">
+    <value>Order contains a greater or equal to {1} amount of product \"0"\</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmountEach" xml:space="preserve">
+    <value>Order contains a greater or equal to {1} amount of each product \"0"\</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_SmallPizzas" xml:space="preserve">
+    <value>Order contains a greater or equal to {0} amount of small pizzas</value>
+  </data>
+  <data name="CallCenterDailyReportXmlHeader" xml:space="preserve">
+    <value>Report: Payments to CC daily</value>
+  </data>
+  <data name="CallCenterReportXmlHeader" xml:space="preserve">
+    <value>Report: Payments to CC</value>
+  </data>
+  <data name="CashBoxShifts" xml:space="preserve">
+    <value>POS station shifts</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Name of the customer</value>
+  </data>
+  <data name="ColdAssemblyTable" xml:space="preserve">
+    <value>Toppings/filling, cold</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Expendable supplies</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="CountWorkedHours" xml:space="preserve">
+    <value>Hours worked</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="CourierNumber" xml:space="preserve">
+    <value>Driver number</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateBeginSale" xml:space="preserve">
+    <value>Date of resumption</value>
+  </data>
+  <data name="DateFilter_Day" xml:space="preserve">
+    <value>On the specified day</value>
+  </data>
+  <data name="DateFilter_DayOfWeek" xml:space="preserve">
+    <value>By days of the week</value>
+  </data>
+  <data name="DateFilter_Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="DatePeriod" xml:space="preserve">
+    <value>Period of dates:</value>
+  </data>
+  <data name="DateStopSale" xml:space="preserve">
+    <value>Date of suspension</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Date\time</value>
+  </data>
+  <data name="DefectiveStage" xml:space="preserve">
+    <value>MetroStation</value>
+  </data>
+  <data name="DefectProduct" xml:space="preserve">
+    <value>Defective product</value>
+  </data>
+  <data name="DelayReason" xml:space="preserve">
+    <value>Reason for delay</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="DeliveryAddress" xml:space="preserve">
+    <value>Delivery address</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Delivery and restaurant</value>
+  </data>
+  <data name="DeliverySectorName" xml:space="preserve">
+    <value>Delivery sector</value>
+  </data>
+  <data name="DeliveryZone" xml:space="preserve">
+    <value>Delivery zone</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Sending in progress</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Dough25" xml:space="preserve">
+    <value>Thick 25</value>
+  </data>
+  <data name="Dough30" xml:space="preserve">
+    <value>Thick 30</value>
+  </data>
+  <data name="Dough30Thin" xml:space="preserve">
+    <value>Thin 30</value>
+  </data>
+  <data name="Dough35" xml:space="preserve">
+    <value>Thick 35</value>
+  </data>
+  <data name="Dough35Thin" xml:space="preserve">
+    <value>Thin 35</value>
+  </data>
+  <data name="DoughTable" xml:space="preserve">
+    <value>Dough</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeType" xml:space="preserve">
+    <value>Type of employee</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="EndPointType" xml:space="preserve">
+    <value>End destination</value>
+  </data>
+  <data name="EndStopSale" xml:space="preserve">
+    <value>Resumption date</value>
+  </data>
+  <data name="ErrorMessage_CancelAccuralToMysteryShopper" xml:space="preserve">
+    <value>Not enough funds on the customer's account</value>
+  </data>
+  <data name="ErrorMessage_InvalidClientId" xml:space="preserve">
+    <value>Transaction prohibited (incorrect customer ID)</value>
+  </data>
+  <data name="ErrorMessage_NotEnoughMoney" xml:space="preserve">
+    <value>Not enough funds on the account</value>
+  </data>
+  <data name="ErrorMessage_TransactionNotFond" xml:space="preserve">
+    <value>Transaction not found</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>The order total ({0}) is less than dodollars spent ({1})</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Excluding</value>
+  </data>
+  <data name="ExcludeDismissedEmployees" xml:space="preserve">
+    <value>excluding terminated employees</value>
+  </data>
+  <data name="ExpiredOrdersCount" xml:space="preserve">
+    <value>Late</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByOrders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByProducts" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Filter_ProductsByCategories" xml:space="preserve">
+    <value>By category of product</value>
+  </data>
+  <data name="Filter_ProductsByTypes" xml:space="preserve">
+    <value>By type of product</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Finished products</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="FirstOrderDate" xml:space="preserve">
+    <value>Date of first order</value>
+  </data>
+  <data name="FirstOrderTime" xml:space="preserve">
+    <value>Time of first order</value>
+  </data>
+  <data name="Fridays" xml:space="preserve">
+    <value>Fridays</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="FunctionFilter_Avg" xml:space="preserve">
+    <value>ave</value>
+  </data>
+  <data name="FunctionFilter_Max" xml:space="preserve">
+    <value>max</value>
+  </data>
+  <data name="FunctionFilter_Min" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="GoodBonus" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Gram</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>Gr.</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>public holidays</value>
+  </data>
+  <data name="HotAssemblyTable" xml:space="preserve">
+    <value>Toppings/filling,hot</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>Houses / buildings</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingredient</value>
+  </data>
+  <data name="InQueue" xml:space="preserve">
+    <value>On the waiting list</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Implements and smallwares</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kilogram</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>Kg.</value>
+  </data>
+  <data name="LabourCostShort" xml:space="preserve">
+    <value>LC</value>
+  </data>
+  <data name="LastOrderDate" xml:space="preserve">
+    <value>Last order date</value>
+  </data>
+  <data name="LastOrderTime" xml:space="preserve">
+    <value>Last order time</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liter</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>l.</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>Locality</value>
+  </data>
+  <data name="LongPreparationProduct" xml:space="preserve">
+    <value>Slow preparation,%</value>
+  </data>
+  <data name="MeasureUnit" xml:space="preserve">
+    <value>measurement unit</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Invalid promocode</value>
+  </data>
+  <data name="Message_InvalidTime" xml:space="preserve">
+    <value>Specified time format is incorrect</value>
+  </data>
+  <data name="Message_UnitIdsRequired" xml:space="preserve">
+    <value>No division selected</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>Metaproduct</value>
+  </data>
+  <data name="MethodOfCalculation" xml:space="preserve">
+    <value>Calculation method</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliter</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>Ml.</value>
+  </data>
+  <data name="Mondays" xml:space="preserve">
+    <value>Mondays</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>of January,of February, of March,of April,of May, of June, of July,of August,of September,of November,of December</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NDS" xml:space="preserve">
+    <value>Vat,%</value>
+  </data>
+  <data name="NormalBonus" xml:space="preserve">
+    <value>Neutral interval</value>
+  </data>
+  <data name="NotDefined" xml:space="preserve">
+    <value>Not defined</value>
+  </data>
+  <data name="OnHallSquare" xml:space="preserve">
+    <value>Per sq.m.of dining room</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Only days off</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Only work days</value>
+  </data>
+  <data name="OperationCount" xml:space="preserve">
+    <value>Number of successful applications</value>
+  </data>
+  <data name="OrderAmount" xml:space="preserve">
+    <value>Order amount</value>
+  </data>
+  <data name="OrderDateOfReceipt" xml:space="preserve">
+    <value>Date of order</value>
+  </data>
+  <data name="OrderLinesCount" xml:space="preserve">
+    <value>Entries</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Order №</value>
+  </data>
+  <data name="OrderOperator" xml:space="preserve">
+    <value>Order operator</value>
+  </data>
+  <data name="OrderPaymentType" xml:space="preserve">
+    <value>Payment method</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrdersAmount" xml:space="preserve">
+    <value>Orders amount</value>
+  </data>
+  <data name="OrdersCount" xml:space="preserve">
+    <value>Number of orders</value>
+  </data>
+  <data name="OrdersCountOnCouriers" xml:space="preserve">
+    <value>Number of orders per driver per hour</value>
+  </data>
+  <data name="OrdersDelivered" xml:space="preserve">
+    <value>Orders delivered</value>
+  </data>
+  <data name="OrdersOnCouriersInHourCount" xml:space="preserve">
+    <value>Orders per driver per hour</value>
+  </data>
+  <data name="OrderSourceMobile" xml:space="preserve">
+    <value>Mob. App.</value>
+  </data>
+  <data name="OrderSources" xml:space="preserve">
+    <value>Sources of orders</value>
+  </data>
+  <data name="OrderSourceSite" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Order status</value>
+  </data>
+  <data name="OrderType" xml:space="preserve">
+    <value>Type of order</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="OverdueBonus" xml:space="preserve">
+    <value>Penalty (Waiting)</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Packaging</value>
+  </data>
+  <data name="PackingTable" xml:space="preserve">
+    <value>Packaging</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Patronymic</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>Staff meals</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telephone number</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Carryout</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="PizzaAndCompositionCountOnEmployee" xml:space="preserve">
+    <value>Number of pizzas and snacks per person per hour</value>
+  </data>
+  <data name="PizzaCountOnEmployee" xml:space="preserve">
+    <value>Number of pizzas per person per hour</value>
+  </data>
+  <data name="Pizzeria" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="Portion" xml:space="preserve">
+    <value>Proportion</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="PreparationTime" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="ProductCategories" xml:space="preserve">
+    <value>Categories of products</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>Product Id</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Production</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Name of product</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="ProductSales" xml:space="preserve">
+    <value>Sales by product</value>
+  </data>
+  <data name="ProductsGroup" xml:space="preserve">
+    <value>Group of products</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Type of product</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Promocode</value>
+  </data>
+  <data name="PromoCode" xml:space="preserve">
+    <value>Promo-code</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Piece</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>Piece</value>
+  </data>
+  <data name="ReasonStopSale" xml:space="preserve">
+    <value>Reason for suspension</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report:</value>
+  </data>
+  <data name="ReportName_ConsumptionProducts" xml:space="preserve">
+    <value>Products consumption</value>
+  </data>
+  <data name="ReportName_DeliverySectorsReport" xml:space="preserve">
+    <value>Delivery zone</value>
+  </data>
+  <data name="ReportName_ExpressProductsStatistics" xml:space="preserve">
+    <value>Expired express-products</value>
+  </data>
+  <data name="ReportName_ProductivityCouriersStatistic" xml:space="preserve">
+    <value>Drivers' workload</value>
+  </data>
+  <data name="ReportName_ProductsSalesForCalculationCard" xml:space="preserve">
+    <value>Report on products sales</value>
+  </data>
+  <data name="ReportName_ReportKitchenMotivation" xml:space="preserve">
+    <value>Kitchen motivation</value>
+  </data>
+  <data name="ReportName_Revenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="RestOfDeliverySectors" xml:space="preserve">
+    <value>The rest</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="RevenueOnEmployee" xml:space="preserve">
+    <value>Sales per person per hour</value>
+  </data>
+  <data name="RevisionType" xml:space="preserve">
+    <value>Type of inventory</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Inventory staff</value>
+  </data>
+  <data name="SalaryCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="SalaryDayHours" xml:space="preserve">
+    <value>Day hours</value>
+  </data>
+  <data name="SalaryDayMoney" xml:space="preserve">
+    <value>Payments, day</value>
+  </data>
+  <data name="SalaryEmployeeName" xml:space="preserve">
+    <value>Last name, First name</value>
+  </data>
+  <data name="SalaryHolidayFactor" xml:space="preserve">
+    <value>Special day coeffecient</value>
+  </data>
+  <data name="SalaryHolidayHours" xml:space="preserve">
+    <value>Holiday hours</value>
+  </data>
+  <data name="SalaryKitchenStaff" xml:space="preserve">
+    <value>Kitchen payments</value>
+  </data>
+  <data name="SalaryNightFactor" xml:space="preserve">
+    <value>Night coefficient</value>
+  </data>
+  <data name="SalaryNightHours" xml:space="preserve">
+    <value>Night hours</value>
+  </data>
+  <data name="SalaryNightMoney" xml:space="preserve">
+    <value>Payments, night</value>
+  </data>
+  <data name="SalaryPremiumMoney" xml:space="preserve">
+    <value>Payments, premuims</value>
+  </data>
+  <data name="SalaryRate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="SalaryShiftEndDate" xml:space="preserve">
+    <value>Shift end date</value>
+  </data>
+  <data name="SalaryShiftEndTime" xml:space="preserve">
+    <value>Shift end time</value>
+  </data>
+  <data name="SalaryShiftStartDate" xml:space="preserve">
+    <value>Shift sart date</value>
+  </data>
+  <data name="SalaryShiftStartTime" xml:space="preserve">
+    <value>Shift start time</value>
+  </data>
+  <data name="SalaryShiftTime" xml:space="preserve">
+    <value>Shift time</value>
+  </data>
+  <data name="SalaryTotalHours" xml:space="preserve">
+    <value>Hours in total</value>
+  </data>
+  <data name="SalaryTotalMoney" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Type of sale</value>
+  </data>
+  <data name="SaleTime" xml:space="preserve">
+    <value>Time of sale (as in receipt)</value>
+  </data>
+  <data name="SaleType" xml:space="preserve">
+    <value>Sale direction</value>
+  </data>
+  <data name="Saturdays" xml:space="preserve">
+    <value>Saturdays</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="SelectInventoryType" xml:space="preserve">
+    <value>- Select class of supplies -</value>
+  </data>
+  <data name="SelectUnitsOfMeasure" xml:space="preserve">
+    <value>- Select measurement unit -</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Prepacked product</value>
+  </data>
+  <data name="ShiftNumber" xml:space="preserve">
+    <value>Shift number</value>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Morning shift,evening shift,Night shift</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>Type of shift</value>
+  </data>
+  <data name="SliderType_Default" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="SliderType_ForPieces" xml:space="preserve">
+    <value>For slices</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Prices have not been set for one or more selected products</value>
+  </data>
+  <data name="SpecialPrice" xml:space="preserve">
+    <value>Special price</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="StopSale" xml:space="preserve">
+    <value>Suspend sales</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="StringLengthExeedsMaximum" xml:space="preserve">
+    <value>The length of field {0} cannot exceed {1} symbols.</value>
+  </data>
+  <data name="Sundays" xml:space="preserve">
+    <value>Sundays</value>
+  </data>
+  <data name="TabNo" xml:space="preserve">
+    <value>Personnel number</value>
+  </data>
+  <data name="TechnicalDescription" xml:space="preserve">
+    <value>Standard description</value>
+  </data>
+  <data name="Thursdays" xml:space="preserve">
+    <value>Thursdays</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimeOutOrdersPercentage" xml:space="preserve">
+    <value>% of expiration</value>
+  </data>
+  <data name="TimeOutPeriod" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Shift start date</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Shift start time</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Day hours</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Last name, first name of the employee</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Shift end date</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Shift end time</value>
+  </data>
+  <data name="TimeReportHoursTotalColumnTitle" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Night hours</value>
+  </data>
+  <data name="Title_ActivityDeliverySectors" xml:space="preserve">
+    <value>Delivery sectors activity</value>
+  </data>
+  <data name="Title_BonusActionActivityReport" xml:space="preserve">
+    <value>Promotions performance</value>
+  </data>
+  <data name="Title_BonusActionsReport" xml:space="preserve">
+    <value>Automatic promotions application</value>
+  </data>
+  <data name="Title_ClientsStatisicReport" xml:space="preserve">
+    <value>Customers statistics</value>
+  </data>
+  <data name="Title_CourierStatisicReport" xml:space="preserve">
+    <value>Drivers' statistics</value>
+  </data>
+  <data name="Title_CourierTasks" xml:space="preserve">
+    <value>Driver's trips</value>
+  </data>
+  <data name="Title_DefectiveProductsReport" xml:space="preserve">
+    <value>Defective products</value>
+  </data>
+  <data name="Title_DeliveryStatistic" xml:space="preserve">
+    <value>Delivery statistics</value>
+  </data>
+  <data name="Title_DoughReport" xml:space="preserve">
+    <value>Dough consumption</value>
+  </data>
+  <data name="Title_LabourCost" xml:space="preserve">
+    <value>Labour Cost</value>
+  </data>
+  <data name="Title_OrdersReport" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Title_ProductionTimeReport" xml:space="preserve">
+    <value>Preparation time</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoad" xml:space="preserve">
+    <value>Workload report</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadOrders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadProducts" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Title_ReportPopularityProducts" xml:space="preserve">
+    <value>Popularity of products</value>
+  </data>
+  <data name="Title_ReportProductivity" xml:space="preserve">
+    <value>Productivity</value>
+  </data>
+  <data name="Title_ReportPromoCodeUsed" xml:space="preserve">
+    <value>Promo codes consumption</value>
+  </data>
+  <data name="Title_ReportSaleByCashBoxSessions" xml:space="preserve">
+    <value>Sales by POS station shifts</value>
+  </data>
+  <data name="Title_RevenuePercentage" xml:space="preserve">
+    <value>Proportion of revenue, %</value>
+  </data>
+  <data name="Title_SalaryReport" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="Title_SaleCount" xml:space="preserve">
+    <value>Sold, pieces</value>
+  </data>
+  <data name="Title_StopSaleReport" xml:space="preserve">
+    <value>Stop-sales</value>
+  </data>
+  <data name="Title_TimeReport" xml:space="preserve">
+    <value>Actual time</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TotalNDS" xml:space="preserve">
+    <value>Total with VAT</value>
+  </data>
+  <data name="TotalOrdersPrice" xml:space="preserve">
+    <value>Promotion orders amount</value>
+  </data>
+  <data name="TotalPayableForPeriod" xml:space="preserve">
+    <value>Amount due per period</value>
+  </data>
+  <data name="Tuesdays" xml:space="preserve">
+    <value>Tuesdays</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Unitate" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="UnitateName" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="UnitName" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units:</value>
+  </data>
+  <data name="UserBeginSale" xml:space="preserve">
+    <value>Who resumed</value>
+  </data>
+  <data name="UserStopSale" xml:space="preserve">
+    <value>Who stopped</value>
+  </data>
+  <data name="UsingCount" xml:space="preserve">
+    <value>Number of applications</value>
+  </data>
+  <data name="ValidationRequiredMockupDaysOfWeek" xml:space="preserve">
+    <value>Days of the week were not filled in</value>
+  </data>
+  <data name="ValidationRequiredMockupName" xml:space="preserve">
+    <value>Template name is not specified</value>
+  </data>
+  <data name="WaitingTime" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="Wednesdays" xml:space="preserve">
+    <value>Wednesdays</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>days off</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>Workload</value>
+  </data>
+</root>

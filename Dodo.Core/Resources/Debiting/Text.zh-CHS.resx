@@ -1,0 +1,2994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>接受</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>动作</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>有效的</value>
+  </data>
+  <data name="AddDebiting" xml:space="preserve">
+    <value>添加注销</value>
+  </data>
+  <data name="AddPeriod" xml:space="preserve">
+    <value>添加期间</value>
+  </data>
+  <data name="AddPositionMessage" xml:space="preserve">
+    <value>为了添加位置，请输入名称</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="AllSuppliersText" xml:space="preserve">
+    <value>所有的供应商</value>
+  </data>
+  <data name="AllUnitsText" xml:space="preserve">
+    <value>所有的披萨店</value>
+  </data>
+  <data name="AlphabetFirstLetter" xml:space="preserve">
+    <value>А</value>
+  </data>
+  <data name="AlphabetLastLetter" xml:space="preserve">
+    <value>Я</value>
+  </data>
+  <data name="ApplicantCardAddedLabel" xml:space="preserve">
+    <value>收货日期</value>
+  </data>
+  <data name="ApplicantCardAddressLabel" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="ApplicantCardAgainLabel" xml:space="preserve">
+    <value>重新</value>
+  </data>
+  <data name="ApplicantCardAnswerLabel" xml:space="preserve">
+    <value>回答</value>
+  </data>
+  <data name="ApplicantCardCommentLabel" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="ApplicantCardCommentPlaceholder" xml:space="preserve">
+    <value>必须留评论</value>
+  </data>
+  <data name="ApplicantCardDuplicatesLabel" xml:space="preserve">
+    <value>副本</value>
+  </data>
+  <data name="ApplicantCardFioLabel" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="ApplicantCardHasChildrenLabel" xml:space="preserve">
+    <value>孩子</value>
+  </data>
+  <data name="ApplicantCardHeader" xml:space="preserve">
+    <value>应聘人申请表</value>
+  </data>
+  <data name="ApplicantCardHistoryLabel" xml:space="preserve">
+    <value>进程</value>
+  </data>
+  <data name="ApplicantCardHobbyLabel" xml:space="preserve">
+    <value>爱好</value>
+  </data>
+  <data name="ApplicantCardInputCommentText" xml:space="preserve">
+    <value>请评论</value>
+  </data>
+  <data name="ApplicantCardLastHistoryLabel" xml:space="preserve">
+    <value>最后{0}事件</value>
+  </data>
+  <data name="ApplicantCardLink" xml:space="preserve">
+    <value>申请表</value>
+  </data>
+  <data name="ApplicantCardMedicalBookLabel" xml:space="preserve">
+    <value>医疗卡</value>
+  </data>
+  <data name="ApplicantCardOpenDuplicateLabel" xml:space="preserve">
+    <value>看</value>
+  </data>
+  <data name="ApplicantCardPersonalInfoLabel" xml:space="preserve">
+    <value>死人信息</value>
+  </data>
+  <data name="ApplicantCardPhoneLabel" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="ApplicantCardShiftsLabel" xml:space="preserve">
+    <value>轮班</value>
+  </data>
+  <data name="ApplicantCardSmokingLabel" xml:space="preserve">
+    <value>吸烟</value>
+  </data>
+  <data name="ApplicantCardSourceDescriptionLabel" xml:space="preserve">
+    <value>来源（补充说明）</value>
+  </data>
+  <data name="ApplicantCardSourceLabel" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="ApplicantCardStatusLabel" xml:space="preserve">
+    <value>回答选择</value>
+  </data>
+  <data name="ApplicantCardTimeLabel" xml:space="preserve">
+    <value>几点</value>
+  </data>
+  <data name="ApplicantCardTypeLabel" xml:space="preserve">
+    <value>职位</value>
+  </data>
+  <data name="ApplicantCardUnitLabel" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="ApplicantCardWhenLabel" xml:space="preserve">
+    <value>什么时候</value>
+  </data>
+  <data name="ApplicantCardWorkExperienceLabel" xml:space="preserve">
+    <value>工作经历</value>
+  </data>
+  <data name="ApplicantCardWorkInfoLabel" xml:space="preserve">
+    <value>工作信息</value>
+  </data>
+  <data name="ApplicantFormAddressLabel" xml:space="preserve">
+    <value>住所地址</value>
+  </data>
+  <data name="ApplicantFormBirthdayLabel" xml:space="preserve">
+    <value>生日</value>
+  </data>
+  <data name="ApplicantFormFirstNameLabel" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="ApplicantFormHasChildrenLabel" xml:space="preserve">
+    <value>有孩子吗？</value>
+  </data>
+  <data name="ApplicantFormHeader" xml:space="preserve">
+    <value>申请表</value>
+  </data>
+  <data name="ApplicantFormHint" xml:space="preserve">
+    <value>（*）空间必须填写</value>
+  </data>
+  <data name="ApplicantFormHobby" xml:space="preserve">
+    <value>爱好</value>
+  </data>
+  <data name="ApplicantFormHobbyPlaceholder" xml:space="preserve">
+    <value>请介绍一下你们的爱好</value>
+  </data>
+  <data name="ApplicantFormLastNameLabel" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="ApplicantFormMedicalBookLabel" xml:space="preserve">
+    <value>有医疗卡吗？</value>
+  </data>
+  <data name="ApplicantFormPersonalInfoLabel" xml:space="preserve">
+    <value>死人信息</value>
+  </data>
+  <data name="ApplicantFormPhoneLabel" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="ApplicantFormPleaseSelect" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="ApplicantFormShiftLabel" xml:space="preserve">
+    <value>工作时间</value>
+  </data>
+  <data name="ApplicantFormSmokingLabel" xml:space="preserve">
+    <value>吸烟？</value>
+  </data>
+  <data name="ApplicantFormSourceLabel" xml:space="preserve">
+    <value>从哪听说DODO披萨</value>
+  </data>
+  <data name="ApplicantFormTypeLabel" xml:space="preserve">
+    <value>我想工作</value>
+  </data>
+  <data name="ApplicantFormUnitLabel" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="ApplicantFormWorkExperience" xml:space="preserve">
+    <value>工作经历</value>
+  </data>
+  <data name="ApplicantFormWorkExperiencePlaceholder" xml:space="preserve">
+    <value>如果您已经有工作经历请介绍一下</value>
+  </data>
+  <data name="ApplicantFormWorkInfoLabel" xml:space="preserve">
+    <value>工作信息</value>
+  </data>
+  <data name="ApplicantInboxStatusLabel" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ApplicantInboxUnitColumn" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="ApplicantInboxVacanciesLabel" xml:space="preserve">
+    <value>空缺</value>
+  </data>
+  <data name="ApplicantsInboxActualVacanciesLabel" xml:space="preserve">
+    <value>当前实际空缺</value>
+  </data>
+  <data name="ApplicantsInboxAddedDateColumn" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="ApplicantsInboxAgainLabel" xml:space="preserve">
+    <value>重新</value>
+  </data>
+  <data name="ApplicantsInboxAgeColumn" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="ApplicantsInboxAllStatusesText" xml:space="preserve">
+    <value>所有状态</value>
+  </data>
+  <data name="ApplicantsInboxAllTypesText" xml:space="preserve">
+    <value>全部空缺职位</value>
+  </data>
+  <data name="ApplicantsInboxAnswerAvgTimeLabel" xml:space="preserve">
+    <value>回答平均速度</value>
+  </data>
+  <data name="ApplicantsInboxCallTab" xml:space="preserve">
+    <value>打电话</value>
+  </data>
+  <data name="ApplicantsInboxCommonTab" xml:space="preserve">
+    <value>基本信息</value>
+  </data>
+  <data name="ApplicantsInboxDueDateColumn" xml:space="preserve">
+    <value>时期</value>
+  </data>
+  <data name="ApplicantsInboxHideFilter" xml:space="preserve">
+    <value>躲筛选</value>
+  </data>
+  <data name="ApplicantsInboxHiredTotal" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="ApplicantsInboxInterviewTab" xml:space="preserve">
+    <value>面试</value>
+  </data>
+  <data name="ApplicantsInboxLastTab" xml:space="preserve">
+    <value>最后行为</value>
+  </data>
+  <data name="ApplicantsInboxLink" xml:space="preserve">
+    <value>申请表</value>
+  </data>
+  <data name="ApplicantsInboxMedicalBookTotal" xml:space="preserve">
+    <value>MK做</value>
+  </data>
+  <data name="ApplicantsInboxMonthTotal" xml:space="preserve">
+    <value>每月申请表</value>
+  </data>
+  <data name="ApplicantsInboxNewLabel" xml:space="preserve">
+    <value>新申请报/今天</value>
+  </data>
+  <data name="ApplicantsInboxNewLink" xml:space="preserve">
+    <value>新申请</value>
+  </data>
+  <data name="ApplicantsInboxNonSmokingLabel" xml:space="preserve">
+    <value>不吸烟</value>
+  </data>
+  <data name="ApplicantsInboxNotAnsweredLabel" xml:space="preserve">
+    <value>没回复</value>
+  </data>
+  <data name="ApplicantsInboxRejectTotal" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="ApplicantsInboxReserveTotal" xml:space="preserve">
+    <value>储备</value>
+  </data>
+  <data name="ApplicantsInboxSearchTab" xml:space="preserve">
+    <value>搜索结果</value>
+  </data>
+  <data name="ApplicantsInboxSearchText" xml:space="preserve">
+    <value>姓名，电话搜索</value>
+  </data>
+  <data name="ApplicantsInboxShiftFilter" xml:space="preserve">
+    <value>可以工作</value>
+  </data>
+  <data name="ApplicantsInboxShiftsColumn" xml:space="preserve">
+    <value>轮班</value>
+  </data>
+  <data name="ApplicantsInboxShowFilter" xml:space="preserve">
+    <value>筛选</value>
+  </data>
+  <data name="ApplicantsInboxSmokingColumn" xml:space="preserve">
+    <value>吸烟</value>
+  </data>
+  <data name="ApplicantsInboxSmokingLabel" xml:space="preserve">
+    <value>吸烟</value>
+  </data>
+  <data name="ApplicantsInboxStatusColumn" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ApplicantsInboxTypeColumn" xml:space="preserve">
+    <value>职位</value>
+  </data>
+  <data name="ApplicantsStatisticRebuild" xml:space="preserve">
+    <value>改建</value>
+  </data>
+  <data name="AskDeleteDebiting" xml:space="preserve">
+    <value>您确定想删除勾销？</value>
+  </data>
+  <data name="AskDeleteSupply" xml:space="preserve">
+    <value>您确定想删除供应？</value>
+  </data>
+  <data name="AverageCheckTitle" xml:space="preserve">
+    <value>平均发票</value>
+  </data>
+  <data name="BasicInformationLabel" xml:space="preserve">
+    <value>基本信息</value>
+  </data>
+  <data name="BeforeYesterday" xml:space="preserve">
+    <value>前天</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>建造</value>
+  </data>
+  <data name="ByDays" xml:space="preserve">
+    <value>日间</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CanceledReportType" xml:space="preserve">
+    <value>订单取消</value>
+  </data>
+  <data name="CancelTransaction" xml:space="preserve">
+    <value>取消交易</value>
+  </data>
+  <data name="CashierLabel" xml:space="preserve">
+    <value>收银台</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>级别</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="ChooseSupplierLabel" xml:space="preserve">
+    <value>选择供应商</value>
+  </data>
+  <data name="ClientDatabaseStructureTitle" xml:space="preserve">
+    <value>客户数据库的结构</value>
+  </data>
+  <data name="ComeBack" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="CommentPlaceholder" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="CommercialInvoiceDate" xml:space="preserve">
+    <value>供应商发票</value>
+  </data>
+  <data name="CommercialInvoiceNumber" xml:space="preserve">
+    <value>供应商发票№</value>
+  </data>
+  <data name="ConsumptionQC" xml:space="preserve">
+    <value>KK费用</value>
+  </data>
+  <data name="Corruption" xml:space="preserve">
+    <value>食物损坏</value>
+  </data>
+  <data name="CostAndUCMenuItem" xml:space="preserve">
+    <value>成本及单价</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="CountAcronim" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="CountLabel" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>外卖员</value>
+  </data>
+  <data name="CouriersLabel" xml:space="preserve">
+    <value>外卖员</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>当前</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>当前余额</value>
+  </data>
+  <data name="CurrentDayPlaceholder" xml:space="preserve">
+    <value>请按选择</value>
+  </data>
+  <data name="CurrentWeek" xml:space="preserve">
+    <value>本周</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="DayOfWeekLabel" xml:space="preserve">
+    <value>选日期</value>
+  </data>
+  <data name="Debiting" xml:space="preserve">
+    <value>损耗</value>
+  </data>
+  <data name="DebitingDateFilter" xml:space="preserve">
+    <value>原料注销日期</value>
+  </data>
+  <data name="DebitingMaterial" xml:space="preserve">
+    <value>注销产品</value>
+  </data>
+  <data name="DebitingMaterialLabel" xml:space="preserve">
+    <value>勾销原料</value>
+  </data>
+  <data name="DebitingNumber" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="DebitingPizzeria" xml:space="preserve">
+    <value>披萨店/仓库</value>
+  </data>
+  <data name="DebitingReason" xml:space="preserve">
+    <value>注销原因</value>
+  </data>
+  <data name="DebitingTime" xml:space="preserve">
+    <value>注销日期</value>
+  </data>
+  <data name="DebitingWhoDebited" xml:space="preserve">
+    <value>注销人员</value>
+  </data>
+  <data name="Default_Day_Select" xml:space="preserve">
+    <value>星期几</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>残次品</value>
+  </data>
+  <data name="DefectReportType" xml:space="preserve">
+    <value>残次品</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DeleteShift" xml:space="preserve">
+    <value>删除工作班</value>
+  </data>
+  <data name="DeprecatedBrowserMessage" xml:space="preserve">
+    <value>不好意思，您的浏览器过时了。请更新您的浏览器或下载另外一个。</value>
+  </data>
+  <data name="DeselectAllLabel" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>差异</value>
+  </data>
+  <data name="DodoIS" xml:space="preserve">
+    <value>dodo is</value>
+  </data>
+  <data name="DodoISFooterText" xml:space="preserve">
+    <value>dodo pizza</value>
+  </data>
+  <data name="Dollar" xml:space="preserve">
+    <value>美元</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>开始使用</value>
+  </data>
+  <data name="EfficiencyPercentage" xml:space="preserve">
+    <value>进度表效率</value>
+  </data>
+  <data name="EmployeeCategoryCashier" xml:space="preserve">
+    <value>收银员</value>
+  </data>
+  <data name="EmployeeCategoryDateWith" xml:space="preserve">
+    <value>日期从</value>
+  </data>
+  <data name="EmployeeCategoryInstructor" xml:space="preserve">
+    <value>教练</value>
+  </data>
+  <data name="EmployeeCategoryManager" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedFailedBeginDate" xml:space="preserve">
+    <value>格式没定或不准确</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedNotLargerCurrentDate" xml:space="preserve">
+    <value>新类别开始日期不能超过当前的日期</value>
+  </data>
+  <data name="EmployeeCategoryNotSelected" xml:space="preserve">
+    <value>人员类别没指出</value>
+  </data>
+  <data name="EmployeeCategoryPizzmaker" xml:space="preserve">
+    <value>披萨麦克</value>
+  </data>
+  <data name="EmployeeCategoryTrainee" xml:space="preserve">
+    <value>实习生</value>
+  </data>
+  <data name="EmployeeCouriersDynamicsAwayColumn" xml:space="preserve">
+    <value>外卖员流动率</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+  </data>
+  <data name="EmployeeDateJSFormat" xml:space="preserve">
+    <value>yy-MM-dd</value>
+  </data>
+  <data name="EmployeeDateMask" xml:space="preserve">
+    <value>9999-99-99</value>
+  </data>
+  <data name="EmployeeDateTimeCulture" xml:space="preserve">
+    <value>ru-RU</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumn" xml:space="preserve">
+    <value>本土化</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumnInfo" xml:space="preserve">
+    <value>刚被招聘的员工和当前工作的员工比率</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonth" xml:space="preserve">
+    <value>月员工流失率</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonthInfo" xml:space="preserve">
+    <value>当月离职员工和当前员工总数比例</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYear" xml:space="preserve">
+    <value>年员工流失率</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>自年初起离职员工和当前员工总数比例</value>
+  </data>
+  <data name="EmployeeDynamicsFeedbackColumn" xml:space="preserve">
+    <value>意见</value>
+  </data>
+  <data name="EmployeeDynamicsHeader" xml:space="preserve">
+    <value>员工流失率</value>
+  </data>
+  <data name="EmployeeDynamicsHiredColumn" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="EmployeeDynamicsMonthColumn" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="EmployeeDynamicsTerminatedColumn" xml:space="preserve">
+    <value>离职</value>
+  </data>
+  <data name="EmployeeDynamicsWorkedLessThanMonthColumn" xml:space="preserve">
+    <value>雇佣时间少于1个月</value>
+  </data>
+  <data name="EmployeeEditAbsenceTypeLabel" xml:space="preserve">
+    <value>原因</value>
+  </data>
+  <data name="EmployeeEditAdditionalPhoneLabel" xml:space="preserve">
+    <value>备用电话</value>
+  </data>
+  <data name="EmployeeEditBarcodeLabel" xml:space="preserve">
+    <value>二维码</value>
+  </data>
+  <data name="EmployeeEditBirthdayLabel" xml:space="preserve">
+    <value>出生日期</value>
+  </data>
+  <data name="EmployeeEditCarBrandLabel" xml:space="preserve">
+    <value>汽车牌子</value>
+  </data>
+  <data name="EmployeeEditCarColorLabel" xml:space="preserve">
+    <value>汽车颜色</value>
+  </data>
+  <data name="EmployeeEditCategoryLabel" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="EmployeeEditCharSuffix" xml:space="preserve">
+    <value>符号</value>
+  </data>
+  <data name="EmployeeEditEmailLabel" xml:space="preserve">
+    <value>电子邮箱</value>
+  </data>
+  <data name="EmployeeEditErrorFoundMessage" xml:space="preserve">
+    <value>发现以下错误</value>
+  </data>
+  <data name="EmployeeEditFacebookProfileLabel" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="EmployeeEditFacebookStatusLabel" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="EmployeeEditFemaleLabel" xml:space="preserve">
+    <value>女</value>
+  </data>
+  <data name="EmployeeEditFirstNameLabel" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="EmployeeEditGenderLabel" xml:space="preserve">
+    <value>性别</value>
+  </data>
+  <data name="EmployeeEditHeader" xml:space="preserve">
+    <value>修改信息</value>
+  </data>
+  <data name="EmployeeEditHireDateLabel" xml:space="preserve">
+    <value>招聘日期</value>
+  </data>
+  <data name="EmployeeEditHolidaysDatesLabel" xml:space="preserve">
+    <value>假期</value>
+  </data>
+  <data name="EmployeeEditHospitalsDatesLabel" xml:space="preserve">
+    <value>病假</value>
+  </data>
+  <data name="EmployeeEditLPhotoLabel" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="EmployeeEditMaleLabel" xml:space="preserve">
+    <value>男</value>
+  </data>
+  <data name="EmployeeEditMedicalBookLabel" xml:space="preserve">
+    <value>体验卡</value>
+  </data>
+  <data name="EmployeeEditMedicalBookShelfLifeLabel" xml:space="preserve">
+    <value>医疗卡</value>
+  </data>
+  <data name="EmployeeEditNumberLabel" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="EmployeeEditPatronymicLabel" xml:space="preserve">
+    <value>姓氏</value>
+  </data>
+  <data name="EmployeeEditPersonalInfoLabel" xml:space="preserve">
+    <value>死人信息</value>
+  </data>
+  <data name="EmployeeEditPFRLabel" xml:space="preserve">
+    <value>养老金</value>
+  </data>
+  <data name="EmployeeEditPFRMask" xml:space="preserve">
+    <value>999-999-999-99</value>
+  </data>
+  <data name="EmployeeEditPhoneLabel" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="EmployeeEditPhoneNumberMask" xml:space="preserve">
+    <value>7 (999) 999-99-99</value>
+  </data>
+  <data name="EmployeeEditPhotoLabel" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="EmployeeEditRequiredFieldsMessage" xml:space="preserve">
+    <value>（*)空间必须填写</value>
+  </data>
+  <data name="EmployeeEditSecondNameLabel" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="EmployeeEditStateDateFromLabel" xml:space="preserve">
+    <value>时期</value>
+  </data>
+  <data name="EmployeeEditStateDescriptionLabel" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="EmployeeEditStateTimeFromLabel" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="EmployeeEditStatusLabel" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="EmployeeEditTabNoLabel" xml:space="preserve">
+    <value>工牌号码</value>
+  </data>
+  <data name="EmployeeEditTabNoMask" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="EmployeeEditTerminationDateLabel" xml:space="preserve">
+    <value>离职日期</value>
+  </data>
+  <data name="EmployeeEditTerminationReasonLabel" xml:space="preserve">
+    <value>离职原因</value>
+  </data>
+  <data name="EmployeeEditTitle" xml:space="preserve">
+    <value>修改人员</value>
+  </data>
+  <data name="EmployeeEditTypeLabel" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="EmployeeEditUnitLabel" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="EmployeeEditWorkInfoLabel" xml:space="preserve">
+    <value>工作信息</value>
+  </data>
+  <data name="EmployeeEditYearOfVehicleCarLabel" xml:space="preserve">
+    <value>汽车出厂日期</value>
+  </data>
+  <data name="EmployeeErrorLoginAlreadyUsed" xml:space="preserve">
+    <value>本电话已经被另一个人员使用</value>
+  </data>
+  <data name="EmployeeErrorNoPhoto" xml:space="preserve">
+    <value>无添加人员的图片</value>
+  </data>
+  <data name="EmployeeErrorPhoneNumber" xml:space="preserve">
+    <value>需要指出正确电话号码</value>
+  </data>
+  <data name="EmployeeErrorPhoto" xml:space="preserve">
+    <value>保存照片时发生错误</value>
+  </data>
+  <data name="EmployeeErrorPhotoExtension" xml:space="preserve">
+    <value>照片格式为jpg或png</value>
+  </data>
+  <data name="EmployeeErrorPhotoHeight" xml:space="preserve">
+    <value>照片高度为{0}像素</value>
+  </data>
+  <data name="EmployeeErrorPhotoSize" xml:space="preserve">
+    <value>照片大小不能超过{0}千字节</value>
+  </data>
+  <data name="EmployeeErrorPhotoWidth" xml:space="preserve">
+    <value>照片宽度为{0}像素</value>
+  </data>
+  <data name="EmployeeErrorRole" xml:space="preserve">
+    <value>制定未知人员的类别</value>
+  </data>
+  <data name="EmployeeErrorShiftDateFormat" xml:space="preserve">
+    <value>输入不准确的日期</value>
+  </data>
+  <data name="EmployeeErrorShiftEndDate" xml:space="preserve">
+    <value>下班日期比上班日期要晚</value>
+  </data>
+  <data name="EmployeeErrorShiftTimeFormat" xml:space="preserve">
+    <value>输入不准确的时间</value>
+  </data>
+  <data name="EmployeeKitchenDynamicsAwayColumn" xml:space="preserve">
+    <value>厨房流动</value>
+  </data>
+  <data name="EmployeeLabel" xml:space="preserve">
+    <value>员工</value>
+  </data>
+  <data name="EmployeeListAgeColumnTitle" xml:space="preserve">
+    <value>年龄</value>
+  </data>
+  <data name="EmployeeListBirthdayFemaleLabel" xml:space="preserve">
+    <value>出生</value>
+  </data>
+  <data name="EmployeeListBirthdayMaleLabel" xml:space="preserve">
+    <value>出生</value>
+  </data>
+  <data name="EmployeeListBirthdaysHeader" xml:space="preserve">
+    <value>今天生日</value>
+  </data>
+  <data name="EmployeeListEmailLabel" xml:space="preserve">
+    <value>邮箱</value>
+  </data>
+  <data name="EmployeeListExperienceColumnTitle" xml:space="preserve">
+    <value>工龄</value>
+  </data>
+  <data name="EmployeeListHireDate" xml:space="preserve">
+    <value>招聘日期</value>
+  </data>
+  <data name="EmployeeListHiredLabel" xml:space="preserve">
+    <value>已聘用</value>
+  </data>
+  <data name="EmployeeListLessThanDay" xml:space="preserve">
+    <value>少于一天</value>
+  </data>
+  <data name="EmployeeListMedicalBookLabel" xml:space="preserve">
+    <value>医疗卡</value>
+  </data>
+  <data name="EmployeeListMedicalBookName" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="EmployeeListMedicalBookRemained" xml:space="preserve">
+    <value>留守</value>
+  </data>
+  <data name="EmployeeListMedicalBooks" xml:space="preserve">
+    <value>医疗卡</value>
+  </data>
+  <data name="EmployeeListMedicalBookType" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="EmployeeListNameColumnTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="EmployeeListNoBirthdayLabel" xml:space="preserve">
+    <value>未知</value>
+  </data>
+  <data name="EmployeeListNoEmailLabel" xml:space="preserve">
+    <value>未标明</value>
+  </data>
+  <data name="EmployeeListNoMedicalBookLabel" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="EmployeeListNoPhoneNumberLabel" xml:space="preserve">
+    <value>未标明</value>
+  </data>
+  <data name="EmployeeListPhoneNumberLabel" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="EmployeeListStatusLabel" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="EmployeeListTabNoLabel" xml:space="preserve">
+    <value>工牌号码</value>
+  </data>
+  <data name="EmployeeListTerminatedLabel" xml:space="preserve">
+    <value>离职</value>
+  </data>
+  <data name="EmployeeListTerminationColumnTitle" xml:space="preserve">
+    <value>离职原因</value>
+  </data>
+  <data name="EmployeeListTitle" xml:space="preserve">
+    <value>人员单</value>
+  </data>
+  <data name="EmployeeListTypeColumnTitle" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="EmployeeListUnitLabel" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="EmployeeMedicalBooksExpiredText" xml:space="preserve">
+    <value>到期</value>
+  </data>
+  <data name="EmployeeMedicalBooksFullNameColumnTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="EmployeeMedicalBooksProlongLink" xml:space="preserve">
+    <value>延期</value>
+  </data>
+  <data name="EmployeeMedicalBooksRemainedColumnTitle" xml:space="preserve">
+    <value>剩余</value>
+  </data>
+  <data name="EmployeeMedicalBooksTypeColumnTitle" xml:space="preserve">
+    <value>剩下</value>
+  </data>
+  <data name="EmployeeMoodWeekLabel" xml:space="preserve">
+    <value>星期从{0：dd.MM}到{1：dd.MM}</value>
+  </data>
+  <data name="EmployeeNewLabel" xml:space="preserve">
+    <value>新人员</value>
+  </data>
+  <data name="EmployeeNewTitle" xml:space="preserve">
+    <value>新人员</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYear" xml:space="preserve">
+    <value>预测年员工流失率</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>干部流动的比例</value>
+  </data>
+  <data name="EmployeeSearchLabel" xml:space="preserve">
+    <value>找人员</value>
+  </data>
+  <data name="EmployeeSearchOpenLink" xml:space="preserve">
+    <value>开卡</value>
+  </data>
+  <data name="EmployeeSearchPlaceholder" xml:space="preserve">
+    <value>请输入人员姓名</value>
+  </data>
+  <data name="EmployeeShiftNotInScheduleText" xml:space="preserve">
+    <value>非本班次员工</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginDateColumnTitle" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginTimeColumnTitle" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="EmployeeShiftSettingsCategoryColumnTitle" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseDate" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseEmployee" xml:space="preserve">
+    <value>选择人员</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndDateColumnTitle" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndTimeColumnTitle" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="EmployeeShiftSettingsTitle" xml:space="preserve">
+    <value>更正员工工作时长</value>
+  </data>
+  <data name="EmployeesOnShift" xml:space="preserve">
+    <value>上班人员</value>
+  </data>
+  <data name="EmployeeStatisticsAbsentLabel" xml:space="preserve">
+    <value>缺席</value>
+  </data>
+  <data name="EmployeeStatisticsActiveCountLabel" xml:space="preserve">
+    <value>工作人数</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationComment" xml:space="preserve">
+    <value>适应性-人员%（0-100%），不到两个月的工龄</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationFactorLabel" xml:space="preserve">
+    <value>适应性</value>
+  </data>
+  <data name="EmployeeStatisticsAddEmployeeLink" xml:space="preserve">
+    <value>添加人员</value>
+  </data>
+  <data name="EmployeeStatisticsApplicantsLabel" xml:space="preserve">
+    <value>收到新工作申请</value>
+  </data>
+  <data name="EmployeeStatisticsAwayComment" xml:space="preserve">
+    <value>流动</value>
+  </data>
+  <data name="EmployeeStatisticsAwayFactorLabel" xml:space="preserve">
+    <value>本月营业额</value>
+  </data>
+  <data name="EmployeeStatisticsFeedbackLabel" xml:space="preserve">
+    <value>意见/匿名</value>
+  </data>
+  <data name="EmployeeStatisticsFindBySurname" xml:space="preserve">
+    <value>搜索人员姓名</value>
+  </data>
+  <data name="EmployeeStatisticsHideReasonsForDismissal" xml:space="preserve">
+    <value>藏</value>
+  </data>
+  <data name="EmployeeStatisticsHiredTerminatedThisMonthLabel" xml:space="preserve">
+    <value>本月新聘/离职</value>
+  </data>
+  <data name="EmployeeStatisticsHiredThisMonthLabel" xml:space="preserve">
+    <value>本月新聘</value>
+  </data>
+  <data name="EmployeeStatisticsHiringReportLink" xml:space="preserve">
+    <value>检查动态</value>
+  </data>
+  <data name="EmployeeStatisticsHolidaysCountLabel" xml:space="preserve">
+    <value>假期</value>
+  </data>
+  <data name="EmployeeStatisticsHospitalsCountLabel" xml:space="preserve">
+    <value>病假</value>
+  </data>
+  <data name="EmployeeStatisticsLeaveLabel" xml:space="preserve">
+    <value>请假申请表</value>
+  </data>
+  <data name="EmployeeStatisticsListLink" xml:space="preserve">
+    <value>工作人员全名单</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookExpiredCountLabel" xml:space="preserve">
+    <value>医疗卡到期了</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookHeader" xml:space="preserve">
+    <value>医疗卡快到期</value>
+  </data>
+  <data name="EmployeeStatisticsNormLabel" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="EmployeeStatisticsNormsLabel" xml:space="preserve">
+    <value>工作人员标准</value>
+  </data>
+  <data name="EmployeeStatisticsOtherAbsenceCountLabel" xml:space="preserve">
+    <value>别的原因</value>
+  </data>
+  <data name="EmployeeStatisticsOtherReasonsForDismissal" xml:space="preserve">
+    <value>其他原因</value>
+  </data>
+  <data name="EmployeeStatisticsPopularReasonsForDismissal" xml:space="preserve">
+    <value>近12个月员工离职主要原因</value>
+  </data>
+  <data name="EmployeeStatisticsProductivityLabel" xml:space="preserve">
+    <value>生产率</value>
+  </data>
+  <data name="EmployeeStatisticsSelectedPizzeria" xml:space="preserve">
+    <value>请选择披萨</value>
+  </data>
+  <data name="EmployeeStatisticsStuffLabel" xml:space="preserve">
+    <value>员工</value>
+  </data>
+  <data name="EmployeeStatisticsSuspendedCountLabel" xml:space="preserve">
+    <value>停职</value>
+  </data>
+  <data name="EmployeeStatisticsTerminatedThisMonthLabel" xml:space="preserve">
+    <value>本月离职</value>
+  </data>
+  <data name="EmployeeStatisticsTitle" xml:space="preserve">
+    <value>基本信息</value>
+  </data>
+  <data name="EmployeeStatisticsTotalCountLabel" xml:space="preserve">
+    <value>员工共计</value>
+  </data>
+  <data name="EmployeeStatisticsWorkedLessThanMonthCountLabel" xml:space="preserve">
+    <value>雇佣时间少于1个月</value>
+  </data>
+  <data name="EmployeesTrainingFailedAddCurrentCategoryStage" xml:space="preserve">
+    <value>不能重新定当前的类别</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeTimeMask" xml:space="preserve">
+    <value>99:99</value>
+  </data>
+  <data name="EmployeeTraining" xml:space="preserve">
+    <value>培训</value>
+  </data>
+  <data name="EmptyTransactionMessage" xml:space="preserve">
+    <value>不好意思，交易在指定期限没提交</value>
+  </data>
+  <data name="Error_CouldNotGetYandexTransactions" xml:space="preserve">
+    <value>错误：无法收到交易清单</value>
+  </data>
+  <data name="Error_RequiedCommentIfRejected" xml:space="preserve">
+    <value>拒绝申请表需填写拒绝原因</value>
+  </data>
+  <data name="Error_YandexTransactionsRangeIsTooBig" xml:space="preserve">
+    <value>日期的范围不能超过1个月</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>欧元</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>经验</value>
+  </data>
+  <data name="ExperienceBonus" xml:space="preserve">
+    <value>经验奖励</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>保质期到期</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>导出到Excel</value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>开始超级time日期</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>开始超级time时间</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>人员类别没指出</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>请选人员类别</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>人员姓名</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>结束超级time日期</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>结束超级time时间</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>多余的时间</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>小时数量</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>经理姓名</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="FeatureCardCheckDateLabel" xml:space="preserve">
+    <value>检查时间</value>
+  </data>
+  <data name="FeatureCardChooseTime" xml:space="preserve">
+    <value>请选择您能工作的时间</value>
+  </data>
+  <data name="FeatureCardCollapseFilterLink" xml:space="preserve">
+    <value>筛选不要</value>
+  </data>
+  <data name="FeatureCardDescription" xml:space="preserve">
+    <value>人员标记上班时间的表格</value>
+  </data>
+  <data name="FeatureCardEveningOptionText" xml:space="preserve">
+    <value>晚上</value>
+  </data>
+  <data name="FeatureCardExpandFilterLink" xml:space="preserve">
+    <value>打开筛选</value>
+  </data>
+  <data name="FeatureCardFullNamePlaceholder" xml:space="preserve">
+    <value>姓名，职位</value>
+  </data>
+  <data name="FeatureCardHolidayLabel" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="FeatureCardHolidayOptionText" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="FeatureCardMorningOptionText" xml:space="preserve">
+    <value>早上-下午</value>
+  </data>
+  <data name="FeatureCardNightOptionText" xml:space="preserve">
+    <value>夜间</value>
+  </data>
+  <data name="FeatureCardOptionsTitle" xml:space="preserve">
+    <value>可工作</value>
+  </data>
+  <data name="FeatureCardTitle" xml:space="preserve">
+    <value>能力图</value>
+  </data>
+  <data name="FeatureCardWorkdayLabel" xml:space="preserve">
+    <value>可工作</value>
+  </data>
+  <data name="FederalLevelHoliday" xml:space="preserve">
+    <value>国家假日</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>不填充{0}字段</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="From2" xml:space="preserve">
+    <value>离</value>
+  </data>
+  <data name="FromSupplier" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="GenericReportType" xml:space="preserve">
+    <value>所有类别</value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="GoodsProduct" xml:space="preserve">
+    <value>商品/产品</value>
+  </data>
+  <data name="Grivna" xml:space="preserve">
+    <value>赫夫纳</value>
+  </data>
+  <data name="GuiltyPerson" xml:space="preserve">
+    <value>人为原因</value>
+  </data>
+  <data name="HiringReportAdaptationColumnTitle" xml:space="preserve">
+    <value>适应系数</value>
+  </data>
+  <data name="HiringReportAwayColumnTitle" xml:space="preserve">
+    <value>流动系数</value>
+  </data>
+  <data name="HiringReportBuildLink" xml:space="preserve">
+    <value>作出</value>
+  </data>
+  <data name="HiringReportChooseDateLabel" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="HiringReportChooseUnitLabel" xml:space="preserve">
+    <value>请选部门</value>
+  </data>
+  <data name="HiringReportExcelExportLink" xml:space="preserve">
+    <value>出口到Excel</value>
+  </data>
+  <data name="HiringReportFactColumnTitle" xml:space="preserve">
+    <value>人员实际数量</value>
+  </data>
+  <data name="HiringReportHiredColumnTitle" xml:space="preserve">
+    <value>来了</value>
+  </data>
+  <data name="HiringReportMonthColumnTitle" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="HiringReportTerminatedColumnTitle" xml:space="preserve">
+    <value>离职</value>
+  </data>
+  <data name="HiringReportWorkedLessThanMonthColumnTitle" xml:space="preserve">
+    <value>雇佣时间少于1个月</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="HourAbbr" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="Html_ListenDodoFm" xml:space="preserve">
+    <value>听dodo广播</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="InputSupplyComposition" xml:space="preserve">
+    <value>输入供应的成分</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>运单日期</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>运单№</value>
+  </data>
+  <data name="IsTransactionCompleted" xml:space="preserve">
+    <value>付款现状</value>
+  </data>
+  <data name="JQGridPageCaption" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="JQGridPageFromCaption" xml:space="preserve">
+    <value>离</value>
+  </data>
+  <data name="JQGridViewCaption" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>厨房</value>
+  </data>
+  <data name="KitchenLabel" xml:space="preserve">
+    <value>厨房</value>
+  </data>
+  <data name="LastRevision" xml:space="preserve">
+    <value>最后调整</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="LossesAndExceesMenuItem" xml:space="preserve">
+    <value>损失/过量</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDate" xml:space="preserve">
+    <value>发动日期</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDateDay" xml:space="preserve">
+    <value>2015年1月21日</value>
+  </data>
+  <data name="LoyaltyAnalyticsCoverage" xml:space="preserve">
+    <value>观众覆盖范围</value>
+  </data>
+  <data name="LoyaltyAnalyticsDodollarSpending" xml:space="preserve">
+    <value>花了dodo卢布</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitations" xml:space="preserve">
+    <value>邀请动态</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitationsComment" xml:space="preserve">
+    <value>本格式指出在您地区邀请的客户</value>
+  </data>
+  <data name="LoyaltyAnalyticsInvitedClientsCount" xml:space="preserve">
+    <value>使用CL吸引新客户</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastMonthNewClientsCount" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastWeekNewClientsCount" xml:space="preserve">
+    <value>星期</value>
+  </data>
+  <data name="LoyaltyAnalyticsProfit" xml:space="preserve">
+    <value>推荐人订单</value>
+  </data>
+  <data name="LoyaltyAnalyticsTheySelfClientsCount" xml:space="preserve">
+    <value>不用SL吸引新客户</value>
+  </data>
+  <data name="LoyaltyAnalyticsTodayNewClientsCount" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="LoyaltyAnalyticsTotalSpending" xml:space="preserve">
+    <value>订单总额（卢布+dodo卢布）</value>
+  </data>
+  <data name="LoyaltyAnalyticsWholeNewClientsCount" xml:space="preserve">
+    <value>一共新客户</value>
+  </data>
+  <data name="LoyaltyAnalyticsYesterdayNewClientsCount" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="LunchSettings" xml:space="preserve">
+    <value>午饭设置</value>
+  </data>
+  <data name="ManagerSettingScheduleManagerLabel" xml:space="preserve">
+    <value>时间表经理联系方式</value>
+  </data>
+  <data name="ManagerSettingsChoose" xml:space="preserve">
+    <value>选择人员</value>
+  </data>
+  <data name="ManagerSettingsDepartmentDirectorLabel" xml:space="preserve">
+    <value>区分经理</value>
+  </data>
+  <data name="ManagerSettingsHeader" xml:space="preserve">
+    <value>披萨店主人联系方式</value>
+  </data>
+  <data name="ManagerSettingsHint" xml:space="preserve">
+    <value>显示人员用户中心</value>
+  </data>
+  <data name="ManagerSettingsScheduleManagerLabel" xml:space="preserve">
+    <value>时间表经理联系方式</value>
+  </data>
+  <data name="ManagerSettingsUnitDirectorLabel" xml:space="preserve">
+    <value>比萨店主任</value>
+  </data>
+  <data name="ManagersLabel" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="MarketingActivities" xml:space="preserve">
+    <value>营销活动</value>
+  </data>
+  <data name="MarketingTitle" xml:space="preserve">
+    <value>营销</value>
+  </data>
+  <data name="MateraialRemainingInfoBlock" xml:space="preserve">
+    <value>最后检查的日期_起数据开始算</value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>原料</value>
+  </data>
+  <data name="MaterialConsumption" xml:space="preserve">
+    <value>使用原料</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialError" xml:space="preserve">
+    <value>选了15个种类以上的原料</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialMessage" xml:space="preserve">
+    <value>当你选一个部门时可以排列出所有条目的原料消耗。如果选择两个或以上的条款，则可以排列出15 个条目。时期应该不超过35天。</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByPeriodError" xml:space="preserve">
+    <value>选好的时期35天以上</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByUnitsError" xml:space="preserve">
+    <value>任何部门都没有选择</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>瑕疵</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>员工饮食</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>销售</value>
+  </data>
+  <data name="MaterialMeasurements" xml:space="preserve">
+    <value>测量</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>原料</value>
+  </data>
+  <data name="MaterialsType" xml:space="preserve">
+    <value>原料类型</value>
+  </data>
+  <data name="MaterialTransfer" xml:space="preserve">
+    <value>调配</value>
+  </data>
+  <data name="MenuAllEmployees" xml:space="preserve">
+    <value>所有人员</value>
+  </data>
+  <data name="MenuApplicantsInbox" xml:space="preserve">
+    <value>申请表</value>
+  </data>
+  <data name="MenuApplicantsStatistic" xml:space="preserve">
+    <value>工作申请统计</value>
+  </data>
+  <data name="MenuCourierSchedule" xml:space="preserve">
+    <value>外卖员时间表</value>
+  </data>
+  <data name="MenuEmployeeBirthdays" xml:space="preserve">
+    <value>生日</value>
+  </data>
+  <data name="MenuEmployeeList" xml:space="preserve">
+    <value>人员单</value>
+  </data>
+  <data name="MenuEmployees" xml:space="preserve">
+    <value>人员名单</value>
+  </data>
+  <data name="MenuEmployeeShiftSettings" xml:space="preserve">
+    <value>轮班调整</value>
+  </data>
+  <data name="MenuEmployeeStatistics" xml:space="preserve">
+    <value>基本信息</value>
+  </data>
+  <data name="MenuEmployeeWorkingHours" xml:space="preserve">
+    <value>工作时间</value>
+  </data>
+  <data name="MenuExperienceBonusRates" xml:space="preserve">
+    <value>经验奖励</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>额外的时间</value>
+  </data>
+  <data name="MenuFeatureCard" xml:space="preserve">
+    <value>工作时间计划表</value>
+  </data>
+  <data name="MenuHiringReport" xml:space="preserve">
+    <value>人员指标</value>
+  </data>
+  <data name="MenuManagerSettings" xml:space="preserve">
+    <value>主任联系方式</value>
+  </data>
+  <data name="MenuMonthlyStatistics" xml:space="preserve">
+    <value>月分析</value>
+  </data>
+  <data name="MenuOperationalStatistics" xml:space="preserve">
+    <value>日分析</value>
+  </data>
+  <data name="MenuProductivityNorms" xml:space="preserve">
+    <value>生产率标准</value>
+  </data>
+  <data name="MenuReports" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="MenuReviews" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="MenuSalaryHolidayFactors" xml:space="preserve">
+    <value>特殊日历</value>
+  </data>
+  <data name="MenuSalaryNightFactors" xml:space="preserve">
+    <value>夜间系数</value>
+  </data>
+  <data name="MenuSalaryPremiums" xml:space="preserve">
+    <value>奖金</value>
+  </data>
+  <data name="MenuSalaryRates" xml:space="preserve">
+    <value>人员工资</value>
+  </data>
+  <data name="MenuSalaryReport" xml:space="preserve">
+    <value>薪水</value>
+  </data>
+  <data name="MenuSalaryReportWithExperienceRates" xml:space="preserve">
+    <value>工资（有经验）</value>
+  </data>
+  <data name="MenuSalaryTaxes" xml:space="preserve">
+    <value>税率</value>
+  </data>
+  <data name="MenuSchedule" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="MenuShiftEmployee" xml:space="preserve">
+    <value>当班人员</value>
+  </data>
+  <data name="MenuShiftNorms" xml:space="preserve">
+    <value>总结分析</value>
+  </data>
+  <data name="MenuShiftSchedule" xml:space="preserve">
+    <value>时间表</value>
+  </data>
+  <data name="MenuShiftSettings" xml:space="preserve">
+    <value>轮班参数</value>
+  </data>
+  <data name="MenuStaff" xml:space="preserve">
+    <value>员工</value>
+  </data>
+  <data name="MenuStocks" xml:space="preserve">
+    <value>储量</value>
+  </data>
+  <data name="MenuTimeReport" xml:space="preserve">
+    <value>实际时间</value>
+  </data>
+  <data name="MenuTitle_Ratings" xml:space="preserve">
+    <value>评级</value>
+  </data>
+  <data name="MenuVacancyList" xml:space="preserve">
+    <value>空缺职位</value>
+  </data>
+  <data name="MenuZoneSettings" xml:space="preserve">
+    <value>披萨店设置</value>
+  </data>
+  <data name="Menu_AuditedInventory" xml:space="preserve">
+    <value>检查剩余</value>
+  </data>
+  <data name="Menu_Finance" xml:space="preserve">
+    <value>金融</value>
+  </data>
+  <data name="Menu_FinanceIndicators" xml:space="preserve">
+    <value>指标</value>
+  </data>
+  <data name="Menu_HolidaysAndWeekends" xml:space="preserve">
+    <value>节日和休息日</value>
+  </data>
+  <data name="Menu_InventoryManagement" xml:space="preserve">
+    <value>库存核算</value>
+  </data>
+  <data name="Menu_KPI_Productivity" xml:space="preserve">
+    <value>生产率</value>
+  </data>
+  <data name="Menu_MaterialConsumption" xml:space="preserve">
+    <value>原料消耗</value>
+  </data>
+  <data name="Menu_Metrics" xml:space="preserve">
+    <value>指标</value>
+  </data>
+  <data name="Menu_Revenue" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="Menu_RevenueInHourOnEmployee" xml:space="preserve">
+    <value>一个人收入/小时</value>
+  </data>
+  <data name="Menu_RevisionDashboard" xml:space="preserve">
+    <value>统计汇报</value>
+  </data>
+  <data name="Menu_Suppliers" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="Menu_TargetsOnMonth" xml:space="preserve">
+    <value>一个月的目标</value>
+  </data>
+  <data name="Menu_TargetsOnYear" xml:space="preserve">
+    <value>一年的目标</value>
+  </data>
+  <data name="Message_AddedDebiting" xml:space="preserve">
+    <value>{0}被添加. 数量：{1}. 原因：{2}</value>
+  </data>
+  <data name="Message_AddedSupplyComposition" xml:space="preserve">
+    <value>{0}-{1}供应被添加，不含增值税- {2}的款额, 增值税- {3}, 增值税-{4}, 含增值说的款额-{5}, 单价-{6}, 公斤的价格-{7}</value>
+  </data>
+  <data name="Message_CantLoadChart" xml:space="preserve">
+    <value>抱歉，工作进度表暂时不可用</value>
+  </data>
+  <data name="Message_Comment" xml:space="preserve">
+    <value>评论：{0}</value>
+  </data>
+  <data name="Message_DebitingComment" xml:space="preserve">
+    <value>评论：以前 {0}, 现在{1}</value>
+  </data>
+  <data name="Message_DebitingReason" xml:space="preserve">
+    <value>原因：本来{0},现在{1}</value>
+  </data>
+  <data name="Message_EditedDebiting" xml:space="preserve">
+    <value>勾销改变{0}</value>
+  </data>
+  <data name="Message_EnterVacancyFields" xml:space="preserve">
+    <value>请先填写表格内容</value>
+  </data>
+  <data name="Message_InvalidIntervals" xml:space="preserve">
+    <value>未保存操作，最低可选时长为4小时</value>
+  </data>
+  <data name="Message_NotChoosedAnyUnit" xml:space="preserve">
+    <value>您没有指出任何披萨店</value>
+  </data>
+  <data name="Message_RemovedDebiting" xml:space="preserve">
+    <value>{0}删除. 数量：{1}. 原因{2}</value>
+  </data>
+  <data name="Message_SupplyChangeCostPerKgForMaterialType" xml:space="preserve">
+    <value>原料类型一公斤价格改变了</value>
+  </data>
+  <data name="Message_SupplyCompositionCount" xml:space="preserve">
+    <value>以前的数量：{0} 现在 {1}</value>
+  </data>
+  <data name="Message_SupplyCompositionSaveQuestion" xml:space="preserve">
+    <value>继续？</value>
+  </data>
+  <data name="Message_TemporarilyUnavailable" xml:space="preserve">
+    <value>抱歉，暂时不可用</value>
+  </data>
+  <data name="MinimalShiftLengthForPersonalFood" xml:space="preserve">
+    <value>免费餐至少需要轮班时间</value>
+  </data>
+  <data name="MinimalShiftToCashier" xml:space="preserve">
+    <value>收银员班最短时间</value>
+  </data>
+  <data name="MinimalShiftToCourier" xml:space="preserve">
+    <value>快递员班最短时间</value>
+  </data>
+  <data name="MinimalShiftToKitchenWorker" xml:space="preserve">
+    <value>厨房人员班最短时间</value>
+  </data>
+  <data name="MinimalShiftToPersonalManager" xml:space="preserve">
+    <value>人员经理</value>
+  </data>
+  <data name="MinuteAbbr" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="MonthlyStatisticBuildLink" xml:space="preserve">
+    <value>建造</value>
+  </data>
+  <data name="MonthlyStatisticByDelivery" xml:space="preserve">
+    <value>送餐：{0}{1}</value>
+  </data>
+  <data name="MonthlyStatisticByDeliveryWithPercent" xml:space="preserve">
+    <value>送餐：{0} {1} （{2}%）</value>
+  </data>
+  <data name="MonthlyStatisticByPickup" xml:space="preserve">
+    <value>自提：{0}{1}</value>
+  </data>
+  <data name="MonthlyStatisticByPickupWithPercent" xml:space="preserve">
+    <value>自提：{0}{1}({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByStationary" xml:space="preserve">
+    <value>餐厅：{0}{1}</value>
+  </data>
+  <data name="MonthlyStatisticByStationaryWithPercent" xml:space="preserve">
+    <value>餐厅：{0}{1}({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticDateFormat" xml:space="preserve">
+    <value>年月日</value>
+  </data>
+  <data name="MonthlyStatisticPercentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheck" xml:space="preserve">
+    <value>平均发票</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheckUnitOfMeasure" xml:space="preserve">
+    <value>元</value>
+  </data>
+  <data name="MonthlyStatisticsCertificates" xml:space="preserve">
+    <value>优惠券</value>
+  </data>
+  <data name="MonthlyStatisticsCertificatesUnitOfMeasure" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="MonthlyStatisticsCountByLastTwelveMonths" xml:space="preserve">
+    <value>近12个月总订单量</value>
+  </data>
+  <data name="MonthlyStatisticsCountByPeriod" xml:space="preserve">
+    <value>订单数量</value>
+  </data>
+  <data name="MonthlyStatisticsDate" xml:space="preserve">
+    <value>时期</value>
+  </data>
+  <data name="MonthlyStatisticsEfficiency" xml:space="preserve">
+    <value>效率</value>
+  </data>
+  <data name="MonthlyStatisticsGrowth" xml:space="preserve">
+    <value>销售额增长率</value>
+  </data>
+  <data name="MonthlyStatisticsGrowthUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCost" xml:space="preserve">
+    <value>人工费（厨房）</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCostUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLossesTitle" xml:space="preserve">
+    <value>损失</value>
+  </data>
+  <data name="MonthlyStatisticsLossesUnit" xml:space="preserve">
+    <value>百分（收入）</value>
+  </data>
+  <data name="MonthlyStatisticsOrders" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersGrowth" xml:space="preserve">
+    <value>订单量增长率</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHour" xml:space="preserve">
+    <value>外卖员每小时送单量</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHourUnitOfMeasure" xml:space="preserve">
+    <value>个/人一个小时</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersUnitOfMeasure" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHour" xml:space="preserve">
+    <value>披萨和小吃/人一个小时</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>个/人一个小时</value>
+  </data>
+  <data name="MonthlyStatisticsProductivityTitle" xml:space="preserve">
+    <value>生产率</value>
+  </data>
+  <data name="MonthlyStatisticsRevenue" xml:space="preserve">
+    <value>销售额</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByLastTwelveMonths" xml:space="preserve">
+    <value>近12个月总销售额</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByPeriod" xml:space="preserve">
+    <value>总销售额</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHour" xml:space="preserve">
+    <value>销售额/每人每小时</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>元/人，每小时</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueUnitOfMeasure" xml:space="preserve">
+    <value>元</value>
+  </data>
+  <data name="MonthlyStatisticsRevenuPerPerson" xml:space="preserve">
+    <value>销售额/每人每小时</value>
+  </data>
+  <data name="MonthlyStatisticsSaleTitle" xml:space="preserve">
+    <value>销售</value>
+  </data>
+  <data name="MonthlyStatisticsSpeed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="MonthlyStatisticsSpeedUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticUnitOfMeasureCountShort" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>我的账号</value>
+  </data>
+  <data name="NewBonus" xml:space="preserve">
+    <value>新奖励</value>
+  </data>
+  <data name="NewClientsTitle" xml:space="preserve">
+    <value>新客户</value>
+  </data>
+  <data name="NewRate" xml:space="preserve">
+    <value>新奖励</value>
+  </data>
+  <data name="NewRevenue" xml:space="preserve">
+    <value>新人员到了</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>没有</value>
+  </data>
+  <data name="NoAddedPosition" xml:space="preserve">
+    <value>无添加位置</value>
+  </data>
+  <data name="NoCallCenterFound" xml:space="preserve">
+    <value>找不到开放的call center</value>
+  </data>
+  <data name="NoEmployeeShift" xml:space="preserve">
+    <value>--:--G482;G482:G483</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>不适用</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>找不到</value>
+  </data>
+  <data name="NovicesLabel" xml:space="preserve">
+    <value>实习生</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="NumDay1" xml:space="preserve">
+    <value>白天</value>
+  </data>
+  <data name="NumDay2" xml:space="preserve">
+    <value>下午</value>
+  </data>
+  <data name="NumDay3" xml:space="preserve">
+    <value>几天</value>
+  </data>
+  <data name="NumMonth1" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="NumMonth2" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="NumMonth3" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="NumYear1" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="NumYear2" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="NumYear3" xml:space="preserve">
+    <value>多少年</value>
+  </data>
+  <data name="OfficeManagerRoleText" xml:space="preserve">
+    <value>分区管理人</value>
+  </data>
+  <data name="OperationalStatistics" xml:space="preserve">
+    <value>主报告</value>
+  </data>
+  <data name="OperationalStatistics2WeekAgo" xml:space="preserve">
+    <value>两周以前</value>
+  </data>
+  <data name="OperationalStatisticsAssemblyTable" xml:space="preserve">
+    <value>馅子</value>
+  </data>
+  <data name="OperationalStatisticsAveragePreparationOrdersTime" xml:space="preserve">
+    <value>准备订单平均时间</value>
+  </data>
+  <data name="OperationalStatisticsCertificates" xml:space="preserve">
+    <value>证书</value>
+  </data>
+  <data name="OperationalStatisticsCompositeProductsTable" xml:space="preserve">
+    <value>小吃</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndComposite" xml:space="preserve">
+    <value>披萨和小吃:</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndCompositeOnEmployee" xml:space="preserve">
+    <value>一人需要披萨及小吃/小时</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployee" xml:space="preserve">
+    <value>一人的披萨/小时</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployeeShort" xml:space="preserve">
+    <value>一小时个人的比赛</value>
+  </data>
+  <data name="OperationalStatisticsCouriersCountAndInQueue" xml:space="preserve">
+    <value>外卖员总数/等待人数</value>
+  </data>
+  <data name="OperationalStatisticsCulture" xml:space="preserve">
+    <value>ru-RU</value>
+  </data>
+  <data name="OperationalStatisticsDate" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="OperationalStatisticsDelivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryWorkTitle" xml:space="preserve">
+    <value>送货工作</value>
+  </data>
+  <data name="OperationalStatisticsDontDeliveredOrders" xml:space="preserve">
+    <value>未配送订单数</value>
+  </data>
+  <data name="OperationalStatisticsDoughTable" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="OperationalStatisticsEmployeesOnShiftNow" xml:space="preserve">
+    <value>当班人员</value>
+  </data>
+  <data name="OperationalStatisticsForCurrentDay" xml:space="preserve">
+    <value>白天汇报</value>
+  </data>
+  <data name="OperationalStatisticsInQueue" xml:space="preserve">
+    <value>等待队列</value>
+  </data>
+  <data name="OperationalStatisticsKitchenLoad" xml:space="preserve">
+    <value>生产线负担</value>
+  </data>
+  <data name="OperationalStatisticsKitchenWork" xml:space="preserve">
+    <value>厨房工作</value>
+  </data>
+  <data name="OperationalStatisticsLastFourWeek" xml:space="preserve">
+    <value>最后四个星期</value>
+  </data>
+  <data name="OperationalStatisticsNow" xml:space="preserve">
+    <value>现在</value>
+  </data>
+  <data name="OperationalStatisticsOrders" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="OperationalStatisticsOrdersCountOnCourierInHour" xml:space="preserve">
+    <value>外卖员每人每小时送单量</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWork" xml:space="preserve">
+    <value>生产订单</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkInStationary" xml:space="preserve">
+    <value>往餐厅</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkOnDelivery" xml:space="preserve">
+    <value>往送货</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkPickup" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkTotalCount" xml:space="preserve">
+    <value>一共订单</value>
+  </data>
+  <data name="OperationalStatisticsOrdersOnDelivery" xml:space="preserve">
+    <value>送货订单</value>
+  </data>
+  <data name="OperationalStatisticsPackingTable" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="OperationalStatisticsProductivity" xml:space="preserve">
+    <value>生产率</value>
+  </data>
+  <data name="OperationalStatisticsProductsInWork" xml:space="preserve">
+    <value>生产用的材料</value>
+  </data>
+  <data name="OperationalStatisticsRevenue" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="OperationalStatisticsRevenueDelivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="OperationalStatisticsRevenueOnEmployee" xml:space="preserve">
+    <value>一个人收入/小时</value>
+  </data>
+  <data name="OperationalStatisticsRevenuePickup" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="OperationalStatisticsRevenueStationary" xml:space="preserve">
+    <value>堂食</value>
+  </data>
+  <data name="OperationalStatisticsRevenueTotal" xml:space="preserve">
+    <value>共计</value>
+  </data>
+  <data name="OperationalStatisticsRevenueWithCurrency" xml:space="preserve">
+    <value>收入，卢布</value>
+  </data>
+  <data name="OperationalStatisticsShortCurrency" xml:space="preserve">
+    <value>卢布</value>
+  </data>
+  <data name="OperationalStatisticsStationary" xml:space="preserve">
+    <value>堂食</value>
+  </data>
+  <data name="OperationalStatisticsStopSale" xml:space="preserve">
+    <value>停止销售</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersCount" xml:space="preserve">
+    <value>过期订单数</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersPercent" xml:space="preserve">
+    <value>超时订单占比:</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnDelivery" xml:space="preserve">
+    <value>订单（送货）</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnStationary" xml:space="preserve">
+    <value>订单（饭馆）</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersTimeOutPercentage" xml:space="preserve">
+    <value>逾期订单份额</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnDelivery" xml:space="preserve">
+    <value>销售额 （外卖）</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnStationary" xml:space="preserve">
+    <value>销售额（堂食）</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueTotal" xml:space="preserve">
+    <value>总销售额</value>
+  </data>
+  <data name="OperationalStatisticsToday" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="OperationalStatisticsTotalRevenueNow" xml:space="preserve">
+    <value>当前总收入</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgo" xml:space="preserve">
+    <value>一周前</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoInCurrentHour" xml:space="preserve">
+    <value>一周前同期</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoOnCurrentHour" xml:space="preserve">
+    <value>一周前同期</value>
+  </data>
+  <data name="OperationalStatisticsYesterday" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="Ordered" xml:space="preserve">
+    <value>找不到开放的call center</value>
+  </data>
+  <data name="OrdersCountTitle" xml:space="preserve">
+    <value>单子数量</value>
+  </data>
+  <data name="OrdersForecastForDay" xml:space="preserve">
+    <value>每日预测</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>机构</value>
+  </data>
+  <data name="PackageDamaged" xml:space="preserve">
+    <value>包装受损</value>
+  </data>
+  <data name="PenultimateAudit" xml:space="preserve">
+    <value>倒数第二个检查</value>
+  </data>
+  <data name="PeopleAbbr" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="PerformanceAlarm" xml:space="preserve">
+    <value>生产量小于当天的目标</value>
+  </data>
+  <data name="PerformanceOk" xml:space="preserve">
+    <value>生产量符合当天的目标 </value>
+  </data>
+  <data name="PerformanceYellow" xml:space="preserve">
+    <value>生产量超过当天的目标两倍</value>
+  </data>
+  <data name="PersonalFoodReportType" xml:space="preserve">
+    <value>人员营养</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="PhoneNumberHint" xml:space="preserve">
+    <value>+4* (***) ** ** **</value>
+  </data>
+  <data name="PhoneNumberMask" xml:space="preserve">
+    <value>+49 (999) 99 99 99</value>
+  </data>
+  <data name="PLCaption" xml:space="preserve">
+    <value>P&amp;L</value>
+  </data>
+  <data name="PreviousWeek" xml:space="preserve">
+    <value>一个星期过去</value>
+  </data>
+  <data name="PreviousYear" xml:space="preserve">
+    <value>一年前</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="PricePerKillogramm" xml:space="preserve">
+    <value>价格/公斤</value>
+  </data>
+  <data name="PricePerKillogrammWithoutVAT" xml:space="preserve">
+    <value>价格/公斤（不含增值税）</value>
+  </data>
+  <data name="PricePerPiece" xml:space="preserve">
+    <value>价格/个</value>
+  </data>
+  <data name="PricePerPieceWithoutVAT" xml:space="preserve">
+    <value>价格/个（不含增加税）</value>
+  </data>
+  <data name="ProductionSpeedBadColumnTitle" xml:space="preserve">
+    <value>缓慢</value>
+  </data>
+  <data name="ProductionSpeedGoodColumnTitle" xml:space="preserve">
+    <value>加速</value>
+  </data>
+  <data name="ProductionSpeedHeader" xml:space="preserve">
+    <value>烹饪速度</value>
+  </data>
+  <data name="ProductionSpeedNormalColumnTitle" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="ProductionSpeedShiftsNames" xml:space="preserve">
+    <value>早班，晚班， 夜班</value>
+  </data>
+  <data name="ProductShort" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>接收</value>
+  </data>
+  <data name="ReceivedCount" xml:space="preserve">
+    <value>收到的数量</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>删除成功</value>
+  </data>
+  <data name="RemovePeriod" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="ReportByPeriod" xml:space="preserve">
+    <value>阶段</value>
+  </data>
+  <data name="ReportDay" xml:space="preserve">
+    <value>按照天</value>
+  </data>
+  <data name="ReportDayForExcel" xml:space="preserve">
+    <value>7天内的消耗</value>
+  </data>
+  <data name="ReportLabel" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="ReportMonth" xml:space="preserve">
+    <value>按照月</value>
+  </data>
+  <data name="ReportMonthForExcel" xml:space="preserve">
+    <value>7月之内的消耗</value>
+  </data>
+  <data name="ReportPeriodVariant" xml:space="preserve">
+    <value>显示费用</value>
+  </data>
+  <data name="ReportTypeLabel" xml:space="preserve">
+    <value>选费用方式</value>
+  </data>
+  <data name="ReportWeek" xml:space="preserve">
+    <value>按照星期</value>
+  </data>
+  <data name="ReportWeekForExcel" xml:space="preserve">
+    <value>7星期之内消耗</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>入</value>
+  </data>
+  <data name="RevenueCurrency" xml:space="preserve">
+    <value>货币</value>
+  </data>
+  <data name="RevenueDate" xml:space="preserve">
+    <value>聘请日期</value>
+  </data>
+  <data name="RevenueFrom" xml:space="preserve">
+    <value>来源 (供应商）</value>
+  </data>
+  <data name="RevenueInfo" xml:space="preserve">
+    <value>供应信息</value>
+  </data>
+  <data name="RevenueNumber" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="RevenueTo" xml:space="preserve">
+    <value>去处（仓库）</value>
+  </data>
+  <data name="RevenueTotal" xml:space="preserve">
+    <value>总金额</value>
+  </data>
+  <data name="RevenueUser" xml:space="preserve">
+    <value>收货人</value>
+  </data>
+  <data name="RevenueWhoTook" xml:space="preserve">
+    <value>收货人</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="RevisionNotExecuted" xml:space="preserve">
+    <value>这段时间内没有检查</value>
+  </data>
+  <data name="RevisionNotExecutedYet" xml:space="preserve">
+    <value>还没有检查</value>
+  </data>
+  <data name="RevisionSettings" xml:space="preserve">
+    <value>检查设置</value>
+  </data>
+  <data name="RomanianLeu" xml:space="preserve">
+    <value>罗马尼亚列伊</value>
+  </data>
+  <data name="Ruble" xml:space="preserve">
+    <value>卢布</value>
+  </data>
+  <data name="SalesReportType" xml:space="preserve">
+    <value>销售</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>保存并退出</value>
+  </data>
+  <data name="SaveAndSend" xml:space="preserve">
+    <value>保存并发送</value>
+  </data>
+  <data name="ScheduleAbsenceLabel" xml:space="preserve">
+    <value>缺席</value>
+  </data>
+  <data name="ScheduleActionsLink" xml:space="preserve">
+    <value>动作</value>
+  </data>
+  <data name="ScheduleAddItemLink" xml:space="preserve">
+    <value>表格上</value>
+  </data>
+  <data name="ScheduleAllEmployeeTypesLabel" xml:space="preserve">
+    <value>所有职位</value>
+  </data>
+  <data name="ScheduleAvailableTitle" xml:space="preserve">
+    <value>可安排</value>
+  </data>
+  <data name="ScheduleCategoryLabel" xml:space="preserve">
+    <value>工资</value>
+  </data>
+  <data name="ScheduleChangeCategoryHeader" xml:space="preserve">
+    <value>选过渡人员类别</value>
+  </data>
+  <data name="ScheduleChangeCategoryNoneLabel" xml:space="preserve">
+    <value>不换人员类别</value>
+  </data>
+  <data name="ScheduleCommentAddLabel" xml:space="preserve">
+    <value>添加评论</value>
+  </data>
+  <data name="ScheduleCommentLabel" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="ScheduleDaySwticher" xml:space="preserve">
+    <value>一天</value>
+  </data>
+  <data name="ScheduleDeleteLink" xml:space="preserve">
+    <value>从图表清除</value>
+  </data>
+  <data name="ScheduleDescription" xml:space="preserve">
+    <value>做工作进度表的工具</value>
+  </data>
+  <data name="ScheduleEveningLabel" xml:space="preserve">
+    <value>晚上</value>
+  </data>
+  <data name="ScheduleFoundLabel" xml:space="preserve">
+    <value>找到</value>
+  </data>
+  <data name="ScheduleHeader" xml:space="preserve">
+    <value>轮班进度表</value>
+  </data>
+  <data name="ScheduleHint" xml:space="preserve">
+    <value>点击查看当前可工作的员工名单</value>
+  </data>
+  <data name="ScheduleHolidayTitle" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="ScheduleHoursLabel" xml:space="preserve">
+    <value>作满</value>
+  </data>
+  <data name="ScheduleHoursSortLabel" xml:space="preserve">
+    <value>工作时长</value>
+  </data>
+  <data name="ScheduleLastShiftLabel" xml:space="preserve">
+    <value>最后班</value>
+  </data>
+  <data name="ScheduleMorningLabel" xml:space="preserve">
+    <value>早上</value>
+  </data>
+  <data name="ScheduleMoveLink" xml:space="preserve">
+    <value>移动</value>
+  </data>
+  <data name="ScheduleNameSortLabel" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="ScheduleNightLabel" xml:space="preserve">
+    <value>夜间</value>
+  </data>
+  <data name="ScheduleOtherTitle" xml:space="preserve">
+    <value>其余</value>
+  </data>
+  <data name="SchedulePizzeriaOption" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="ScheduleProductivityFact" xml:space="preserve">
+    <value>产能（实际）</value>
+  </data>
+  <data name="ScheduleProductivityForecast" xml:space="preserve">
+    <value>产能（预测）</value>
+  </data>
+  <data name="ScheduleRecommendedTitle" xml:space="preserve">
+    <value>推荐</value>
+  </data>
+  <data name="ScheduleRemoveItemLink" xml:space="preserve">
+    <value>清除从进度表</value>
+  </data>
+  <data name="ScheduleSearchAllLink" xml:space="preserve">
+    <value>在所有比萨店搜索</value>
+  </data>
+  <data name="ScheduleSearchPlaceholder" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="ScheduleSearchText" xml:space="preserve">
+    <value>姓名搜索</value>
+  </data>
+  <data name="ScheduleShift8Option" xml:space="preserve">
+    <value>8个小时班次</value>
+  </data>
+  <data name="ScheduleShiftCountWarning" xml:space="preserve">
+    <value>人员一天有{0}班次</value>
+  </data>
+  <data name="ScheduleShiftError" xml:space="preserve">
+    <value>无法保存更改。人员已经有班次从{0}到{1}在{2}部门{3}站</value>
+  </data>
+  <data name="ScheduleShiftLengthWarning" xml:space="preserve">
+    <value>人员班次{0}小时</value>
+  </data>
+  <data name="ScheduleShiftSortLabel" xml:space="preserve">
+    <value>最后班次</value>
+  </data>
+  <data name="ScheduleTableTitle" xml:space="preserve">
+    <value>在进度表里</value>
+  </data>
+  <data name="ScheduleTodayText" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="ScheduleUnknownError" xml:space="preserve">
+    <value>无法保存更改不知错误发生</value>
+  </data>
+  <data name="ScheduleWeekSwitcher" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="ScheduleZoneLabel" xml:space="preserve">
+    <value>站</value>
+  </data>
+  <data name="SelectAllLabel" xml:space="preserve">
+    <value>选所有的</value>
+  </data>
+  <data name="SelectAvailableView" xml:space="preserve">
+    <value>选合适的样子</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>选日期</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>请选组织</value>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>选阶段</value>
+  </data>
+  <data name="SelectReasonLabel" xml:space="preserve">
+    <value>请选勾销的原因</value>
+  </data>
+  <data name="SelectUnitLabel" xml:space="preserve">
+    <value>请选部门</value>
+  </data>
+  <data name="ShiftDay" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="ShiftEmployeeAwayText" xml:space="preserve">
+    <value>离开</value>
+  </data>
+  <data name="ShiftEmployeeCategoryColumnTitle" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="ShiftEmployeeCountLabel" xml:space="preserve">
+    <value>正在工作</value>
+  </data>
+  <data name="ShiftEmployeeFullNameColumnTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="ShiftEmployeeShiftText" xml:space="preserve">
+    <value>正在工作</value>
+  </data>
+  <data name="ShiftEmployeeStatusColumnTitle" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ShiftEmployeeTimeColumnTitle" xml:space="preserve">
+    <value>班次时间</value>
+  </data>
+  <data name="ShiftEmployeeTodayAwayTitle" xml:space="preserve">
+    <value>今天离职</value>
+  </data>
+  <data name="ShiftEmployeeTodayShiftTitle" xml:space="preserve">
+    <value>正在工作</value>
+  </data>
+  <data name="ShiftEmployeeYesterdayAwayTitle" xml:space="preserve">
+    <value>昨天离职</value>
+  </data>
+  <data name="ShiftEvening" xml:space="preserve">
+    <value>晚上</value>
+  </data>
+  <data name="ShiftMorning" xml:space="preserve">
+    <value>早上-下午</value>
+  </data>
+  <data name="ShiftNight" xml:space="preserve">
+    <value>夜间</value>
+  </data>
+  <data name="ShiftNormsCashierLabel" xml:space="preserve">
+    <value>收银台</value>
+  </data>
+  <data name="ShiftNormsChooseDateLabel" xml:space="preserve">
+    <value>选日期</value>
+  </data>
+  <data name="ShiftNormsCleaningLabel" xml:space="preserve">
+    <value>清洁度</value>
+  </data>
+  <data name="ShiftNormsCouriersLabel" xml:space="preserve">
+    <value>外卖员</value>
+  </data>
+  <data name="ShiftNormsDay0Label" xml:space="preserve">
+    <value>非典型的天</value>
+  </data>
+  <data name="ShiftNormsDeliveryLabel" xml:space="preserve">
+    <value>快递</value>
+  </data>
+  <data name="ShiftNormsExcelExportLink" xml:space="preserve">
+    <value>往Excel出口</value>
+  </data>
+  <data name="ShiftNormsFillTableLink" xml:space="preserve">
+    <value>填写表格</value>
+  </data>
+  <data name="ShiftNormsHeader" xml:space="preserve">
+    <value>班次标准</value>
+  </data>
+  <data name="ShiftNormsKitchenLabel" xml:space="preserve">
+    <value>厨房</value>
+  </data>
+  <data name="ShiftNormsLastChangedLabel" xml:space="preserve">
+    <value>最近修改</value>
+  </data>
+  <data name="ShiftNormsLastChangedNoneLabel" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="ShiftNormsManagersLabel" xml:space="preserve">
+    <value>经理</value>
+  </data>
+  <data name="ShiftNormsNormLabel" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="ShiftNormsNormsLabel" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="ShiftNormsNovicesLabel" xml:space="preserve">
+    <value>实习生</value>
+  </data>
+  <data name="ShiftNormsProductivityColumnTitle" xml:space="preserve">
+    <value>生产率</value>
+  </data>
+  <data name="ShiftNormsProductivityLabel" xml:space="preserve">
+    <value>生产量</value>
+  </data>
+  <data name="ShiftNormsRecommendedColumnTitle" xml:space="preserve">
+    <value>推荐</value>
+  </data>
+  <data name="ShiftNormsSalesForecastColumnTitle" xml:space="preserve">
+    <value>销售预测</value>
+  </data>
+  <data name="ShiftNormsSaveLink" xml:space="preserve">
+    <value>保存更改</value>
+  </data>
+  <data name="ShiftNormsTimeColumnTitle" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="ShiftSettingsHeader" xml:space="preserve">
+    <value>班次参数</value>
+  </data>
+  <data name="ShiftSettingsNoNightShift" xml:space="preserve">
+    <value>没有夜班</value>
+  </data>
+  <data name="ShiftSettingsShiftOverlapError" xml:space="preserve">
+    <value>班次不会交叉</value>
+  </data>
+  <data name="ShiftSettingsTotalTimeError" xml:space="preserve">
+    <value>总时长不应超24小时</value>
+  </data>
+  <data name="ShippingDate" xml:space="preserve">
+    <value>发货日期</value>
+  </data>
+  <data name="ShortRuble" xml:space="preserve">
+    <value>元</value>
+  </data>
+  <data name="StaffLanch" xml:space="preserve">
+    <value>人员吃饭</value>
+  </data>
+  <data name="Station_Backup" xml:space="preserve">
+    <value>储备</value>
+  </data>
+  <data name="Station_Delivery" xml:space="preserve">
+    <value>送餐</value>
+  </data>
+  <data name="Station_Sanitation" xml:space="preserve">
+    <value>清洁度</value>
+  </data>
+  <data name="Station_Trainees" xml:space="preserve">
+    <value>实习工</value>
+  </data>
+  <data name="Station_СashboxAndHoll" xml:space="preserve">
+    <value>收银台和餐厅</value>
+  </data>
+  <data name="Substation_Line" xml:space="preserve">
+    <value>热菜区</value>
+  </data>
+  <data name="Substation_Prep" xml:space="preserve">
+    <value>冷餐区</value>
+  </data>
+  <data name="Substation_SlicingAndPacking" xml:space="preserve">
+    <value>切菜和分配</value>
+  </data>
+  <data name="Substation_Supplies" xml:space="preserve">
+    <value>库存量</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功！</value>
+  </data>
+  <data name="SummaLabel" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="SummaOfVAT" xml:space="preserve">
+    <value>增值税</value>
+  </data>
+  <data name="SummaWithoutVAT" xml:space="preserve">
+    <value>总金额（不含税）</value>
+  </data>
+  <data name="SummaWithVAT" xml:space="preserve">
+    <value>总金额（含税）</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>星期天</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>供货者</value>
+  </data>
+  <data name="SupplierAddDebt" xml:space="preserve">
+    <value>创造</value>
+  </data>
+  <data name="SupplierAddDebtTitle" xml:space="preserve">
+    <value>加欠款</value>
+  </data>
+  <data name="SupplierCloseDebt" xml:space="preserve">
+    <value>清偿</value>
+  </data>
+  <data name="SupplierConfirmDebtClose" xml:space="preserve">
+    <value>的确清偿欠款吗？</value>
+  </data>
+  <data name="SupplierDebt" xml:space="preserve">
+    <value>欠款</value>
+  </data>
+  <data name="SupplierListHeader" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="SuppliersAndMaterials" xml:space="preserve">
+    <value>供应商及原料</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>进货库存</value>
+  </data>
+  <data name="SupplyDebiting" xml:space="preserve">
+    <value>损耗</value>
+  </data>
+  <data name="SupplyIncoming" xml:space="preserve">
+    <value>收入</value>
+  </data>
+  <data name="SupplyMaterialLabel" xml:space="preserve">
+    <value>原料供给</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>电子牌</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="TargetsOnMonthElement_Defect" xml:space="preserve">
+    <value>疵瑕</value>
+  </data>
+  <data name="TargetsOnMonthElement_OrdersOnСourier" xml:space="preserve">
+    <value>一个送餐员单子/小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_PicesOnPeople" xml:space="preserve">
+    <value>披萨及小吃一个人/小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_Piece" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceManH" xml:space="preserve">
+    <value>个/人一个小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceOnСourier" xml:space="preserve">
+    <value>个/送餐员一个小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnPeople" xml:space="preserve">
+    <value>一个人进款/小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnСourier" xml:space="preserve">
+    <value>销售额/每外卖员每小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_RubManH" xml:space="preserve">
+    <value>元/人，每小时</value>
+  </data>
+  <data name="TargetsOnMonthElement_Sertificates" xml:space="preserve">
+    <value>优惠券</value>
+  </data>
+  <data name="TargetsOnMonthElement_Speed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="TargetsOnMonthElement_ToDefect" xml:space="preserve">
+    <value>疵瑕勾销</value>
+  </data>
+  <data name="TargetsOnMonthElement_UnaccountedLosses" xml:space="preserve">
+    <value>没考虑过损失</value>
+  </data>
+  <data name="TargetsOnYearElement_EmployeeDynamic" xml:space="preserve">
+    <value>流动性</value>
+  </data>
+  <data name="Tenge" xml:space="preserve">
+    <value>坚戈</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>开始班次日期</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>开始班次时间</value>
+  </data>
+  <data name="TimeReportBuildLink" xml:space="preserve">
+    <value>创造</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="TimeReportChooseDateLabel" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="TimeReportChooseNameLabel" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="TimeReportChooseTypeLabel" xml:space="preserve">
+    <value>请选人员类别</value>
+  </data>
+  <data name="TimeReportChooseUnitLabel" xml:space="preserve">
+    <value>选类别</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="TimeReportDescription" xml:space="preserve">
+    <value>计算工资的人员实际工作的时间</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>班次结束的日期</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>班次结束的时间</value>
+  </data>
+  <data name="TimeReportExcelExportLink" xml:space="preserve">
+    <value>往excel出口</value>
+  </data>
+  <data name="TimeReportGroupByEmployee" xml:space="preserve">
+    <value>按人员分类</value>
+  </data>
+  <data name="TimeReportHeader" xml:space="preserve">
+    <value>实际时间</value>
+  </data>
+  <data name="TimeReportInvalidTimePeriod" xml:space="preserve">
+    <value>时间阶段不应超过{0}天</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>夜间</value>
+  </data>
+  <data name="TimeReportTypeLabel" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="TimeReportWarning" xml:space="preserve">
+    <value>显示不是所有信息，因为指出信息太多。试一试压缩报告条件</value>
+  </data>
+  <data name="Title_YouListen" xml:space="preserve">
+    <value>你在听</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>之前</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>今天</value>
+  </data>
+  <data name="ToUnit" xml:space="preserve">
+    <value>去处（仓库）</value>
+  </data>
+  <data name="TrainingHistory_BeginDateFailedMessage" xml:space="preserve">
+    <value>新类别开始日期应该比不当以前类别的日期大</value>
+  </data>
+  <data name="TrainingHistory_NotDefinedCurrentStage" xml:space="preserve">
+    <value>当前培训阶段没定</value>
+  </data>
+  <data name="TrainingHistory_ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>确认人员离职日期</value>
+  </data>
+  <data name="TransactionCompletedState" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="TransactionDate" xml:space="preserve">
+    <value>交易日期</value>
+  </data>
+  <data name="TransactionHeader" xml:space="preserve">
+    <value>交易管理</value>
+  </data>
+  <data name="TransactionID" xml:space="preserve">
+    <value>交易ID</value>
+  </data>
+  <data name="TransactionNotCompletedState" xml:space="preserve">
+    <value>没完成</value>
+  </data>
+  <data name="TransactionOptions" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="TransactionOrderNumber" xml:space="preserve">
+    <value>订单号</value>
+  </data>
+  <data name="TransactionsFromLabel" xml:space="preserve">
+    <value>交易从</value>
+  </data>
+  <data name="TransactionStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="TransactionSumma" xml:space="preserve">
+    <value>总金额</value>
+  </data>
+  <data name="TransferDestinationUnit" xml:space="preserve">
+    <value>到哪里</value>
+  </data>
+  <data name="TransferExpectedDate" xml:space="preserve">
+    <value>什么时候要</value>
+  </data>
+  <data name="TransferMaterialTypesList" xml:space="preserve">
+    <value>原料</value>
+  </data>
+  <data name="TransferNumber" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="TransferReceivingDate" xml:space="preserve">
+    <value>接货日期</value>
+  </data>
+  <data name="TransferShippingAmount" xml:space="preserve">
+    <value>装走了</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="TypicalReport" xml:space="preserve">
+    <value>典型的费用</value>
+  </data>
+  <data name="TypicalReportNotificationText" xml:space="preserve">
+    <value>本汇报指最后五周内每日及每周的平均费用量</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>测量单位</value>
+  </data>
+  <data name="UnitOfMeasureAcromin" xml:space="preserve">
+    <value>测量单位</value>
+  </data>
+  <data name="UnitOfMeasureLabel" xml:space="preserve">
+    <value>测量单位</value>
+  </data>
+  <data name="UpCurrentDate" xml:space="preserve">
+    <value>按照N.V</value>
+  </data>
+  <data name="VacancyEditActiveLabel" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="VacancyEditAgeFromLabel" xml:space="preserve">
+    <value>从：</value>
+  </data>
+  <data name="VacancyEditAgeLabel" xml:space="preserve">
+    <value>优先年龄</value>
+  </data>
+  <data name="VacancyEditAgeToLabel" xml:space="preserve">
+    <value>到：</value>
+  </data>
+  <data name="VacancyEditCategoryLabel" xml:space="preserve">
+    <value>选择类别</value>
+  </data>
+  <data name="VacancyEditHeader" xml:space="preserve">
+    <value>修改空缺职位</value>
+  </data>
+  <data name="VacancyEditInputNameText" xml:space="preserve">
+    <value>选择空缺职位</value>
+  </data>
+  <data name="VacancyEditNameLabel" xml:space="preserve">
+    <value>找什么职位</value>
+  </data>
+  <data name="VacancyEditSmokingLabel" xml:space="preserve">
+    <value>吸烟</value>
+  </data>
+  <data name="VacancyEditSmokingPreferenceText" xml:space="preserve">
+    <value>不吸烟者优先</value>
+  </data>
+  <data name="VacancyEditTypeLabel" xml:space="preserve">
+    <value>选择类别</value>
+  </data>
+  <data name="VacancyEditUnitLabel" xml:space="preserve">
+    <value>选比萨店</value>
+  </data>
+  <data name="VacancyLink_Active" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="VacancyLink_Disabled" xml:space="preserve">
+    <value>关门</value>
+  </data>
+  <data name="VacancyListActiveColumn" xml:space="preserve">
+    <value>激活码？</value>
+  </data>
+  <data name="VacancyListActiveLabel" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="VacancyListAgeFromLabel" xml:space="preserve">
+    <value>从：</value>
+  </data>
+  <data name="VacancyListAgeToLabel" xml:space="preserve">
+    <value>到：</value>
+  </data>
+  <data name="VacancyListCriteriaColumn" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="VacancyListFromLabel" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="VacancyListHeader" xml:space="preserve">
+    <value>空缺职位</value>
+  </data>
+  <data name="VacancyListInactiveLabel" xml:space="preserve">
+    <value>无激活</value>
+  </data>
+  <data name="VacancyListNameColumn" xml:space="preserve">
+    <value>空缺职位</value>
+  </data>
+  <data name="VacancyListNewLink" xml:space="preserve">
+    <value>新空缺职位</value>
+  </data>
+  <data name="VacancyListNonSmokingLabel" xml:space="preserve">
+    <value>不吸烟</value>
+  </data>
+  <data name="VacancyListSmokingLabel" xml:space="preserve">
+    <value>吸烟</value>
+  </data>
+  <data name="VacancyListToLabel" xml:space="preserve">
+    <value>到</value>
+  </data>
+  <data name="VacancyListTypeLabel" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="VacancyNewHeader" xml:space="preserve">
+    <value>添加新空缺职位</value>
+  </data>
+  <data name="ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>请指出员工的日期</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>增值税</value>
+  </data>
+  <data name="ViewDebiting" xml:space="preserve">
+    <value>浏览注销</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Weekends" xml:space="preserve">
+    <value>周末</value>
+  </data>
+  <data name="WeekendsSettingsAllowToSelect" xml:space="preserve">
+    <value>作为休息日选择</value>
+  </data>
+  <data name="WeekendsSettingsCountInWeek" xml:space="preserve">
+    <value>一星期之内休息日数</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartOne" xml:space="preserve">
+    <value>不可多选</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartTwo" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="WeekendsSettingsFailedWeekendsCount" xml:space="preserve">
+    <value>一周内不可以选休息天{0}多</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>工龄</value>
+  </data>
+  <data name="WorkExperienceOfPizzeria" xml:space="preserve">
+    <value>店员平均工龄</value>
+  </data>
+  <data name="WorkingHoursEmployeeName" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="WorkingHoursInContextOfUnits" xml:space="preserve">
+    <value>分比萨店</value>
+  </data>
+  <data name="WorkingHoursTitle" xml:space="preserve">
+    <value>工作时间</value>
+  </data>
+  <data name="WorkingHoursTotal" xml:space="preserve">
+    <value>共计</value>
+  </data>
+  <data name="WorkingHoursTotalHours" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="WorkingHoursTotalMinutes" xml:space="preserve">
+    <value>分钟</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>昨天</value>
+  </data>
+  <data name="ZoneSettingsAddLink" xml:space="preserve">
+    <value>建造站</value>
+  </data>
+  <data name="ZoneSettingsCategoriesLabel" xml:space="preserve">
+    <value>人员类别没指出</value>
+  </data>
+  <data name="ZoneSettingsDeleteLink" xml:space="preserve">
+    <value>清除站</value>
+  </data>
+  <data name="ZoneSettingsDescription" xml:space="preserve">
+    <value>修改生产站</value>
+  </data>
+  <data name="ZoneSettingsEditLink" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="ZoneSettingsHeader" xml:space="preserve">
+    <value>生产站</value>
+  </data>
+  <data name="ZoneSettingsNameLabel" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="ZoneSettingsNoCategoriesText" xml:space="preserve">
+    <value>无分类</value>
+  </data>
+  <data name="ZoneSettingsPeriod0Option" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="ZoneSettingsPeriod14Option" xml:space="preserve">
+    <value>两周</value>
+  </data>
+  <data name="ZoneSettingsPeriod30Option" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="ZoneSettingsPeriod7Option" xml:space="preserve">
+    <value>星期</value>
+  </data>
+  <data name="ZoneSettingsPeriodLabel" xml:space="preserve">
+    <value>工作时间表日期</value>
+  </data>
+  <data name="ZoneSettingsShowLink" xml:space="preserve">
+    <value>显示在进度表</value>
+  </data>
+  <data name="ZoneSettingsSubzonesLabel" xml:space="preserve">
+    <value>你改名</value>
+  </data>
+</root>

@@ -1,0 +1,23 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.back-img {
+    width: 28px;
+    height: 28px;
+    @include font-size(16);
+
+    @include media-queries(lg) {
+        width: 42px;
+        height: 42px;
+        vertical-align: middle;
+    }
+}
+
+.img-ready {
+    background: url(/Content/Images/check.svg) no-repeat;
+    display: inline-block;
+}
+
+.img-wait {
+    background: url(/Content/Images/sand-clock.svg) no-repeat;
+    display: inline-block;
+}

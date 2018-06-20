@@ -1,0 +1,1815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcceptTime" xml:space="preserve">
+    <value>Vastuvõtu aeg</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Aadress</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Kõik</value>
+  </data>
+  <data name="AllPizzerias" xml:space="preserve">
+    <value>Kõik pitsarestoranid</value>
+  </data>
+  <data name="AllReasons" xml:space="preserve">
+    <value>Kõik põhjused</value>
+  </data>
+  <data name="AmoralFactsCount" xml:space="preserve">
+    <value>Kahtlase käitumisega seotud faktide arv</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="AmountWithOutNDS" xml:space="preserve">
+    <value>Summa ilma KM-ta</value>
+  </data>
+  <data name="AnalysisOfRepeatOrders" xml:space="preserve">
+    <value>Korduvtellimuste analüüs</value>
+  </data>
+  <data name="Average" xml:space="preserve">
+    <value>keskmine</value>
+  </data>
+  <data name="AverageCheck" xml:space="preserve">
+    <value>Keskmine tšekk</value>
+  </data>
+  <data name="AverageDeliveryDuration" xml:space="preserve">
+    <value>Sõidu keskmine ajakulu</value>
+  </data>
+  <data name="AverageOrdersCount" xml:space="preserve">
+    <value>Keskmine tellimuste arv päevas</value>
+  </data>
+  <data name="AverageOrdersOfAllClients" xml:space="preserve">
+    <value>Keskmine sagedus tellimuste kohta</value>
+  </data>
+  <data name="AverageWorkLoad" xml:space="preserve">
+    <value>Keskmine koormatus</value>
+  </data>
+  <data name="BadBonus" xml:space="preserve">
+    <value>Kaua</value>
+  </data>
+  <data name="BasicData" xml:space="preserve">
+    <value>Algandmed</value>
+  </data>
+  <data name="BeginDate" xml:space="preserve">
+    <value>Algus</value>
+  </data>
+  <data name="BonusAccruedByFriends" xml:space="preserve">
+    <value>Sõprade kustumise eest</value>
+  </data>
+  <data name="BonusAccruedTitle" xml:space="preserve">
+    <value>Lisatud dodo-eurosid</value>
+  </data>
+  <data name="BonusAction" xml:space="preserve">
+    <value>Kampaania</value>
+  </data>
+  <data name="BonusActionDescription" xml:space="preserve">
+    <value>Kampaania kirjeldus</value>
+  </data>
+  <data name="BonusActionEndPoint" xml:space="preserve">
+    <value>Suunitlus</value>
+  </data>
+  <data name="BonusActionName" xml:space="preserve">
+    <value>Kampaania nimetus</value>
+  </data>
+  <data name="BonusAll" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="BonusPercentage" xml:space="preserve">
+    <value>Protsent tellimustelt</value>
+  </data>
+  <data name="BonusPercentageDelivery" xml:space="preserve">
+    <value>Tarnimisega tellimuste protsent</value>
+  </data>
+  <data name="BonusPercentageFromFriends" xml:space="preserve">
+    <value>Protsent sõprade tellimustelt</value>
+  </data>
+  <data name="BonusPercentagePickup" xml:space="preserve">
+    <value>Järgitulekuga tellimuste protsent</value>
+  </data>
+  <data name="BonusPercentageRestorant" xml:space="preserve">
+    <value>Tellimuste protsent restoranis</value>
+  </data>
+  <data name="BonusSpentPercentage" xml:space="preserve">
+    <value>Kulutatud "Dodo-eurode" protsent kasumist</value>
+  </data>
+  <data name="BonusSpentTitle" xml:space="preserve">
+    <value>Kulutatud "Dodo-eurosid"</value>
+  </data>
+  <data name="ByDates" xml:space="preserve">
+    <value>Kuupäevaliselt</value>
+  </data>
+  <data name="ByDebitingReasons" xml:space="preserve">
+    <value>Mahakandmise põhjused</value>
+  </data>
+  <data name="CallCenterDailyReportXmlHeader" xml:space="preserve">
+    <value>Aruanne: arvutused KK-ga ööpäeva kaupa</value>
+  </data>
+  <data name="CallCenterReportXmlHeader" xml:space="preserve">
+    <value>Aruanne: arvutused KK-ga</value>
+  </data>
+  <data name="CashBoxShifts" xml:space="preserve">
+    <value>Kassavahetused:</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Linn</value>
+  </data>
+  <data name="ClientData" xml:space="preserve">
+    <value>Kliendi andmed</value>
+  </data>
+  <data name="ClientLocalityRegistration" xml:space="preserve">
+    <value>Linn, kus on klient registreeritud</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Kliendi nimi</value>
+  </data>
+  <data name="ClientsCountWhoHavePurchasedProduct" xml:space="preserve">
+    <value>Toodet tellinud kliendid</value>
+  </data>
+  <data name="ClientsCountWhoReOrderProduct" xml:space="preserve">
+    <value>Toodeted korduvalt tellinud kliendid</value>
+  </data>
+  <data name="ColdAssemblyTable" xml:space="preserve">
+    <value>Täidis, külm</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="Confirmed" xml:space="preserve">
+    <value>kinnitatud</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Kulumaterjalid</value>
+  </data>
+  <data name="ConsumablesReportHeaderTitle" xml:space="preserve">
+    <value>Kulumaterjal</value>
+  </data>
+  <data name="ConsumablesReport_ConsumptionTransfers" xml:space="preserve">
+    <value>Liikumised pizzeriast</value>
+  </data>
+  <data name="ConsumablesReport_PercentOfRevenue" xml:space="preserve">
+    <value>tulu %</value>
+  </data>
+  <data name="ConsumablesReport_Supplies" xml:space="preserve">
+    <value>Sissetulekud</value>
+  </data>
+  <data name="ConsumablesReport_SupplyTransfers" xml:space="preserve">
+    <value>Liikumised pizzerias</value>
+  </data>
+  <data name="ConsumablesReport_TotalCost" xml:space="preserve">
+    <value>Summa, €.</value>
+  </data>
+  <data name="ConsumablesReport_TotalPriceHeader" xml:space="preserve">
+    <value>Summa, {0}.</value>
+  </data>
+  <data name="ConsumablesReport_UnitCost" xml:space="preserve">
+    <value>Tükihind, €</value>
+  </data>
+  <data name="ConsumablesReport_UnregisteredConsumption" xml:space="preserve">
+    <value>Kulu</value>
+  </data>
+  <data name="ConsumablesReport_UnregisteredConsumptionInMoney" xml:space="preserve">
+    <value>Kulu rahas,  €</value>
+  </data>
+  <data name="ConsumablesReport_UnregisteredExcees" xml:space="preserve">
+    <value>ülejääk</value>
+  </data>
+  <data name="ConsumablesReport_UnregisteredExceesInMoney" xml:space="preserve">
+    <value>Raha ülejääk, €</value>
+  </data>
+  <data name="Consumption" xml:space="preserve">
+    <value>Kulu</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Maksumus</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Arv/kogus</value>
+  </data>
+  <data name="CountWorkedHours" xml:space="preserve">
+    <value>Töötatud tundide arv</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Kuller</value>
+  </data>
+  <data name="CourierNumber" xml:space="preserve">
+    <value>Kulleri number</value>
+  </data>
+  <data name="CurrentBalanse" xml:space="preserve">
+    <value>Hetke saldo</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="DateAndTime" xml:space="preserve">
+    <value>Kuupäev ja kellaaeg</value>
+  </data>
+  <data name="DateBeginSale" xml:space="preserve">
+    <value>Taasalustamise kuupäev</value>
+  </data>
+  <data name="DateFilter_Day" xml:space="preserve">
+    <value>Konkreetsel päeval</value>
+  </data>
+  <data name="DateFilter_DayOfWeek" xml:space="preserve">
+    <value>Nädalapäevade kaupa</value>
+  </data>
+  <data name="DateFilter_Period" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="DatePeriod" xml:space="preserve">
+    <value>Perioodi kp:</value>
+  </data>
+  <data name="DateStopSale" xml:space="preserve">
+    <value>seisaku kuupäev</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Kuupäev/aeg</value>
+  </data>
+  <data name="DateTimeToStringFormat" xml:space="preserve">
+    <value>dd.MM.yyyy HH:mm</value>
+  </data>
+  <data name="DateToStringFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>päev</value>
+  </data>
+  <data name="DefectiveStage" xml:space="preserve">
+    <value>Jaam</value>
+  </data>
+  <data name="DefectProduct" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="DelayReason" xml:space="preserve">
+    <value>Kõlblik kuni tähtaja ületamise põhjus</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="DeliveryAddress" xml:space="preserve">
+    <value>Kohaletoimetamise aadress</value>
+  </data>
+  <data name="DeliverySectorName" xml:space="preserve">
+    <value>Kohaletoimetamise sektor</value>
+  </data>
+  <data name="DeliveryZone" xml:space="preserve">
+    <value>Kohaletoimetamise piirkond</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Allüksus</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Allüksus</value>
+  </data>
+  <data name="Departments" xml:space="preserve">
+    <value>Dodo-eurode mahavõtmine sõprade tellimuse eest ühele aadressile</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kirjeldus</value>
+  </data>
+  <data name="DodoControl" xml:space="preserve">
+    <value>Dodo kontroll</value>
+  </data>
+  <data name="Dodollars" xml:space="preserve">
+    <value>Dodo-eurod </value>
+  </data>
+  <data name="DodollarsAccumulating" xml:space="preserve">
+    <value>Kogutud dodo-eurode kogus</value>
+  </data>
+  <data name="Dough" xml:space="preserve">
+    <value>Tainas</value>
+  </data>
+  <data name="Dough25" xml:space="preserve">
+    <value>Tainas 25</value>
+  </data>
+  <data name="Dough30" xml:space="preserve">
+    <value>Tainas 30</value>
+  </data>
+  <data name="Dough35" xml:space="preserve">
+    <value>Tainas 35</value>
+  </data>
+  <data name="DoughReport_ShowIn" xml:space="preserve">
+    <value>Kuvada</value>
+  </data>
+  <data name="DoughReport_ShowInDays" xml:space="preserve">
+    <value>päevades</value>
+  </data>
+  <data name="DoughReport_ShowInIntervals" xml:space="preserve">
+    <value>intervallides</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Kestvus</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Töötaja</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>pp.kk.aaaa</value>
+  </data>
+  <data name="EmployeeSecondNameFilter" xml:space="preserve">
+    <value>Kulleri perekonnanimi</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeType" xml:space="preserve">
+    <value>Töötaja liik</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Lõpp</value>
+  </data>
+  <data name="EndPointType" xml:space="preserve">
+    <value>Lõpp-punkt</value>
+  </data>
+  <data name="EndStopSale" xml:space="preserve">
+    <value>Taasalustamise kuupäev</value>
+  </data>
+  <data name="ErrorMessage_NeedEmailForReport" xml:space="preserve">
+    <value>Arve saatmiseks on vaja Teie meiliaadressit. Sisestage meiliaadress kasutaja profiili alt.</value>
+  </data>
+  <data name="Evening" xml:space="preserve">
+    <value>õhtu</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>Igapäevane</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>Igakuine</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Välja arvatud</value>
+  </data>
+  <data name="ExcludeDismissedEmployees" xml:space="preserve">
+    <value>Välja arvatud vallandatud töötajad</value>
+  </data>
+  <data name="ExpiredOrdersCount" xml:space="preserve">
+    <value>Kõlblik kuni möödas</value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>extra-aja alguskuupäev</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>extra-aja alguse aeg</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Töötaja kategooria</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Valige töötajate tüübid</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Töötaja nimi ja perekonnanimi</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>extra-aja lõppemise kuupäev</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>extra-aja lõppemise aeg</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>Lisaaeg</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>Tundide arv</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>Vahetusevanema nimi ja perekonnanimi</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByOrders" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByProducts" xml:space="preserve">
+    <value>Tooted</value>
+  </data>
+  <data name="Filter_ProductsByCategories" xml:space="preserve">
+    <value>Toote kategooria kaupa</value>
+  </data>
+  <data name="Filter_ProductsByTypes" xml:space="preserve">
+    <value>Toote liigi kaupa</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Valmistooted</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="FirstOrderDate" xml:space="preserve">
+    <value>Esimese tellimuse kuupäev</value>
+  </data>
+  <data name="FirstOrderTime" xml:space="preserve">
+    <value>Esimese tellimuse aeg</value>
+  </data>
+  <data name="Fridays" xml:space="preserve">
+    <value>Reeded</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>alates</value>
+  </data>
+  <data name="FunctionFilter_Avg" xml:space="preserve">
+    <value>kesk.</value>
+  </data>
+  <data name="FunctionFilter_Max" xml:space="preserve">
+    <value>max.</value>
+  </data>
+  <data name="FunctionFilter_Min" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="FunctionFilter_Sum" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="GoodBonus" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Gramm</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>pühad</value>
+  </data>
+  <data name="HotAssemblyTable" xml:space="preserve">
+    <value>Täidis, kuum</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>Majad</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Tulek</value>
+  </data>
+  <data name="IndexValue" xml:space="preserve">
+    <value>Näitaja</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Koostisosa</value>
+  </data>
+  <data name="InQueue" xml:space="preserve">
+    <value>Järjekorras</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventar</value>
+  </data>
+  <data name="IsEmployee" xml:space="preserve">
+    <value>On töötaja numbriks</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kilogramm</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="LabourCostReport_SalaryTax" xml:space="preserve">
+    <value>Tulumaksu määr</value>
+  </data>
+  <data name="LabourCostShort" xml:space="preserve">
+    <value>LC</value>
+  </data>
+  <data name="LastOrderDate" xml:space="preserve">
+    <value>Viimase tellimuse kuupäev</value>
+  </data>
+  <data name="LastOrderTime" xml:space="preserve">
+    <value>Viimase tellimuse aeg</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liiter</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>Asula</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Kasutajatunnus</value>
+  </data>
+  <data name="LongPreparationProduct" xml:space="preserve">
+    <value>Kaua kestnud valmistamine, %</value>
+  </data>
+  <data name="LoyaltyProfit_ClientData" xml:space="preserve">
+    <value>Kliendi andmed</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnBonudSpent" xml:space="preserve">
+    <value>Boonuse mahavõtmine sõprade telimuse eest, kes elavad ühel aadressil</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnControlling" xml:space="preserve">
+    <value>Dodo-eurode maha võtmine Dodo kontrollinguga</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnFine" xml:space="preserve">
+    <value>Mahakandmine</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnFriendSummSpent" xml:space="preserve">
+    <value>"Dodo eurode" mahavõtmine sõprade tellimuse eest ühele aadressile</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnInviteFriendSpent" xml:space="preserve">
+    <value>Dodo-eurode mahavõtmine kliendi kutsumise eest linn-satelliidi allüksusest</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnReceived" xml:space="preserve">
+    <value>Saadud "Dodo eurosid" perioodil :</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnSpent" xml:space="preserve">
+    <value>Kulutatud "Dodo-eurosid" perioodil:</value>
+  </data>
+  <data name="LoyaltyProfit_ColumnWithdrawal" xml:space="preserve">
+    <value>"Dodo-eurode" mahavõtmine</value>
+  </data>
+  <data name="LoyaltyProfit_DodoMoneyOperations" xml:space="preserve">
+    <value>Tehingud "Dodo eurodega"</value>
+  </data>
+  <data name="LoyaltyProfit_DodoMoneyOperationsNotFound" xml:space="preserve">
+    <value>Ei ole leitud tehinguid "Dodo eurodega" vastaval perioodil.</value>
+  </data>
+  <data name="LoyaltyProfit_Error" xml:space="preserve">
+    <value>Viga! Klient nimetatud telefoninumbriga ei ole leitud</value>
+  </data>
+  <data name="LoyaltyProfit_FriendAddress" xml:space="preserve">
+    <value>Sõbra tellimuse aadress</value>
+  </data>
+  <data name="LoyaltyProfit_FriendNumber" xml:space="preserve">
+    <value>Sõbra number</value>
+  </data>
+  <data name="MailoutType" xml:space="preserve">
+    <value>Meili postituse tüüp</value>
+  </data>
+  <data name="MaterialConsumptionAllHeader" xml:space="preserve">
+    <value>Kõik {0}</value>
+  </data>
+  <data name="MaterialConsumptionCountHeader" xml:space="preserve">
+    <value>Arv/kogus</value>
+  </data>
+  <data name="MaterialConsumptionDatePeriodHeader" xml:space="preserve">
+    <value>Perioodi kp</value>
+  </data>
+  <data name="MaterialConsumptionIdHeader" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="MaterialConsumptionMaterialHeader" xml:space="preserve">
+    <value>Tooraine</value>
+  </data>
+  <data name="MaterialConsumptionPriceHeader" xml:space="preserve">
+    <value>Hind</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>Tühistamine</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="MaterialConsumptionReportHeader" xml:space="preserve">
+    <value>Aruanne</value>
+  </data>
+  <data name="MaterialConsumptionReportHeaderFormat" xml:space="preserve">
+    <value>Tooraine kulu {0}</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>Personali toit</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>Müük</value>
+  </data>
+  <data name="MaterialConsumptionReportTransfer" xml:space="preserve">
+    <value>Liikumine</value>
+  </data>
+  <data name="MaterialConsumptionSummHeader" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="MaterialConsumptionSupplierHeader" xml:space="preserve">
+    <value>Tarnija</value>
+  </data>
+  <data name="MaterialConsumptionTypeHeader" xml:space="preserve">
+    <value>Kulu liik</value>
+  </data>
+  <data name="MaterialConsumptionUnitHeader" xml:space="preserve">
+    <value>Pizzarestoran</value>
+  </data>
+  <data name="MaterialConsumptionUnitOfMeasure" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="MeasureUnit" xml:space="preserve">
+    <value>mõõtühik</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>Lisaaeg</value>
+  </data>
+  <data name="Message_InvalidTime" xml:space="preserve">
+    <value>On sisestatud ebakorrektne ajaformaat</value>
+  </data>
+  <data name="Message_UnitIdsRequired" xml:space="preserve">
+    <value>Pole valitud ühtegi allüksust</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>Meta-toode</value>
+  </data>
+  <data name="MethodOfCalculation" xml:space="preserve">
+    <value>Arvestuse viis</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliiter</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>Ml</value>
+  </data>
+  <data name="Mondays" xml:space="preserve">
+    <value>Esmaspäevad</value>
+  </data>
+  <data name="Morning" xml:space="preserve">
+    <value>hommik</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nimetus</value>
+  </data>
+  <data name="NDS" xml:space="preserve">
+    <value>KM, %</value>
+  </data>
+  <data name="NewClients" xml:space="preserve">
+    <value>Uued kliendid</value>
+  </data>
+  <data name="NewClientsByLoyaltyTotalCount" xml:space="preserve">
+    <value>Klientide arv, mis on ühendatud lojaalsusprogrammiga</value>
+  </data>
+  <data name="NewClientsCountWhoHavePurchasedProduct" xml:space="preserve">
+    <value>Toodet tellinud uued kliendid</value>
+  </data>
+  <data name="NewClientsCountWhoReOrderProduct" xml:space="preserve">
+    <value>Toodet korduvalt tellinud uued kliendid</value>
+  </data>
+  <data name="NewClientsOperationCount" xml:space="preserve">
+    <value>Uute klientide operatsioonide arv</value>
+  </data>
+  <data name="NewClientsTotalCount" xml:space="preserve">
+    <value>Uute klientide arv</value>
+  </data>
+  <data name="Night" xml:space="preserve">
+    <value>öö </value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Andmeid pole</value>
+  </data>
+  <data name="NoDataForSpecifiedPeriod" xml:space="preserve">
+    <value>Antud perioodi eest andmed puuduvad</value>
+  </data>
+  <data name="NoneConfirmed" xml:space="preserve">
+    <value>kinnitamata</value>
+  </data>
+  <data name="NoRevisions" xml:space="preserve">
+    <value>Revisioone ei olnud</value>
+  </data>
+  <data name="NormalBonus" xml:space="preserve">
+    <value>Neutraalne intervall</value>
+  </data>
+  <data name="NotDefined" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="OnHallSquare" xml:space="preserve">
+    <value>Saali m2 kohtaSaali m2 kohtaSaali m2 kohta</value>
+  </data>
+  <data name="OperationCount" xml:space="preserve">
+    <value>Operatsioonide arv</value>
+  </data>
+  <data name="OrderAmount" xml:space="preserve">
+    <value>Tellimuse summa</value>
+  </data>
+  <data name="OrderDateOfReceipt" xml:space="preserve">
+    <value>Tellimuse kuupäev</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value>tellimuse id</value>
+  </data>
+  <data name="OrderLinesCount" xml:space="preserve">
+    <value>Positsioone</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Tellimuse nr.</value>
+  </data>
+  <data name="OrderOperator" xml:space="preserve">
+    <value>Tellimuse operaator</value>
+  </data>
+  <data name="OrderPaymentType" xml:space="preserve">
+    <value>Tasumise viis</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="OrdersAmount" xml:space="preserve">
+    <value>Tellimuste summa</value>
+  </data>
+  <data name="OrdersCount" xml:space="preserve">
+    <value>Tellimuste arv </value>
+  </data>
+  <data name="OrdersCountOnCouriers" xml:space="preserve">
+    <value>Tellimuste arv kulleri kohta tunnis</value>
+  </data>
+  <data name="OrdersDelivered" xml:space="preserve">
+    <value>Kohale toimetatud tellimusi</value>
+  </data>
+  <data name="OrdersOnCouriersInHourCount" xml:space="preserve">
+    <value>Tellimusi kulleri kohta tunnis</value>
+  </data>
+  <data name="OrderSourceMobile" xml:space="preserve">
+    <value>Mob. Rakendus</value>
+  </data>
+  <data name="OrderSources" xml:space="preserve">
+    <value>Tellimuste allikad</value>
+  </data>
+  <data name="OrderSourceSite" xml:space="preserve">
+    <value>Veebileht</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Tellimuse staatus</value>
+  </data>
+  <data name="OrderType" xml:space="preserve">
+    <value>Tellimuse liik</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organisatsioon</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Muu</value>
+  </data>
+  <data name="OverdueBonus" xml:space="preserve">
+    <value>Trahv (Viivitus)</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="PackingTable" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="PaymentCardTransId" xml:space="preserve">
+    <value>transaktsiooni id</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>Personali toitlustus</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefoninumber</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Tulen ise järgi</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="PizzaAndCompositionCountOnEmployee" xml:space="preserve">
+    <value>Pizzade ja suupistete arv inimese kohta tunnis</value>
+  </data>
+  <data name="PizzaCountOnEmployee" xml:space="preserve">
+    <value>Pizzade arv inimese kohta tunnis</value>
+  </data>
+  <data name="Pizzeria" xml:space="preserve">
+    <value>Pizzarestoran</value>
+  </data>
+  <data name="PizzeriaAge_AnyAge" xml:space="preserve">
+    <value>Igas vanuses pitsarestoranid</value>
+  </data>
+  <data name="PizzeriaAge_ChooseAge" xml:space="preserve">
+    <value>Pitsarestorani vanus</value>
+  </data>
+  <data name="PizzeriaAge_HalfYear" xml:space="preserve">
+    <value>Pitsarestoranid vanemad, kui 6 kuud</value>
+  </data>
+  <data name="PizzeriaAge_OneYear" xml:space="preserve">
+    <value>Pitsarestoranid vanemad, kui 1 aasta</value>
+  </data>
+  <data name="PizzeriaUnitCaption" xml:space="preserve">
+    <value>Osakond/Pizzarestoran</value>
+  </data>
+  <data name="Portion" xml:space="preserve">
+    <value>Osakaal</value>
+  </data>
+  <data name="PremiumFixedAmount" xml:space="preserve">
+    <value>Ühine preemia</value>
+  </data>
+  <data name="PremiumRateIncrease" xml:space="preserve">
+    <value>Preemia tunnitasu juurde</value>
+  </data>
+  <data name="PremiumsComment" xml:space="preserve">
+    <value>Preemia kommentaar</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>Valmistamine</value>
+  </data>
+  <data name="PreparationTime" xml:space="preserve">
+    <value>Valmistamisaeg</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Hind</value>
+  </data>
+  <data name="PrimeCost" xml:space="preserve">
+    <value>Omahind</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Toode</value>
+  </data>
+  <data name="ProductCategories" xml:space="preserve">
+    <value>Toodete kategooriad</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>Toote ID</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Valmistamine</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Toote nimetus</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Tooted</value>
+  </data>
+  <data name="ProductSales" xml:space="preserve">
+    <value>Müügid</value>
+  </data>
+  <data name="ProductsGroup" xml:space="preserve">
+    <value>Tooterühm</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Toote liik</value>
+  </data>
+  <data name="Profit" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="ProfitAndLosses_AdministrativeCosts" xml:space="preserve">
+    <value>Administratiivkulud</value>
+  </data>
+  <data name="ProfitAndLosses_BankingCosts" xml:space="preserve">
+    <value>Pangakulud</value>
+  </data>
+  <data name="ProfitAndLosses_BankingServicesCosts" xml:space="preserve">
+    <value>Pangateenused</value>
+  </data>
+  <data name="ProfitAndLosses_CalculatedFoodCost" xml:space="preserve">
+    <value>Arvestuslik Food Cost</value>
+  </data>
+  <data name="ProfitAndLosses_CallCentrCosts" xml:space="preserve">
+    <value>Kõnekeskus</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestments" xml:space="preserve">
+    <value>Investeeringud</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForAdministrativeExpenses" xml:space="preserve">
+    <value>Administratiivne majandus</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForAdvertising" xml:space="preserve">
+    <value>Reklaam, markeeting</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForConstructionMaterials" xml:space="preserve">
+    <value>Ehitusmaterjalid</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForEquipment" xml:space="preserve">
+    <value>Seadmed</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForInventory" xml:space="preserve">
+    <value>Inventaar</value>
+  </data>
+  <data name="ProfitAndLosses_CapitalInvestmentsForRepairs" xml:space="preserve">
+    <value>Remonditööd</value>
+  </data>
+  <data name="ProfitAndLosses_CommonCosts" xml:space="preserve">
+    <value>Võrku hõlmavad kulud</value>
+  </data>
+  <data name="ProfitAndLosses_ControlledTotalCosts" xml:space="preserve">
+    <value>põhikulud</value>
+  </data>
+  <data name="ProfitAndLosses_CorporateEventsCosts" xml:space="preserve">
+    <value>Korporatiivsed üritused</value>
+  </data>
+  <data name="ProfitAndLosses_Costs" xml:space="preserve">
+    <value>Kulud</value>
+  </data>
+  <data name="ProfitAndLosses_CoverallsCosts" xml:space="preserve">
+    <value>Tööriided</value>
+  </data>
+  <data name="ProfitAndLosses_Delivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="ProfitAndLosses_EBITDA" xml:space="preserve">
+    <value>EBITDA</value>
+  </data>
+  <data name="ProfitAndLosses_ElectricityCosts" xml:space="preserve">
+    <value>Elektrienergia</value>
+  </data>
+  <data name="ProfitAndLosses_EnterParamters" xml:space="preserve">
+    <value>Sisesta näitajad</value>
+  </data>
+  <data name="ProfitAndLosses_EquipmentAndSuppliesCosts" xml:space="preserve">
+    <value>Seadmestik ja inventar</value>
+  </data>
+  <data name="ProfitAndLosses_FuelsAndLubricants" xml:space="preserve">
+    <value>GSM</value>
+  </data>
+  <data name="ProfitAndLosses_GasCosts" xml:space="preserve">
+    <value>Gaas</value>
+  </data>
+  <data name="ProfitAndLosses_GrossProfit" xml:space="preserve">
+    <value>Kogukasum</value>
+  </data>
+  <data name="ProfitAndLosses_HeatingCosts" xml:space="preserve">
+    <value>Küte</value>
+  </data>
+  <data name="ProfitAndLosses_InsuranceVehiclesCosts" xml:space="preserve">
+    <value>Kindlustus</value>
+  </data>
+  <data name="ProfitAndLosses_InternetCosts" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="ProfitAndLosses_LossAndSurplusTotal" xml:space="preserve">
+    <value>Kaod/Ülejäägid</value>
+  </data>
+  <data name="ProfitAndLosses_LossSurplusesPizzeria" xml:space="preserve">
+    <value>Pizzarestoran</value>
+  </data>
+  <data name="ProfitAndLosses_MaintainingBuildingsCosts" xml:space="preserve">
+    <value>Kulutused hoonete korrashoidmise peale</value>
+  </data>
+  <data name="ProfitAndLosses_MaintenanceAndRepairBuildingsCosts" xml:space="preserve">
+    <value>Hoone hooldamine ja remont</value>
+  </data>
+  <data name="ProfitAndLosses_MaintenanceAndRepairTotal" xml:space="preserve">
+    <value>Hooldus ja remont</value>
+  </data>
+  <data name="ProfitAndLosses_MaintenanceOfEquipmentCosts" xml:space="preserve">
+    <value>Seadmestiku hooldus ja remont</value>
+  </data>
+  <data name="ProfitAndLosses_MaintenanceOfOtherEquipmentCosts" xml:space="preserve">
+    <value>Muu inventari hooldus ja remont</value>
+  </data>
+  <data name="ProfitAndLosses_MaintenanceVehiclesTotalCosts" xml:space="preserve">
+    <value>Transpordivahendite korrashoidmine</value>
+  </data>
+  <data name="ProfitAndLosses_ManagementCosts" xml:space="preserve">
+    <value>Kulutused juhtimisele</value>
+  </data>
+  <data name="ProfitAndLosses_MedicalExaminationCosts" xml:space="preserve">
+    <value>Meditsiiniline ülevaatus</value>
+  </data>
+  <data name="ProfitAndLosses_NDS" xml:space="preserve">
+    <value>Maksmisele kuuluv KM</value>
+  </data>
+  <data name="ProfitAndLosses_OtherDiscretionaryCosts" xml:space="preserve">
+    <value>Muud põhikulud</value>
+  </data>
+  <data name="ProfitAndLosses_OtherMaterialsCosts" xml:space="preserve">
+    <value>Muud materjalid</value>
+  </data>
+  <data name="ProfitAndLosses_OtherOperatingCosts" xml:space="preserve">
+    <value>Muud tegevuskulud</value>
+  </data>
+  <data name="ProfitAndLosses_OtherStaffCosts" xml:space="preserve">
+    <value>Muud kulutused personalile</value>
+  </data>
+  <data name="ProfitAndLosses_OtherUncontrollableCosts" xml:space="preserve">
+    <value>Muud mittepõhikulud</value>
+  </data>
+  <data name="ProfitAndLosses_PackingCosts" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="ProfitAndLosses_PersonnelCosts" xml:space="preserve">
+    <value>Personali toitlustus</value>
+  </data>
+  <data name="ProfitAndLosses_PhoneCosts" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ProfitAndLosses_PRCCosts" xml:space="preserve">
+    <value>PRC kulud</value>
+  </data>
+  <data name="ProfitAndLosses_ProductionCost" xml:space="preserve">
+    <value>Toodete omahind</value>
+  </data>
+  <data name="ProfitAndLosses_ProductionCosts" xml:space="preserve">
+    <value>Kulutused tootmisele</value>
+  </data>
+  <data name="ProfitAndLosses_ProductsCosts" xml:space="preserve">
+    <value>Tooted</value>
+  </data>
+  <data name="ProfitAndLosses_ProductsTotalCosts" xml:space="preserve">
+    <value>Toodete omahind</value>
+  </data>
+  <data name="ProfitAndLosses_ProductsWithOutRecipes" xml:space="preserve">
+    <value>Retseptide välised tooted</value>
+  </data>
+  <data name="ProfitAndLosses_ProfitAfterControlledCosts" xml:space="preserve">
+    <value>Kasum peale põhikulud</value>
+  </data>
+  <data name="ProfitAndLosses_ReclameCosts" xml:space="preserve">
+    <value>Reklaam</value>
+  </data>
+  <data name="ProfitAndLosses_RecruitmentStaffCost" xml:space="preserve">
+    <value>Personali töölevõtmisega seotud kulutused</value>
+  </data>
+  <data name="ProfitAndLosses_RentCosts" xml:space="preserve">
+    <value>Rendikulu</value>
+  </data>
+  <data name="ProfitAndLosses_RepairVehiclesCosts" xml:space="preserve">
+    <value>Remont, Transpordikulu</value>
+  </data>
+  <data name="ProfitAndLosses_Restaurant" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="ProfitAndLosses_ReturnOfUtilityCosts" xml:space="preserve">
+    <value>Kommunaalkulude katmine</value>
+  </data>
+  <data name="ProfitAndLosses_Revenue" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="ProfitAndLosses_RevenueDelivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="ProfitAndLosses_RevenueStationaryAndPickup" xml:space="preserve">
+    <value>Restoran + tulen ise järgi</value>
+  </data>
+  <data name="ProfitAndLosses_RevenueTotal" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="ProfitAndLosses_Royalty" xml:space="preserve">
+    <value>Litsentsitasu</value>
+  </data>
+  <data name="ProfitAndLosses_SalaryCouriers" xml:space="preserve">
+    <value>Kullerite töötasu</value>
+  </data>
+  <data name="ProfitAndLosses_SalaryManagementStaff" xml:space="preserve">
+    <value>Juhtimise töötasu</value>
+  </data>
+  <data name="ProfitAndLosses_SalaryProductionStaff" xml:space="preserve">
+    <value>Tootmise töötasu</value>
+  </data>
+  <data name="ProfitAndLosses_SalaryTotalCosts" xml:space="preserve">
+    <value>Töötasu</value>
+  </data>
+  <data name="ProfitAndLosses_SecurityCosts" xml:space="preserve">
+    <value>Valve</value>
+  </data>
+  <data name="ProfitAndLosses_SoftwareCosts" xml:space="preserve">
+    <value>Tarkvara</value>
+  </data>
+  <data name="ProfitAndLosses_SparePartsForVehiclesCosts" xml:space="preserve">
+    <value>Varuosad</value>
+  </data>
+  <data name="ProfitAndLosses_StaffCosts" xml:space="preserve">
+    <value>Kulutused personalile</value>
+  </data>
+  <data name="ProfitAndLosses_StaffFoodCosts" xml:space="preserve">
+    <value>Töötajate toitlustus</value>
+  </data>
+  <data name="ProfitAndLosses_SuppliesForKitchenCosts" xml:space="preserve">
+    <value>Kulumaterjalid köögi jaoks</value>
+  </data>
+  <data name="ProfitAndLosses_TaxesAndLicense" xml:space="preserve">
+    <value>Maksud ja litsentsid</value>
+  </data>
+  <data name="ProfitAndLosses_TotalCosts" xml:space="preserve">
+    <value>Kulud</value>
+  </data>
+  <data name="ProfitAndLosses_TotalMaterialsCosts" xml:space="preserve">
+    <value>Materjalid, seadmestik, inventar</value>
+  </data>
+  <data name="ProfitAndLosses_TotalOperatingCosts" xml:space="preserve">
+    <value>Tegevuskulud</value>
+  </data>
+  <data name="ProfitAndLosses_TransporationWasteCosts" xml:space="preserve">
+    <value>Jääkide transportimine ja utiliseerimine</value>
+  </data>
+  <data name="ProfitAndLosses_TransportationCosts" xml:space="preserve">
+    <value>Transpordikulud</value>
+  </data>
+  <data name="ProfitAndLosses_UncontrollableTotalCosts" xml:space="preserve">
+    <value>Mittepõhikulud</value>
+  </data>
+  <data name="ProfitAndLosses_UtilityCosts" xml:space="preserve">
+    <value>Kommunaalkulud </value>
+  </data>
+  <data name="ProfitAndLosses_WaterAndSewerageCosts" xml:space="preserve">
+    <value>Vesi ja kanalisatsioon</value>
+  </data>
+  <data name="ProfitPercentage" xml:space="preserve">
+    <value>Läbimüük, %</value>
+  </data>
+  <data name="PromoCode" xml:space="preserve">
+    <value>sooduskood</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Tükk</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>Tk</value>
+  </data>
+  <data name="RealPrice" xml:space="preserve">
+    <value>Reaalne hind</value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value>Põhjus</value>
+  </data>
+  <data name="ReasonDebitingCaption" xml:space="preserve">
+    <value>Mahakandmise põhjus</value>
+  </data>
+  <data name="ReasonStopSale" xml:space="preserve">
+    <value>seisaku põhjus</value>
+  </data>
+  <data name="RecordsCount" xml:space="preserve">
+    <value>Rekordite arv</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Aruanne:</value>
+  </data>
+  <data name="ReportName_ConsumptionProducts" xml:space="preserve">
+    <value>Toodete kulu</value>
+  </data>
+  <data name="ReportName_DeliverySectorsReport" xml:space="preserve">
+    <value>Kohaletoimetamise piirkond</value>
+  </data>
+  <data name="ReportName_ExpressProductsStatistics" xml:space="preserve">
+    <value>Ekspress-tooted, millel on kõlblik kuni ületatud</value>
+  </data>
+  <data name="ReportName_ProductivityCouriersStatistic" xml:space="preserve">
+    <value>Kullerite koormatus</value>
+  </data>
+  <data name="ReportName_ProductsSalesForCalculationCard" xml:space="preserve">
+    <value>Toodete kulu arvutamiskaartide jaoks</value>
+  </data>
+  <data name="ReportName_ReportKitchenMotivation" xml:space="preserve">
+    <value>Köögi motivatsioon</value>
+  </data>
+  <data name="ReportName_Revenue" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="ReportRange" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="ReportStandartCaption" xml:space="preserve">
+    <value>Aruanne</value>
+  </data>
+  <data name="ReportType" xml:space="preserve">
+    <value>Aruande tüüp</value>
+  </data>
+  <data name="Report_MaterialDebiting" xml:space="preserve">
+    <value>Toorainete mahakandmine</value>
+  </data>
+  <data name="Report_NoColon" xml:space="preserve">
+    <value>Aruanne</value>
+  </data>
+  <data name="Report_ProductsDebiting" xml:space="preserve">
+    <value>Toodete mahakandmine</value>
+  </data>
+  <data name="RestOfDeliverySectors" xml:space="preserve">
+    <value>Muu</value>
+  </data>
+  <data name="ReturnedClients" xml:space="preserve">
+    <value>Tagasitulnud kliendid</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="RevenueNewClientsByLoyaltyTotal" xml:space="preserve">
+    <value>Lojaalsusprogrammi kasutavate uute klientide tellimuste summa</value>
+  </data>
+  <data name="RevenueOnEmployee" xml:space="preserve">
+    <value>Läbimüük inimese kohta tunnis</value>
+  </data>
+  <data name="RevisionAt" xml:space="preserve">
+    <value>Kontroll alates {0}</value>
+  </data>
+  <data name="RevisionRemainingsHistory" xml:space="preserve">
+    <value>Muudatuste ajalugu</value>
+  </data>
+  <data name="RevisionRemainsHeaderId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RevisionRemainsHeaderMaterial" xml:space="preserve">
+    <value>Tooraine</value>
+  </data>
+  <data name="RevisionRemainsHeaderPeriodLabel" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="RevisionRemainsHeaderReport" xml:space="preserve">
+    <value>Aruanne</value>
+  </data>
+  <data name="RevisionRemainsHeaderRevisionRemains" xml:space="preserve">
+    <value>Jäägid revisjoni järgi</value>
+  </data>
+  <data name="RevisionRemainsHeaderUnitLabel" xml:space="preserve">
+    <value>Osakond/Pizzarestoran</value>
+  </data>
+  <data name="RevisionRemainsHeaderUnitOfMeasure" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="RevisionRemainsMaterialType" xml:space="preserve">
+    <value>Toorainete tüüp</value>
+  </data>
+  <data name="RevisionRemainsModifiedAt" xml:space="preserve">
+    <value>Muudatuste aeg ja kuupäev</value>
+  </data>
+  <data name="RevisionRemainsModifiedBy" xml:space="preserve">
+    <value>Töötaja</value>
+  </data>
+  <data name="RevisionRemainsNewValue" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="RevisionRemainsOriginalValue" xml:space="preserve">
+    <value>Oli</value>
+  </data>
+  <data name="RevisionRemainsRevisionDate" xml:space="preserve">
+    <value>Kontrolli aeg ja kuupäev</value>
+  </data>
+  <data name="RevisionType" xml:space="preserve">
+    <value>Revisjoni liik</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Revident:</value>
+  </data>
+  <data name="SalaryCategory" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="SalaryDayHours" xml:space="preserve">
+    <value>Päevased tunnid</value>
+  </data>
+  <data name="SalaryDayMoney" xml:space="preserve">
+    <value>TT, päev</value>
+  </data>
+  <data name="SalaryEmployeeName" xml:space="preserve">
+    <value>Perekonnanimi, nimi</value>
+  </data>
+  <data name="SalaryExperience" xml:space="preserve">
+    <value>Staaž, kuudes</value>
+  </data>
+  <data name="SalaryExperienceBonus" xml:space="preserve">
+    <value>Tasu, preemia staaži eest</value>
+  </data>
+  <data name="SalaryHolidayFactor" xml:space="preserve">
+    <value>Eripäeva koef.</value>
+  </data>
+  <data name="SalaryHolidayHours" xml:space="preserve">
+    <value>Tunnid pühade ajal</value>
+  </data>
+  <data name="SalaryKitchenStaff" xml:space="preserve">
+    <value>Köögi töötasu</value>
+  </data>
+  <data name="SalaryNightFactor" xml:space="preserve">
+    <value>Öine koef.</value>
+  </data>
+  <data name="SalaryNightHours" xml:space="preserve">
+    <value>Öötunnid</value>
+  </data>
+  <data name="SalaryNightMoney" xml:space="preserve">
+    <value>TT, öö</value>
+  </data>
+  <data name="SalaryOrdersCount" xml:space="preserve">
+    <value>Tellimuse tasu</value>
+  </data>
+  <data name="SalaryOrdersMoney" xml:space="preserve">
+    <value>Tasu, tellimuse eest</value>
+  </data>
+  <data name="SalaryPremiumMoney" xml:space="preserve">
+    <value>TT, preemia</value>
+  </data>
+  <data name="SalaryRate" xml:space="preserve">
+    <value>Täiskoht</value>
+  </data>
+  <data name="SalaryRatePerHour" xml:space="preserve">
+    <value>Tunnitasu</value>
+  </data>
+  <data name="SalaryRatePerOrder" xml:space="preserve">
+    <value>Tellimuse tasu</value>
+  </data>
+  <data name="SalaryShiftEndDate" xml:space="preserve">
+    <value>Vahetuse lõpetamise kuupäev</value>
+  </data>
+  <data name="SalaryShiftEndTime" xml:space="preserve">
+    <value>Vahetuse lõppaeg</value>
+  </data>
+  <data name="SalaryShiftStartDate" xml:space="preserve">
+    <value>Vahetuse lõpetamise kuupäev</value>
+  </data>
+  <data name="SalaryShiftStartTime" xml:space="preserve">
+    <value>Vahetuse algusaeg</value>
+  </data>
+  <data name="SalaryShiftTime" xml:space="preserve">
+    <value>Vahetuse aeg</value>
+  </data>
+  <data name="SalaryTotalHours" xml:space="preserve">
+    <value>Tunde kokku</value>
+  </data>
+  <data name="SalaryTotalMoney" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="SalesStatistict_YesterdayOrders" xml:space="preserve">
+    <value>Tellimuste arv eile</value>
+  </data>
+  <data name="SalesStatistict_YesterdayOrdersDynamics" xml:space="preserve">
+    <value>Eelmise päeva dünaamika</value>
+  </data>
+  <data name="SalesStatistict_YesterdayOrdersRepeats" xml:space="preserve">
+    <value>Kordustellimuste osa</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Müügi liik</value>
+  </data>
+  <data name="SaleTime" xml:space="preserve">
+    <value>Müügi (tšeki printimise) aeg</value>
+  </data>
+  <data name="SaleType" xml:space="preserve">
+    <value>Müügi suund</value>
+  </data>
+  <data name="Saturdays" xml:space="preserve">
+    <value>Laupäevad</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>Sektor</value>
+  </data>
+  <data name="SelectInventoryType" xml:space="preserve">
+    <value>- Valige tooraine klass -</value>
+  </data>
+  <data name="SelectUnitsOfMeasure" xml:space="preserve">
+    <value>- Valige mõõtühik -</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Pooltoode</value>
+  </data>
+  <data name="SendedSMSCount" xml:space="preserve">
+    <value>Saadetud sms-de kogus</value>
+  </data>
+  <data name="ShiftNumber" xml:space="preserve">
+    <value>Vahetuse number</value>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Hommikune vahetus,Õhtune vahetus,Öine vahetus</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>Vahetuse liik</value>
+  </data>
+  <data name="SmsTag_cancel_transaction" xml:space="preserve">
+    <value>Kaardimakse tühistamine</value>
+  </data>
+  <data name="SmsTag_deliver_order" xml:space="preserve">
+    <value>Tellimus on tarnitud</value>
+  </data>
+  <data name="SmsTag_loyalty_start" xml:space="preserve">
+    <value>Lojaalsuse süsteem</value>
+  </data>
+  <data name="SmsTag_marketing" xml:space="preserve">
+    <value>Müük</value>
+  </data>
+  <data name="SmsTag_marketing_69bb" xml:space="preserve">
+    <value>Müük - testi postitus</value>
+  </data>
+  <data name="SmsTag_new_order" xml:space="preserve">
+    <value>Uus tellimus</value>
+  </data>
+  <data name="SmsTag_open_department" xml:space="preserve">
+    <value>Osakonna avamine</value>
+  </data>
+  <data name="SmsTag_open_unitate" xml:space="preserve">
+    <value>Asutuse avamine</value>
+  </data>
+  <data name="SmsTag_phone_change" xml:space="preserve">
+    <value>Telefoni vahetus</value>
+  </data>
+  <data name="SmsTag_recovery_password" xml:space="preserve">
+    <value>Parooli taastamine</value>
+  </data>
+  <data name="SmsTag_registration" xml:space="preserve">
+    <value>Registreerimine</value>
+  </data>
+  <data name="SmsTag_registration_cc" xml:space="preserve">
+    <value>Registreerimine CC</value>
+  </data>
+  <data name="SmsTag_registration_restaurant" xml:space="preserve">
+    <value>Registreerimine restorani kassa kaudu </value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Kiirus</value>
+  </data>
+  <data name="StartBonus" xml:space="preserve">
+    <value>Stardiboonus</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Statistika</value>
+  </data>
+  <data name="StopSale" xml:space="preserve">
+    <value>Müükide peatamine</value>
+  </data>
+  <data name="StopSaleDuration" xml:space="preserve">
+    <value>Peatuse kestvus</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Tänav</value>
+  </data>
+  <data name="Sundays" xml:space="preserve">
+    <value>Pühapäevad</value>
+  </data>
+  <data name="SupplyReportColumnCount" xml:space="preserve">
+    <value>Arv (tk)</value>
+  </data>
+  <data name="SupplyReportColumnId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="SupplyReportColumnMaterial" xml:space="preserve">
+    <value>Tooraine</value>
+  </data>
+  <data name="SupplyReportColumnPrice" xml:space="preserve">
+    <value>Hind</value>
+  </data>
+  <data name="SupplyReportColumnSumma" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="SupplyReportColumnUnitOfMeasure" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="SupplyReportHeaderAllPizzerias" xml:space="preserve">
+    <value>Kõik pitsarestoranid</value>
+  </data>
+  <data name="SupplyReportHeaderPeriodLabel" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="SupplyReportHeaderTitle" xml:space="preserve">
+    <value>Tooraine saabumine</value>
+  </data>
+  <data name="SupplyReportHeaderUnitLabel" xml:space="preserve">
+    <value>Osakond / pitsarestoran</value>
+  </data>
+  <data name="SupplyReportPeriodCannotBeMoreThan100Days" xml:space="preserve">
+    <value>Periood ei tohi ületada 100 päeva</value>
+  </data>
+  <data name="TabNo" xml:space="preserve">
+    <value>Tabelinumber</value>
+  </data>
+  <data name="TakenLosses" xml:space="preserve">
+    <value>Arvestatud kulud</value>
+  </data>
+  <data name="TechnicalDescription" xml:space="preserve">
+    <value>Liigialane kirjeldus</value>
+  </data>
+  <data name="Thursdays" xml:space="preserve">
+    <value>Neljapäevad</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Aeg</value>
+  </data>
+  <data name="TimeOutOrdersPercentage" xml:space="preserve">
+    <value>Kõlblik kuni tähtaja ületanu %</value>
+  </data>
+  <data name="TimeOutPeriod" xml:space="preserve">
+    <value>Ootamine</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Vahetuse alguskuupäev</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Vahetuse algusaeg</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Päevased tunnid</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Töötaja perekonnanimi, nimi</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Vahetuse lõpetamise kuupäev</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Vahetuse lõppaeg</value>
+  </data>
+  <data name="TimeReportHoursTotalColumnTitle" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Öötunnid</value>
+  </data>
+  <data name="TimeToStringFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="Title_ActivityDeliverySectors" xml:space="preserve">
+    <value>Kohaletoimetamise sektorite aktiivsus</value>
+  </data>
+  <data name="Title_ActualPriceReport" xml:space="preserve">
+    <value>Aktuaalsed hinnad</value>
+  </data>
+  <data name="Title_AverageCheck" xml:space="preserve">
+    <value>Keskmine tšekk</value>
+  </data>
+  <data name="Title_AverageOrderAcceptTime" xml:space="preserve">
+    <value>Tellimuse vastuvõtu keskmine aeg</value>
+  </data>
+  <data name="Title_BonusActionActivityReport" xml:space="preserve">
+    <value>Aktiivsus kampaaniate kaupa</value>
+  </data>
+  <data name="Title_BonusActionsReport" xml:space="preserve">
+    <value>Automaatsete kampaaniate rakendamine</value>
+  </data>
+  <data name="Title_CalculateSMSReport" xml:space="preserve">
+    <value>Arvestused sms-ga</value>
+  </data>
+  <data name="Title_ClientHistoryReport" xml:space="preserve">
+    <value>Kliendi ajalugu</value>
+  </data>
+  <data name="Title_ClientsStatisicReport" xml:space="preserve">
+    <value>Klientide statistika</value>
+  </data>
+  <data name="Title_CourierRating" xml:space="preserve">
+    <value>Kullerite reiting</value>
+  </data>
+  <data name="Title_CourierStatisicReport" xml:space="preserve">
+    <value>Kullerite statistika</value>
+  </data>
+  <data name="Title_CourierTasks" xml:space="preserve">
+    <value>Kullerite sõidud</value>
+  </data>
+  <data name="Title_DefectiveProductsReport" xml:space="preserve">
+    <value>Praaktooted</value>
+  </data>
+  <data name="Title_DeliveryStatistic" xml:space="preserve">
+    <value>Kohaletoimetamise statistika</value>
+  </data>
+  <data name="Title_DoughReport" xml:space="preserve">
+    <value>Taigna kulu</value>
+  </data>
+  <data name="Title_LabourCost" xml:space="preserve">
+    <value>Labour Cost</value>
+  </data>
+  <data name="Title_LossesAndExceesReport" xml:space="preserve">
+    <value>Kahjum ja ülejääk</value>
+  </data>
+  <data name="Title_LoyaltyProfitReport" xml:space="preserve">
+    <value>Boonusprogramm- tehingud Dodo-eurodega</value>
+  </data>
+  <data name="Title_LoyaltyReport" xml:space="preserve">
+    <value>Boonusprogramm</value>
+  </data>
+  <data name="Title_MostRichClientsReport" xml:space="preserve">
+    <value>Boonusprogramm - klientide top</value>
+  </data>
+  <data name="Title_OperatorsStatistic" xml:space="preserve">
+    <value>Operaatorite statistika</value>
+  </data>
+  <data name="Title_OrdersReport" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="Title_PizzaSliceRealPrice" xml:space="preserve">
+    <value>Tükikesed - reaalne hind</value>
+  </data>
+  <data name="Title_ProductionTimeReport" xml:space="preserve">
+    <value>Valmistamisaeg</value>
+  </data>
+  <data name="Title_ReportPizzaSliceRealPrice" xml:space="preserve">
+    <value>Tükikesed - reaalne hind</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoad" xml:space="preserve">
+    <value>Aruanne koormatuse kohta</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadOrders" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadProducts" xml:space="preserve">
+    <value>Tooted</value>
+  </data>
+  <data name="Title_ReportPopularityProducts" xml:space="preserve">
+    <value>Toodete populaarsus</value>
+  </data>
+  <data name="Title_ReportProductivity" xml:space="preserve">
+    <value>Tootlikkus</value>
+  </data>
+  <data name="Title_ReportPromoCodeUsed" xml:space="preserve">
+    <value>Sooduskoodide kulu</value>
+  </data>
+  <data name="Title_ReportSaleByCashBoxSessions" xml:space="preserve">
+    <value>Müügid kassavahetuste kaupa</value>
+  </data>
+  <data name="Title_RevenuePercentage" xml:space="preserve">
+    <value>Läbimüügi osakaal, %</value>
+  </data>
+  <data name="Title_SalaryReport" xml:space="preserve">
+    <value>Töötasu</value>
+  </data>
+  <data name="Title_SaleCount" xml:space="preserve">
+    <value>Müüdud, tk</value>
+  </data>
+  <data name="Title_StopSaleReport" xml:space="preserve">
+    <value>Stopp-müügid</value>
+  </data>
+  <data name="Title_TimeReport" xml:space="preserve">
+    <value>Tegelik aeg</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="TotalClientsCountByPeriod" xml:space="preserve">
+    <value>Klientide kogus kokku perioodi kohta</value>
+  </data>
+  <data name="TotalNDS" xml:space="preserve">
+    <value>KM summa</value>
+  </data>
+  <data name="TotalOrdersCountByPeriod" xml:space="preserve">
+    <value>Tellimuste kogus kokku perioodi kohta</value>
+  </data>
+  <data name="TotalOrdersPrice" xml:space="preserve">
+    <value>Tellimuste summa kampaania raames</value>
+  </data>
+  <data name="TotalPayableForPeriod" xml:space="preserve">
+    <value>Perioodi eest väljamaksmiseks kokku</value>
+  </data>
+  <data name="Transaction" xml:space="preserve">
+    <value>Tehing</value>
+  </data>
+  <data name="TransactionConfirmed" xml:space="preserve">
+    <value>Transaktsiooni staatus</value>
+  </data>
+  <data name="TransactonCheckDate" xml:space="preserve">
+    <value>Transaktsiooni kuupäev</value>
+  </data>
+  <data name="Tuesdays" xml:space="preserve">
+    <value>Teisipäevad</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Liik</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="Unitate" xml:space="preserve">
+    <value>Allüksus</value>
+  </data>
+  <data name="UnitateName" xml:space="preserve">
+    <value>Allüksus</value>
+  </data>
+  <data name="Unitates" xml:space="preserve">
+    <value>Allüksus</value>
+  </data>
+  <data name="UnitCostPercentage" xml:space="preserve">
+    <value>UnitCost,%</value>
+  </data>
+  <data name="UnitName" xml:space="preserve">
+    <value>Osakond</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Osakonnad:</value>
+  </data>
+  <data name="UserBeginSale" xml:space="preserve">
+    <value>Kes taasalustas</value>
+  </data>
+  <data name="UserStopSale" xml:space="preserve">
+    <value>Kes peatas</value>
+  </data>
+  <data name="UsingCount" xml:space="preserve">
+    <value>Kasutuskordade arv</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Tähendus</value>
+  </data>
+  <data name="WaitingTime" xml:space="preserve">
+    <value>Ootamine</value>
+  </data>
+  <data name="Wednesdays" xml:space="preserve">
+    <value>Kolmapäevad</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>puhkepäevad</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>Koormatus</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Jah</value>
+  </data>
+</root>

@@ -1,0 +1,56 @@
+﻿.employeesCell {
+	vertical-align: top;
+	height: 60%;
+}
+
+.employeesLayout {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 1000px;
+}
+
+.employeesWrapper {
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	width: 20000px;
+	height: 100%;
+}
+
+.employeesItem {
+	float: left;
+	margin-left: 20px;
+	background: #fff;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 10px 10px 0;
+	overflow: hidden;
+	height: 100%;
+
+	img {
+		width: 100%;
+		height: 70%;
+	}
+
+	> div {
+		height: 30%;
+	}
+
+	strong {
+		font-weight: normal;
+		font: 2.25em 'VAGRoundedLTCYR-Light';
+		display: block;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	span {
+		line-height: 1;
+		color: #666;
+		font-size: 1.5em;
+	}
+}

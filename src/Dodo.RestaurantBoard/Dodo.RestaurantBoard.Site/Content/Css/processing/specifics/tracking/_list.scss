@@ -1,0 +1,19 @@
+﻿.list {
+	td {
+		border: 1px solid #999999;
+		text-align: center;
+	}
+
+	.name {
+		width: 37%;
+		height: 7%;
+		text-align: left;
+		padding: 0 10px;
+	}
+
+	.num {
+		width: 13%;
+		height: 7%;
+		font-weight: bold;
+	}
+}

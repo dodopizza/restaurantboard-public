@@ -1,0 +1,71 @@
+﻿#intA12 {
+
+	.tableContainer {
+		table-layout: fixed;
+	}
+
+	.content {
+		width: 100%;
+		height: 30%;
+		overflow: hidden;
+		font-size: 2.9em;
+	}
+
+	.item {
+		width: 20%;
+		height: 31%;
+		border: 1px solid #999999;
+		vertical-align: middle;
+		text-align: center;
+		overflow: hidden;
+		cursor: pointer;
+		background-color: #dededc;
+		position: relative;
+
+		&.select {
+			background-color: #fff500;
+		}
+
+		&:empty {
+			background-color: #fff;
+		}
+	}
+
+	.namePizza {
+		font-size: 0.6em;
+		padding-right: 0;
+		font-weight: bold;
+		line-height: 0.8em;
+		top: 24%;
+	}
+
+	.numOrder {
+		position: absolute;
+		line-height: 1em;
+		font-size: 1em;
+		text-align: left;
+		bottom: 5.5%;
+		padding: 0 10px;
+	}
+
+	.footer {
+		background-color: #ffffff;
+		height: 9%;
+
+		&.more {
+			background-color: #fff500;
+		}
+	}
+
+	#status {
+		font-size: 2.4em;
+	}
+
+	.item_cancel.select {
+		background-color: #F8C301 !important;
+	}
+
+	.size {
+		overflow: hidden;
+	}
+}

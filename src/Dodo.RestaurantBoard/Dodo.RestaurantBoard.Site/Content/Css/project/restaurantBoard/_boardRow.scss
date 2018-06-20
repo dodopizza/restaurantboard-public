@@ -1,0 +1,82 @@
+﻿/// <reference path="../../utils/__utils.scss" />
+
+.restaurant-board {
+
+	&__order-number,
+	&__client-name {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__order-number {
+		background-color: $bgColor-orderNumber;
+		color: $color-orderNumber;
+		text-align: center;
+		line-height: 0.8;
+		position: relative;
+		font-family: 'Dodo Bold', Helvetica, Arial, sans-serif;
+		@include font-size($fontSize-orderNumber);
+		@include font-size-vh($fontSize-orderNumber);
+		@include property-in-vh(margin-right, $marginRight-orderNumber, $heightContext-board);
+		@include rounded($borderRadius-orderNumber);
+		@include property-in-vw(width, $width-orderNumber-2x, $widthContext-board);
+		@include property-in-vh(height, $height-orderNumber, $heightContext-board);
+
+		&-value {
+			position: absolute;
+			top: 53%;
+			left: 52%;
+			@include translate(-50%, -50%);
+			letter-spacing: -4px;
+		}
+	}
+
+	&__client-name {
+		width: 70%;
+		line-height: 1.1;
+		position: absolute;
+		bottom: -10px;
+		font-family: 'Dodo Medium', Helvetica, Arial, sans-serif;
+		@include font-size($fontSize-clientName);
+		@include font-size-vh($fontSize-clientName);
+		@include text-truncate;
+		@include property-in-vw(max-width, $maxWidth-clientName, $widthContext-board);
+		@include property-in-vh(line-height, $lineHeight-clientName, $heightContext-board);
+	}
+
+	&__row {
+		font-size: 0;
+		white-space: nowrap;
+		position: relative;
+		color: $color-clientName;
+		@include property-in-vh(padding-left, $paddingLeft-board, $heightContext-board);
+		@include property-in-vh(padding-right, $paddingRight-board, $heightContext-board);
+		@include property-in-vh((padding-bottom, padding-top), $paddingTop-boardRow, $heightContext-board);
+
+		&_lighting {
+			@include animated(lighting, $animationDuration-boardRow-lighting, $animationFunction-boardRow-lighting, $animationCount-boardRow-lighting, $animationMode-boardRow-lighting);
+
+			.restaurant-board__order-number {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+
+@include keyframes(lighting) {
+	0% {
+		background-color: $bgColor-boardRow-lighting;
+		color: $color-boardRow-lighting;
+	}
+
+	70% {
+		background-color: $bgColor-boardRow-lighting;
+		color: $color-boardRow-lighting;
+	}
+
+	100% {
+		background-color: transparent;
+		color: $color-fff;
+	}
+}

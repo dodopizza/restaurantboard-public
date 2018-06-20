@@ -1,0 +1,8 @@
+﻿<div class="restaurant-board {{currentRowCountClass}}" ng-show="partitions.length">
+    <div class="restaurant-board__row" ng-repeat="order in restaurantOrders | orderBy:'-OrderReadyTimestamp'" ng-show="order.OrderNumber != 0" ng-class="order.rowClass">
+        <span class="restaurant-board__order-number">
+            <span class="restaurant-board__order-number-value" ng-bind="order.OrderNumber"></span>
+        </span>
+        <span class="restaurant-board__client-name" ng-bind="order.ClientName"></span>
+    </div>
+</div>

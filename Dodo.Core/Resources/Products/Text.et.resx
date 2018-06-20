@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Aktiivne (ilmuv aken)</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Passiivne</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Passiivne (ostukorvi lehel olevas plokis)</value>
+  </data>
+  <data name="AdvancePreparationScheme" xml:space="preserve">
+    <value>Ettevalmistus</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>Kõik päevad</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automaatne</value>
+  </data>
+  <data name="BigPizzas" xml:space="preserve">
+    <value>Suured pitsad</value>
+  </data>
+  <data name="CashZonePreparationScheme" xml:space="preserve">
+    <value>Kassa tsoonis ettevalmistus</value>
+  </data>
+  <data name="CategoryDesserts" xml:space="preserve">
+    <value>Desserdid</value>
+  </data>
+  <data name="CategoryDrinks" xml:space="preserve">
+    <value>Joogid</value>
+  </data>
+  <data name="CategoryGoods" xml:space="preserve">
+    <value>Tooted</value>
+  </data>
+  <data name="CategoryPieces" xml:space="preserve">
+    <value>Tükid</value>
+  </data>
+  <data name="CategoryPizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="CategorySauces" xml:space="preserve">
+    <value>Kastmed</value>
+  </data>
+  <data name="CategorySnacks" xml:space="preserve">
+    <value>Suupisted</value>
+  </data>
+  <data name="Combo" xml:space="preserve">
+    <value>kombo</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Blue" xml:space="preserve">
+    <value>Helesinine (kondenspiim)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_DarkGray" xml:space="preserve">
+    <value>Tumehall (ranch)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Green" xml:space="preserve">
+    <value>Roheline (karri)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Purple" xml:space="preserve">
+    <value>Lilla (küüslaugu)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Red" xml:space="preserve">
+    <value>Punane (tomati)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_White" xml:space="preserve">
+    <value>Valge (Alfredo)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Yellow" xml:space="preserve">
+    <value>Kollane (Juustu)</value>
+  </data>
+  <data name="Constructor_SauceUnknown" xml:space="preserve">
+    <value>Ilma kastmeta</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Kohaletoimetamine ja restoran</value>
+  </data>
+  <data name="DeliveryMenu" xml:space="preserve">
+    <value>Kohaletoimetamise menüü</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Soodustus</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Teostatakse ärasaatmist</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Ootamine</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Lõpetatud</value>
+  </data>
+  <data name="ErrorMessage_DiscountPriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Väli "Soodushind" peab sisaldama kuni 10 sümbolit</value>
+  </data>
+  <data name="ErrorMessage_InvalidClientId" xml:space="preserve">
+    <value>Toiming on keelatud (Kliendi ID pole õige)</value>
+  </data>
+  <data name="ErrorMessage_NotEnoughMoney" xml:space="preserve">
+    <value>Ei ole piisavalt raha kontol</value>
+  </data>
+  <data name="ErrorMessage_PriceMustBePositive" xml:space="preserve">
+    <value>Hind ei saa olla väiksem, kui 0</value>
+  </data>
+  <data name="ErrorMessage_PriceValueHasInvalidValue" xml:space="preserve">
+    <value>Väli "Hind" sisaldab lubamatu väärtust</value>
+  </data>
+  <data name="ErrorMessage_PriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Väli "Hind" peab sisaldama kuni 10 sümbolit</value>
+  </data>
+  <data name="ErrorMessage_PriceValueRequired" xml:space="preserve">
+    <value>Väli "Hind" peab olema täidetud</value>
+  </data>
+  <data name="ErrorMessage_TransactionNotFond" xml:space="preserve">
+    <value>Transaktsiooni pole leitud</value>
+  </data>
+  <data name="Error_EmptyDimensionalCharacteristics" xml:space="preserve">
+    <value>Pole määratud suurust</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Vale hind. Peab olema {0} kordne.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Vale hind. Peab olema 1 kordne.</value>
+  </data>
+  <data name="Error_Number" xml:space="preserve">
+    <value>Ebakorrektne kogus</value>
+  </data>
+  <data name="Error_SalePeriod_EndDateLessThanStartDate" xml:space="preserve">
+    <value>Müükide lõppkuupäev ei saa olla alguskuupäevast väiksem</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotBeInThePast" xml:space="preserve">
+    <value>Ei saa määrata alguskuupäeva minevikus</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotChange" xml:space="preserve">
+    <value>Saab muuta ainult tuleviku müükide alguskuupäeva</value>
+  </data>
+  <data name="Error_TooLongDimensionalCharacteristics" xml:space="preserve">
+    <value>Liiga pikk suuruse nimetus</value>
+  </data>
+  <data name="European" xml:space="preserve">
+    <value>Euroopa</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>Tellimuse summa ({0}) on kulutatud dodo-eurodest ({1}) väiksem.</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>toidu</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Soovitused</value>
+  </data>
+  <data name="Halal" xml:space="preserve">
+    <value>Halal</value>
+  </data>
+  <data name="HalfHalal" xml:space="preserve">
+    <value>Pool-halal</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Mitte aktiivne</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingridiendid</value>
+  </data>
+  <data name="MediumPizzas" xml:space="preserve">
+    <value>Keskmised pitsad</value>
+  </data>
+  <data name="MenuAccessibility_Delivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="MenuAccessibility_Personal" xml:space="preserve">
+    <value>Personali toitlustus</value>
+  </data>
+  <data name="MenuAccessibility_Stationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Kehtetu sooduskood</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>metatoode</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>jaanuaril,veebruaril,märtsil,aprillil,mail,juunil,juulil,augustil,septembril,oktoobril,novembril,detsembril</value>
+  </data>
+  <data name="Nonfood" xml:space="preserve">
+    <value>mittesöödav</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Ainuld puhkepäevad</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Ainud argipäevad</value>
+  </data>
+  <data name="PackagingScheme" xml:space="preserve">
+    <value>Pakendamine</value>
+  </data>
+  <data name="PersonalMenu" xml:space="preserve">
+    <value>Menüü personali jaoks</value>
+  </data>
+  <data name="PizzaScheme" xml:space="preserve">
+    <value>Skeem pizzade jaoks</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Kingitus</value>
+  </data>
+  <data name="PriorityHigh" xml:space="preserve">
+    <value>Kõrge</value>
+  </data>
+  <data name="PriorityLow" xml:space="preserve">
+    <value>Madal</value>
+  </data>
+  <data name="PriorityMedium" xml:space="preserve">
+    <value>Keskmine</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>toode</value>
+  </data>
+  <data name="ProductMenuSalesTimeArroundClock" xml:space="preserve">
+    <value>ööpäevaringselt</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Sooduskood</value>
+  </data>
+  <data name="RestaurantMenu" xml:space="preserve">
+    <value>Restorani menüü</value>
+  </data>
+  <data name="SalePeriodEmpty" xml:space="preserve">
+    <value>puudub</value>
+  </data>
+  <data name="SandwichScheme" xml:space="preserve">
+    <value>Skeem võileibade jaoks</value>
+  </data>
+  <data name="SimpleScheme" xml:space="preserve">
+    <value>Skeem ilma tootmiseta</value>
+  </data>
+  <data name="SmallPizzas" xml:space="preserve">
+    <value>Väiksed pitsad</value>
+  </data>
+  <data name="SnacksScheme" xml:space="preserve">
+    <value>Skeem suupistete jaoks</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Mitte kõikide valitud toodete puhul on näidatud hind.</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>Õ</value>
+  </data>
+  <data name="TypeBaked" xml:space="preserve">
+    <value>Küpsetised</value>
+  </data>
+  <data name="TypeComposite" xml:space="preserve">
+    <value>Liit-</value>
+  </data>
+  <data name="TypeSimple" xml:space="preserve">
+    <value>Tavaline</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="WithoutSpecialization" xml:space="preserve">
+    <value>Ilma iseärasusteta</value>
+  </data>
+</root>

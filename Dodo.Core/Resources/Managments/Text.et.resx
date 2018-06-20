@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AgePizzeriaBetweenOneAndTwoYears" xml:space="preserve">
+    <value>Alates 1 kuni 2 aastat</value>
+  </data>
+  <data name="AgePizzeriaBetweenTwoAndThreeYears" xml:space="preserve">
+    <value>Alates 2 kuni 3 aastat</value>
+  </data>
+  <data name="AgePizzeriaLessThanYear" xml:space="preserve">
+    <value>Vähem kui aasta</value>
+  </data>
+  <data name="AgePizzeriaMoreThanXYears" xml:space="preserve">
+    <value>Rohkem kui {0} aastat</value>
+  </data>
+  <data name="AgePizzeriaMoreThanYear" xml:space="preserve">
+    <value>Rokhem kui aasta</value>
+  </data>
+  <data name="AgePizzeriaMoreThreeYears" xml:space="preserve">
+    <value>Üle 3 aasta</value>
+  </data>
+  <data name="AgePizzeriaUnknow" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="BasicUnitOfMeasure" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="CalculateSalesTax" xml:space="preserve">
+    <value>Müügimaksu välja arvutamine </value>
+  </data>
+  <data name="CalculateTax" xml:space="preserve">
+    <value>Käibemaksu välja arvutamine </value>
+  </data>
+  <data name="CashBox" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="CashBoxIsWorking" xml:space="preserve">
+    <value>On olemas lõpetamata kassasessioon. Enne kustutamist on vaja lõpetada sessiooni.</value>
+  </data>
+  <data name="ContainerSize" xml:space="preserve">
+    <value>Taara suurus</value>
+  </data>
+  <data name="DontCalculateSalesTax" xml:space="preserve">
+    <value>Mitte arvutada välja müügimaksu</value>
+  </data>
+  <data name="DontCalculateTax" xml:space="preserve">
+    <value>Mitte arvutada välja käibemaksu</value>
+  </data>
+  <data name="DryWeight" xml:space="preserve">
+    <value>Kuivkaal</value>
+  </data>
+  <data name="ErrorMessage_ValidatePreparationBadTimeValue" xml:space="preserve">
+    <value>Halb valmistamisaeg peab olema hea omast suurem</value>
+  </data>
+  <data name="Error_OnlyJpgImages" xml:space="preserve">
+    <value>Pildid ainult jpg {0}x{1}</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>Väli {0} on täitmiseks kohustuslik</value>
+  </data>
+  <data name="FieldMustBePositive" xml:space="preserve">
+    <value>Välja {0} väärtus peab olema positiivne</value>
+  </data>
+  <data name="ForNowShort" xml:space="preserve">
+    <value>p.a.</value>
+  </data>
+  <data name="HolidayCreated" xml:space="preserve">
+    <value>Lisatud uus peopäev</value>
+  </data>
+  <data name="HolidayEdited" xml:space="preserve">
+    <value>Peopäev muudetud</value>
+  </data>
+  <data name="HolidayRemoved" xml:space="preserve">
+    <value>Lisatud uus peopäev</value>
+  </data>
+  <data name="HolidaysCannotIntersects" xml:space="preserve">
+    <value>Peopäeva ei saa salvestada, kuna selle aeg ühtib teiste peopäevadega</value>
+  </data>
+  <data name="Message_ErrorRequiredOrganization" xml:space="preserve">
+    <value>Organisatsiooni pole valitud</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="OperationalStatisticsStopSaleInformation" xml:space="preserve">
+    <value>{0}, alates {1} kuni {2}, {3}</value>
+  </data>
+  <data name="OrganizationTypeAB" xml:space="preserve">
+    <value>Aktsiaselts</value>
+  </data>
+  <data name="OrganizationTypeABShort" xml:space="preserve">
+    <value>AB</value>
+  </data>
+  <data name="OrganizationTypeAO" xml:space="preserve">
+    <value>Aktsiaselts</value>
+  </data>
+  <data name="OrganizationTypeAOShort" xml:space="preserve">
+    <value>AS</value>
+  </data>
+  <data name="OrganizationTypeAS" xml:space="preserve">
+    <value>Aktsiaselts</value>
+  </data>
+  <data name="OrganizationTypeASShort" xml:space="preserve">
+    <value>AS </value>
+  </data>
+  <data name="OrganizationTypeCHF" xml:space="preserve">
+    <value>Eraettevõte</value>
+  </data>
+  <data name="OrganizationTypeCHFShort" xml:space="preserve">
+    <value>CHF</value>
+  </data>
+  <data name="OrganizationTypeCHP" xml:space="preserve">
+    <value>Eraettevõtja</value>
+  </data>
+  <data name="OrganizationTypeCHPShort" xml:space="preserve">
+    <value>CHP</value>
+  </data>
+  <data name="OrganizationTypeCorp" xml:space="preserve">
+    <value>Corporation</value>
+  </data>
+  <data name="OrganizationTypeCorpShort" xml:space="preserve">
+    <value>Corp.</value>
+  </data>
+  <data name="OrganizationTypeFIE" xml:space="preserve">
+    <value>Füüsiline isik ettevõtja</value>
+  </data>
+  <data name="OrganizationTypeFIEShort" xml:space="preserve">
+    <value>FIE </value>
+  </data>
+  <data name="OrganizationTypeII" xml:space="preserve">
+    <value>Persoana fizica autorizata</value>
+  </data>
+  <data name="OrganizationTypeIIShort" xml:space="preserve">
+    <value>Interprindere individuala</value>
+  </data>
+  <data name="OrganizationTypeIL" xml:space="preserve">
+    <value>Füüsilisest isikust ettevõtja</value>
+  </data>
+  <data name="OrganizationTypeILShort" xml:space="preserve">
+    <value>IĮ</value>
+  </data>
+  <data name="OrganizationTypeInc" xml:space="preserve">
+    <value>Incorporated</value>
+  </data>
+  <data name="OrganizationTypeIncShort" xml:space="preserve">
+    <value>Inc.</value>
+  </data>
+  <data name="OrganizationTypeMB" xml:space="preserve">
+    <value>Väikeettevõte</value>
+  </data>
+  <data name="OrganizationTypeMBShort" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="OrganizationTypeOsOOShort" xml:space="preserve">
+    <value>ОсОО</value>
+  </data>
+  <data name="OrganizationTypeOU" xml:space="preserve">
+    <value>Osaühing</value>
+  </data>
+  <data name="OrganizationTypeOUShort" xml:space="preserve">
+    <value>OÜ </value>
+  </data>
+  <data name="OrganizationTypePLC" xml:space="preserve">
+    <value>Avatud kampaania piiratud vastutusega</value>
+  </data>
+  <data name="OrganizationTypeSA" xml:space="preserve">
+    <value>Societate pe Actiuni</value>
+  </data>
+  <data name="OrganizationTypeSAShort" xml:space="preserve">
+    <value>SA</value>
+  </data>
+  <data name="OrganizationTypeSRL" xml:space="preserve">
+    <value>Societate cu Raspundere LImitata</value>
+  </data>
+  <data name="OrganizationTypeSRLShort" xml:space="preserve">
+    <value>SRL</value>
+  </data>
+  <data name="OrganizationTypeTOO" xml:space="preserve">
+    <value>Piiratud vastutusega Osaühing </value>
+  </data>
+  <data name="OrganizationTypeTOOShort" xml:space="preserve">
+    <value>OÜ</value>
+  </data>
+  <data name="OrganizationTypeUAB" xml:space="preserve">
+    <value>Piiratud vastutusega Aktsiaselts</value>
+  </data>
+  <data name="OrganizationTypeUABShort" xml:space="preserve">
+    <value>UAB</value>
+  </data>
+  <data name="OrganizationType_IPFull" xml:space="preserve">
+    <value>Füüsilisest isikust ettevõtja</value>
+  </data>
+  <data name="OrganizationType_IPShort" xml:space="preserve">
+    <value>FIE</value>
+  </data>
+  <data name="OrganizationType_OAOFull" xml:space="preserve">
+    <value>Avatud aktsiaselts</value>
+  </data>
+  <data name="OrganizationType_OAOShort" xml:space="preserve">
+    <value>AS</value>
+  </data>
+  <data name="OrganizationType_OOOFull" xml:space="preserve">
+    <value>Piiratud vastutusega äriühing</value>
+  </data>
+  <data name="OrganizationType_OOOShort" xml:space="preserve">
+    <value>OÜ</value>
+  </data>
+  <data name="OrganizationType_ZAOFull" xml:space="preserve">
+    <value>Piiratud vastutusega Aktsiaselts</value>
+  </data>
+  <data name="OrganizationType_ZAOShort" xml:space="preserve">
+    <value>AS</value>
+  </data>
+  <data name="PizzaType_Country" xml:space="preserve">
+    <value>Riik </value>
+  </data>
+  <data name="PizzaType_DoughType" xml:space="preserve">
+    <value>Testi tüüp</value>
+  </data>
+  <data name="PizzaType_Name" xml:space="preserve">
+    <value>Nimetus</value>
+  </data>
+  <data name="PizzaType_Size" xml:space="preserve">
+    <value>Suurus</value>
+  </data>
+  <data name="ProviderConfig_Key" xml:space="preserve">
+    <value>Võti</value>
+  </data>
+  <data name="ProviderConfig_Login" xml:space="preserve">
+    <value>Kasutajanimi</value>
+  </data>
+  <data name="ProviderConfig_Pass" xml:space="preserve">
+    <value>Parool</value>
+  </data>
+  <data name="ProviderConfig_Priority" xml:space="preserve">
+    <value>Prioriteet</value>
+  </data>
+  <data name="ProviderConfig_Provider" xml:space="preserve">
+    <value>Teenusepakkuja</value>
+  </data>
+  <data name="ProviderConfig_Sender" xml:space="preserve">
+    <value>Saatja</value>
+  </data>
+  <data name="ProviderConfig_UniqueViolation" xml:space="preserve">
+    <value>Riigil {0} juba on teenusepakkuja prioriteediga {1}</value>
+  </data>
+  <data name="SocialNetwork_Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="SocialNetwork_Instagram" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="SocialNetwork_Kroogi" xml:space="preserve">
+    <value>Kroogi</value>
+  </data>
+  <data name="SocialNetwork_MoyMir" xml:space="preserve">
+    <value>Мой Мир</value>
+  </data>
+  <data name="SocialNetwork_Odnoklassniki" xml:space="preserve">
+    <value>Одноклассники</value>
+  </data>
+  <data name="SocialNetwork_Renren" xml:space="preserve">
+    <value>Renren</value>
+  </data>
+  <data name="SocialNetwork_Twitter" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="SocialNetwork_Vkontakte" xml:space="preserve">
+    <value>Vkontakte</value>
+  </data>
+  <data name="SocialNetwork_WeChat" xml:space="preserve">
+    <value>WeChat</value>
+  </data>
+  <data name="SocialNetwork_Weibo" xml:space="preserve">
+    <value>Weibo</value>
+  </data>
+  <data name="SocialNetwork_Youtube" xml:space="preserve">
+    <value>Youtube</value>
+  </data>
+  <data name="StopList_DeliverySectorIsStopped" xml:space="preserve">
+    <value>Sektor on juba stop-listi lisatud</value>
+  </data>
+  <data name="StopList_DeliveryStreetIsStopped" xml:space="preserve">
+    <value>Tänav on juba stop-listi lisatud</value>
+  </data>
+  <data name="StopSaleFull" xml:space="preserve">
+    <value>Täielik seisak</value>
+  </data>
+  <data name="StopSaleWithRedirect" xml:space="preserve">
+    <value>Ümbersuunamine</value>
+  </data>
+  <data name="TaxRateFormat" xml:space="preserve">
+    <value>{0} {1}%</value>
+  </data>
+  <data name="ValidationLength12OnlyDigit" xml:space="preserve">
+    <value>Väärtus peab olema tühi või sisaldama 12 numbrit</value>
+  </data>
+  <data name="ValidationRequired" xml:space="preserve">
+    <value>Peab olema täidetud</value>
+  </data>
+  <data name="ValidationValueIncorrectly" xml:space="preserve">
+    <value>Väärtus on sisestatud ebakorrektselt</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Jah</value>
+  </data>
+</root>

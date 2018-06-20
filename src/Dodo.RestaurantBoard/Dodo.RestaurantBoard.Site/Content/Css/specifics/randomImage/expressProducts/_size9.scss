@@ -1,0 +1,24 @@
+﻿.size9 .ready_express_product {
+	.product_name {
+		font-size: 1em;
+	}
+
+	.product_number {
+		font-size: 1.2em;
+	}
+
+	.product_time, .product_status {
+		font-size: 0.8em;
+		bottom: 7%;
+	}
+
+	.hero_people {
+		bottom: -10px;
+		right: 20px;
+
+		img {
+			width: 35%;
+			height: auto;
+		}
+	}
+}

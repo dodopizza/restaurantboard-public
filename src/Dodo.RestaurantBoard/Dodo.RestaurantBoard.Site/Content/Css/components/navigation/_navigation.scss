@@ -1,0 +1,54 @@
+﻿// Structure
+
+@mixin navigation($selector, $defaultSkin: true) {
+	#{$selector} {
+		display: table;
+		margin: 0;
+		padding: 0;
+	}
+
+		#{$selector}_item {
+			float: left;
+			padding: 0;
+			display: table-cell;
+			margin-right: 10px;
+
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+
+		#{$selector}_link {
+			position: relative;
+			display: block;
+			float: left;
+			width: 100%;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+
+	@if $defaultSkin != false {
+		@include navigation-skin-default($selector);
+	}
+}
+
+
+// Default skin
+
+@mixin navigation-skin-default($selector) {
+	#{$selector} {
+		font-size: 0;
+	}
+
+		#{$selector}_item {
+		}
+
+		#{$selector}_link {
+			padding: 6px 10px;
+			font-size: 14px;
+			border: 1px solid #999;
+			@include rounded(3px);
+		}
+}

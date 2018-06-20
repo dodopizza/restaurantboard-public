@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accountant" xml:space="preserve">
+    <value>Accountant</value>
+  </data>
+  <data name="AllPizzerias" xml:space="preserve">
+    <value>All stores</value>
+  </data>
+  <data name="AllReasons" xml:space="preserve">
+    <value>All reasons</value>
+  </data>
+  <data name="BonusAccruedByFriends" xml:space="preserve">
+    <value>For inviting friends</value>
+  </data>
+  <data name="BonusAccruedTitle" xml:space="preserve">
+    <value>Dodo rubles deposited</value>
+  </data>
+  <data name="BonusAll" xml:space="preserve">
+    <value>In total</value>
+  </data>
+  <data name="BonusPercentage" xml:space="preserve">
+    <value>% of orders</value>
+  </data>
+  <data name="BonusPercentageFromFriends" xml:space="preserve">
+    <value>Proportion out of friends' orders, %</value>
+  </data>
+  <data name="BonusSpentPercentage" xml:space="preserve">
+    <value>Share of spent Dodo rubles in revenue, %</value>
+  </data>
+  <data name="BonusSpentTitle" xml:space="preserve">
+    <value>Dodo rubles spent</value>
+  </data>
+  <data name="CashBoxModel_Citizen" xml:space="preserve">
+    <value>Citizen CT-S310II</value>
+  </data>
+  <data name="Cashier" xml:space="preserve">
+    <value>Restaurant cashier</value>
+  </data>
+  <data name="ClientTreatment_Name" xml:space="preserve">
+    <value>by name</value>
+  </data>
+  <data name="ClientTreatment_RandomImage" xml:space="preserve">
+    <value>random image</value>
+  </data>
+  <data name="Consumption" xml:space="preserve">
+    <value>Consumption</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="CourierMotivationScreen" xml:space="preserve">
+    <value>Drivers' motivation board</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>Past expiration date</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>Human error</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>Damaged packaging</value>
+  </data>
+  <data name="DeliveryCashier" xml:space="preserve">
+    <value>Delivery cashier</value>
+  </data>
+  <data name="DepartmentAdmin" xml:space="preserve">
+    <value>Division administrator</value>
+  </data>
+  <data name="DodoControl" xml:space="preserve">
+    <value>Dodo Controlling</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="EmployeesOnShiftScreen" xml:space="preserve">
+    <value>Staff board</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Incorrect price. Must be a multiple of 100.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Incorrect price. Must be an integer.</value>
+  </data>
+  <data name="ExpressProductsScreen" xml:space="preserve">
+    <value>Express products</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>Federal</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>For all units</value>
+  </data>
+  <data name="FranchiseeOfficeManager" xml:space="preserve">
+    <value>Central manager of the office-franchisee</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Incoming</value>
+  </data>
+  <data name="IndexValue" xml:space="preserve">
+    <value>Indicator</value>
+  </data>
+  <data name="InvestorOfficeManager" xml:space="preserve">
+    <value>Manager of the office - investor</value>
+  </data>
+  <data name="KitchenMotivationScreen" xml:space="preserve">
+    <value>Kitchen motivation board</value>
+  </data>
+  <data name="LoginNotCorrect" xml:space="preserve">
+    <value>Login can consist only of Latin characters, numbers, symbols, underscore and period.</value>
+  </data>
+  <data name="LoginNotRequired" xml:space="preserve">
+    <value>Login can't be empty</value>
+  </data>
+  <data name="LoginTooLong" xml:space="preserve">
+    <value>Login can't be over 50 characters</value>
+  </data>
+  <data name="LoyaltyManager" xml:space="preserve">
+    <value>Loyalty program manager</value>
+  </data>
+  <data name="MysteryShopperManager" xml:space="preserve">
+    <value>SB management</value>
+  </data>
+  <data name="NewClients" xml:space="preserve">
+    <value>New customers</value>
+  </data>
+  <data name="NewClientsByLoyaltyTotalCount" xml:space="preserve">
+    <value>Customers attracted through loyalty program</value>
+  </data>
+  <data name="NewClientsTotalCount" xml:space="preserve">
+    <value>New customers</value>
+  </data>
+  <data name="OfficeManager" xml:space="preserve">
+    <value>Manager of the office</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="PasswordNotRequired" xml:space="preserve">
+    <value>Password can't be empty</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Passwords don't match</value>
+  </data>
+  <data name="PasswordTooLong" xml:space="preserve">
+    <value>Password can't be over 100 characters</value>
+  </data>
+  <data name="Pizzamaker" xml:space="preserve">
+    <value>Pizzamaker</value>
+  </data>
+  <data name="PublicCaption" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="PublicPages" xml:space="preserve">
+    <value>Public screens</value>
+  </data>
+  <data name="Report_MaterialDebiting" xml:space="preserve">
+    <value>Write-off</value>
+  </data>
+  <data name="RestaurantScreen" xml:space="preserve">
+    <value>Restaurant board</value>
+  </data>
+  <data name="RevenueNewClientsByLoyaltyTotal" xml:space="preserve">
+    <value>Sales from new customers attracted via loyalty program</value>
+  </data>
+  <data name="RevisionAt" xml:space="preserve">
+    <value>Inventory on {0}</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Inventory staff</value>
+  </data>
+  <data name="RootAdmin" xml:space="preserve">
+    <value>Central administrator</value>
+  </data>
+  <data name="RootOfficeManager" xml:space="preserve">
+    <value>Central manager of the office</value>
+  </data>
+  <data name="RootOperator" xml:space="preserve">
+    <value>Central operator</value>
+  </data>
+  <data name="ShiftManager" xml:space="preserve">
+    <value>Shift supervisor</value>
+  </data>
+  <data name="ShopWindowItemsScreen" xml:space="preserve">
+    <value>Front counter display</value>
+  </data>
+  <data name="StartBonus" xml:space="preserve">
+    <value>Starting bonus</value>
+  </data>
+  <data name="TakenLosses" xml:space="preserve">
+    <value>Registered losses</value>
+  </data>
+  <data name="Title_LossesAndExceesReport" xml:space="preserve">
+    <value>Unregistered losses</value>
+  </data>
+  <data name="Title_LoyaltyReport" xml:space="preserve">
+    <value>Loyalty program</value>
+  </data>
+  <data name="TrackingManager" xml:space="preserve">
+    <value>Tracking</value>
+  </data>
+  <data name="TrackingManagerOnColdAssemblyTable" xml:space="preserve">
+    <value>Tracking - Snacks</value>
+  </data>
+  <data name="TrackingManagerOnDoughTable" xml:space="preserve">
+    <value>Tracking - Dough</value>
+  </data>
+  <data name="TrackingManagerOnHotAssemblyTable" xml:space="preserve">
+    <value>Tracking - Line</value>
+  </data>
+  <data name="TrackingManagerOnOrdersToDelivery" xml:space="preserve">
+    <value>Tracking - Drivers</value>
+  </data>
+  <data name="TrackingManagerOnOrdersToStationary" xml:space="preserve">
+    <value>Tracking - Restaurant</value>
+  </data>
+  <data name="TrackingManagerOnPackingTable" xml:space="preserve">
+    <value>Tracking - Packaging</value>
+  </data>
+  <data name="TrackingManagerOnSliceDebiting" xml:space="preserve">
+    <value>Tracking - Write-off slices</value>
+  </data>
+  <data name="TvBoard" xml:space="preserve">
+    <value>Menu boards</value>
+  </data>
+  <data name="UnitateAdmin" xml:space="preserve">
+    <value>Division administrator</value>
+  </data>
+  <data name="UserRoleNotExist" xml:space="preserve">
+    <value>Role not selected</value>
+  </data>
+  <data name="UserUnitNotRequired" xml:space="preserve">
+    <value>Unit not selected</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="YandexTransactionManager" xml:space="preserve">
+    <value>Transaction Ya.Money manager</value>
+  </data>
+  <data name="TrackingManagerOnOvenTable" xml:space="preserve">
+    <value>Tracking - Oven</value>
+  </data>
+</root>

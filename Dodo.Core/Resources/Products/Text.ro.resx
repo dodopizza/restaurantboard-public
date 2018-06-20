@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Activ</value>
+  </data>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Activa</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Activa</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Pasiva</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Pasiva</value>
+  </data>
+  <data name="AdvancePreparationScheme" xml:space="preserve">
+    <value>Preparare in avans</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>Toate zilele</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automat</value>
+  </data>
+  <data name="CashZonePreparationScheme" xml:space="preserve">
+    <value>Preparare in zona casieriei</value>
+  </data>
+  <data name="CategoryDesserts" xml:space="preserve">
+    <value>Deserturi</value>
+  </data>
+  <data name="CategoryDrinks" xml:space="preserve">
+    <value>Bauturi</value>
+  </data>
+  <data name="CategoryGoods" xml:space="preserve">
+    <value>Mărfuri</value>
+  </data>
+  <data name="CategoryPieces" xml:space="preserve">
+    <value>Felii</value>
+  </data>
+  <data name="CategoryPizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="CategorySauces" xml:space="preserve">
+    <value>Sosuri</value>
+  </data>
+  <data name="CategorySnacks" xml:space="preserve">
+    <value>Gustari</value>
+  </data>
+  <data name="Combo" xml:space="preserve">
+    <value>combo</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Blue" xml:space="preserve">
+    <value>Albastru (lapte dulce)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_DarkGray" xml:space="preserve">
+    <value>Gri inchis (ranch)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Green" xml:space="preserve">
+    <value>Verde (curry)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Purple" xml:space="preserve">
+    <value>Violet (usturoi)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Red" xml:space="preserve">
+    <value>Rosu (rosii)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_White" xml:space="preserve">
+    <value>Alb (Alfredo)</value>
+  </data>
+  <data name="Constructor_SauceColorBase_Yellow" xml:space="preserve">
+    <value>Galben (cascaval)</value>
+  </data>
+  <data name="Constructor_SauceUnknown" xml:space="preserve">
+    <value>Fara sos</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Livrare si restaurant</value>
+  </data>
+  <data name="DeliveryMenu" xml:space="preserve">
+    <value>Meniu livrare</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Reducere</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Se executa trimiterea</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Asteptare</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Terminat</value>
+  </data>
+  <data name="ErrorMessage_DiscountPriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Campul “Pret cu reducere” trebuie sa contina maxim 10 caractere</value>
+  </data>
+  <data name="ErrorMessage_PriceMustBePositive" xml:space="preserve">
+    <value>Pretul nu poate fi mai mic de 0</value>
+  </data>
+  <data name="ErrorMessage_PriceValueHasInvalidValue" xml:space="preserve">
+    <value>Campul “Pret” contine o valoare invalida</value>
+  </data>
+  <data name="ErrorMessage_PriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Campul “Pret” trebuie sa contina maxim 10 caractere</value>
+  </data>
+  <data name="ErrorMessage_PriceValueRequired" xml:space="preserve">
+    <value>Campul “Pret” trebuie sa fie completat</value>
+  </data>
+  <data name="Error_EmptyDimensionalCharacteristics" xml:space="preserve">
+    <value>Nu este setata caracteristica dimensionala</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Pret incorect. Trebuie sa fie multiplu de 100.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Pret incorect. Trebuie sa fie multiplu de 1.</value>
+  </data>
+  <data name="Error_Number" xml:space="preserve">
+    <value>Cantitate incorecta</value>
+  </data>
+  <data name="Error_SalePeriod_EndDateLessThanStartDate" xml:space="preserve">
+    <value>Data finalizarii vanzarilor nu poate fi mai mica decat data de inceput</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotBeInThePast" xml:space="preserve">
+    <value>Imposibil de setat data vanzarilor in trecut</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotChange" xml:space="preserve">
+    <value>Se poate modifica doar data viitoare a inceputului vanzarilor</value>
+  </data>
+  <data name="Error_TooLongDimensionalCharacteristics" xml:space="preserve">
+    <value>Denumire caracteristica dimensionala prea lunga</value>
+  </data>
+  <data name="European" xml:space="preserve">
+    <value>European</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>Suma comenzii ({0}) este mai mica decat dododolari ({1}) cheltuiti.</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>alimentar</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Recomandari</value>
+  </data>
+  <data name="Halal" xml:space="preserve">
+    <value>Meniu halal</value>
+  </data>
+  <data name="HalfHalal" xml:space="preserve">
+    <value>Meniu semi-halal</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactiv</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingrediente</value>
+  </data>
+  <data name="MenuAccessibility_Delivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="MenuAccessibility_Personal" xml:space="preserve">
+    <value>Masa personal</value>
+  </data>
+  <data name="MenuAccessibility_Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Promocodul nu este valabil</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>metaprodus</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>ianuarie,februarie,martie,aprilie,mai,iunie,iulie,august,septembrie,octombrie,noiembrie,decembrie</value>
+  </data>
+  <data name="Nonfood" xml:space="preserve">
+    <value>nealimentar</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Numai zilele de odihna</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Numai zilele saptamanii</value>
+  </data>
+  <data name="PackagingScheme" xml:space="preserve">
+    <value>Ambalare</value>
+  </data>
+  <data name="PersonalMenu" xml:space="preserve">
+    <value>Meniu pentru personal</value>
+  </data>
+  <data name="PizzaScheme" xml:space="preserve">
+    <value>Schema pentru pizze</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Cadou</value>
+  </data>
+  <data name="PriorityHigh" xml:space="preserve">
+    <value>Ridicata</value>
+  </data>
+  <data name="PriorityLow" xml:space="preserve">
+    <value>Scazuta</value>
+  </data>
+  <data name="PriorityMedium" xml:space="preserve">
+    <value>Medie</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>produs</value>
+  </data>
+  <data name="ProductMenuSalesTimeArroundClock" xml:space="preserve">
+    <value>Non-stop</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Promocod</value>
+  </data>
+  <data name="RestaurantMenu" xml:space="preserve">
+    <value>Meniu restaurant</value>
+  </data>
+  <data name="SalePeriodEmpty" xml:space="preserve">
+    <value>lipseste</value>
+  </data>
+  <data name="SandwichScheme" xml:space="preserve">
+    <value>Schema pentru sandvich-uri</value>
+  </data>
+  <data name="SimpleScheme" xml:space="preserve">
+    <value>Fara schema de productie</value>
+  </data>
+  <data name="SnacksScheme" xml:space="preserve">
+    <value>Schema pentru gustari</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Nu este indicat pretul pentru toate produsele selectate.</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="TypeBaked" xml:space="preserve">
+    <value>Produse coapte</value>
+  </data>
+  <data name="TypeComposite" xml:space="preserve">
+    <value>Compozit</value>
+  </data>
+  <data name="TypeSimple" xml:space="preserve">
+    <value>Simplu</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nedefinit</value>
+  </data>
+  <data name="WithoutSpecialization" xml:space="preserve">
+    <value>Fara particularitati</value>
+  </data>
+  <data name="SmallPizzas" xml:space="preserve">
+    <value>Pizze mici</value>
+  </data>
+  <data name="MediumPizzas" xml:space="preserve">
+    <value>Pizze medii</value>
+  </data>
+  <data name="BigPizzas" xml:space="preserve">
+    <value>Pizze mari</value>
+  </data>
+</root>

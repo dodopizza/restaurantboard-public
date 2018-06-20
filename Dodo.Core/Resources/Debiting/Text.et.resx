@@ -1,0 +1,3408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Võtta vastu</value>
+  </data>
+  <data name="AccountingPacking" xml:space="preserve">
+    <value>Taara arvestuseks</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>Tegevus</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiivsed</value>
+  </data>
+  <data name="AddDebiting" xml:space="preserve">
+    <value>Lisada mahakandmine</value>
+  </data>
+  <data name="AddPeriod" xml:space="preserve">
+    <value>Lisada periood</value>
+  </data>
+  <data name="AddPositionMessage" xml:space="preserve">
+    <value>Selleks, et valida positsioon, sisestage nimetus</value>
+  </data>
+  <data name="AddTransfer" xml:space="preserve">
+    <value>Lisa liikumine</value>
+  </data>
+  <data name="Adoption" xml:space="preserve">
+    <value>Vastuvõtmine</value>
+  </data>
+  <data name="Aim" xml:space="preserve">
+    <value>Eesmärk</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>Kõik</value>
+  </data>
+  <data name="AllSuppliersText" xml:space="preserve">
+    <value>Kõik tarnijad</value>
+  </data>
+  <data name="AllUnitsText" xml:space="preserve">
+    <value>Kõik pitsarestoranid</value>
+  </data>
+  <data name="AlphabetFirstLetter" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="AlphabetLastLetter" xml:space="preserve">
+    <value>Mina</value>
+  </data>
+  <data name="ApplicantCardAddedLabel" xml:space="preserve">
+    <value>Saabumise kuupäev</value>
+  </data>
+  <data name="ApplicantCardAddressLabel" xml:space="preserve">
+    <value>Aadress</value>
+  </data>
+  <data name="ApplicantCardAgainLabel" xml:space="preserve">
+    <value>koduvalt</value>
+  </data>
+  <data name="ApplicantCardAnswerLabel" xml:space="preserve">
+    <value>Vasta</value>
+  </data>
+  <data name="ApplicantCardCommentLabel" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="ApplicantCardCommentPlaceholder" xml:space="preserve">
+    <value>Kommentaar on kohustuslik</value>
+  </data>
+  <data name="ApplicantCardDuplicatesLabel" xml:space="preserve">
+    <value>Dublikaadid</value>
+  </data>
+  <data name="ApplicantCardFioLabel" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="ApplicantCardHasChildrenLabel" xml:space="preserve">
+    <value>Lapsed</value>
+  </data>
+  <data name="ApplicantCardHeader" xml:space="preserve">
+    <value>Töökandidaadi ankeet</value>
+  </data>
+  <data name="ApplicantCardHistoryLabel" xml:space="preserve">
+    <value>Ajalugu</value>
+  </data>
+  <data name="ApplicantCardHobbyLabel" xml:space="preserve">
+    <value>Hobid</value>
+  </data>
+  <data name="ApplicantCardInputCommentText" xml:space="preserve">
+    <value>Sisestage kommentaar</value>
+  </data>
+  <data name="ApplicantCardLastHistoryLabel" xml:space="preserve">
+    <value>Viimased {0} toimingud ankeedis</value>
+  </data>
+  <data name="ApplicantCardLink" xml:space="preserve">
+    <value>Ankeet </value>
+  </data>
+  <data name="ApplicantCardMedicalBookLabel" xml:space="preserve">
+    <value>Med. raamat kuni</value>
+  </data>
+  <data name="ApplicantCardOpenDuplicateLabel" xml:space="preserve">
+    <value>Vaata</value>
+  </data>
+  <data name="ApplicantCardPersonalInfoLabel" xml:space="preserve">
+    <value>Isiklik informatsioon</value>
+  </data>
+  <data name="ApplicantCardPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ApplicantCardShiftsLabel" xml:space="preserve">
+    <value>Vahetused</value>
+  </data>
+  <data name="ApplicantCardSmokingLabel" xml:space="preserve">
+    <value>Suitsetamine</value>
+  </data>
+  <data name="ApplicantCardSourceDescriptionLabel" xml:space="preserve">
+    <value>Allikas (liskairjeldus)</value>
+  </data>
+  <data name="ApplicantCardSourceLabel" xml:space="preserve">
+    <value>Allikas</value>
+  </data>
+  <data name="ApplicantCardStatusLabel" xml:space="preserve">
+    <value>Vastuse variant</value>
+  </data>
+  <data name="ApplicantCardTimeLabel" xml:space="preserve">
+    <value>Millal</value>
+  </data>
+  <data name="ApplicantCardTypeLabel" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="ApplicantCardUnitLabel" xml:space="preserve">
+    <value>Pitsarestoran </value>
+  </data>
+  <data name="ApplicantCardWhenLabel" xml:space="preserve">
+    <value>Millal</value>
+  </data>
+  <data name="ApplicantCardWorkExperienceLabel" xml:space="preserve">
+    <value>Töökogemus</value>
+  </data>
+  <data name="ApplicantCardWorkInfoLabel" xml:space="preserve">
+    <value>Tööinfo</value>
+  </data>
+  <data name="ApplicantFormAddressLabel" xml:space="preserve">
+    <value>Elukoha aadress</value>
+  </data>
+  <data name="ApplicantFormBirthdayLabel" xml:space="preserve">
+    <value>Sünnikuupäev</value>
+  </data>
+  <data name="ApplicantFormFirstNameLabel" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="ApplicantFormHasChildrenLabel" xml:space="preserve">
+    <value>On lapsi?</value>
+  </data>
+  <data name="ApplicantFormHeader" xml:space="preserve">
+    <value>Ankeedi loomine</value>
+  </data>
+  <data name="ApplicantFormHint" xml:space="preserve">
+    <value>Tärniga väli (*) on kohustuslik</value>
+  </data>
+  <data name="ApplicantFormHobby" xml:space="preserve">
+    <value>Hobid</value>
+  </data>
+  <data name="ApplicantFormHobbyPlaceholder" xml:space="preserve">
+    <value>Rääkige meile oma huvidest</value>
+  </data>
+  <data name="ApplicantFormLastNameLabel" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="ApplicantFormMedicalBookLabel" xml:space="preserve">
+    <value>On olemas kehtiv tervisetõend?</value>
+  </data>
+  <data name="ApplicantFormPersonalInfoLabel" xml:space="preserve">
+    <value>Isiklik informatsioon</value>
+  </data>
+  <data name="ApplicantFormPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ApplicantFormPleaseSelect" xml:space="preserve">
+    <value>Valida ...</value>
+  </data>
+  <data name="ApplicantFormShiftLabel" xml:space="preserve">
+    <value>Tööaeg</value>
+  </data>
+  <data name="ApplicantFormSmokingLabel" xml:space="preserve">
+    <value>Suitsetamine?</value>
+  </data>
+  <data name="ApplicantFormSourceLabel" xml:space="preserve">
+    <value>Dodo Pizza'st sain teada</value>
+  </data>
+  <data name="ApplicantFormTypeLabel" xml:space="preserve">
+    <value>Tahan töötada</value>
+  </data>
+  <data name="ApplicantFormUnitLabel" xml:space="preserve">
+    <value>Pitsarestoran </value>
+  </data>
+  <data name="ApplicantFormWorkExperience" xml:space="preserve">
+    <value>Töökogemus</value>
+  </data>
+  <data name="ApplicantFormWorkExperiencePlaceholder" xml:space="preserve">
+    <value>Kui teil on juba töökogemus, rääkige sellest meile.</value>
+  </data>
+  <data name="ApplicantFormWorkInfoLabel" xml:space="preserve">
+    <value>Tööinfo</value>
+  </data>
+  <data name="ApplicantInboxStatusLabel" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="ApplicantInboxUnitColumn" xml:space="preserve">
+    <value>Pitsarestoran </value>
+  </data>
+  <data name="ApplicantInboxVacanciesLabel" xml:space="preserve">
+    <value>Töökohad</value>
+  </data>
+  <data name="ApplicantsInboxActualVacanciesLabel" xml:space="preserve">
+    <value>Aktuaalseid töökohti</value>
+  </data>
+  <data name="ApplicantsInboxAddedDateColumn" xml:space="preserve">
+    <value>Saabus</value>
+  </data>
+  <data name="ApplicantsInboxAgainLabel" xml:space="preserve">
+    <value>Korduvalt</value>
+  </data>
+  <data name="ApplicantsInboxAgeColumn" xml:space="preserve">
+    <value>Vanus</value>
+  </data>
+  <data name="ApplicantsInboxAllStatusesText" xml:space="preserve">
+    <value>Kõik staatused</value>
+  </data>
+  <data name="ApplicantsInboxAllTypesText" xml:space="preserve">
+    <value>Kõik töökohad</value>
+  </data>
+  <data name="ApplicantsInboxAnswerAvgTimeLabel" xml:space="preserve">
+    <value>Vastuse keskmine kiirus</value>
+  </data>
+  <data name="ApplicantsInboxCallTab" xml:space="preserve">
+    <value>helistada</value>
+  </data>
+  <data name="ApplicantsInboxCommonTab" xml:space="preserve">
+    <value>Üldine</value>
+  </data>
+  <data name="ApplicantsInboxDueDateColumn" xml:space="preserve">
+    <value>Tähtaeg</value>
+  </data>
+  <data name="ApplicantsInboxHideFilter" xml:space="preserve">
+    <value>peida filter</value>
+  </data>
+  <data name="ApplicantsInboxHiredTotal" xml:space="preserve">
+    <value>Meeldiv</value>
+  </data>
+  <data name="ApplicantsInboxInterviewTab" xml:space="preserve">
+    <value>Töövestlus</value>
+  </data>
+  <data name="ApplicantsInboxLastTab" xml:space="preserve">
+    <value>Viimased tegevused</value>
+  </data>
+  <data name="ApplicantsInboxLink" xml:space="preserve">
+    <value>Ankeedid</value>
+  </data>
+  <data name="ApplicantsInboxMedicalBookTotal" xml:space="preserve">
+    <value>Teeb MK</value>
+  </data>
+  <data name="ApplicantsInboxMonthTotal" xml:space="preserve">
+    <value>Ankeete kuus</value>
+  </data>
+  <data name="ApplicantsInboxNewLabel" xml:space="preserve">
+    <value>Uusi täna</value>
+  </data>
+  <data name="ApplicantsInboxNewLink" xml:space="preserve">
+    <value>Uus ankeet</value>
+  </data>
+  <data name="ApplicantsInboxNonSmokingLabel" xml:space="preserve">
+    <value>Ei suitseta</value>
+  </data>
+  <data name="ApplicantsInboxNotAnsweredLabel" xml:space="preserve">
+    <value>Vastuseta</value>
+  </data>
+  <data name="ApplicantsInboxRejectTotal" xml:space="preserve">
+    <value>Loobumine</value>
+  </data>
+  <data name="ApplicantsInboxReserveTotal" xml:space="preserve">
+    <value>reserv</value>
+  </data>
+  <data name="ApplicantsInboxSearchTab" xml:space="preserve">
+    <value>Otsingu tulemused</value>
+  </data>
+  <data name="ApplicantsInboxSearchText" xml:space="preserve">
+    <value>Otsing perekonnanime, nime vüi telefoninumbri järgi</value>
+  </data>
+  <data name="ApplicantsInboxShiftFilter" xml:space="preserve">
+    <value>Võivad töötada</value>
+  </data>
+  <data name="ApplicantsInboxShiftsColumn" xml:space="preserve">
+    <value>Vahetused</value>
+  </data>
+  <data name="ApplicantsInboxShowFilter" xml:space="preserve">
+    <value>näidata filter</value>
+  </data>
+  <data name="ApplicantsInboxSmokingColumn" xml:space="preserve">
+    <value>Suitsetamine</value>
+  </data>
+  <data name="ApplicantsInboxSmokingLabel" xml:space="preserve">
+    <value>Suitsetab</value>
+  </data>
+  <data name="ApplicantsInboxStatusColumn" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="ApplicantsInboxTypeColumn" xml:space="preserve">
+    <value>Amet</value>
+  </data>
+  <data name="ApplicantsStatisticRebuild" xml:space="preserve">
+    <value>Liiguta</value>
+  </data>
+  <data name="AskDeleteDebiting" xml:space="preserve">
+    <value>Kas tõesti soovite eemaldada mahakandmised?</value>
+  </data>
+  <data name="AskDeleteSupply" xml:space="preserve">
+    <value>Kas olete kindel, et soovite kustutada tarnet?</value>
+  </data>
+  <data name="AverageCheckTitle" xml:space="preserve">
+    <value>Keskmine tšekk</value>
+  </data>
+  <data name="AverageConsumption" xml:space="preserve">
+    <value>Keskmine kulu</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Tagasi</value>
+  </data>
+  <data name="BasicInformationLabel" xml:space="preserve">
+    <value>Üldinformatsioon</value>
+  </data>
+  <data name="BeforeYesterday" xml:space="preserve">
+    <value>üleeile</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Ehitama</value>
+  </data>
+  <data name="ByDays" xml:space="preserve">
+    <value>Päevade kaupa</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Tühistada</value>
+  </data>
+  <data name="CanceledReportType" xml:space="preserve">
+    <value>tellimuse tühistus</value>
+  </data>
+  <data name="CancelOrder" xml:space="preserve">
+    <value>Tühistada tellimus</value>
+  </data>
+  <data name="CancelTransaction" xml:space="preserve">
+    <value>Tühistada tehing</value>
+  </data>
+  <data name="CashierLabel" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="CertificatesForExpressPizzeriaTooltip" xml:space="preserve">
+    <value>Väljaantud sertifikaatide kogus ja aegunud pitsade osa</value>
+  </data>
+  <data name="CertificatesTooltip" xml:space="preserve">
+    <value>Väljaantud sertifikaatide kogus ja tarnimiseks aegunud tellimuste osa</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Valige...</value>
+  </data>
+  <data name="ChooseSupplierLabel" xml:space="preserve">
+    <value>Valige tarnija</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrders" xml:space="preserve">
+    <value>Kliendi baasi struktuur tellimuste kogusele</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrdersDesc" xml:space="preserve">
+    <value>Kõik aktiivsed perioodi eest  kliendid on jägatud gruppidesse vastavalt sellele, kui palju tellimusi on nad teinud. Hallivärviga on tähistatud gruppi osa kogu aktiivsete klientide hulgas perioodi eest.</value>
+  </data>
+  <data name="ClientDatabaseStructureTitle" xml:space="preserve">
+    <value>Kliendibaasi struktuur</value>
+  </data>
+  <data name="ClientDatabaseStructureTitleNew" xml:space="preserve">
+    <value>Kliendibaasi uus struktuur</value>
+  </data>
+  <data name="ClientHistoryTitle" xml:space="preserve">
+    <value>Kliendi ajalugu</value>
+  </data>
+  <data name="ClientOrdersTitle" xml:space="preserve">
+    <value>Kliendi tellimused</value>
+  </data>
+  <data name="ComeBack" xml:space="preserve">
+    <value>Mine tagasi</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="CommentPlaceholder" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="CommercialInvoiceDate" xml:space="preserve">
+    <value>Arve kuupäev</value>
+  </data>
+  <data name="CommercialInvoiceNumber" xml:space="preserve">
+    <value>Arve № </value>
+  </data>
+  <data name="ComparingToDayTooltip" xml:space="preserve">
+    <value>Võrreldes {0:ddd}, {0:dd MMM yyyy}</value>
+  </data>
+  <data name="ComparingToPeriodTooltip" xml:space="preserve">
+    <value>Võrreldes perioodiga {0:dd MMM yyyy} - {1:dd MMM yyyy}</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Mahalaetud kogus erineb tellitud kogusest. Kas jätkame?</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithShippedAndReceivedDiscrepancies" xml:space="preserve">
+    <value>Saadud kogus erineb maha laetust. Kas jätkata?</value>
+  </data>
+  <data name="Confirm_WithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Maha laetud kogus erineb tellitud kogusest. Kas jätkata?</value>
+  </data>
+  <data name="Confirm_YouCandEditRequest" xml:space="preserve">
+    <value>Te ei saa muuta taotlust peale saatmist</value>
+  </data>
+  <data name="ConsumptionQC" xml:space="preserve">
+    <value>Kulu KK järgi</value>
+  </data>
+  <data name="Corruption" xml:space="preserve">
+    <value>Mädanemine (hallitumine)</value>
+  </data>
+  <data name="CostAndUCMenuItem" xml:space="preserve">
+    <value>Omahind ja UnitCost</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Kogus</value>
+  </data>
+  <data name="CountAcronim" xml:space="preserve">
+    <value>Kogus</value>
+  </data>
+  <data name="CountLabel" xml:space="preserve">
+    <value>Kogus</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>Kullerid</value>
+  </data>
+  <data name="CouriersLabel" xml:space="preserve">
+    <value>kullerid</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Jooksev</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>Jooksev jääk</value>
+  </data>
+  <data name="CurrentDayPlaceholder" xml:space="preserve">
+    <value>klikkige valimiseks</value>
+  </data>
+  <data name="CurrentWeek" xml:space="preserve">
+    <value>Jooksev nädal</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>Puhkepäev</value>
+  </data>
+  <data name="DayOfWeekLabel" xml:space="preserve">
+    <value>Valige kuupäev</value>
+  </data>
+  <data name="Debiting" xml:space="preserve">
+    <value>Mahakandmine</value>
+  </data>
+  <data name="DebitingDateFilter" xml:space="preserve">
+    <value>Tooraine mahakandmine kellelt:</value>
+  </data>
+  <data name="DebitingMaterial" xml:space="preserve">
+    <value>Mahakantud tooraine</value>
+  </data>
+  <data name="DebitingMaterialLabel" xml:space="preserve">
+    <value>Tooraine mahakandmine</value>
+  </data>
+  <data name="DebitingNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="DebitingPizzeria" xml:space="preserve">
+    <value>Pitsarestoran/ladu</value>
+  </data>
+  <data name="DebitingReason" xml:space="preserve">
+    <value>Mahakandmise põhjus</value>
+  </data>
+  <data name="DebitingTime" xml:space="preserve">
+    <value>Mahakandmise kuupäev</value>
+  </data>
+  <data name="DebitingWhoDebited" xml:space="preserve">
+    <value>Kes kandis maha</value>
+  </data>
+  <data name="Default_Day_Select" xml:space="preserve">
+    <value>nädalapäev</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="DefectReportType" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Kustuta </value>
+  </data>
+  <data name="DeleteShift" xml:space="preserve">
+    <value>Kustutada vahetus</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Tarnekuupäev</value>
+  </data>
+  <data name="DepartmentLevelHoliday" xml:space="preserve">
+    <value>Osakonna pidu</value>
+  </data>
+  <data name="DeprecatedBrowserMessage" xml:space="preserve">
+    <value>vabandame, aga teie brauser on aegunud. Palun uuendage oma brauser või laadige alla uus. </value>
+  </data>
+  <data name="DeselectAllLabel" xml:space="preserve">
+    <value>Puhastama</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Lahknevus</value>
+  </data>
+  <data name="DodoIS" xml:space="preserve">
+    <value>Dodo IS</value>
+  </data>
+  <data name="DodoISFooterText" xml:space="preserve">
+    <value>Dodo Pizza</value>
+  </data>
+  <data name="Dollar" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>Tevevuse algus</value>
+  </data>
+  <data name="EffectivePeriod" xml:space="preserve">
+    <value>Tegevuse periood</value>
+  </data>
+  <data name="EfficiencyPercentage" xml:space="preserve">
+    <value>Graafiku effektiivsus</value>
+  </data>
+  <data name="EmployeeCategoryCashier" xml:space="preserve">
+    <value>Kassapidaja</value>
+  </data>
+  <data name="EmployeeCategoryDateWith" xml:space="preserve">
+    <value>Kuupäev alates</value>
+  </data>
+  <data name="EmployeeCategoryInstructor" xml:space="preserve">
+    <value>Instruktor</value>
+  </data>
+  <data name="EmployeeCategoryManager" xml:space="preserve">
+    <value>Mänedžer</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedFailedBeginDate" xml:space="preserve">
+    <value>Uue kategooria alustamise kuupäev pole määratud või on vales formaadis </value>
+  </data>
+  <data name="EmployeeCategoryNewAddedNotLargerCurrentDate" xml:space="preserve">
+    <value>Uue kategooria kehtivuse kuupäev ei saa olla kehtiva kategooria kehtivuse kuupäevast suurem </value>
+  </data>
+  <data name="EmployeeCategoryNotSelected" xml:space="preserve">
+    <value>Töötaja kategooria ei ole määratud</value>
+  </data>
+  <data name="EmployeeCategoryPizzmaker" xml:space="preserve">
+    <value>Pitsategija</value>
+  </data>
+  <data name="EmployeeCategoryTrainee" xml:space="preserve">
+    <value>Koolitatav</value>
+  </data>
+  <data name="EmployeeComment" xml:space="preserve">
+    <value>Töötaja kommentaar:</value>
+  </data>
+  <data name="EmployeeCouriersDynamicsAwayColumn" xml:space="preserve">
+    <value>Kullerite rutiin</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="EmployeeDateJSFormat" xml:space="preserve">
+    <value>dd.mm.yy</value>
+  </data>
+  <data name="EmployeeDateMask" xml:space="preserve">
+    <value>99.99.9999</value>
+  </data>
+  <data name="EmployeeDateTimeCulture" xml:space="preserve">
+    <value>et-EE</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumn" xml:space="preserve">
+    <value>Adaptatsioon</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumnInfo" xml:space="preserve">
+    <value>Uute töötajate suhtlemine praeguste töötajatega</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonth" xml:space="preserve">
+    <value>Kuukäive</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonthInfo" xml:space="preserve">
+    <value>Kuu joksul vallandatud töötajate suhtlemine praeguste töötajatega</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYear" xml:space="preserve">
+    <value>Aastakäive</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Aasta alguses vallandatud töötajate suhtlemine praeguste töötajatega</value>
+  </data>
+  <data name="EmployeeDynamicsFeedbackColumn" xml:space="preserve">
+    <value>tagasiside&lt;br/&gt;anonüümne / personaalselt</value>
+  </data>
+  <data name="EmployeeDynamicsHeader" xml:space="preserve">
+    <value>Koosseisu dünaamika</value>
+  </data>
+  <data name="EmployeeDynamicsHiredColumn" xml:space="preserve">
+    <value>Saabus</value>
+  </data>
+  <data name="EmployeeDynamicsMonthColumn" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="EmployeeDynamicsTerminatedColumn" xml:space="preserve">
+    <value>Vallandatud</value>
+  </data>
+  <data name="EmployeeDynamicsWorkedLessThanMonthColumn" xml:space="preserve">
+    <value>Töötasid vähem, kui kuu aega</value>
+  </data>
+  <data name="EmployeeEditAbsenceTypeLabel" xml:space="preserve">
+    <value>Põhjus</value>
+  </data>
+  <data name="EmployeeEditAdditionalPhoneLabel" xml:space="preserve">
+    <value>Lisa telefon</value>
+  </data>
+  <data name="EmployeeEditBarcodeLabel" xml:space="preserve">
+    <value>Triipkood</value>
+  </data>
+  <data name="EmployeeEditBirthdayLabel" xml:space="preserve">
+    <value>Sünnikuupäev</value>
+  </data>
+  <data name="EmployeeEditCarBrandLabel" xml:space="preserve">
+    <value>Automark</value>
+  </data>
+  <data name="EmployeeEditCarColorLabel" xml:space="preserve">
+    <value>Auto värv</value>
+  </data>
+  <data name="EmployeeEditCategoryLabel" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="EmployeeEditCharSuffix" xml:space="preserve">
+    <value>sümboleid</value>
+  </data>
+  <data name="EmployeeEditEmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmployeeEditErrorFoundMessage" xml:space="preserve">
+    <value>Tuvastatud järgmised vead</value>
+  </data>
+  <data name="EmployeeEditFacebookProfileLabel" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="EmployeeEditFacebookStatusLabel" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="EmployeeEditFemaleLabel" xml:space="preserve">
+    <value>N </value>
+  </data>
+  <data name="EmployeeEditFirstNameLabel" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="EmployeeEditGenderLabel" xml:space="preserve">
+    <value>Sugu</value>
+  </data>
+  <data name="EmployeeEditHeader" xml:space="preserve">
+    <value>Kaardi redigeerimine</value>
+  </data>
+  <data name="EmployeeEditHireDateLabel" xml:space="preserve">
+    <value>Vastuvõtmise kuupäev</value>
+  </data>
+  <data name="EmployeeEditHolidaysDatesLabel" xml:space="preserve">
+    <value>Puhkuse periood</value>
+  </data>
+  <data name="EmployeeEditHospitalsDatesLabel" xml:space="preserve">
+    <value>Haiguslehe periood</value>
+  </data>
+  <data name="EmployeeEditLPhotoLabel" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="EmployeeEditMaleLabel" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="EmployeeEditMedicalBookLabel" xml:space="preserve">
+    <value>Tervisekontrolli kuupäev</value>
+  </data>
+  <data name="EmployeeEditMedicalBookShelfLifeLabel" xml:space="preserve">
+    <value>Med. Raamat kuni</value>
+  </data>
+  <data name="EmployeeEditNumberLabel" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="EmployeeEditPatronymicLabel" xml:space="preserve">
+    <value>Isanimi</value>
+  </data>
+  <data name="EmployeeEditPersonalInfoLabel" xml:space="preserve">
+    <value>Isiklik informatsioon</value>
+  </data>
+  <data name="EmployeeEditPFRLabel" xml:space="preserve">
+    <value>PFR</value>
+  </data>
+  <data name="EmployeeEditPFRMask" xml:space="preserve">
+    <value>999-999-999 99</value>
+  </data>
+  <data name="EmployeeEditPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="EmployeeEditPhotoLabel" xml:space="preserve">
+    <value>Foto </value>
+  </data>
+  <data name="EmployeeEditRequiredFieldsMessage" xml:space="preserve">
+    <value>Tärniga väli (*) on kohustuslik</value>
+  </data>
+  <data name="EmployeeEditSecondNameLabel" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="EmployeeEditStateDateFromLabel" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="EmployeeEditStateDescriptionLabel" xml:space="preserve">
+    <value>Kirjeldus</value>
+  </data>
+  <data name="EmployeeEditStateTimeFromLabel" xml:space="preserve">
+    <value>Aeg</value>
+  </data>
+  <data name="EmployeeEditStatusLabel" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="EmployeeEditTabNoLabel" xml:space="preserve">
+    <value>Töötaja number</value>
+  </data>
+  <data name="EmployeeEditTabNoMask" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="EmployeeEditTerminationDateLabel" xml:space="preserve">
+    <value>Vallandamise kuupäev</value>
+  </data>
+  <data name="EmployeeEditTerminationReasonLabel" xml:space="preserve">
+    <value>Vallandamise põhjus</value>
+  </data>
+  <data name="EmployeeEditTitle" xml:space="preserve">
+    <value>Töötaja redigeerimine</value>
+  </data>
+  <data name="EmployeeEditTypeLabel" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="EmployeeEditUnitLabel" xml:space="preserve">
+    <value>Pitsarestoran </value>
+  </data>
+  <data name="EmployeeEditWorkInfoLabel" xml:space="preserve">
+    <value>Tööinfo</value>
+  </data>
+  <data name="EmployeeEditYearOfVehicleCarLabel" xml:space="preserve">
+    <value>Auto väljalase aasta </value>
+  </data>
+  <data name="EmployeeErrorLoginAlreadyUsed" xml:space="preserve">
+    <value>Antud telefoninumber on juba märgitud teise töötaja jaoks</value>
+  </data>
+  <data name="EmployeeErrorNoPhoto" xml:space="preserve">
+    <value>Töötaja pilt pole lisatud</value>
+  </data>
+  <data name="EmployeeErrorPhoneNumber" xml:space="preserve">
+    <value>Peab olema märgitud õige telefoninumber</value>
+  </data>
+  <data name="EmployeeErrorPhoto" xml:space="preserve">
+    <value>Pildi salvestamisel tekkis viga </value>
+  </data>
+  <data name="EmployeeErrorPhotoExtension" xml:space="preserve">
+    <value>Pildi laiend peab olema jpg või png</value>
+  </data>
+  <data name="EmployeeErrorPhotoHeight" xml:space="preserve">
+    <value>Pildi kõrgus peab olema täpselt {0} pikslit</value>
+  </data>
+  <data name="EmployeeErrorPhotoSize" xml:space="preserve">
+    <value>Pildi suurus ei tohi ületada {0} Kb</value>
+  </data>
+  <data name="EmployeeErrorPhotoWidth" xml:space="preserve">
+    <value>Foto laius peab olema {0} pikslit</value>
+  </data>
+  <data name="EmployeeErrorRole" xml:space="preserve">
+    <value>Mvalitud on tundmatu töötaja liik</value>
+  </data>
+  <data name="EmployeeErrorShiftDateFormat" xml:space="preserve">
+    <value>Sisestatud kuupäev ei ole korrektne</value>
+  </data>
+  <data name="EmployeeErrorShiftEndDate" xml:space="preserve">
+    <value>Vahetuse lõppemise aeg peab olema vahetuse alguse ajast suurem</value>
+  </data>
+  <data name="EmployeeErrorShiftTimeFormat" xml:space="preserve">
+    <value>Sisestatud nimi ei ole korrektne</value>
+  </data>
+  <data name="EmployeeKitchenDynamicsAwayColumn" xml:space="preserve">
+    <value>Köögi rutiin</value>
+  </data>
+  <data name="EmployeeLabel" xml:space="preserve">
+    <value>Töötaja</value>
+  </data>
+  <data name="EmployeeListAgeColumnTitle" xml:space="preserve">
+    <value>Vanus</value>
+  </data>
+  <data name="EmployeeListBirthdayFemaleLabel" xml:space="preserve">
+    <value>sündis</value>
+  </data>
+  <data name="EmployeeListBirthdayMaleLabel" xml:space="preserve">
+    <value>sündis</value>
+  </data>
+  <data name="EmployeeListBirthdaysHeader" xml:space="preserve">
+    <value>Sünnioev täna</value>
+  </data>
+  <data name="EmployeeListEmailLabel" xml:space="preserve">
+    <value>postkast</value>
+  </data>
+  <data name="EmployeeListExperienceColumnTitle" xml:space="preserve">
+    <value>Kogemus</value>
+  </data>
+  <data name="EmployeeListHireDate" xml:space="preserve">
+    <value>Tööle asumise kuupäev</value>
+  </data>
+  <data name="EmployeeListHiredLabel" xml:space="preserve">
+    <value>Töötavad</value>
+  </data>
+  <data name="EmployeeListLessThanDay" xml:space="preserve">
+    <value>Vähem, kui päev</value>
+  </data>
+  <data name="EmployeeListMedicalBookLabel" xml:space="preserve">
+    <value>med. Raamat</value>
+  </data>
+  <data name="EmployeeListMedicalBookName" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="EmployeeListMedicalBookRemained" xml:space="preserve">
+    <value>Jääk</value>
+  </data>
+  <data name="EmployeeListMedicalBooks" xml:space="preserve">
+    <value>Med. Raamatud</value>
+  </data>
+  <data name="EmployeeListMedicalBookType" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="EmployeeListNameColumnTitle" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="EmployeeListNoBirthdayLabel" xml:space="preserve">
+    <value>teadmata</value>
+  </data>
+  <data name="EmployeeListNoEmailLabel" xml:space="preserve">
+    <value>pole määratud</value>
+  </data>
+  <data name="EmployeeListNoMedicalBookLabel" xml:space="preserve">
+    <value>ei</value>
+  </data>
+  <data name="EmployeeListNoPhoneNumberLabel" xml:space="preserve">
+    <value>pole määratud</value>
+  </data>
+  <data name="EmployeeListPhoneNumberLabel" xml:space="preserve">
+    <value>telefon</value>
+  </data>
+  <data name="EmployeeListStatusLabel" xml:space="preserve">
+    <value>staatus</value>
+  </data>
+  <data name="EmployeeListTabNoLabel" xml:space="preserve">
+    <value>töötaja number</value>
+  </data>
+  <data name="EmployeeListTerminatedLabel" xml:space="preserve">
+    <value>Vallandatud</value>
+  </data>
+  <data name="EmployeeListTerminationColumnTitle" xml:space="preserve">
+    <value>Vallandamise põhjus</value>
+  </data>
+  <data name="EmployeeListTitle" xml:space="preserve">
+    <value>Töötajate nimekirjad</value>
+  </data>
+  <data name="EmployeeListTypeColumnTitle" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="EmployeeListUnitLabel" xml:space="preserve">
+    <value>pitsarestoran </value>
+  </data>
+  <data name="EmployeeMedicalBooksExpiredText" xml:space="preserve">
+    <value>Aegunud</value>
+  </data>
+  <data name="EmployeeMedicalBooksFullNameColumnTitle" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="EmployeeMedicalBooksProlongLink" xml:space="preserve">
+    <value>Pikendada</value>
+  </data>
+  <data name="EmployeeMedicalBooksRemainedColumnTitle" xml:space="preserve">
+    <value>Jääk</value>
+  </data>
+  <data name="EmployeeMedicalBooksTypeColumnTitle" xml:space="preserve">
+    <value>Amet</value>
+  </data>
+  <data name="EmployeeMoodWeekLabel" xml:space="preserve">
+    <value>nädal alates {0:dd.MM} kuni {1:dd:MM}</value>
+  </data>
+  <data name="EmployeeNewLabel" xml:space="preserve">
+    <value>Uus töötaja</value>
+  </data>
+  <data name="EmployeeNewTitle" xml:space="preserve">
+    <value>Uus töötaja</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYear" xml:space="preserve">
+    <value>Prognoositav aastakäive</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Aastakäive suhe , korrutatud 12 kuud , selle aasta möödunud kuudega</value>
+  </data>
+  <data name="EmployeeSearchLabel" xml:space="preserve">
+    <value>Töötaja otsin</value>
+  </data>
+  <data name="EmployeeSearchOpenLink" xml:space="preserve">
+    <value>Avada kaart</value>
+  </data>
+  <data name="EmployeeSearchPlaceholder" xml:space="preserve">
+    <value>Sisestage töötaja nimi</value>
+  </data>
+  <data name="EmployeeShiftNotInScheduleText" xml:space="preserve">
+    <value>Graafikust väljas</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginDateColumnTitle" xml:space="preserve">
+    <value>Alguse kuupäev</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginTimeColumnTitle" xml:space="preserve">
+    <value>Alguse aeg</value>
+  </data>
+  <data name="EmployeeShiftSettingsCategoryColumnTitle" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseDate" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseEmployee" xml:space="preserve">
+    <value>Valige töötaja</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndDateColumnTitle" xml:space="preserve">
+    <value>Lõpetamise aeg</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndTimeColumnTitle" xml:space="preserve">
+    <value>Lõpetamise aeg</value>
+  </data>
+  <data name="EmployeeShiftSettingsTitle" xml:space="preserve">
+    <value>Töötaja tööaja korrigeerimine</value>
+  </data>
+  <data name="EmployeesOnShift" xml:space="preserve">
+    <value>Töötajad vahetusel</value>
+  </data>
+  <data name="EmployeeStatisticsAbsentLabel" xml:space="preserve">
+    <value>Puuduvad</value>
+  </data>
+  <data name="EmployeeStatisticsActiveCountLabel" xml:space="preserve">
+    <value>Töötavad</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationComment" xml:space="preserve">
+    <value>Adaptatsioon – töötajate osa, (0-100%), miinimum kahekuulise tööstaažiganing vallandatud viimaste 30 päeva jooksul, vähem, kui kahekuulise tööstaažiga töötajate kohta.</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationFactorLabel" xml:space="preserve">
+    <value>Adaptatsioon</value>
+  </data>
+  <data name="EmployeeStatisticsAddEmployeeLink" xml:space="preserve">
+    <value>Lisada töötaja</value>
+  </data>
+  <data name="EmployeeStatisticsApplicantsLabel" xml:space="preserve">
+    <value>Saabunuid ankeete</value>
+  </data>
+  <data name="EmployeeStatisticsAwayComment" xml:space="preserve">
+    <value>Rutiin – köögitöötajate osa, (0-100%), vallandatuid selles kuus, töötavate töötajate suhtes. </value>
+  </data>
+  <data name="EmployeeStatisticsAwayFactorLabel" xml:space="preserve">
+    <value>Rutiin antud kuus</value>
+  </data>
+  <data name="EmployeeStatisticsFeedbackLabel" xml:space="preserve">
+    <value>Tagasiside kokku / anonüümne</value>
+  </data>
+  <data name="EmployeeStatisticsFindBySurname" xml:space="preserve">
+    <value>Otsing töötaja perekonnanime järgi</value>
+  </data>
+  <data name="EmployeeStatisticsHideReasonsForDismissal" xml:space="preserve">
+    <value>Peita</value>
+  </data>
+  <data name="EmployeeStatisticsHiredTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Tööle võetud  vallandatud antud kuus</value>
+  </data>
+  <data name="EmployeeStatisticsHiredThisMonthLabel" xml:space="preserve">
+    <value>Saabus antud kuus</value>
+  </data>
+  <data name="EmployeeStatisticsHiringReportLink" xml:space="preserve">
+    <value>vaata dünaamikat</value>
+  </data>
+  <data name="EmployeeStatisticsHolidaysCountLabel" xml:space="preserve">
+    <value>Puhkus</value>
+  </data>
+  <data name="EmployeeStatisticsHospitalsCountLabel" xml:space="preserve">
+    <value>Haigusleht</value>
+  </data>
+  <data name="EmployeeStatisticsLeaveLabel" xml:space="preserve">
+    <value>Puhkuse avaldus</value>
+  </data>
+  <data name="EmployeeStatisticsListLink" xml:space="preserve">
+    <value>Töötajate täielik nimekiri</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookExpiredCountLabel" xml:space="preserve">
+    <value>Med. Raamatu tähtaeg on möödunud</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookHeader" xml:space="preserve">
+    <value>Med. Raamatu tähtaeg on möödumas</value>
+  </data>
+  <data name="EmployeeStatisticsNormLabel" xml:space="preserve">
+    <value>Norm</value>
+  </data>
+  <data name="EmployeeStatisticsNormsLabel" xml:space="preserve">
+    <value>Töötajate normid</value>
+  </data>
+  <data name="EmployeeStatisticsOtherAbsenceCountLabel" xml:space="preserve">
+    <value>Muu põhjus</value>
+  </data>
+  <data name="EmployeeStatisticsOtherReasonsForDismissal" xml:space="preserve">
+    <value>Muud põhjused</value>
+  </data>
+  <data name="EmployeeStatisticsPopularReasonsForDismissal" xml:space="preserve">
+    <value>Populaarsed vallandamise põhjused</value>
+  </data>
+  <data name="EmployeeStatisticsProductivityLabel" xml:space="preserve">
+    <value>Tootlikkus</value>
+  </data>
+  <data name="EmployeeStatisticsSelectedPizzeria" xml:space="preserve">
+    <value>Valige pitsarestoran</value>
+  </data>
+  <data name="EmployeeStatisticsStuffLabel" xml:space="preserve">
+    <value>Prsonal</value>
+  </data>
+  <data name="EmployeeStatisticsSuspendedCountLabel" xml:space="preserve">
+    <value>Kõrvaldatud</value>
+  </data>
+  <data name="EmployeeStatisticsTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Läks ära selles kuus</value>
+  </data>
+  <data name="EmployeeStatisticsTitle" xml:space="preserve">
+    <value>Üldine informatsioon</value>
+  </data>
+  <data name="EmployeeStatisticsTotalCountLabel" xml:space="preserve">
+    <value>Töötajaid kokku</value>
+  </data>
+  <data name="EmployeeStatisticsWorkedLessThanMonthCountLabel" xml:space="preserve">
+    <value>Töötasid vähem, kui kuu aega</value>
+  </data>
+  <data name="EmployeesTrainingFailedAddCurrentCategoryStage" xml:space="preserve">
+    <value>Pole võimalik määrata teist korda antud kategooria</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeTimeMask" xml:space="preserve">
+    <value>99:99</value>
+  </data>
+  <data name="EmployeeTraining" xml:space="preserve">
+    <value>Koolitamine</value>
+  </data>
+  <data name="EmptyTransactionMessage" xml:space="preserve">
+    <value>Kahjuks, antud perioodi jooksul tehinguid pole teostatud.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Viga!</value>
+  </data>
+  <data name="Error_CanNotCancel" xml:space="preserve">
+    <value>Tellimuse tühistamine pole võimalik</value>
+  </data>
+  <data name="Error_CouldNotGetYandexTransactions" xml:space="preserve">
+    <value>Viga tehingulisti kättesaamisel.</value>
+  </data>
+  <data name="Error_RequiedCommentIfRejected" xml:space="preserve">
+    <value>Taotluse tagasilükkamisel tuleb täita kommentaari väli</value>
+  </data>
+  <data name="Error_YandexTransactionsRangeIsTooBig" xml:space="preserve">
+    <value>Kuupäevade ajavahemik ei või ületada 1 kuu.</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="ExpectedDate" xml:space="preserve">
+    <value>Ootame kuupäevaks</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>Kogemus (Staaž)</value>
+  </data>
+  <data name="ExperienceBonus" xml:space="preserve">
+    <value>Staaži preemia</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Möödus säilivuseaeg</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Eksport Excel'isse </value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Lisaaja alguse aeg</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Lisaaja alguse aeg</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Töötaja kategooria</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Valige töötajate liigid</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Töötaja nimi, perekonnanimi</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Lisaaja lõppemise aeg</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Lisaaja lõppemise aeg</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>Lisaaeg</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>Tundide arv</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>Mänedžeri  nimi, perekonnanimi</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="Fact" xml:space="preserve">
+    <value>Fakt</value>
+  </data>
+  <data name="FeatureCardCheckDateLabel" xml:space="preserve">
+    <value>Kontrollkuupäev</value>
+  </data>
+  <data name="FeatureCardChooseTime" xml:space="preserve">
+    <value>Määrake aeg, millal saate töötada</value>
+  </data>
+  <data name="FeatureCardCollapseFilterLink" xml:space="preserve">
+    <value>Pane filter kinni</value>
+  </data>
+  <data name="FeatureCardDescription" xml:space="preserve">
+    <value>Graafik, kus inimesed märgivad, millal saavad tulla vahetusse</value>
+  </data>
+  <data name="FeatureCardEveningOptionText" xml:space="preserve">
+    <value>Õhtul</value>
+  </data>
+  <data name="FeatureCardExpandFilterLink" xml:space="preserve">
+    <value>Avada filter</value>
+  </data>
+  <data name="FeatureCardFullNamePlaceholder" xml:space="preserve">
+    <value>nimi, amet</value>
+  </data>
+  <data name="FeatureCardHolidayLabel" xml:space="preserve">
+    <value>Puhkepäev</value>
+  </data>
+  <data name="FeatureCardHolidayOptionText" xml:space="preserve">
+    <value>puhkepäev</value>
+  </data>
+  <data name="FeatureCardMorningOptionText" xml:space="preserve">
+    <value>Hiommikul-päeval</value>
+  </data>
+  <data name="FeatureCardNightOptionText" xml:space="preserve">
+    <value>öösel</value>
+  </data>
+  <data name="FeatureCardOptionsTitle" xml:space="preserve">
+    <value>Võivad töötada</value>
+  </data>
+  <data name="FeatureCardTitle" xml:space="preserve">
+    <value>Карта возможностей</value>
+  </data>
+  <data name="FeatureCardWorkdayLabel" xml:space="preserve">
+    <value>Võib töötada</value>
+  </data>
+  <data name="FederalLevelHoliday" xml:space="preserve">
+    <value>Federaalne püha</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>Väli {0} pole täidetud</value>
+  </data>
+  <data name="ForecastForSeveralDays" xml:space="preserve">
+    <value>Mitmeks päevaks on jäägist piisav</value>
+  </data>
+  <data name="FormationOfOrder" xml:space="preserve">
+    <value>Tellimuse vormistamine</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Reede</value>
+  </data>
+  <data name="FridayShort" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>alates</value>
+  </data>
+  <data name="From2" xml:space="preserve">
+    <value>alates</value>
+  </data>
+  <data name="FromSupplier" xml:space="preserve">
+    <value>Kellelt  (tarnija)</value>
+  </data>
+  <data name="GenericReportType" xml:space="preserve">
+    <value>Kõik liigid</value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value>Kaup</value>
+  </data>
+  <data name="GoodsProduct" xml:space="preserve">
+    <value>Kaup/toode</value>
+  </data>
+  <data name="Grivna" xml:space="preserve">
+    <value>Grivna</value>
+  </data>
+  <data name="GuiltyPerson" xml:space="preserve">
+    <value>Süüdiolev isik</value>
+  </data>
+  <data name="HiringReportAdaptationColumnTitle" xml:space="preserve">
+    <value>Adaptatsiooni koefitsient</value>
+  </data>
+  <data name="HiringReportAwayColumnTitle" xml:space="preserve">
+    <value>Voolavuse koefitsient</value>
+  </data>
+  <data name="HiringReportBuildLink" xml:space="preserve">
+    <value>Ehitada</value>
+  </data>
+  <data name="HiringReportChooseDateLabel" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="HiringReportChooseUnitLabel" xml:space="preserve">
+    <value>Valige osakond</value>
+  </data>
+  <data name="HiringReportExcelExportLink" xml:space="preserve">
+    <value>Eksport Excel'isse </value>
+  </data>
+  <data name="HiringReportFactColumnTitle" xml:space="preserve">
+    <value>Tegelik töötajate arv</value>
+  </data>
+  <data name="HiringReportHiredColumnTitle" xml:space="preserve">
+    <value>Saabus</value>
+  </data>
+  <data name="HiringReportMonthColumnTitle" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="HiringReportTerminatedColumnTitle" xml:space="preserve">
+    <value>Vallandatud</value>
+  </data>
+  <data name="HiringReportWorkedLessThanMonthColumnTitle" xml:space="preserve">
+    <value>Töötasid vähem, kui kuu aega</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>tund</value>
+  </data>
+  <data name="HourAbbr" xml:space="preserve">
+    <value>t.</value>
+  </data>
+  <data name="Html_ListenDodoFm" xml:space="preserve">
+    <value>KUULA&lt;br&gt;DODOFM</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>Saabumised</value>
+  </data>
+  <data name="InputSupplyComposition" xml:space="preserve">
+    <value>Täitke tuleku koostis</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Saatekirja kuupäev</value>
+  </data>
+  <data name="InvoiceDate_error" xml:space="preserve">
+    <value>Lisaga saatelehe kuupäev</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Saatelehe № </value>
+  </data>
+  <data name="InvoiceNumber_error" xml:space="preserve">
+    <value>Lisage saatelehe nr</value>
+  </data>
+  <data name="IsTransactionCompleted" xml:space="preserve">
+    <value>Maksestaatus</value>
+  </data>
+  <data name="JQGridPageCaption" xml:space="preserve">
+    <value>lk</value>
+  </data>
+  <data name="JQGridPageFromCaption" xml:space="preserve">
+    <value>kust?</value>
+  </data>
+  <data name="JQGridViewCaption" xml:space="preserve">
+    <value>Vaade</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Köök</value>
+  </data>
+  <data name="KitchenLabel" xml:space="preserve">
+    <value>Köök</value>
+  </data>
+  <data name="LabourCostTooltip" xml:space="preserve">
+    <value>Töötaja töötasu ja tulu suhe</value>
+  </data>
+  <data name="LastRevision" xml:space="preserve">
+    <value>Viimane revisjon</value>
+  </data>
+  <data name="LastTwelveMonths" xml:space="preserve">
+    <value>Viimased 12 kuud</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>laadimine</value>
+  </data>
+  <data name="LossesAndExceesMenuItem" xml:space="preserve">
+    <value>kaod/Ülejääk</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDate" xml:space="preserve">
+    <value>Käivitamise kuupäev</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDateDay" xml:space="preserve">
+    <value>21 jaanuar 2015</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDesc" xml:space="preserve">
+    <value>Boonusprogrammi statistika v2</value>
+  </data>
+  <data name="LoyaltyAnaliticsSystem" xml:space="preserve">
+    <value>Boonusprogramm </value>
+  </data>
+  <data name="LoyaltyAnalyticsCoverage" xml:space="preserve">
+    <value>Sihtrühma haare</value>
+  </data>
+  <data name="LoyaltyAnalyticsDodollarSpending" xml:space="preserve">
+    <value>Kulutatud dodo-raha</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitations" xml:space="preserve">
+    <value>Kutse dünaamika </value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitationsComment" xml:space="preserve">
+    <value>Antud tabelis tuuakse Kliendid, kes on registreerunud Kliendi kutsel Teie regioonis antud perioodi vältel. </value>
+  </data>
+  <data name="LoyaltyAnalyticsInvitedClientsCount" xml:space="preserve">
+    <value>Uusi kliente meelitatud SL abiga </value>
+  </data>
+  <data name="LoyaltyAnalyticsLastMonthNewClientsCount" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastWeekNewClientsCount" xml:space="preserve">
+    <value>Nädal </value>
+  </data>
+  <data name="LoyaltyAnalyticsProfit" xml:space="preserve">
+    <value>Suunatus tellimused</value>
+  </data>
+  <data name="LoyaltyAnalyticsTheySelfClientsCount" xml:space="preserve">
+    <value>Uusi kliente meelitatud ilma SL</value>
+  </data>
+  <data name="LoyaltyAnalyticsTitle" xml:space="preserve">
+    <value>Boonusprogramm</value>
+  </data>
+  <data name="LoyaltyAnalyticsTodayNewClientsCount" xml:space="preserve">
+    <value>Täna</value>
+  </data>
+  <data name="LoyaltyAnalyticsTotalSpending" xml:space="preserve">
+    <value>Tellimuste summa (eurod + dodo-raha)</value>
+  </data>
+  <data name="LoyaltyAnalyticsWholeNewClientsCount" xml:space="preserve">
+    <value>Uusi kliente kokku perioodil</value>
+  </data>
+  <data name="LoyaltyAnalyticsYesterdayNewClientsCount" xml:space="preserve">
+    <value>Eile</value>
+  </data>
+  <data name="LunchSettings" xml:space="preserve">
+    <value>Lõunade seaded</value>
+  </data>
+  <data name="ManagerSettingScheduleManagerLabel" xml:space="preserve">
+    <value>Graafikute mänedžeri kontaktid</value>
+  </data>
+  <data name="ManagerSettingsChoose" xml:space="preserve">
+    <value>Valige töötaja</value>
+  </data>
+  <data name="ManagerSettingsDepartmentDirectorLabel" xml:space="preserve">
+    <value>Alajaotuse direktor</value>
+  </data>
+  <data name="ManagerSettingsHeader" xml:space="preserve">
+    <value>Pitsarestorani juhatajate kontaktid</value>
+  </data>
+  <data name="ManagerSettingsHint" xml:space="preserve">
+    <value>Kuvatakse töötajate isiklikkes kabinettides</value>
+  </data>
+  <data name="ManagerSettingsScheduleManagerLabel" xml:space="preserve">
+    <value>Graafikute mänedžeri kontaktid</value>
+  </data>
+  <data name="ManagerSettingsUnitDirectorLabel" xml:space="preserve">
+    <value>Pitsarestorani juhataja</value>
+  </data>
+  <data name="ManagersLabel" xml:space="preserve">
+    <value>Mänedžerid</value>
+  </data>
+  <data name="MarketingActivities" xml:space="preserve">
+    <value>Turundusüritused</value>
+  </data>
+  <data name="MarketingTitle" xml:space="preserve">
+    <value>Turundus</value>
+  </data>
+  <data name="MateraialRemainingInfoBlock" xml:space="preserve">
+    <value>Andmed arvestatakse viimase revisiooni läbiviimise hetkest alates </value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Tooraine </value>
+  </data>
+  <data name="MaterialConsumption" xml:space="preserve">
+    <value>Tooraine kulutamine</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialError" xml:space="preserve">
+    <value>Valitud rohkem, kui 15 tooraine liiki</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialMessage" xml:space="preserve">
+    <value>Ühe allüksuse valimisel saab arvutada kulu kõigi juustu positsioonide järgi. Kui valite kaks või rohkem allüksusi, siis saab arvutada kulu maksimaalselt 15 positsioonide järgi. Periood peab olema mitte suurem, kui 35 päeva.</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByPeriodError" xml:space="preserve">
+    <value>Valitud suurem, kui 35 päeva periood</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByUnitsError" xml:space="preserve">
+    <value>Pole valitud ühtegit allüksust</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>Tühistamine</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>Personali toit</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>Müük</value>
+  </data>
+  <data name="MaterialMeasurements" xml:space="preserve">
+    <value>Mõõdud</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Tooraine </value>
+  </data>
+  <data name="MaterialsType" xml:space="preserve">
+    <value>Tooraine tüüp</value>
+  </data>
+  <data name="MaterialTransfer" xml:space="preserve">
+    <value>Liikumised</value>
+  </data>
+  <data name="MaterialTransferSetup" xml:space="preserve">
+    <value>Liikumiste seadistamine</value>
+  </data>
+  <data name="MaterialTypeTransferReportType" xml:space="preserve">
+    <value>liikumised</value>
+  </data>
+  <data name="MaterialTypeTransfer_ReceivingDateIsInvalid" xml:space="preserve">
+    <value>Vastuvõtu kuupäev ei saa olla mahalaadimise kuupäevast väiksem</value>
+  </data>
+  <data name="MenuAllEmployees" xml:space="preserve">
+    <value>Kõik töötajad</value>
+  </data>
+  <data name="MenuApplicantsInbox" xml:space="preserve">
+    <value>Ankeedid</value>
+  </data>
+  <data name="MenuApplicantsStatistic" xml:space="preserve">
+    <value>Astatistika ankeetide kaupa</value>
+  </data>
+  <data name="MenuCourierSchedule" xml:space="preserve">
+    <value>Kullerite graafik</value>
+  </data>
+  <data name="MenuEmployeeBirthdays" xml:space="preserve">
+    <value>Sünnipäev</value>
+  </data>
+  <data name="MenuEmployeeList" xml:space="preserve">
+    <value>Töötajate nimekirjad</value>
+  </data>
+  <data name="MenuEmployees" xml:space="preserve">
+    <value>Töötajad</value>
+  </data>
+  <data name="MenuEmployeeShiftSettings" xml:space="preserve">
+    <value>vahetuste redigeerimine</value>
+  </data>
+  <data name="MenuEmployeeStatistics" xml:space="preserve">
+    <value>Üldine informatsioon</value>
+  </data>
+  <data name="MenuEmployeeWorkingHours" xml:space="preserve">
+    <value>Töötunnid</value>
+  </data>
+  <data name="MenuExperienceBonusRates" xml:space="preserve">
+    <value>Kogemuse (staaži) preemia</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>Lisaaeg</value>
+  </data>
+  <data name="MenuFeatureCard" xml:space="preserve">
+    <value>Карта возможностей</value>
+  </data>
+  <data name="MenuHiringReport" xml:space="preserve">
+    <value>Personali näitajad</value>
+  </data>
+  <data name="MenuManagerSettings" xml:space="preserve">
+    <value>Juhatajate kontaktid</value>
+  </data>
+  <data name="MenuMonthlyStatistics" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="MenuOperationalStatistics" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="MenuProductivityNorms" xml:space="preserve">
+    <value>Tootlikkuse normid</value>
+  </data>
+  <data name="MenuReports" xml:space="preserve">
+    <value>Aruanded</value>
+  </data>
+  <data name="MenuReviews" xml:space="preserve">
+    <value>Tagasiside</value>
+  </data>
+  <data name="MenuSalaryHolidayFactors" xml:space="preserve">
+    <value>Eriliste päevade kalender</value>
+  </data>
+  <data name="MenuSalaryNightFactors" xml:space="preserve">
+    <value>Öine koefitsient</value>
+  </data>
+  <data name="MenuSalaryPremiums" xml:space="preserve">
+    <value>Preemiad</value>
+  </data>
+  <data name="MenuSalaryRates" xml:space="preserve">
+    <value>Töötajate tariifid</value>
+  </data>
+  <data name="MenuSalaryReport" xml:space="preserve">
+    <value>Töötasu</value>
+  </data>
+  <data name="MenuSalaryReportWithExperienceRates" xml:space="preserve">
+    <value>Töötasu (kogemusega)</value>
+  </data>
+  <data name="MenuSalaryTaxes" xml:space="preserve">
+    <value>maksukoefitsient</value>
+  </data>
+  <data name="MenuSchedule" xml:space="preserve">
+    <value>Graafik </value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
+  <data name="MenuShiftEmployee" xml:space="preserve">
+    <value>Töötajad vahetusel</value>
+  </data>
+  <data name="MenuShiftNorms" xml:space="preserve">
+    <value>Kokkuvõtlik analüüs</value>
+  </data>
+  <data name="MenuShiftSchedule" xml:space="preserve">
+    <value>Graafik </value>
+  </data>
+  <data name="MenuShiftSettings" xml:space="preserve">
+    <value>vahetuste parameetrid</value>
+  </data>
+  <data name="MenuStaff" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="MenuStocks" xml:space="preserve">
+    <value>Varud</value>
+  </data>
+  <data name="MenuTimeReport" xml:space="preserve">
+    <value>Tegelik aeg</value>
+  </data>
+  <data name="MenuTitle_Ratings" xml:space="preserve">
+    <value>Reitingud</value>
+  </data>
+  <data name="MenuVacancyList" xml:space="preserve">
+    <value>Töökohad</value>
+  </data>
+  <data name="MenuZoneSettings" xml:space="preserve">
+    <value>Pitsarestorani seaded</value>
+  </data>
+  <data name="Menu_AuditedInventory" xml:space="preserve">
+    <value>Jäägid revisjoni järgi</value>
+  </data>
+  <data name="Menu_CalculateSMS" xml:space="preserve">
+    <value>Arvestused sms-ga</value>
+  </data>
+  <data name="Menu_Finance" xml:space="preserve">
+    <value>Finantsid</value>
+  </data>
+  <data name="Menu_FinanceIndicators" xml:space="preserve">
+    <value>Näitajad</value>
+  </data>
+  <data name="Menu_HolidaysAndWeekends" xml:space="preserve">
+    <value>Pühad ja puhkepäevad</value>
+  </data>
+  <data name="Menu_InventoryManagement" xml:space="preserve">
+    <value>Arvestus</value>
+  </data>
+  <data name="Menu_KPI_Productivity" xml:space="preserve">
+    <value>Tootlikkus</value>
+  </data>
+  <data name="Menu_MaterialConsumption" xml:space="preserve">
+    <value>Tooraine kulu</value>
+  </data>
+  <data name="Menu_Metrics" xml:space="preserve">
+    <value>Metrics</value>
+  </data>
+  <data name="Menu_Revenue" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="Menu_RevenueInHourOnEmployee" xml:space="preserve">
+    <value>Läbimüük tunnis inimese kohta</value>
+  </data>
+  <data name="Menu_RevisionDashboard" xml:space="preserve">
+    <value>Arvete kokkuvõte</value>
+  </data>
+  <data name="Menu_ShopWindowPauseStatistic" xml:space="preserve">
+    <value>Vitriini passiivsus</value>
+  </data>
+  <data name="Menu_Suppliers" xml:space="preserve">
+    <value>Tarnijad</value>
+  </data>
+  <data name="Menu_TargetsOnMonth" xml:space="preserve">
+    <value>Kuu sihtmärgid</value>
+  </data>
+  <data name="Menu_TargetsOnYear" xml:space="preserve">
+    <value>Aasta eesmärgid</value>
+  </data>
+  <data name="Message_AddedDebiting" xml:space="preserve">
+    <value>Lisatud positsioon {0}. Arv (tk): {1}. Põhjus: {2}.</value>
+  </data>
+  <data name="Message_AddedSupply" xml:space="preserve">
+    <value>Lisatud tulnud kirje.</value>
+  </data>
+  <data name="Message_AddedSupplyComposition" xml:space="preserve">
+    <value>Lisatud positsioon {0} - {1}, summa käibemaksuta - {2}, käibemaks - {3}, käibemaksusumma - {4}, summa käibemaksuga - {5}, hind tüki kohta - {6}, kilo hind - {7}</value>
+  </data>
+  <data name="Message_CantLoadChart" xml:space="preserve">
+    <value>Vabandage, graafik on ajutiselt kättesaamatu</value>
+  </data>
+  <data name="Message_Comment" xml:space="preserve">
+    <value>Kommantaar: {0}.</value>
+  </data>
+  <data name="Message_DebitingComment" xml:space="preserve">
+    <value>Kommantaar: oli {0}, on {1}."</value>
+  </data>
+  <data name="Message_DebitingReason" xml:space="preserve">
+    <value>Põhjus: был {0}, стал {1}.</value>
+  </data>
+  <data name="Message_DeletedSupplyComposition" xml:space="preserve">
+    <value>Kustutatud positsioon {0} - {1}, summa käibemaksuta - {2}, käibemaksusumma - {3}, summa käibemaksuga - {4}, ühikuhind - {5}, kilohind - {6}</value>
+  </data>
+  <data name="Message_EditedDebiting" xml:space="preserve">
+    <value>Positsioon muudetud {0}.</value>
+  </data>
+  <data name="Message_EnterVacancyFields" xml:space="preserve">
+    <value>Täitke töökoha väli</value>
+  </data>
+  <data name="Message_InvalidIntervals" xml:space="preserve">
+    <value>Võimalused ei olnud salvestatud, valitud on alla 4-tunnised perioodid.</value>
+  </data>
+  <data name="Message_NotChoosedAnyUnit" xml:space="preserve">
+    <value>Te ei ole valinud ühtegi pitsarestorani.</value>
+  </data>
+  <data name="Message_RemovedDebiting" xml:space="preserve">
+    <value>Eemaldatud positsioon {0} Arv (tk): {1}. Põhjus: {2}.</value>
+  </data>
+  <data name="Message_SupplyChangeCostPerKgForMaterialType" xml:space="preserve">
+    <value>Tooraine tüüpide kg hind on muutunud:</value>
+  </data>
+  <data name="Message_SupplyCompositionCount" xml:space="preserve">
+    <value>Arv (tk): oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerKillogramm" xml:space="preserve">
+    <value>Kilohind: oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerPiece" xml:space="preserve">
+    <value>Ühikuhind: oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSaveQuestion" xml:space="preserve">
+    <value>Jätkata?</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaOfVAT" xml:space="preserve">
+    <value>Käibemaksusumma: oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithoutVAT" xml:space="preserve">
+    <value>Summa käibemaksuta: oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithVAT" xml:space="preserve">
+    <value>Summa käibemaksuga: oli {0}, on {1}.</value>
+  </data>
+  <data name="Message_TemporarilyUnavailable" xml:space="preserve">
+    <value>Vabandage, ajutiselt kättesaamatu</value>
+  </data>
+  <data name="Message_UpdateSupplyComposition" xml:space="preserve">
+    <value>Muudetud positsioon {0} -</value>
+  </data>
+  <data name="MinimalShiftLengthForPersonalFood" xml:space="preserve">
+    <value>Vahetuse minimaalne kestvus tasuta toitlustuse saamiseks</value>
+  </data>
+  <data name="MinimalShiftToCashier" xml:space="preserve">
+    <value>"Kassapidaja vahetuse minimaalne kestvus"</value>
+  </data>
+  <data name="MinimalShiftToCourier" xml:space="preserve">
+    <value>"Kulleri vahetuse minimaalne kestvus"</value>
+  </data>
+  <data name="MinimalShiftToKitchenWorker" xml:space="preserve">
+    <value>"Köögitöölise mänedžeri vahetuse minimaalne kestvus"</value>
+  </data>
+  <data name="MinimalShiftToPersonalManager" xml:space="preserve">
+    <value>"Personali mänedžeri vahetuse minimaalne kestvus"</value>
+  </data>
+  <data name="MinimumStock" xml:space="preserve">
+    <value>Mininaalne varu</value>
+  </data>
+  <data name="MinuteAbbr" xml:space="preserve">
+    <value>min.</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Esmaspäev</value>
+  </data>
+  <data name="MondayShort" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="MonthlySpeed" xml:space="preserve">
+    <value>Kiirus</value>
+  </data>
+  <data name="MonthlyStatisticBuildLink" xml:space="preserve">
+    <value>Ehitama</value>
+  </data>
+  <data name="MonthlyStatisticByDelivery" xml:space="preserve">
+    <value>Tarne: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByDeliveryWithPercent" xml:space="preserve">
+    <value>Tarne: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByPickup" xml:space="preserve">
+    <value>Järgitulemine: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByPickupWithPercent" xml:space="preserve">
+    <value>Järgitulemine: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByStationary" xml:space="preserve">
+    <value>Restoran: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByStationaryWithPercent" xml:space="preserve">
+    <value>Restoran: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticDateFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="MonthlyStatisticPercentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheck" xml:space="preserve">
+    <value>Keskmine tšekk</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheckUnitOfMeasure" xml:space="preserve">
+    <value>eur</value>
+  </data>
+  <data name="MonthlyStatisticsCertificates" xml:space="preserve">
+    <value>Sertifikaadid</value>
+  </data>
+  <data name="MonthlyStatisticsCertificatesUnitOfMeasure" xml:space="preserve">
+    <value>tk.</value>
+  </data>
+  <data name="MonthlyStatisticsCountByLastTwelveMonths" xml:space="preserve">
+    <value>Viimase 12 kuu tellimuste kogus</value>
+  </data>
+  <data name="MonthlyStatisticsCountByPeriod" xml:space="preserve">
+    <value>Tellimuste kogus periood</value>
+  </data>
+  <data name="MonthlyStatisticsDate" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="MonthlyStatisticsEfficiency" xml:space="preserve">
+    <value>Effektiivsus</value>
+  </data>
+  <data name="MonthlyStatisticsGrowth" xml:space="preserve">
+    <value>Sissetuleku suurenemine</value>
+  </data>
+  <data name="MonthlyStatisticsGrowthUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCost" xml:space="preserve">
+    <value>LC (köök)</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCostUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLossesTitle" xml:space="preserve">
+    <value>Kaotused</value>
+  </data>
+  <data name="MonthlyStatisticsLossesUnit" xml:space="preserve">
+    <value>% (üld, sissetulekust)</value>
+  </data>
+  <data name="MonthlyStatisticsOrders" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersGrowth" xml:space="preserve">
+    <value>Tellimuste suurenemine</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHour" xml:space="preserve">
+    <value>Tellimused kullerile tunnis</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHourUnitOfMeasure" xml:space="preserve">
+    <value>tk/ in h</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersUnitOfMeasure" xml:space="preserve">
+    <value>tk/ in h</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHour" xml:space="preserve">
+    <value>Pitsad ja suupisted inimese kohta tunnis</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>tk/in h</value>
+  </data>
+  <data name="MonthlyStatisticsProductivityTitle" xml:space="preserve">
+    <value>Tootmine</value>
+  </data>
+  <data name="MonthlyStatisticsRevenue" xml:space="preserve">
+    <value>Sissetulek</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByLastTwelveMonths" xml:space="preserve">
+    <value>Tulu 12 kuu eest</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByPeriod" xml:space="preserve">
+    <value>Tulu kokku periood</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHour" xml:space="preserve">
+    <value>Sissetulek inimese kohta tunnis</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>eur/ in h</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueUnitOfMeasure" xml:space="preserve">
+    <value>eur</value>
+  </data>
+  <data name="MonthlyStatisticsRevenuPerPerson" xml:space="preserve">
+    <value>Inimese tunni tulu</value>
+  </data>
+  <data name="MonthlyStatisticsSaleTitle" xml:space="preserve">
+    <value>Müük</value>
+  </data>
+  <data name="MonthlyStatisticsSpeed" xml:space="preserve">
+    <value>Kiirus</value>
+  </data>
+  <data name="MonthlyStatisticsSpeedUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsStopSalesTimeTitle" xml:space="preserve">
+    <value>Müügi peatamine</value>
+  </data>
+  <data name="MonthlyStatisticUnitOfMeasureCountShort" xml:space="preserve">
+    <value>tk</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Minu konto</value>
+  </data>
+  <data name="NewBonus" xml:space="preserve">
+    <value>Uus preemia</value>
+  </data>
+  <data name="NewClientsTitle" xml:space="preserve">
+    <value>Uued kliendid</value>
+  </data>
+  <data name="NewRate" xml:space="preserve">
+    <value>Uus preemia</value>
+  </data>
+  <data name="NewRevenue" xml:space="preserve">
+    <value>Uus saabumine</value>
+  </data>
+  <data name="NewTransfer" xml:space="preserve">
+    <value>Uus liikumine</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>ei </value>
+  </data>
+  <data name="NoAddedPosition" xml:space="preserve">
+    <value>pole lisatud positsioone</value>
+  </data>
+  <data name="NoCallCenterFound" xml:space="preserve">
+    <value>Ei leidnud avatud kasutajatugi</value>
+  </data>
+  <data name="NoEmployeeShift" xml:space="preserve">
+    <value>--:--</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>Ei ole kasutusel</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Ei ole leitud</value>
+  </data>
+  <data name="NovicesLabel" xml:space="preserve">
+    <value>Koolitatavad</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="NumDay1" xml:space="preserve">
+    <value>päev</value>
+  </data>
+  <data name="NumDay2" xml:space="preserve">
+    <value>päeva</value>
+  </data>
+  <data name="NumDay3" xml:space="preserve">
+    <value>Päevi</value>
+  </data>
+  <data name="NumMonth1" xml:space="preserve">
+    <value>kuu</value>
+  </data>
+  <data name="NumMonth2" xml:space="preserve">
+    <value>kuu</value>
+  </data>
+  <data name="NumMonth3" xml:space="preserve">
+    <value>kuu</value>
+  </data>
+  <data name="NumYear1" xml:space="preserve">
+    <value>aasta</value>
+  </data>
+  <data name="NumYear2" xml:space="preserve">
+    <value>aasta</value>
+  </data>
+  <data name="NumYear3" xml:space="preserve">
+    <value>aastaid</value>
+  </data>
+  <data name="OfficeManagerRoleText" xml:space="preserve">
+    <value>Администратор подразделения</value>
+  </data>
+  <data name="OperationalStatistics" xml:space="preserve">
+    <value>Kokkuvõte</value>
+  </data>
+  <data name="OperationalStatistics2WeekAgo" xml:space="preserve">
+    <value>2 nädalat tagasi</value>
+  </data>
+  <data name="OperationalStatisticsAssemblyTable" xml:space="preserve">
+    <value>Täitmine</value>
+  </data>
+  <data name="OperationalStatisticsAveragePreparationOrdersTime" xml:space="preserve">
+    <value>Среднее время приготовления заказов</value>
+  </data>
+  <data name="OperationalStatisticsCertificates" xml:space="preserve">
+    <value>Sertifikaadid</value>
+  </data>
+  <data name="OperationalStatisticsCompositeProductsTable" xml:space="preserve">
+    <value>Suupisted</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndComposite" xml:space="preserve">
+    <value>Pitsaid ja suupisteid</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndCompositeOnEmployee" xml:space="preserve">
+    <value>Pitsade ja suupistete kogus inimese kohta tunnis</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployee" xml:space="preserve">
+    <value>Pitsade kogus inimese kohta tunnis</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployeeShort" xml:space="preserve">
+    <value>Pitsaid inimese kohta tunnis</value>
+  </data>
+  <data name="OperationalStatisticsCouriersCountAndInQueue" xml:space="preserve">
+    <value>Kullerid kokku / järjekorras</value>
+  </data>
+  <data name="OperationalStatisticsCulture" xml:space="preserve">
+    <value>et-EE</value>
+  </data>
+  <data name="OperationalStatisticsDate" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="OperationalStatisticsDelayedProducts" xml:space="preserve">
+    <value>Edasilükkatud</value>
+  </data>
+  <data name="OperationalStatisticsDelivery" xml:space="preserve">
+    <value>Kohaleviimine</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryAndPickup" xml:space="preserve">
+    <value>Tarnimine ja järgitulek</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryWorkTitle" xml:space="preserve">
+    <value>Kohaletoimetamise töö</value>
+  </data>
+  <data name="OperationalStatisticsDontDeliveredOrders" xml:space="preserve">
+    <value>Saatmata tellimused</value>
+  </data>
+  <data name="OperationalStatisticsDoughTable" xml:space="preserve">
+    <value>Taigen</value>
+  </data>
+  <data name="OperationalStatisticsEmployeesOnShiftNow" xml:space="preserve">
+    <value>Töötajaid vahetusel praegu</value>
+  </data>
+  <data name="OperationalStatisticsForCurrentDay" xml:space="preserve">
+    <value>Päeva kokkuvõte  </value>
+  </data>
+  <data name="OperationalStatisticsInProduction" xml:space="preserve">
+    <value>Töös</value>
+  </data>
+  <data name="OperationalStatisticsInQueue" xml:space="preserve">
+    <value>Järjekorras</value>
+  </data>
+  <data name="OperationalStatisticsKitchenLoad" xml:space="preserve">
+    <value>Liini töökoormus</value>
+  </data>
+  <data name="OperationalStatisticsKitchenPizzaLoad" xml:space="preserve">
+    <value>Liini koormus:</value>
+  </data>
+  <data name="OperationalStatisticsKitchenWork" xml:space="preserve">
+    <value>Köögi töö</value>
+  </data>
+  <data name="OperationalStatisticsLastFourWeek" xml:space="preserve">
+    <value>Viimased neli nädalat</value>
+  </data>
+  <data name="OperationalStatisticsNow" xml:space="preserve">
+    <value>Praegu</value>
+  </data>
+  <data name="OperationalStatisticsOrders" xml:space="preserve">
+    <value>Tellimused</value>
+  </data>
+  <data name="OperationalStatisticsOrdersCountOnCourierInHour" xml:space="preserve">
+    <value>Tellimusi tunnis kullerikohta</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWork" xml:space="preserve">
+    <value>Tellimused tootmises</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkInStationary" xml:space="preserve">
+    <value>Restorani</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkOnDelivery" xml:space="preserve">
+    <value>Kohaletoimetamiseks</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkPickup" xml:space="preserve">
+    <value>Järgitulemine</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkTotalCount" xml:space="preserve">
+    <value>Tellimusi kokku</value>
+  </data>
+  <data name="OperationalStatisticsOrdersOnDelivery" xml:space="preserve">
+    <value>Tellimusi kohaletoimetamiseks</value>
+  </data>
+  <data name="OperationalStatisticsPackingTable" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="OperationalStatisticsProductivity" xml:space="preserve">
+    <value>Tootlikkus</value>
+  </data>
+  <data name="OperationalStatisticsProductsInWork" xml:space="preserve">
+    <value>Tooted tootmises</value>
+  </data>
+  <data name="OperationalStatisticsRevenue" xml:space="preserve">
+    <value>Läbimüük</value>
+  </data>
+  <data name="OperationalStatisticsRevenueDelivery" xml:space="preserve">
+    <value>Kohaleviimine</value>
+  </data>
+  <data name="OperationalStatisticsRevenueOnEmployee" xml:space="preserve">
+    <value>Läbimüük tunnis inimese kohta</value>
+  </data>
+  <data name="OperationalStatisticsRevenuePickup" xml:space="preserve">
+    <value>Järgitulemine</value>
+  </data>
+  <data name="OperationalStatisticsRevenueStationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="OperationalStatisticsRevenueTotal" xml:space="preserve">
+    <value>Üldine</value>
+  </data>
+  <data name="OperationalStatisticsRevenueWithCurrency" xml:space="preserve">
+    <value>Läbimüük, eur.</value>
+  </data>
+  <data name="OperationalStatisticsShortCurrency" xml:space="preserve">
+    <value>rub</value>
+  </data>
+  <data name="OperationalStatisticsStationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="OperationalStatisticsStopSale" xml:space="preserve">
+    <value>Müükide seisak</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersCount" xml:space="preserve">
+    <value>Hilinenud tellimuste kogus</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersPercent" xml:space="preserve">
+    <value>Möödunud kehtivusajaga tellimuste osa </value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnDelivery" xml:space="preserve">
+    <value>Tellimused, kohaletoimetamine</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnStationary" xml:space="preserve">
+    <value>Tellimused, restoran</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersTimeOutPercentage" xml:space="preserve">
+    <value>Möödunud kehtivusajaga tellimuste osa </value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnDelivery" xml:space="preserve">
+    <value>Läbimüük, tarne</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnStationary" xml:space="preserve">
+    <value>Läbimüük, restoran</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueTotal" xml:space="preserve">
+    <value>Läbimüük, üldine</value>
+  </data>
+  <data name="OperationalStatisticsToday" xml:space="preserve">
+    <value>Täna</value>
+  </data>
+  <data name="OperationalStatisticsTotalRevenueNow" xml:space="preserve">
+    <value>Kogu läbimüük hetkel</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgo" xml:space="preserve">
+    <value>Nädal tagasi</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoInCurrentHour" xml:space="preserve">
+    <value>Nädal aega tagasi sellel tunnil</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoOnCurrentHour" xml:space="preserve">
+    <value>Nädal aega tagasi selleks tunniks</value>
+  </data>
+  <data name="OperationalStatisticsYesterday" xml:space="preserve">
+    <value>Eile</value>
+  </data>
+  <data name="Ordered" xml:space="preserve">
+    <value>Tellitud</value>
+  </data>
+  <data name="OrderedCount" xml:space="preserve">
+    <value>Tellitud kogus</value>
+  </data>
+  <data name="OrdersCountTitle" xml:space="preserve">
+    <value>Tellimuste arv</value>
+  </data>
+  <data name="OrdersForecastForDay" xml:space="preserve">
+    <value>Päevaprognoos</value>
+  </data>
+  <data name="OrdersIncreaseTooltip" xml:space="preserve">
+    <value>Tellimuste arvu suurenemine võrreldes eelmise aasta sama nädalapäevaga</value>
+  </data>
+  <data name="OrdersOnCourierInHourTooltip" xml:space="preserve">
+    <value>Mitu tellimust viib üks kuller tunnis</value>
+  </data>
+  <data name="OrdersPerTrip" xml:space="preserve">
+    <value>Sõidu ajal tellimusi</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organisatsioon</value>
+  </data>
+  <data name="PackageDamaged" xml:space="preserve">
+    <value>Pakendi kahjustus</value>
+  </data>
+  <data name="PenultimateAudit" xml:space="preserve">
+    <value>Eelviimane revisjon</value>
+  </data>
+  <data name="PeopleAbbr" xml:space="preserve">
+    <value>inim.</value>
+  </data>
+  <data name="PerformanceAlarm" xml:space="preserve">
+    <value>tulemuslikus on päeva eesmärgist väiksem</value>
+  </data>
+  <data name="PerformanceOk" xml:space="preserve">
+    <value>tulemuslikus vastab päeva eesmärgile</value>
+  </data>
+  <data name="PerformanceYellow" xml:space="preserve">
+    <value>tulemuslikus on 2 korda suurem päeva eesmärgist</value>
+  </data>
+  <data name="PersonalFoodReportType" xml:space="preserve">
+    <value>personali toitlustus</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PhoneNumberMask" xml:space="preserve">
+    <value>+372 99999999</value>
+  </data>
+  <data name="PizzasAndSnacksOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Mitu pitsat ja suupisteid tunnis on ühe köögi töötaja peale</value>
+  </data>
+  <data name="PLCaption" xml:space="preserve">
+    <value>P&amp;L</value>
+  </data>
+  <data name="PreviosTwelveMonths" xml:space="preserve">
+    <value>Eelmised 12 kuud</value>
+  </data>
+  <data name="PreviousWeek" xml:space="preserve">
+    <value>Eelmine nädal</value>
+  </data>
+  <data name="PreviousYear" xml:space="preserve">
+    <value>Aasta tagasi</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Hind</value>
+  </data>
+  <data name="PricePerKillogramm" xml:space="preserve">
+    <value>Hind kg eest</value>
+  </data>
+  <data name="PricePerKillogrammWithoutVAT" xml:space="preserve">
+    <value>Hind kg eest ilma KM-ta</value>
+  </data>
+  <data name="PricePerPiece" xml:space="preserve">
+    <value>Ühiku hind</value>
+  </data>
+  <data name="PricePerPieceWithoutVAT" xml:space="preserve">
+    <value>Tooteühiku hind ilma KM-ta</value>
+  </data>
+  <data name="ProductionSpeedBadColumnTitle" xml:space="preserve">
+    <value>Aeglasemalt</value>
+  </data>
+  <data name="ProductionSpeedGoodColumnTitle" xml:space="preserve">
+    <value>Kiiremini</value>
+  </data>
+  <data name="ProductionSpeedHeader" xml:space="preserve">
+    <value>Valmistamise kiirus</value>
+  </data>
+  <data name="ProductionSpeedNormalColumnTitle" xml:space="preserve">
+    <value>Norm</value>
+  </data>
+  <data name="ProductionSpeedShiftsNames" xml:space="preserve">
+    <value>Hommikune vahetus, Õhtune vahetus, Öine vahetus</value>
+  </data>
+  <data name="ProductShort" xml:space="preserve">
+    <value>&lt;span class="product-short-label"&gt;toode&lt;/span&gt;</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Saadud</value>
+  </data>
+  <data name="ReceivedCount" xml:space="preserve">
+    <value>Saadud kogus</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Kustutatud</value>
+  </data>
+  <data name="RemovePeriod" xml:space="preserve">
+    <value>Kustutada </value>
+  </data>
+  <data name="ReportByPeriod" xml:space="preserve">
+    <value>Periood</value>
+  </data>
+  <data name="ReportDay" xml:space="preserve">
+    <value>päevade kaupa</value>
+  </data>
+  <data name="ReportDayForExcel" xml:space="preserve">
+    <value>Kulu 7 päeva järgi</value>
+  </data>
+  <data name="ReportLabel" xml:space="preserve">
+    <value>Aruanne</value>
+  </data>
+  <data name="ReportMonth" xml:space="preserve">
+    <value>kuude kaupa</value>
+  </data>
+  <data name="ReportMonthForExcel" xml:space="preserve">
+    <value>Kulu 7 kuu järgi</value>
+  </data>
+  <data name="ReportPeriodVariant" xml:space="preserve">
+    <value>Näidata kulu:</value>
+  </data>
+  <data name="ReportTypeLabel" xml:space="preserve">
+    <value>Valige kulu liik. </value>
+  </data>
+  <data name="ReportWeek" xml:space="preserve">
+    <value>nädalate kaupa</value>
+  </data>
+  <data name="ReportWeekForExcel" xml:space="preserve">
+    <value>Kulu 7 nädala järgi</value>
+  </data>
+  <data name="ReserveFriday" xml:space="preserve">
+    <value>Varu, R</value>
+  </data>
+  <data name="ReserveMonday" xml:space="preserve">
+    <value>Varu, E</value>
+  </data>
+  <data name="ReserveSaturday" xml:space="preserve">
+    <value>Varu, L</value>
+  </data>
+  <data name="ReserveSunday" xml:space="preserve">
+    <value>Varu, P</value>
+  </data>
+  <data name="ReserveThursday" xml:space="preserve">
+    <value>Varu, N</value>
+  </data>
+  <data name="ReserveTuesday" xml:space="preserve">
+    <value>Varu, T</value>
+  </data>
+  <data name="ReserveWednesday" xml:space="preserve">
+    <value>Varu, K</value>
+  </data>
+  <data name="ReturnToSupplies" xml:space="preserve">
+    <value>Tagasi laekumise sisestamise juurde</value>
+  </data>
+  <data name="ReturnToTransfers" xml:space="preserve">
+    <value>Tagasi liikumiste sisestamise juurde</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Sissetulek</value>
+  </data>
+  <data name="RevenueCurrency" xml:space="preserve">
+    <value>Vastuse variant</value>
+  </data>
+  <data name="RevenueDate" xml:space="preserve">
+    <value>Vastuvõtmise kuupäev</value>
+  </data>
+  <data name="RevenueFrom" xml:space="preserve">
+    <value>Kellelt  (tarnija)</value>
+  </data>
+  <data name="RevenueIncreaseTooltip" xml:space="preserve">
+    <value>Tulu suurenemine võrreldes eelmise aasta sama nädalapäevaga</value>
+  </data>
+  <data name="RevenueInfo" xml:space="preserve">
+    <value>Info saabumise kohta</value>
+  </data>
+  <data name="RevenueNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="RevenueOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Ühe köögi töötaja tulu tunnis</value>
+  </data>
+  <data name="RevenueText" xml:space="preserve">
+    <value>/inimest tunnis</value>
+  </data>
+  <data name="RevenueTo" xml:space="preserve">
+    <value>Kuhu (ladu)</value>
+  </data>
+  <data name="RevenueTotal" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="RevenueUser" xml:space="preserve">
+    <value>Kes võttis vastu</value>
+  </data>
+  <data name="RevenueWhoTook" xml:space="preserve">
+    <value>Kes võttis vastu</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Revisioon</value>
+  </data>
+  <data name="RevisionNotExecuted" xml:space="preserve">
+    <value>Revisjoni antud perioodil ei teostatud</value>
+  </data>
+  <data name="RevisionNotExecutedYet" xml:space="preserve">
+    <value>Revisjon pole veel teostatud</value>
+  </data>
+  <data name="RevisionSettings" xml:space="preserve">
+    <value>Revisjoni seaded</value>
+  </data>
+  <data name="RomanianLeu" xml:space="preserve">
+    <value>Rumeenia leu</value>
+  </data>
+  <data name="Ruble" xml:space="preserve">
+    <value>Rubla</value>
+  </data>
+  <data name="SalesReportType" xml:space="preserve">
+    <value>müügid</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Laupäev</value>
+  </data>
+  <data name="SaturdayShort" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvestada</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>Salvestada ja väljuda</value>
+  </data>
+  <data name="SaveAndSend" xml:space="preserve">
+    <value>Salvesta ja saada</value>
+  </data>
+  <data name="ScheduleAbsenceLabel" xml:space="preserve">
+    <value>Puudub</value>
+  </data>
+  <data name="ScheduleActionsLink" xml:space="preserve">
+    <value>tegevused</value>
+  </data>
+  <data name="ScheduleAddItemLink" xml:space="preserve">
+    <value>graafikusse</value>
+  </data>
+  <data name="ScheduleAllEmployeeTypesLabel" xml:space="preserve">
+    <value>Kõik ametikohad</value>
+  </data>
+  <data name="ScheduleAvailableTitle" xml:space="preserve">
+    <value>Kättesaadavad</value>
+  </data>
+  <data name="ScheduleCategoryLabel" xml:space="preserve">
+    <value>Tariif</value>
+  </data>
+  <data name="ScheduleChangeCategoryHeader" xml:space="preserve">
+    <value>Valige töötaja ajakategooria</value>
+  </data>
+  <data name="ScheduleChangeCategoryNoneLabel" xml:space="preserve">
+    <value>Mitte muuta kategooriat</value>
+  </data>
+  <data name="ScheduleCommentAddLabel" xml:space="preserve">
+    <value>+ Lisada kommentaar</value>
+  </data>
+  <data name="ScheduleCommentLabel" xml:space="preserve">
+    <value>Kommentaar</value>
+  </data>
+  <data name="ScheduleDaySwticher" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="ScheduleDeleteLink" xml:space="preserve">
+    <value>Eemaldada graafikust</value>
+  </data>
+  <data name="ScheduleDescription" xml:space="preserve">
+    <value>Vahetuse töögraafiku koostamise instrument.</value>
+  </data>
+  <data name="ScheduleEveningLabel" xml:space="preserve">
+    <value>Õhtu</value>
+  </data>
+  <data name="ScheduleFoundLabel" xml:space="preserve">
+    <value>Leitud</value>
+  </data>
+  <data name="ScheduleHeader" xml:space="preserve">
+    <value>Vahetuse graafik</value>
+  </data>
+  <data name="ScheduleHint" xml:space="preserve">
+    <value>Määrake aeg graafikus, et näha saadavate töötajate nimekiri</value>
+  </data>
+  <data name="ScheduleHolidayTitle" xml:space="preserve">
+    <value>Puhkepäev</value>
+  </data>
+  <data name="ScheduleHoursLabel" xml:space="preserve">
+    <value>töötatud</value>
+  </data>
+  <data name="ScheduleHoursSortLabel" xml:space="preserve">
+    <value>Töötatud tunde</value>
+  </data>
+  <data name="ScheduleLastShiftLabel" xml:space="preserve">
+    <value>viimane vahetus</value>
+  </data>
+  <data name="ScheduleMorningLabel" xml:space="preserve">
+    <value>Hommik </value>
+  </data>
+  <data name="ScheduleMoveLink" xml:space="preserve">
+    <value>Liiguta</value>
+  </data>
+  <data name="ScheduleNameSortLabel" xml:space="preserve">
+    <value>Perekonnanimi</value>
+  </data>
+  <data name="ScheduleNightLabel" xml:space="preserve">
+    <value>Öö</value>
+  </data>
+  <data name="ScheduleOtherTitle" xml:space="preserve">
+    <value>Teised</value>
+  </data>
+  <data name="SchedulePizzeriaOption" xml:space="preserve">
+    <value>Pitsarestoran </value>
+  </data>
+  <data name="ScheduleProductivityFact" xml:space="preserve">
+    <value>Tootm. Fakt</value>
+  </data>
+  <data name="ScheduleProductivityForecast" xml:space="preserve">
+    <value>Tootm. prognoos</value>
+  </data>
+  <data name="ScheduleRecommendedTitle" xml:space="preserve">
+    <value>Soovitatavad</value>
+  </data>
+  <data name="ScheduleRemoveItemLink" xml:space="preserve">
+    <value>Eemaldada graafikust</value>
+  </data>
+  <data name="ScheduleSearchAllLink" xml:space="preserve">
+    <value>Otsida </value>
+  </data>
+  <data name="ScheduleSearchPlaceholder" xml:space="preserve">
+    <value>perekonnanimi</value>
+  </data>
+  <data name="ScheduleSearchText" xml:space="preserve">
+    <value>Otsing perekonnanime järgi</value>
+  </data>
+  <data name="ScheduleShift8Option" xml:space="preserve">
+    <value>8-tunnine vahetus</value>
+  </data>
+  <data name="ScheduleShiftCountWarning" xml:space="preserve">
+    <value>Töötajal {0} on vahetused ühel päeval</value>
+  </data>
+  <data name="ScheduleShiftError" xml:space="preserve">
+    <value>Pole võimalik salvestada muudatusi.Töötajal on juba vahetus alates {0} kuni {1} osakonnas {2} jaamas {3}.</value>
+  </data>
+  <data name="ScheduleShiftLengthWarning" xml:space="preserve">
+    <value>Töötajal on vahetuse pikkus {0} tundi</value>
+  </data>
+  <data name="ScheduleShiftSortLabel" xml:space="preserve">
+    <value>Viimane vahetus</value>
+  </data>
+  <data name="ScheduleTableTitle" xml:space="preserve">
+    <value>Graafikus </value>
+  </data>
+  <data name="ScheduleTodayText" xml:space="preserve">
+    <value>täna</value>
+  </data>
+  <data name="ScheduleUnknownError" xml:space="preserve">
+    <value>Pole võimalik salvestada muudatusi. Tekkis tundmatu viga.</value>
+  </data>
+  <data name="ScheduleWeekSwitcher" xml:space="preserve">
+    <value>Nädal </value>
+  </data>
+  <data name="ScheduleZoneLabel" xml:space="preserve">
+    <value>Jaam </value>
+  </data>
+  <data name="SelectAllLabel" xml:space="preserve">
+    <value>Valida kõik</value>
+  </data>
+  <data name="SelectAvailableView" xml:space="preserve">
+    <value>Valige vajalik liik</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>valige kuupäev</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Valitud</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>Valige organisatsioon</value>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>Valige periood</value>
+  </data>
+  <data name="SelectPeriodEndDate" xml:space="preserve">
+    <value>Valige lõppperioodi kuupäev</value>
+  </data>
+  <data name="SelectPeriodStartDate" xml:space="preserve">
+    <value>Valige algusperioodi kuupäev</value>
+  </data>
+  <data name="SelectReasonLabel" xml:space="preserve">
+    <value>Valige mahakandmise põhjus</value>
+  </data>
+  <data name="SelectUnitLabel" xml:space="preserve">
+    <value>Valige osakond</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Saada</value>
+  </data>
+  <data name="Send_Duplicate[1]" xml:space="preserve">
+    <value>Saata</value>
+  </data>
+  <data name="SetTarget" xml:space="preserve">
+    <value>määrata</value>
+  </data>
+  <data name="ShiftDay" xml:space="preserve">
+    <value>päev</value>
+  </data>
+  <data name="ShiftEmployeeAwayText" xml:space="preserve">
+    <value>läks ära</value>
+  </data>
+  <data name="ShiftEmployeeCategoryColumnTitle" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="ShiftEmployeeCountLabel" xml:space="preserve">
+    <value>Praegu vahetusel</value>
+  </data>
+  <data name="ShiftEmployeeFullNameColumnTitle" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="ShiftEmployeeShiftText" xml:space="preserve">
+    <value>vahetusel</value>
+  </data>
+  <data name="ShiftEmployeeStatusColumnTitle" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="ShiftEmployeeTimeColumnTitle" xml:space="preserve">
+    <value>Vahetuse aeg</value>
+  </data>
+  <data name="ShiftEmployeeTodayAwayTitle" xml:space="preserve">
+    <value>Läksid ära täna</value>
+  </data>
+  <data name="ShiftEmployeeTodayShiftTitle" xml:space="preserve">
+    <value>Vahetusel</value>
+  </data>
+  <data name="ShiftEmployeeYesterdayAwayTitle" xml:space="preserve">
+    <value>Läksid ära eile</value>
+  </data>
+  <data name="ShiftEvening" xml:space="preserve">
+    <value>õhtu</value>
+  </data>
+  <data name="ShiftMorning" xml:space="preserve">
+    <value>Hommik-päev</value>
+  </data>
+  <data name="ShiftNight" xml:space="preserve">
+    <value>öö</value>
+  </data>
+  <data name="ShiftNormsCashierLabel" xml:space="preserve">
+    <value>kassa</value>
+  </data>
+  <data name="ShiftNormsChooseDateLabel" xml:space="preserve">
+    <value>Valige kuupäev</value>
+  </data>
+  <data name="ShiftNormsCleaningLabel" xml:space="preserve">
+    <value>puhtus</value>
+  </data>
+  <data name="ShiftNormsCouriersLabel" xml:space="preserve">
+    <value>kullerid</value>
+  </data>
+  <data name="ShiftNormsDay0Label" xml:space="preserve">
+    <value>Mittetüüpiline päev</value>
+  </data>
+  <data name="ShiftNormsDeliveryLabel" xml:space="preserve">
+    <value>kohaleviimine</value>
+  </data>
+  <data name="ShiftNormsExcelExportLink" xml:space="preserve">
+    <value>Eksport Excel'isse </value>
+  </data>
+  <data name="ShiftNormsFillTableLink" xml:space="preserve">
+    <value>Täidke tabel</value>
+  </data>
+  <data name="ShiftNormsHeader" xml:space="preserve">
+    <value>Vahetuse normid</value>
+  </data>
+  <data name="ShiftNormsKitchenLabel" xml:space="preserve">
+    <value>köök</value>
+  </data>
+  <data name="ShiftNormsLastChangedLabel" xml:space="preserve">
+    <value>Viimane muudatus</value>
+  </data>
+  <data name="ShiftNormsLastChangedNoneLabel" xml:space="preserve">
+    <value>ei </value>
+  </data>
+  <data name="ShiftNormsManagersLabel" xml:space="preserve">
+    <value>mänedžerid</value>
+  </data>
+  <data name="ShiftNormsNormLabel" xml:space="preserve">
+    <value>Norm</value>
+  </data>
+  <data name="ShiftNormsNormsLabel" xml:space="preserve">
+    <value>Normid</value>
+  </data>
+  <data name="ShiftNormsNovicesLabel" xml:space="preserve">
+    <value>koolitatavad</value>
+  </data>
+  <data name="ShiftNormsProductivityColumnTitle" xml:space="preserve">
+    <value>Tootmine</value>
+  </data>
+  <data name="ShiftNormsProductivityLabel" xml:space="preserve">
+    <value>Tootlikkus</value>
+  </data>
+  <data name="ShiftNormsRecommendedColumnTitle" xml:space="preserve">
+    <value>Soovitatav</value>
+  </data>
+  <data name="ShiftNormsSalesForecastColumnTitle" xml:space="preserve">
+    <value>Müükide prognoos</value>
+  </data>
+  <data name="ShiftNormsSaveLink" xml:space="preserve">
+    <value>Salvestada muudatused</value>
+  </data>
+  <data name="ShiftNormsTimeColumnTitle" xml:space="preserve">
+    <value>Aeg</value>
+  </data>
+  <data name="ShiftSettingsHeader" xml:space="preserve">
+    <value>Vahetuste parameetrid</value>
+  </data>
+  <data name="ShiftSettingsNoNightShift" xml:space="preserve">
+    <value>Pole öist vahetust</value>
+  </data>
+  <data name="ShiftSettingsShiftOverlapError" xml:space="preserve">
+    <value>Vahetused ei tohi kattuda</value>
+  </data>
+  <data name="ShiftSettingsTotalTimeError" xml:space="preserve">
+    <value>Summaarne aeg ei saa olla üle 24 tunni</value>
+  </data>
+  <data name="Shipment" xml:space="preserve">
+    <value>Mahalaadimine</value>
+  </data>
+  <data name="ShippedCount" xml:space="preserve">
+    <value>Mahalaetud kogus</value>
+  </data>
+  <data name="ShippingDate" xml:space="preserve">
+    <value>Mahalaadimise kuupäev</value>
+  </data>
+  <data name="ShortRuble" xml:space="preserve">
+    <value>eur</value>
+  </data>
+  <data name="SpeedTooltip" xml:space="preserve">
+    <value>Õigeks ajaks valmistatud toodete osa</value>
+  </data>
+  <data name="StaffLanch" xml:space="preserve">
+    <value>personali toitlustus</value>
+  </data>
+  <data name="StaffOverloaded" xml:space="preserve">
+    <value>Personal on ülekoormatud</value>
+  </data>
+  <data name="Station_Backup" xml:space="preserve">
+    <value>Reserv</value>
+  </data>
+  <data name="Station_Delivery" xml:space="preserve">
+    <value>Kohaletoimetamine</value>
+  </data>
+  <data name="Station_Sanitation" xml:space="preserve">
+    <value>Puhtus</value>
+  </data>
+  <data name="Station_Trainees" xml:space="preserve">
+    <value>Praktikandid</value>
+  </data>
+  <data name="Station_СashboxAndHoll" xml:space="preserve">
+    <value>Kassa ja saal</value>
+  </data>
+  <data name="StockBalance" xml:space="preserve">
+    <value>Laojäägid</value>
+  </data>
+  <data name="StockBalanceMenuItem" xml:space="preserve">
+    <value>Laojäägid</value>
+  </data>
+  <data name="StopSaleTimeTooltip" xml:space="preserve">
+    <value>Müügi täispeatumiste kestvus kokku</value>
+  </data>
+  <data name="Substation_Line" xml:space="preserve">
+    <value>Kuum kauplus</value>
+  </data>
+  <data name="Substation_Prep" xml:space="preserve">
+    <value>Külm tsehh</value>
+  </data>
+  <data name="Substation_SlicingAndPacking" xml:space="preserve">
+    <value>Lõikamine ja pakkimine</value>
+  </data>
+  <data name="Substation_Supplies" xml:space="preserve">
+    <value>Varu</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Valmis!</value>
+  </data>
+  <data name="SummaLabel" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="SummaOfVAT" xml:space="preserve">
+    <value>KM summa</value>
+  </data>
+  <data name="SummaWithoutVAT" xml:space="preserve">
+    <value>Summa KM-ta</value>
+  </data>
+  <data name="SummaWithVAT" xml:space="preserve">
+    <value>Summa KM-ga</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Pühapäev</value>
+  </data>
+  <data name="SundayShort" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Tarnija</value>
+  </data>
+  <data name="SupplierAddDebt" xml:space="preserve">
+    <value>Luua</value>
+  </data>
+  <data name="SupplierAddDebtTitle" xml:space="preserve">
+    <value>Lisada võlgnevus</value>
+  </data>
+  <data name="SupplierCloseDebt" xml:space="preserve">
+    <value>Kustutada</value>
+  </data>
+  <data name="SupplierConfirmDebtClose" xml:space="preserve">
+    <value>Tõepoolest kustutada võlg?</value>
+  </data>
+  <data name="SupplierDebt" xml:space="preserve">
+    <value>Võlgnevus</value>
+  </data>
+  <data name="SupplierListHeader" xml:space="preserve">
+    <value>Tarnijad</value>
+  </data>
+  <data name="SuppliersAndMaterials" xml:space="preserve">
+    <value>Tarnijad ha tooraine</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>Saabumised</value>
+  </data>
+  <data name="SupplyDebiting" xml:space="preserve">
+    <value>Mahakandmine</value>
+  </data>
+  <data name="SupplyIncoming" xml:space="preserve">
+    <value>Saabumised</value>
+  </data>
+  <data name="SupplyMaterialLabel" xml:space="preserve">
+    <value>Tooraine sissetulek</value>
+  </data>
+  <data name="Supply_MaterialUnavailable" xml:space="preserve">
+    <value>Laekumise kuupäevaks kättesaamatu materjal</value>
+  </data>
+  <data name="Supply_TaraUnavailable" xml:space="preserve">
+    <value>Taara on muudetud baas mõõduühikule</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Eesmärk</value>
+  </data>
+  <data name="TargetNotReached" xml:space="preserve">
+    <value>Eesmärgiks ei jõudnud</value>
+  </data>
+  <data name="TargetsOnMonthElement_Defect" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="TargetsOnMonthElement_OrdersOnСourier" xml:space="preserve">
+    <value>Tellimused kullerile tunni kohta</value>
+  </data>
+  <data name="TargetsOnMonthElement_PicesOnPeople" xml:space="preserve">
+    <value>Pitsa ja suupistete arv inimese kohta tunnis</value>
+  </data>
+  <data name="TargetsOnMonthElement_Piece" xml:space="preserve">
+    <value>tk</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceManH" xml:space="preserve">
+    <value>tk/ in h</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceOnСourier" xml:space="preserve">
+    <value>tk/kuller h</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnPeople" xml:space="preserve">
+    <value>Inimese sissetulek tunnis</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnСourier" xml:space="preserve">
+    <value>Kulleri sissetulek tunnis</value>
+  </data>
+  <data name="TargetsOnMonthElement_RubManH" xml:space="preserve">
+    <value>eur/ in h</value>
+  </data>
+  <data name="TargetsOnMonthElement_Sertificates" xml:space="preserve">
+    <value>Sertifikaadid</value>
+  </data>
+  <data name="TargetsOnMonthElement_Speed" xml:space="preserve">
+    <value>Kiirus</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH" xml:space="preserve">
+    <value>tenge/inimene tunnis</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH_Duplicate[1]" xml:space="preserve">
+    <value>tenge/inimest tunnis</value>
+  </data>
+  <data name="TargetsOnMonthElement_ToDefect" xml:space="preserve">
+    <value>Praagi mahakandmine</value>
+  </data>
+  <data name="TargetsOnMonthElement_UnaccountedLosses" xml:space="preserve">
+    <value>Arvestamata kaotused</value>
+  </data>
+  <data name="TargetsOnYearElement_EmployeeDynamic" xml:space="preserve">
+    <value>Voolavus</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Muster</value>
+  </data>
+  <data name="TemplateCreating" xml:space="preserve">
+    <value>Mustri loomine</value>
+  </data>
+  <data name="Tenge" xml:space="preserve">
+    <value>Tenge</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Neljapäev</value>
+  </data>
+  <data name="ThursdayShort" xml:space="preserve">
+    <value>N </value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Vahetuse alguse kuupäev</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Vahetuse alguse aeg</value>
+  </data>
+  <data name="TimeReportBuildLink" xml:space="preserve">
+    <value>Ehitada</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Kategooria</value>
+  </data>
+  <data name="TimeReportChooseDateLabel" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="TimeReportChooseNameLabel" xml:space="preserve">
+    <value>Nimi, perekonnanimi</value>
+  </data>
+  <data name="TimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Valige töötajate liigid</value>
+  </data>
+  <data name="TimeReportChooseUnitLabel" xml:space="preserve">
+    <value>Valige osakond</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="TimeReportDescription" xml:space="preserve">
+    <value>Töötajatega tegelik töötatud aeg töötasu arvutamiseks</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Nimi, perekonnanimi</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Vahetuse lõppemise aeg</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Vahetuse lõppemise aeg</value>
+  </data>
+  <data name="TimeReportExcelExportLink" xml:space="preserve">
+    <value>Eksport Excel'isse </value>
+  </data>
+  <data name="TimeReportGroupByEmployee" xml:space="preserve">
+    <value>grupeerida töötaja järgi</value>
+  </data>
+  <data name="TimeReportHeader" xml:space="preserve">
+    <value>Tegelik aeg</value>
+  </data>
+  <data name="TimeReportInvalidTimePeriod" xml:space="preserve">
+    <value>Ajaperiood ei tohi ületada {0} päeva</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Öö</value>
+  </data>
+  <data name="TimeReportTypeLabel" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="TimeReportWarning" xml:space="preserve">
+    <value>Näidatud mitte kõik andmed, kuna on leitud liiga palju andmeid antud perioodi jooksul .Proovike kitsendada aruande tingimusi. </value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Nimetus</value>
+  </data>
+  <data name="Title_YouListen" xml:space="preserve">
+    <value>SA KUULAD</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>täna</value>
+  </data>
+  <data name="ToUnit" xml:space="preserve">
+    <value>Kuhu (ladu)</value>
+  </data>
+  <data name="TrainingHistory_BeginDateFailedMessage" xml:space="preserve">
+    <value>Uue kategooria kehtivuse kuupäev peab olema eelneva kategooria kehtivuse kuupäevast suurem </value>
+  </data>
+  <data name="TrainingHistory_NotDefinedCurrentStage" xml:space="preserve">
+    <value>Jooksev koolitamise etapp pole määratud</value>
+  </data>
+  <data name="TrainingHistory_ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Märkige töötaja vallandamise kuupäev</value>
+  </data>
+  <data name="TransactionCompletedState" xml:space="preserve">
+    <value>Lõpetatud</value>
+  </data>
+  <data name="TransactionDate" xml:space="preserve">
+    <value>Tehingu kuupäev</value>
+  </data>
+  <data name="TransactionHeader" xml:space="preserve">
+    <value>tehingute haldamine</value>
+  </data>
+  <data name="TransactionID" xml:space="preserve">
+    <value>Tehingu ID </value>
+  </data>
+  <data name="TransactionNotCompletedState" xml:space="preserve">
+    <value>Lõpetamata</value>
+  </data>
+  <data name="TransactionOptions" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
+  <data name="TransactionOrderNumber" xml:space="preserve">
+    <value>Tellimuse Nr.</value>
+  </data>
+  <data name="TransactionsFromLabel" xml:space="preserve">
+    <value>Tehing </value>
+  </data>
+  <data name="TransactionStatus" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="TransactionSumma" xml:space="preserve">
+    <value>Summa</value>
+  </data>
+  <data name="TransferCanceled" xml:space="preserve">
+    <value>Tellimus liikumiseks {0} on tühistatud</value>
+  </data>
+  <data name="TransferConfirmed" xml:space="preserve">
+    <value>Liikumise taotulus {0} on koostatud</value>
+  </data>
+  <data name="TransferCreated" xml:space="preserve">
+    <value>Liikumine {0} on loodud </value>
+  </data>
+  <data name="TransferCreationDate" xml:space="preserve">
+    <value>Tellitud</value>
+  </data>
+  <data name="TransferDeleted" xml:space="preserve">
+    <value>Tellimus liikumiseks {0} on kustutatud</value>
+  </data>
+  <data name="TransferDestinationUnit" xml:space="preserve">
+    <value>Kuhu</value>
+  </data>
+  <data name="TransferEdited" xml:space="preserve">
+    <value>Liikumine {0} on salvestatud</value>
+  </data>
+  <data name="TransferExpectedDate" xml:space="preserve">
+    <value>Millal on vaja</value>
+  </data>
+  <data name="TransferInfo" xml:space="preserve">
+    <value>Liikumise informatsioon</value>
+  </data>
+  <data name="TransferItems" xml:space="preserve">
+    <value>Liikumise koosseis</value>
+  </data>
+  <data name="TransferLoadTemplate" xml:space="preserve">
+    <value>Laadida mustrit</value>
+  </data>
+  <data name="TransferMaterialTypesList" xml:space="preserve">
+    <value>Tooraine</value>
+  </data>
+  <data name="TransferNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="TransferOriginUnit" xml:space="preserve">
+    <value>Kellelt</value>
+  </data>
+  <data name="TransferReceived" xml:space="preserve">
+    <value>Liikumise taotlus {0} on saadud</value>
+  </data>
+  <data name="TransferReceivingDate" xml:space="preserve">
+    <value>Saamise kuupäev</value>
+  </data>
+  <data name="TransferReport_Taken" xml:space="preserve">
+    <value>Vastuvõetud</value>
+  </data>
+  <data name="TransferReport_TitleHeader" xml:space="preserve">
+    <value>Liikumise nr {0} alates {1}</value>
+  </data>
+  <data name="TransferShipped" xml:space="preserve">
+    <value>Mahalaadimise taotlus {0} on saadud</value>
+  </data>
+  <data name="TransferShippingAmount" xml:space="preserve">
+    <value>Maha laetud</value>
+  </data>
+  <data name="TransferSourceUnit" xml:space="preserve">
+    <value>Kellelt</value>
+  </data>
+  <data name="TransferStatus" xml:space="preserve">
+    <value>Staatus</value>
+  </data>
+  <data name="TransferTemplate_AmountIsInvalid" xml:space="preserve">
+    <value>Tooraine vale väärtus {0}, {1}</value>
+  </data>
+  <data name="Transfer_EmptyItems" xml:space="preserve">
+    <value>Täitke liikumise koosseis</value>
+  </data>
+  <data name="Transfer_Incoming" xml:space="preserve">
+    <value>Sissetulevad</value>
+  </data>
+  <data name="Transfer_Incoming_Duplicate[1]" xml:space="preserve">
+    <value>Sissetulevad</value>
+  </data>
+  <data name="Transfer_OrderedQuantityIsInvalid" xml:space="preserve">
+    <value>Tooraine {0} "Tellitud" väli pole täidetud </value>
+  </data>
+  <data name="Transfer_Outcoming" xml:space="preserve">
+    <value>Väljuvad</value>
+  </data>
+  <data name="Transfer_Outcoming_Duplicate[1]" xml:space="preserve">
+    <value>Väljaminevad</value>
+  </data>
+  <data name="Transfer_ReceivedQuantityIsInvalid" xml:space="preserve">
+    <value>Tooraine {0} kohta pole täidetud väli "Saadud" </value>
+  </data>
+  <data name="Transfer_Ship" xml:space="preserve">
+    <value>Laadida maha</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid" xml:space="preserve">
+    <value>Tooraine {0} kohta pole täidetud väli "Mahalaetud" </value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid_Duplicate[1]" xml:space="preserve">
+    <value>Väli "Maha laetud" pole toorainele täidetud {0}</value>
+  </data>
+  <data name="Transfer_Ship_Duplicate[1]" xml:space="preserve">
+    <value>Laadida maha</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>teisipäev</value>
+  </data>
+  <data name="TuesdayShort" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="TypicalReport" xml:space="preserve">
+    <value>nädalapäevade kaupa</value>
+  </data>
+  <data name="TypicalReportNotificationText" xml:space="preserve">
+    <value>Antud aruanne näitab teile keskmise kulu nädalapäevade järgi viimae 5 nädala jooksul </value>
+  </data>
+  <data name="UnitLevelHoliday" xml:space="preserve">
+    <value>Allüksuse pidu</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="UnitOfMeasureAcromin" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="UnitOfMeasureFull" xml:space="preserve">
+    <value>Mõõduühik</value>
+  </data>
+  <data name="UnitOfMeasureLabel" xml:space="preserve">
+    <value>Mõõtühik</value>
+  </data>
+  <data name="UpCurrentDate" xml:space="preserve">
+    <value>praeguse ajani</value>
+  </data>
+  <data name="VacancyEditActiveLabel" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="VacancyEditAgeFromLabel" xml:space="preserve">
+    <value>kellelt</value>
+  </data>
+  <data name="VacancyEditAgeLabel" xml:space="preserve">
+    <value>Eelistatav vanus:</value>
+  </data>
+  <data name="VacancyEditAgeToLabel" xml:space="preserve">
+    <value>kuni:</value>
+  </data>
+  <data name="VacancyEditCategoryLabel" xml:space="preserve">
+    <value>Valige kategooria:</value>
+  </data>
+  <data name="VacancyEditHeader" xml:space="preserve">
+    <value>Redigeeritud töökohad</value>
+  </data>
+  <data name="VacancyEditInputNameText" xml:space="preserve">
+    <value>Sisestage töökohad</value>
+  </data>
+  <data name="VacancyEditNameLabel" xml:space="preserve">
+    <value>Keda otsime?</value>
+  </data>
+  <data name="VacancyEditSmokingLabel" xml:space="preserve">
+    <value>Suitsetamine</value>
+  </data>
+  <data name="VacancyEditSmokingPreferenceText" xml:space="preserve">
+    <value>soovitavatalt mittesuitsetaja</value>
+  </data>
+  <data name="VacancyEditTypeLabel" xml:space="preserve">
+    <value>Valige liik:</value>
+  </data>
+  <data name="VacancyEditUnitLabel" xml:space="preserve">
+    <value>Määrake pitsarestoranid</value>
+  </data>
+  <data name="VacancyLink_Active" xml:space="preserve">
+    <value>Aktiivsed</value>
+  </data>
+  <data name="VacancyLink_Disabled" xml:space="preserve">
+    <value>Kinnised</value>
+  </data>
+  <data name="VacancyListActiveColumn" xml:space="preserve">
+    <value>Aktiivne?</value>
+  </data>
+  <data name="VacancyListActiveLabel" xml:space="preserve">
+    <value>Aktiivne</value>
+  </data>
+  <data name="VacancyListAgeFromLabel" xml:space="preserve">
+    <value>Kust</value>
+  </data>
+  <data name="VacancyListAgeToLabel" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="VacancyListCriteriaColumn" xml:space="preserve">
+    <value>Kriteerium</value>
+  </data>
+  <data name="VacancyListFromLabel" xml:space="preserve">
+    <value>alates</value>
+  </data>
+  <data name="VacancyListHeader" xml:space="preserve">
+    <value>Töökohad</value>
+  </data>
+  <data name="VacancyListInactiveLabel" xml:space="preserve">
+    <value>Mitteaktiivne</value>
+  </data>
+  <data name="VacancyListNameColumn" xml:space="preserve">
+    <value>Töökoht</value>
+  </data>
+  <data name="VacancyListNewLink" xml:space="preserve">
+    <value>Uus töökoht</value>
+  </data>
+  <data name="VacancyListNonSmokingLabel" xml:space="preserve">
+    <value>Ei suitseta</value>
+  </data>
+  <data name="VacancyListSmokingLabel" xml:space="preserve">
+    <value>Suitsetab</value>
+  </data>
+  <data name="VacancyListToLabel" xml:space="preserve">
+    <value>kuni</value>
+  </data>
+  <data name="VacancyListTypeLabel" xml:space="preserve">
+    <value>Tüüp</value>
+  </data>
+  <data name="VacancyNewHeader" xml:space="preserve">
+    <value>Uue töökoha lisamine</value>
+  </data>
+  <data name="ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Märkige töötaja valandamise kuupäev</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>KM</value>
+  </data>
+  <data name="ViewDebiting" xml:space="preserve">
+    <value>Mahakandmiste ülevaade</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Kolmapäev</value>
+  </data>
+  <data name="WednesdayShort" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="Weekdays" xml:space="preserve">
+    <value>Argipäevad</value>
+  </data>
+  <data name="WeekdaysTooltip" xml:space="preserve">
+    <value>Esmaspäev - Neljapäev</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Nädalavahetus</value>
+  </data>
+  <data name="Weekends" xml:space="preserve">
+    <value>Puhkepäevad</value>
+  </data>
+  <data name="WeekendsSettingsAllowToSelect" xml:space="preserve">
+    <value>Lubada valida puhkepäevana</value>
+  </data>
+  <data name="WeekendsSettingsCountInWeek" xml:space="preserve">
+    <value>Puhkepäevade kogus nädalas</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartOne" xml:space="preserve">
+    <value>Pole võimalik valida rohkem</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartTwo" xml:space="preserve">
+    <value>puhkepäevi</value>
+  </data>
+  <data name="WeekendsSettingsFailedWeekendsCount" xml:space="preserve">
+    <value>Pole võimalik määrata üle {0} puhkepäeva nädalas</value>
+  </data>
+  <data name="WeekendTooltip" xml:space="preserve">
+    <value>Reed - Pühapäev</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Jätkake samas vaimus!</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Staaž</value>
+  </data>
+  <data name="WorkExperienceOfPizzeria" xml:space="preserve">
+    <value>Keskmine pitsarestorani staaž</value>
+  </data>
+  <data name="WorkingHoursEmployeeName" xml:space="preserve">
+    <value>Nimi</value>
+  </data>
+  <data name="WorkingHoursInContextOfUnits" xml:space="preserve">
+    <value>Pitsarestoranide lõikes</value>
+  </data>
+  <data name="WorkingHoursTitle" xml:space="preserve">
+    <value>Töötunnid</value>
+  </data>
+  <data name="WorkingHoursTotal" xml:space="preserve">
+    <value>Kokku</value>
+  </data>
+  <data name="WorkingHoursTotalHours" xml:space="preserve">
+    <value>tunde</value>
+  </data>
+  <data name="WorkingHoursTotalMinutes" xml:space="preserve">
+    <value>minuteid</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Jah</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>eile</value>
+  </data>
+  <data name="ZoneSettingsAddLink" xml:space="preserve">
+    <value>jaama loomine</value>
+  </data>
+  <data name="ZoneSettingsCategoriesLabel" xml:space="preserve">
+    <value>Töötajate kategooriad</value>
+  </data>
+  <data name="ZoneSettingsDeleteLink" xml:space="preserve">
+    <value>Kustutada leht</value>
+  </data>
+  <data name="ZoneSettingsDescription" xml:space="preserve">
+    <value>Tootmisjaamade redigeerimine</value>
+  </data>
+  <data name="ZoneSettingsEditLink" xml:space="preserve">
+    <value>redigeerida</value>
+  </data>
+  <data name="ZoneSettingsHeader" xml:space="preserve">
+    <value>Jaama tootlikkus</value>
+  </data>
+  <data name="ZoneSettingsNameLabel" xml:space="preserve">
+    <value>Nimetus</value>
+  </data>
+  <data name="ZoneSettingsNoCategoriesText" xml:space="preserve">
+    <value>pole kategooriaid</value>
+  </data>
+  <data name="ZoneSettingsPeriod0Option" xml:space="preserve">
+    <value>(ei)</value>
+  </data>
+  <data name="ZoneSettingsPeriod14Option" xml:space="preserve">
+    <value>kaks nädalat</value>
+  </data>
+  <data name="ZoneSettingsPeriod30Option" xml:space="preserve">
+    <value>kuu</value>
+  </data>
+  <data name="ZoneSettingsPeriod7Option" xml:space="preserve">
+    <value>nädal</value>
+  </data>
+  <data name="ZoneSettingsPeriodLabel" xml:space="preserve">
+    <value>Võimaluste kaardi plaanimise periood</value>
+  </data>
+  <data name="ZoneSettingsShowLink" xml:space="preserve">
+    <value>Näidata graafikus</value>
+  </data>
+  <data name="ZoneSettingsSubzonesLabel" xml:space="preserve">
+    <value>Alamjaamad</value>
+  </data>
+  <data name="UnitateLevelHoliday" xml:space="preserve">
+    <value>Asutuse pidu</value>
+  </data>
+</root>

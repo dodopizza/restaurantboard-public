@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Active (popup window)</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Passive</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Passive (in a cart page section)</value>
+  </data>
+  <data name="AdvancePreparationScheme" xml:space="preserve">
+    <value>Preparation in advance</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>All days</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatic</value>
+  </data>
+  <data name="BigPizzas" xml:space="preserve">
+    <value>Large pizzas</value>
+  </data>
+  <data name="CashZonePreparationScheme" xml:space="preserve">
+    <value>Preparation in front counter zone</value>
+  </data>
+  <data name="CategoryDesserts" xml:space="preserve">
+    <value>Desserts</value>
+  </data>
+  <data name="CategoryDrinks" xml:space="preserve">
+    <value>Drinks</value>
+  </data>
+  <data name="CategoryGoods" xml:space="preserve">
+    <value>Goods</value>
+  </data>
+  <data name="CategoryPieces" xml:space="preserve">
+    <value>Slices</value>
+  </data>
+  <data name="CategoryPizza" xml:space="preserve">
+    <value>Pizza</value>
+  </data>
+  <data name="CategorySauces" xml:space="preserve">
+    <value>Sauces</value>
+  </data>
+  <data name="CategorySnacks" xml:space="preserve">
+    <value>Snacks</value>
+  </data>
+  <data name="Constructor_SauceUnknown" xml:space="preserve">
+    <value>No sauce</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Delivery and restaurant</value>
+  </data>
+  <data name="DeliveryMenu" xml:space="preserve">
+    <value>Delivery menu</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Sending is in progress</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="ErrorMessage_DiscountPriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Field "Price with discount" cannot contain more than 10 symbols.</value>
+  </data>
+  <data name="ErrorMessage_PriceMustBePositive" xml:space="preserve">
+    <value>Price cannot be less than 0.</value>
+  </data>
+  <data name="ErrorMessage_PriceValueHasInvalidValue" xml:space="preserve">
+    <value>Field "Price" contains unacceptable values</value>
+  </data>
+  <data name="ErrorMessage_PriceValueLengthMax10Сharacter" xml:space="preserve">
+    <value>Field "Price" cannot cointain more than 10 symbols</value>
+  </data>
+  <data name="ErrorMessage_PriceValueRequired" xml:space="preserve">
+    <value>Field "Price" cannot be empty</value>
+  </data>
+  <data name="Error_EmptyDimensionalCharacteristics" xml:space="preserve">
+    <value>Size characteristic hasn't been defined</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Incorrect price. Must be a multiple of 100.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Incorrect price. Must be an integer.</value>
+  </data>
+  <data name="Error_Number" xml:space="preserve">
+    <value>Invalid quantity</value>
+  </data>
+  <data name="Error_SalePeriod_EndDateLessThanStartDate" xml:space="preserve">
+    <value>The sales end date cannot precede the sales start date.</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotBeInThePast" xml:space="preserve">
+    <value>Impossible to set any date before the current date as sales start date.</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotChange" xml:space="preserve">
+    <value>Only future sales start dates can be changed.</value>
+  </data>
+  <data name="Error_TooLongDimensionalCharacteristics" xml:space="preserve">
+    <value>Name of size characteristic is too long</value>
+  </data>
+  <data name="European" xml:space="preserve">
+    <value>European</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>The order total ({0}) is less than dodollars spent ({1})</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>food-grade</value>
+  </data>
+  <data name="GoodsSalePeriod" xml:space="preserve">
+    <value>{0}&amp;nbsp;&amp;mdash;&amp;nbsp;{1}</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Recommendations</value>
+  </data>
+  <data name="Halal" xml:space="preserve">
+    <value>Halal</value>
+  </data>
+  <data name="HalfHalal" xml:space="preserve">
+    <value>Semi-halal</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingredients</value>
+  </data>
+  <data name="MediumPizzas" xml:space="preserve">
+    <value>Medium pizzas</value>
+  </data>
+  <data name="MenuAccessibility_Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="MenuAccessibility_Personal" xml:space="preserve">
+    <value>Staff meals</value>
+  </data>
+  <data name="MenuAccessibility_Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Invalid promocode</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>metaproduct</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>of January,of February, of March,of April,of May, of June, of July,of August,of September,of November,of December</value>
+  </data>
+  <data name="Nonfood" xml:space="preserve">
+    <value>non-food</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Only days off</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Only work days</value>
+  </data>
+  <data name="PackagingScheme" xml:space="preserve">
+    <value>Packaging</value>
+  </data>
+  <data name="PersonalMenu" xml:space="preserve">
+    <value>Staff menu</value>
+  </data>
+  <data name="PizzaScheme" xml:space="preserve">
+    <value>Scheme for pizzas</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Present</value>
+  </data>
+  <data name="PriorityHigh" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="PriorityLow" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="PriorityMedium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>product</value>
+  </data>
+  <data name="ProductMenuSalesTimeArroundClock" xml:space="preserve">
+    <value>24 hours</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Promocode</value>
+  </data>
+  <data name="RestaurantMenu" xml:space="preserve">
+    <value>Restaurant menu</value>
+  </data>
+  <data name="SalePeriodEmpty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="SandwichScheme" xml:space="preserve">
+    <value>Scheme for sandwiches</value>
+  </data>
+  <data name="SimpleScheme" xml:space="preserve">
+    <value>Scheme without production</value>
+  </data>
+  <data name="SmallPizzas" xml:space="preserve">
+    <value>Small pizzas</value>
+  </data>
+  <data name="SnacksScheme" xml:space="preserve">
+    <value>Scheme for snacks</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Prices have not been set for one or more selected products</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="TypeBaked" xml:space="preserve">
+    <value>Baking</value>
+  </data>
+  <data name="TypeComposite" xml:space="preserve">
+    <value>Complex</value>
+  </data>
+  <data name="TypeSimple" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Not defined</value>
+  </data>
+  <data name="WithoutSpecialization" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+</root>

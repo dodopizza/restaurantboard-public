@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accountant" xml:space="preserve">
+    <value>Contabil</value>
+  </data>
+  <data name="AllPizzerias" xml:space="preserve">
+    <value>Toate pizzeriile</value>
+  </data>
+  <data name="AllReasons" xml:space="preserve">
+    <value>Toate cauzele</value>
+  </data>
+  <data name="BonusAccruedByFriends" xml:space="preserve">
+    <value>Pentru prietenii invitati</value>
+  </data>
+  <data name="BonusAccruedTitle" xml:space="preserve">
+    <value>„Dodo lei” atribuiti</value>
+  </data>
+  <data name="BonusAll" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="BonusPercentage" xml:space="preserve">
+    <value>Procent din comenzi</value>
+  </data>
+  <data name="BonusPercentageFromFriends" xml:space="preserve">
+    <value>Procent din comenzile prietenilor</value>
+  </data>
+  <data name="BonusSpentPercentage" xml:space="preserve">
+    <value>Procent de „Dodo lei” consumati din incasarile totale</value>
+  </data>
+  <data name="BonusSpentTitle" xml:space="preserve">
+    <value>„Dodo lei” consumati</value>
+  </data>
+  <data name="CashBoxModel_Citizen" xml:space="preserve">
+    <value>Citizen CT-S310II</value>
+  </data>
+  <data name="Cashier" xml:space="preserve">
+    <value>Casier restaurant</value>
+  </data>
+  <data name="ClientTreatment_Name" xml:space="preserve">
+    <value>pe nume</value>
+  </data>
+  <data name="ClientTreatment_RandomImage" xml:space="preserve">
+    <value>imagine aleatorie</value>
+  </data>
+  <data name="Consumption" xml:space="preserve">
+    <value>Consum</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Curier</value>
+  </data>
+  <data name="CourierMotivationScreen" xml:space="preserve">
+    <value>Panou motivare curieri</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>Termen de valabilitate expirat</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>Persoana responsabila</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>Ambalaj deteriorat</value>
+  </data>
+  <data name="DeliveryCashier" xml:space="preserve">
+    <value>Casier livrare</value>
+  </data>
+  <data name="DepartmentAdmin" xml:space="preserve">
+    <value>Administrator unitate</value>
+  </data>
+  <data name="DodoControl" xml:space="preserve">
+    <value>Dodo Controlling</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Angajat</value>
+  </data>
+  <data name="EmployeesOnShiftScreen" xml:space="preserve">
+    <value>Panou angajati</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Pret incorect. Trebuie sa fie multiplu de 100.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Pret incorect. Trebuie sa fie multiplu de 1.</value>
+  </data>
+  <data name="ExpressProductsScreen" xml:space="preserve">
+    <value>Produse express</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>National</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>Pentru toate unitatile</value>
+  </data>
+  <data name="FranchiseeOfficeManager" xml:space="preserve">
+    <value>Francizat - manager birou</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Intrari</value>
+  </data>
+  <data name="IndexValue" xml:space="preserve">
+    <value>Indicator</value>
+  </data>
+  <data name="InvestorOfficeManager" xml:space="preserve">
+    <value>Manager birou - investitor</value>
+  </data>
+  <data name="KitchenMotivationScreen" xml:space="preserve">
+    <value>Panou motivare bucatarie</value>
+  </data>
+  <data name="LoginNotCorrect" xml:space="preserve">
+    <value>Login-ul poate contine doar caractere latine, cifre, simboluri, underscore si punct</value>
+  </data>
+  <data name="LoginNotRequired" xml:space="preserve">
+    <value>Loginul nu poate fi necompletat</value>
+  </data>
+  <data name="LoginTooLong" xml:space="preserve">
+    <value>Loginul nu poate contine peste 50 de caractere</value>
+  </data>
+  <data name="LoyaltyManager" xml:space="preserve">
+    <value>Managerul sistemului de loialitate</value>
+  </data>
+  <data name="MysteryShopperManager" xml:space="preserve">
+    <value>Administrare CM</value>
+  </data>
+  <data name="NewClients" xml:space="preserve">
+    <value>Clienti noi</value>
+  </data>
+  <data name="NewClientsByLoyaltyTotalCount" xml:space="preserve">
+    <value>Numarul clientilor atrasi prin Sistemul de bonusare</value>
+  </data>
+  <data name="NewClientsTotalCount" xml:space="preserve">
+    <value>Nuar de clienti noi</value>
+  </data>
+  <data name="OfficeManager" xml:space="preserve">
+    <value>Manager birou</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="PasswordNotRequired" xml:space="preserve">
+    <value>Parola nu poate fi necompletata</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Parolele nu coincid</value>
+  </data>
+  <data name="PasswordTooLong" xml:space="preserve">
+    <value>Parola nu poate contine peste 100 de caractere</value>
+  </data>
+  <data name="Pizzamaker" xml:space="preserve">
+    <value>Pizzamaker</value>
+  </data>
+  <data name="PrepositionalAliasCaption" xml:space="preserve">
+    <value>Numele atributiv</value>
+  </data>
+  <data name="PublicCaption" xml:space="preserve">
+    <value>Public</value>
+  </data>
+  <data name="PublicPages" xml:space="preserve">
+    <value>Ecrane publice</value>
+  </data>
+  <data name="Report_MaterialDebiting" xml:space="preserve">
+    <value>Casari materii prime</value>
+  </data>
+  <data name="RestaurantScreen" xml:space="preserve">
+    <value>Panou restaurant</value>
+  </data>
+  <data name="RevenueNewClientsByLoyaltyTotal" xml:space="preserve">
+    <value>Suma comenzilor clientilor noi, atrasi prin Sistemul de bonusare</value>
+  </data>
+  <data name="RevisionAt" xml:space="preserve">
+    <value>Inventar din {0}</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Gestionar</value>
+  </data>
+  <data name="RootAdmin" xml:space="preserve">
+    <value>Administrator retea</value>
+  </data>
+  <data name="RootOfficeManager" xml:space="preserve">
+    <value>Manager retea</value>
+  </data>
+  <data name="RootOperator" xml:space="preserve">
+    <value>Operator Sef</value>
+  </data>
+  <data name="ShiftManager" xml:space="preserve">
+    <value>Sef de tura</value>
+  </data>
+  <data name="ShopWindowItemsScreen" xml:space="preserve">
+    <value>Vitrina</value>
+  </data>
+  <data name="StartBonus" xml:space="preserve">
+    <value>Bonus de start</value>
+  </data>
+  <data name="TakenLosses" xml:space="preserve">
+    <value>Pierderi inregistrate</value>
+  </data>
+  <data name="Title_LossesAndExceesReport" xml:space="preserve">
+    <value>Pierderi neinregistrate</value>
+  </data>
+  <data name="Title_LoyaltyReport" xml:space="preserve">
+    <value>Sistem de bonusare</value>
+  </data>
+  <data name="TrackingManager" xml:space="preserve">
+    <value>Tracking</value>
+  </data>
+  <data name="TrackingManagerOnColdAssemblyTable" xml:space="preserve">
+    <value>Tracking – Gustari </value>
+  </data>
+  <data name="TrackingManagerOnDoughTable" xml:space="preserve">
+    <value>Tracking – Aluat </value>
+  </data>
+  <data name="TrackingManagerOnHotAssemblyTable" xml:space="preserve">
+    <value>Tracking – Linia </value>
+  </data>
+  <data name="TrackingManagerOnOrdersToDelivery" xml:space="preserve">
+    <value>Tracking – Curieri</value>
+  </data>
+  <data name="TrackingManagerOnOrdersToStationary" xml:space="preserve">
+    <value>Tracking – Restaurant</value>
+  </data>
+  <data name="TrackingManagerOnPackingTable" xml:space="preserve">
+    <value>Tracking – Ambalare</value>
+  </data>
+  <data name="TrackingManagerOnSliceDebiting" xml:space="preserve">
+    <value>Tracking – Casare felii</value>
+  </data>
+  <data name="TvBoard" xml:space="preserve">
+    <value>TV-board-uri</value>
+  </data>
+  <data name="UnitateAdmin" xml:space="preserve">
+    <value>Administrator unitate</value>
+  </data>
+  <data name="UserRoleNotExist" xml:space="preserve">
+    <value>Nu a fost selectat rolul</value>
+  </data>
+  <data name="UserUnitNotRequired" xml:space="preserve">
+    <value>Nu este selectat unitateul</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valoare</value>
+  </data>
+  <data name="YandexTransactionManager" xml:space="preserve">
+    <value>Manager tranzactii in Y.Money</value>
+  </data>
+</root>

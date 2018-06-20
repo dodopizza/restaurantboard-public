@@ -1,0 +1,121 @@
+﻿.RomanianLeu {
+    // хаки для верстки по странам
+    // тут Румыния
+    // media-queries(lg) - для теликов
+    // остальное для планшетов
+    .price-InOven {
+        @include font-size(130);
+    }
+
+    .price-currency-InOven {
+        width: auto;
+        position: relative;
+        bottom: 25px;
+        @include font-size(110);
+    }
+
+    .price-currency-block-InOven {
+        width: auto;
+    }
+
+    .price-for-piece-InOven {
+        bottom: 35px;
+        left: 5px;
+    }
+
+    .price-InOven-container {
+        width: 370px;
+    }
+
+    .cook-time-label-InOven {
+        line-height: 1.2;
+    }
+
+    .price {
+        @include font-size(170);
+
+        @include media-queries(lg) {
+            @include font-size(230);
+        }
+    }
+
+    .price-currency {
+        @include font-size(100);
+
+        @include media-queries(lg) {
+            position: relative;
+            top: -12px;
+            @include font-size(150);
+        }
+    }
+
+    .dodomini_name,
+    .pizza-name {
+        @include media-queries(lg) {
+            @include font-size(60);
+        }
+    }
+
+    .pizza-content {
+        @include media-queries(lg) {
+            @include font-size(40);
+        }
+    }
+
+    hr {
+        @include media-queries(lg) {
+            margin-top: 40px !important;
+            margin-bottom: 70px !important;
+        }
+    }
+
+    .status-name {
+        padding: 0 7px;
+
+        @include media-queries(lg) {
+            margin-top: 7%;
+            padding-top: 5px;
+            vertical-align: bottom;
+            white-space: nowrap;
+            @include font-size(50);
+        }
+
+        .back-img {
+            @include media-queries(lg) {
+                width: 42px;
+                height: 42px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    .cook-time-label {
+        @include media-queries(lg) {
+            position: relative;
+            bottom: 15px;
+        }
+    }
+
+    .time-minutes-label {
+        @include media-queries(lg) {
+            position: relative;
+            top: -10px;
+        }
+    }
+
+    .overdue-piece {
+        right: 45px;
+
+        @include media-queries(lg) {
+            right: 15px;
+        }
+    }
+
+    .cost {
+        @include font-size(400);
+    }
+
+    .price-currency-awesome .ruble-awesome {
+        @include font-size(200);
+    }
+}

@@ -1,0 +1,35 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.status-block {
+    display: table;
+    text-align: center;
+}
+
+.status-name {
+    border: 3px solid $color-80;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 16% 0;
+    color: $color-80;
+    width: 100%;
+    height: 100px;
+    line-height: 1;
+    display: -webkit-flex;
+    display: flex;
+
+    > div {
+        margin: auto;
+        width: 100%;
+        display: inline-block;
+        padding-top: 4px;
+    }
+
+    @include media-queries(lg) {
+        margin-top: 7%;
+        padding-top: 5px;
+        vertical-align: bottom;
+        white-space: nowrap;
+        @include font-size(50);
+    }
+}

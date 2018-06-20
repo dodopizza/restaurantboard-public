@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Активная</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Активная (всплывающее окно)</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Пассивная</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Пассивная (в блоке на странице корзины)</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="ALISA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>Все дни</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="AmountWithOutNDS" xml:space="preserve">
+    <value>Сумма без НДС</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Авто</value>
+  </data>
+  <data name="AverageCheck" xml:space="preserve">
+    <value>Средний чек</value>
+  </data>
+  <data name="AverageWorkLoad" xml:space="preserve">
+    <value>Средняя загрузка</value>
+  </data>
+  <data name="BadBonus" xml:space="preserve">
+    <value>Долго</value>
+  </data>
+  <data name="BannerPosition_Center" xml:space="preserve">
+    <value>Цена по центру</value>
+  </data>
+  <data name="BannerPosition_Left" xml:space="preserve">
+    <value>Цена слева</value>
+  </data>
+  <data name="BannerPosition_None" xml:space="preserve">
+    <value>Без цены</value>
+  </data>
+  <data name="BannerPosition_Right" xml:space="preserve">
+    <value>Цена справа</value>
+  </data>
+  <data name="BannerPricePrefix" xml:space="preserve">
+    <value>Префикс цены</value>
+  </data>
+  <data name="BasicData" xml:space="preserve">
+    <value>Исходные данные</value>
+  </data>
+  <data name="BeginDate" xml:space="preserve">
+    <value>Начало</value>
+  </data>
+  <data name="BonusAction" xml:space="preserve">
+    <value>Акция</value>
+  </data>
+  <data name="BonusActionDescription" xml:space="preserve">
+    <value>Описание акции</value>
+  </data>
+  <data name="BonusActionEndPoint" xml:space="preserve">
+    <value>Направленность</value>
+  </data>
+  <data name="BonusActionName" xml:space="preserve">
+    <value>Название акции</value>
+  </data>
+  <data name="CallCenterDailyReportXmlHeader" xml:space="preserve">
+    <value>Отчет: Расчеты с КЦ посуточно</value>
+  </data>
+  <data name="CallCenterReportXmlHeader" xml:space="preserve">
+    <value>Отчет: Расчеты с КЦ</value>
+  </data>
+  <data name="CashBoxShifts" xml:space="preserve">
+    <value>Кассовые смены:</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Имя клиента</value>
+  </data>
+  <data name="ColdAssemblyTable" xml:space="preserve">
+    <value>Начинка, холодный</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Расходники</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Стоимость</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="CountWorkedHours" xml:space="preserve">
+    <value>Кол-во отработанных часов</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Курьер</value>
+  </data>
+  <data name="CourierNumber" xml:space="preserve">
+    <value>Номер курьера</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="DateBeginSale" xml:space="preserve">
+    <value>Дата возобновления</value>
+  </data>
+  <data name="DateFilter_Day" xml:space="preserve">
+    <value>В конкретный день</value>
+  </data>
+  <data name="DateFilter_DayOfWeek" xml:space="preserve">
+    <value>По дням недели</value>
+  </data>
+  <data name="DateFilter_Period" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="DatePeriod" xml:space="preserve">
+    <value>Период дат:</value>
+  </data>
+  <data name="DateStopSale" xml:space="preserve">
+    <value>Дата остановки</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Дата\время</value>
+  </data>
+  <data name="DefectiveStage" xml:space="preserve">
+    <value>Станция</value>
+  </data>
+  <data name="DefectProduct" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="DelayReason" xml:space="preserve">
+    <value>Причина просрочки</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="DeliveryAddress" xml:space="preserve">
+    <value>Адресс доставки</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Доставка и ресторан</value>
+  </data>
+  <data name="DeliverySectorName" xml:space="preserve">
+    <value>Сектор доставки</value>
+  </data>
+  <data name="DeliveryZone" xml:space="preserve">
+    <value>Зона доставки</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Скидка</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Выполняется отправка</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Ожидание</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Завершено</value>
+  </data>
+  <data name="Dough25" xml:space="preserve">
+    <value>Толстое 25</value>
+  </data>
+  <data name="Dough30" xml:space="preserve">
+    <value>Толстое 30</value>
+  </data>
+  <data name="Dough30Thin" xml:space="preserve">
+    <value>Тонкое 30</value>
+  </data>
+  <data name="Dough35" xml:space="preserve">
+    <value>Толстое 35</value>
+  </data>
+  <data name="Dough35Thin" xml:space="preserve">
+    <value>Тонкое 35</value>
+  </data>
+  <data name="DoughTable" xml:space="preserve">
+    <value>Тесто</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Длительность</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeType" xml:space="preserve">
+    <value>Тип сотрудника</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Окончание</value>
+  </data>
+  <data name="EndPointType" xml:space="preserve">
+    <value>Конечная точка</value>
+  </data>
+  <data name="EndStopSale" xml:space="preserve">
+    <value>Дата возобновления</value>
+  </data>
+  <data name="ErrorMessage_CancelAccuralToMysteryShopper" xml:space="preserve">
+    <value>На счете клиента недостаточно средств для списания</value>
+  </data>
+  <data name="ErrorMessage_InvalidClientId" xml:space="preserve">
+    <value>Операция запрещена (Некорректный ID клиента)</value>
+  </data>
+  <data name="ErrorMessage_NeedEmailForReport" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ErrorMessage_NotEnoughMoney" xml:space="preserve">
+    <value>Недостаточно денег на счету</value>
+  </data>
+  <data name="ErrorMessage_TransactionNotFond" xml:space="preserve">
+    <value>Транзакция не найдена</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>Ежедневная</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>Ежемесячная</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>Сумма заказа ({0}) меньше потраченных додолларов ({1}).</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Исключая</value>
+  </data>
+  <data name="ExcludeDismissedEmployees" xml:space="preserve">
+    <value>исключая уволенных сотрудников</value>
+  </data>
+  <data name="ExpiredOrdersCount" xml:space="preserve">
+    <value>Просрочено</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByOrders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByProducts" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="Filter_ProductsByCategories" xml:space="preserve">
+    <value>По категории продукта</value>
+  </data>
+  <data name="Filter_ProductsByTypes" xml:space="preserve">
+    <value>По типу продукта</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Готовая продукция</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="FirstOrderDate" xml:space="preserve">
+    <value>Дата первого заказа</value>
+  </data>
+  <data name="FirstOrderTime" xml:space="preserve">
+    <value>Время первого заказа</value>
+  </data>
+  <data name="Fridays" xml:space="preserve">
+    <value>Пятницы</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="FunctionFilter_Avg" xml:space="preserve">
+    <value>сред</value>
+  </data>
+  <data name="FunctionFilter_Max" xml:space="preserve">
+    <value>макс</value>
+  </data>
+  <data name="FunctionFilter_Min" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="GoodBonus" xml:space="preserve">
+    <value>Стандарт</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Грамм</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>Гр.</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>праздники</value>
+  </data>
+  <data name="HotAssemblyTable" xml:space="preserve">
+    <value>Начинка,горячий</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>Дома</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ингредиент</value>
+  </data>
+  <data name="InQueue" xml:space="preserve">
+    <value>В очереди</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Инвентарь</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>кг</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Килограмм</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>Кг.</value>
+  </data>
+  <data name="LabourCostShort" xml:space="preserve">
+    <value>LC</value>
+  </data>
+  <data name="LastOrderDate" xml:space="preserve">
+    <value>Дата последнего заказа</value>
+  </data>
+  <data name="LastOrderTime" xml:space="preserve">
+    <value>Время последнего заказа</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Литр</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>Л.</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>Нас. пункт</value>
+  </data>
+  <data name="LongPreparationProduct" xml:space="preserve">
+    <value>Долгое приготовление, %</value>
+  </data>
+  <data name="MeasureUnit" xml:space="preserve">
+    <value>ед.изм.</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Недействительный промокод</value>
+  </data>
+  <data name="Message_InvalidTime" xml:space="preserve">
+    <value>Задан некорректный формат времени</value>
+  </data>
+  <data name="Message_UnitIdsRequired" xml:space="preserve">
+    <value>Не выбрано ни одно подразделение</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>Метапродукт</value>
+  </data>
+  <data name="MethodOfCalculation" xml:space="preserve">
+    <value>Способ расчета</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Миллилитр</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>Мл.</value>
+  </data>
+  <data name="Mondays" xml:space="preserve">
+    <value>Понедельники</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="NDS" xml:space="preserve">
+    <value>НДС,%</value>
+  </data>
+  <data name="NormalBonus" xml:space="preserve">
+    <value>Нейтральный интервал</value>
+  </data>
+  <data name="NotDefined" xml:space="preserve">
+    <value>Не определено</value>
+  </data>
+  <data name="OnHallSquare" xml:space="preserve">
+    <value>На м2 зала</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Только выходные</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Только будни</value>
+  </data>
+  <data name="OperationCount" xml:space="preserve">
+    <value>Количество срабатываний</value>
+  </data>
+  <data name="OrderAmount" xml:space="preserve">
+    <value>Сумма заказа</value>
+  </data>
+  <data name="OrderDateOfReceipt" xml:space="preserve">
+    <value>Дата заказа</value>
+  </data>
+  <data name="OrderId" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OrderLinesCount" xml:space="preserve">
+    <value>Позиций</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>№ заказа</value>
+  </data>
+  <data name="OrderOperator" xml:space="preserve">
+    <value>Оператор заказа</value>
+  </data>
+  <data name="OrderPaymentType" xml:space="preserve">
+    <value>Способ оплаты</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="OrdersAmount" xml:space="preserve">
+    <value>Сумма заказов</value>
+  </data>
+  <data name="OrdersCount" xml:space="preserve">
+    <value>Количество заказов</value>
+  </data>
+  <data name="OrdersCountOnCouriers" xml:space="preserve">
+    <value>Кол-во заказов на курьера в час</value>
+  </data>
+  <data name="OrdersDelivered" xml:space="preserve">
+    <value>Заказов доставлено</value>
+  </data>
+  <data name="OrdersOnCouriersInHourCount" xml:space="preserve">
+    <value>Заказов на курьера в час</value>
+  </data>
+  <data name="OrderSourceMobile" xml:space="preserve">
+    <value>Мобильн.Прил.</value>
+  </data>
+  <data name="OrderSources" xml:space="preserve">
+    <value>Источники заказов</value>
+  </data>
+  <data name="OrderSourceSite" xml:space="preserve">
+    <value>Сайт</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Статус заказа</value>
+  </data>
+  <data name="OrderType" xml:space="preserve">
+    <value>Тип заказа</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Организация</value>
+  </data>
+  <data name="OverdueBonus" xml:space="preserve">
+    <value>Штраф (Ожидание)</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Упаковка</value>
+  </data>
+  <data name="PackingTable" xml:space="preserve">
+    <value>Упаковка</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="PaymentCardTransId" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>Питание персонала</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Самовывоз</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Пицца</value>
+  </data>
+  <data name="PizzaAndCompositionCountOnEmployee" xml:space="preserve">
+    <value>Кол-во пицц и закусок на человека в час</value>
+  </data>
+  <data name="PizzaCountOnEmployee" xml:space="preserve">
+    <value>Кол-во пицц на человека в час</value>
+  </data>
+  <data name="Pizzeria" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="Portion" xml:space="preserve">
+    <value>Доля</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>Изготовление</value>
+  </data>
+  <data name="PreparationTime" xml:space="preserve">
+    <value>Время изготовления</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Подарок</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Продукт</value>
+  </data>
+  <data name="ProductCategories" xml:space="preserve">
+    <value>Категории продуктов</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>Id продукта</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Изготовление</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Название продукта</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="ProductSales" xml:space="preserve">
+    <value>Продажи</value>
+  </data>
+  <data name="ProductsGroup" xml:space="preserve">
+    <value>Группа продуктов</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Тип продукта</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Промокод</value>
+  </data>
+  <data name="PromoCode" xml:space="preserve">
+    <value>Промо-код</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Штука</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>Шт.</value>
+  </data>
+  <data name="ReasonStopSale" xml:space="preserve">
+    <value>Причина остановки</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Отчет:</value>
+  </data>
+  <data name="ReportName_ConsumptionProducts" xml:space="preserve">
+    <value>Расход продуктов</value>
+  </data>
+  <data name="ReportName_DeliverySectorsReport" xml:space="preserve">
+    <value>Зона доставки</value>
+  </data>
+  <data name="ReportName_ExpressProductsStatistics" xml:space="preserve">
+    <value>Просроченные экспресс-продукты</value>
+  </data>
+  <data name="ReportName_ProductivityCouriersStatistic" xml:space="preserve">
+    <value>Загруженность курьеров</value>
+  </data>
+  <data name="ReportName_ProductsSalesForCalculationCard" xml:space="preserve">
+    <value>Отчет по продажам продуктов</value>
+  </data>
+  <data name="ReportName_ReportKitchenMotivation" xml:space="preserve">
+    <value>Мотивация кухни</value>
+  </data>
+  <data name="ReportName_Revenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="RestOfDeliverySectors" xml:space="preserve">
+    <value>Остальное</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="RevenueOnEmployee" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="RevisionType" xml:space="preserve">
+    <value>Тип ревизии</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Ревизор:</value>
+  </data>
+  <data name="SalaryCategory" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="SalaryDayHours" xml:space="preserve">
+    <value>Дневные часы</value>
+  </data>
+  <data name="SalaryDayMoney" xml:space="preserve">
+    <value>ЗП, день</value>
+  </data>
+  <data name="SalaryEmployeeName" xml:space="preserve">
+    <value>Фамилия, имя</value>
+  </data>
+  <data name="SalaryHolidayFactor" xml:space="preserve">
+    <value>Коэф-т особого дня</value>
+  </data>
+  <data name="SalaryHolidayHours" xml:space="preserve">
+    <value>Праздничные часы</value>
+  </data>
+  <data name="SalaryKitchenStaff" xml:space="preserve">
+    <value>Зарплата кухни</value>
+  </data>
+  <data name="SalaryNightFactor" xml:space="preserve">
+    <value>Ночной коэф-т</value>
+  </data>
+  <data name="SalaryNightHours" xml:space="preserve">
+    <value>Ночные часы</value>
+  </data>
+  <data name="SalaryNightMoney" xml:space="preserve">
+    <value>ЗП, ночь</value>
+  </data>
+  <data name="SalaryPremiumMoney" xml:space="preserve">
+    <value>ЗП, премия</value>
+  </data>
+  <data name="SalaryRate" xml:space="preserve">
+    <value>Ставка</value>
+  </data>
+  <data name="SalaryShiftEndDate" xml:space="preserve">
+    <value>Дата окончания смены</value>
+  </data>
+  <data name="SalaryShiftEndTime" xml:space="preserve">
+    <value>Время окончания смены</value>
+  </data>
+  <data name="SalaryShiftStartDate" xml:space="preserve">
+    <value>Дата окончания смены</value>
+  </data>
+  <data name="SalaryShiftStartTime" xml:space="preserve">
+    <value>Время начала смены</value>
+  </data>
+  <data name="SalaryShiftTime" xml:space="preserve">
+    <value>Время смены</value>
+  </data>
+  <data name="SalaryTotalHours" xml:space="preserve">
+    <value>Всего часов</value>
+  </data>
+  <data name="SalaryTotalMoney" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Вид продажи</value>
+  </data>
+  <data name="SaleTime" xml:space="preserve">
+    <value>Время продажи (печати чека)</value>
+  </data>
+  <data name="SaleType" xml:space="preserve">
+    <value>Направление продажи</value>
+  </data>
+  <data name="Saturdays" xml:space="preserve">
+    <value>Субботы</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>Сектор</value>
+  </data>
+  <data name="SelectInventoryType" xml:space="preserve">
+    <value>- Выберите класс сырья -</value>
+  </data>
+  <data name="SelectUnitsOfMeasure" xml:space="preserve">
+    <value>- Выберите единицу измерения -</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Полуфабрикат</value>
+  </data>
+  <data name="ShiftNumber" xml:space="preserve">
+    <value>Номер смены</value>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Утренняя смена,Вечерняя смена,Ночная смена</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>Тип смены</value>
+  </data>
+  <data name="SliderType_Default" xml:space="preserve">
+    <value>Стандартный</value>
+  </data>
+  <data name="SliderType_ForPieces" xml:space="preserve">
+    <value>Для кусочков</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Не для всех выбранных продуктов указана цена.</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="StopSale" xml:space="preserve">
+    <value>Остановка продаж</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="StringLengthExeedsMaximum" xml:space="preserve">
+    <value>Длина строки для поля {0} не может быть больше {1} символов</value>
+  </data>
+  <data name="Sundays" xml:space="preserve">
+    <value>Воскресения</value>
+  </data>
+  <data name="TabNo" xml:space="preserve">
+    <value>Табельный номер</value>
+  </data>
+  <data name="TechnicalDescription" xml:space="preserve">
+    <value>Типовое описание</value>
+  </data>
+  <data name="Thursdays" xml:space="preserve">
+    <value>Четверги</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="TimeOutOrdersPercentage" xml:space="preserve">
+    <value>% просрочки</value>
+  </data>
+  <data name="TimeOutPeriod" xml:space="preserve">
+    <value>Ожидание</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Дата начала смены</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Время начала смены</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Дневные часы</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Фамилия, имя сотрудника</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Дата окончания смены</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Время окончания смены</value>
+  </data>
+  <data name="TimeReportHoursTotalColumnTitle" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Ночные часы</value>
+  </data>
+  <data name="Title_ActivityDeliverySectors" xml:space="preserve">
+    <value>Активность секторов доставки</value>
+  </data>
+  <data name="Title_BonusActionActivityReport" xml:space="preserve">
+    <value>Активность по акциям</value>
+  </data>
+  <data name="Title_BonusActionsReport" xml:space="preserve">
+    <value>Применение автоматических акций</value>
+  </data>
+  <data name="Title_ClientsStatisicReport" xml:space="preserve">
+    <value>Статистика по клиентам</value>
+  </data>
+  <data name="Title_CourierStatisicReport" xml:space="preserve">
+    <value>Статистика по курьерам</value>
+  </data>
+  <data name="Title_CourierTasks" xml:space="preserve">
+    <value>Поездки курьеров</value>
+  </data>
+  <data name="Title_DefectiveProductsReport" xml:space="preserve">
+    <value>Забракованные продукты</value>
+  </data>
+  <data name="Title_DeliveryStatistic" xml:space="preserve">
+    <value>Статистика по доставке</value>
+  </data>
+  <data name="Title_DoughReport" xml:space="preserve">
+    <value>Расход теста</value>
+  </data>
+  <data name="Title_LabourCost" xml:space="preserve">
+    <value>Labour Cost</value>
+  </data>
+  <data name="Title_OrdersReport" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="Title_ProductionTimeReport" xml:space="preserve">
+    <value>Время изготовления</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoad" xml:space="preserve">
+    <value>Отчет по загруженности</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadOrders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadProducts" xml:space="preserve">
+    <value>Продукты</value>
+  </data>
+  <data name="Title_ReportPopularityProducts" xml:space="preserve">
+    <value>Популярность продуктов</value>
+  </data>
+  <data name="Title_ReportProductivity" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="Title_ReportPromoCodeUsed" xml:space="preserve">
+    <value>Расход промо-кодов</value>
+  </data>
+  <data name="Title_ReportSaleByCashBoxSessions" xml:space="preserve">
+    <value>Продажи по кассовым сменам</value>
+  </data>
+  <data name="Title_RevenuePercentage" xml:space="preserve">
+    <value>Доля выручки, %</value>
+  </data>
+  <data name="Title_SalaryReport" xml:space="preserve">
+    <value>Зарплата</value>
+  </data>
+  <data name="Title_SaleCount" xml:space="preserve">
+    <value>Продано, шт</value>
+  </data>
+  <data name="Title_StopSaleReport" xml:space="preserve">
+    <value>Стоп-продажи</value>
+  </data>
+  <data name="Title_TimeReport" xml:space="preserve">
+    <value>Фактическое время</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Итого</value>
+  </data>
+  <data name="TotalNDS" xml:space="preserve">
+    <value>Сумма НДС</value>
+  </data>
+  <data name="TotalOrdersPrice" xml:space="preserve">
+    <value>Сумма заказов по акции</value>
+  </data>
+  <data name="TotalPayableForPeriod" xml:space="preserve">
+    <value>Итого к выплате за период</value>
+  </data>
+  <data name="Tuesdays" xml:space="preserve">
+    <value>Вторники</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="UnitName" xml:space="preserve">
+    <value>Отдел</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Отделы:</value>
+  </data>
+  <data name="UserBeginSale" xml:space="preserve">
+    <value>Кто возобновил</value>
+  </data>
+  <data name="UserStopSale" xml:space="preserve">
+    <value>Кто остановил</value>
+  </data>
+  <data name="UsingCount" xml:space="preserve">
+    <value>Количество применений</value>
+  </data>
+  <data name="ValidationRequiredMockupDaysOfWeek" xml:space="preserve">
+    <value>Не заполнены дни недели</value>
+  </data>
+  <data name="ValidationRequiredMockupName" xml:space="preserve">
+    <value>Не указано название макета</value>
+  </data>
+  <data name="WaitingTime" xml:space="preserve">
+    <value>Ожидание</value>
+  </data>
+  <data name="Wednesdays" xml:space="preserve">
+    <value>Среды</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>выходные</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>Загруженность</value>
+  </data>
+  <data name="Unitate" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="UnitateName" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProduct" xml:space="preserve">
+    <value>В заказе есть любой продукт из списка "{0}"</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProductInAmount" xml:space="preserve">
+    <value>В заказе есть любые продукты в количестве {0} из списка {1}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_BigPizzas" xml:space="preserve">
+    <value>В заказе есть большие пиццы в количестве не менее {0}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_Default" xml:space="preserve">
+    <value>Type: {0}   ObjectType: {1}   ConcreteObject: {2}   ConditionSize: {3}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_FromCategory" xml:space="preserve">
+    <value>В заказе есть продукты из категории "{0}" в количестве не менее {1}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_MediumPizzas" xml:space="preserve">
+    <value>В заказе есть средние пиццы в количестве не менее {0}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmount" xml:space="preserve">
+    <value>В заказе есть продукт "{0}" в количестве не менее {1}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmountEach" xml:space="preserve">
+    <value>В заказе есть продукты "{0}" в количестве не менее {1} каждый</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_SmallPizzas" xml:space="preserve">
+    <value>В заказе есть маленькие пиццы в количестве не менее {0}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_Combo" xml:space="preserve">
+    <value>В заказе есть комбо "{0}" в количестве не менее {1}</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="BonusAction_ConditionDescription_ComboMultiple" xml:space="preserve">
+    <value>В заказе есть комбо "{0}" в количестве не менее {1} каждый</value>
+    <comment>Администратор подразделения / Конструктор промоакций / Добавление акции</comment>
+  </data>
+  <data name="SpecialPrice" xml:space="preserve">
+    <value>Специальная цена</value>
+    <comment>Администратор подразделения / Бонусные акции / Редактирование акции</comment>
+  </data>
+  <data name="SmsWithCodeWord" xml:space="preserve">
+    <value>{0} - ваш код для списания додо-рублей.</value>
+    <comment>Текст СМС с кодом бонусной программы</comment>
+  </data>
+</root>

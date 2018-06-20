@@ -1,0 +1,64 @@
+﻿.track {
+	// Хачим блоки, чтобы влезло 9 штук на маленький планшет
+	#intNew {
+		.item {
+			height: 30.7vh;
+			border-width: 0 1px 1px 0;
+		}
+
+		.namePizza {
+			font-size: 5vh;
+		}
+
+		.size {
+			font-size: 14vh;
+			margin: 0;
+		}
+
+		.sauce {
+			height: 3vh;
+		}
+
+		.numOrder {
+			font-size: 3vh;
+		}
+
+		.col-md-8 {
+			padding-top: 0px;
+		}
+	}
+
+	.bukva-t {
+		line-height: 100%;
+		margin-top: 10px;
+		padding: 5px 10px;
+		display: inline-block;
+		font-size: 5vh;
+	}
+
+
+	.row {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.queueStatus {
+		vertical-align: middle;
+		padding: 0 0px;
+		margin-top: 10px;
+	}
+
+	.screenBlockerLayout {
+		z-index: 1000;
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		cursor: wait;
+		position: fixed;
+		background: linear-gradient(to top, rgb(222, 222, 220), #000);
+	}
+}

@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddressLabel_Full_Apartment" xml:space="preserve">
+    <value>korter</value>
+  </data>
+  <data name="AddressLabel_Full_Building" xml:space="preserve">
+    <value>korpus</value>
+  </data>
+  <data name="AddressLabel_Full_City" xml:space="preserve">
+    <value>linn</value>
+  </data>
+  <data name="AddressLabel_Full_Country" xml:space="preserve">
+    <value>riik</value>
+  </data>
+  <data name="AddressLabel_Full_District" xml:space="preserve">
+    <value>piirkond</value>
+  </data>
+  <data name="AddressLabel_Full_Floor" xml:space="preserve">
+    <value>korrus</value>
+  </data>
+  <data name="AddressLabel_Full_House" xml:space="preserve">
+    <value>maja</value>
+  </data>
+  <data name="AddressLabel_Full_Intercom" xml:space="preserve">
+    <value>fonolukk</value>
+  </data>
+  <data name="AddressLabel_Full_Porch" xml:space="preserve">
+    <value>trepikoda</value>
+  </data>
+  <data name="AddressLabel_Full_Region" xml:space="preserve">
+    <value>vald</value>
+  </data>
+  <data name="AddressLabel_Short_Apartment" xml:space="preserve">
+    <value>krt.</value>
+  </data>
+  <data name="AddressLabel_Short_Building" xml:space="preserve">
+    <value>korp.</value>
+  </data>
+  <data name="AddressLabel_Short_City" xml:space="preserve">
+    <value>l.</value>
+  </data>
+  <data name="AddressLabel_Short_Community" xml:space="preserve">
+    <value>piirkond</value>
+  </data>
+  <data name="AddressLabel_Short_CossackVillage" xml:space="preserve">
+    <value>asula</value>
+  </data>
+  <data name="AddressLabel_Short_CottageSettlement" xml:space="preserve">
+    <value>suvalite küla</value>
+  </data>
+  <data name="AddressLabel_Short_Country" xml:space="preserve">
+    <value>riik</value>
+  </data>
+  <data name="AddressLabel_Short_District" xml:space="preserve">
+    <value>piirkond</value>
+  </data>
+  <data name="AddressLabel_Short_Floor" xml:space="preserve">
+    <value>kor.</value>
+  </data>
+  <data name="AddressLabel_Short_Horticultural" xml:space="preserve">
+    <value>aiand.</value>
+  </data>
+  <data name="AddressLabel_Short_House" xml:space="preserve">
+    <value>m.</value>
+  </data>
+  <data name="AddressLabel_Short_Intercom" xml:space="preserve">
+    <value>kood</value>
+  </data>
+  <data name="AddressLabel_Short_Khutor" xml:space="preserve">
+    <value>talu</value>
+  </data>
+  <data name="AddressLabel_Short_Porch" xml:space="preserve">
+    <value>trepikoda</value>
+  </data>
+  <data name="AddressLabel_Short_Region" xml:space="preserve">
+    <value>vald</value>
+  </data>
+  <data name="AddressLabel_Short_Selo" xml:space="preserve">
+    <value>küla</value>
+  </data>
+  <data name="AddressLabel_Short_Settlement" xml:space="preserve">
+    <value>alevik</value>
+  </data>
+  <data name="AddressLabel_Short_Village" xml:space="preserve">
+    <value>m.</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>piirkond</value>
+  </data>
+  <data name="BuildingShort" xml:space="preserve">
+    <value>korp.</value>
+  </data>
+  <data name="Cashbox" xml:space="preserve">
+    <value>Kassa</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>linn</value>
+  </data>
+  <data name="CommetForCallCenterValidation" xml:space="preserve">
+    <value>Maksimaalne kommentaari pikus - 70 sümbolit</value>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>piirkond</value>
+  </data>
+  <data name="CossackVillage" xml:space="preserve">
+    <value>asula</value>
+  </data>
+  <data name="CottageSettlement" xml:space="preserve">
+    <value>suvalite küla</value>
+  </data>
+  <data name="DefaultDepartmentCaption" xml:space="preserve">
+    <value>Peamine ametiasutuse osakond</value>
+  </data>
+  <data name="DeliverySectorServicePizzeria" xml:space="preserve">
+    <value>Teenindatav pizzeria: {0}. &lt;span style="color: gray"&gt;Reserv pizzeria: {1}&lt;/span&gt;</value>
+  </data>
+  <data name="DistrictsCaption" xml:space="preserve">
+    <value>Ringkond</value>
+  </data>
+  <data name="Error_EnterName" xml:space="preserve">
+    <value>Sisestage nimetus</value>
+  </data>
+  <data name="Etc" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="FlatShort" xml:space="preserve">
+    <value>krt</value>
+  </data>
+  <data name="FloorShort" xml:space="preserve">
+    <value>kor.</value>
+  </data>
+  <data name="Horticultural" xml:space="preserve">
+    <value>aiandus</value>
+  </data>
+  <data name="HouseShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Intercom" xml:space="preserve">
+    <value>kood</value>
+  </data>
+  <data name="Khutor" xml:space="preserve">
+    <value>talu</value>
+  </data>
+  <data name="MainDeliveryMode" xml:space="preserve">
+    <value>Tavaline kohaletoimetamine</value>
+  </data>
+  <data name="MessageError_ApproximateDeliveryNeedLess" xml:space="preserve">
+    <value>Ligikaudne tarneaeg peab olema garanteeritud tarneajast väiksem</value>
+  </data>
+  <data name="MessageError_FailedRangePrepareDelayedOrderParameter" xml:space="preserve">
+    <value>Edasi lükatud tellimuse valmistamisaeg ei saa olla väiksem kui 0 ning ei saa olla suurem kui ligikaudne aeg, mis kulub tellimuse kohaletoimetamiseks.   </value>
+  </data>
+  <data name="MessageError_PrepareDelayedOrderNeedLess" xml:space="preserve">
+    <value>Ootel tellimuse valmistamise aeg peab olema ligikaudsest tarneajast väiksem</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>Personali toitlustus</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Tulen ise järgi</value>
+  </data>
+  <data name="PorchShort" xml:space="preserve">
+    <value>trepikoda</value>
+  </data>
+  <data name="PrepositionalAliasCaption" xml:space="preserve">
+    <value>Nimi prepositsiooni käändes</value>
+  </data>
+  <data name="PublicCaption" xml:space="preserve">
+    <value>Avalik</value>
+  </data>
+  <data name="ReserveDeliveryMode" xml:space="preserve">
+    <value>Töö reservrežiim</value>
+  </data>
+  <data name="ReservePizzeria" xml:space="preserve">
+    <value>reserv</value>
+  </data>
+  <data name="Selo" xml:space="preserve">
+    <value>küla</value>
+  </data>
+  <data name="Settlement" xml:space="preserve">
+    <value>Alevik</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="TranslitAlias" xml:space="preserve">
+    <value>Nimetus transliteratsiooniga</value>
+  </data>
+  <data name="TranslitAliasErrorMessage" xml:space="preserve">
+    <value>Väli "Nimetus transliteratsiooniga" on täitmiseks kohustuslik</value>
+  </data>
+  <data name="Village" xml:space="preserve">
+    <value>Küla</value>
+  </data>
+  <data name="DefaultUnitateCaption" xml:space="preserve">
+    <value>Põhiasutus</value>
+  </data>
+</root>

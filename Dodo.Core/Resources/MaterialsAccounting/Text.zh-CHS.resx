@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BeginDateRequired" xml:space="preserve">
+    <value>输入开始日期</value>
+  </data>
+  <data name="Bottle" xml:space="preserve">
+    <value>瓶子</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>箱</value>
+  </data>
+  <data name="Bucket" xml:space="preserve">
+    <value>桶</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>消耗品</value>
+  </data>
+  <data name="ConsumptionType_Transfers" xml:space="preserve">
+    <value>调配</value>
+  </data>
+  <data name="ContainerTypeNone" xml:space="preserve">
+    <value>没有包装</value>
+  </data>
+  <data name="DebitingReason_Corruption" xml:space="preserve">
+    <value>食品损坏</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>存放期到期了</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>负责人</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>包装损坏</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>输入结束日期</value>
+  </data>
+  <data name="EveningShift" xml:space="preserve">
+    <value>晚上班</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="EveryWeek" xml:space="preserve">
+    <value>星期</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>联邦的</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>成品</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>对所有部门</value>
+  </data>
+  <data name="FreeTara" xml:space="preserve">
+    <value>自由重量</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>克</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>克</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>食材</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>库存</value>
+  </data>
+  <data name="Jar" xml:space="preserve">
+    <value>罐</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+  <data name="Lexan1" xml:space="preserve">
+    <value>1/1的Lexan</value>
+  </data>
+  <data name="Lexan2" xml:space="preserve">
+    <value>1/2的Lexan</value>
+  </data>
+  <data name="Lexan3" xml:space="preserve">
+    <value>1/3的Lexan</value>
+  </data>
+  <data name="Lexan6" xml:space="preserve">
+    <value>1/6的Lexan</value>
+  </data>
+  <data name="Lexan9" xml:space="preserve">
+    <value>1/9的Lexan</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>公升</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>公升</value>
+  </data>
+  <data name="Material_MaterialTypeIsRequired" xml:space="preserve">
+    <value>原料种类没选</value>
+  </data>
+  <data name="MeasureTypeVariation_Breakfast" xml:space="preserve">
+    <value>小吃</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml" xml:space="preserve">
+    <value>杯子100毫升</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_2" xml:space="preserve">
+    <value>1/2</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_4" xml:space="preserve">
+    <value>1/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml3_4" xml:space="preserve">
+    <value>3/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass200Ml" xml:space="preserve">
+    <value>杯子200毫升</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfLargeGlass" xml:space="preserve">
+    <value>1/2大杯</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfMediumGlass" xml:space="preserve">
+    <value>1/2中杯</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfSmallGlass" xml:space="preserve">
+    <value>1/2小杯</value>
+  </data>
+  <data name="MeasureTypeVariation_HickeyOneHickey" xml:space="preserve">
+    <value>一个</value>
+  </data>
+  <data name="MeasureTypeVariation_LargeGlass" xml:space="preserve">
+    <value>大杯</value>
+  </data>
+  <data name="MeasureTypeVariation_MediumGlass" xml:space="preserve">
+    <value>中杯</value>
+  </data>
+  <data name="MeasureTypeVariation_PinchOnePinch" xml:space="preserve">
+    <value>一捏</value>
+  </data>
+  <data name="MeasureTypeVariation_Portion14Pieces" xml:space="preserve">
+    <value>份量14个</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixNugget" xml:space="preserve">
+    <value>份量dodomiks</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixPotatoes" xml:space="preserve">
+    <value>份量dodomiks</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_2L" xml:space="preserve">
+    <value>0,2公升</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_3L" xml:space="preserve">
+    <value>0,3公升</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_5L" xml:space="preserve">
+    <value>0,5公升</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_6L" xml:space="preserve">
+    <value>0,6公升</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza25" xml:space="preserve">
+    <value>比萨25</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza30" xml:space="preserve">
+    <value>比萨30</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza35" xml:space="preserve">
+    <value>比萨35</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForSandwich" xml:space="preserve">
+    <value>三明治</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCream" xml:space="preserve">
+    <value>冰淇淋的份量</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCreamOne" xml:space="preserve">
+    <value>一个份量</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionSalmonOne" xml:space="preserve">
+    <value>一个份量</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionShrimpOne" xml:space="preserve">
+    <value>一个份量</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionVillage" xml:space="preserve">
+    <value>农村的份量</value>
+  </data>
+  <data name="MeasureTypeVariation_PressingGunOnePress" xml:space="preserve">
+    <value>一触式</value>
+  </data>
+  <data name="MeasureTypeVariation_ShakeOneShake" xml:space="preserve">
+    <value>一个搅动</value>
+  </data>
+  <data name="MeasureTypeVariation_Slice" xml:space="preserve">
+    <value>切片</value>
+  </data>
+  <data name="MeasureTypeVariation_SmallGlass" xml:space="preserve">
+    <value>小杯</value>
+  </data>
+  <data name="MeasureType_Americano" xml:space="preserve">
+    <value>美式</value>
+  </data>
+  <data name="MeasureType_Cappuccino" xml:space="preserve">
+    <value>卡布奇诺</value>
+  </data>
+  <data name="MeasureType_CheesseCup" xml:space="preserve">
+    <value>奶酪被</value>
+  </data>
+  <data name="MeasureType_Espresso" xml:space="preserve">
+    <value>浓咖啡</value>
+  </data>
+  <data name="MeasureType_Glass100Ml" xml:space="preserve">
+    <value>杯子100毫升</value>
+  </data>
+  <data name="MeasureType_Glass200Ml" xml:space="preserve">
+    <value>杯子200毫升</value>
+  </data>
+  <data name="MeasureType_Hickey" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="MeasureType_Latte" xml:space="preserve">
+    <value>拿铁</value>
+  </data>
+  <data name="MeasureType_Pinch" xml:space="preserve">
+    <value>捏</value>
+  </data>
+  <data name="MeasureType_PortionDrink" xml:space="preserve">
+    <value>份量饮料</value>
+  </data>
+  <data name="MeasureType_PortionForProduct" xml:space="preserve">
+    <value>公升于比萨/小吃/三明治</value>
+  </data>
+  <data name="MeasureType_PortionIceCream" xml:space="preserve">
+    <value>冰淇淋的份量</value>
+  </data>
+  <data name="MeasureType_PortionNuggets" xml:space="preserve">
+    <value>鸡米花的份量</value>
+  </data>
+  <data name="MeasureType_PortionPotatoes" xml:space="preserve">
+    <value>土豆的份量</value>
+  </data>
+  <data name="MeasureType_PortionSalmon" xml:space="preserve">
+    <value>的份量</value>
+  </data>
+  <data name="MeasureType_PortionShrimp" xml:space="preserve">
+    <value>虾的份量</value>
+  </data>
+  <data name="MeasureType_PressingGun" xml:space="preserve">
+    <value>压枪</value>
+  </data>
+  <data name="MeasureType_Shake" xml:space="preserve">
+    <value>搅动</value>
+  </data>
+  <data name="MeasureType_Slice" xml:space="preserve">
+    <value>切片</value>
+  </data>
+  <data name="MeasureType_SoupLadle" xml:space="preserve">
+    <value>大勺</value>
+  </data>
+  <data name="Message_RequiredOrganizationType" xml:space="preserve">
+    <value>“类型”</value>
+  </data>
+  <data name="Message_RequiredPaymentOption" xml:space="preserve">
+    <value>“工作表”</value>
+  </data>
+  <data name="Message_RequiredSupplierName" xml:space="preserve">
+    <value>“名称”</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>毫升</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>毫升。</value>
+  </data>
+  <data name="MorningShift" xml:space="preserve">
+    <value>早班</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>夜班</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>包</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="Packing" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="PaymentOption_Deferment" xml:space="preserve">
+    <value>延期</value>
+  </data>
+  <data name="PaymentOption_Prepaid" xml:space="preserve">
+    <value>预付款</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>块</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>半制品</value>
+  </data>
+  <data name="Tara_Bag" xml:space="preserve">
+    <value>包</value>
+  </data>
+  <data name="Tara_Balloon" xml:space="preserve">
+    <value>气球</value>
+  </data>
+  <data name="Tara_Bottle" xml:space="preserve">
+    <value>瓶子</value>
+  </data>
+  <data name="Tara_Box" xml:space="preserve">
+    <value>箱</value>
+  </data>
+  <data name="Tara_Bucket" xml:space="preserve">
+    <value>桶</value>
+  </data>
+  <data name="Tara_CuppingGlass" xml:space="preserve">
+    <value>银行</value>
+  </data>
+  <data name="Tara_Kega" xml:space="preserve">
+    <value>酒桶</value>
+  </data>
+  <data name="Tara_Packing" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="Tara_Roll" xml:space="preserve">
+    <value>滚</value>
+  </data>
+  <data name="MetrShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="MaximumFieldLength" xml:space="preserve">
+    <value>最大长度为{1}</value>
+  </data>
+  <data name="Metr" xml:space="preserve">
+    <value>米</value>
+  </data>
+</root>

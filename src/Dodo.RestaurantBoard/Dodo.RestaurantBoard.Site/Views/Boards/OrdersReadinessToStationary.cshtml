@@ -1,0 +1,158 @@
+﻿@using System.Web.Optimization
+@using Dodo.Core.DomainModel.Departments.Units
+@using Dodo.RestaurantBoard.Site.Common.Extensions
+@using Dodo.RestaurantBoard.Site.Controllers
+@using Dodo.RestaurantBoard.Site.Resources
+@model Dodo.RestaurantBoard.Site.Models.OrdersReadinessToStationaryModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="OrdersReadinessToStationaryController">
+<head>
+    <title>@Text.Processing. @Text.OrdersReadinessToStationary</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <meta http-equiv="cache-control" content="max-age"/>
+
+    @Styles.Render("~/bundle/css/processing")
+
+    @Html.ScriptVersioned("~/Scripts/jquery-1.9.min.js")
+    @Html.ScriptVersioned("~/Scripts/angular.min.js")
+    @Html.ScriptVersioned("~/Scripts/angular-route.min.js")
+
+    <script>
+        window.resources =
+        {
+            departmentId: '@Model.DepartmentId',
+            countryId: '@Model.CountryId',
+            unitId: '@Model.UnitId',
+            message: '@Text.ErrorMessage_NoConnection'
+        };
+    </script>
+
+
+    <style>
+        .bannersContainer { background: url("@Url.LocalizedContent("Tracking-Scoreboard-Empty.jpg")") #ffffff; }
+    </style>
+
+    <style>
+        .bannersContainer {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            z-index: 10;
+            border: none;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .message {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            z-index: 30;
+            font-size: 10px;
+            color: red;
+        }
+
+        .musicInfo-container {
+            position: absolute;
+            width: 100%;
+            z-index: 11;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10%;
+            background: rgb(0, 0, 0);
+            padding: 15px;
+            display: table;
+            text-transform: uppercase;
+        }
+
+        .musicInfo-container aside {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 30px;
+            font-size: 20px;
+            line-height: 24px;
+            width: 25%;
+            color: #F28E1E;
+            border-left: 1px solid #fff;
+        }
+
+        .musicInfo {
+            display: table-cell;
+            vertical-align: middle;
+            padding-right: 30px;
+            font-size: 2em;
+            text-align: center;
+            color: #F28E1E;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .musicInfo span { color: #fff; }
+    </style>
+
+
+    @if (Model.ClientTreatment != ClientTreatment.RandomImage)
+    {
+        <style ng-if="partitions.length == 1">
+            #ready .content .ready_item { height: 100%; }
+        </style>
+
+        <style ng-if="partitions.length == 2">
+            #ready .content .ready_item { height: 50%; }
+        </style>
+
+        <style ng-if="partitions.length == 3">
+            #ready .content .ready_item { height: 33.3%; }
+        </style>
+
+        <style ng-if="partitions.length == 4">
+            #ready .content .ready_item { height: 25%; }
+        </style>
+    }
+
+</head>
+<body style="min-height: 0; overflow: hidden;">
+<label style="position: absolute; right: 5px; font-size: 10px; color: red;">{{message}}</label>
+
+@Html.Partial("PartialRestaurantBoard");
+
+
+<audio id="myTune">
+    <source src="/Content/sndMsg.wav">
+    <source src="/Content/sndMsg.mp3">
+</audio>
+
+<div ng-style="banners.containerStyle" class="bannersContainer" ng-hide="partitions.length">
+    <img alt="" style="display: none" ng-repeat="banner in banners.list" ng-src="{{banner.BannerUrl}}"/>
+    <div class="musicInfo-container" ng-show="musicShow">
+        <div class="musicInfo">
+            @Text.Title_YouListen <span>{{track}}</span>
+        </div>
+        <aside>@Html.Raw(Text.Html_ListenDodoFm)</aside>
+    </div>
+</div>
+
+@Html.ScriptVersioned("~/app/app.js")
+@Html.ScriptVersioned("~/app/controllers/OrdersReadinessToStationaryController.js")
+@Html.ScriptVersioned("~/app/services/OrdersReadinessToStationaryService.js")
+@Html.ScriptVersioned("~/Scripts/flowtype.js")
+@Html.ScriptVersioned("~/Scripts/publicPagesToFullscreen.js")
+<script>
+    $('.musicInfo').flowtype({
+        minFont: 24,
+        maxFont: 60
+    });
+</script>
+</body>
+
+</html>

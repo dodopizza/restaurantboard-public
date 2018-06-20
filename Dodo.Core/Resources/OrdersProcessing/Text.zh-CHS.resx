@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Canceled" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CategoryDesserts" xml:space="preserve">
+    <value>甜</value>
+  </data>
+  <data name="CategoryDrinks" xml:space="preserve">
+    <value>饮料</value>
+  </data>
+  <data name="CategoryGoods" xml:space="preserve">
+    <value>货物</value>
+  </data>
+  <data name="CategoryPizza" xml:space="preserve">
+    <value>比萨</value>
+  </data>
+  <data name="CategorySauces" xml:space="preserve">
+    <value>调味汁</value>
+  </data>
+  <data name="CategorySnacks" xml:space="preserve">
+    <value>小吃</value>
+  </data>
+  <data name="DefectiveProduct" xml:space="preserve">
+    <value>残次品</value>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>已经交付</value>
+  </data>
+  <data name="DeliveryMenu" xml:space="preserve">
+    <value>管送菜单</value>
+  </data>
+  <data name="DuplicateOrderLine" xml:space="preserve">
+    <value>&lt;b&gt;(dodo卢布)&lt;/b&gt;</value>
+  </data>
+  <data name="Error_EmptyDimensionalCharacteristics" xml:space="preserve">
+    <value>不正确的数量</value>
+  </data>
+  <data name="Error_Number" xml:space="preserve">
+    <value>尺寸特性的名称太长</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>食品的</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="Halal" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="HalfHalal" xml:space="preserve">
+    <value>半评论</value>
+  </data>
+  <data name="InDelivery" xml:space="preserve">
+    <value>正在送货</value>
+  </data>
+  <data name="InOven" xml:space="preserve">
+    <value>在烤箱</value>
+  </data>
+  <data name="MenuAccessibility_Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="MenuAccessibility_Personal" xml:space="preserve">
+    <value>人员饮餐</value>
+  </data>
+  <data name="MenuAccessibility_Stationary" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="MessageError_FailedDefectOrderLineMoreTwoDaysAgo" xml:space="preserve">
+    <value>不可以拒绝产品，如果产品订单超过2天前</value>
+  </data>
+  <data name="MessageError_PreparationTimeLimitExpired" xml:space="preserve">
+    <value>产品不能回到厨房。有效日期结束了</value>
+  </data>
+  <data name="Nonfood" xml:space="preserve">
+    <value>非食品</value>
+  </data>
+  <data name="OnColdAssemblyTable" xml:space="preserve">
+    <value>馅（冷）</value>
+  </data>
+  <data name="OnDoughTable" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="OnHotAssemblyTable" xml:space="preserve">
+    <value>馅（热）</value>
+  </data>
+  <data name="OnPackingTable" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="OrderType_Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="OrderType_DeliveryShortAlias" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="OrderType_PersonaFoodShortAlias" xml:space="preserve">
+    <value>员工</value>
+  </data>
+  <data name="OrderType_PersonalFood" xml:space="preserve">
+    <value>人员饮餐</value>
+  </data>
+  <data name="OrderType_Pickup" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="OrderType_PickupShortAlias" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="OrderType_ShopWindowSupply" xml:space="preserve">
+    <value>小块儿</value>
+  </data>
+  <data name="OrderType_ShopWindowSupplyShortAlias" xml:space="preserve">
+    <value>块儿</value>
+  </data>
+  <data name="OrderType_Stationary" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="OrderType_StationaryShortAlias" xml:space="preserve">
+    <value>大厅</value>
+  </data>
+  <data name="PersonalMenu" xml:space="preserve">
+    <value>人员饭菜</value>
+  </data>
+  <data name="PizzaScheme" xml:space="preserve">
+    <value>比萨方案</value>
+  </data>
+  <data name="PriorityHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="PriorityLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="PriorityMedium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="ProductionStage_WaitingMake" xml:space="preserve">
+    <value>等待制备</value>
+  </data>
+  <data name="RestaurantMenu" xml:space="preserve">
+    <value>堂食菜单</value>
+  </data>
+  <data name="SandwichScheme" xml:space="preserve">
+    <value>三明治方案</value>
+  </data>
+  <data name="SimpleScheme" xml:space="preserve">
+    <value>无生产方案</value>
+  </data>
+  <data name="SnacksScheme" xml:space="preserve">
+    <value>小吃方案</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="TypeBaked" xml:space="preserve">
+    <value>饼</value>
+  </data>
+  <data name="TypeComposite" xml:space="preserve">
+    <value>部件</value>
+  </data>
+  <data name="TypeSimple" xml:space="preserve">
+    <value>简单</value>
+  </data>
+  <data name="Unknow" xml:space="preserve">
+    <value>没确定</value>
+  </data>
+  <data name="ValidateMessage_Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="ValidateMessage_PersonalFood" xml:space="preserve">
+    <value>人员饮餐</value>
+  </data>
+  <data name="ValidateMessage_Pickup" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="ValidateMessage_ShopWindowSupply" xml:space="preserve">
+    <value>小块儿</value>
+  </data>
+  <data name="ValidateMessage_Stationary" xml:space="preserve">
+    <value>常设机关 </value>
+  </data>
+  <data name="WaitIncomingsOnWarehouse" xml:space="preserve">
+    <value>等待到达仓库</value>
+  </data>
+  <data name="WaitingDelivery" xml:space="preserve">
+    <value>等待发送</value>
+  </data>
+  <data name="WaitingMake" xml:space="preserve">
+    <value>等候</value>
+  </data>
+  <data name="WithoutSpecialization" xml:space="preserve">
+    <value>没有特点</value>
+  </data>
+</root>

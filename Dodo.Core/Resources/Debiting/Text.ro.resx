@@ -1,0 +1,3444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accepta</value>
+  </data>
+  <data name="AccountingPacking" xml:space="preserve">
+    <value>Containere pentru gestiune</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>Actiune</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AddDebiting" xml:space="preserve">
+    <value>Adauga casare</value>
+  </data>
+  <data name="AddPeriod" xml:space="preserve">
+    <value>Adauga perioada</value>
+  </data>
+  <data name="AddPositionMessage" xml:space="preserve">
+    <value>Pentru a adauga pozitia, introduceti denumirea</value>
+  </data>
+  <data name="AddTransfer" xml:space="preserve">
+    <value>Adauga</value>
+  </data>
+  <data name="AddTransfer_Duplicate[1]" xml:space="preserve">
+    <value>Adauga</value>
+  </data>
+  <data name="Adoption" xml:space="preserve">
+    <value>Receptie</value>
+  </data>
+  <data name="Aim" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>Toate</value>
+  </data>
+  <data name="AllSuppliersText" xml:space="preserve">
+    <value>Toti furnizorii</value>
+  </data>
+  <data name="AllUnitsText" xml:space="preserve">
+    <value>Toate pizzeriile</value>
+  </data>
+  <data name="AlphabetFirstLetter" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="AlphabetLastLetter" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="ApplicantCardAddedLabel" xml:space="preserve">
+    <value>Data receptie</value>
+  </data>
+  <data name="ApplicantCardAddressLabel" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="ApplicantCardAgainLabel" xml:space="preserve">
+    <value>Repetat</value>
+  </data>
+  <data name="ApplicantCardAnswerLabel" xml:space="preserve">
+    <value>Raspunde</value>
+  </data>
+  <data name="ApplicantCardCommentLabel" xml:space="preserve">
+    <value>Comentarii</value>
+  </data>
+  <data name="ApplicantCardCommentPlaceholder" xml:space="preserve">
+    <value>Comentariu obligatoriu</value>
+  </data>
+  <data name="ApplicantCardDuplicatesLabel" xml:space="preserve">
+    <value>Dublicate</value>
+  </data>
+  <data name="ApplicantCardFioLabel" xml:space="preserve">
+    <value>Nume si prenume</value>
+  </data>
+  <data name="ApplicantCardHasChildrenLabel" xml:space="preserve">
+    <value>Copii</value>
+  </data>
+  <data name="ApplicantCardHeader" xml:space="preserve">
+    <value>Chestionarul candidatului la job</value>
+  </data>
+  <data name="ApplicantCardHistoryLabel" xml:space="preserve">
+    <value>Istoria chestionarului</value>
+  </data>
+  <data name="ApplicantCardHobbyLabel" xml:space="preserve">
+    <value>Hobby</value>
+  </data>
+  <data name="ApplicantCardInputCommentText" xml:space="preserve">
+    <value>Introduceti comentariu</value>
+  </data>
+  <data name="ApplicantCardLastHistoryLabel" xml:space="preserve">
+    <value>Ultimele {0} evenimente ale aplicatiei</value>
+  </data>
+  <data name="ApplicantCardLink" xml:space="preserve">
+    <value>Chestionarul candidatului</value>
+  </data>
+  <data name="ApplicantCardMedicalBookLabel" xml:space="preserve">
+    <value>Carnet de sanatate</value>
+  </data>
+  <data name="ApplicantCardOpenDuplicateLabel" xml:space="preserve">
+    <value>Vizualizeaza</value>
+  </data>
+  <data name="ApplicantCardPersonalInfoLabel" xml:space="preserve">
+    <value>Informatie personala</value>
+  </data>
+  <data name="ApplicantCardPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ApplicantCardShiftsLabel" xml:space="preserve">
+    <value>Ture</value>
+  </data>
+  <data name="ApplicantCardSmokingLabel" xml:space="preserve">
+    <value>Fumatul</value>
+  </data>
+  <data name="ApplicantCardSourceDescriptionLabel" xml:space="preserve">
+    <value>Sursa (descriere suplimentara)</value>
+  </data>
+  <data name="ApplicantCardSourceLabel" xml:space="preserve">
+    <value>Sursa</value>
+  </data>
+  <data name="ApplicantCardStatusLabel" xml:space="preserve">
+    <value>Status apel</value>
+  </data>
+  <data name="ApplicantCardTimeLabel" xml:space="preserve">
+    <value>La ora</value>
+  </data>
+  <data name="ApplicantCardTypeLabel" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="ApplicantCardUnitLabel" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="ApplicantCardWhenLabel" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ApplicantCardWorkExperienceLabel" xml:space="preserve">
+    <value>Experienta de lucru</value>
+  </data>
+  <data name="ApplicantCardWorkInfoLabel" xml:space="preserve">
+    <value>Informatie profesionala</value>
+  </data>
+  <data name="ApplicantFormAddressLabel" xml:space="preserve">
+    <value>Adresa resedinta</value>
+  </data>
+  <data name="ApplicantFormBirthdayLabel" xml:space="preserve">
+    <value>Data nasterii</value>
+  </data>
+  <data name="ApplicantFormFirstNameLabel" xml:space="preserve">
+    <value>Prenume</value>
+  </data>
+  <data name="ApplicantFormHasChildrenLabel" xml:space="preserve">
+    <value>Aveti copii?</value>
+  </data>
+  <data name="ApplicantFormHeader" xml:space="preserve">
+    <value>Creare chestionar</value>
+  </data>
+  <data name="ApplicantFormHint" xml:space="preserve">
+    <value>Campurile cu steluta (*) se completeaza obligatoriu.</value>
+  </data>
+  <data name="ApplicantFormHobby" xml:space="preserve">
+    <value>Hobby</value>
+  </data>
+  <data name="ApplicantFormHobbyPlaceholder" xml:space="preserve">
+    <value>Расскажите нам о ваших интересах</value>
+  </data>
+  <data name="ApplicantFormLastNameLabel" xml:space="preserve">
+    <value>Numele</value>
+  </data>
+  <data name="ApplicantFormMedicalBookLabel" xml:space="preserve">
+    <value>Aveti carnet de sanatate valabil?</value>
+  </data>
+  <data name="ApplicantFormPersonalInfoLabel" xml:space="preserve">
+    <value>Informatie personala</value>
+  </data>
+  <data name="ApplicantFormPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ApplicantFormPleaseSelect" xml:space="preserve">
+    <value>Alegeţi …</value>
+  </data>
+  <data name="ApplicantFormShiftLabel" xml:space="preserve">
+    <value>Programul de lucru</value>
+  </data>
+  <data name="ApplicantFormSmokingLabel" xml:space="preserve">
+    <value>Fumatul?</value>
+  </data>
+  <data name="ApplicantFormSourceLabel" xml:space="preserve">
+    <value>Am aflat despre Dodo Pizza</value>
+  </data>
+  <data name="ApplicantFormTypeLabel" xml:space="preserve">
+    <value>Vreau sa lucrez</value>
+  </data>
+  <data name="ApplicantFormUnitLabel" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="ApplicantFormWorkExperience" xml:space="preserve">
+    <value>Experienta de lucru</value>
+  </data>
+  <data name="ApplicantFormWorkExperiencePlaceholder" xml:space="preserve">
+    <value>Daca aveti experienta de lucru, povestiti-ne.</value>
+  </data>
+  <data name="ApplicantFormWorkInfoLabel" xml:space="preserve">
+    <value>Informatie profesionala</value>
+  </data>
+  <data name="ApplicantInboxStatusLabel" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="ApplicantInboxUnitColumn" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="ApplicantInboxVacanciesLabel" xml:space="preserve">
+    <value>Posturi disponibile</value>
+  </data>
+  <data name="ApplicantsInboxActualVacanciesLabel" xml:space="preserve">
+    <value>Posturi vacante actuale</value>
+  </data>
+  <data name="ApplicantsInboxAddedDateColumn" xml:space="preserve">
+    <value>Primit</value>
+  </data>
+  <data name="ApplicantsInboxAgainLabel" xml:space="preserve">
+    <value>Repetat</value>
+  </data>
+  <data name="ApplicantsInboxAgeColumn" xml:space="preserve">
+    <value>Varsta</value>
+  </data>
+  <data name="ApplicantsInboxAllStatusesText" xml:space="preserve">
+    <value>Toate satusurile</value>
+  </data>
+  <data name="ApplicantsInboxAllTypesText" xml:space="preserve">
+    <value>Toate posturile</value>
+  </data>
+  <data name="ApplicantsInboxAnswerAvgTimeLabel" xml:space="preserve">
+    <value>Rapiditatea medie de raspuns</value>
+  </data>
+  <data name="ApplicantsInboxCallTab" xml:space="preserve">
+    <value>De contactat</value>
+  </data>
+  <data name="ApplicantsInboxCommonTab" xml:space="preserve">
+    <value>Toate</value>
+  </data>
+  <data name="ApplicantsInboxDueDateColumn" xml:space="preserve">
+    <value>Termen</value>
+  </data>
+  <data name="ApplicantsInboxHideFilter" xml:space="preserve">
+    <value>ascunde filtru</value>
+  </data>
+  <data name="ApplicantsInboxHiredTotal" xml:space="preserve">
+    <value>Acceptat</value>
+  </data>
+  <data name="ApplicantsInboxInterviewTab" xml:space="preserve">
+    <value>Interviu</value>
+  </data>
+  <data name="ApplicantsInboxLastTab" xml:space="preserve">
+    <value>Aplicanti recenti</value>
+  </data>
+  <data name="ApplicantsInboxLink" xml:space="preserve">
+    <value>Chestionare</value>
+  </data>
+  <data name="ApplicantsInboxMedicalBookTotal" xml:space="preserve">
+    <value>Carnet de sanatate in curs</value>
+  </data>
+  <data name="ApplicantsInboxMonthTotal" xml:space="preserve">
+    <value>Chestionare pe luna</value>
+  </data>
+  <data name="ApplicantsInboxNewLabel" xml:space="preserve">
+    <value>Noi astazi</value>
+  </data>
+  <data name="ApplicantsInboxNewLink" xml:space="preserve">
+    <value>Chestionar nou</value>
+  </data>
+  <data name="ApplicantsInboxNonSmokingLabel" xml:space="preserve">
+    <value>Nu fumeaza</value>
+  </data>
+  <data name="ApplicantsInboxNotAnsweredLabel" xml:space="preserve">
+    <value>Fara raspuns</value>
+  </data>
+  <data name="ApplicantsInboxRejectTotal" xml:space="preserve">
+    <value>Refuz</value>
+  </data>
+  <data name="ApplicantsInboxReserveTotal" xml:space="preserve">
+    <value>Rezerva</value>
+  </data>
+  <data name="ApplicantsInboxSearchTab" xml:space="preserve">
+    <value>Cautare</value>
+  </data>
+  <data name="ApplicantsInboxSearchText" xml:space="preserve">
+    <value>Cautare dupa nume sau numar de telefon</value>
+  </data>
+  <data name="ApplicantsInboxShiftFilter" xml:space="preserve">
+    <value>Pot lucra</value>
+  </data>
+  <data name="ApplicantsInboxShiftsColumn" xml:space="preserve">
+    <value>Ture</value>
+  </data>
+  <data name="ApplicantsInboxShowFilter" xml:space="preserve">
+    <value>arata filtru</value>
+  </data>
+  <data name="ApplicantsInboxSmokingColumn" xml:space="preserve">
+    <value>Fumatul</value>
+  </data>
+  <data name="ApplicantsInboxSmokingLabel" xml:space="preserve">
+    <value>Fumeaza</value>
+  </data>
+  <data name="ApplicantsInboxStatusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ApplicantsInboxTypeColumn" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="ApplicantsStatisticRebuild" xml:space="preserve">
+    <value>Reformeaza</value>
+  </data>
+  <data name="AskDeleteDebiting" xml:space="preserve">
+    <value>Sigur doriti sa stergeti casarea?</value>
+  </data>
+  <data name="AskDeleteSupply" xml:space="preserve">
+    <value>Sigur doriti sa stergeti aprovizionarea?</value>
+  </data>
+  <data name="AverageCheckTitle" xml:space="preserve">
+    <value>Bonul mediu</value>
+  </data>
+  <data name="AverageConsumption" xml:space="preserve">
+    <value>Consumul mediu</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Inapoi</value>
+  </data>
+  <data name="BasicInformationLabel" xml:space="preserve">
+    <value>Informatii de baza</value>
+  </data>
+  <data name="BeforeYesterday" xml:space="preserve">
+    <value>alaltaieri</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Formeaza</value>
+  </data>
+  <data name="ByDays" xml:space="preserve">
+    <value>Pe zile</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuleaza</value>
+  </data>
+  <data name="CanceledReportType" xml:space="preserve">
+    <value>anulare comanda</value>
+  </data>
+  <data name="CancelOrder" xml:space="preserve">
+    <value>Anuleaza comanda</value>
+  </data>
+  <data name="CancelTransaction" xml:space="preserve">
+    <value>Anulare tranzactie</value>
+  </data>
+  <data name="CashierLabel" xml:space="preserve">
+    <value>Casa</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="CertificatesForExpressPizzeriaTooltip" xml:space="preserve">
+    <value>Numarul certificatelor date si procentul pizzelor intarziate</value>
+  </data>
+  <data name="CertificatesTooltip" xml:space="preserve">
+    <value>Numarul certificatelor date si procentul pizzelor intarziate la livrare</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Alegeti...</value>
+  </data>
+  <data name="ChooseSupplierLabel" xml:space="preserve">
+    <value>Alegeti furnizor</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrders" xml:space="preserve">
+    <value>Structura bazei de clienti dupa numarul de comenzi</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrdersDesc" xml:space="preserve">
+    <value>Toti clientii activi in perioada indicata sunt divizati in tabel pe grupuri in functie de cate comenzi au facut. Cu gri este indicat cuantumul grupului din totalul clientilor activi pentru aceasta perioada.</value>
+  </data>
+  <data name="ClientDatabaseStructureTitle" xml:space="preserve">
+    <value>Structura bazei de clienti</value>
+  </data>
+  <data name="ClientDatabaseStructureTitleNew" xml:space="preserve">
+    <value>Structura noua a bazei de clienti</value>
+  </data>
+  <data name="ClientHistoryTitle" xml:space="preserve">
+    <value>Istoricul clientului</value>
+  </data>
+  <data name="ClientOrdersTitle" xml:space="preserve">
+    <value>Comenzile clientului</value>
+  </data>
+  <data name="ComeBack" xml:space="preserve">
+    <value>Inapoi</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comentariu</value>
+  </data>
+  <data name="CommentPlaceholder" xml:space="preserve">
+    <value>Comentarii</value>
+  </data>
+  <data name="CommercialInvoiceDate" xml:space="preserve">
+    <value>Data facturii proforme</value>
+  </data>
+  <data name="CommercialInvoiceNumber" xml:space="preserve">
+    <value>Nr. factura proforma</value>
+  </data>
+  <data name="ComparingToDayTooltip" xml:space="preserve">
+    <value>Comparativ cu {0:ddd}, {0:dd MMM yyyy}</value>
+  </data>
+  <data name="ComparingToPeriodTooltip" xml:space="preserve">
+    <value>Comparativ cu perioada {0:dd MMM yyyy} - {1:dd MMM yyyy}</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Cantitatea expediata si cea comandata difera. Continuam?</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithShippedAndReceivedDiscrepancies" xml:space="preserve">
+    <value>Cantitatea expediata si cea receptionata difera. Continuam?</value>
+  </data>
+  <data name="Confirm_WithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Cantitatea livrata difera de cea comandata. Continuam?</value>
+  </data>
+  <data name="Confirm_YouCandEditRequest" xml:space="preserve">
+    <value>Nu veti putea edita cererea dupa trimitere. Trimitem?</value>
+  </data>
+  <data name="ConsumptionQC" xml:space="preserve">
+    <value>Consum pentru CC</value>
+  </data>
+  <data name="Corruption" xml:space="preserve">
+    <value>Putrezire (mucegai)</value>
+  </data>
+  <data name="CostAndUCMenuItem" xml:space="preserve">
+    <value>Sinecost si UnitCost</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Cantitate</value>
+  </data>
+  <data name="CountAcronim" xml:space="preserve">
+    <value>Cantitate</value>
+  </data>
+  <data name="CountLabel" xml:space="preserve">
+    <value>Cant.</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>Curieri</value>
+  </data>
+  <data name="CouriersLabel" xml:space="preserve">
+    <value>Curieri</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Curenta</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>Stoc curent</value>
+  </data>
+  <data name="CurrentDayPlaceholder" xml:space="preserve">
+    <value>apasati pentru a selecta</value>
+  </data>
+  <data name="CurrentWeek" xml:space="preserve">
+    <value>Aceasta saptamana</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>по</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>Zi libera</value>
+  </data>
+  <data name="DayOfWeekLabel" xml:space="preserve">
+    <value>Alegeti data</value>
+  </data>
+  <data name="Debiting" xml:space="preserve">
+    <value>Casari</value>
+  </data>
+  <data name="DebitingDateFilter" xml:space="preserve">
+    <value>Casare materie prima de la</value>
+  </data>
+  <data name="DebitingMaterial" xml:space="preserve">
+    <value>Materie prima casata</value>
+  </data>
+  <data name="DebitingMaterialLabel" xml:space="preserve">
+    <value>Casare materii prime</value>
+  </data>
+  <data name="DebitingNumber" xml:space="preserve">
+    <value>Numar</value>
+  </data>
+  <data name="DebitingPizzeria" xml:space="preserve">
+    <value>Pizzerie/depozit</value>
+  </data>
+  <data name="DebitingReason" xml:space="preserve">
+    <value>Cauza casare</value>
+  </data>
+  <data name="DebitingTime" xml:space="preserve">
+    <value>Data casare</value>
+  </data>
+  <data name="DebitingWhoDebited" xml:space="preserve">
+    <value>A casat</value>
+  </data>
+  <data name="Default_Day_Select" xml:space="preserve">
+    <value>zi a saptamanii</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="DefectReportType" xml:space="preserve">
+    <value>rebut</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Sterge</value>
+  </data>
+  <data name="DeleteShift" xml:space="preserve">
+    <value>Sterge tura</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Data livrarii</value>
+  </data>
+  <data name="DepartmentLevelHoliday" xml:space="preserve">
+    <value>Sarbatoare departament</value>
+  </data>
+  <data name="DeprecatedBrowserMessage" xml:space="preserve">
+    <value>Ne pare rau dar browserul Dvs. este invechit. Va rugam actualizati-l sau descarcati altul.</value>
+  </data>
+  <data name="DeselectAllLabel" xml:space="preserve">
+    <value>Deselecteaza</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Diferenta</value>
+  </data>
+  <data name="DodoIS" xml:space="preserve">
+    <value>Dodo IS</value>
+  </data>
+  <data name="DodoISFooterText" xml:space="preserve">
+    <value>Dodo Pizza</value>
+  </data>
+  <data name="Dollar" xml:space="preserve">
+    <value>Dolar</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>Inceput actiune</value>
+  </data>
+  <data name="EffectivePeriod" xml:space="preserve">
+    <value>Perioada actiune</value>
+  </data>
+  <data name="EfficiencyPercentage" xml:space="preserve">
+    <value>Eficienta graficului</value>
+  </data>
+  <data name="EmployeeCategoryCashier" xml:space="preserve">
+    <value>Casier</value>
+  </data>
+  <data name="EmployeeCategoryDateWith" xml:space="preserve">
+    <value>Din data</value>
+  </data>
+  <data name="EmployeeCategoryInstructor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="EmployeeCategoryManager" xml:space="preserve">
+    <value>Sef tura</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedFailedBeginDate" xml:space="preserve">
+    <value>Nu este indicata actiunea categoriei, sau are un format gresit</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedNotLargerCurrentDate" xml:space="preserve">
+    <value>Data inceputului actiunii noii categorii nu poate fi mai mare decat data curenta</value>
+  </data>
+  <data name="EmployeeCategoryNotSelected" xml:space="preserve">
+    <value>Nu este indicata categoria angajatului</value>
+  </data>
+  <data name="EmployeeCategoryPizzmaker" xml:space="preserve">
+    <value>Pizzamaker</value>
+  </data>
+  <data name="EmployeeCategoryTrainee" xml:space="preserve">
+    <value>Cursant</value>
+  </data>
+  <data name="EmployeeComment" xml:space="preserve">
+    <value>Comentarii ale angajatului:</value>
+  </data>
+  <data name="EmployeeCouriersDynamicsAwayColumn" xml:space="preserve">
+    <value>Fluiditate curieri</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+  </data>
+  <data name="EmployeeDateJSFormat" xml:space="preserve">
+    <value>dd.mm.yy</value>
+  </data>
+  <data name="EmployeeDateMask" xml:space="preserve">
+    <value>99.99.9999</value>
+  </data>
+  <data name="EmployeeDateTimeCulture" xml:space="preserve">
+    <value>ro-RO</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumn" xml:space="preserve">
+    <value>Adaptare</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumnInfo" xml:space="preserve">
+    <value>Raport persoane angajate la totalul angajatilor</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonth" xml:space="preserve">
+    <value>Rotatia de personal lunara</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonthInfo" xml:space="preserve">
+    <value>Raportul concediatilor in luna curenta la totalul angajatilor</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYear" xml:space="preserve">
+    <value>Rotatia de personal anuala</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Raportul concediatilor de la inceputul anului la totalul angajatilor</value>
+  </data>
+  <data name="EmployeeDynamicsFeedbackColumn" xml:space="preserve">
+    <value>Feedback-uri&lt;br/&gt;anonime / personale</value>
+  </data>
+  <data name="EmployeeDynamicsHeader" xml:space="preserve">
+    <value>Dinamica statului</value>
+  </data>
+  <data name="EmployeeDynamicsHiredColumn" xml:space="preserve">
+    <value>Sosit</value>
+  </data>
+  <data name="EmployeeDynamicsMonthColumn" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="EmployeeDynamicsTerminatedColumn" xml:space="preserve">
+    <value>Concediat</value>
+  </data>
+  <data name="EmployeeDynamicsWorkedLessThanMonthColumn" xml:space="preserve">
+    <value>Au lucrat sub o luna</value>
+  </data>
+  <data name="EmployeeEditAbsenceTypeLabel" xml:space="preserve">
+    <value>Cauza</value>
+  </data>
+  <data name="EmployeeEditAdditionalPhoneLabel" xml:space="preserve">
+    <value>Telefon secundar</value>
+  </data>
+  <data name="EmployeeEditBarcodeLabel" xml:space="preserve">
+    <value>Cod de bare</value>
+  </data>
+  <data name="EmployeeEditBirthdayLabel" xml:space="preserve">
+    <value>Data nasterii</value>
+  </data>
+  <data name="EmployeeEditCarBrandLabel" xml:space="preserve">
+    <value>Model auto</value>
+  </data>
+  <data name="EmployeeEditCarColorLabel" xml:space="preserve">
+    <value>Culoare auto</value>
+  </data>
+  <data name="EmployeeEditCategoryLabel" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="EmployeeEditCharSuffix" xml:space="preserve">
+    <value>simboluri</value>
+  </data>
+  <data name="EmployeeEditEmailLabel" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmployeeEditErrorFoundMessage" xml:space="preserve">
+    <value>Au fost depistate urmatoarele erori</value>
+  </data>
+  <data name="EmployeeEditFacebookProfileLabel" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="EmployeeEditFacebookStatusLabel" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="EmployeeEditFemaleLabel" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="EmployeeEditFirstNameLabel" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+  <data name="EmployeeEditGenderLabel" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="EmployeeEditHeader" xml:space="preserve">
+    <value>Editarea cartii</value>
+  </data>
+  <data name="EmployeeEditHireDateLabel" xml:space="preserve">
+    <value>Data angajarii</value>
+  </data>
+  <data name="EmployeeEditHolidaysDatesLabel" xml:space="preserve">
+    <value>Perioada concediu</value>
+  </data>
+  <data name="EmployeeEditHospitalsDatesLabel" xml:space="preserve">
+    <value>Perioada concediu medical</value>
+  </data>
+  <data name="EmployeeEditLPhotoLabel" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="EmployeeEditMaleLabel" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="EmployeeEditMedicalBookLabel" xml:space="preserve">
+    <value>Data medicinei muncii</value>
+  </data>
+  <data name="EmployeeEditMedicalBookShelfLifeLabel" xml:space="preserve">
+    <value>Medicina muncii valabila pana la</value>
+  </data>
+  <data name="EmployeeEditNumberLabel" xml:space="preserve">
+    <value>Numar</value>
+  </data>
+  <data name="EmployeeEditPatronymicLabel" xml:space="preserve">
+    <value>Patronimic</value>
+  </data>
+  <data name="EmployeeEditPersonalInfoLabel" xml:space="preserve">
+    <value>Informatii personale</value>
+  </data>
+  <data name="EmployeeEditPFRLabel" xml:space="preserve">
+    <value>Fond pensii</value>
+  </data>
+  <data name="EmployeeEditPFRMask" xml:space="preserve">
+    <value>999-999-999 99</value>
+  </data>
+  <data name="EmployeeEditPhoneLabel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="EmployeeEditPhoneNumberMask" xml:space="preserve">
+    <value>+7 (999) 999-99-99</value>
+  </data>
+  <data name="EmployeeEditPhotoLabel" xml:space="preserve">
+    <value>Fotografie</value>
+  </data>
+  <data name="EmployeeEditRequiredFieldsMessage" xml:space="preserve">
+    <value>Campurile marcate cu (*) sunt obligatorii</value>
+  </data>
+  <data name="EmployeeEditSecondNameLabel" xml:space="preserve">
+    <value>Nume de familie</value>
+  </data>
+  <data name="EmployeeEditStateDateFromLabel" xml:space="preserve">
+    <value>Perioada</value>
+  </data>
+  <data name="EmployeeEditStateDescriptionLabel" xml:space="preserve">
+    <value>Descriere</value>
+  </data>
+  <data name="EmployeeEditStateTimeFromLabel" xml:space="preserve">
+    <value>Timp</value>
+  </data>
+  <data name="EmployeeEditStatusLabel" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="EmployeeEditTabNoLabel" xml:space="preserve">
+    <value>Numar de inregistrare</value>
+  </data>
+  <data name="EmployeeEditTabNoMask" xml:space="preserve">
+    <value>999999</value>
+  </data>
+  <data name="EmployeeEditTerminationDateLabel" xml:space="preserve">
+    <value>Data concedierii</value>
+  </data>
+  <data name="EmployeeEditTerminationReasonLabel" xml:space="preserve">
+    <value>Motive concediere</value>
+  </data>
+  <data name="EmployeeEditTitle" xml:space="preserve">
+    <value>Editare angajat</value>
+  </data>
+  <data name="EmployeeEditTypeLabel" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="EmployeeEditUnitLabel" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="EmployeeEditWorkInfoLabel" xml:space="preserve">
+    <value>Informatii de lucru</value>
+  </data>
+  <data name="EmployeeEditYearOfVehicleCarLabel" xml:space="preserve">
+    <value>Anul de fabricatie al autovehiculului</value>
+  </data>
+  <data name="EmployeeErrorLoginAlreadyUsed" xml:space="preserve">
+    <value>Numarul de telefon respectiv deja a fost indicat de un alt angajat</value>
+  </data>
+  <data name="EmployeeErrorNoPhoto" xml:space="preserve">
+    <value>Не добавлена фотография сотрудника</value>
+  </data>
+  <data name="EmployeeErrorPhoneNumber" xml:space="preserve">
+    <value>Trebuie indicat numarul de telefon corect</value>
+  </data>
+  <data name="EmployeeErrorPhoto" xml:space="preserve">
+    <value>La salvarea fotografiei sa produs o eroare</value>
+  </data>
+  <data name="EmployeeErrorPhotoExtension" xml:space="preserve">
+    <value>Extensia fisierului fotografiei trebuie sa fie .jpg sau .png</value>
+  </data>
+  <data name="EmployeeErrorPhotoHeight" xml:space="preserve">
+    <value>Inaltimea fotografiei nu poate depasi {0} px.</value>
+  </data>
+  <data name="EmployeeErrorPhotoSize" xml:space="preserve">
+    <value>Dimensiunea fotografiei nu poate depasi {0} Kb</value>
+  </data>
+  <data name="EmployeeErrorPhotoWidth" xml:space="preserve">
+    <value>Latimea fotografiei nu poate depasi {0} px.</value>
+  </data>
+  <data name="EmployeeErrorRole" xml:space="preserve">
+    <value>Este indicat un tip de angajat necunoscut</value>
+  </data>
+  <data name="EmployeeErrorShiftDateFormat" xml:space="preserve">
+    <value>A fost introdusa o data incorecta</value>
+  </data>
+  <data name="EmployeeErrorShiftEndDate" xml:space="preserve">
+    <value>Data finalizarii turei trebuie sa fie mai tarzie datei de inceput</value>
+  </data>
+  <data name="EmployeeErrorShiftTimeFormat" xml:space="preserve">
+    <value>A fost introdus timpul incorect</value>
+  </data>
+  <data name="EmployeeKitchenDynamicsAwayColumn" xml:space="preserve">
+    <value>Fluiditate personal bucatarie</value>
+  </data>
+  <data name="EmployeeLabel" xml:space="preserve">
+    <value>Angajat</value>
+  </data>
+  <data name="EmployeeListAgeColumnTitle" xml:space="preserve">
+    <value>Varsta</value>
+  </data>
+  <data name="EmployeeListBirthdayFemaleLabel" xml:space="preserve">
+    <value>nasuta</value>
+  </data>
+  <data name="EmployeeListBirthdayMaleLabel" xml:space="preserve">
+    <value>nascut</value>
+  </data>
+  <data name="EmployeeListBirthdaysHeader" xml:space="preserve">
+    <value>Zi de nastere astazi</value>
+  </data>
+  <data name="EmployeeListEmailLabel" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="EmployeeListExperienceColumnTitle" xml:space="preserve">
+    <value>Vechime</value>
+  </data>
+  <data name="EmployeeListExperienceGreaterThan1Month" xml:space="preserve">
+    <value>&gt; 1 luna</value>
+  </data>
+  <data name="EmployeeListExperienceGreaterThan6Monthes" xml:space="preserve">
+    <value>&gt; 6 luni</value>
+  </data>
+  <data name="EmployeeListExperienceLessThan1Month" xml:space="preserve">
+    <value>&lt; 1 luna</value>
+  </data>
+  <data name="EmployeeListHireDate" xml:space="preserve">
+    <value>Data angajarii</value>
+  </data>
+  <data name="EmployeeListHiredLabel" xml:space="preserve">
+    <value>Lucreaza</value>
+  </data>
+  <data name="EmployeeListLessThanDay" xml:space="preserve">
+    <value>Sub o zi</value>
+  </data>
+  <data name="EmployeeListMedicalBookLabel" xml:space="preserve">
+    <value>medicina muncii</value>
+  </data>
+  <data name="EmployeeListMedicalBookName" xml:space="preserve">
+    <value>Nume/Prenume</value>
+  </data>
+  <data name="EmployeeListMedicalBookRemained" xml:space="preserve">
+    <value>Au mai ramas</value>
+  </data>
+  <data name="EmployeeListMedicalBooks" xml:space="preserve">
+    <value>Medicina muncii</value>
+  </data>
+  <data name="EmployeeListMedicalBookType" xml:space="preserve">
+    <value>Tipul</value>
+  </data>
+  <data name="EmployeeListNameColumnTitle" xml:space="preserve">
+    <value>Nume si prenume</value>
+  </data>
+  <data name="EmployeeListNoBirthdayLabel" xml:space="preserve">
+    <value>lipseste</value>
+  </data>
+  <data name="EmployeeListNoEmailLabel" xml:space="preserve">
+    <value>nu este indicat</value>
+  </data>
+  <data name="EmployeeListNoMedicalBookLabel" xml:space="preserve">
+    <value>nu exista</value>
+  </data>
+  <data name="EmployeeListNoPhoneNumberLabel" xml:space="preserve">
+    <value>nu este indicat</value>
+  </data>
+  <data name="EmployeeListPhoneNumberLabel" xml:space="preserve">
+    <value>telefon</value>
+  </data>
+  <data name="EmployeeListStatusLabel" xml:space="preserve">
+    <value>stare</value>
+  </data>
+  <data name="EmployeeListTabNoLabel" xml:space="preserve">
+    <value>numar de inregistrare</value>
+  </data>
+  <data name="EmployeeListTerminatedLabel" xml:space="preserve">
+    <value>Concediati</value>
+  </data>
+  <data name="EmployeeListTerminationColumnTitle" xml:space="preserve">
+    <value>Причина увольнения</value>
+  </data>
+  <data name="EmployeeListTitle" xml:space="preserve">
+    <value>Liste angajati</value>
+  </data>
+  <data name="EmployeeListTypeColumnTitle" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="EmployeeListUnitLabel" xml:space="preserve">
+    <value>pizzeria</value>
+  </data>
+  <data name="EmployeeMedicalBooksExpiredText" xml:space="preserve">
+    <value>Expirata</value>
+  </data>
+  <data name="EmployeeMedicalBooksFullNameColumnTitle" xml:space="preserve">
+    <value>Nume si prenume</value>
+  </data>
+  <data name="EmployeeMedicalBooksProlongLink" xml:space="preserve">
+    <value>Prelungeste</value>
+  </data>
+  <data name="EmployeeMedicalBooksRemainedColumnTitle" xml:space="preserve">
+    <value>Au ramas</value>
+  </data>
+  <data name="EmployeeMedicalBooksTypeColumnTitle" xml:space="preserve">
+    <value>Post</value>
+  </data>
+  <data name="EmployeeMoodWeekLabel" xml:space="preserve">
+    <value>saptamana din {0:dd.MM} pana in {1:dd:MM}</value>
+  </data>
+  <data name="EmployeeNewLabel" xml:space="preserve">
+    <value>Angajat nou</value>
+  </data>
+  <data name="EmployeeNewTitle" xml:space="preserve">
+    <value>Angajat nou</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYear" xml:space="preserve">
+    <value>Prognoza de rotatie de personal anuala</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Raportul dinamica de acumulare pe an, multiplicata cu 12 luni, la numarul de luni trecute din anul curent.</value>
+  </data>
+  <data name="EmployeeSearchLabel" xml:space="preserve">
+    <value>Cauta angajat</value>
+  </data>
+  <data name="EmployeeSearchOpenLink" xml:space="preserve">
+    <value>Deschide cartea</value>
+  </data>
+  <data name="EmployeeSearchPlaceholder" xml:space="preserve">
+    <value>Introduceti numele si prenumele angajatului</value>
+  </data>
+  <data name="EmployeeShiftNotInScheduleText" xml:space="preserve">
+    <value>in afara graficului</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginDateColumnTitle" xml:space="preserve">
+    <value>Data inceput</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginTimeColumnTitle" xml:space="preserve">
+    <value>Timp inceput</value>
+  </data>
+  <data name="EmployeeShiftSettingsCategoryColumnTitle" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseEmployee" xml:space="preserve">
+    <value>Alegeti angajat</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndDateColumnTitle" xml:space="preserve">
+    <value>Data finalizare</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndTimeColumnTitle" xml:space="preserve">
+    <value>Timp finalizare</value>
+  </data>
+  <data name="EmployeeShiftSettingsTitle" xml:space="preserve">
+    <value>Corectarea timpului de lucru al angajatului</value>
+  </data>
+  <data name="EmployeesOnShift" xml:space="preserve">
+    <value>Angajati in tura</value>
+  </data>
+  <data name="EmployeeStatisticsAbsentLabel" xml:space="preserve">
+    <value>Lipsesc</value>
+  </data>
+  <data name="EmployeeStatisticsActiveCountLabel" xml:space="preserve">
+    <value>Lucreaza</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationComment" xml:space="preserve">
+    <value>Adaptare - raportul dintre partea angajatilor (0-100%), cu vechime de mai putin de doua luni si concediati in luna in curs, si numarul angajatilor cu vechime de mai putin de doua luni.</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationFactorLabel" xml:space="preserve">
+    <value>Coeficient de adaptare</value>
+  </data>
+  <data name="EmployeeStatisticsAddEmployeeLink" xml:space="preserve">
+    <value>Adauga angajat</value>
+  </data>
+  <data name="EmployeeStatisticsApplicantsLabel" xml:space="preserve">
+    <value>Primit chestionare</value>
+  </data>
+  <data name="EmployeeStatisticsAwayComment" xml:space="preserve">
+    <value>Fluiditate - procentul angajatilor concediati in luna curenta, (0-100%), raportat la numarul total al angajatilor</value>
+  </data>
+  <data name="EmployeeStatisticsAwayFactorLabel" xml:space="preserve">
+    <value>Rotatie personal in luna curenta</value>
+  </data>
+  <data name="EmployeeStatisticsFeedbackLabel" xml:space="preserve">
+    <value>Feedback-uri luna in curs. Total / anonime</value>
+  </data>
+  <data name="EmployeeStatisticsFindBySurname" xml:space="preserve">
+    <value>Cautare dupa numele angajatului</value>
+  </data>
+  <data name="EmployeeStatisticsHideReasonsForDismissal" xml:space="preserve">
+    <value>Ascunde</value>
+  </data>
+  <data name="EmployeeStatisticsHiredTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Angajati / concediati in aceasta luna.</value>
+  </data>
+  <data name="EmployeeStatisticsHiredThisMonthLabel" xml:space="preserve">
+    <value>Angajati in aceasta luna</value>
+  </data>
+  <data name="EmployeeStatisticsHiringReportLink" xml:space="preserve">
+    <value>Vezi dinamica</value>
+  </data>
+  <data name="EmployeeStatisticsHolidaysCountLabel" xml:space="preserve">
+    <value>Concediu</value>
+  </data>
+  <data name="EmployeeStatisticsHospitalsCountLabel" xml:space="preserve">
+    <value>Concediu medical</value>
+  </data>
+  <data name="EmployeeStatisticsKitchenAwayFactorLabel" xml:space="preserve">
+    <value>Fluiditate personal bucatarie</value>
+  </data>
+  <data name="EmployeeStatisticsLeaveLabel" xml:space="preserve">
+    <value>Cerere de concediu</value>
+  </data>
+  <data name="EmployeeStatisticsListLink" xml:space="preserve">
+    <value>Intreaga lista a angajatilor</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookExpiredCountLabel" xml:space="preserve">
+    <value>Termen medicina muncii expirat</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookHeader" xml:space="preserve">
+    <value>Expira termenul carnetului de sanatate</value>
+  </data>
+  <data name="EmployeeStatisticsNormLabel" xml:space="preserve">
+    <value>Norma</value>
+  </data>
+  <data name="EmployeeStatisticsNormsLabel" xml:space="preserve">
+    <value>Norma de angajati</value>
+  </data>
+  <data name="EmployeeStatisticsNoviceLabel" xml:space="preserve">
+    <value>Stagiari acum</value>
+  </data>
+  <data name="EmployeeStatisticsOtherAbsenceCountLabel" xml:space="preserve">
+    <value>Alta cauza</value>
+  </data>
+  <data name="EmployeeStatisticsOtherReasonsForDismissal" xml:space="preserve">
+    <value>Alte cauze</value>
+  </data>
+  <data name="EmployeeStatisticsPopularReasonsForDismissal" xml:space="preserve">
+    <value>Cauze populare de demisie in ultimele 12 luni</value>
+  </data>
+  <data name="EmployeeStatisticsProductivityLabel" xml:space="preserve">
+    <value>Productivitate</value>
+  </data>
+  <data name="EmployeeStatisticsSelectedPizzeria" xml:space="preserve">
+    <value>Alegeti pizzeria</value>
+  </data>
+  <data name="EmployeeStatisticsStuffLabel" xml:space="preserve">
+    <value>Stat</value>
+  </data>
+  <data name="EmployeeStatisticsSuspendedCountLabel" xml:space="preserve">
+    <value>Suspendat</value>
+  </data>
+  <data name="EmployeeStatisticsTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Concediati in aceasta luna</value>
+  </data>
+  <data name="EmployeeStatisticsTitle" xml:space="preserve">
+    <value>Informatii generale</value>
+  </data>
+  <data name="EmployeeStatisticsTotalCountLabel" xml:space="preserve">
+    <value>Total angajati</value>
+  </data>
+  <data name="EmployeeStatisticsWorkedLessThanMonthCountLabel" xml:space="preserve">
+    <value>Au lucrat sub o luna</value>
+  </data>
+  <data name="EmployeesTrainingFailedAddCurrentCategoryStage" xml:space="preserve">
+    <value>Imposibil de setat repetativ categoria curenta</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeTimeMask" xml:space="preserve">
+    <value>99:99</value>
+  </data>
+  <data name="EmployeeTraining" xml:space="preserve">
+    <value>Training angajati</value>
+  </data>
+  <data name="EmptyTransactionMessage" xml:space="preserve">
+    <value>Din pacate pentru perioada indicata tranzactii nu au fost efectuate</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Eroare!</value>
+  </data>
+  <data name="Error_CanNotCancel" xml:space="preserve">
+    <value>Imposibil de anulat comanda</value>
+  </data>
+  <data name="Error_CouldNotGetYandexTransactions" xml:space="preserve">
+    <value>Eroare la deschiderea listei de tranzactii.</value>
+  </data>
+  <data name="Error_RequiedCommentIfRejected" xml:space="preserve">
+    <value>La refuzul cererii trebuie completat comentariul.</value>
+  </data>
+  <data name="Error_YandexTransactionsRangeIsTooBig" xml:space="preserve">
+    <value>Perioada datelor nu trebuie sa depaseasca 1 luna.</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>Евро</value>
+  </data>
+  <data name="ExpectedDate" xml:space="preserve">
+    <value>Data estimata</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>Vechime</value>
+  </data>
+  <data name="ExperienceBonus" xml:space="preserve">
+    <value>Prima pentru vechime</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>A expirat termenul de valabilitate</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Exporta in Excel</value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Data inceput ore suplimentare</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Ora inceput ore suplimentare</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Categorie angajat</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Alegeti tipurile angajatilor</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Nume/prenume angajat</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Data sfarsit ore suplimentare</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Ora sfarsit ore suplimentare</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>Program suplimentar</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>Numar ore</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>Nume/prenume sef de tura</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Fact" xml:space="preserve">
+    <value>Faptic</value>
+  </data>
+  <data name="FeatureCardCheckDateLabel" xml:space="preserve">
+    <value>Termen de control</value>
+  </data>
+  <data name="FeatureCardChooseTime" xml:space="preserve">
+    <value>Indicat perioada in care puteti sa lucrati</value>
+  </data>
+  <data name="FeatureCardCollapseFilterLink" xml:space="preserve">
+    <value>Ascunde filtru</value>
+  </data>
+  <data name="FeatureCardDescription" xml:space="preserve">
+    <value>Graficul in care persoanele indica cand pot iesi in tura.</value>
+  </data>
+  <data name="FeatureCardEveningOptionText" xml:space="preserve">
+    <value>seara</value>
+  </data>
+  <data name="FeatureCardExpandFilterLink" xml:space="preserve">
+    <value>Deschide filtru</value>
+  </data>
+  <data name="FeatureCardFullNamePlaceholder" xml:space="preserve">
+    <value>Nume, post</value>
+  </data>
+  <data name="FeatureCardHolidayLabel" xml:space="preserve">
+    <value>Zi libera</value>
+  </data>
+  <data name="FeatureCardHolidayOptionText" xml:space="preserve">
+    <value>zi libera</value>
+  </data>
+  <data name="FeatureCardMorningOptionText" xml:space="preserve">
+    <value>dimineata-ziua</value>
+  </data>
+  <data name="FeatureCardNightOptionText" xml:space="preserve">
+    <value>noaptea</value>
+  </data>
+  <data name="FeatureCardOptionsTitle" xml:space="preserve">
+    <value>Pot lucra</value>
+  </data>
+  <data name="FeatureCardTitle" xml:space="preserve">
+    <value>Harta posibilitatilor</value>
+  </data>
+  <data name="FeatureCardWorkdayLabel" xml:space="preserve">
+    <value>Poate lucra</value>
+  </data>
+  <data name="FederalLevelHoliday" xml:space="preserve">
+    <value>Sarbatoare nationala</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>Campul {0} nu este completat</value>
+  </data>
+  <data name="ForecastForSeveralDays" xml:space="preserve">
+    <value>Pentru cate zile v-a ajunge</value>
+  </data>
+  <data name="FormationOfOrder" xml:space="preserve">
+    <value>Formare comanda</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Vineri</value>
+  </data>
+  <data name="FridayShort" xml:space="preserve">
+    <value>Vi</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>de la</value>
+  </data>
+  <data name="From2" xml:space="preserve">
+    <value>de la</value>
+  </data>
+  <data name="FromSupplier" xml:space="preserve">
+    <value>De la cine (furnizor)</value>
+  </data>
+  <data name="GenericReportType" xml:space="preserve">
+    <value>toate tipurile</value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value>Produse</value>
+  </data>
+  <data name="GoodsProduct" xml:space="preserve">
+    <value>Bunuri/produse</value>
+  </data>
+  <data name="Grivna" xml:space="preserve">
+    <value>Гривна</value>
+  </data>
+  <data name="GuiltyPerson" xml:space="preserve">
+    <value>Persoana vinovata</value>
+  </data>
+  <data name="HiringReportAdaptationColumnTitle" xml:space="preserve">
+    <value>Coeficient de adaptare</value>
+  </data>
+  <data name="HiringReportAwayColumnTitle" xml:space="preserve">
+    <value>Coeficient rotatie personal</value>
+  </data>
+  <data name="HiringReportBuildLink" xml:space="preserve">
+    <value>Afiseaza</value>
+  </data>
+  <data name="HiringReportChooseDateLabel" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="HiringReportChooseUnitLabel" xml:space="preserve">
+    <value>Alegeti locatia</value>
+  </data>
+  <data name="HiringReportExcelExportLink" xml:space="preserve">
+    <value>Export in Excel</value>
+  </data>
+  <data name="HiringReportFactColumnTitle" xml:space="preserve">
+    <value>Numar real de angajati</value>
+  </data>
+  <data name="HiringReportHiredColumnTitle" xml:space="preserve">
+    <value>Angajati</value>
+  </data>
+  <data name="HiringReportMonthColumnTitle" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="HiringReportTerminatedColumnTitle" xml:space="preserve">
+    <value>Concediati</value>
+  </data>
+  <data name="HiringReportWorkedLessThanMonthColumnTitle" xml:space="preserve">
+    <value>Au lucrat sub o luna</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>ora</value>
+  </data>
+  <data name="HourAbbr" xml:space="preserve">
+    <value>ora</value>
+  </data>
+  <data name="Html_ListenDodoFm" xml:space="preserve">
+    <value>ASCULTA&lt;br&gt;DODOFM.RO</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>Intrari</value>
+  </data>
+  <data name="InputSupplyComposition" xml:space="preserve">
+    <value>Completati compozitia aprovizionarii</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Data factura</value>
+  </data>
+  <data name="InvoiceDate_error" xml:space="preserve">
+    <value>Completati data facturii</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>Nr. factura</value>
+  </data>
+  <data name="InvoiceNumber_error" xml:space="preserve">
+    <value>Introduceri Nr. Facturii</value>
+  </data>
+  <data name="IsTransactionCompleted" xml:space="preserve">
+    <value>Stare plata</value>
+  </data>
+  <data name="JQGridPageCaption" xml:space="preserve">
+    <value>Pag.</value>
+  </data>
+  <data name="JQGridPageFromCaption" xml:space="preserve">
+    <value>din</value>
+  </data>
+  <data name="JQGridViewCaption" xml:space="preserve">
+    <value>Vizualizare</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Bucatarie</value>
+  </data>
+  <data name="KitchenLabel" xml:space="preserve">
+    <value>Bucatarie</value>
+  </data>
+  <data name="LabourCostTooltip" xml:space="preserve">
+    <value>Raportul salariilor personalului din bucatarie la total vanzari</value>
+  </data>
+  <data name="LastRevision" xml:space="preserve">
+    <value>Ultimul inventar</value>
+  </data>
+  <data name="LastTwelveMonths" xml:space="preserve">
+    <value>Ultimele 12 luni</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>incarcare</value>
+  </data>
+  <data name="LossesAndExceesMenuItem" xml:space="preserve">
+    <value>Pierderi si surplus</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDate" xml:space="preserve">
+    <value>Data pornire</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDateDay" xml:space="preserve">
+    <value>21 ianuarie 2015</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDesc" xml:space="preserve">
+    <value>Statistici ale sistemului de bonusare v2</value>
+  </data>
+  <data name="LoyaltyAnaliticsSystem" xml:space="preserve">
+    <value>Sistem de bonusare</value>
+  </data>
+  <data name="LoyaltyAnalyticsCoverage" xml:space="preserve">
+    <value>Acoperirea auditoriului</value>
+  </data>
+  <data name="LoyaltyAnalyticsDodollarSpending" xml:space="preserve">
+    <value>Dodolei consumati</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitations" xml:space="preserve">
+    <value>Dinamica invitatiilor</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitationsComment" xml:space="preserve">
+    <value>In tabel sunt indicati Clientii, inregistrati din invitatia Clientului din regiunea Dvs. Pentru perioada indicata.</value>
+  </data>
+  <data name="LoyaltyAnalyticsInvitedClientsCount" xml:space="preserve">
+    <value>Clienti noi atrasi prin SL</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastMonthNewClientsCount" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastWeekNewClientsCount" xml:space="preserve">
+    <value>Saptamana</value>
+  </data>
+  <data name="LoyaltyAnalyticsProfit" xml:space="preserve">
+    <value>Comenzile refferalilor</value>
+  </data>
+  <data name="LoyaltyAnalyticsTheySelfClientsCount" xml:space="preserve">
+    <value>Clienti noi atrasi fara SL</value>
+  </data>
+  <data name="LoyaltyAnalyticsTitle" xml:space="preserve">
+    <value>Sistem de bonusare</value>
+  </data>
+  <data name="LoyaltyAnalyticsTodayNewClientsCount" xml:space="preserve">
+    <value>Astazi</value>
+  </data>
+  <data name="LoyaltyAnalyticsTotalSpending" xml:space="preserve">
+    <value>Suma comenzii (lei + dodolei)</value>
+  </data>
+  <data name="LoyaltyAnalyticsWholeNewClientsCount" xml:space="preserve">
+    <value>Total clienti noi in perioada</value>
+  </data>
+  <data name="LoyaltyAnalyticsYesterdayNewClientsCount" xml:space="preserve">
+    <value>Ieri</value>
+  </data>
+  <data name="LunchSettings" xml:space="preserve">
+    <value>Setarile pranzurilor</value>
+  </data>
+  <data name="ManagerSettingScheduleManagerLabel" xml:space="preserve">
+    <value> Responsabil cu programul echipei</value>
+  </data>
+  <data name="ManagerSettingsChoose" xml:space="preserve">
+    <value>Alegeti angajat</value>
+  </data>
+  <data name="ManagerSettingsDepartmentDirectorLabel" xml:space="preserve">
+    <value>Director subdiviziune</value>
+  </data>
+  <data name="ManagerSettingsHeader" xml:space="preserve">
+    <value>Contacte conducatori pizzerie</value>
+  </data>
+  <data name="ManagerSettingsHint" xml:space="preserve">
+    <value>Se pot vizualiza in conturile personale ale angajatilor</value>
+  </data>
+  <data name="ManagerSettingsScheduleManagerLabel" xml:space="preserve">
+    <value> Responsabil cu programul echipei</value>
+  </data>
+  <data name="ManagerSettingsUnitDirectorLabel" xml:space="preserve">
+    <value>Administrator pizzerie</value>
+  </data>
+  <data name="ManagersLabel" xml:space="preserve">
+    <value>Sefi de tura</value>
+  </data>
+  <data name="MarketingActivities" xml:space="preserve">
+    <value>Activitati de marketing</value>
+  </data>
+  <data name="MarketingTitle" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="MateraialRemainingInfoBlock" xml:space="preserve">
+    <value>Datele se afiseaza din momentul ultimului inventar din</value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Materii prime</value>
+  </data>
+  <data name="MaterialConsumption" xml:space="preserve">
+    <value>Consum materii prime</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialError" xml:space="preserve">
+    <value>Au fost selectate mai mult de 15 tipuri de materie prima</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialMessage" xml:space="preserve">
+    <value>La selectarea unei unitati este posibila formarea consumului pe toate pozitiile de materie prima. Daca selectati doua sau mai multe unitati, consumul poate fi format pe maxim 15 pozitii. Perioada maxima este 35 de zile.</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByPeriodError" xml:space="preserve">
+    <value>A fost selectata o perioada mai mare de 35 de zile</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByUnitsError" xml:space="preserve">
+    <value>Nu este selectata nici o unitate</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>Anulare</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>Alimentatie personal</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>Vanzari</value>
+  </data>
+  <data name="MaterialMeasurements" xml:space="preserve">
+    <value>Masuratori</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materie prima</value>
+  </data>
+  <data name="MaterialsType" xml:space="preserve">
+    <value>Tip materie prima</value>
+  </data>
+  <data name="MaterialTransfer" xml:space="preserve">
+    <value>Transfer</value>
+  </data>
+  <data name="MaterialTransferSetup" xml:space="preserve">
+    <value>Setare transferuri</value>
+  </data>
+  <data name="MaterialTypeTransferReportType" xml:space="preserve">
+    <value>transferuri</value>
+  </data>
+  <data name="MaterialTypeTransfer_ReceivingDateIsInvalid" xml:space="preserve">
+    <value>Data receptiei nu poate fi anterioara datei de expediere</value>
+  </data>
+  <data name="MenuAllEmployees" xml:space="preserve">
+    <value>Toti angajatii</value>
+  </data>
+  <data name="MenuApplicantsInbox" xml:space="preserve">
+    <value>Chestionare</value>
+  </data>
+  <data name="MenuApplicantsStatistic" xml:space="preserve">
+    <value>Statistici aplicatii</value>
+  </data>
+  <data name="MenuCourierSchedule" xml:space="preserve">
+    <value>Graficul curierilor</value>
+  </data>
+  <data name="MenuEmployeeBirthdays" xml:space="preserve">
+    <value>ZI de nastere</value>
+  </data>
+  <data name="MenuEmployeeList" xml:space="preserve">
+    <value>Lista angajati</value>
+  </data>
+  <data name="MenuEmployees" xml:space="preserve">
+    <value>Angajati</value>
+  </data>
+  <data name="MenuEmployeeShiftSettings" xml:space="preserve">
+    <value>Corectarea turelor</value>
+  </data>
+  <data name="MenuEmployeeStatistics" xml:space="preserve">
+    <value>Informatii generale</value>
+  </data>
+  <data name="MenuEmployeeWorkingHours" xml:space="preserve">
+    <value>Ore de lucru</value>
+  </data>
+  <data name="MenuExperienceBonusRates" xml:space="preserve">
+    <value>Prima de vechime</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>Program suplimentar</value>
+  </data>
+  <data name="MenuFeatureCard" xml:space="preserve">
+    <value>Harta posibilitatilor</value>
+  </data>
+  <data name="MenuHiringReport" xml:space="preserve">
+    <value>Indicatori personal</value>
+  </data>
+  <data name="MenuManagerSettings" xml:space="preserve">
+    <value>Contacte conducatori</value>
+  </data>
+  <data name="MenuMonthlyStatistics" xml:space="preserve">
+    <value>Luna</value>
+  </data>
+  <data name="MenuOperationalStatistics" xml:space="preserve">
+    <value>Statistici operationale</value>
+  </data>
+  <data name="MenuProductivityNorms" xml:space="preserve">
+    <value>Нормы производительности</value>
+  </data>
+  <data name="MenuReports" xml:space="preserve">
+    <value>Rapoarte</value>
+  </data>
+  <data name="MenuReviews" xml:space="preserve">
+    <value>Pareri</value>
+  </data>
+  <data name="MenuSalaryHolidayFactors" xml:space="preserve">
+    <value>Calendarul zilelor speciale</value>
+  </data>
+  <data name="MenuSalaryNightFactors" xml:space="preserve">
+    <value>Coeficient de noapte</value>
+  </data>
+  <data name="MenuSalaryPremiums" xml:space="preserve">
+    <value>Prime</value>
+  </data>
+  <data name="MenuSalaryRates" xml:space="preserve">
+    <value>Salariul angajatilor</value>
+  </data>
+  <data name="MenuSalaryReport" xml:space="preserve">
+    <value>Salariu</value>
+  </data>
+  <data name="MenuSalaryReportWithExperienceRates" xml:space="preserve">
+    <value>Salariul (inclusiv vechimea)</value>
+  </data>
+  <data name="MenuSalaryTaxes" xml:space="preserve">
+    <value>Налоговый коэффициент</value>
+  </data>
+  <data name="MenuSchedule" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Setari</value>
+  </data>
+  <data name="MenuShiftEmployee" xml:space="preserve">
+    <value>Angajati in tura</value>
+  </data>
+  <data name="MenuShiftNorms" xml:space="preserve">
+    <value>Analiza consolidata</value>
+  </data>
+  <data name="MenuShiftSchedule" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="MenuShiftSettings" xml:space="preserve">
+    <value>Parametri ture</value>
+  </data>
+  <data name="MenuStaff" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="MenuStocks" xml:space="preserve">
+    <value>Stocuri</value>
+  </data>
+  <data name="MenuTimeReport" xml:space="preserve">
+    <value>Program efectiv</value>
+  </data>
+  <data name="MenuTitle_Ratings" xml:space="preserve">
+    <value>Rating-uri</value>
+  </data>
+  <data name="MenuVacancyList" xml:space="preserve">
+    <value>Posturi vacante</value>
+  </data>
+  <data name="MenuZoneSettings" xml:space="preserve">
+    <value>Setare pizzerii</value>
+  </data>
+  <data name="Menu_AuditedInventory" xml:space="preserve">
+    <value>Stoc dupa inventar</value>
+  </data>
+  <data name="Menu_CalculateSMS" xml:space="preserve">
+    <value>Rapoarte mesaje SMS</value>
+  </data>
+  <data name="Menu_Finance" xml:space="preserve">
+    <value>Finante</value>
+  </data>
+  <data name="Menu_FinanceIndicators" xml:space="preserve">
+    <value>Indicatori</value>
+  </data>
+  <data name="Menu_HolidaysAndWeekends" xml:space="preserve">
+    <value>Sarbatori si zile libere</value>
+  </data>
+  <data name="Menu_InventoryManagement" xml:space="preserve">
+    <value>Evidenta</value>
+  </data>
+  <data name="Menu_KPI_Productivity" xml:space="preserve">
+    <value>Productivitate</value>
+  </data>
+  <data name="Menu_MaterialConsumption" xml:space="preserve">
+    <value>Consum materii prime</value>
+  </data>
+  <data name="Menu_Metrics" xml:space="preserve">
+    <value>Metrici</value>
+  </data>
+  <data name="Menu_Revenue" xml:space="preserve">
+    <value>Incasare</value>
+  </data>
+  <data name="Menu_RevenueInHourOnEmployee" xml:space="preserve">
+    <value>Incasare per persoana pe ora</value>
+  </data>
+  <data name="Menu_RevisionDashboard" xml:space="preserve">
+    <value>Rezumat inventar</value>
+  </data>
+  <data name="Menu_ShopWindowPauseStatistic" xml:space="preserve">
+    <value>Inactivitate vitrina</value>
+  </data>
+  <data name="Menu_Suppliers" xml:space="preserve">
+    <value>Furnizori</value>
+  </data>
+  <data name="Menu_TargetsOnMonth" xml:space="preserve">
+    <value>Targeturi pe luna</value>
+  </data>
+  <data name="Menu_TargetsOnYear" xml:space="preserve">
+    <value>Targeturi pe an</value>
+  </data>
+  <data name="Message_AddedDebiting" xml:space="preserve">
+    <value>A fost adaugata pozitia {0}. Cant: {1}. Cauza: {2}.</value>
+  </data>
+  <data name="Message_AddedSupply" xml:space="preserve">
+    <value>Aprovizionare adaugata</value>
+  </data>
+  <data name="Message_AddedSupplyComposition" xml:space="preserve">
+    <value>Afost adaugata pozitia {0} - {1}, suma fara TVA - {2}, TVA - {3}, Suma TVA - {4}, suma cu TVA - {5}, pret unitar - {6}, pret per 1 kg - {7}</value>
+  </data>
+  <data name="Message_CantLoadChart" xml:space="preserve">
+    <value>Scuze, graficul este momentan indisponibil</value>
+  </data>
+  <data name="Message_Comment" xml:space="preserve">
+    <value>Comentariu: {0}.</value>
+  </data>
+  <data name="Message_DebitingComment" xml:space="preserve">
+    <value>Comentariu: a fost {0}, a devenit {1}."</value>
+  </data>
+  <data name="Message_DebitingReason" xml:space="preserve">
+    <value>Cauza: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_DeletedSupplyComposition" xml:space="preserve">
+    <value>A fost stearsa pozitia {0} - {1}, suma fara TVA - {2}, Suma TVA - {3}, suma cu TVA - {4}, pret unitar {5}, pret per 1 kg - {6}</value>
+  </data>
+  <data name="Message_EditedDebiting" xml:space="preserve">
+    <value>A fost modificata pozitia {0}.</value>
+  </data>
+  <data name="Message_EnterVacancyFields" xml:space="preserve">
+    <value>Completati campurile aplicatiei</value>
+  </data>
+  <data name="Message_InvalidIntervals" xml:space="preserve">
+    <value>Posibilitatile nu au fost salvate, au fost selectate perioade sub 4 ore.</value>
+  </data>
+  <data name="Message_MaterialTypeTransferWasEdited" xml:space="preserve">
+    <value>Transferul a fost editat, incercati inca o data</value>
+  </data>
+  <data name="Message_NotChoosedAnyUnit" xml:space="preserve">
+    <value>Nu ati indicat nici o pizzerie.</value>
+  </data>
+  <data name="Message_RemovedDebiting" xml:space="preserve">
+    <value>A fost stearsa pozitia {0}. Cant {1}. Cauza: {2}.</value>
+  </data>
+  <data name="Message_SupplyChangeCostPerKgForMaterialType" xml:space="preserve">
+    <value>Pretul per kg a fost modificat la materia prima:</value>
+  </data>
+  <data name="Message_SupplyCompositionCount" xml:space="preserve">
+    <value>Cant: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerKillogramm" xml:space="preserve">
+    <value>Pret per 1 kg: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionPricePerPiece" xml:space="preserve">
+    <value>Pret per buc.: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSaveQuestion" xml:space="preserve">
+    <value>Continuam?</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaOfVAT" xml:space="preserve">
+    <value>Suma TVA: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithoutVAT" xml:space="preserve">
+    <value>Suma fara TVA: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSummaWithVAT" xml:space="preserve">
+    <value>Suma cu TVA: a fost {0}, a devenit {1}.</value>
+  </data>
+  <data name="Message_TemporarilyUnavailable" xml:space="preserve">
+    <value>Scuze, momentan indisponibil</value>
+  </data>
+  <data name="Message_UpdateSupplyComposition" xml:space="preserve">
+    <value>A fost editata pozitia {0} -</value>
+  </data>
+  <data name="MinimalShiftLengthForPersonalFood" xml:space="preserve">
+    <value>Durata minima a turei pentru a beneficia de pranz gratuit</value>
+  </data>
+  <data name="MinimalShiftToCashier" xml:space="preserve">
+    <value>"Durata minima a turei casierilor"</value>
+  </data>
+  <data name="MinimalShiftToCourier" xml:space="preserve">
+    <value>"Durata minima a turei curierilor"</value>
+  </data>
+  <data name="MinimalShiftToKitchenWorker" xml:space="preserve">
+    <value>"Durata minima a turei personalului bucatariei"</value>
+  </data>
+  <data name="MinimalShiftToPersonalManager" xml:space="preserve">
+    <value>"Durata minima a turei managerului de personal"</value>
+  </data>
+  <data name="MinimumStock" xml:space="preserve">
+    <value>Stocul minim</value>
+  </data>
+  <data name="MinuteAbbr" xml:space="preserve">
+    <value>min.</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Luni</value>
+  </data>
+  <data name="MondayShort" xml:space="preserve">
+    <value>Lu</value>
+  </data>
+  <data name="MonthlySpeed" xml:space="preserve">
+    <value>Viteza</value>
+  </data>
+  <data name="MonthlyStatisticBuildLink" xml:space="preserve">
+    <value>Formeaza</value>
+  </data>
+  <data name="MonthlyStatisticByDelivery" xml:space="preserve">
+    <value>Livrare: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByDeliveryWithPercent" xml:space="preserve">
+    <value>Livrare: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByPickup" xml:space="preserve">
+    <value>Ridicare: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByPickupWithPercent" xml:space="preserve">
+    <value>Ridicare: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByStationary" xml:space="preserve">
+    <value>Restaurant: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByStationaryWithPercent" xml:space="preserve">
+    <value>Restaurant: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticDateFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="MonthlyStatisticPercentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheck" xml:space="preserve">
+    <value>Bonul mediu</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheckUnitOfMeasure" xml:space="preserve">
+    <value>lei</value>
+  </data>
+  <data name="MonthlyStatisticsCertificates" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="MonthlyStatisticsCertificatesUnitOfMeasure" xml:space="preserve">
+    <value>buc.</value>
+  </data>
+  <data name="MonthlyStatisticsCountByLastTwelveMonths" xml:space="preserve">
+    <value>Numar comenzi in ultimele 12 luni</value>
+  </data>
+  <data name="MonthlyStatisticsCountByPeriod" xml:space="preserve">
+    <value>Numar comenzi in perioada</value>
+  </data>
+  <data name="MonthlyStatisticsDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="MonthlyStatisticsEfficiency" xml:space="preserve">
+    <value>Eficienta</value>
+  </data>
+  <data name="MonthlyStatisticsGrowth" xml:space="preserve">
+    <value>Crestere incasari</value>
+  </data>
+  <data name="MonthlyStatisticsGrowthUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCost" xml:space="preserve">
+    <value>LC (bucatarie)</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCostUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLossesTitle" xml:space="preserve">
+    <value>Pierderi</value>
+  </data>
+  <data name="MonthlyStatisticsLossesUnit" xml:space="preserve">
+    <value>%(total, din incasari)</value>
+  </data>
+  <data name="MonthlyStatisticsOrders" xml:space="preserve">
+    <value>Comenzi</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersGrowth" xml:space="preserve">
+    <value>Crestere numar comenzi</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHour" xml:space="preserve">
+    <value>Comenzi pe curier per ora</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHourUnitOfMeasure" xml:space="preserve">
+    <value>buc/pers h</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersUnitOfMeasure" xml:space="preserve">
+    <value>buc.</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHour" xml:space="preserve">
+    <value>Pizza si gustari pe angajat per ora</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>buc/pers h</value>
+  </data>
+  <data name="MonthlyStatisticsProductivityTitle" xml:space="preserve">
+    <value>Productivitate</value>
+  </data>
+  <data name="MonthlyStatisticsRevenue" xml:space="preserve">
+    <value>Incasari</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByLastTwelveMonths" xml:space="preserve">
+    <value>Incasari in ultimele 12 luni</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByPeriod" xml:space="preserve">
+    <value>Incasari totale in perioada</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHour" xml:space="preserve">
+    <value>Incasari pe angajat per ora</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>lei/pers h</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueUnitOfMeasure" xml:space="preserve">
+    <value>lei</value>
+  </data>
+  <data name="MonthlyStatisticsRevenuPerPerson" xml:space="preserve">
+    <value>Incasari per persoana pe ora</value>
+  </data>
+  <data name="MonthlyStatisticsSaleTitle" xml:space="preserve">
+    <value>Vanzari</value>
+  </data>
+  <data name="MonthlyStatisticsSpeed" xml:space="preserve">
+    <value>Viteza</value>
+  </data>
+  <data name="MonthlyStatisticsSpeedUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsStopSalesTimeTitle" xml:space="preserve">
+    <value>Stop vanzari</value>
+  </data>
+  <data name="MonthlyStatisticUnitOfMeasureCountShort" xml:space="preserve">
+    <value>buc.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Contul meu</value>
+  </data>
+  <data name="NewBonus" xml:space="preserve">
+    <value>Prima noua</value>
+  </data>
+  <data name="NewClientsTitle" xml:space="preserve">
+    <value>Clienti noi</value>
+  </data>
+  <data name="NewRate" xml:space="preserve">
+    <value>Prima noua</value>
+  </data>
+  <data name="NewRevenue" xml:space="preserve">
+    <value>O intrare noua</value>
+  </data>
+  <data name="NewTransfer" xml:space="preserve">
+    <value>Un transfer nou</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="NoAddedPosition" xml:space="preserve">
+    <value>nu sunt pozitii adaugate</value>
+  </data>
+  <data name="NoCallCenterFound" xml:space="preserve">
+    <value>Nu a fost gasit un call-center deschis</value>
+  </data>
+  <data name="NoEmployeeShift" xml:space="preserve">
+    <value>--:--</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>nu se aplica</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Nu a fost gasit nimic</value>
+  </data>
+  <data name="NovicesLabel" xml:space="preserve">
+    <value>Stagiari</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numar</value>
+  </data>
+  <data name="NumDay1" xml:space="preserve">
+    <value>zi</value>
+  </data>
+  <data name="NumDay2" xml:space="preserve">
+    <value>zile</value>
+  </data>
+  <data name="NumDay3" xml:space="preserve">
+    <value>zile</value>
+  </data>
+  <data name="NumMonth1" xml:space="preserve">
+    <value>luna</value>
+  </data>
+  <data name="NumMonth2" xml:space="preserve">
+    <value>luni</value>
+  </data>
+  <data name="NumMonth3" xml:space="preserve">
+    <value>luni</value>
+  </data>
+  <data name="NumYear1" xml:space="preserve">
+    <value>an</value>
+  </data>
+  <data name="NumYear2" xml:space="preserve">
+    <value>ani</value>
+  </data>
+  <data name="NumYear3" xml:space="preserve">
+    <value>ani</value>
+  </data>
+  <data name="OfficeManagerRoleText" xml:space="preserve">
+    <value>Administrator unitate</value>
+  </data>
+  <data name="OperationalStatistics" xml:space="preserve">
+    <value>Statistici operationale</value>
+  </data>
+  <data name="OperationalStatistics2WeekAgo" xml:space="preserve">
+    <value>Acum 2 saptamani</value>
+  </data>
+  <data name="OperationalStatisticsAssemblyTable" xml:space="preserve">
+    <value>Ingredientare</value>
+  </data>
+  <data name="OperationalStatisticsAveragePreparationOrdersTime" xml:space="preserve">
+    <value>Timp mediu de preparare a comenzilor</value>
+  </data>
+  <data name="OperationalStatisticsCertificates" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="OperationalStatisticsCompositeProductsTable" xml:space="preserve">
+    <value>Gustari</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndComposite" xml:space="preserve">
+    <value>Pizza si gustari</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndCompositeOnEmployee" xml:space="preserve">
+    <value>Numar pizza si gustari per persoana pe ora</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployee" xml:space="preserve">
+    <value>Numar pizze per persoana pe ora</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployeeShort" xml:space="preserve">
+    <value>Pizza per persoana pe ora</value>
+  </data>
+  <data name="OperationalStatisticsCouriersCountAndInQueue" xml:space="preserve">
+    <value>Curieri in total / in coada</value>
+  </data>
+  <data name="OperationalStatisticsCulture" xml:space="preserve">
+    <value>ro-RO</value>
+  </data>
+  <data name="OperationalStatisticsDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="OperationalStatisticsDelayedProducts" xml:space="preserve">
+    <value>Amanat</value>
+  </data>
+  <data name="OperationalStatisticsDelivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryAndPickup" xml:space="preserve">
+    <value>Livrare si ridicare</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryWorkTitle" xml:space="preserve">
+    <value>Functionarea livrarii</value>
+  </data>
+  <data name="OperationalStatisticsDontDeliveredOrders" xml:space="preserve">
+    <value>Comenzi neexpediate</value>
+  </data>
+  <data name="OperationalStatisticsDoughTable" xml:space="preserve">
+    <value>Aluat</value>
+  </data>
+  <data name="OperationalStatisticsEmployeesOnShiftNow" xml:space="preserve">
+    <value>Angajati in tura acum</value>
+  </data>
+  <data name="OperationalStatisticsForCurrentDay" xml:space="preserve">
+    <value>Raport zilnic</value>
+  </data>
+  <data name="OperationalStatisticsInProduction" xml:space="preserve">
+    <value>In lucru</value>
+  </data>
+  <data name="OperationalStatisticsInQueue" xml:space="preserve">
+    <value>In coada</value>
+  </data>
+  <data name="OperationalStatisticsKitchenLoad" xml:space="preserve">
+    <value>Incarcarea liniei</value>
+  </data>
+  <data name="OperationalStatisticsKitchenPizzaLoad" xml:space="preserve">
+    <value>Incarcarea liniei:</value>
+  </data>
+  <data name="OperationalStatisticsKitchenWork" xml:space="preserve">
+    <value>Functionarea bucatariei</value>
+  </data>
+  <data name="OperationalStatisticsLastFourWeek" xml:space="preserve">
+    <value>Ultimele patru saptamani</value>
+  </data>
+  <data name="OperationalStatisticsNow" xml:space="preserve">
+    <value>Acum</value>
+  </data>
+  <data name="OperationalStatisticsOrders" xml:space="preserve">
+    <value>Comenzi</value>
+  </data>
+  <data name="OperationalStatisticsOrdersCountOnCourierInHour" xml:space="preserve">
+    <value>Comenzi per curier</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWork" xml:space="preserve">
+    <value>Comenzi in productie</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkInStationary" xml:space="preserve">
+    <value>In restaurant</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkOnDelivery" xml:space="preserve">
+    <value>La livrare</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkPickup" xml:space="preserve">
+    <value>Ridicare</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkTotalCount" xml:space="preserve">
+    <value>Total comenzi</value>
+  </data>
+  <data name="OperationalStatisticsOrdersOnDelivery" xml:space="preserve">
+    <value>Comenzi pentru livrare</value>
+  </data>
+  <data name="OperationalStatisticsPackingTable" xml:space="preserve">
+    <value>Ambalare</value>
+  </data>
+  <data name="OperationalStatisticsProductivity" xml:space="preserve">
+    <value>Productivitate</value>
+  </data>
+  <data name="OperationalStatisticsProductsInWork" xml:space="preserve">
+    <value>Produse in productie</value>
+  </data>
+  <data name="OperationalStatisticsRevenue" xml:space="preserve">
+    <value>Vazari</value>
+  </data>
+  <data name="OperationalStatisticsRevenueDelivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="OperationalStatisticsRevenueOnEmployee" xml:space="preserve">
+    <value>Vanzari per persoana pe ora</value>
+  </data>
+  <data name="OperationalStatisticsRevenuePickup" xml:space="preserve">
+    <value>Ridicare</value>
+  </data>
+  <data name="OperationalStatisticsRevenueStationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OperationalStatisticsRevenueTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="OperationalStatisticsRevenueWithCurrency" xml:space="preserve">
+    <value>Vanzari, lei</value>
+  </data>
+  <data name="OperationalStatisticsShortCurrency" xml:space="preserve">
+    <value>lei</value>
+  </data>
+  <data name="OperationalStatisticsStationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OperationalStatisticsStopSale" xml:space="preserve">
+    <value>Stop vanzari</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersCount" xml:space="preserve">
+    <value>Numar comenzi intarziate</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersPercent" xml:space="preserve">
+    <value>Procent comenzi intarziate</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnDelivery" xml:space="preserve">
+    <value>Comenzi, restaurant</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnStationary" xml:space="preserve">
+    <value>Comenzi, livrare</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersTimeOutPercentage" xml:space="preserve">
+    <value>Procent comenzi intarziate</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnDelivery" xml:space="preserve">
+    <value>Incasari, livrare</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnStationary" xml:space="preserve">
+    <value>Incasari, restaurant</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueTotal" xml:space="preserve">
+    <value>Incasari, total</value>
+  </data>
+  <data name="OperationalStatisticsToday" xml:space="preserve">
+    <value>Azi</value>
+  </data>
+  <data name="OperationalStatisticsTotalRevenueNow" xml:space="preserve">
+    <value>Incasarile totale acum</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgo" xml:space="preserve">
+    <value>Acum o saptamana</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoInCurrentHour" xml:space="preserve">
+    <value>Acum o saptamana la aceasta ora</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoOnCurrentHour" xml:space="preserve">
+    <value>Acum o saptamana la aceasta ora</value>
+  </data>
+  <data name="OperationalStatisticsYesterday" xml:space="preserve">
+    <value>Ieri</value>
+  </data>
+  <data name="Ordered" xml:space="preserve">
+    <value>Comandat</value>
+  </data>
+  <data name="OrderedCount" xml:space="preserve">
+    <value>Cantitate comandata</value>
+  </data>
+  <data name="OrdersCountTitle" xml:space="preserve">
+    <value>Numar comenzi</value>
+  </data>
+  <data name="OrdersForecastForDay" xml:space="preserve">
+    <value>Prognoza zilnica</value>
+  </data>
+  <data name="OrdersIncreaseTooltip" xml:space="preserve">
+    <value>Cresterea numarului de comenzi raportata la aceeasi zi a saptamanii acum un an</value>
+  </data>
+  <data name="OrdersOnCourierInHourTooltip" xml:space="preserve">
+    <value>Cate comenzi pe ora livreaza un curier</value>
+  </data>
+  <data name="OrdersPerTrip" xml:space="preserve">
+    <value>Comenzi per cursa</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Societatea</value>
+  </data>
+  <data name="PackageDamaged" xml:space="preserve">
+    <value>Ambalaj deteriorat</value>
+  </data>
+  <data name="PenultimateAudit" xml:space="preserve">
+    <value>Penultimul inventar</value>
+  </data>
+  <data name="PeopleAbbr" xml:space="preserve">
+    <value>pers.</value>
+  </data>
+  <data name="PerformanceAlarm" xml:space="preserve">
+    <value>productivitatea este inferioara targetului zilei</value>
+  </data>
+  <data name="PerformanceOk" xml:space="preserve">
+    <value>productivitatea corespunde targetului zilei</value>
+  </data>
+  <data name="PerformanceYellow" xml:space="preserve">
+    <value>productivitatea este dubla targetului zilei</value>
+  </data>
+  <data name="PersonalFoodReportType" xml:space="preserve">
+    <value>alimentare personal</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PhoneNumberHint" xml:space="preserve">
+    <value>+4* (***) ** ** **</value>
+  </data>
+  <data name="PhoneNumberMask" xml:space="preserve">
+    <value>+49 (999) 99 99 99</value>
+  </data>
+  <data name="PizzasAndSnacksOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Cate pizze si gustari pe ora revine la fiecare angajat bucatarie</value>
+  </data>
+  <data name="PLCaption" xml:space="preserve">
+    <value>P&amp;L</value>
+  </data>
+  <data name="PreviosTwelveMonths" xml:space="preserve">
+    <value>12 luni anterioare</value>
+  </data>
+  <data name="PreviousWeek" xml:space="preserve">
+    <value>Saptamana trecuta</value>
+  </data>
+  <data name="PreviousYear" xml:space="preserve">
+    <value>Acum un an</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Pret</value>
+  </data>
+  <data name="PricePerKillogramm" xml:space="preserve">
+    <value>Pret per kg</value>
+  </data>
+  <data name="PricePerKillogrammWithoutVAT" xml:space="preserve">
+    <value>Pret per kg fara TVA</value>
+  </data>
+  <data name="PricePerPiece" xml:space="preserve">
+    <value>Pret unitar</value>
+  </data>
+  <data name="PricePerPieceWithoutVAT" xml:space="preserve">
+    <value>Pret unitar fara TVA</value>
+  </data>
+  <data name="ProductionSpeedBadColumnTitle" xml:space="preserve">
+    <value>Mai incet</value>
+  </data>
+  <data name="ProductionSpeedGoodColumnTitle" xml:space="preserve">
+    <value>Mai repede</value>
+  </data>
+  <data name="ProductionSpeedHeader" xml:space="preserve">
+    <value>Timp de pregatire</value>
+  </data>
+  <data name="ProductionSpeedNormalColumnTitle" xml:space="preserve">
+    <value>Norma</value>
+  </data>
+  <data name="ProductionSpeedShiftsNames" xml:space="preserve">
+    <value>Tura de dimineata,Tura de seara,Tura de noapte</value>
+  </data>
+  <data name="ProductShort" xml:space="preserve">
+    <value>&lt;span class="product-short-label"&gt;prod&lt;/span&gt;</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Receptionat</value>
+  </data>
+  <data name="ReceivedCount" xml:space="preserve">
+    <value>Cantitate receptionata</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Sters</value>
+  </data>
+  <data name="RemovePeriod" xml:space="preserve">
+    <value>Sterge</value>
+  </data>
+  <data name="ReportByPeriod" xml:space="preserve">
+    <value>perioada</value>
+  </data>
+  <data name="ReportDay" xml:space="preserve">
+    <value>pe zile</value>
+  </data>
+  <data name="ReportDayForExcel" xml:space="preserve">
+    <value>Consumul pentru 7 zile</value>
+  </data>
+  <data name="ReportLabel" xml:space="preserve">
+    <value>Raport</value>
+  </data>
+  <data name="ReportMonth" xml:space="preserve">
+    <value>pe luni</value>
+  </data>
+  <data name="ReportMonthForExcel" xml:space="preserve">
+    <value>Consumul pe 7 luni</value>
+  </data>
+  <data name="ReportPeriodVariant" xml:space="preserve">
+    <value>Arata consum</value>
+  </data>
+  <data name="ReportTypeLabel" xml:space="preserve">
+    <value>Alegeti tipul consumului</value>
+  </data>
+  <data name="ReportWeek" xml:space="preserve">
+    <value>pe saptamani</value>
+  </data>
+  <data name="ReportWeekForExcel" xml:space="preserve">
+    <value>Consumul pe 7 saptamani</value>
+  </data>
+  <data name="ReserveFriday" xml:space="preserve">
+    <value>Rezerva, VI</value>
+  </data>
+  <data name="ReserveMonday" xml:space="preserve">
+    <value>Rezerva, LU</value>
+  </data>
+  <data name="ReserveSaturday" xml:space="preserve">
+    <value>Rezerva, SA</value>
+  </data>
+  <data name="ReserveSunday" xml:space="preserve">
+    <value>Rezerva, DU</value>
+  </data>
+  <data name="ReserveThursday" xml:space="preserve">
+    <value>Rezerva, JO</value>
+  </data>
+  <data name="ReserveTuesday" xml:space="preserve">
+    <value>Rezerva, MA</value>
+  </data>
+  <data name="ReserveWednesday" xml:space="preserve">
+    <value>Rezerva, MI</value>
+  </data>
+  <data name="ReturnToSupplies" xml:space="preserve">
+    <value>Inapoi la introducerea aprovizionarii</value>
+  </data>
+  <data name="ReturnToTransfers" xml:space="preserve">
+    <value>Inapoi la introducerea transferului</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Intrari</value>
+  </data>
+  <data name="RevenueCurrency" xml:space="preserve">
+    <value>Valuta</value>
+  </data>
+  <data name="RevenueDate" xml:space="preserve">
+    <value>Data intrare</value>
+  </data>
+  <data name="RevenueFrom" xml:space="preserve">
+    <value>Furnizor</value>
+  </data>
+  <data name="RevenueIncreaseTooltip" xml:space="preserve">
+    <value>Cresterea incasarilor raportata la aceeasi zi a saptamanii acum un an</value>
+  </data>
+  <data name="RevenueInfo" xml:space="preserve">
+    <value>Informatii despre incasari</value>
+  </data>
+  <data name="RevenueNumber" xml:space="preserve">
+    <value>Numar</value>
+  </data>
+  <data name="RevenueOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Cate incasari pe ora revin pe fiecare angajat al bucatariei</value>
+  </data>
+  <data name="RevenueText" xml:space="preserve">
+    <value>/pers. pe ora</value>
+  </data>
+  <data name="RevenueTo" xml:space="preserve">
+    <value>Unde (depozit)</value>
+  </data>
+  <data name="RevenueTotal" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="RevenueUser" xml:space="preserve">
+    <value>A primit</value>
+  </data>
+  <data name="RevenueWhoTook" xml:space="preserve">
+    <value>Receptionat de</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Inventar</value>
+  </data>
+  <data name="RevisionNotExecuted" xml:space="preserve">
+    <value>Inventar in perioada indicata nu sa efectuat</value>
+  </data>
+  <data name="RevisionNotExecutedYet" xml:space="preserve">
+    <value>Inventarul nu a fost efectuat</value>
+  </data>
+  <data name="RevisionSettings" xml:space="preserve">
+    <value>Setari inventar</value>
+  </data>
+  <data name="RomanianLeu" xml:space="preserve">
+    <value>Leu romanesc</value>
+  </data>
+  <data name="Ruble" xml:space="preserve">
+    <value>Rubla</value>
+  </data>
+  <data name="SalesReportType" xml:space="preserve">
+    <value>vanzari</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sambata</value>
+  </data>
+  <data name="SaturdayShort" xml:space="preserve">
+    <value>Sa</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salveaza</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>Salveaza si iesi</value>
+  </data>
+  <data name="SaveAndSend" xml:space="preserve">
+    <value>Salveaza si trimite</value>
+  </data>
+  <data name="ScheduleAbsenceLabel" xml:space="preserve">
+    <value>Отсутствует</value>
+  </data>
+  <data name="ScheduleActionsLink" xml:space="preserve">
+    <value>actiuni</value>
+  </data>
+  <data name="ScheduleAddItemLink" xml:space="preserve">
+    <value>in program</value>
+  </data>
+  <data name="ScheduleAllEmployeeTypesLabel" xml:space="preserve">
+    <value>Toate posturile</value>
+  </data>
+  <data name="ScheduleAvailableTitle" xml:space="preserve">
+    <value>Disponibili</value>
+  </data>
+  <data name="ScheduleCategoryLabel" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="ScheduleChangeCategoryHeader" xml:space="preserve">
+    <value>Alegeti categoria temporara a angajatului</value>
+  </data>
+  <data name="ScheduleChangeCategoryNoneLabel" xml:space="preserve">
+    <value>Nu schimba categoria</value>
+  </data>
+  <data name="ScheduleCommentAddLabel" xml:space="preserve">
+    <value>Comentarii</value>
+  </data>
+  <data name="ScheduleCommentLabel" xml:space="preserve">
+    <value>Comentarii</value>
+  </data>
+  <data name="ScheduleDaySwticher" xml:space="preserve">
+    <value>Zi</value>
+  </data>
+  <data name="ScheduleDeleteLink" xml:space="preserve">
+    <value>Sterge din grafic</value>
+  </data>
+  <data name="ScheduleDescription" xml:space="preserve">
+    <value>Instrument pentru formarea graficului de lucru al turei.</value>
+  </data>
+  <data name="ScheduleEveningLabel" xml:space="preserve">
+    <value>Seara</value>
+  </data>
+  <data name="ScheduleFoundLabel" xml:space="preserve">
+    <value>Sa gasit</value>
+  </data>
+  <data name="ScheduleHeader" xml:space="preserve">
+    <value>Program tura</value>
+  </data>
+  <data name="ScheduleHint" xml:space="preserve">
+    <value>Indicati timpul in grafic pentru a vedea angajatii disponibili</value>
+  </data>
+  <data name="ScheduleHolidayTitle" xml:space="preserve">
+    <value>Zi libera</value>
+  </data>
+  <data name="ScheduleHoursLabel" xml:space="preserve">
+    <value>lucrate</value>
+  </data>
+  <data name="ScheduleHoursSortLabel" xml:space="preserve">
+    <value>ore lucrate</value>
+  </data>
+  <data name="ScheduleLastShiftLabel" xml:space="preserve">
+    <value>ultima tura</value>
+  </data>
+  <data name="ScheduleMorningLabel" xml:space="preserve">
+    <value>Dimineata</value>
+  </data>
+  <data name="ScheduleMoveLink" xml:space="preserve">
+    <value>Muta</value>
+  </data>
+  <data name="ScheduleNameSortLabel" xml:space="preserve">
+    <value>Nume de familie</value>
+  </data>
+  <data name="ScheduleNightLabel" xml:space="preserve">
+    <value>Noapte</value>
+  </data>
+  <data name="ScheduleOtherTitle" xml:space="preserve">
+    <value>Celelalte</value>
+  </data>
+  <data name="SchedulePizzeriaOption" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="ScheduleProductivityFact" xml:space="preserve">
+    <value>Productivitate, reala</value>
+  </data>
+  <data name="ScheduleProductivityForecast" xml:space="preserve">
+    <value>Productivitate, prognoza</value>
+  </data>
+  <data name="ScheduleRecommendedTitle" xml:space="preserve">
+    <value>Recomandari</value>
+  </data>
+  <data name="ScheduleRemoveItemLink" xml:space="preserve">
+    <value>Sterge din program</value>
+  </data>
+  <data name="ScheduleSearchAllLink" xml:space="preserve">
+    <value>Cauta in toate pizzeriile</value>
+  </data>
+  <data name="ScheduleSearchPlaceholder" xml:space="preserve">
+    <value>Nume de familie</value>
+  </data>
+  <data name="ScheduleSearchText" xml:space="preserve">
+    <value>Cautare dupa nume</value>
+  </data>
+  <data name="ScheduleShift8Option" xml:space="preserve">
+    <value>tura 8 ore</value>
+  </data>
+  <data name="ScheduleShiftCountWarning" xml:space="preserve">
+    <value>Angajatul {0} are turele in aceeasi zi</value>
+  </data>
+  <data name="ScheduleShiftError" xml:space="preserve">
+    <value>Imposibil de salvat modificarile. Angajatul are deja tura de la {0} pana la {1} in unitateul {2} la statia {3}.</value>
+  </data>
+  <data name="ScheduleShiftLengthWarning" xml:space="preserve">
+    <value>Tura angajatului este de {0} ore.</value>
+  </data>
+  <data name="ScheduleShiftSortLabel" xml:space="preserve">
+    <value>Ultima tura</value>
+  </data>
+  <data name="ScheduleTableTitle" xml:space="preserve">
+    <value>In program</value>
+  </data>
+  <data name="ScheduleTodayText" xml:space="preserve">
+    <value>azi</value>
+  </data>
+  <data name="ScheduleUnknownError" xml:space="preserve">
+    <value>Imposibil de salvat modificarile. S-a produs o eroare necunoscuta.</value>
+  </data>
+  <data name="ScheduleWeekSwitcher" xml:space="preserve">
+    <value>Saptamana</value>
+  </data>
+  <data name="ScheduleZoneLabel" xml:space="preserve">
+    <value>Statii</value>
+  </data>
+  <data name="SelectAllLabel" xml:space="preserve">
+    <value>Selecteaza toate</value>
+  </data>
+  <data name="SelectAvailableView" xml:space="preserve">
+    <value>выберите нужный вид</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>alegeti data</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Selectat</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>Alegeti organizatia</value>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>Alegeti perioada</value>
+  </data>
+  <data name="SelectPeriodEndDate" xml:space="preserve">
+    <value>Alege data sfarsitului perioadei</value>
+  </data>
+  <data name="SelectPeriodStartDate" xml:space="preserve">
+    <value>Alege data inceputului perioadei</value>
+  </data>
+  <data name="SelectReasonLabel" xml:space="preserve">
+    <value>Selectati cauza</value>
+  </data>
+  <data name="SelectUnitLabel" xml:space="preserve">
+    <value>Selectati pizzeria</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Trimite</value>
+  </data>
+  <data name="Send_Duplicate[1]" xml:space="preserve">
+    <value>Trimite</value>
+  </data>
+  <data name="SetTarget" xml:space="preserve">
+    <value>seteaza</value>
+  </data>
+  <data name="ShiftDay" xml:space="preserve">
+    <value>zi</value>
+  </data>
+  <data name="ShiftEmployeeAwayText" xml:space="preserve">
+    <value>plecat</value>
+  </data>
+  <data name="ShiftEmployeeCategoryColumnTitle" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="ShiftEmployeeCountLabel" xml:space="preserve">
+    <value>Acum in tura</value>
+  </data>
+  <data name="ShiftEmployeeFullNameColumnTitle" xml:space="preserve">
+    <value>Nume si prenume</value>
+  </data>
+  <data name="ShiftEmployeeShiftText" xml:space="preserve">
+    <value>in tura</value>
+  </data>
+  <data name="ShiftEmployeeStatusColumnTitle" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="ShiftEmployeeTimeColumnTitle" xml:space="preserve">
+    <value>Timpul turei</value>
+  </data>
+  <data name="ShiftEmployeeTodayAwayTitle" xml:space="preserve">
+    <value>Au plecat azi</value>
+  </data>
+  <data name="ShiftEmployeeTodayShiftTitle" xml:space="preserve">
+    <value>In tura</value>
+  </data>
+  <data name="ShiftEmployeeYesterdayAwayTitle" xml:space="preserve">
+    <value>Au plecat ieri</value>
+  </data>
+  <data name="ShiftEvening" xml:space="preserve">
+    <value>seara</value>
+  </data>
+  <data name="ShiftMorning" xml:space="preserve">
+    <value>dimineata-zi</value>
+  </data>
+  <data name="ShiftNight" xml:space="preserve">
+    <value>noapte</value>
+  </data>
+  <data name="ShiftNormsCashierLabel" xml:space="preserve">
+    <value>casierie</value>
+  </data>
+  <data name="ShiftNormsChooseDateLabel" xml:space="preserve">
+    <value>Alegeti data</value>
+  </data>
+  <data name="ShiftNormsCleaningLabel" xml:space="preserve">
+    <value>curatenie</value>
+  </data>
+  <data name="ShiftNormsCouriersLabel" xml:space="preserve">
+    <value>curieri</value>
+  </data>
+  <data name="ShiftNormsDay0Label" xml:space="preserve">
+    <value>Zi atipica</value>
+  </data>
+  <data name="ShiftNormsDeliveryLabel" xml:space="preserve">
+    <value>livrare</value>
+  </data>
+  <data name="ShiftNormsExcelExportLink" xml:space="preserve">
+    <value>Export in Excel</value>
+  </data>
+  <data name="ShiftNormsFillTableLink" xml:space="preserve">
+    <value>Completati tabelul</value>
+  </data>
+  <data name="ShiftNormsHeader" xml:space="preserve">
+    <value>Normele turei</value>
+  </data>
+  <data name="ShiftNormsKitchenLabel" xml:space="preserve">
+    <value>bucatarie</value>
+  </data>
+  <data name="ShiftNormsLastChangedLabel" xml:space="preserve">
+    <value>Ultima modificare</value>
+  </data>
+  <data name="ShiftNormsLastChangedNoneLabel" xml:space="preserve">
+    <value>nu</value>
+  </data>
+  <data name="ShiftNormsManagersLabel" xml:space="preserve">
+    <value>sefi tura</value>
+  </data>
+  <data name="ShiftNormsNormLabel" xml:space="preserve">
+    <value>Norma</value>
+  </data>
+  <data name="ShiftNormsNormsLabel" xml:space="preserve">
+    <value>Norme</value>
+  </data>
+  <data name="ShiftNormsNovicesLabel" xml:space="preserve">
+    <value>cursanti</value>
+  </data>
+  <data name="ShiftNormsProductivityColumnTitle" xml:space="preserve">
+    <value>Productiv.</value>
+  </data>
+  <data name="ShiftNormsProductivityLabel" xml:space="preserve">
+    <value>Productivitate</value>
+  </data>
+  <data name="ShiftNormsRecommendedColumnTitle" xml:space="preserve">
+    <value>Recomand.</value>
+  </data>
+  <data name="ShiftNormsSalesForecastColumnTitle" xml:space="preserve">
+    <value>Prognoza vanzari</value>
+  </data>
+  <data name="ShiftNormsSaveLink" xml:space="preserve">
+    <value>Salvati modificarile</value>
+  </data>
+  <data name="ShiftNormsTimeColumnTitle" xml:space="preserve">
+    <value>Ora</value>
+  </data>
+  <data name="ShiftSettingsHeader" xml:space="preserve">
+    <value>Parametri ture</value>
+  </data>
+  <data name="ShiftSettingsNoNightShift" xml:space="preserve">
+    <value>Nu este tura de noapte</value>
+  </data>
+  <data name="ShiftSettingsShiftOverlapError" xml:space="preserve">
+    <value>Turele nu se pot intersecta</value>
+  </data>
+  <data name="ShiftSettingsTotalTimeError" xml:space="preserve">
+    <value>Timpul cumulat nu poate fi mai mare de 24 de ore</value>
+  </data>
+  <data name="Shipment" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="ShippedCount" xml:space="preserve">
+    <value>Cantitate livrata</value>
+  </data>
+  <data name="ShippingDate" xml:space="preserve">
+    <value>Data livrarii</value>
+  </data>
+  <data name="ShortRuble" xml:space="preserve">
+    <value>rub</value>
+  </data>
+  <data name="SpeedTooltip" xml:space="preserve">
+    <value>Procentul produselor pregatite in timp</value>
+  </data>
+  <data name="StaffLanch" xml:space="preserve">
+    <value>Alimentatie personal</value>
+  </data>
+  <data name="StaffOverloaded" xml:space="preserve">
+    <value>Personalul este suprasolicitat</value>
+  </data>
+  <data name="Station_Backup" xml:space="preserve">
+    <value>Rezerva</value>
+  </data>
+  <data name="Station_Delivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="Station_Sanitation" xml:space="preserve">
+    <value>Curatenie</value>
+  </data>
+  <data name="Station_Trainees" xml:space="preserve">
+    <value>Stagiari</value>
+  </data>
+  <data name="Station_СashboxAndHoll" xml:space="preserve">
+    <value>Casierie si sala</value>
+  </data>
+  <data name="StockBalance" xml:space="preserve">
+    <value>Stocuri in depozit</value>
+  </data>
+  <data name="StockBalanceMenuItem" xml:space="preserve">
+    <value>Stocuri in depozit</value>
+  </data>
+  <data name="StopSaleTimeTooltip" xml:space="preserve">
+    <value>Durata totala a stop vanzarilor</value>
+  </data>
+  <data name="Substation_Line" xml:space="preserve">
+    <value>Sectia fierbinte</value>
+  </data>
+  <data name="Substation_Prep" xml:space="preserve">
+    <value>Sectia rece</value>
+  </data>
+  <data name="Substation_SlicingAndPacking" xml:space="preserve">
+    <value>Feliere si ambalare</value>
+  </data>
+  <data name="Substation_Supplies" xml:space="preserve">
+    <value>Provizii</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Gata!</value>
+  </data>
+  <data name="SummaLabel" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="SummaOfVAT" xml:space="preserve">
+    <value>Suma TVA</value>
+  </data>
+  <data name="SummaWithoutVAT" xml:space="preserve">
+    <value>Total fara TVA</value>
+  </data>
+  <data name="SummaWithVAT" xml:space="preserve">
+    <value>Total cu TVA</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Duminica</value>
+  </data>
+  <data name="SundayShort" xml:space="preserve">
+    <value>Du</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Furnizor</value>
+  </data>
+  <data name="SupplierAddDebt" xml:space="preserve">
+    <value>Creare</value>
+  </data>
+  <data name="SupplierAddDebtTitle" xml:space="preserve">
+    <value>Adauga datorie</value>
+  </data>
+  <data name="SupplierCloseDebt" xml:space="preserve">
+    <value>Stingere</value>
+  </data>
+  <data name="SupplierConfirmDebtClose" xml:space="preserve">
+    <value>Sigur stingeti datoria?</value>
+  </data>
+  <data name="SupplierDebt" xml:space="preserve">
+    <value>Datorie</value>
+  </data>
+  <data name="SupplierListHeader" xml:space="preserve">
+    <value>Furnizori</value>
+  </data>
+  <data name="SuppliersAndMaterials" xml:space="preserve">
+    <value>Furnizorii si materii prime</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>Intrari</value>
+  </data>
+  <data name="SupplyDebiting" xml:space="preserve">
+    <value>Casari</value>
+  </data>
+  <data name="SupplyIncoming" xml:space="preserve">
+    <value>Intrari</value>
+  </data>
+  <data name="SupplyMaterialLabel" xml:space="preserve">
+    <value>Receptie marfa</value>
+  </data>
+  <data name="Supply_MaterialUnavailable" xml:space="preserve">
+    <value>Exista un material indisponibil la data receptiei.</value>
+  </data>
+  <data name="Supply_TaraUnavailable" xml:space="preserve">
+    <value>Tara a fost modificata cu unitatea de masura de baza</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Tabel</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="TargetNotReached" xml:space="preserve">
+    <value>Targetul nu a fost atins</value>
+  </data>
+  <data name="TargetsOnMonthElement_Defect" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="TargetsOnMonthElement_OrdersOnСourier" xml:space="preserve">
+    <value>Comenzi pe curier per ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_PicesOnPeople" xml:space="preserve">
+    <value>Pizza si gustari pe angajat per ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_Piece" xml:space="preserve">
+    <value>buc.</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceManH" xml:space="preserve">
+    <value>buc/pers. pe ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceOnСourier" xml:space="preserve">
+    <value>buc/curier pe ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnPeople" xml:space="preserve">
+    <value>Incasari pe angajat per ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnСourier" xml:space="preserve">
+    <value>Incasari pe curier per ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_RubManH" xml:space="preserve">
+    <value>lei/pers. pe ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_Sertificates" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="TargetsOnMonthElement_Speed" xml:space="preserve">
+    <value>Viteza</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH" xml:space="preserve">
+    <value>tenge/pers. pe ora </value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH_Duplicate[1]" xml:space="preserve">
+    <value>tenge/pers./ora</value>
+  </data>
+  <data name="TargetsOnMonthElement_ToDefect" xml:space="preserve">
+    <value>Casari rebuturi</value>
+  </data>
+  <data name="TargetsOnMonthElement_UnaccountedLosses" xml:space="preserve">
+    <value>Pierderi neinregistrate</value>
+  </data>
+  <data name="TargetsOnYearElement_EmployeeDynamic" xml:space="preserve">
+    <value>Rotatie</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Sablon</value>
+  </data>
+  <data name="TemplateCreating" xml:space="preserve">
+    <value>Creare sablon</value>
+  </data>
+  <data name="Tenge" xml:space="preserve">
+    <value>Tenge</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Joi</value>
+  </data>
+  <data name="ThursdayShort" xml:space="preserve">
+    <value>Jo</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Data inceput tura</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Ora inceput tura</value>
+  </data>
+  <data name="TimeReportBuildLink" xml:space="preserve">
+    <value>Afiseaza</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="TimeReportChooseDateLabel" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="TimeReportChooseNameLabel" xml:space="preserve">
+    <value>Nume, prenume</value>
+  </data>
+  <data name="TimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Alegeti tipurile angajatilor</value>
+  </data>
+  <data name="TimeReportChooseUnitLabel" xml:space="preserve">
+    <value>Alegeti locatia</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Zi</value>
+  </data>
+  <data name="TimeReportDescription" xml:space="preserve">
+    <value>Orele faptic lucrate de catre angajati pentru calcularea salariului</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Nume, prenume</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Data terminare tura</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Ora terminare tura</value>
+  </data>
+  <data name="TimeReportExcelExportLink" xml:space="preserve">
+    <value>Export in Excel</value>
+  </data>
+  <data name="TimeReportGroupByEmployee" xml:space="preserve">
+    <value>Grupare dupa angajat</value>
+  </data>
+  <data name="TimeReportHeader" xml:space="preserve">
+    <value>Program efectiv</value>
+  </data>
+  <data name="TimeReportInvalidTimePeriod" xml:space="preserve">
+    <value>Perioada de timp nu trebuie sa depaseasca {0} zile</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Noapte</value>
+  </data>
+  <data name="TimeReportTypeLabel" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="TimeReportWarning" xml:space="preserve">
+    <value>Nu sunt aratate toate informatiile deoarece au fost gasite prea multe date pentru perioada indicata. Incercati sa specificati conditii mai exacte pentru raport.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Denumire</value>
+  </data>
+  <data name="Title_YouListen" xml:space="preserve">
+    <value>ASCULTI</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>pana</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>azi</value>
+  </data>
+  <data name="ToUnit" xml:space="preserve">
+    <value>Unde (depozit)</value>
+  </data>
+  <data name="TrainingHistory_BeginDateFailedMessage" xml:space="preserve">
+    <value>Data inceputului actiunii noii categorii nu poate fi mai mare decat data actiunii categoriei anterioare.</value>
+  </data>
+  <data name="TrainingHistory_NotDefinedCurrentStage" xml:space="preserve">
+    <value>Nu este determinata etapa curenta a trainingului</value>
+  </data>
+  <data name="TrainingHistory_ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Indicati data concedierii angajatului</value>
+  </data>
+  <data name="TransactionCompletedState" xml:space="preserve">
+    <value>Finalizata</value>
+  </data>
+  <data name="TransactionDate" xml:space="preserve">
+    <value>Data tranzactiei</value>
+  </data>
+  <data name="TransactionHeader" xml:space="preserve">
+    <value>Administrarea tranzactiilor</value>
+  </data>
+  <data name="TransactionID" xml:space="preserve">
+    <value>ID tranzactie</value>
+  </data>
+  <data name="TransactionNotCompletedState" xml:space="preserve">
+    <value>Nu este finalizata</value>
+  </data>
+  <data name="TransactionOptions" xml:space="preserve">
+    <value>Optiuni</value>
+  </data>
+  <data name="TransactionOrderNumber" xml:space="preserve">
+    <value>Nr. comanda</value>
+  </data>
+  <data name="TransactionsFromLabel" xml:space="preserve">
+    <value>Tranzactii de la</value>
+  </data>
+  <data name="TransactionStatus" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="TransactionSumma" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="TransferCanceled" xml:space="preserve">
+    <value>Cererea pentru transferul {0} este amanata</value>
+  </data>
+  <data name="TransferConfirmed" xml:space="preserve">
+    <value>Cererea pentru transfer {0} a fost formata</value>
+  </data>
+  <data name="TransferCreated" xml:space="preserve">
+    <value>A fost creat transferul {0}</value>
+  </data>
+  <data name="TransferCreationDate" xml:space="preserve">
+    <value>Comandat</value>
+  </data>
+  <data name="TransferDeleted" xml:space="preserve">
+    <value>Cererea pentru transferul {0} este stearsa</value>
+  </data>
+  <data name="TransferDestinationUnit" xml:space="preserve">
+    <value>Destinatia transferului</value>
+  </data>
+  <data name="TransferEdited" xml:space="preserve">
+    <value>Transferul {0} a fost salvat</value>
+  </data>
+  <data name="TransferExpectedDate" xml:space="preserve">
+    <value>Data estimativa a transferului</value>
+  </data>
+  <data name="TransferInfo" xml:space="preserve">
+    <value>Informatii despre transfer</value>
+  </data>
+  <data name="TransferItems" xml:space="preserve">
+    <value>Compozitia transferului</value>
+  </data>
+  <data name="TransferLoadTemplate" xml:space="preserve">
+    <value>Incarcare sablon</value>
+  </data>
+  <data name="TransferMaterialTypesList" xml:space="preserve">
+    <value>Materie prima</value>
+  </data>
+  <data name="TransferNumber" xml:space="preserve">
+    <value>Numar</value>
+  </data>
+  <data name="TransferOriginUnit" xml:space="preserve">
+    <value>Sursa transferului</value>
+  </data>
+  <data name="TransferReceived" xml:space="preserve">
+    <value>Cererea pentru transfer {0} a fost receptionata</value>
+  </data>
+  <data name="TransferReceiving'Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="TransferReceiving'Date_Duplicate[1]" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="TransferReceivingDate" xml:space="preserve">
+    <value>Data receptiei</value>
+  </data>
+  <data name="TransferReport_Taken" xml:space="preserve">
+    <value>Receptionate</value>
+  </data>
+  <data name="TransferReport_TitleHeader" xml:space="preserve">
+    <value>Transferul Nr. {0} din {1}</value>
+  </data>
+  <data name="TransferShipped" xml:space="preserve">
+    <value>Cererea pentru transfer {0} a fost livrata</value>
+  </data>
+  <data name="TransferShippingAmount" xml:space="preserve">
+    <value>Livrat</value>
+  </data>
+  <data name="TransferSourceUnit" xml:space="preserve">
+    <value>De la cine</value>
+  </data>
+  <data name="TransferStatus" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="TransferTemplate_AmountIsInvalid" xml:space="preserve">
+    <value>Valoare inadmisibila pentru materia prima {0}, {1}</value>
+  </data>
+  <data name="Transfer_EmptyItems" xml:space="preserve">
+    <value>Completati compozitia transferului</value>
+  </data>
+  <data name="Transfer_Incoming" xml:space="preserve">
+    <value>Transferuri intrate</value>
+  </data>
+  <data name="Transfer_Incoming_Duplicate[1]" xml:space="preserve">
+    <value>Intrare marfa</value>
+  </data>
+  <data name="Transfer_OrderedQuantityIsInvalid" xml:space="preserve">
+    <value>Campul “Comandat” nu este completat pentru materia prima {0}</value>
+  </data>
+  <data name="Transfer_Outcoming" xml:space="preserve">
+    <value>Transferuri iesite</value>
+  </data>
+  <data name="Transfer_Outcoming_Duplicate[1]" xml:space="preserve">
+    <value>Iesire marfa</value>
+  </data>
+  <data name="Transfer_QuantityIsInvalid" xml:space="preserve">
+    <value>Campul “Cantitate” nu este corect completat pentru materia prima {0}</value>
+  </data>
+  <data name="Transfer_ReceivedQuantityIsInvalid" xml:space="preserve">
+    <value>Campul “Receptionat” nu este completat pentru materia prima {0}</value>
+  </data>
+  <data name="Transfer_Ship" xml:space="preserve">
+    <value>Livreaza</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid" xml:space="preserve">
+    <value>Campul “Livrat” nu este completat pentru campul {0}</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid_Duplicate[1]" xml:space="preserve">
+    <value>Campul “Livrat” nu este completat pentru materia prima {0}</value>
+  </data>
+  <data name="Transfer_Ship_Duplicate[1]" xml:space="preserve">
+    <value>Livreaza</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Marti</value>
+  </data>
+  <data name="TuesdayShort" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="TypicalReport" xml:space="preserve">
+    <value>dupa zilele saptamanii</value>
+  </data>
+  <data name="TypicalReportNotificationText" xml:space="preserve">
+    <value>Raportul respectiv va va indica consumul mediu pe zilele saptamanii pentru ultimele 5 saptamani</value>
+  </data>
+  <data name="UnitateLevelHoliday" xml:space="preserve">
+    <value>Sarbatoare unitate</value>
+  </data>
+  <data name="UnitLevelHoliday" xml:space="preserve">
+    <value>Sarbatoare unitate</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="UnitOfMeasureAcromin" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="UnitOfMeasureFull" xml:space="preserve">
+    <value>Unitate de masura</value>
+  </data>
+  <data name="UnitOfMeasureLabel" xml:space="preserve">
+    <value>U.M.</value>
+  </data>
+  <data name="UpCurrentDate" xml:space="preserve">
+    <value>pana in prezent</value>
+  </data>
+  <data name="VacancyEditActiveLabel" xml:space="preserve">
+    <value>Activ</value>
+  </data>
+  <data name="VacancyEditAgeFromLabel" xml:space="preserve">
+    <value>de la:</value>
+  </data>
+  <data name="VacancyEditAgeLabel" xml:space="preserve">
+    <value>Varsta preferabila:</value>
+  </data>
+  <data name="VacancyEditAgeToLabel" xml:space="preserve">
+    <value>pana la:</value>
+  </data>
+  <data name="VacancyEditCategoryLabel" xml:space="preserve">
+    <value>Alegeti categoria:</value>
+  </data>
+  <data name="VacancyEditHeader" xml:space="preserve">
+    <value>Redactare post vacant</value>
+  </data>
+  <data name="VacancyEditInputNameText" xml:space="preserve">
+    <value>Introduceti post vacant</value>
+  </data>
+  <data name="VacancyEditNameLabel" xml:space="preserve">
+    <value>Pe cine cautam?</value>
+  </data>
+  <data name="VacancyEditSmokingLabel" xml:space="preserve">
+    <value>Fumatul</value>
+  </data>
+  <data name="VacancyEditSmokingPreferenceText" xml:space="preserve">
+    <value>de dorit, nefumatori</value>
+  </data>
+  <data name="VacancyEditTypeLabel" xml:space="preserve">
+    <value>Alegeti tipul:</value>
+  </data>
+  <data name="VacancyEditUnitLabel" xml:space="preserve">
+    <value>Indicati pizzeria</value>
+  </data>
+  <data name="VacancyLink_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="VacancyLink_Disabled" xml:space="preserve">
+    <value>Inchidere</value>
+  </data>
+  <data name="VacancyListActiveColumn" xml:space="preserve">
+    <value>Activ?</value>
+  </data>
+  <data name="VacancyListActiveLabel" xml:space="preserve">
+    <value>Activ</value>
+  </data>
+  <data name="VacancyListAgeFromLabel" xml:space="preserve">
+    <value>De la</value>
+  </data>
+  <data name="VacancyListAgeToLabel" xml:space="preserve">
+    <value>pana la</value>
+  </data>
+  <data name="VacancyListCriteriaColumn" xml:space="preserve">
+    <value>Criterii</value>
+  </data>
+  <data name="VacancyListFromLabel" xml:space="preserve">
+    <value>din</value>
+  </data>
+  <data name="VacancyListHeader" xml:space="preserve">
+    <value>Posturi vacante</value>
+  </data>
+  <data name="VacancyListInactiveLabel" xml:space="preserve">
+    <value>Inactiv</value>
+  </data>
+  <data name="VacancyListNameColumn" xml:space="preserve">
+    <value>Post vacant</value>
+  </data>
+  <data name="VacancyListNewLink" xml:space="preserve">
+    <value>Post vacant nou</value>
+  </data>
+  <data name="VacancyListNonSmokingLabel" xml:space="preserve">
+    <value>Nu fumeaza</value>
+  </data>
+  <data name="VacancyListSmokingLabel" xml:space="preserve">
+    <value>Fumeaza</value>
+  </data>
+  <data name="VacancyListToLabel" xml:space="preserve">
+    <value>pana la</value>
+  </data>
+  <data name="VacancyListTypeLabel" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="VacancyNewHeader" xml:space="preserve">
+    <value>Adaugare post vacant nou</value>
+  </data>
+  <data name="ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Indicati data concedierii angajatului</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>TVA</value>
+  </data>
+  <data name="ViewDebiting" xml:space="preserve">
+    <value>Vizualizare casari</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Miercuri</value>
+  </data>
+  <data name="WednesdayShort" xml:space="preserve">
+    <value>Mi</value>
+  </data>
+  <data name="Weekdays" xml:space="preserve">
+    <value>In zilele saptamanii (lu-vi)</value>
+  </data>
+  <data name="WeekdaysTooltip" xml:space="preserve">
+    <value>Luni – Joi</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Weekend (sa-du)</value>
+  </data>
+  <data name="Weekends" xml:space="preserve">
+    <value>Zile libere</value>
+  </data>
+  <data name="WeekendsSettingsAllowToSelect" xml:space="preserve">
+    <value>Permiteti alegerea zilei ca zi libera</value>
+  </data>
+  <data name="WeekendsSettingsCountInWeek" xml:space="preserve">
+    <value>Numar zile libere pe saptamana</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartOne" xml:space="preserve">
+    <value>Imposibil de selectat mai multe</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartTwo" xml:space="preserve">
+    <value>zile libere</value>
+  </data>
+  <data name="WeekendsSettingsFailedWeekendsCount" xml:space="preserve">
+    <value>Imposibil de indicat mai mult de {0} zile libere pe saptamana</value>
+  </data>
+  <data name="WeekendTooltip" xml:space="preserve">
+    <value>Vineri – Duminica</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Bravo!</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Vechime</value>
+  </data>
+  <data name="WorkExperienceOfPizzeria" xml:space="preserve">
+    <value>Vechime medie in pizzerie</value>
+  </data>
+  <data name="WorkingHoursEmployeeName" xml:space="preserve">
+    <value>Nume si prenume</value>
+  </data>
+  <data name="WorkingHoursInContextOfUnits" xml:space="preserve">
+    <value>In detaliu pe pizzerii</value>
+  </data>
+  <data name="WorkingHoursTitle" xml:space="preserve">
+    <value>Ore de lucru</value>
+  </data>
+  <data name="WorkingHoursTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="WorkingHoursTotalHours" xml:space="preserve">
+    <value>ore</value>
+  </data>
+  <data name="WorkingHoursTotalMinutes" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>ieri</value>
+  </data>
+  <data name="ZoneSettingsAddLink" xml:space="preserve">
+    <value>Creati statia</value>
+  </data>
+  <data name="ZoneSettingsCategoriesLabel" xml:space="preserve">
+    <value>Categorii de angajati</value>
+  </data>
+  <data name="ZoneSettingsDeleteLink" xml:space="preserve">
+    <value>Stereti statia</value>
+  </data>
+  <data name="ZoneSettingsDescription" xml:space="preserve">
+    <value>Editarea statiilor de productie</value>
+  </data>
+  <data name="ZoneSettingsEditLink" xml:space="preserve">
+    <value>editati</value>
+  </data>
+  <data name="ZoneSettingsHeader" xml:space="preserve">
+    <value>Statii de productie</value>
+  </data>
+  <data name="ZoneSettingsNameLabel" xml:space="preserve">
+    <value>Denumire</value>
+  </data>
+  <data name="ZoneSettingsNoCategoriesText" xml:space="preserve">
+    <value>nu sunt categorii</value>
+  </data>
+  <data name="ZoneSettingsPeriod0Option" xml:space="preserve">
+    <value>(nu sunt)</value>
+  </data>
+  <data name="ZoneSettingsPeriod14Option" xml:space="preserve">
+    <value>doua saptamani</value>
+  </data>
+  <data name="ZoneSettingsPeriod30Option" xml:space="preserve">
+    <value>o luna</value>
+  </data>
+  <data name="ZoneSettingsPeriod7Option" xml:space="preserve">
+    <value>o saptamana</value>
+  </data>
+  <data name="ZoneSettingsPeriodLabel" xml:space="preserve">
+    <value>Perioada planificarii hartii posibilitatilor</value>
+  </data>
+  <data name="ZoneSettingsShowLink" xml:space="preserve">
+    <value>Indicati in program</value>
+  </data>
+  <data name="ZoneSettingsSubzonesLabel" xml:space="preserve">
+    <value>Substatii</value>
+  </data>
+</root>

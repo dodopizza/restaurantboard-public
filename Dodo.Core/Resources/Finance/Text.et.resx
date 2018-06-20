@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcquiringTypeBRS" xml:space="preserve">
+    <value>BRS</value>
+  </data>
+  <data name="AcquiringTypeDodoPay" xml:space="preserve">
+    <value>Dodo gateway</value>
+  </data>
+  <data name="AcquiringTypeEuPlatesc" xml:space="preserve">
+    <value>EuPlatesc</value>
+  </data>
+  <data name="AcquiringTypeNestpay" xml:space="preserve">
+    <value>Nestpay</value>
+  </data>
+  <data name="AcquiringTypeSEBEe" xml:space="preserve">
+    <value>SEB (Eesti)</value>
+  </data>
+  <data name="AcquiringTypeSEBEeShort" xml:space="preserve">
+    <value>SEB</value>
+  </data>
+  <data name="AcquiringTypeSEBLithuania" xml:space="preserve">
+    <value>SEB (Leedu)</value>
+  </data>
+  <data name="AcquiringTypeSEBLithuaniaShort" xml:space="preserve">
+    <value>SEB</value>
+  </data>
+  <data name="AcquiringTypeSecureSubmit" xml:space="preserve">
+    <value>Heartland SecureSubmit</value>
+  </data>
+  <data name="AcquiringTypeStripe" xml:space="preserve">
+    <value>Riba</value>
+  </data>
+  <data name="AcquiringTypeSwedbankEe" xml:space="preserve">
+    <value>Swedbank (Eesti)</value>
+  </data>
+  <data name="AcquiringTypeSwedbankEeShort" xml:space="preserve">
+    <value>Swedbank</value>
+  </data>
+  <data name="AcquiringTypeSwedbankLt" xml:space="preserve">
+    <value>Swedbank (Leedu)</value>
+  </data>
+  <data name="AcquiringTypeSwedbankLtShort" xml:space="preserve">
+    <value>Swedbank</value>
+  </data>
+  <data name="AcquiringTypeYandex" xml:space="preserve">
+    <value>Yandex.Kassa</value>
+  </data>
+  <data name="CashBoxModel_Aura" xml:space="preserve">
+    <value>Aura-01FR-KZ</value>
+  </data>
+  <data name="CashBoxModel_ChequePrinter" xml:space="preserve">
+    <value>Tšekiprinter</value>
+  </data>
+  <data name="CashBoxModel_Citizen" xml:space="preserve">
+    <value>Citizen CT-S310II</value>
+  </data>
+  <data name="CashBoxModel_FPrint" xml:space="preserve">
+    <value>FPrint-22/22K</value>
+  </data>
+  <data name="CashBoxModel_Shtrih" xml:space="preserve">
+    <value>Joon-M</value>
+  </data>
+  <data name="CashBoxModel_XKube" xml:space="preserve">
+    <value>XKUBE-F</value>
+  </data>
+  <data name="Currency_Dollar" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="Currency_Euro" xml:space="preserve">
+    <value>€</value>
+  </data>
+  <data name="Currency_Grivna" xml:space="preserve">
+    <value>UAH</value>
+  </data>
+  <data name="Currency_RomanianLeu" xml:space="preserve">
+    <value>RON</value>
+  </data>
+  <data name="Currency_Ruble" xml:space="preserve">
+    <value>₽</value>
+  </data>
+  <data name="Currency_Som" xml:space="preserve">
+    <value>som</value>
+  </data>
+  <data name="Currency_Sum" xml:space="preserve">
+    <value>sum</value>
+  </data>
+  <data name="Currency_Tenge" xml:space="preserve">
+    <value>tg.</value>
+  </data>
+  <data name="Currency_Unknown" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="Currency_Yuan" xml:space="preserve">
+    <value>CNY</value>
+  </data>
+  <data name="Decrease_Dollar" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="Decrease_Euro" xml:space="preserve">
+    <value>Eur</value>
+  </data>
+  <data name="Decrease_Grivna" xml:space="preserve">
+    <value>uah</value>
+  </data>
+  <data name="Decrease_RomanianLeu" xml:space="preserve">
+    <value>leu</value>
+  </data>
+  <data name="Decrease_Ruble" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="Decrease_Som" xml:space="preserve">
+    <value>som</value>
+  </data>
+  <data name="Decrease_Sum" xml:space="preserve">
+    <value>sum</value>
+  </data>
+  <data name="Decrease_Tenge" xml:space="preserve">
+    <value>kzt</value>
+  </data>
+  <data name="Decrease_Unknown" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="Decrease_Yuan" xml:space="preserve">
+    <value>CNY</value>
+  </data>
+  <data name="Dollar_Decrease" xml:space="preserve">
+    <value>$</value>
+  </data>
+  <data name="Euro_Decrease" xml:space="preserve">
+    <value>Eur</value>
+  </data>
+  <data name="Name_Dollar" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="Name_Euro" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="Name_Grivna" xml:space="preserve">
+    <value>Grivna</value>
+  </data>
+  <data name="Name_RomanianLeu" xml:space="preserve">
+    <value>Leu</value>
+  </data>
+  <data name="Name_Ruble" xml:space="preserve">
+    <value>Rubla</value>
+  </data>
+  <data name="Name_Som" xml:space="preserve">
+    <value>Som</value>
+  </data>
+  <data name="Name_Sum" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="Name_Tenge" xml:space="preserve">
+    <value>Tenge</value>
+  </data>
+  <data name="Name_Unknown" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="Name_Yuan" xml:space="preserve">
+    <value>Jüaan</value>
+  </data>
+  <data name="NeedToLogin" xml:space="preserve">
+    <value>Vaja sisse logida</value>
+  </data>
+  <data name="PaymentType_Aggregator" xml:space="preserve">
+    <value>Kaart (agregaator)</value>
+  </data>
+  <data name="PaymentType_Card" xml:space="preserve">
+    <value>Kaart</value>
+  </data>
+  <data name="PaymentType_Cash" xml:space="preserve">
+    <value>Sularaha</value>
+  </data>
+  <data name="PaymentType_InternetAcquiring" xml:space="preserve">
+    <value>Kaart(veebileht)</value>
+  </data>
+  <data name="Ruble_Decrease" xml:space="preserve">
+    <value>rub.</value>
+  </data>
+  <data name="TaxType_SaleTax" xml:space="preserve">
+    <value>Müügimaks</value>
+  </data>
+  <data name="TaxType_Unknown" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="TaxType_Vat" xml:space="preserve">
+    <value>Käibemaks</value>
+  </data>
+  <data name="Title_AccessDenied" xml:space="preserve">
+    <value>Pole piisavalt õigusi</value>
+  </data>
+</root>

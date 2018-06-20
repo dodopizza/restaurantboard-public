@@ -1,0 +1,25 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.time-block {
+    width: 100%;
+    display: inline-block;
+}
+
+.time-minutes-label {
+    margin-top: -10px;
+}
+
+.time-label {
+    color: $color-80;
+    line-height: 1;
+}
+
+.time-minutes {
+    @include font-size(136);
+}
+
+.time-one-minute {
+    @include font-size(50);
+    text-transform: uppercase;
+    line-height: 1.7;
+}

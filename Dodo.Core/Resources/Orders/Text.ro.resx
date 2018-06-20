@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Canceled" xml:space="preserve">
+    <value>Anulat</value>
+  </data>
+  <data name="ClientMessage_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Comentariile nu pot depasi 500 de caractere</value>
+  </data>
+  <data name="ClientMessage_AddressInvalid" xml:space="preserve">
+    <value>Va rugam completati toate campurile adresei.</value>
+  </data>
+  <data name="ClientMessage_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Adresa indicata nu intra in zona de livrare.</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTime" xml:space="preserve">
+    <value>Din pacate la ora indicata de Dvs. pizzeria nu are program. Programul de lucru a pizzeriei este de la  {0} pana la {1}</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Introduceti un alt timp de livrare. Nu Va putem livra comanda la ora indicata.</value>
+  </data>
+  <data name="ClientMessage_DeliveryStop" xml:space="preserve">
+    <value>Ne cerem scuze, livrarea este momentan oprita.</value>
+  </data>
+  <data name="ClientMessage_EmptyBasket" xml:space="preserve">
+    <value>Cosul Dvs. este gol</value>
+  </data>
+  <data name="ClientMessage_InvalidFreeSauces" xml:space="preserve">
+    <value>Va rugam sa alegeti sosurile gratuite,</value>
+  </data>
+  <data name="ClientMessage_NoteEmpty" xml:space="preserve">
+    <value>Va rugam indicati din ce suma sa Va pregatim restul. Aceasta suma trebuie sa fie mai mare decat suma comenzii.</value>
+  </data>
+  <data name="ClientMessage_NoteInvalid" xml:space="preserve">
+    <value>Suma din care Va pregatim restul trebuie sa fie mai mare decat suma comenzii.</value>
+  </data>
+  <data name="ClientMessage_OrderCostInvalid" xml:space="preserve">
+    <value>Suma minima a comenzii este de {0}.</value>
+  </data>
+  <data name="ClientMessage_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Alegeti pizzeria din care doriti sa ridicati comanda</value>
+  </data>
+  <data name="ClientMessage_PizzeriaIsClosed" xml:space="preserve">
+    <value>Din pacate plata comenzii nu a reusit. Pizzeria este inchisa.</value>
+  </data>
+  <data name="ClientMessage_ProductInStopList" xml:space="preserve">
+    <value>Din pacate, {0} nu este disponibil. Va rugam stergeti acest produs din cos.</value>
+  </data>
+  <data name="DefectiveProduct" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>Livrat</value>
+  </data>
+  <data name="DuplicateOrderLine" xml:space="preserve">
+    <value>&lt;b&gt;(dublare)&lt;/b&gt;</value>
+  </data>
+  <data name="InDelivery" xml:space="preserve">
+    <value>Se livreaza</value>
+  </data>
+  <data name="InOven" xml:space="preserve">
+    <value>In cuptor</value>
+  </data>
+  <data name="MessageError_FailedDefectOrderLineMoreTwoDaysAgo" xml:space="preserve">
+    <value>Nu se poate inregistra un rebut pentru o comanda cu termen mai mare de 2 zile</value>
+  </data>
+  <data name="MessageError_PreparationTimeLimitExpired" xml:space="preserve">
+    <value>Produsul nu poate fi returnat la bucatarie. A expirat timpul de preparare.</value>
+  </data>
+  <data name="Message_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Nu este introdusa adresa</value>
+  </data>
+  <data name="Message_AddressEmpty" xml:space="preserve">
+    <value>Nu este introdusa adresa</value>
+  </data>
+  <data name="Message_AddressInvalid" xml:space="preserve">
+    <value>Adresa incorecta</value>
+  </data>
+  <data name="Message_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Adresa nu intra in zona de livrare</value>
+  </data>
+  <data name="Message_AlcoholDeniedSpendDodoCurrency" xml:space="preserve">
+    <value>Imposibil de platit cu dodo-lei o comanda ce contine bauturi alcoolice</value>
+  </data>
+  <data name="Message_BasketPriceDifferent" xml:space="preserve">
+    <value>S-a modificat pretul comenzii.</value>
+  </data>
+  <data name="Message_ClientEmpty" xml:space="preserve">
+    <value>Nu sunt introduse date despre client</value>
+  </data>
+  <data name="Message_ClientFromBlackList" xml:space="preserve">
+    <value>Client in lista neagra</value>
+  </data>
+  <data name="Message_ClientNameEmpty" xml:space="preserve">
+    <value>Nu este introdus numele</value>
+  </data>
+  <data name="Message_ComboIsNotOnMenu" xml:space="preserve">
+    <value>Combo {0} nu este in meniu</value>
+  </data>
+  <data name="Message_DelayedOrderTime" xml:space="preserve">
+    <value>Din pacate la ora indicata de Dvs. pizzeria nu are program. Programul de lucru a pizzeriei este de la  {0} pana la {1}</value>
+  </data>
+  <data name="Message_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Timp incorect pentru livrare decalata</value>
+  </data>
+  <data name="Message_DelayedOrderWithoutTime" xml:space="preserve">
+    <value>In comanda decalata lipseste timpul.</value>
+  </data>
+  <data name="Message_DeliveryStop" xml:space="preserve">
+    <value>Livrarea este momentan oprita.</value>
+  </data>
+  <data name="Message_EmptyBasket" xml:space="preserve">
+    <value>Cosul este gol</value>
+  </data>
+  <data name="Message_EmptyComposition" xml:space="preserve">
+    <value>Cosul nu este plin</value>
+  </data>
+  <data name="Message_EmptyHouse" xml:space="preserve">
+    <value>Nu este introdus numarul</value>
+  </data>
+  <data name="Message_EmptyStreetName" xml:space="preserve">
+    <value>Nu este introdusa strada</value>
+  </data>
+  <data name="Message_IncorrectDelayedTime" xml:space="preserve">
+    <value>Timp incorect pentru comanda decalata.</value>
+  </data>
+  <data name="Message_IncorrectPersonalOrderSum" xml:space="preserve">
+    <value>Suma pranzului depaseste valoarea maxima admisa.</value>
+  </data>
+  <data name="Message_InvalidFreeSauces" xml:space="preserve">
+    <value>Nu sunt alese sosurile gratuite</value>
+  </data>
+  <data name="Message_LackOfCouriersWithTimeToOpen" xml:space="preserve">
+    <value>Din pacate nici o pizzerie nu poate onora comanda Dvs. Vanzarile {0} au fost oprite temporar de la {1} la {2} din cauza lipsei de curieri. Aveti posibilitatea de a face o comanda cu ridicare din pizzerie.</value>
+  </data>
+  <data name="Message_LackOfCouriersWithUnknownTimeToOpen" xml:space="preserve">
+    <value>Din pacate nici o pizzerie nu poate onora comanda Dvs. Vanzarile au fost oprite temporar de la {1} la {2} din cauza lipsei de curieri. Aveti posibilitatea de a face o comanda cu ridicare din pizzerie.</value>
+  </data>
+  <data name="Message_MaxCashPaymentLimitExceeded" xml:space="preserve">
+    <value>Ne pare rau, ati depasit suma maxima pentru plata in numerar pe site</value>
+  </data>
+  <data name="Message_NotChoosedProducts" xml:space="preserve">
+    <value>Nu sunt selectate produsele pentru pranz.</value>
+  </data>
+  <data name="Message_NoteEmpty" xml:space="preserve">
+    <value>Nu este introdusa bancnota</value>
+  </data>
+  <data name="Message_NoteInvalid" xml:space="preserve">
+    <value>Incorect introdusa bancnota</value>
+  </data>
+  <data name="Message_NowComboIsNotForSale" xml:space="preserve">
+    <value>In momentul actual produsul {0} nu este disponibil</value>
+  </data>
+  <data name="Message_NowPproductIsNotForSale" xml:space="preserve">
+    <value>In momentul actual produsul {0} nu se poate comanda</value>
+  </data>
+  <data name="Message_NowProductIsNotForSale" xml:space="preserve">
+    <value>La momentul actual produsul {0} nu se comercializeaza</value>
+  </data>
+  <data name="Message_OpenShiftBeforeOrder" xml:space="preserve">
+    <value>Pentru eliberarea pranzului angajatului, deschideti tura pizzeiriei</value>
+  </data>
+  <data name="Message_OrderCostInvalid" xml:space="preserve">
+    <value>Totalul comenzii (fara valoarea suvenirurilor) este sub suma minima</value>
+  </data>
+  <data name="Message_OrderWithSimpleProductsOnly" xml:space="preserve">
+    <value>Nu este posibila inregistrarea unui pranz decalat, daca acesta nu contine produse din bucatarie</value>
+  </data>
+  <data name="Message_OtherReasonWithTimeToOpen" xml:space="preserve">
+    <value>Din pacate nici o pizzerie nu poate onora comanda Dvs. Vanzarile {0} au fost oprite temporar de la {1} la {2} din cauza – {3}</value>
+  </data>
+  <data name="Message_OtherReasonWithUnknownTimeToOpen" xml:space="preserve">
+    <value>Din pacate nici o pizzerie nu poate onora comanda Dvs. Vanzarile au fost oprite temporar de la {1} la {2} din cauza – {2}</value>
+  </data>
+  <data name="Message_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Alegeti pizzeria din care doriti sa ridicati comanda</value>
+  </data>
+  <data name="Message_PizzeriaIsClosed" xml:space="preserve">
+    <value>Pizzeria este inchisa</value>
+  </data>
+  <data name="Message_PizzeriaShiftIsClosed" xml:space="preserve">
+    <value>Tura pizzeriei nu este deschisa. Va rugam contactati seful de tura</value>
+  </data>
+  <data name="Message_PizzeriaWorkTypeDisabled" xml:space="preserve">
+    <value>Ne cerem scuze, pizzeria nu pregateste comenzi pentru {0}</value>
+  </data>
+  <data name="Message_ProductInBasketHasDifferentPriceWithMenu" xml:space="preserve">
+    <value>Produsul {0} din cos are un pret diferita fata de preturile din meniu. Pretul in cos {1}, pretul in meniu {2}</value>
+  </data>
+  <data name="Message_ProductInShopWindowItemNotSaleInCurrentTime" xml:space="preserve">
+    <value>Produsul Id {0} nu este de vanzare in celula Id {1} la moment</value>
+  </data>
+  <data name="Message_ProductInStopList" xml:space="preserve">
+    <value>Produs aflat in stop-list: {0}</value>
+  </data>
+  <data name="Message_ProductIsNotOnMenu" xml:space="preserve">
+    <value>Produsul {0} nu se afla in meniu</value>
+  </data>
+  <data name="Message_ProductsPriceHasChanged" xml:space="preserve">
+    <value>Pretul produsului s-a modificat</value>
+  </data>
+  <data name="Message_RemakeDefectedOrderFailed" xml:space="preserve">
+    <value>Nu s-a reusit inregistrarea rebutului</value>
+  </data>
+  <data name="Message_ShopWindowItemIsNotDefined" xml:space="preserve">
+    <value>Nu sunt setate celulele produselor Id: {0}</value>
+  </data>
+  <data name="Message_ShopWindowItemNotFound" xml:space="preserve">
+    <value>Nu a fost gasita celula vitrinei Id: {0}</value>
+  </data>
+  <data name="Message_StationaryStop" xml:space="preserve">
+    <value>Functionarea restaurantului este oprita</value>
+  </data>
+  <data name="Message_TelephoneEmpty" xml:space="preserve">
+    <value>Nu este introdus numarul de telefon</value>
+  </data>
+  <data name="Message__ClientNameTooLong" xml:space="preserve">
+    <value>Nume prea lung</value>
+  </data>
+  <data name="OnAssemblyTable" xml:space="preserve">
+    <value>Ingredientare</value>
+  </data>
+  <data name="OnColdAssemblyTable" xml:space="preserve">
+    <value>Ingredientare (Linia rece)</value>
+  </data>
+  <data name="OnDoughTable" xml:space="preserve">
+    <value>Aluat</value>
+  </data>
+  <data name="OnHotAssemblyTable" xml:space="preserve">
+    <value>Ingredientare (Linia fierbinte)</value>
+  </data>
+  <data name="OnPackingTable" xml:space="preserve">
+    <value>Ambalare</value>
+  </data>
+  <data name="OrderState_Accepted" xml:space="preserve">
+    <value>Acceptat</value>
+  </data>
+  <data name="OrderState_Completed" xml:space="preserve">
+    <value>Executat</value>
+  </data>
+  <data name="OrderState_Editing" xml:space="preserve">
+    <value>Se editeaza</value>
+  </data>
+  <data name="OrderState_Failure" xml:space="preserve">
+    <value>Refuz</value>
+  </data>
+  <data name="OrderState_Kitchen" xml:space="preserve">
+    <value>In bucatarie</value>
+  </data>
+  <data name="OrderState_OnDelivery" xml:space="preserve">
+    <value>Se livreaza</value>
+  </data>
+  <data name="OrderState_OnTheShelf" xml:space="preserve">
+    <value>Pe raft</value>
+  </data>
+  <data name="OrderState_Redirect" xml:space="preserve">
+    <value>Redirectionat</value>
+  </data>
+  <data name="OrderState_Storno" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="OrderState_TimeOut" xml:space="preserve">
+    <value>Intarziat</value>
+  </data>
+  <data name="OrderState_Unknow" xml:space="preserve">
+    <value>Nedefinit</value>
+  </data>
+  <data name="OrdersType_Delivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="OrdersType_Pickup" xml:space="preserve">
+    <value>Ridica</value>
+  </data>
+  <data name="OrdersType_Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OrdersType_Staff" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="OrdersType_Tracker" xml:space="preserve">
+    <value>Urmăritor</value>
+  </data>
+  <data name="OrderType_Delivery" xml:space="preserve">
+    <value>Livrare</value>
+  </data>
+  <data name="OrderType_DeliveryShortAlias" xml:space="preserve">
+    <value>Livr</value>
+  </data>
+  <data name="OrderType_PersonaFoodShortAlias" xml:space="preserve">
+    <value>Pers</value>
+  </data>
+  <data name="OrderType_PersonalFood" xml:space="preserve">
+    <value>Masa personal</value>
+  </data>
+  <data name="OrderType_PickupShortAlias" xml:space="preserve">
+    <value>Rid</value>
+  </data>
+  <data name="OrderType_Stationary" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="OrderType_StationaryShortAlias" xml:space="preserve">
+    <value>Rest</value>
+  </data>
+  <data name="ProductionStage_WaitingMake" xml:space="preserve">
+    <value>Pregatire in asteptare</value>
+  </data>
+  <data name="Source_Aggregator" xml:space="preserve">
+    <value>Procesator</value>
+  </data>
+  <data name="Source_DefectOrder" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="Source_Mobile" xml:space="preserve">
+    <value>Aplicatie pentru mobil</value>
+  </data>
+  <data name="Source_Pizzeria" xml:space="preserve">
+    <value>Pizzeria</value>
+  </data>
+  <data name="Source_Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Source_Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="Source_Telephone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="ValidateMessage_Delivery" xml:space="preserve">
+    <value>livrarea</value>
+  </data>
+  <data name="ValidateMessage_PersonalFood" xml:space="preserve">
+    <value>masa personal</value>
+  </data>
+  <data name="ValidateMessage_Stationary" xml:space="preserve">
+    <value>restaurant</value>
+  </data>
+  <data name="WaitingDelivery" xml:space="preserve">
+    <value>Asteapta expedierea</value>
+  </data>
+  <data name="WaitingMake" xml:space="preserve">
+    <value>Asteptare</value>
+  </data>
+</root>

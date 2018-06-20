@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicUnitOfMeasure" xml:space="preserve">
+    <value>Unitatea de masura de baza</value>
+  </data>
+  <data name="BasicUnitOfMeasureShort" xml:space="preserve">
+    <value>Unitate de baza</value>
+  </data>
+  <data name="BeginDateRequired" xml:space="preserve">
+    <value>Introduceti data de inceput</value>
+  </data>
+  <data name="Bottle" xml:space="preserve">
+    <value>Sticla</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Cutie</value>
+  </data>
+  <data name="Bucket" xml:space="preserve">
+    <value>Galeata</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Consumabile</value>
+  </data>
+  <data name="ConsumptionType_All" xml:space="preserve">
+    <value>Toate</value>
+  </data>
+  <data name="ConsumptionType_Canceled" xml:space="preserve">
+    <value>Anulare comanda</value>
+  </data>
+  <data name="ConsumptionType_Defect" xml:space="preserve">
+    <value>Rebut</value>
+  </data>
+  <data name="ConsumptionType_PersonalFood" xml:space="preserve">
+    <value>Alimentatie personal</value>
+  </data>
+  <data name="ConsumptionType_Sales" xml:space="preserve">
+    <value>Vanzari</value>
+  </data>
+  <data name="ConsumptionType_Transfers" xml:space="preserve">
+    <value>Transferuri</value>
+  </data>
+  <data name="ContainerSize" xml:space="preserve">
+    <value>Dimensiune container</value>
+  </data>
+  <data name="ContainerTypeNone" xml:space="preserve">
+    <value>Fara recipient</value>
+  </data>
+  <data name="DebitingReason_Corruption" xml:space="preserve">
+    <value>Putrezire (mucegai)</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>Termen de valabilitate expirat</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>Persoana responsabila</value>
+  </data>
+  <data name="DebitingReason_MarketingActivities" xml:space="preserve">
+    <value>Activitati de marketing</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>Ambalaj deteriorat</value>
+  </data>
+  <data name="DryWeight" xml:space="preserve">
+    <value>Masa uscata</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>Introduceti data de sfarsit</value>
+  </data>
+  <data name="EveningShift" xml:space="preserve">
+    <value>Tura de seara</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>zilnic</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>lunar</value>
+  </data>
+  <data name="EveryWeek" xml:space="preserve">
+    <value>saptamanal</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>National</value>
+  </data>
+  <data name="FieldMustBePositive" xml:space="preserve">
+    <value>Valoarea campului {0} trebuie sa fie pozitiva</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Produse finite</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>Pentru toate unitatile</value>
+  </data>
+  <data name="FreeTara" xml:space="preserve">
+    <value>Свободный вес</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Gram</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingredient</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Obiecte inventar</value>
+  </data>
+  <data name="Jar" xml:space="preserve">
+    <value>Borcan</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kilograme</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="LayerSauces" xml:space="preserve">
+    <value>Sosuri</value>
+  </data>
+  <data name="LayerLevel1" xml:space="preserve">
+    <value>Strat 1</value>
+  </data>
+  <data name="LayerLevel2" xml:space="preserve">
+    <value>Strat 2</value>
+  </data>
+  <data name="LayerLevel3" xml:space="preserve">
+    <value>Strat 3</value>
+  </data>
+  <data name="LayerLevel4" xml:space="preserve">
+    <value>Strat 4</value>
+  </data>
+  <data name="LayerLevel5" xml:space="preserve">
+    <value>Strat 5</value>
+  </data>
+  <data name="Lexan1" xml:space="preserve">
+    <value>Lexan 1/1</value>
+  </data>
+  <data name="Lexan2" xml:space="preserve">
+    <value>Lexan 1/2</value>
+  </data>
+  <data name="Lexan3" xml:space="preserve">
+    <value>Lexan 1/3</value>
+  </data>
+  <data name="Lexan6" xml:space="preserve">
+    <value>Lexan 1/6</value>
+  </data>
+  <data name="Lexan9" xml:space="preserve">
+    <value>Lexan 1/9</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Litri</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>L.</value>
+  </data>
+  <data name="Material_MaterialNameIsRequired" xml:space="preserve">
+    <value>Nu este completata denumirea</value>
+  </data>
+  <data name="Material_MaterialTypeIsRequired" xml:space="preserve">
+    <value>Nu a fost selectat tipul materiei prime</value>
+  </data>
+  <data name="MaximumFieldLength" xml:space="preserve">
+    <value>Lugimea maxima a campului {1}</value>
+  </data>
+  <data name="MeasureTypeVariation_Breakfast" xml:space="preserve">
+    <value>Gustare</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml" xml:space="preserve">
+    <value>Pahar 100 ml</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_2" xml:space="preserve">
+    <value>1/2</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_4" xml:space="preserve">
+    <value>1/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml3_4" xml:space="preserve">
+    <value>3/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass200Ml" xml:space="preserve">
+    <value>Pahar 200 ml</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfLargeGlass" xml:space="preserve">
+    <value>1/2 Pahar rosu mare</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfMediumGlass" xml:space="preserve">
+    <value>1/2 Pahar verde mediu</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfSmallGlass" xml:space="preserve">
+    <value>1/2 Pahar galben mic</value>
+  </data>
+  <data name="MeasureTypeVariation_HickeyOneHickey" xml:space="preserve">
+    <value>O bucata</value>
+  </data>
+  <data name="MeasureTypeVariation_LargeGlass" xml:space="preserve">
+    <value>Pahar rosu mare</value>
+  </data>
+  <data name="MeasureTypeVariation_MediumGlass" xml:space="preserve">
+    <value>Pahar verde mediu</value>
+  </data>
+  <data name="MeasureTypeVariation_PinchOnePinch" xml:space="preserve">
+    <value>O ciupitura</value>
+  </data>
+  <data name="MeasureTypeVariation_Portion14Pieces" xml:space="preserve">
+    <value>Portie 14 buc</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixNugget" xml:space="preserve">
+    <value>Portie dodomix</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixPotatoes" xml:space="preserve">
+    <value>Portie dodomix</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_2L" xml:space="preserve">
+    <value>0,2 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_3L" xml:space="preserve">
+    <value>0,3 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_5L" xml:space="preserve">
+    <value>0,5 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_6L" xml:space="preserve">
+    <value>0,6 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza25" xml:space="preserve">
+    <value>Pizza 25</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza30" xml:space="preserve">
+    <value>Pizza 30</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza35" xml:space="preserve">
+    <value>Pizza 35</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForSandwich" xml:space="preserve">
+    <value>Sandwich</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCream" xml:space="preserve">
+    <value>Portie inghetata</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCreamOne" xml:space="preserve">
+    <value>O portie</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionOfDrink0_05L" xml:space="preserve">
+    <value>0,05 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionSalmonOne" xml:space="preserve">
+    <value>O portie</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionShrimpOne" xml:space="preserve">
+    <value>O portie</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionVillage" xml:space="preserve">
+    <value>Portie wedges</value>
+  </data>
+  <data name="MeasureTypeVariation_PressingGunOnePress" xml:space="preserve">
+    <value>O apasare</value>
+  </data>
+  <data name="MeasureTypeVariation_ShakeOneShake" xml:space="preserve">
+    <value>O scuturare</value>
+  </data>
+  <data name="MeasureTypeVariation_Slice" xml:space="preserve">
+    <value>Slice</value>
+  </data>
+  <data name="MeasureTypeVariation_SmallGlass" xml:space="preserve">
+    <value>Pahar galben mic</value>
+  </data>
+  <data name="MeasureType_Americano" xml:space="preserve">
+    <value>Americano</value>
+  </data>
+  <data name="MeasureType_Cappuccino" xml:space="preserve">
+    <value>Cappuccino</value>
+  </data>
+  <data name="MeasureType_CheesseCup" xml:space="preserve">
+    <value>Pahar mozzarella</value>
+  </data>
+  <data name="MeasureType_Espresso" xml:space="preserve">
+    <value>Espresso</value>
+  </data>
+  <data name="MeasureType_Glass100Ml" xml:space="preserve">
+    <value>Pahar 100 ml</value>
+  </data>
+  <data name="MeasureType_Glass200Ml" xml:space="preserve">
+    <value>Pahar 200 ml</value>
+  </data>
+  <data name="MeasureType_Hickey" xml:space="preserve">
+    <value>Bucati</value>
+  </data>
+  <data name="MeasureType_Latte" xml:space="preserve">
+    <value>Latte</value>
+  </data>
+  <data name="MeasureType_Pinch" xml:space="preserve">
+    <value>Ciupitura</value>
+  </data>
+  <data name="MeasureType_PortionDrink" xml:space="preserve">
+    <value>Portii bauturi</value>
+  </data>
+  <data name="MeasureType_PortionForProduct" xml:space="preserve">
+    <value>Portie in Pizza/Gustare/Sandwich</value>
+  </data>
+  <data name="MeasureType_PortionIceCream" xml:space="preserve">
+    <value>Portie inghetata</value>
+  </data>
+  <data name="MeasureType_PortionNuggets" xml:space="preserve">
+    <value>Portie nuggets-uril</value>
+  </data>
+  <data name="MeasureType_PortionPotatoes" xml:space="preserve">
+    <value>Порция картошки</value>
+  </data>
+  <data name="MeasureType_PortionSalmon" xml:space="preserve">
+    <value>Portie somon</value>
+  </data>
+  <data name="MeasureType_PortionShrimp" xml:space="preserve">
+    <value>Portie creveti</value>
+  </data>
+  <data name="MeasureType_PressingGun" xml:space="preserve">
+    <value>Apasari pistol</value>
+  </data>
+  <data name="MeasureType_Shake" xml:space="preserve">
+    <value>Scuturare</value>
+  </data>
+  <data name="MeasureType_Slice" xml:space="preserve">
+    <value>Slice</value>
+  </data>
+  <data name="MeasureType_SoupLadle" xml:space="preserve">
+    <value>Polonic</value>
+  </data>
+  <data name="Message_RequiredOrganizationType" xml:space="preserve">
+    <value>Alegeti forma persoanei juridice</value>
+  </data>
+  <data name="Message_RequiredPaymentOption" xml:space="preserve">
+    <value>Indicati forma de functionare</value>
+  </data>
+  <data name="Message_RequiredSupplierName" xml:space="preserve">
+    <value>Indicati denumirea companiei furnizorului</value>
+  </data>
+  <data name="Metr" xml:space="preserve">
+    <value>Metru</value>
+  </data>
+  <data name="MetrShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Mililitri</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>Ml.</value>
+  </data>
+  <data name="MorningShift" xml:space="preserve">
+    <value>Tura de dimineata</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>Tura de noapte</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Punga</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Ambalare</value>
+  </data>
+  <data name="Packing" xml:space="preserve">
+    <value>Ambalaje</value>
+  </data>
+  <data name="PaymentOption_Deferment" xml:space="preserve">
+    <value>Termen de plata</value>
+  </data>
+  <data name="PaymentOption_Prepaid" xml:space="preserve">
+    <value>Plata avans</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Bucati</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>Buc.</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Semifabricat</value>
+  </data>
+  <data name="Tara_Bag" xml:space="preserve">
+    <value>Sac</value>
+  </data>
+  <data name="Tara_Balloon" xml:space="preserve">
+    <value>Butelie</value>
+  </data>
+  <data name="Tara_Bottle" xml:space="preserve">
+    <value>Sticla</value>
+  </data>
+  <data name="Tara_Box" xml:space="preserve">
+    <value>Cutie</value>
+  </data>
+  <data name="Tara_Bucket" xml:space="preserve">
+    <value>Galeata</value>
+  </data>
+  <data name="Tara_CuppingGlass" xml:space="preserve">
+    <value>Conserva</value>
+  </data>
+  <data name="Tara_Kega" xml:space="preserve">
+    <value>Butoi</value>
+  </data>
+  <data name="Tara_Packing" xml:space="preserve">
+    <value>Ambalaje</value>
+  </data>
+  <data name="Tara_Roll" xml:space="preserve">
+    <value>Rola</value>
+  </data>
+</root>

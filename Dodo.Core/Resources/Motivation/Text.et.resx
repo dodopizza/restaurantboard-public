@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BeginDateRequired" xml:space="preserve">
+    <value>Sisestage alguskuupäeva</value>
+  </data>
+  <data name="ClientMessage_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Kommentaar ei tohi ületada 500 sümbolit</value>
+  </data>
+  <data name="ClientMessage_AddressInvalid" xml:space="preserve">
+    <value>Palun täitke ära kõiki aadressi välju.</value>
+  </data>
+  <data name="ClientMessage_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Märgitud aadress ei kuulu kohaletoimetamise piirkonda.</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTime" xml:space="preserve">
+    <value>Kahjuks ei ole teie poolt määratud ajal Pizzarestoran avatud. Pizzarestoran on avatud {0} -st kuni {1} -ni</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Sisestage teist kohaletoimetamise aega. Me ei saa tuua tellimust kohale teie poolt määratud  ajaks.</value>
+  </data>
+  <data name="ClientMessage_DeliveryStop" xml:space="preserve">
+    <value>Kohaletoimetuse töö on peatatud. Vabandame ebamugavuste pärast</value>
+  </data>
+  <data name="ClientMessage_EmptyBasket" xml:space="preserve">
+    <value>Teie ostukorv on tühi</value>
+  </data>
+  <data name="ClientMessage_InvalidFreeSauces" xml:space="preserve">
+    <value>Palun valige tasuta kastmeid</value>
+  </data>
+  <data name="ClientMessage_NoteEmpty" xml:space="preserve">
+    <value>Palun märkige ära, millise summa pealt peame teile tagasiraha ette valmistama. See ei tohi olla tellimuse summast väiksem</value>
+  </data>
+  <data name="ClientMessage_NoteInvalid" xml:space="preserve">
+    <value>Summa, mille pealt tuleb tagasiraha ette valmistada, ei tohi olla väiksem kui tellimuse summa kokku.</value>
+  </data>
+  <data name="ClientMessage_OrderCostInvalid" xml:space="preserve">
+    <value>Palun valige midagi veel. Tellimuse minimaalne summa (suveniire arvestamata) - {0} </value>
+  </data>
+  <data name="ClientMessage_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Valige Pizzarestorani, kuhu soovite tellimusele järgi tulla</value>
+  </data>
+  <data name="ClientMessage_PizzeriaIsClosed" xml:space="preserve">
+    <value>Kahjuks ei ole tellimuse eest maksmine õnnestunud. Pizzarestoran on kinni.</value>
+  </data>
+  <data name="ClientMessage_ProductInStopList" xml:space="preserve">
+    <value>Kahjuks {0} ei ole hetkel olemas. Palun eemaldage toodet ostukorvist.</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>Sisestage lõppkuupäeva</value>
+  </data>
+  <data name="EveningShift" xml:space="preserve">
+    <value>Õhtune vahetus</value>
+  </data>
+  <data name="Message_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Liiga pikk aadressi kirjeldus</value>
+  </data>
+  <data name="Message_AddressEmpty" xml:space="preserve">
+    <value>Aadress ei ole sisestatud</value>
+  </data>
+  <data name="Message_AddressInvalid" xml:space="preserve">
+    <value>Aadress on ebakorrektne</value>
+  </data>
+  <data name="Message_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Aadress ei kuulu kohaletoimetamise piirkonda</value>
+  </data>
+  <data name="Message_ClientEmpty" xml:space="preserve">
+    <value>Kliendiandmed ei ole sisestatud</value>
+  </data>
+  <data name="Message_ClientFromBlackList" xml:space="preserve">
+    <value>Klient on mustas nimekirjas</value>
+  </data>
+  <data name="Message_ClientNameEmpty" xml:space="preserve">
+    <value>Nimi ei ole sisestatud</value>
+  </data>
+  <data name="Message_DelayedOrderTime" xml:space="preserve">
+    <value>Kahjuks ei ole teie poolt määratud ajal Pizzarestoran avatud. Pizzarestoran on avatud {0} -st kuni {1} -ni</value>
+  </data>
+  <data name="Message_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Edasi lükatud tellimuse aeg on ebakorrektne</value>
+  </data>
+  <data name="Message_DelayedOrderWithoutTime" xml:space="preserve">
+    <value>Edasi lükatud tellimuse juures pole määratud aega.</value>
+  </data>
+  <data name="Message_DeliveryStop" xml:space="preserve">
+    <value>Kohaletoimetuse töö on peatatud</value>
+  </data>
+  <data name="Message_EmptyBasket" xml:space="preserve">
+    <value>Ostukorv on tühi</value>
+  </data>
+  <data name="Message_EmptyComposition" xml:space="preserve">
+    <value>Ostukorv ei ole täidetud</value>
+  </data>
+  <data name="Message_EmptyHouse" xml:space="preserve">
+    <value>Maja number ei ole sisestatud</value>
+  </data>
+  <data name="Message_EmptyStreetName" xml:space="preserve">
+    <value>Tänav ei ole sisestatud</value>
+  </data>
+  <data name="Message_IncorrectDelayedTime" xml:space="preserve">
+    <value>Edasi lükatud tellimuse aeg on ebakorrektne.</value>
+  </data>
+  <data name="Message_IncorrectPersonalOrderSum" xml:space="preserve">
+    <value>Lõuna summa ületab maksimaalselt võimalikku väärtust.</value>
+  </data>
+  <data name="Message_InvalidFreeSauces" xml:space="preserve">
+    <value>Tasuta kastmed ei ole valitud</value>
+  </data>
+  <data name="Message_MaxCashPaymentLimitExceeded" xml:space="preserve">
+    <value>Vabandust, olete ületanud maksimaalset summat, mida saab tasuda sularahas veebilehel vormistatud tellimuse eest.</value>
+  </data>
+  <data name="Message_NotChoosedProducts" xml:space="preserve">
+    <value>Tooted lõuna jaoks ei ole valitud.</value>
+  </data>
+  <data name="Message_NoteEmpty" xml:space="preserve">
+    <value>Kupüür ei ole sisestatud</value>
+  </data>
+  <data name="Message_NoteInvalid" xml:space="preserve">
+    <value>Kupüür on sisestatud ebakorrektselt</value>
+  </data>
+  <data name="Message_NowPproductIsNotForSale" xml:space="preserve">
+    <value>Hetkel toode {0} ei ole müügil</value>
+  </data>
+  <data name="Message_NowProductIsNotForSale" xml:space="preserve">
+    <value>Hetkel toodet {0} müügil pole</value>
+  </data>
+  <data name="Message_OrderCostInvalid" xml:space="preserve">
+    <value>Tellimuse summa (suveniire arvestamita) on miinimumsummast väiksem</value>
+  </data>
+  <data name="Message_OrderWithSimpleProductsOnly" xml:space="preserve">
+    <value>Pole võimalik vormistada edasi lükatud lõunat, kui selles puuduvad tooted köögist</value>
+  </data>
+  <data name="Message_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Valige Pizzarestorani, kuhu soovite tellimusele järgi tulla</value>
+  </data>
+  <data name="Message_PizzeriaIsClosed" xml:space="preserve">
+    <value>Pizzarestoran ei tööta</value>
+  </data>
+  <data name="Message_PizzeriaShiftIsClosed" xml:space="preserve">
+    <value>Pizzarestorani vahetus pole avatud. Palun pöörduge vahetuse vanema poole</value>
+  </data>
+  <data name="Message_PizzeriaWorkTypeDisabled" xml:space="preserve">
+    <value>Vabandust, Pizzarestoran ei valmista tellimusi {0} </value>
+  </data>
+  <data name="Message_ProductInStopList" xml:space="preserve">
+    <value>Toode on stopp-listis: {0}</value>
+  </data>
+  <data name="Message_ProductIsNotOnMenu" xml:space="preserve">
+    <value>Toode {0} ei sisaldu menüüs</value>
+  </data>
+  <data name="Message_RemakeDefectedOrderFailed" xml:space="preserve">
+    <value>Tellimuse prakeerimine on ebaõnnestunud</value>
+  </data>
+  <data name="Message_StationaryStop" xml:space="preserve">
+    <value>Restorani töö on peatatud</value>
+  </data>
+  <data name="Message_TelephoneEmpty" xml:space="preserve">
+    <value>Telefoninumber ei ole sisestatud</value>
+  </data>
+  <data name="Message__ClientNameTooLong" xml:space="preserve">
+    <value>Liiga pikk nimi</value>
+  </data>
+  <data name="MorningShift" xml:space="preserve">
+    <value>Hommikune vahetus</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>Öine vahetus</value>
+  </data>
+  <data name="OrderState_Accepted" xml:space="preserve">
+    <value>Vastu võetud</value>
+  </data>
+  <data name="OrderState_Completed" xml:space="preserve">
+    <value>Täidetud</value>
+  </data>
+  <data name="OrderState_Editing" xml:space="preserve">
+    <value>Redakteeritakse</value>
+  </data>
+  <data name="OrderState_Failure" xml:space="preserve">
+    <value>Keeldumine</value>
+  </data>
+  <data name="OrderState_Kitchen" xml:space="preserve">
+    <value>Töös</value>
+  </data>
+  <data name="OrderState_OnDelivery" xml:space="preserve">
+    <value>Transpordis</value>
+  </data>
+  <data name="OrderState_OnTheShelf" xml:space="preserve">
+    <value>Pakitud</value>
+  </data>
+  <data name="OrderState_Redirect" xml:space="preserve">
+    <value>Ümber suunatud</value>
+  </data>
+  <data name="OrderState_Storno" xml:space="preserve">
+    <value>Storno</value>
+  </data>
+  <data name="OrderState_TimeOut" xml:space="preserve">
+    <value>Aeg on läbi</value>
+  </data>
+  <data name="OrderState_Unknow" xml:space="preserve">
+    <value>Pole määratud</value>
+  </data>
+  <data name="Source_DefectOrder" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="Source_Mobile" xml:space="preserve">
+    <value>Mobiilne rakendus</value>
+  </data>
+  <data name="Source_Pizzeria" xml:space="preserve">
+    <value>Pizzarestoran</value>
+  </data>
+  <data name="Source_Restaurant" xml:space="preserve">
+    <value>Restoran</value>
+  </data>
+  <data name="Source_Site" xml:space="preserve">
+    <value>Veebileht</value>
+  </data>
+  <data name="Source_Telephone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+</root>

@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alley" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="AlleyDecrease" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="Anex" xml:space="preserve">
+    <value>郊区</value>
+  </data>
+  <data name="AnexDecrease" xml:space="preserve">
+    <value>郊区</value>
+  </data>
+  <data name="Arcade" xml:space="preserve">
+    <value>走廊</value>
+  </data>
+  <data name="ArcadeDecrease" xml:space="preserve">
+    <value>走廊</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>面积</value>
+  </data>
+  <data name="AreaDecrease" xml:space="preserve">
+    <value>面积</value>
+  </data>
+  <data name="Avenue" xml:space="preserve">
+    <value>大路</value>
+  </data>
+  <data name="AvenueDecrease" xml:space="preserve">
+    <value>大路</value>
+  </data>
+  <data name="Beach" xml:space="preserve">
+    <value>岸</value>
+  </data>
+  <data name="BeachDecrease" xml:space="preserve">
+    <value>岸</value>
+  </data>
+  <data name="Bend" xml:space="preserve">
+    <value>转弯</value>
+  </data>
+  <data name="BendDecrease" xml:space="preserve">
+    <value>转弯</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>街区</value>
+  </data>
+  <data name="BlockDecrease" xml:space="preserve">
+    <value>街区</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>洼地</value>
+  </data>
+  <data name="BottomDecrease" xml:space="preserve">
+    <value>洼地</value>
+  </data>
+  <data name="Boulevard" xml:space="preserve">
+    <value>林荫路</value>
+  </data>
+  <data name="BoulevardDecrease" xml:space="preserve">
+    <value>林荫路</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>树枝</value>
+  </data>
+  <data name="BranchDecrease" xml:space="preserve">
+    <value>树枝</value>
+  </data>
+  <data name="Bridge" xml:space="preserve">
+    <value>桥</value>
+  </data>
+  <data name="BridgeDecrease" xml:space="preserve">
+    <value>桥</value>
+  </data>
+  <data name="BroadStreet" xml:space="preserve">
+    <value>宽街</value>
+  </data>
+  <data name="BroadStreetDecrease" xml:space="preserve">
+    <value>宽街</value>
+  </data>
+  <data name="Brook" xml:space="preserve">
+    <value>小河</value>
+  </data>
+  <data name="BrookDecrease" xml:space="preserve">
+    <value>小河</value>
+  </data>
+  <data name="Burg" xml:space="preserve">
+    <value>堡垒</value>
+  </data>
+  <data name="BurgDecrease" xml:space="preserve">
+    <value>堡垒</value>
+  </data>
+  <data name="Bypass" xml:space="preserve">
+    <value>绕道</value>
+  </data>
+  <data name="BypassDecrease" xml:space="preserve">
+    <value>绕道</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>打电话！</value>
+  </data>
+  <data name="CallIntercome" xml:space="preserve">
+    <value>打电话</value>
+  </data>
+  <data name="Camp" xml:space="preserve">
+    <value>营地</value>
+  </data>
+  <data name="CampDecrease" xml:space="preserve">
+    <value>营地</value>
+  </data>
+  <data name="Canyon" xml:space="preserve">
+    <value>峡谷</value>
+  </data>
+  <data name="CanyonDecrease" xml:space="preserve">
+    <value>峡谷</value>
+  </data>
+  <data name="CausewayDecrease" xml:space="preserve">
+    <value>人行道</value>
+  </data>
+  <data name="Circle" xml:space="preserve">
+    <value>圈</value>
+  </data>
+  <data name="CircleDecrease" xml:space="preserve">
+    <value>圈</value>
+  </data>
+  <data name="Corner" xml:space="preserve">
+    <value>角度</value>
+  </data>
+  <data name="CornerDecrease" xml:space="preserve">
+    <value>角度</value>
+  </data>
+  <data name="Course" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="CourseDecrease" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="Court" xml:space="preserve">
+    <value>院子</value>
+  </data>
+  <data name="CourtDecrease" xml:space="preserve">
+    <value>院子</value>
+  </data>
+  <data name="Cove" xml:space="preserve">
+    <value>小湾</value>
+  </data>
+  <data name="CoveDecrease" xml:space="preserve">
+    <value>小湾</value>
+  </data>
+  <data name="Creek" xml:space="preserve">
+    <value>小河</value>
+  </data>
+  <data name="CreekDecrease" xml:space="preserve">
+    <value>小河</value>
+  </data>
+  <data name="Crossing" xml:space="preserve">
+    <value>道口</value>
+  </data>
+  <data name="CrossingDecrease" xml:space="preserve">
+    <value>道口</value>
+  </data>
+  <data name="Crossroads" xml:space="preserve">
+    <value>路口</value>
+  </data>
+  <data name="CrossroadsDecrease" xml:space="preserve">
+    <value>交叉口</value>
+  </data>
+  <data name="Curve" xml:space="preserve">
+    <value>弯曲</value>
+  </data>
+  <data name="CurveDecrease" xml:space="preserve">
+    <value>曲折</value>
+  </data>
+  <data name="Dale" xml:space="preserve">
+    <value>谷</value>
+  </data>
+  <data name="DaleDecrease" xml:space="preserve">
+    <value>谷</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>区</value>
+  </data>
+  <data name="DistrictDecrease" xml:space="preserve">
+    <value>区</value>
+  </data>
+  <data name="Embankment" xml:space="preserve">
+    <value>海边</value>
+  </data>
+  <data name="EmbankmentDecrease" xml:space="preserve">
+    <value>海边</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>延期</value>
+  </data>
+  <data name="ExtensionDecrease" xml:space="preserve">
+    <value>延期</value>
+  </data>
+  <data name="FirstFloor" xml:space="preserve">
+    <value>一层</value>
+  </data>
+  <data name="FullAddressInformation_Building" xml:space="preserve">
+    <value>住房</value>
+  </data>
+  <data name="FullAddressInformation_Flat" xml:space="preserve">
+    <value>，房子</value>
+  </data>
+  <data name="FullAddressInformation_Floor" xml:space="preserve">
+    <value>，层</value>
+  </data>
+  <data name="FullAddressInformation_House" xml:space="preserve">
+    <value>，楼</value>
+  </data>
+  <data name="FullAddressInformation_Intercome" xml:space="preserve">
+    <value>，代码</value>
+  </data>
+  <data name="FullAddressInformation_Porch" xml:space="preserve">
+    <value>，单元</value>
+  </data>
+  <data name="Glen" xml:space="preserve">
+    <value>河谷</value>
+  </data>
+  <data name="GlenDecrease" xml:space="preserve">
+    <value>河谷</value>
+  </data>
+  <data name="Grove" xml:space="preserve">
+    <value>小树林</value>
+  </data>
+  <data name="GroveDecrease" xml:space="preserve">
+    <value>小树林</value>
+  </data>
+  <data name="Highway" xml:space="preserve">
+    <value>公路</value>
+  </data>
+  <data name="HighwayDecrease" xml:space="preserve">
+    <value>公路</value>
+  </data>
+  <data name="Hill" xml:space="preserve">
+    <value>小山</value>
+  </data>
+  <data name="HillDecrease" xml:space="preserve">
+    <value>小山</value>
+  </data>
+  <data name="Impasse" xml:space="preserve">
+    <value>死胡同</value>
+  </data>
+  <data name="ImpasseDecrease" xml:space="preserve">
+    <value>死胡同</value>
+  </data>
+  <data name="Intercome" xml:space="preserve">
+    <value>对讲机.</value>
+  </data>
+  <data name="Junction" xml:space="preserve">
+    <value>交叉点</value>
+  </data>
+  <data name="JunctionDecrease" xml:space="preserve">
+    <value>交叉点</value>
+  </data>
+  <data name="Lane" xml:space="preserve">
+    <value>小巷</value>
+  </data>
+  <data name="LaneDecrease" xml:space="preserve">
+    <value>小巷</value>
+  </data>
+  <data name="LastFloor" xml:space="preserve">
+    <value>最后的层</value>
+  </data>
+  <data name="Loop" xml:space="preserve">
+    <value>回路</value>
+  </data>
+  <data name="Mall" xml:space="preserve">
+    <value>购物商场</value>
+  </data>
+  <data name="Message_InvalidAddress" xml:space="preserve">
+    <value>不正确的地址输入</value>
+  </data>
+  <data name="Microdistrict" xml:space="preserve">
+    <value>小区</value>
+  </data>
+  <data name="MicrodistrictDecrease" xml:space="preserve">
+    <value>小区</value>
+  </data>
+  <data name="MiniPath" xml:space="preserve">
+    <value>小路</value>
+  </data>
+  <data name="Mountain" xml:space="preserve">
+    <value>山</value>
+  </data>
+  <data name="MountainDecrease" xml:space="preserve">
+    <value>山</value>
+  </data>
+  <data name="NoIntercome" xml:space="preserve">
+    <value>不是</value>
+  </data>
+  <data name="OnTheWatch" xml:space="preserve">
+    <value>在修班</value>
+  </data>
+  <data name="Parkway" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="ParkwayDecrease" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>过道</value>
+  </data>
+  <data name="Passage" xml:space="preserve">
+    <value>通行</value>
+  </data>
+  <data name="PassageDecrease" xml:space="preserve">
+    <value>通行</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="PathDecrease" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="Plain" xml:space="preserve">
+    <value>平原</value>
+  </data>
+  <data name="PlainDecrease" xml:space="preserve">
+    <value>平原</value>
+  </data>
+  <data name="Point" xml:space="preserve">
+    <value>店</value>
+  </data>
+  <data name="PointDecrease" xml:space="preserve">
+    <value>店</value>
+  </data>
+  <data name="PrivateHouse" xml:space="preserve">
+    <value>私第</value>
+  </data>
+  <data name="Ramp" xml:space="preserve">
+    <value>斜坡</value>
+  </data>
+  <data name="River" xml:space="preserve">
+    <value>河</value>
+  </data>
+  <data name="RiverDecrease" xml:space="preserve">
+    <value>河</value>
+  </data>
+  <data name="Road" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="RoadDecrease" xml:space="preserve">
+    <value>道路</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>路线</value>
+  </data>
+  <data name="RouteDecrease" xml:space="preserve">
+    <value>路线</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>排</value>
+  </data>
+  <data name="SeparateEntrance" xml:space="preserve">
+    <value>独门</value>
+  </data>
+  <data name="SocleFloor" xml:space="preserve">
+    <value>半地下室</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>街心公园</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>街</value>
+  </data>
+  <data name="StreetDecrease" xml:space="preserve">
+    <value>街</value>
+  </data>
+  <data name="Trace" xml:space="preserve">
+    <value>小路</value>
+  </data>
+  <data name="TraceDecrease" xml:space="preserve">
+    <value>小路</value>
+  </data>
+  <data name="Track" xml:space="preserve">
+    <value>小道</value>
+  </data>
+  <data name="TrackDecrease" xml:space="preserve">
+    <value>小道</value>
+  </data>
+  <data name="Trail" xml:space="preserve">
+    <value>路线</value>
+  </data>
+  <data name="TrailDecrease" xml:space="preserve">
+    <value>路线</value>
+  </data>
+  <data name="Vista" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="VistaDecrease" xml:space="preserve">
+    <value>林荫道</value>
+  </data>
+  <data name="Walk" xml:space="preserve">
+    <value>过路</value>
+  </data>
+</root>

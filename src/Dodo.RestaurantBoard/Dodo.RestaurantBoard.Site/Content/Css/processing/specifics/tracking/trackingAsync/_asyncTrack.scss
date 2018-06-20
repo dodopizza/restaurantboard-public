@@ -1,0 +1,107 @@
+﻿/// <reference path="../../../../../utils/__utils.scss" />
+
+.async-track {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__grid,
+    &__footer {
+        width: 100%;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        min-width: 640px;
+    }
+
+    &__item {
+        position: relative;
+        background-color: $bgColor-asyncTrackItem;
+        color: $color-000;
+        line-height: 1;
+        text-align: center;
+        padding: $paddingLeft-asyncProduct;
+        border-style: solid;
+        border-color: $color-fff;
+        border-width: 0 $borderWidth-asyncTrackItem $borderWidth-asyncTrackItem 0;
+        overflow: hidden;
+        float: left;
+        @include flex(1 auto);
+        @include rounded(4px);
+        @include user-select;
+
+        &_added {
+            background-color: $bgColor-asyncTrackItem-added;
+            @include inner-shadow(0, -2px, 0, 0.25);
+        }
+
+        &_selected {
+            background-color: $bgColor-asyncTrackItem-selected !important;
+            @include box-shadow(none);
+        }
+
+        &_canceled {
+            background-color: $bgColor-asyncTrackItem-canceled;
+            color: $color-asyncTrackItem-canceled;
+
+            .async-product__sauce {
+                opacity: 0.15;
+            }
+
+            .async-product__timer {
+                color: $color-fff;
+            }
+        }
+    }
+
+    &__grid {
+        height: 95%;
+        padding: 2px;
+
+        &_size {
+
+            &_nine {
+                .async-track__item {
+                    width: calculateAsyncItemWidth(3);
+                    height: calculateAsyncItemHeight(3);
+                }
+            }
+
+            &_fifteen {
+                .async-track__item {
+                    width: calculateAsyncItemWidth(5);
+                    height: calculateAsyncItemHeight(3);
+                }
+            }
+        }
+    }
+
+    &__footer {
+        height: 5%;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+}
+
+@include spinner('.async-track__spinner', #fff, 36px);
+
+.async-track__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 4px;
+}

@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alley" xml:space="preserve">
+    <value>аллея</value>
+  </data>
+  <data name="AlleyDecrease" xml:space="preserve">
+    <value>аллея</value>
+  </data>
+  <data name="Anex" xml:space="preserve">
+    <value>пригород</value>
+  </data>
+  <data name="AnexDecrease" xml:space="preserve">
+    <value>пригород</value>
+  </data>
+  <data name="Arcade" xml:space="preserve">
+    <value>галерея</value>
+  </data>
+  <data name="ArcadeDecrease" xml:space="preserve">
+    <value>галерея</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>площадь</value>
+  </data>
+  <data name="AreaDecrease" xml:space="preserve">
+    <value>пл.</value>
+  </data>
+  <data name="Avenue" xml:space="preserve">
+    <value>проспект</value>
+  </data>
+  <data name="AvenueDecrease" xml:space="preserve">
+    <value>пр-т</value>
+  </data>
+  <data name="Beach" xml:space="preserve">
+    <value>берег</value>
+  </data>
+  <data name="BeachDecrease" xml:space="preserve">
+    <value>берег</value>
+  </data>
+  <data name="Bend" xml:space="preserve">
+    <value>поворот</value>
+  </data>
+  <data name="BendDecrease" xml:space="preserve">
+    <value>поворот</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>квартал</value>
+  </data>
+  <data name="BlockDecrease" xml:space="preserve">
+    <value>квартал</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>низина</value>
+  </data>
+  <data name="BottomDecrease" xml:space="preserve">
+    <value>низина</value>
+  </data>
+  <data name="Boulevard" xml:space="preserve">
+    <value>бульвар</value>
+  </data>
+  <data name="BoulevardDecrease" xml:space="preserve">
+    <value>б-р</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>ветка</value>
+  </data>
+  <data name="BranchDecrease" xml:space="preserve">
+    <value>ветка</value>
+  </data>
+  <data name="Bridge" xml:space="preserve">
+    <value>мост</value>
+  </data>
+  <data name="BridgeDecrease" xml:space="preserve">
+    <value>мост</value>
+  </data>
+  <data name="BroadStreet" xml:space="preserve">
+    <value>широкая улица</value>
+  </data>
+  <data name="BroadStreetDecrease" xml:space="preserve">
+    <value>шир. ул.</value>
+  </data>
+  <data name="Broadway" xml:space="preserve">
+    <value>бродвей</value>
+  </data>
+  <data name="BroadwayDecrease" xml:space="preserve">
+    <value>бродвей</value>
+  </data>
+  <data name="Brook" xml:space="preserve">
+    <value>ручей</value>
+  </data>
+  <data name="BrookDecrease" xml:space="preserve">
+    <value>ручей</value>
+  </data>
+  <data name="Burg" xml:space="preserve">
+    <value>крепость</value>
+  </data>
+  <data name="BurgDecrease" xml:space="preserve">
+    <value>крепость</value>
+  </data>
+  <data name="Bypass" xml:space="preserve">
+    <value>обход</value>
+  </data>
+  <data name="BypassDecrease" xml:space="preserve">
+    <value>обход</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Звонить!</value>
+  </data>
+  <data name="CallIntercome" xml:space="preserve">
+    <value>Звонить</value>
+  </data>
+  <data name="Camp" xml:space="preserve">
+    <value>лагерь</value>
+  </data>
+  <data name="CampDecrease" xml:space="preserve">
+    <value>лагерь</value>
+  </data>
+  <data name="Canyon" xml:space="preserve">
+    <value>каньон</value>
+  </data>
+  <data name="CanyonDecrease" xml:space="preserve">
+    <value>каньон</value>
+  </data>
+  <data name="Causeway" xml:space="preserve">
+    <value>тротуар</value>
+  </data>
+  <data name="CausewayDecrease" xml:space="preserve">
+    <value>троутар</value>
+  </data>
+  <data name="Circle" xml:space="preserve">
+    <value>кольцо</value>
+  </data>
+  <data name="CircleDecrease" xml:space="preserve">
+    <value>кольцо</value>
+  </data>
+  <data name="Circus" xml:space="preserve">
+    <value>круглая площадь</value>
+  </data>
+  <data name="CircusDecrease" xml:space="preserve">
+    <value>круглая площадь</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>двор</value>
+  </data>
+  <data name="CloseDecrease" xml:space="preserve">
+    <value>двор</value>
+  </data>
+  <data name="Condominium" xml:space="preserve">
+    <value>квартирный комплекс</value>
+  </data>
+  <data name="CondominiumDeclare" xml:space="preserve">
+    <value>квартирный комплекс</value>
+  </data>
+  <data name="Corner" xml:space="preserve">
+    <value>угол</value>
+  </data>
+  <data name="CornerDecrease" xml:space="preserve">
+    <value>угол</value>
+  </data>
+  <data name="CottageSettlement" xml:space="preserve">
+    <value>котеджный посёлок</value>
+  </data>
+  <data name="CottageSettlementDeclare" xml:space="preserve">
+    <value>котедж. посёл.</value>
+  </data>
+  <data name="CountyRoad" xml:space="preserve">
+    <value>проселочная дорога</value>
+  </data>
+  <data name="CountyRoadDecrease" xml:space="preserve">
+    <value>прос. дорога</value>
+  </data>
+  <data name="Course" xml:space="preserve">
+    <value>трасса</value>
+  </data>
+  <data name="CourseDecrease" xml:space="preserve">
+    <value>трасса</value>
+  </data>
+  <data name="Court" xml:space="preserve">
+    <value>двор</value>
+  </data>
+  <data name="CourtDecrease" xml:space="preserve">
+    <value>двор</value>
+  </data>
+  <data name="Cove" xml:space="preserve">
+    <value>бухта</value>
+  </data>
+  <data name="CoveDecrease" xml:space="preserve">
+    <value>бухта</value>
+  </data>
+  <data name="Creek" xml:space="preserve">
+    <value>ручей</value>
+  </data>
+  <data name="CreekDecrease" xml:space="preserve">
+    <value>ручей</value>
+  </data>
+  <data name="Crescent" xml:space="preserve">
+    <value>дугообразная улица</value>
+  </data>
+  <data name="CrescentDecrease" xml:space="preserve">
+    <value>дугообразная улица</value>
+  </data>
+  <data name="Crossing" xml:space="preserve">
+    <value>переезд</value>
+  </data>
+  <data name="CrossingDecrease" xml:space="preserve">
+    <value>переезд</value>
+  </data>
+  <data name="Crossroads" xml:space="preserve">
+    <value>перекрёсток</value>
+  </data>
+  <data name="CrossroadsDecrease" xml:space="preserve">
+    <value>перекрёсток</value>
+  </data>
+  <data name="Curve" xml:space="preserve">
+    <value>изгиб</value>
+  </data>
+  <data name="CurveDecrease" xml:space="preserve">
+    <value>изгиб</value>
+  </data>
+  <data name="Dale" xml:space="preserve">
+    <value>дол</value>
+  </data>
+  <data name="DaleDecrease" xml:space="preserve">
+    <value>дол</value>
+  </data>
+  <data name="Depot" xml:space="preserve">
+    <value>жд станция</value>
+  </data>
+  <data name="DepotDecrease" xml:space="preserve">
+    <value>жд ст.</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>район</value>
+  </data>
+  <data name="DistrictDecrease" xml:space="preserve">
+    <value>р-н</value>
+  </data>
+  <data name="Drive" xml:space="preserve">
+    <value>подъездная дорога</value>
+  </data>
+  <data name="DriveDecrease" xml:space="preserve">
+    <value>подъездная дорога</value>
+  </data>
+  <data name="Embankment" xml:space="preserve">
+    <value>набережная</value>
+  </data>
+  <data name="EmbankmentDecrease" xml:space="preserve">
+    <value>наб.</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>продление</value>
+  </data>
+  <data name="ExtensionDecrease" xml:space="preserve">
+    <value>продление</value>
+  </data>
+  <data name="FirstFloor" xml:space="preserve">
+    <value>Первый этаж</value>
+  </data>
+  <data name="Fraternity" xml:space="preserve">
+    <value>фратернити</value>
+  </data>
+  <data name="FraternityDeclare" xml:space="preserve">
+    <value>фратернити</value>
+  </data>
+  <data name="FullAddressInformation_Building" xml:space="preserve">
+    <value>корпус</value>
+  </data>
+  <data name="FullAddressInformation_Flat" xml:space="preserve">
+    <value>, кв.</value>
+  </data>
+  <data name="FullAddressInformation_Floor" xml:space="preserve">
+    <value>, эт.</value>
+  </data>
+  <data name="FullAddressInformation_House" xml:space="preserve">
+    <value>, д.</value>
+  </data>
+  <data name="FullAddressInformation_Intercome" xml:space="preserve">
+    <value>, код</value>
+  </data>
+  <data name="FullAddressInformation_Porch" xml:space="preserve">
+    <value>, под.</value>
+  </data>
+  <data name="Garden" xml:space="preserve">
+    <value>сад</value>
+  </data>
+  <data name="GardenDecrease" xml:space="preserve">
+    <value>сад</value>
+  </data>
+  <data name="Gardens" xml:space="preserve">
+    <value>сады</value>
+  </data>
+  <data name="GardensDecrease" xml:space="preserve">
+    <value>сады</value>
+  </data>
+  <data name="Glen" xml:space="preserve">
+    <value>долина реки</value>
+  </data>
+  <data name="GlenDecrease" xml:space="preserve">
+    <value>долина реки</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>пустырь</value>
+  </data>
+  <data name="GreenDecrease" xml:space="preserve">
+    <value>пустырь</value>
+  </data>
+  <data name="Grove" xml:space="preserve">
+    <value>роща</value>
+  </data>
+  <data name="GroveDecrease" xml:space="preserve">
+    <value>роща</value>
+  </data>
+  <data name="Hall" xml:space="preserve">
+    <value>холл</value>
+  </data>
+  <data name="HallDeclare" xml:space="preserve">
+    <value>холл</value>
+  </data>
+  <data name="Highway" xml:space="preserve">
+    <value>шоссе</value>
+  </data>
+  <data name="HighwayDecrease" xml:space="preserve">
+    <value>ш.</value>
+  </data>
+  <data name="Hill" xml:space="preserve">
+    <value>холм</value>
+  </data>
+  <data name="HillDecrease" xml:space="preserve">
+    <value>холм</value>
+  </data>
+  <data name="Horticultural" xml:space="preserve">
+    <value>садоводство</value>
+  </data>
+  <data name="HorticulturalDeclare" xml:space="preserve">
+    <value>садовод.</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>гостиница</value>
+  </data>
+  <data name="HotelDeclare" xml:space="preserve">
+    <value>гостиница</value>
+  </data>
+  <data name="Housing" xml:space="preserve">
+    <value>жилой комплекс</value>
+  </data>
+  <data name="HousingDeclare" xml:space="preserve">
+    <value>жил. комплекс</value>
+  </data>
+  <data name="Impasse" xml:space="preserve">
+    <value>тупик</value>
+  </data>
+  <data name="ImpasseDecrease" xml:space="preserve">
+    <value>туп.</value>
+  </data>
+  <data name="Intercome" xml:space="preserve">
+    <value>Домофон</value>
+  </data>
+  <data name="Junction" xml:space="preserve">
+    <value>переход</value>
+  </data>
+  <data name="JunctionDecrease" xml:space="preserve">
+    <value>переход</value>
+  </data>
+  <data name="Lake" xml:space="preserve">
+    <value>озеро</value>
+  </data>
+  <data name="LakeDecrease" xml:space="preserve">
+    <value>озеро</value>
+  </data>
+  <data name="Lane" xml:space="preserve">
+    <value>переулок</value>
+  </data>
+  <data name="LaneDecrease" xml:space="preserve">
+    <value>пер.</value>
+  </data>
+  <data name="LastFloor" xml:space="preserve">
+    <value>Последний этаж</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>линия</value>
+  </data>
+  <data name="LineDecrease" xml:space="preserve">
+    <value>линия</value>
+  </data>
+  <data name="Loop" xml:space="preserve">
+    <value>объездная</value>
+  </data>
+  <data name="Mall" xml:space="preserve">
+    <value>торговый ряд</value>
+  </data>
+  <data name="Message_InvalidAddress" xml:space="preserve">
+    <value>Некорректно введен адрес</value>
+  </data>
+  <data name="Microdistrict" xml:space="preserve">
+    <value>микрорайон</value>
+  </data>
+  <data name="MicrodistrictDecrease" xml:space="preserve">
+    <value>мкрн.</value>
+  </data>
+  <data name="MiniPath" xml:space="preserve">
+    <value>тропинка</value>
+  </data>
+  <data name="Motel" xml:space="preserve">
+    <value>мотель</value>
+  </data>
+  <data name="MotelDeclare" xml:space="preserve">
+    <value>мотель</value>
+  </data>
+  <data name="Mount" xml:space="preserve">
+    <value>возвышенность</value>
+  </data>
+  <data name="Mountain" xml:space="preserve">
+    <value>гора</value>
+  </data>
+  <data name="MountainDecrease" xml:space="preserve">
+    <value>гора</value>
+  </data>
+  <data name="MountDecrease" xml:space="preserve">
+    <value>возвышенность</value>
+  </data>
+  <data name="NoIntercome" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="OnTheWatch" xml:space="preserve">
+    <value>На вахте</value>
+  </data>
+  <data name="Park" xml:space="preserve">
+    <value>парк</value>
+  </data>
+  <data name="ParkDecrease" xml:space="preserve">
+    <value>парк</value>
+  </data>
+  <data name="Parkway" xml:space="preserve">
+    <value>бульвар</value>
+  </data>
+  <data name="ParkwayDecrease" xml:space="preserve">
+    <value>бульвар</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>проход</value>
+  </data>
+  <data name="Passage" xml:space="preserve">
+    <value>проезд</value>
+  </data>
+  <data name="PassageDecrease" xml:space="preserve">
+    <value>пр-д</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="PathDecrease" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>местечко</value>
+  </data>
+  <data name="PlaceDecrease" xml:space="preserve">
+    <value>местеч.</value>
+  </data>
+  <data name="Plain" xml:space="preserve">
+    <value>равнина</value>
+  </data>
+  <data name="PlainDecrease" xml:space="preserve">
+    <value>равнина</value>
+  </data>
+  <data name="Point" xml:space="preserve">
+    <value>точка</value>
+  </data>
+  <data name="PointDecrease" xml:space="preserve">
+    <value>точка</value>
+  </data>
+  <data name="PrivateHouse" xml:space="preserve">
+    <value>Частный дом</value>
+  </data>
+  <data name="PrivateRoad" xml:space="preserve">
+    <value>частная дорога</value>
+  </data>
+  <data name="PrivateRoadDecrease" xml:space="preserve">
+    <value>частная дорога</value>
+  </data>
+  <data name="Ramp" xml:space="preserve">
+    <value>скат</value>
+  </data>
+  <data name="Ridge" xml:space="preserve">
+    <value>край</value>
+  </data>
+  <data name="RidgeDecrease" xml:space="preserve">
+    <value>край</value>
+  </data>
+  <data name="RidgeDescrease" xml:space="preserve">
+    <value>край</value>
+  </data>
+  <data name="River" xml:space="preserve">
+    <value>река</value>
+  </data>
+  <data name="RiverDecrease" xml:space="preserve">
+    <value>река</value>
+  </data>
+  <data name="Road" xml:space="preserve">
+    <value>дорога</value>
+  </data>
+  <data name="RoadDecrease" xml:space="preserve">
+    <value>дор.</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="RouteDecrease" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>ряд</value>
+  </data>
+  <data name="Saint" xml:space="preserve">
+    <value>церковь</value>
+  </data>
+  <data name="SaintDecrease" xml:space="preserve">
+    <value>церковь</value>
+  </data>
+  <data name="SeparateEntrance" xml:space="preserve">
+    <value>Отдельный вход</value>
+  </data>
+  <data name="Settlement" xml:space="preserve">
+    <value>посёлок</value>
+  </data>
+  <data name="SettlementDeclare" xml:space="preserve">
+    <value>пос.</value>
+  </data>
+  <data name="SocleFloor" xml:space="preserve">
+    <value>Цоколь</value>
+  </data>
+  <data name="Sorority" xml:space="preserve">
+    <value>сорорити</value>
+  </data>
+  <data name="SororityDeclare" xml:space="preserve">
+    <value>сорорити</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>сквер</value>
+  </data>
+  <data name="SquareDecrease" xml:space="preserve">
+    <value>сквер</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>улица</value>
+  </data>
+  <data name="StreetDecrease" xml:space="preserve">
+    <value>ул.</value>
+  </data>
+  <data name="Terrace" xml:space="preserve">
+    <value>терраса</value>
+  </data>
+  <data name="TerraceDecrease" xml:space="preserve">
+    <value>тер</value>
+  </data>
+  <data name="Terrene" xml:space="preserve">
+    <value>территория</value>
+  </data>
+  <data name="TerreneDecrease" xml:space="preserve">
+    <value>территор.</value>
+  </data>
+  <data name="Trace" xml:space="preserve">
+    <value>тропа</value>
+  </data>
+  <data name="TraceDecrease" xml:space="preserve">
+    <value>тропа</value>
+  </data>
+  <data name="Track" xml:space="preserve">
+    <value>дорожка</value>
+  </data>
+  <data name="TrackDecrease" xml:space="preserve">
+    <value>дорожка</value>
+  </data>
+  <data name="Trail" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="TrailDecrease" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="University" xml:space="preserve">
+    <value>университет</value>
+  </data>
+  <data name="UniversityDeclare" xml:space="preserve">
+    <value>университет</value>
+  </data>
+  <data name="Valley" xml:space="preserve">
+    <value>долина</value>
+  </data>
+  <data name="ValleyDecrease" xml:space="preserve">
+    <value>долина</value>
+  </data>
+  <data name="Village" xml:space="preserve">
+    <value>деревня</value>
+  </data>
+  <data name="VillageDecrease" xml:space="preserve">
+    <value>дерев.</value>
+  </data>
+  <data name="Vista" xml:space="preserve">
+    <value>аллея</value>
+  </data>
+  <data name="VistaDecrease" xml:space="preserve">
+    <value>аллея</value>
+  </data>
+  <data name="Walk" xml:space="preserve">
+    <value>обход</value>
+  </data>
+  <data name="WithOutStreet" xml:space="preserve">
+    <value>без улицы</value>
+  </data>
+  <data name="Drumul" xml:space="preserve">
+    <value>путь</value>
+  </data>
+  <data name="DrumulDecrease" xml:space="preserve">
+    <value>путь</value>
+  </data>
+</root>

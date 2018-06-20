@@ -1,0 +1,245 @@
+﻿/// <reference path="../../utils/__utils.scss" />
+
+.restaurant-board {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background-color: $bgColor-board;
+	font-size: 0;
+	padding-top: $paddingTop-board + 'px';
+
+	&_count_3,
+	&_count_5,
+	&_count_6,
+	&_count_7,
+	&_count_14 {
+
+		.restaurant-board {
+			&__row {
+				@include property-in-vh((padding-bottom, padding-top), $paddingTop-boardRow-count5, $heightContext-board);
+			}
+
+			&__order-number {
+				@include property-in-vh(margin-right, $marginRight-orderNumber-count14, $heightContext-board);
+			}
+		}
+	}
+
+	&_count_1 {
+		padding: 0;
+
+		.restaurant-board {
+
+			&__row {
+				height: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			&__order-number,
+			&__client-name {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			&__order-number {
+				@include font-size($fontSize-orderNumber-count1);
+				@include font-size-vh($fontSize-orderNumber-count1);
+				@include property-in-vh(height, $height-orderNumber-count1, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-count1-2x, $widthContext-board);
+				@include property-in-vh(margin-top, $marginTop-orderNumber-count1, $heightContext-board);
+			}
+
+			&__client-name {
+				@include font-size($fontSize-clientName-count1);
+				@include font-size-vh($fontSize-clientName-count1);
+				@include property-in-vh(line-height, $lineHeight-clientName-count1, $heightContext-board);
+				@include property-in-vh(padding-bottom, $paddingBottom-clientName-count1, $heightContext-board);
+				max-width: 1840px;
+				width: 100%;
+			}
+		}
+	}
+
+	&_count_2 {
+		padding: 0;
+
+		.restaurant-board {
+
+			&__row {
+				height: 50%;
+				padding-left: 0;
+				padding-right: 0;
+				@include property-in-vh(padding-top, $paddingTop-boardRow-count2, $heightContext-board);
+				@include property-in-vh(padding-bottom, $paddingBottom-boardRow-count2, $heightContext-board);
+
+				&:nth-of-type(3) {
+					.restaurant-board__order-number {
+						@include property-in-vh(margin-top, $marginTop-orderNumber-count2-row3, $heightContext-board);
+					}
+
+					.restaurant-board__client-name {
+						@include property-in-vh(padding-bottom, $paddingBottom-clientName-count2-row3, $heightContext-board);
+					}
+				}
+
+				&:nth-of-type(4) {
+					.restaurant-board__order-number {
+						@include property-in-vh(margin-top, $marginTop-orderNumber-count2-row4, $heightContext-board);
+					}
+
+					.restaurant-board__client-name {
+						@include property-in-vh(padding-bottom, $paddingBottom-clientName-count2-row4, $heightContext-board);
+					}
+				}
+			}
+
+			&__order-number,
+			&__client-name {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+
+			&__order-number {
+				@include font-size($fontSize-orderNumber-count2);
+				@include font-size-vh($fontSize-orderNumber-count2);
+				@include property-in-vh(height, $height-orderNumber-count2, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-count2-2x, $widthContext-board);
+			}
+
+			&__client-name {
+				@include font-size($fontSize-clientName-count2);
+				@include font-size-vh($fontSize-clientName-count2);
+				@include property-in-vh(line-height, $lineHeight-clientName-count1, $heightContext-board);
+				max-width: 1840px;
+				width: 100%;
+			}
+		}
+	}
+
+	&_count_3 {
+		@include property-in-vh(padding-top, $paddingTop-board-count3, $heightContext-board);
+
+		.restaurant-board {
+			&__order-number {
+				@include property-in-vh(height, $height-orderNumber, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-2x, $widthContext-board);
+			}
+
+			&__client-name {
+				@include property-in-vh(line-height, $lineHeight-clientName, $heightContext-board);
+			}
+		}
+	}
+
+	&_count_6 {
+		.restaurant-board {
+			&__order-number {
+				@include font-size($fontSize-orderNumber-count6);
+				@include font-size-vh($fontSize-orderNumber-count6);
+				@include property-in-vh(height, $height-orderNumber-count6, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-count6-2x, $widthContext-board);
+			}
+
+			&__client-name {
+				@include font-size($fontSize-clientName-count6);
+				@include font-size-vh($fontSize-clientName-count6);
+				@include property-in-vh(line-height, $lineHeight-clientName-count6, $heightContext-board);
+			}
+		}
+	}
+
+	&_count_7 {
+		.restaurant-board {
+			&__order-number {
+				@include font-size($fontSize-orderNumber-count7);
+				@include font-size-vh($fontSize-orderNumber-count7);
+				@include property-in-vh(height, $height-orderNumber-count7, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-count7-2x, $widthContext-board);
+			}
+
+			&__client-name {
+				@include font-size($fontSize-clientName-count7);
+				@include font-size-vh($fontSize-clientName-count7);
+				@include property-in-vh(line-height, $lineHeight-clientName-count7, $heightContext-board);
+			}
+		}
+	}
+
+	&_count_14 {
+		@include property-in-vh(padding-right, $paddingRight-board, $heightContext-board);
+
+		&.restaurant-board {
+			@include flexbox;
+			@include flex-flow(column wrap);
+		}
+
+		.restaurant-board {
+			&__order-number {
+				@include font-size($fontSize-orderNumber-count14);
+				@include font-size-vh($fontSize-orderNumber-count14);
+				@include property-in-vh(height, $height-orderNumber-count14, $heightContext-board);
+				@include property-in-vw(width, $width-orderNumber-count14-2x, $widthContext-board);
+			}
+
+			&__client-name {
+				bottom: 0;
+				vertical-align: top;
+				@include font-size($fontSize-clientName-count14);
+				@include font-size-vh($fontSize-clientName-count14);
+				@include property-in-vw(max-width, $maxWidth-clientName-half, $widthContext-board);
+				@include property-in-vh(line-height, $lineHeight-clientName-count14, $heightContext-board);
+			}
+
+			&__row {
+				@include flex(1 1 auto);
+				width: 50%;
+				-webkit-font-smoothing: subpixel-antialiased;
+				@include property-in-vh(padding-left, $paddingRight-board, $heightContext-board);
+				max-height: $height-boardRow + px;
+			}
+		}
+	}
+	// ширина ячеек для трехзначных номеров
+	&_3x.restaurant-board_count_1 {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-count1-3x, $widthContext-board);
+		}
+	}
+
+	&_3x.restaurant-board_count_2 {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-count2-3x, $widthContext-board);
+		}
+	}
+
+	&_3x {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-3x, $widthContext-board);
+		}
+	}
+
+	&_3x.restaurant-board_count_6 {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-count6-3x, $widthContext-board);
+		}
+	}
+
+	&_3x.restaurant-board_count_7 {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-count7-3x, $widthContext-board);
+		}
+	}
+
+	&_3x.restaurant-board_count_14 {
+		.restaurant-board__order-number {
+			@include property-in-vw(width, $width-orderNumber-count14-3x, $widthContext-board);
+		}
+	}
+}

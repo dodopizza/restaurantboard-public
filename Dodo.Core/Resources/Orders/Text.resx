@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Canceled" xml:space="preserve">
+    <value>Отменен</value>
+  </data>
+  <data name="ClientMessage_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Комментарий не должен превышать 500 символов</value>
+  </data>
+  <data name="ClientMessage_AddressInvalid" xml:space="preserve">
+    <value>Пожалуйста, заполните все поля адреса.</value>
+  </data>
+  <data name="ClientMessage_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Указанный адрес не входит в зону доставки.</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTime" xml:space="preserve">
+    <value>К сожалению, в указанное вами время пиццерия работать не будет. Время работы пиццерии с {0} по {1}</value>
+  </data>
+  <data name="ClientMessage_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Мы не можем выполнить заказ в указанное вами время. Выберите другое время</value>
+  </data>
+  <data name="ClientMessage_DeliveryStop" xml:space="preserve">
+    <value>Работа доставки приостановлена. Приносим наши извинения</value>
+  </data>
+  <data name="ClientMessage_EmptyBasket" xml:space="preserve">
+    <value>Ваша корзина пуста</value>
+  </data>
+  <data name="ClientMessage_InvalidFreeSauces" xml:space="preserve">
+    <value>Пожалуйста, выберите бесплатные соусы</value>
+  </data>
+  <data name="ClientMessage_NoteEmpty" xml:space="preserve">
+    <value>Пожалуйста, укажите с какой суммы нам подготовить сдачу. Она должна быть не меньше суммы заказа.</value>
+  </data>
+  <data name="ClientMessage_NoteInvalid" xml:space="preserve">
+    <value>Cумма, с которой подготовить сдачу, должна быть не меньше суммы заказа.</value>
+  </data>
+  <data name="ClientMessage_OrderCostInvalid" xml:space="preserve">
+    <value>Минимальная сумма заказа {0}</value>
+  </data>
+  <data name="ClientMessage_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Выберите пиццерию, из которой хотите забрать заказ</value>
+  </data>
+  <data name="ClientMessage_PizzeriaIsClosed" xml:space="preserve">
+    <value>К сожалению, не удалось оплатить заказ. Пиццерия закрыта.</value>
+  </data>
+  <data name="ClientMessage_ProductInStopList" xml:space="preserve">
+    <value>К сожалению, {0} нет в наличии. Пожалуйста, удалите этот продукт из корзины.</value>
+  </data>
+  <data name="DefectiveProduct" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="Delivered" xml:space="preserve">
+    <value>Доставлен</value>
+  </data>
+  <data name="DuplicateOrderLine" xml:space="preserve">
+    <value>&lt;b&gt;(дубль)&lt;/b&gt;</value>
+  </data>
+  <data name="InDelivery" xml:space="preserve">
+    <value>На доставке</value>
+  </data>
+  <data name="InOven" xml:space="preserve">
+    <value>Печь</value>
+  </data>
+  <data name="MessageError_FailedDefectOrderLineMoreTwoDaysAgo" xml:space="preserve">
+    <value>Нельзя забраковать продукт, заказу которого больше 2-х дней</value>
+  </data>
+  <data name="MessageError_PreparationTimeLimitExpired" xml:space="preserve">
+    <value>Нельзя вернуть продукт на кухню. Истек срок приготовления.</value>
+  </data>
+  <data name="Message_AddressDescriptionTooLong" xml:space="preserve">
+    <value>Слишком длинное описание адреса</value>
+  </data>
+  <data name="Message_AddressEmpty" xml:space="preserve">
+    <value>Не введен адрес</value>
+  </data>
+  <data name="Message_AddressInvalid" xml:space="preserve">
+    <value>Некорректный адрес</value>
+  </data>
+  <data name="Message_AddressIsNotIncludedInDeliveryArea" xml:space="preserve">
+    <value>Адрес не входит в зону доставки</value>
+  </data>
+  <data name="Message_AlcoholDeniedSpendDodoCurrency" xml:space="preserve">
+    <value>Бонусами нельзя оплатить заказ с алкоголем</value>
+  </data>
+    <data name="Message_AddedIngredientIsNotAllowed" xml:space="preserve">
+    <value>Существуют добавленные ингредиенты, которые не разрешены</value>
+  </data>
+    <data name="Error_AddedIngredientsCount" xml:space="preserve">
+    <value>Превышено максимальное количество добавленных ингредиентов</value>
+  </data>
+  <data name="Message_ClientEmpty" xml:space="preserve">
+    <value>Не введен данные о клиенте</value>
+  </data>
+  <data name="Message_ClientFromBlackList" xml:space="preserve">
+    <value>Клиент в черном списке</value>
+  </data>
+  <data name="Message_ClientNameEmpty" xml:space="preserve">
+    <value>Не введено имя</value>
+  </data>
+  <data name="Message_ComboIsNotOnMenu" xml:space="preserve">
+    <value>Комбо {0} не входит в меню</value>
+  </data>
+  <data name="Message_DelayedOrderTime" xml:space="preserve">
+    <value>К сожалению, в указанное вами время пиццерия работать не будет. Время работы пиццерии с {0} по {1}</value>
+  </data>
+  <data name="Message_DelayedOrderTimeInvalid" xml:space="preserve">
+    <value>Некорректное время отложенного заказа</value>
+  </data>
+  <data name="Message_DelayedOrderWithoutTime" xml:space="preserve">
+    <value>В отложенном заказе отсутствует время.</value>
+  </data>
+  <data name="Message_DeliveryStop" xml:space="preserve">
+    <value>Работа доставки приостановлена</value>
+  </data>
+  <data name="Message_EmptyBasket" xml:space="preserve">
+    <value>В корзине пусто</value>
+  </data>
+  <data name="Message_EmptyComposition" xml:space="preserve">
+    <value>Не заполнена корзина</value>
+  </data>
+  <data name="Message_EmptyHouse" xml:space="preserve">
+    <value>Не введен номер дома</value>
+  </data>
+  <data name="Message_EmptyStreetName" xml:space="preserve">
+    <value>Не введена улица</value>
+  </data>
+  <data name="Message_IncorrectDelayedTime" xml:space="preserve">
+    <value>Некорректное время отложенного заказа.</value>
+  </data>
+  <data name="Message_IncorrectPersonalOrderSum" xml:space="preserve">
+    <value>Сумма обеда превышает максимально допустимое значение.</value>
+  </data>
+  <data name="Message_InvalidFreeSauces" xml:space="preserve">
+    <value>Не выбраны бесплатные соусы</value>
+  </data>
+  <data name="Message_LackOfCouriersWithTimeToOpen" xml:space="preserve">
+    <value>К сожалению ни одна пиццерия не может принять ваш заказ. Продажи остановлены {0} с {1} до {2} по причине - нехватка курьеров. Есть возможность оформить заказ на самовывоз.</value>
+  </data>
+  <data name="Message_LackOfCouriersWithUnknownTimeToOpen" xml:space="preserve">
+    <value>К сожалению ни одна пиццерия не может принять ваш заказ. Продажи остановлены {0} с {1} по причине - нехватка курьеров. Есть возможность оформить заказ на самовывоз.</value>
+  </data>
+  <data name="Message_MaxCashPaymentLimitExceeded" xml:space="preserve">
+    <value>Извините, вы превысили максимальную сумму для оплаты наличными на сайте.</value>
+  </data>
+  <data name="Message_NotChoosedProducts" xml:space="preserve">
+    <value>Не выбраны продукты для обеда.</value>
+  </data>
+  <data name="Message_NoteEmpty" xml:space="preserve">
+    <value>Введите сумму у клиента</value>
+  </data>
+  <data name="Message_NoteInvalid" xml:space="preserve">
+    <value>Некорректная сумма у клиента</value>
+  </data>
+  <data name="Message_NowComboIsNotForSale" xml:space="preserve">
+    <value>В данный момент продукт {0} не продается</value>
+  </data>
+  <data name="Message_NowProductIsNotForSale" xml:space="preserve">
+    <value>В данный момент продукт {0} не продается</value>
+  </data>
+  <data name="Message_OpenShiftBeforeOrder" xml:space="preserve">
+    <value>Чтобы оформить обед сотруднику, откройте смену пиццерии</value>
+  </data>
+  <data name="Message_OrderCostInvalid" xml:space="preserve">
+    <value>Сумма заказа (без учёта сувениров) ниже минимальной</value>
+  </data>
+  <data name="Message_OrderWithSimpleProductsOnly" xml:space="preserve">
+    <value>Нельзя оформить отложенный обед, если в нём нет продуктов с кухни</value>
+  </data>
+  <data name="Message_OtherReasonWithTimeToOpen" xml:space="preserve">
+    <value>К сожалению ни одна пиццерия не может принять ваш заказ. Продажи остановлены {0} с {1} до {2} по причине - {3}</value>
+  </data>
+  <data name="Message_OtherReasonWithUnknownTimeToOpen" xml:space="preserve">
+    <value>К сожалению ни одна пиццерия не может принять ваш заказ. Продажи остановлены {0} с {1} по причине - {2}</value>
+  </data>
+  <data name="Message_PickupPizzeriaEmpty" xml:space="preserve">
+    <value>Выберите пиццерию, из которой забирать заказ</value>
+  </data>
+  <data name="Message_PizzeriaIsClosed" xml:space="preserve">
+    <value>Пиццерия не работает</value>
+  </data>
+  <data name="Message_PizzeriaShiftIsClosed" xml:space="preserve">
+    <value>Смена пиццерии не открыта. Пожалуйста, обратитесь к менеджеру смены</value>
+  </data>
+  <data name="Message_PizzeriaWorkTypeDisabled" xml:space="preserve">
+    <value>Извините, пиццерия не готовит заказы на {0}</value>
+  </data>
+  <data name="Message_ProductInBasketHasDifferentPriceWithMenu" xml:space="preserve">
+    <value>Продукт {0} в корзине имеет отличную цену от меню. Цена в корзине {1}, цена в меню {2}</value>
+  </data>
+  <data name="Message_ProductInShopWindowItemNotSaleInCurrentTime" xml:space="preserve">
+    <value>Продукт Id {0} не продается в ячейке Id {1} в данный момент</value>
+  </data>
+  <data name="Message_ProductInStopList" xml:space="preserve">
+    <value>Продукт в стоп листе: {0}</value>
+  </data>
+  <data name="Message_ProductIsNotOnMenu" xml:space="preserve">
+    <value>Продукт {0} не входит в меню</value>
+  </data>
+  <data name="Message_RemakeDefectedOrderFailed" xml:space="preserve">
+    <value>Не удалось забраковать заказ</value>
+  </data>
+  <data name="Message_ShopWindowItemIsNotDefined" xml:space="preserve">
+    <value>Не определены ячейки для продуктов Id: {0}</value>
+  </data>
+  <data name="Message_ShopWindowItemNotFound" xml:space="preserve">
+    <value>Не найдена ячейка витрины Id: {0}</value>
+  </data>
+  <data name="Message_TelephoneEmpty" xml:space="preserve">
+    <value>Не введен номер телефона</value>
+  </data>
+  <data name="Message__ClientNameTooLong" xml:space="preserve">
+    <value>Слишком длинное имя</value>
+  </data>
+  <data name="OnAssemblyTable" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OnColdAssemblyTable" xml:space="preserve">
+    <value>Начинка (Холодная линия)</value>
+  </data>
+  <data name="OnDoughTable" xml:space="preserve">
+    <value>Тесто</value>
+  </data>
+  <data name="OnHotAssemblyTable" xml:space="preserve">
+    <value>Начинка (Горячая линия)</value>
+  </data>
+  <data name="OnPackingTable" xml:space="preserve">
+    <value>Упаковка</value>
+  </data>
+  <data name="OrderState_Accepted" xml:space="preserve">
+    <value>Принят</value>
+  </data>
+  <data name="OrderState_Completed" xml:space="preserve">
+    <value>Выполнен</value>
+  </data>
+  <data name="OrderState_Editing" xml:space="preserve">
+    <value>Редактируется</value>
+  </data>
+  <data name="OrderState_Failure" xml:space="preserve">
+    <value>Отказ</value>
+  </data>
+  <data name="OrderState_Kitchen" xml:space="preserve">
+    <value>В работе</value>
+  </data>
+  <data name="OrderState_OnDelivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="OrderState_OnTheShelf" xml:space="preserve">
+    <value>Упакован</value>
+  </data>
+  <data name="OrderState_Redirect" xml:space="preserve">
+    <value>Перенаправлен</value>
+  </data>
+  <data name="OrderState_Storno" xml:space="preserve">
+    <value>Сторно</value>
+  </data>
+  <data name="OrderState_TimeOut" xml:space="preserve">
+    <value>Просрочен</value>
+  </data>
+  <data name="OrderState_Unknow" xml:space="preserve">
+    <value>Не определен</value>
+  </data>
+  <data name="OrdersType_Delivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="OrdersType_Pickup" xml:space="preserve">
+    <value>Самовывоз</value>
+  </data>
+  <data name="OrdersType_Restaurant" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="OrdersType_Staff" xml:space="preserve">
+    <value>Питание персонала</value>
+  </data>
+  <data name="OrdersType_Tracker" xml:space="preserve">
+    <value>Кусочки</value>
+  </data>
+  <data name="OrderType_DeliveryShortAlias" xml:space="preserve">
+    <value>Дост</value>
+  </data>
+  <data name="OrderType_PersonaFoodShortAlias" xml:space="preserve">
+    <value>Перс</value>
+  </data>
+  <data name="OrderType_PersonalFood" xml:space="preserve">
+    <value>Питание персонала</value>
+  </data>
+  <data name="OrderType_PickupShortAlias" xml:space="preserve">
+    <value>СВ</value>
+  </data>
+  <data name="OrderType_Stationary" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="OrderType_StationaryShortAlias" xml:space="preserve">
+    <value>Зал</value>
+  </data>
+  <data name="ProductionStage_WaitingMake" xml:space="preserve">
+    <value>Ожидает приготовления</value>
+  </data>
+  <data name="Source_Aggregator" xml:space="preserve">
+    <value>Агрегатор</value>
+  </data>
+  <data name="Source_DefectOrder" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="Source_Mobile" xml:space="preserve">
+    <value>Мобильное приложение</value>
+  </data>
+  <data name="Source_Pizzeria" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="Source_Restaurant" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="Source_Site" xml:space="preserve">
+    <value>Сайт</value>
+  </data>
+  <data name="Source_Telephone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="ValidateMessage_Delivery" xml:space="preserve">
+    <value>доставку</value>
+  </data>
+  <data name="ValidateMessage_PersonalFood" xml:space="preserve">
+    <value>питание персонала</value>
+  </data>
+  <data name="ValidateMessage_Stationary" xml:space="preserve">
+    <value>стационар</value>
+  </data>
+  <data name="WaitingDelivery" xml:space="preserve">
+    <value>Ожидает отправки</value>
+  </data>
+  <data name="WaitingMake" xml:space="preserve">
+    <value>Ожидание</value>
+  </data>
+  <data name="Message_BasketPriceDifferent" xml:space="preserve">
+    <value>Стоимость заказа изменилась.</value>
+  </data>
+  <data name="Message_ProductsPriceHasChanged" xml:space="preserve">
+    <value>Изменилась цена продуктов</value>
+  </data>
+  <data name="Error_ToManyDodollarsSpent" xml:space="preserve">
+    <value>Вы не можете потратить больше додо-рублей чем имеется</value>
+  </data>
+  <data name="Error_DodollarsAmountIsNegative" xml:space="preserve">
+    <value>Указано некорректное количество додо-рублей</value>
+  </data>
+  <data name="Error_CustimizationError" xml:space="preserve">
+    <value>Выбранные ингредиенты нельзя удалить</value>
+  </data>
+</root>

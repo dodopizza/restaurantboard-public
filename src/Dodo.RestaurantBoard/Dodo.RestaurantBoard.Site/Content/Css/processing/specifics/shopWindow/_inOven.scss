@@ -1,0 +1,100 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.price-block-InOven {
+    height: 200px;
+    text-align: right;
+}
+
+.dodomini_name,
+.timeLabelMinut {
+    font-family: 'VAGRoundedLTCYR-Light', sans-serif;
+}
+
+.time-InOven {
+    width: 230px;
+}
+
+.dodomini_name {
+    text-align: left;
+    @include font-size(42);
+
+    @include media-queries(lg) {
+        @include font-size(60);
+    }
+}
+
+.price-InOven,
+.price-currency-block-InOven {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.price-InOven {
+    @include font-size(192);
+    line-height: 1;
+}
+
+.price-currency-block-InOven {
+    right: 5px;
+    width: 110px;
+    line-height: 10.2em;
+
+    @include media-queries(lg) {
+        position: relative;
+        bottom: 15px;
+    }
+
+    @include custom-queries(1300px) {
+        bottom: 0;
+    }
+}
+
+.price-currency-InOven {
+    width: 110px;
+    @include font-size(190);
+    font-family: 'VAGRoundedLTCYRRuble-Light', 'VAGRoundedLTCYR-Light', sans-serif;
+    vertical-align: top;
+}
+
+.price-for-piece-InOven {
+    position: relative;
+    bottom: 25px;
+    left: 10px;
+    @include font-size(24);
+    display: inline-block;
+}
+
+.cook-time-label-InOven {
+    @include font-size(90);
+
+    @include media-queries(lg) {
+        margin-right: 19%;
+    }
+
+    @include custom-queries(1300px) {
+        margin-right: 0;
+    }
+}
+
+.timeLabelMinut {
+    line-height: 1;
+    color: $color-ready;
+    @include font-size(90);
+    display: inline-block;
+}
+
+.time-one-minute-InOven {
+    text-transform: uppercase;
+    line-height: 1.7;
+    display: inline-block;
+}
+
+.price-InOven-container {
+    width: 326px;
+    display: inline-block;
+    text-align: left;
+    color: #000;
+    margin-right: 20px;
+    vertical-align: top;
+    position: relative;
+}

@@ -1,0 +1,13 @@
+Dodo.Tools
+Dodo.Tools.Caching
+Dodo.Tools.FileStorages
+Dodo.Tools.XmlConfiguration
+Dodo.Tools.DB
+Dodo.Tools.Drawing
+Dodo.Tools.Excel
+Dodo.Tools.Logging
+Dodo.Tools.Web
+Dodo.ShopWindow.Integration
+Dodo.Tracker.Integration
+Dodo.TrackerClient
+Dodo.ShopWindowClient

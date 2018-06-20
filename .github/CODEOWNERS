@@ -1,0 +1,4 @@
+# Code owners are automatically requested for review when someone opens a pull request that modifies code that they own.
+# readme https://help.github.com/articles/about-codeowners/
+
+/src/Dodo.ClientSite/ @dmitry-novoselov

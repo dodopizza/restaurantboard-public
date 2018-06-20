@@ -1,0 +1,60 @@
+﻿.item_cancel {
+	background-color: #333;
+	color: #aaa;
+
+	.black {
+		color: #aaa !important;
+	}
+
+	&.select {
+		background-color: rgba(255, 245, 0, 0.5) !important;
+
+		.black {
+			color: #777 !important;
+		}
+
+		.namePizza span, .numOrder span, .black span {
+			color: #aaa !important;
+		}
+	}
+
+	.namePizza span,
+	.numOrder span {
+		position: relative;
+		position: relative;
+		top: 0.7em;
+	}
+
+	.namePizza span em,
+	.numOrder span em {
+		font-style: normal;
+		top: -0.7em;
+		position: relative;
+	}
+
+	.time-track_composite,
+	.time-track,
+	.sauce {
+		display: none;
+	}
+
+	.cancel-label {
+		display: block;
+	}
+}
+
+.cancel-label {
+	display: none;
+	position: absolute;
+	background: transparent;
+	color: #d9534f;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 30px 15px;
+	font-size: 1.4em;
+	border: 1px solid red;
+	bottom: 44px;
+	left: 7%;
+	-webkit-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}

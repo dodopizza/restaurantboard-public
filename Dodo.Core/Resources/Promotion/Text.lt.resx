@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>Aktyvi</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>Aktyvi (išplaukiantis langas)</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>Pasyvi</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>Pasyvi (bloke krepšelio puslapyje)</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresas</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Visi</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>Visos dienos</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Suma</value>
+  </data>
+  <data name="AmountWithOutNDS" xml:space="preserve">
+    <value>Suma be PVM</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>Automatinis</value>
+  </data>
+  <data name="AverageCheck" xml:space="preserve">
+    <value>Vidutinis čekis</value>
+  </data>
+  <data name="AverageWorkLoad" xml:space="preserve">
+    <value>Vidutinis krūvis</value>
+  </data>
+  <data name="BadBonus" xml:space="preserve">
+    <value>Ilgai</value>
+  </data>
+  <data name="BasicData" xml:space="preserve">
+    <value>Pradiniai duomenys</value>
+  </data>
+  <data name="BeginDate" xml:space="preserve">
+    <value>Pradžia</value>
+  </data>
+  <data name="BonusAction" xml:space="preserve">
+    <value>Akcija</value>
+  </data>
+  <data name="BonusActionDescription" xml:space="preserve">
+    <value>Akcijos aprašymas</value>
+  </data>
+  <data name="BonusActionEndPoint" xml:space="preserve">
+    <value>Nukreipimas</value>
+  </data>
+  <data name="BonusActionName" xml:space="preserve">
+    <value>Akcijos pavadinimas</value>
+  </data>
+  <data name="CallCenterDailyReportXmlHeader" xml:space="preserve">
+    <value>Ataskaita: SC apskaičiavimas kas parą</value>
+  </data>
+  <data name="CallCenterReportXmlHeader" xml:space="preserve">
+    <value>Ataskaita: SC apskaičiavimas</value>
+  </data>
+  <data name="CashBoxShifts" xml:space="preserve">
+    <value>Kasos pamainos:</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Miestas</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Kliento vardas</value>
+  </data>
+  <data name="ColdAssemblyTable" xml:space="preserve">
+    <value>Pradiniai duomenys</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Komentaras</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Naudojamos medžiagos</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Kaina</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Kiekis</value>
+  </data>
+  <data name="CountWorkedHours" xml:space="preserve">
+    <value>Dirbtų valandų skaičius</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Kurjeris</value>
+  </data>
+  <data name="CourierNumber" xml:space="preserve">
+    <value>Kurjerio numeris</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="DateBeginSale" xml:space="preserve">
+    <value>Atnaujinimo data</value>
+  </data>
+  <data name="DateFilter_Day" xml:space="preserve">
+    <value>Konkrečia dieną</value>
+  </data>
+  <data name="DateFilter_DayOfWeek" xml:space="preserve">
+    <value>Savaitės dienomis</value>
+  </data>
+  <data name="DateFilter_Period" xml:space="preserve">
+    <value>Periodas</value>
+  </data>
+  <data name="DatePeriod" xml:space="preserve">
+    <value>Datų periodas:</value>
+  </data>
+  <data name="DateStopSale" xml:space="preserve">
+    <value>Sustabdymo data</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>Data / laikas</value>
+  </data>
+  <data name="DefectiveStage" xml:space="preserve">
+    <value>Stotis</value>
+  </data>
+  <data name="DefectProduct" xml:space="preserve">
+    <value>Brokas</value>
+  </data>
+  <data name="DelayReason" xml:space="preserve">
+    <value>Vėlavimo priežastis</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Pristatymas</value>
+  </data>
+  <data name="DeliveryAddress" xml:space="preserve">
+    <value>Pristatymo adresas</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>Pristatymas ir restoranas</value>
+  </data>
+  <data name="DeliverySectorName" xml:space="preserve">
+    <value>Pristatymo sektorius</value>
+  </data>
+  <data name="DeliveryZone" xml:space="preserve">
+    <value>Pristatymo zona</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Padalinys</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Padalinys</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Aprašymas</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Nuolaida</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>Vykdomas siuntimas</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>Laukiama</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>Baigta</value>
+  </data>
+  <data name="Dough25" xml:space="preserve">
+    <value>Stora 25</value>
+  </data>
+  <data name="Dough30" xml:space="preserve">
+    <value>Stora 30</value>
+  </data>
+  <data name="Dough30Thin" xml:space="preserve">
+    <value>Plona 30</value>
+  </data>
+  <data name="Dough35" xml:space="preserve">
+    <value>Stora 35</value>
+  </data>
+  <data name="Dough35Thin" xml:space="preserve">
+    <value>Plona 35</value>
+  </data>
+  <data name="DoughTable" xml:space="preserve">
+    <value>Tešla</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Trukmė</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Darbuotojas</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>mmm-mm-dd</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>hh:mm</value>
+  </data>
+  <data name="EmployeeType" xml:space="preserve">
+    <value>Darbuotojo tipas</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Pabaiga</value>
+  </data>
+  <data name="EndPointType" xml:space="preserve">
+    <value>Galutinis taškas</value>
+  </data>
+  <data name="EndStopSale" xml:space="preserve">
+    <value>Atnaujinimo data</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>Kasdienė</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>Kasmėnesinė</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>Užsakymo suma ({0}) mažesnė negu išleista DODO eurų ({1}).</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Išskyrus</value>
+  </data>
+  <data name="ExcludeDismissedEmployees" xml:space="preserve">
+    <value>išskyrus atleistus darbuotojus</value>
+  </data>
+  <data name="ExpiredOrdersCount" xml:space="preserve">
+    <value>Pavėluota</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByOrders" xml:space="preserve">
+    <value>Užsakymai</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByProducts" xml:space="preserve">
+    <value>Produktai</value>
+  </data>
+  <data name="Filter_ProductsByCategories" xml:space="preserve">
+    <value>Pagal produkto kategoriją</value>
+  </data>
+  <data name="Filter_ProductsByTypes" xml:space="preserve">
+    <value>Pagal produkto tipą</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Gatava produkcija</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Vardas</value>
+  </data>
+  <data name="FirstOrderDate" xml:space="preserve">
+    <value>Pirmo užsakymo data</value>
+  </data>
+  <data name="FirstOrderTime" xml:space="preserve">
+    <value>Pirmo užsakymo laikas</value>
+  </data>
+  <data name="Fridays" xml:space="preserve">
+    <value>Penktadienis</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Nuo</value>
+  </data>
+  <data name="FunctionFilter_Avg" xml:space="preserve">
+    <value>vid.</value>
+  </data>
+  <data name="FunctionFilter_Max" xml:space="preserve">
+    <value>maks.</value>
+  </data>
+  <data name="FunctionFilter_Min" xml:space="preserve">
+    <value>min.</value>
+  </data>
+  <data name="GoodBonus" xml:space="preserve">
+    <value>Standartas</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Gramas</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>šventės</value>
+  </data>
+  <data name="HotAssemblyTable" xml:space="preserve">
+    <value>Įdaras, karštas</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>Namai</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Ingredientas</value>
+  </data>
+  <data name="InQueue" xml:space="preserve">
+    <value>Eilėje</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventorius</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kilogramas</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>Kg</value>
+  </data>
+  <data name="LabourCostShort" xml:space="preserve">
+    <value>LC</value>
+  </data>
+  <data name="LastOrderDate" xml:space="preserve">
+    <value>Paskutinio užsakymo data</value>
+  </data>
+  <data name="LastOrderTime" xml:space="preserve">
+    <value>Paskutinio užsakymo laikas</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Litras</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>Gyvenvietė</value>
+  </data>
+  <data name="LongPreparationProduct" xml:space="preserve">
+    <value>Ilgas gaminimas %</value>
+  </data>
+  <data name="MeasureUnit" xml:space="preserve">
+    <value>mat. vnt.</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>Negaliojantis promo kodas</value>
+  </data>
+  <data name="Message_InvalidTime" xml:space="preserve">
+    <value>Pateiktas neteisingas laiko formatas</value>
+  </data>
+  <data name="Message_UnitIdsRequired" xml:space="preserve">
+    <value>Nepasirinktas nė vienas padalinys</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>Metaproduktas</value>
+  </data>
+  <data name="MethodOfCalculation" xml:space="preserve">
+    <value>Atsiskaitymo būdas</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Mililitras</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>Ml</value>
+  </data>
+  <data name="Mondays" xml:space="preserve">
+    <value>Pirmadienis</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>sausio, vasario, kovo, balandžio, gegužės, birželio, liepos, rugpjūčio, rugsėjo, spalio, lapkričio, gruodžio</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Pavadinimas</value>
+  </data>
+  <data name="NDS" xml:space="preserve">
+    <value>PVM, %</value>
+  </data>
+  <data name="NormalBonus" xml:space="preserve">
+    <value>Neutralus intervalas</value>
+  </data>
+  <data name="NotDefined" xml:space="preserve">
+    <value>Neapibrėžta</value>
+  </data>
+  <data name="OnHallSquare" xml:space="preserve">
+    <value>M2 salės</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>Tik poilsio dienos</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>Tik šiokiadieniai</value>
+  </data>
+  <data name="OperationCount" xml:space="preserve">
+    <value>Operacijų skaičius</value>
+  </data>
+  <data name="OrderAmount" xml:space="preserve">
+    <value>Užsakymo suma</value>
+  </data>
+  <data name="OrderDateOfReceipt" xml:space="preserve">
+    <value>Užsakymo data</value>
+  </data>
+  <data name="OrderLinesCount" xml:space="preserve">
+    <value>Pozicijos</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>Užsakymo Nr.</value>
+  </data>
+  <data name="OrderOperator" xml:space="preserve">
+    <value>Užsakymo operatorius</value>
+  </data>
+  <data name="OrderPaymentType" xml:space="preserve">
+    <value>Mokėjimo būdas</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Užsakymai</value>
+  </data>
+  <data name="OrdersAmount" xml:space="preserve">
+    <value>Užsakymų suma</value>
+  </data>
+  <data name="OrdersCount" xml:space="preserve">
+    <value>Užsakymų skaičius</value>
+  </data>
+  <data name="OrdersCountOnCouriers" xml:space="preserve">
+    <value>Užsakymų skaičius kurjeriui per valandą</value>
+  </data>
+  <data name="OrdersDelivered" xml:space="preserve">
+    <value>Pristatyta užsakymų</value>
+  </data>
+  <data name="OrdersOnCouriersInHourCount" xml:space="preserve">
+    <value>Užsakymų kurjeriui per valandą</value>
+  </data>
+  <data name="OrderSourceMobile" xml:space="preserve">
+    <value>Mob. pried.</value>
+  </data>
+  <data name="OrderSources" xml:space="preserve">
+    <value>Užsakymų šaltinis</value>
+  </data>
+  <data name="OrderSourceSite" xml:space="preserve">
+    <value>Svetainė</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>Užsakymo statusas</value>
+  </data>
+  <data name="OrderType" xml:space="preserve">
+    <value>Užsakymo tipas</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organizacija</value>
+  </data>
+  <data name="OverdueBonus" xml:space="preserve">
+    <value>Bauda (Laukiama)</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Įpakavimas</value>
+  </data>
+  <data name="PackingTable" xml:space="preserve">
+    <value>Įpakavimas</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>Tėvavardis</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Laikotarpis</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>Personalo maitinimas</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Telefono numeris</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>Išsinešti</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>Pica</value>
+  </data>
+  <data name="PizzaAndCompositionCountOnEmployee" xml:space="preserve">
+    <value>Picų ir užkandžių skaičius žmogui per valandą</value>
+  </data>
+  <data name="PizzaCountOnEmployee" xml:space="preserve">
+    <value>Picų skaičius žmogui per valandą</value>
+  </data>
+  <data name="Pizzeria" xml:space="preserve">
+    <value>Picerija</value>
+  </data>
+  <data name="Portion" xml:space="preserve">
+    <value>Dalis</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>Gamyba</value>
+  </data>
+  <data name="PreparationTime" xml:space="preserve">
+    <value>Pagaminimo laikas</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>Dovana</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Kaina</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produktas</value>
+  </data>
+  <data name="ProductCategories" xml:space="preserve">
+    <value>Produktų kategorijos</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>Produkto ID</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>Gamyba</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Produkto pavadinimas</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produktai</value>
+  </data>
+  <data name="ProductSales" xml:space="preserve">
+    <value>Pardavimas</value>
+  </data>
+  <data name="ProductsGroup" xml:space="preserve">
+    <value>Produktų grupė</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>Produkto tipas</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>Promo kodas</value>
+  </data>
+  <data name="PromoCode" xml:space="preserve">
+    <value>Promo kodas</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Vienetas</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>Vnt.</value>
+  </data>
+  <data name="ReasonStopSale" xml:space="preserve">
+    <value>Sustabdymo priežastis</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Ataskaita:</value>
+  </data>
+  <data name="ReportName_ConsumptionProducts" xml:space="preserve">
+    <value>Produktų sąnaudos</value>
+  </data>
+  <data name="ReportName_DeliverySectorsReport" xml:space="preserve">
+    <value>Pristatymo zona</value>
+  </data>
+  <data name="ReportName_ExpressProductsStatistics" xml:space="preserve">
+    <value>Pavėluoti greitieji produktai</value>
+  </data>
+  <data name="ReportName_ProductivityCouriersStatistic" xml:space="preserve">
+    <value>Kurjerių krūvis</value>
+  </data>
+  <data name="ReportName_ProductsSalesForCalculationCard" xml:space="preserve">
+    <value>Produktų pardavimo ataskaita</value>
+  </data>
+  <data name="ReportName_ReportKitchenMotivation" xml:space="preserve">
+    <value>Virtuvės motyvacija</value>
+  </data>
+  <data name="ReportName_Revenue" xml:space="preserve">
+    <value>Įplaukos</value>
+  </data>
+  <data name="RestOfDeliverySectors" xml:space="preserve">
+    <value>Kita</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Įplaukos</value>
+  </data>
+  <data name="RevenueOnEmployee" xml:space="preserve">
+    <value>Įplauka žmogui per valandą</value>
+  </data>
+  <data name="RevisionType" xml:space="preserve">
+    <value>Revizijos tipas</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Revizorius:</value>
+  </data>
+  <data name="SalaryCategory" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="SalaryDayHours" xml:space="preserve">
+    <value>Dieninės valandos</value>
+  </data>
+  <data name="SalaryDayMoney" xml:space="preserve">
+    <value>DU, diena</value>
+  </data>
+  <data name="SalaryEmployeeName" xml:space="preserve">
+    <value>Vardas, pavardė</value>
+  </data>
+  <data name="SalaryHolidayFactor" xml:space="preserve">
+    <value>Ypatingos dienos koeficientas</value>
+  </data>
+  <data name="SalaryHolidayHours" xml:space="preserve">
+    <value>Šventinės valandos</value>
+  </data>
+  <data name="SalaryKitchenStaff" xml:space="preserve">
+    <value>Virtuvės darbo užmokestis</value>
+  </data>
+  <data name="SalaryNightFactor" xml:space="preserve">
+    <value>Naktinis koeficientas</value>
+  </data>
+  <data name="SalaryNightHours" xml:space="preserve">
+    <value>Naktinės valandos</value>
+  </data>
+  <data name="SalaryNightMoney" xml:space="preserve">
+    <value>DU, naktis</value>
+  </data>
+  <data name="SalaryPremiumMoney" xml:space="preserve">
+    <value>DU, premija</value>
+  </data>
+  <data name="SalaryRate" xml:space="preserve">
+    <value>Tarifas</value>
+  </data>
+  <data name="SalaryShiftEndDate" xml:space="preserve">
+    <value>Pamainos pabaigos data</value>
+  </data>
+  <data name="SalaryShiftEndTime" xml:space="preserve">
+    <value>Pamainos pabaigos laikas</value>
+  </data>
+  <data name="SalaryShiftStartDate" xml:space="preserve">
+    <value>Pamainos pradžios data</value>
+  </data>
+  <data name="SalaryShiftStartTime" xml:space="preserve">
+    <value>Pamainos pradžios laikas</value>
+  </data>
+  <data name="SalaryShiftTime" xml:space="preserve">
+    <value>Pamainos laikas</value>
+  </data>
+  <data name="SalaryTotalHours" xml:space="preserve">
+    <value>Iš viso valandų</value>
+  </data>
+  <data name="SalaryTotalMoney" xml:space="preserve">
+    <value>Iš viso</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>Pardavimo būdas</value>
+  </data>
+  <data name="SaleTime" xml:space="preserve">
+    <value>Pardavimo laikas (čekio spausdinimo)</value>
+  </data>
+  <data name="SaleType" xml:space="preserve">
+    <value>Pardavimo nukreipimas</value>
+  </data>
+  <data name="Saturdays" xml:space="preserve">
+    <value>Šeštadieniai</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>Pavardė</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>Sektorius</value>
+  </data>
+  <data name="SelectInventoryType" xml:space="preserve">
+    <value>- Pasirinkite žaliavos klasę</value>
+  </data>
+  <data name="SelectUnitsOfMeasure" xml:space="preserve">
+    <value>- Pasirinkite mato vienetą</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Pusfabrikatis</value>
+  </data>
+  <data name="ShiftNumber" xml:space="preserve">
+    <value>Pamainos numeris</value>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>Rytinė pamaina, Vakarinė pamaina, Naktinė pamaina</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>Pamainos tipas</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>Ne visų pasirinktų produktų kaina nurodyta</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>Restoranas</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Statistika</value>
+  </data>
+  <data name="StopSale" xml:space="preserve">
+    <value>Pardavimo sustabdymas</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Gatvė</value>
+  </data>
+  <data name="Sundays" xml:space="preserve">
+    <value>Sekmadieniai</value>
+  </data>
+  <data name="TabNo" xml:space="preserve">
+    <value>Tabelio numeris</value>
+  </data>
+  <data name="TechnicalDescription" xml:space="preserve">
+    <value>Tipinis aprašymas</value>
+  </data>
+  <data name="Thursdays" xml:space="preserve">
+    <value>Ketvirtadieniai</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Laikas</value>
+  </data>
+  <data name="TimeOutOrdersPercentage" xml:space="preserve">
+    <value>Vėlavimų %</value>
+  </data>
+  <data name="TimeOutPeriod" xml:space="preserve">
+    <value>Laukiama</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Pamainos pradžios data</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Pamainos pradžios laikas</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>Dieninės valandos</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Darbuotojo vardas, pavardė</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Pamainos pabaigos data</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Pamainos pabaigos laikas</value>
+  </data>
+  <data name="TimeReportHoursTotalColumnTitle" xml:space="preserve">
+    <value>Iš viso</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Naktinės valandos</value>
+  </data>
+  <data name="Title_ActivityDeliverySectors" xml:space="preserve">
+    <value>Pristatymo sektorių aktyvumas</value>
+  </data>
+  <data name="Title_BonusActionActivityReport" xml:space="preserve">
+    <value>Aktyvumas pagal akcijas</value>
+  </data>
+  <data name="Title_BonusActionsReport" xml:space="preserve">
+    <value>Automatinių akcijų taikymas</value>
+  </data>
+  <data name="Title_ClientsStatisicReport" xml:space="preserve">
+    <value>Klientų statistika</value>
+  </data>
+  <data name="Title_CourierStatisicReport" xml:space="preserve">
+    <value>Kurjerių statistika</value>
+  </data>
+  <data name="Title_CourierTasks" xml:space="preserve">
+    <value>Kurjerių išvykimai</value>
+  </data>
+  <data name="Title_DefectiveProductsReport" xml:space="preserve">
+    <value>Išbrokuoti produktai</value>
+  </data>
+  <data name="Title_DeliveryStatistic" xml:space="preserve">
+    <value>Pristatymo statistika</value>
+  </data>
+  <data name="Title_DoughReport" xml:space="preserve">
+    <value>Tešlos sąnaudos</value>
+  </data>
+  <data name="Title_LabourCost" xml:space="preserve">
+    <value>Labour Cost</value>
+  </data>
+  <data name="Title_OrdersReport" xml:space="preserve">
+    <value>Užsakymai</value>
+  </data>
+  <data name="Title_ProductionTimeReport" xml:space="preserve">
+    <value>Pagaminimo laikas</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoad" xml:space="preserve">
+    <value>Apkrovimo ataskaita</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadOrders" xml:space="preserve">
+    <value>Užsakymai</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadProducts" xml:space="preserve">
+    <value>Produktai</value>
+  </data>
+  <data name="Title_ReportPopularityProducts" xml:space="preserve">
+    <value>Produktų populiarumas</value>
+  </data>
+  <data name="Title_ReportProductivity" xml:space="preserve">
+    <value>Našumas</value>
+  </data>
+  <data name="Title_ReportPromoCodeUsed" xml:space="preserve">
+    <value>Promo kodų išlaidos</value>
+  </data>
+  <data name="Title_ReportSaleByCashBoxSessions" xml:space="preserve">
+    <value>Pardavimas pagal kasos pamainas</value>
+  </data>
+  <data name="Title_RevenuePercentage" xml:space="preserve">
+    <value>Įplaukos dalis %</value>
+  </data>
+  <data name="Title_SalaryReport" xml:space="preserve">
+    <value>Darbo užmokestis</value>
+  </data>
+  <data name="Title_SaleCount" xml:space="preserve">
+    <value>Parduota vnt.</value>
+  </data>
+  <data name="Title_StopSaleReport" xml:space="preserve">
+    <value>Pardavimo sustabdymas</value>
+  </data>
+  <data name="Title_TimeReport" xml:space="preserve">
+    <value>Faktinis laikas</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Iš viso</value>
+  </data>
+  <data name="TotalNDS" xml:space="preserve">
+    <value>PVM suma</value>
+  </data>
+  <data name="TotalOrdersPrice" xml:space="preserve">
+    <value>Akcijinių užsakymų suma</value>
+  </data>
+  <data name="TotalPayableForPeriod" xml:space="preserve">
+    <value>Iš viso išmokėti per laikotarpį</value>
+  </data>
+  <data name="Tuesdays" xml:space="preserve">
+    <value>Antradieniai</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipas</value>
+  </data>
+  <data name="UnitName" xml:space="preserve">
+    <value>Skyrius</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Skyriai:</value>
+  </data>
+  <data name="UserBeginSale" xml:space="preserve">
+    <value>Kas atnaujino</value>
+  </data>
+  <data name="UserStopSale" xml:space="preserve">
+    <value>Kas sustabdė</value>
+  </data>
+  <data name="UsingCount" xml:space="preserve">
+    <value>Panaudojimų skaičius</value>
+  </data>
+  <data name="WaitingTime" xml:space="preserve">
+    <value>Laukimas</value>
+  </data>
+  <data name="Wednesdays" xml:space="preserve">
+    <value>Trečiadieniai</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>poilsio dienos</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>Apkrovimas</value>
+  </data>
+</root>

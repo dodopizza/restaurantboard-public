@@ -1,0 +1,39 @@
+﻿.size16 {
+	.product_inner {
+		margin: 8px;
+	}
+
+	.orderNumber {
+		@include font-size(40);
+		padding: 0 5px;
+	}
+
+	.productName {
+		@include font-size(33);
+		margin-top: 0;
+	}
+
+	.productHeader {
+		@include font-size(35);
+	}
+
+	.clientName {
+		padding: 5px 0 0 0;
+	}
+
+	.productStatus {
+		@include font-size(49);
+	}
+
+	td {
+		box-sizing: border-box;
+	}
+
+	.b-products-row {
+		height: 25%;
+	}
+
+	.b-product {
+		width: 25%;
+	}
+}

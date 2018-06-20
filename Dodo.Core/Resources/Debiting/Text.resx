@@ -1,0 +1,3507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Принять</value>
+  </data>
+  <data name="AccountingPacking" xml:space="preserve">
+    <value>Тары для учета</value>
+  </data>
+  <data name="ActionLabel" xml:space="preserve">
+    <value>Действие</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Активные</value>
+  </data>
+  <data name="AddDebiting" xml:space="preserve">
+    <value>Добавить списание</value>
+  </data>
+  <data name="AddPeriod" xml:space="preserve">
+    <value>Добавить период</value>
+  </data>
+  <data name="AddPositionMessage" xml:space="preserve">
+    <value>Чтобы добавить позицию, введите название</value>
+  </data>
+  <data name="AddTransfer" xml:space="preserve">
+    <value>Добавить перемещение</value>
+  </data>
+  <data name="Adoption" xml:space="preserve">
+    <value>Принятие</value>
+  </data>
+  <data name="Aim" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AllLabel" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="AllSuppliersText" xml:space="preserve">
+    <value>Все поставщики</value>
+  </data>
+  <data name="AllUnitsText" xml:space="preserve">
+    <value>Все пиццерии</value>
+  </data>
+  <data name="AlphabetFirstLetter" xml:space="preserve">
+    <value>А</value>
+  </data>
+  <data name="AlphabetLastLetter" xml:space="preserve">
+    <value>Я</value>
+  </data>
+  <data name="ApplicantCardAddedLabel" xml:space="preserve">
+    <value>Дата поступления</value>
+  </data>
+  <data name="ApplicantCardAddressLabel" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="ApplicantCardAgainLabel" xml:space="preserve">
+    <value>повторно</value>
+  </data>
+  <data name="ApplicantCardAnswerLabel" xml:space="preserve">
+    <value>Ответить</value>
+  </data>
+  <data name="ApplicantCardCommentLabel" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="ApplicantCardCommentPlaceholder" xml:space="preserve">
+    <value>Комментарий обязателен</value>
+  </data>
+  <data name="ApplicantCardDuplicatesLabel" xml:space="preserve">
+    <value>Дубликаты</value>
+  </data>
+  <data name="ApplicantCardFioLabel" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="ApplicantCardHasChildrenLabel" xml:space="preserve">
+    <value>Дети</value>
+    <comment>Есть ли дети</comment>
+  </data>
+  <data name="ApplicantCardHeader" xml:space="preserve">
+    <value>Анкета кандидата на работу</value>
+  </data>
+  <data name="ApplicantCardHistoryLabel" xml:space="preserve">
+    <value>История</value>
+  </data>
+  <data name="ApplicantCardHobbyLabel" xml:space="preserve">
+    <value>Увлечения</value>
+  </data>
+  <data name="ApplicantCardInputCommentText" xml:space="preserve">
+    <value>Введите комментарий</value>
+  </data>
+  <data name="ApplicantCardLastHistoryLabel" xml:space="preserve">
+    <value>Последние {0} событий по анкете</value>
+  </data>
+  <data name="ApplicantCardLink" xml:space="preserve">
+    <value>Анкета</value>
+  </data>
+  <data name="ApplicantCardMedicalBookLabel" xml:space="preserve">
+    <value>Медкнижка</value>
+    <comment>Есть ли медкнижка</comment>
+  </data>
+  <data name="ApplicantCardOpenDuplicateLabel" xml:space="preserve">
+    <value>Смотреть</value>
+  </data>
+  <data name="ApplicantCardPersonalInfoLabel" xml:space="preserve">
+    <value>Личная информация</value>
+  </data>
+  <data name="ApplicantCardPhoneLabel" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="ApplicantCardShiftsLabel" xml:space="preserve">
+    <value>Смены</value>
+  </data>
+  <data name="ApplicantCardSmokingLabel" xml:space="preserve">
+    <value>Курение</value>
+  </data>
+  <data name="ApplicantCardSourceDescriptionLabel" xml:space="preserve">
+    <value>Источник (доп описание)</value>
+  </data>
+  <data name="ApplicantCardSourceLabel" xml:space="preserve">
+    <value>Источник</value>
+    <comment>Источник информации</comment>
+  </data>
+  <data name="ApplicantCardStatusLabel" xml:space="preserve">
+    <value>Вариант ответа</value>
+  </data>
+  <data name="ApplicantCardTimeLabel" xml:space="preserve">
+    <value>Во сколько</value>
+  </data>
+  <data name="ApplicantCardTypeLabel" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="ApplicantCardUnitLabel" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="ApplicantCardWhenLabel" xml:space="preserve">
+    <value>Когда</value>
+  </data>
+  <data name="ApplicantCardWorkExperienceLabel" xml:space="preserve">
+    <value>Опыт работы</value>
+  </data>
+  <data name="ApplicantCardWorkInfoLabel" xml:space="preserve">
+    <value>Рабочая информация</value>
+  </data>
+  <data name="ApplicantFormAddressLabel" xml:space="preserve">
+    <value>Адрес проживания</value>
+  </data>
+  <data name="ApplicantFormBirthdayLabel" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="ApplicantFormFirstNameLabel" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="ApplicantFormHasChildrenLabel" xml:space="preserve">
+    <value>Есть дети?</value>
+  </data>
+  <data name="ApplicantFormHeader" xml:space="preserve">
+    <value>Создание анкеты</value>
+  </data>
+  <data name="ApplicantFormHint" xml:space="preserve">
+    <value>Поля со звёздочкой (*) нужно заполнить обязательно.</value>
+  </data>
+  <data name="ApplicantFormHobby" xml:space="preserve">
+    <value>Увлечения</value>
+  </data>
+  <data name="ApplicantFormHobbyPlaceholder" xml:space="preserve">
+    <value>Расскажите нам о ваших интересах</value>
+  </data>
+  <data name="ApplicantFormLastNameLabel" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="ApplicantFormMedicalBookLabel" xml:space="preserve">
+    <value>Есть действующая медкнижка?</value>
+  </data>
+  <data name="ApplicantFormPersonalInfoLabel" xml:space="preserve">
+    <value>Личная информация</value>
+  </data>
+  <data name="ApplicantFormPhoneLabel" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="ApplicantFormPleaseSelect" xml:space="preserve">
+    <value>Выбрать ...</value>
+  </data>
+  <data name="ApplicantFormShiftLabel" xml:space="preserve">
+    <value>Время работы</value>
+  </data>
+  <data name="ApplicantFormSmokingLabel" xml:space="preserve">
+    <value>Курение?</value>
+  </data>
+  <data name="ApplicantFormSourceLabel" xml:space="preserve">
+    <value>О Додо Пицце узнал</value>
+    <comment>Контекст: О Додо Пицце узнал из газет</comment>
+  </data>
+  <data name="ApplicantFormTypeLabel" xml:space="preserve">
+    <value>Хочу работать</value>
+    <comment>Контекст: Хочу работать грузчиком</comment>
+  </data>
+  <data name="ApplicantFormUnitLabel" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="ApplicantFormWorkExperience" xml:space="preserve">
+    <value>Опыт работы</value>
+  </data>
+  <data name="ApplicantFormWorkExperiencePlaceholder" xml:space="preserve">
+    <value>Если у вас уже есть опыт работы, расскажите нам.</value>
+  </data>
+  <data name="ApplicantFormWorkInfoLabel" xml:space="preserve">
+    <value>Рабочая информация</value>
+  </data>
+  <data name="ApplicantInboxStatusLabel" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="ApplicantInboxUnitColumn" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="ApplicantInboxVacanciesLabel" xml:space="preserve">
+    <value>Вакансии</value>
+  </data>
+  <data name="ApplicantsInboxActualVacanciesLabel" xml:space="preserve">
+    <value>Актуальных вакансий</value>
+  </data>
+  <data name="ApplicantsInboxAddedDateColumn" xml:space="preserve">
+    <value>Поступило</value>
+  </data>
+  <data name="ApplicantsInboxAgainLabel" xml:space="preserve">
+    <value>Повторно</value>
+  </data>
+  <data name="ApplicantsInboxAgeColumn" xml:space="preserve">
+    <value>Возраст</value>
+  </data>
+  <data name="ApplicantsInboxAllStatusesText" xml:space="preserve">
+    <value>Все статусы</value>
+  </data>
+  <data name="ApplicantsInboxAllTypesText" xml:space="preserve">
+    <value>Все вакансии</value>
+  </data>
+  <data name="ApplicantsInboxAnswerAvgTimeLabel" xml:space="preserve">
+    <value>Средняя скорость ответа</value>
+  </data>
+  <data name="ApplicantsInboxCallTab" xml:space="preserve">
+    <value>Позвонить</value>
+  </data>
+  <data name="ApplicantsInboxCommonTab" xml:space="preserve">
+    <value>Общее</value>
+  </data>
+  <data name="ApplicantsInboxDueDateColumn" xml:space="preserve">
+    <value>Срок</value>
+  </data>
+  <data name="ApplicantsInboxHideFilter" xml:space="preserve">
+    <value>скрыть фильтр</value>
+  </data>
+  <data name="ApplicantsInboxHiredTotal" xml:space="preserve">
+    <value>Принято</value>
+  </data>
+  <data name="ApplicantsInboxInterviewTab" xml:space="preserve">
+    <value>Собеседование</value>
+  </data>
+  <data name="ApplicantsInboxLastTab" xml:space="preserve">
+    <value>Последние действия</value>
+  </data>
+  <data name="ApplicantsInboxLink" xml:space="preserve">
+    <value>Анкеты</value>
+  </data>
+  <data name="ApplicantsInboxMedicalBookTotal" xml:space="preserve">
+    <value>Делает МК</value>
+  </data>
+  <data name="ApplicantsInboxMonthTotal" xml:space="preserve">
+    <value>Анкет за месяц</value>
+  </data>
+  <data name="ApplicantsInboxNewLabel" xml:space="preserve">
+    <value>Новых за сегодня</value>
+  </data>
+  <data name="ApplicantsInboxNewLink" xml:space="preserve">
+    <value>Новая анкета</value>
+  </data>
+  <data name="ApplicantsInboxNonSmokingLabel" xml:space="preserve">
+    <value>Не курит</value>
+  </data>
+  <data name="ApplicantsInboxNotAnsweredLabel" xml:space="preserve">
+    <value>Без ответа</value>
+  </data>
+  <data name="ApplicantsInboxRejectTotal" xml:space="preserve">
+    <value>Отказ</value>
+  </data>
+  <data name="ApplicantsInboxReserveTotal" xml:space="preserve">
+    <value>Резерв</value>
+  </data>
+  <data name="ApplicantsInboxSearchTab" xml:space="preserve">
+    <value>Результаты поиска</value>
+  </data>
+  <data name="ApplicantsInboxSearchText" xml:space="preserve">
+    <value>Поиск по фамилии или имени или номеру телефона</value>
+  </data>
+  <data name="ApplicantsInboxShiftFilter" xml:space="preserve">
+    <value>Могут работать</value>
+  </data>
+  <data name="ApplicantsInboxShiftsColumn" xml:space="preserve">
+    <value>Смены</value>
+  </data>
+  <data name="ApplicantsInboxShowFilter" xml:space="preserve">
+    <value>показать фильтр</value>
+  </data>
+  <data name="ApplicantsInboxSmokingColumn" xml:space="preserve">
+    <value>Курение</value>
+  </data>
+  <data name="ApplicantsInboxSmokingLabel" xml:space="preserve">
+    <value>Курит</value>
+  </data>
+  <data name="ApplicantsInboxStatusColumn" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="ApplicantsInboxTypeColumn" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="ApplicantsStatisticRebuild" xml:space="preserve">
+    <value>Перестроить</value>
+  </data>
+  <data name="APPROVED. ANTON D. 11.04.2016" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AskDeleteDebiting" xml:space="preserve">
+    <value>Вы точно хотите удалить списание?</value>
+  </data>
+  <data name="AskDeleteSupply" xml:space="preserve">
+    <value>Вы точно хотите удалить приход?</value>
+  </data>
+  <data name="AverageCheckTitle" xml:space="preserve">
+    <value>Средний чек</value>
+  </data>
+  <data name="AverageConsumption" xml:space="preserve">
+    <value>Средний расход</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="BasicInformationLabel" xml:space="preserve">
+    <value>Основная информация</value>
+  </data>
+  <data name="BeforeYesterday" xml:space="preserve">
+    <value>позавчера</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Построить</value>
+  </data>
+  <data name="ByDays" xml:space="preserve">
+    <value>По дням</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="CanceledReportType" xml:space="preserve">
+    <value>отмена заказа</value>
+  </data>
+  <data name="CancelOrder" xml:space="preserve">
+    <value>Отменить заказ</value>
+  </data>
+  <data name="CancelTransaction" xml:space="preserve">
+    <value>Отменить транзакцию</value>
+  </data>
+  <data name="CashierLabel" xml:space="preserve">
+    <value>Касса</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="CertificatesForExpressPizzeriaTooltip" xml:space="preserve">
+    <value>Количество выданных сертификатов и доля просроченных пицц</value>
+  </data>
+  <data name="CertificatesTooltip" xml:space="preserve">
+    <value>Количество выданных сертификатов и доля просроченных заказов на доставку</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Выберите...</value>
+  </data>
+  <data name="ChooseSupplierLabel" xml:space="preserve">
+    <value>Выберите поставщика</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrders" xml:space="preserve">
+    <value>Структура клиентской базы по количеству заказов</value>
+  </data>
+  <data name="ClientDatabaseStructureNumberOrdersDesc" xml:space="preserve">
+    <value>В таблице все активные за период клиенты разделены на группы по тому, сколько заказов они сделали. Серым цветом указана доля группы в общем количестве активных клиентов за период.</value>
+  </data>
+  <data name="ClientDatabaseStructureTitle" xml:space="preserve">
+    <value>Структура клиентской базы</value>
+  </data>
+  <data name="ClientDatabaseStructureTitleNew" xml:space="preserve">
+    <value>Новая структура клиентской базы</value>
+  </data>
+  <data name="ClientHistoryTitle" xml:space="preserve">
+    <value>История по клиенту</value>
+  </data>
+  <data name="ClientOrdersTitle" xml:space="preserve">
+    <value>Заказы клиента</value>
+  </data>
+  <data name="ComeBack" xml:space="preserve">
+    <value>Вернуться</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="CommentPlaceholder" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="CommercialInvoiceDate" xml:space="preserve">
+    <value>Дата счёт-фактуры</value>
+    <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="CommercialInvoiceNumber" xml:space="preserve">
+    <value>№ счёт-фактуры</value>
+    <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="ComparingToDayTooltip" xml:space="preserve">
+    <value>По сравнению с {0:ddd}, {0:dd MMM yyyy}</value>
+  </data>
+  <data name="ComparingToPeriodTooltip" xml:space="preserve">
+    <value>По сравнению с периодом {0:dd MMM yyyy} - {1:dd MMM yyyy}</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithOrderedAndShippedDiscrepancies" xml:space="preserve">
+    <value>Отгруженное количество отличается от заказанного. Продолжить?</value>
+  </data>
+  <data name="ConfirmMaterialTypeTransferWithShippedAndReceivedDiscrepancies" xml:space="preserve">
+    <value>Полученное количество отличается от отруженного. Продолжить?</value>
+  </data>
+  <data name="Confirm_YouCandEditRequest" xml:space="preserve">
+    <value>Вы не сможете отредактировать заявку после отправки. Отправить?</value>
+  </data>
+  <data name="ConsumptionQC" xml:space="preserve">
+    <value>Расход по КК</value>
+  </data>
+  <data name="Corruption" xml:space="preserve">
+    <value>Порча продукта</value>
+  </data>
+  <data name="CostAndUCMenuItem" xml:space="preserve">
+    <value>Себестоимость и UnitCost</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Кол-во</value>
+  </data>
+  <data name="CountAcronim" xml:space="preserve">
+    <value>Кол-во</value>
+  </data>
+  <data name="CountLabel" xml:space="preserve">
+    <value>Кол-во</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>Курьеры</value>
+  </data>
+  <data name="CouriersLabel" xml:space="preserve">
+    <value>Курьеры</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Текущая</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>Текущий остаток</value>
+  </data>
+  <data name="CurrentDayPlaceholder" xml:space="preserve">
+    <value>нажмите для выбора</value>
+  </data>
+  <data name="CurrentWeek" xml:space="preserve">
+    <value>Эта неделя</value>
+  </data>
+  <data name="DateFrom" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>по</value>
+  </data>
+  <data name="DayOff" xml:space="preserve">
+    <value>Выходной</value>
+  </data>
+  <data name="DayOfWeekLabel" xml:space="preserve">
+    <value>Выберите дату</value>
+  </data>
+  <data name="Debiting" xml:space="preserve">
+    <value>Списания</value>
+  </data>
+  <data name="DebitingDateFilter" xml:space="preserve">
+    <value>Списание сырья от</value>
+  </data>
+  <data name="DebitingMaterial" xml:space="preserve">
+    <value>Списанное сырье</value>
+  </data>
+  <data name="DebitingMaterialLabel" xml:space="preserve">
+    <value>Списание сырья</value>
+  </data>
+  <data name="DebitingNumber" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="DebitingPizzeria" xml:space="preserve">
+    <value>Пиццерия/склад</value>
+  </data>
+  <data name="DebitingReason" xml:space="preserve">
+    <value>Причина списания</value>
+     <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="DebitingTime" xml:space="preserve">
+    <value>Дата списания</value>
+  </data>
+  <data name="DebitingWhoDebited" xml:space="preserve">
+    <value>Кто списал</value>
+  </data>
+  <data name="Default_Day_Select" xml:space="preserve">
+    <value>день недели</value>
+  </data>
+  <data name="Defect" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="DefectReportType" xml:space="preserve">
+    <value>брак</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteShift" xml:space="preserve">
+    <value>Удалить смену</value>
+  </data>
+  <data name="DeliveryDate" xml:space="preserve">
+    <value>Дата поставки</value>
+  </data>
+  <data name="DepartmentLevelHoliday" xml:space="preserve">
+    <value>Праздник департамента</value>
+  </data>
+  <data name="DeprecatedBrowserMessage" xml:space="preserve">
+    <value>Сожалеем, но ваш браузер устарел. Пожалуйста, обновите свой браузер или скачайте другой.</value>
+  </data>
+  <data name="DeselectAllLabel" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>Расхождение</value>
+  </data>
+  <data name="DodoIS" xml:space="preserve">
+    <value>Dodo IS</value>
+    <comment>Название системе в заголовке страниы</comment>
+  </data>
+  <data name="DodoISFooterText" xml:space="preserve">
+    <value>Dodo Pizza</value>
+    <comment>Название системы внизу страницы рядом с копирайтом</comment>
+  </data>
+  <data name="Dollar" xml:space="preserve">
+    <value>Доллар</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>Начало действия</value>
+  </data>
+  <data name="EffectivePeriod" xml:space="preserve">
+    <value>Период действия</value>
+  </data>
+  <data name="EfficiencyPercentage" xml:space="preserve">
+    <value>Эффективность графика </value>
+  </data>
+  <data name="EmployeeCategoryCashier" xml:space="preserve">
+    <value>Кассир</value>
+  </data>
+  <data name="EmployeeCategoryDateWith" xml:space="preserve">
+    <value>Дата с</value>
+  </data>
+  <data name="EmployeeCategoryInstructor" xml:space="preserve">
+    <value>Инструктор</value>
+  </data>
+  <data name="EmployeeCategoryManager" xml:space="preserve">
+    <value>Менеджер</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedFailedBeginDate" xml:space="preserve">
+    <value>Не указана или имеет неверный формат дата начала действия новой категории</value>
+  </data>
+  <data name="EmployeeCategoryNewAddedNotLargerCurrentDate" xml:space="preserve">
+    <value>Дата начала действия новой категории не может быть больше текущей даты</value>
+  </data>
+  <data name="EmployeeCategoryNotSelected" xml:space="preserve">
+    <value>Не указана категория сотрудника</value>
+  </data>
+  <data name="EmployeeCategoryPizzmaker" xml:space="preserve">
+    <value>Пиццамейкер</value>
+  </data>
+  <data name="EmployeeCategoryTrainee" xml:space="preserve">
+    <value>Стажер</value>
+  </data>
+  <data name="EmployeeComment" xml:space="preserve">
+    <value>Комментарий сотрудника:</value>
+  </data>
+  <data name="EmployeeCouriersDynamicsAwayColumn" xml:space="preserve">
+    <value>Текучка курьеров</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
+    <comment>Формат даты (d - день, M - месяц, Y - год)</comment>
+  </data>
+  <data name="EmployeeDateJSFormat" xml:space="preserve">
+    <value>dd.mm.yy</value>
+    <comment>Формат даты для JavaScript (d - день, m - месяц, Y - год)</comment>
+  </data>
+  <data name="EmployeeDateMask" xml:space="preserve">
+    <value>99.99.9999</value>
+    <comment>Маска для ввода аты</comment>
+  </data>
+  <data name="EmployeeDateTimeCulture" xml:space="preserve">
+    <value>ru-RU</value>
+    <comment>Язык для определения настроек даты и времени</comment>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumn" xml:space="preserve">
+    <value>Адаптация</value>
+  </data>
+  <data name="EmployeeDynamicsAdaptationColumnInfo" xml:space="preserve">
+    <value>Отношение принятых сотрудников к текущему количеству сотрудников</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonth" xml:space="preserve">
+    <value>Месячная текучесть</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnMonthInfo" xml:space="preserve">
+    <value>Отношение уволенных за месяц к текущему количеству сотрудников</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYear" xml:space="preserve">
+    <value>Текучесть по накоплению за год</value>
+  </data>
+  <data name="EmployeeDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Отношение уволенных с начала года к текущему количеству сотрудников</value>
+  </data>
+  <data name="EmployeeDynamicsFeedbackColumn" xml:space="preserve">
+    <value>Отзывы&lt;br/&gt;анонимно / персонально</value>
+  </data>
+  <data name="EmployeeDynamicsHeader" xml:space="preserve">
+    <value>Текучесть</value>
+  </data>
+  <data name="EmployeeDynamicsHiredColumn" xml:space="preserve">
+    <value>Принято</value>
+  </data>
+  <data name="EmployeeDynamicsMonthColumn" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="EmployeeDynamicsTerminatedColumn" xml:space="preserve">
+    <value>Уволено</value>
+  </data>
+  <data name="EmployeeDynamicsWorkedLessThanMonthColumn" xml:space="preserve">
+    <value>Отработали меньше месяца</value>
+  </data>
+  <data name="EmployeeEditAbsenceTypeLabel" xml:space="preserve">
+    <value>Причина</value>
+  </data>
+  <data name="EmployeeEditAdditionalPhoneLabel" xml:space="preserve">
+    <value>Доп. телефон</value>
+    <comment>Сокращение от "Дополнительный телефон"</comment>
+  </data>
+  <data name="EmployeeEditBarcodeLabel" xml:space="preserve">
+    <value>Штрих-код</value>
+  </data>
+  <data name="EmployeeEditBirthdayLabel" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="EmployeeEditCarBrandLabel" xml:space="preserve">
+    <value>Марка машины</value>
+  </data>
+  <data name="EmployeeEditCarColorLabel" xml:space="preserve">
+    <value>Цвет машины</value>
+  </data>
+  <data name="EmployeeEditCategoryLabel" xml:space="preserve">
+    <value>Категория</value>
+    <comment>Категория сотрудника</comment>
+  </data>
+  <data name="EmployeeEditCharSuffix" xml:space="preserve">
+    <value>символов</value>
+    <comment>Контекст "длина текста не более 100 символов"</comment>
+  </data>
+  <data name="EmployeeEditEmailLabel" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmployeeEditErrorFoundMessage" xml:space="preserve">
+    <value>Обнаружены следующие ошибки</value>
+    <comment>Контекст "Обнаружены следующие ошибки: 1) ошибка; 2) ошибка; 3) ошибка"</comment>
+  </data>
+  <data name="EmployeeEditFacebookProfileLabel" xml:space="preserve">
+    <value>Фейсбук</value>
+  </data>
+  <data name="EmployeeEditFacebookStatusLabel" xml:space="preserve">
+    <value>Статус или о себе</value>
+  </data>
+  <data name="EmployeeEditFemaleLabel" xml:space="preserve">
+    <value>Ж</value>
+    <comment>Сокращение от "Женский пол"</comment>
+  </data>
+  <data name="EmployeeEditFirstNameLabel" xml:space="preserve">
+    <value>Имя</value>
+    <comment>Имя сотрудника</comment>
+  </data>
+  <data name="EmployeeEditGenderLabel" xml:space="preserve">
+    <value>Пол</value>
+    <comment>Пол сотрудника</comment>
+  </data>
+  <data name="EmployeeEditHeader" xml:space="preserve">
+    <value>Редактирование карточки</value>
+    <comment>Редактирование карточки сотрудника</comment>
+  </data>
+  <data name="EmployeeEditHireDateLabel" xml:space="preserve">
+    <value>Дата приема</value>
+    <comment>Дата приема сотрудника на работу</comment>
+  </data>
+  <data name="EmployeeEditHolidaysDatesLabel" xml:space="preserve">
+    <value>Период отпуска</value>
+    <comment>Период отпуска сотрудника</comment>
+  </data>
+  <data name="EmployeeEditHospitalsDatesLabel" xml:space="preserve">
+    <value>Период больничного</value>
+    <comment>Период больничного сотрудника</comment>
+  </data>
+  <data name="EmployeeEditLPhotoLabel" xml:space="preserve">
+    <value>Фото</value>
+    <comment>Фотография</comment>
+  </data>
+  <data name="EmployeeEditMaleLabel" xml:space="preserve">
+    <value>М</value>
+    <comment>Сокращение от "Мужской пол"</comment>
+  </data>
+  <data name="EmployeeEditMedicalBookLabel" xml:space="preserve">
+    <value>Дата мед. осмотра</value>
+  </data>
+  <data name="EmployeeEditMedicalBookShelfLifeLabel" xml:space="preserve">
+    <value>Мед. книжка до</value>
+    <comment>Контекст "Медкнижка до 01.01.2050"</comment>
+  </data>
+  <data name="EmployeeEditNumberLabel" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="EmployeeEditPatronymicLabel" xml:space="preserve">
+    <value>Отчество</value>
+    <comment>Отчество сотрудника</comment>
+  </data>
+  <data name="EmployeeEditPersonalInfoLabel" xml:space="preserve">
+    <value>Личная информация</value>
+  </data>
+  <data name="EmployeeEditPFRLabel" xml:space="preserve">
+    <value>ПФР</value>
+    <comment>Номер свидетельства пенсионного страхования</comment>
+  </data>
+  <data name="EmployeeEditPFRMask" xml:space="preserve">
+    <value>999-999-999 99</value>
+    <comment>Маска для ввода номера свидетельства пенсионного страхования</comment>
+  </data>
+  <data name="EmployeeEditPhoneLabel" xml:space="preserve">
+    <value>Телефон</value>
+    <comment>Номер телефона</comment>
+  </data>
+  <data name="EmployeeEditPhotoLabel" xml:space="preserve">
+    <value>Фотография</value>
+  </data>
+  <data name="EmployeeEditRequiredFieldsMessage" xml:space="preserve">
+    <value>Поля со звёздочкой (*) нужно заполнить обязательно</value>
+  </data>
+  <data name="EmployeeEditSecondNameLabel" xml:space="preserve">
+    <value>Фамилия</value>
+    <comment>Фамилия сотрудника</comment>
+  </data>
+  <data name="EmployeeEditStateDateFromLabel" xml:space="preserve">
+    <value>Период</value>
+  </data>
+  <data name="EmployeeEditStateDescriptionLabel" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="EmployeeEditStateTimeFromLabel" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="EmployeeEditStatusLabel" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="EmployeeEditTabNoLabel" xml:space="preserve">
+    <value>Табельный номер</value>
+    <comment>Табельный номер сотрудника</comment>
+  </data>
+  <data name="EmployeeEditTabNoMask" xml:space="preserve">
+    <value>999999</value>
+    <comment>Маска табельного номера сотрудника</comment>
+  </data>
+  <data name="EmployeeEditTerminationDateLabel" xml:space="preserve">
+    <value>Дата увольнения</value>
+    <comment>Дата увольнения сотрудника</comment>
+  </data>
+  <data name="EmployeeEditTerminationReasonLabel" xml:space="preserve">
+    <value>Причина увольнения</value>
+  </data>
+  <data name="EmployeeEditTitle" xml:space="preserve">
+    <value>Редактирование сотрудника</value>
+    <comment>Редактирование карточки сотрудника</comment>
+  </data>
+  <data name="EmployeeEditTypeLabel" xml:space="preserve">
+    <value>Тип</value>
+    <comment>Тип сотрудника (имеется ввиду должность)</comment>
+  </data>
+  <data name="EmployeeEditUnitLabel" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="EmployeeEditWorkInfoLabel" xml:space="preserve">
+    <value>Рабочая информация</value>
+  </data>
+  <data name="EmployeeEditYearOfVehicleCarLabel" xml:space="preserve">
+    <value>Год выпуска машины</value>
+  </data>
+  <data name="EmployeeErrorLoginAlreadyUsed" xml:space="preserve">
+    <value>Данный номер телефона уже был указан для другого сотрудника</value>
+  </data>
+  <data name="EmployeeErrorNoPhoto" xml:space="preserve">
+    <value>Не добавлена фотография сотрудника</value>
+  </data>
+  <data name="EmployeeErrorPhoneNumber" xml:space="preserve">
+    <value>Должен быть указан правильный номер телефона</value>
+  </data>
+  <data name="EmployeeErrorPhoto" xml:space="preserve">
+    <value>При сохранении фотографии произошла ошибка</value>
+  </data>
+  <data name="EmployeeErrorPhotoExtension" xml:space="preserve">
+    <value>Расширение фотографии должно быть jpg или png</value>
+  </data>
+  <data name="EmployeeErrorPhotoHeight" xml:space="preserve">
+    <value>Высота фотографии должна быть равна {0} пикс.</value>
+  </data>
+  <data name="EmployeeErrorPhotoSize" xml:space="preserve">
+    <value>Размер фотографии не должен превышать {0} Кб</value>
+  </data>
+  <data name="EmployeeErrorPhotoWidth" xml:space="preserve">
+    <value>Ширина фотографии должна быть равна {0} пикс.</value>
+  </data>
+  <data name="EmployeeErrorRole" xml:space="preserve">
+    <value>Указан неизвестный тип сотрудника</value>
+  </data>
+  <data name="EmployeeErrorShiftDateFormat" xml:space="preserve">
+    <value>Введена некорректная дата</value>
+  </data>
+  <data name="EmployeeErrorShiftEndDate" xml:space="preserve">
+    <value>Дата окончания смены должна быть больше даты начала</value>
+  </data>
+  <data name="EmployeeErrorShiftTimeFormat" xml:space="preserve">
+    <value>Введено некорректное время</value>
+  </data>
+  <data name="EmployeeKitchenDynamicsAwayColumn" xml:space="preserve">
+    <value>Текучка кухни</value>
+  </data>
+  <data name="EmployeeLabel" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="EmployeeListAgeColumnTitle" xml:space="preserve">
+    <value>Возраст</value>
+  </data>
+  <data name="EmployeeListBirthdayFemaleLabel" xml:space="preserve">
+    <value>родилась</value>
+    <comment>Контекст "родилась 01.01.2050"</comment>
+  </data>
+  <data name="EmployeeListBirthdayMaleLabel" xml:space="preserve">
+    <value>родился</value>
+    <comment>Контекст "родился 01.01.2050"</comment>
+  </data>
+  <data name="EmployeeListBirthdaysHeader" xml:space="preserve">
+    <value>День рождения сегодня</value>
+  </data>
+  <data name="EmployeeListEmailLabel" xml:space="preserve">
+    <value>почта</value>
+    <comment>Электронная почта</comment>
+  </data>
+  <data name="EmployeeListExperienceColumnTitle" xml:space="preserve">
+    <value>Стаж</value>
+  </data>
+  <data name="EmployeeListHireDate" xml:space="preserve">
+    <value>Дата приема на работу</value>
+  </data>
+  <data name="EmployeeListHiredLabel" xml:space="preserve">
+    <value>Работают</value>
+    <comment>Контекст "сотрудники, которые работают"</comment>
+  </data>
+  <data name="EmployeeListLessThanDay" xml:space="preserve">
+    <value>Меньше дня</value>
+    <comment>Контекст "стаж работы меньше дня"</comment>
+  </data>
+  <data name="EmployeeListMedicalBookLabel" xml:space="preserve">
+    <value>мед. книжка</value>
+  </data>
+  <data name="EmployeeListMedicalBookName" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="EmployeeListMedicalBookRemained" xml:space="preserve">
+    <value>Осталось</value>
+  </data>
+  <data name="EmployeeListMedicalBooks" xml:space="preserve">
+    <value>Медкнижки</value>
+  </data>
+  <data name="EmployeeListMedicalBookType" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="EmployeeListNameColumnTitle" xml:space="preserve">
+    <value>ФИО</value>
+    <comment>Сокращение от "Фамилия, Имя, Отчество"</comment>
+  </data>
+  <data name="EmployeeListNoBirthdayLabel" xml:space="preserve">
+    <value>неизвестно</value>
+    <comment>Контекст "дата рождения: неизвестно"</comment>
+  </data>
+  <data name="EmployeeListNoEmailLabel" xml:space="preserve">
+    <value>не указана</value>
+    <comment>Контекст "электронная почта: не указана"</comment>
+  </data>
+  <data name="EmployeeListNoMedicalBookLabel" xml:space="preserve">
+    <value>нет</value>
+    <comment>Контекст "медкнижка: нет"</comment>
+  </data>
+  <data name="EmployeeListNoPhoneNumberLabel" xml:space="preserve">
+    <value>не указан</value>
+    <comment>Контекст "номер телефона: не указан"</comment>
+  </data>
+  <data name="EmployeeListPhoneNumberLabel" xml:space="preserve">
+    <value>телефон</value>
+    <comment>Номер телефона</comment>
+  </data>
+  <data name="EmployeeListStatusLabel" xml:space="preserve">
+    <value>статус</value>
+  </data>
+  <data name="EmployeeListTabNoLabel" xml:space="preserve">
+    <value>табельный номер</value>
+    <comment>Табельный номер сотрудника</comment>
+  </data>
+  <data name="EmployeeListTerminatedLabel" xml:space="preserve">
+    <value>Уволены</value>
+    <comment>Контекст "сотрудники, которые уволены"</comment>
+  </data>
+  <data name="EmployeeListTerminationColumnTitle" xml:space="preserve">
+    <value>Причина увольнения</value>
+  </data>
+  <data name="EmployeeListTitle" xml:space="preserve">
+    <value>Списки сотрудников</value>
+  </data>
+  <data name="EmployeeListTypeColumnTitle" xml:space="preserve">
+    <value>Тип</value>
+    <comment>Должность сотрудника</comment>
+  </data>
+  <data name="EmployeeListUnitLabel" xml:space="preserve">
+    <value>пиццерия</value>
+  </data>
+  <data name="EmployeeMedicalBooksExpiredText" xml:space="preserve">
+    <value>Просрочена</value>
+    <comment>Контекст "медицинская книжка просрочена"</comment>
+  </data>
+  <data name="EmployeeMedicalBooksFullNameColumnTitle" xml:space="preserve">
+    <value>ФИО</value>
+    <comment>Сокращение от "Фамилия, Имя, Отчество"</comment>
+  </data>
+  <data name="EmployeeMedicalBooksProlongLink" xml:space="preserve">
+    <value>Продлить</value>
+    <comment>Контекст "Продлить срок действия медкнижки"</comment>
+  </data>
+  <data name="EmployeeMedicalBooksRemainedColumnTitle" xml:space="preserve">
+    <value>Осталось</value>
+    <comment>Контекст "Осталось дней до окончания срока действия медкнижки"</comment>
+  </data>
+  <data name="EmployeeMedicalBooksTypeColumnTitle" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="EmployeeMoodWeekLabel" xml:space="preserve">
+    <value>неделя с {0:dd.MM} по {1:dd:MM}</value>
+  </data>
+  <data name="EmployeeNewLabel" xml:space="preserve">
+    <value>Новый сотрудник</value>
+  </data>
+  <data name="EmployeeNewTitle" xml:space="preserve">
+    <value>Новый сотрудник</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYear" xml:space="preserve">
+    <value>Прогнозируемая  годовая текучесть</value>
+  </data>
+  <data name="EmployeeProjectedDynamicsAwayOnYearInfo" xml:space="preserve">
+    <value>Отношение текучести по накоплению за год, умноженное на 12 месяцев, к количеству прошедших месяцев в этом году</value>
+  </data>
+  <data name="EmployeeSearchLabel" xml:space="preserve">
+    <value>Поиск сотрудника</value>
+  </data>
+  <data name="EmployeeSearchOpenLink" xml:space="preserve">
+    <value>Открыть карточку</value>
+    <comment>Открыть карточку сотрудника</comment>
+  </data>
+  <data name="EmployeeSearchPlaceholder" xml:space="preserve">
+    <value>Введите ФИО сотрудника</value>
+    <comment>ФИО - сокращение от "Фамилия, Имя, Отчество"</comment>
+  </data>
+  <data name="EmployeeShiftNotInScheduleText" xml:space="preserve">
+    <value>вне графика</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginDateColumnTitle" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="EmployeeShiftSettingsBeginTimeColumnTitle" xml:space="preserve">
+    <value>Время начала</value>
+  </data>
+  <data name="EmployeeShiftSettingsCategoryColumnTitle" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="EmployeeShiftSettingsChooseEmployee" xml:space="preserve">
+    <value>Выберите сотрудника</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndDateColumnTitle" xml:space="preserve">
+    <value>Дата окончания</value>
+  </data>
+  <data name="EmployeeShiftSettingsEndTimeColumnTitle" xml:space="preserve">
+    <value>Время окончания</value>
+  </data>
+  <data name="EmployeeShiftSettingsTitle" xml:space="preserve">
+    <value>Исправление времени работы сотрудника</value>
+  </data>
+  <data name="EmployeesOnShift" xml:space="preserve">
+    <value>Сотрудники на смене</value>
+    <comment>Контекст "Сотрудники на смене: 10 человек"</comment>
+  </data>
+  <data name="EmployeeStatisticsAbsentLabel" xml:space="preserve">
+    <value>Отсутствуют</value>
+  </data>
+  <data name="EmployeeStatisticsActiveCountLabel" xml:space="preserve">
+    <value>Работают</value>
+    <comment>Контекст "Работают: 10 человек"</comment>
+  </data>
+  <data name="EmployeeStatisticsAdaptationComment" xml:space="preserve">
+    <value>Адаптация - доля сотрудников, (0-100%), со стажем менее двух месяцев и уволенных в прошлые 30 дней, к количеству сотрудников со стажем менее двух месяцев.</value>
+  </data>
+  <data name="EmployeeStatisticsAdaptationFactorLabel" xml:space="preserve">
+    <value>Адаптация</value>
+  </data>
+  <data name="EmployeeStatisticsAddEmployeeLink" xml:space="preserve">
+    <value>Добавить сотрудника</value>
+  </data>
+  <data name="EmployeeStatisticsApplicantsLabel" xml:space="preserve">
+    <value>Поступило анкет</value>
+  </data>
+  <data name="EmployeeStatisticsAwayComment" xml:space="preserve">
+    <value>Текучка - доля сотрудников кухни, (0-100%), уволенных в этом месяце, по отношению к количеству работающих сотрудников.</value>
+  </data>
+  <data name="EmployeeStatisticsAwayFactorLabel" xml:space="preserve">
+    <value>Текучка в этом месяце</value>
+  </data>
+  <data name="EmployeeStatisticsFeedbackLabel" xml:space="preserve">
+    <value>Отзывы всего / анонимно</value>
+  </data>
+  <data name="EmployeeStatisticsFindBySurname" xml:space="preserve">
+    <value>Поиск по фамилии сотрудника</value>
+  </data>
+  <data name="EmployeeStatisticsHideReasonsForDismissal" xml:space="preserve">
+    <value>Скрыть</value>
+  </data>
+  <data name="EmployeeStatisticsHiredTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Нанято / уволено в этом месяце</value>
+  </data>
+  <data name="EmployeeStatisticsHiredThisMonthLabel" xml:space="preserve">
+    <value>Пришло в этом месяце</value>
+  </data>
+  <data name="EmployeeStatisticsHiringReportLink" xml:space="preserve">
+    <value>Смотреть динамику</value>
+  </data>
+  <data name="EmployeeStatisticsHolidaysCountLabel" xml:space="preserve">
+    <value>Отпуск</value>
+  </data>
+  <data name="EmployeeStatisticsHospitalsCountLabel" xml:space="preserve">
+    <value>Больничный</value>
+  </data>
+  <data name="EmployeeStatisticsLeaveLabel" xml:space="preserve">
+    <value>Заявление на отпуск</value>
+  </data>
+  <data name="EmployeeStatisticsListLink" xml:space="preserve">
+    <value>Полный список сотрудников</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookExpiredCountLabel" xml:space="preserve">
+    <value>Истек срок мед. книжки</value>
+  </data>
+  <data name="EmployeeStatisticsMedicalBookHeader" xml:space="preserve">
+    <value>Истекает срок медкнижки</value>
+  </data>
+  <data name="EmployeeStatisticsNormLabel" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="EmployeeStatisticsNormsLabel" xml:space="preserve">
+    <value>Нормы сотрудников</value>
+  </data>
+  <data name="EmployeeStatisticsOtherAbsenceCountLabel" xml:space="preserve">
+    <value>Иная причина</value>
+  </data>
+  <data name="EmployeeStatisticsOtherReasonsForDismissal" xml:space="preserve">
+    <value>Прочие причины</value>
+  </data>
+  <data name="EmployeeStatisticsPopularReasonsForDismissal" xml:space="preserve">
+    <value>Популярные причины увольнения за последние 12 месяцев</value>
+  </data>
+  <data name="EmployeeStatisticsProductivityLabel" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="EmployeeStatisticsSelectedPizzeria" xml:space="preserve">
+    <value>Выберите пиццерию</value>
+  </data>
+  <data name="EmployeeStatisticsStuffLabel" xml:space="preserve">
+    <value>Штат</value>
+  </data>
+  <data name="EmployeeStatisticsSuspendedCountLabel" xml:space="preserve">
+    <value>Отстранены</value>
+  </data>
+  <data name="EmployeeStatisticsTerminatedThisMonthLabel" xml:space="preserve">
+    <value>Ушло в этом месяце</value>
+    <comment>Контекст "Уволено в этом месяце: 10 человек"</comment>
+  </data>
+  <data name="EmployeeStatisticsTitle" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="EmployeeStatisticsTotalCountLabel" xml:space="preserve">
+    <value>Всего сотрудников</value>
+    <comment>Контекст "Всего сотрудников: 10 человек"</comment>
+  </data>
+  <data name="EmployeeStatisticsWorkedLessThanMonthCountLabel" xml:space="preserve">
+    <value>Отработали меньше месяца</value>
+    <comment>Контекст "Отработали меньше месяца: 10 человек"</comment>
+  </data>
+  <data name="EmployeesTrainingFailedAddCurrentCategoryStage" xml:space="preserve">
+    <value>Нельзя назначить повторно текущую категорию</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+    <comment>Формат времени</comment>
+  </data>
+  <data name="EmployeeTimeMask" xml:space="preserve">
+    <value>99:99</value>
+    <comment>Маска для ввода времени</comment>
+  </data>
+  <data name="EmployeeTraining" xml:space="preserve">
+    <value>Обучение</value>
+  </data>
+  <data name="EmptyTransactionMessage" xml:space="preserve">
+    <value>К сожалению, за указанный период транзакций совершено не было.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка!</value>
+  </data>
+  <data name="Error_CanNotCancel" xml:space="preserve">
+    <value>Невозможно отменить заказ</value>
+  </data>
+  <data name="Error_CouldNotGetYandexTransactions" xml:space="preserve">
+    <value>Ошибка при получении списка транзакций.</value>
+  </data>
+  <data name="Error_RequiedCommentIfRejected" xml:space="preserve">
+    <value>При отклонении заявки нужно заполнить поле комментарий.</value>
+  </data>
+  <data name="Error_YandexTransactionsRangeIsTooBig" xml:space="preserve">
+    <value>Диапазон дат не должен превышать 1 месяц.</value>
+  </data>
+  <data name="Euro" xml:space="preserve">
+    <value>Евро</value>
+  </data>
+  <data name="ExpectedDate" xml:space="preserve">
+    <value>Ждем к дате</value>
+  </data>
+  <data name="Experience" xml:space="preserve">
+    <value>Стаж</value>
+  </data>
+  <data name="ExperienceBonus" xml:space="preserve">
+    <value>Премия за стаж</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Вышел срок годности</value>
+  </data>
+  <data name="ExportToExcel" xml:space="preserve">
+    <value>Экспорт в Excel</value>
+  </data>
+  <data name="ExtraTimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Дата начала экстра-тайма</value>
+  </data>
+  <data name="ExtraTimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Время начала экстра-тайма</value>
+  </data>
+  <data name="ExtraTimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Категория сотрудника</value>
+  </data>
+  <data name="ExtraTimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Выберите типы сотрудников</value>
+  </data>
+  <data name="ExtraTimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Фамилия, имя сотрудника</value>
+  </data>
+  <data name="ExtraTimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Дата окончания экстра-тайма</value>
+  </data>
+  <data name="ExtraTimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Время окончания экстра-тайма</value>
+  </data>
+  <data name="ExtraTimeReportHeader" xml:space="preserve">
+    <value>Дополнительное время</value>
+  </data>
+  <data name="ExtraTimeReportHoursColumnTitle" xml:space="preserve">
+    <value>Количество часов</value>
+  </data>
+  <data name="ExtraTimeReportManagerColumnTitle" xml:space="preserve">
+    <value>Фамилия, имя менеджера</value>
+  </data>
+  <data name="ExtraTimeReportTypeLabel" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="Fact" xml:space="preserve">
+    <value>Факт</value>
+  </data>
+  <data name="FeatureCardCheckDateLabel" xml:space="preserve">
+    <value>Контрольный срок</value>
+  </data>
+  <data name="FeatureCardChooseTime" xml:space="preserve">
+    <value>Укажите время, когда вы можете работать</value>
+  </data>
+  <data name="FeatureCardCollapseFilterLink" xml:space="preserve">
+    <value>Свернуть фильтр</value>
+  </data>
+  <data name="FeatureCardDescription" xml:space="preserve">
+    <value>График, в котором люди отмечают, когда могут выйти на смену.</value>
+  </data>
+  <data name="FeatureCardEveningOptionText" xml:space="preserve">
+    <value>вечером</value>
+    <comment>Контекст "могу работать вечером"</comment>
+  </data>
+  <data name="FeatureCardExpandFilterLink" xml:space="preserve">
+    <value>Развернуть фильтр</value>
+  </data>
+  <data name="FeatureCardFullNamePlaceholder" xml:space="preserve">
+    <value>фио, должность</value>
+    <comment>ФИО - сокращение от "Фамилия, Имя, Отчество"</comment>
+  </data>
+  <data name="FeatureCardHolidayLabel" xml:space="preserve">
+    <value>Выходной</value>
+  </data>
+  <data name="FeatureCardHolidayOptionText" xml:space="preserve">
+    <value>выходной</value>
+  </data>
+  <data name="FeatureCardMorningOptionText" xml:space="preserve">
+    <value>утром-днем</value>
+    <comment>Контекст "могу работать утром-днем"</comment>
+  </data>
+  <data name="FeatureCardNightOptionText" xml:space="preserve">
+    <value>ночью</value>
+    <comment>Контекст "могу работать ночью"</comment>
+  </data>
+  <data name="FeatureCardOptionsTitle" xml:space="preserve">
+    <value>Могут работать</value>
+    <comment>Контекст "Сотрудники, которые могут работать"</comment>
+  </data>
+  <data name="FeatureCardTitle" xml:space="preserve">
+    <value>Карта возможностей</value>
+  </data>
+  <data name="FeatureCardWorkdayLabel" xml:space="preserve">
+    <value>Может работать</value>
+    <comment>Контекст "Сотрудник, который может работать"</comment>
+  </data>
+  <data name="FederalLevelHoliday" xml:space="preserve">
+    <value>Федеральный праздник</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>Поле {0} не заполнено</value>
+  </data>
+  <data name="ForecastForSeveralDays" xml:space="preserve">
+    <value>На сколько дней хватит остатка</value>
+  </data>
+  <data name="FormationOfOrder" xml:space="preserve">
+    <value>Формирование заказа</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Пятница</value>
+  </data>
+  <data name="FridayShort" xml:space="preserve">
+    <value>Пт</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>c</value>
+    <comment>Предлог "с". Контекст "с позавчера".</comment>
+  </data>
+  <data name="From2" xml:space="preserve">
+    <value>со</value>
+    <comment>Предлог "с". Контекст "со вчера".</comment>
+  </data>
+  <data name="FromSupplier" xml:space="preserve">
+    <value>От кого (поставщик)</value>
+  </data>
+  <data name="GenericReportType" xml:space="preserve">
+    <value>все виды</value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value>Товар</value>
+  </data>
+  <data name="GoodsProduct" xml:space="preserve">
+    <value>Товар/продукт</value>
+  </data>
+  <data name="Grivna" xml:space="preserve">
+    <value>Гривна</value>
+  </data>
+  <data name="GuiltyPerson" xml:space="preserve">
+    <value>Виновное лицо</value>
+  </data>
+  <data name="HiringReportAdaptationColumnTitle" xml:space="preserve">
+    <value>Коэффициент адаптации</value>
+  </data>
+  <data name="HiringReportAwayColumnTitle" xml:space="preserve">
+    <value>Коэффициент текучки</value>
+  </data>
+  <data name="HiringReportBuildLink" xml:space="preserve">
+    <value>Построить</value>
+  </data>
+  <data name="HiringReportChooseDateLabel" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="HiringReportChooseUnitLabel" xml:space="preserve">
+    <value>Выберите отдел</value>
+  </data>
+  <data name="HiringReportExcelExportLink" xml:space="preserve">
+    <value>Экспорт в Excel</value>
+  </data>
+  <data name="HiringReportFactColumnTitle" xml:space="preserve">
+    <value>Фактическое количество сотрудников</value>
+  </data>
+  <data name="HiringReportHiredColumnTitle" xml:space="preserve">
+    <value>Пришло</value>
+  </data>
+  <data name="HiringReportMonthColumnTitle" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="HiringReportTerminatedColumnTitle" xml:space="preserve">
+    <value>Уволенные</value>
+  </data>
+  <data name="HiringReportWorkedLessThanMonthColumnTitle" xml:space="preserve">
+    <value>Отработали меньше месяца</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>час</value>
+  </data>
+  <data name="HourAbbr" xml:space="preserve">
+    <value>ч.</value>
+  </data>
+  <data name="Html_ListenDodoFm" xml:space="preserve">
+    <value>СЛУШАЙ&lt;br&gt;DODOFM.RU</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Incoming" xml:space="preserve">
+    <value>Приходы</value>
+  </data>
+  <data name="InputSupplyComposition" xml:space="preserve">
+    <value>Заполните состав прихода</value>
+  </data>
+  <data name="InvoiceDate" xml:space="preserve">
+    <value>Дата накладной</value>
+  </data>
+  <data name="InvoiceDate_error" xml:space="preserve">
+    <value>Заполните дату накладной</value>
+  </data>
+  <data name="InvoiceNumber" xml:space="preserve">
+    <value>№ накладной</value>
+  </data>
+  <data name="InvoiceNumber_error" xml:space="preserve">
+    <value>Заполните № накладной</value>
+  </data>
+  <data name="IsTransactionCompleted" xml:space="preserve">
+    <value>Статус оплаты</value>
+  </data>
+  <data name="JQGridPageCaption" xml:space="preserve">
+    <value>Стр.</value>
+  </data>
+  <data name="JQGridPageFromCaption" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="JQGridViewCaption" xml:space="preserve">
+    <value>Просмотр</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Кухня</value>
+  </data>
+  <data name="KitchenLabel" xml:space="preserve">
+    <value>Кухня</value>
+  </data>
+  <data name="LabourCostTooltip" xml:space="preserve">
+    <value>Доля зарплаты сотрудников кухни к выручке</value>
+  </data>
+  <data name="LastRevision" xml:space="preserve">
+    <value>Последняя ревизия</value>
+  </data>
+  <data name="LastTwelveMonths" xml:space="preserve">
+    <value>Последние 12 месяцев</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>загрузка</value>
+  </data>
+  <data name="LossesAndExceesMenuItem" xml:space="preserve">
+    <value>Потери и избыток</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDate" xml:space="preserve">
+    <value>Дата запуска</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDateDay" xml:space="preserve">
+    <value>21 января 2015</value>
+  </data>
+  <data name="LoyaltyAnaliticsChartDesc" xml:space="preserve">
+    <value>Статистика по бонусной программе  v2</value>
+  </data>
+  <data name="LoyaltyAnaliticsSystem" xml:space="preserve">
+    <value>Бонусная программа</value>
+  </data>
+  <data name="LoyaltyAnalyticsCoverage" xml:space="preserve">
+    <value>Охват аудитории</value>
+  </data>
+  <data name="LoyaltyAnalyticsDodollarSpending" xml:space="preserve">
+    <value>Потрачено додо-рублей</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitations" xml:space="preserve">
+    <value>Динамика приглашения</value>
+  </data>
+  <data name="LoyaltyAnalyticsDynamicOnInvitationsComment" xml:space="preserve">
+    <value>В данной таблице выводятся Клиенты, зарегистрированные по приглашению Клиента в Вашем регионе за указанный период.</value>
+  </data>
+  <data name="LoyaltyAnalyticsInvitedClientsCount" xml:space="preserve">
+    <value>Привлечено новых клиентов через СЛ</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastMonthNewClientsCount" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="LoyaltyAnalyticsLastWeekNewClientsCount" xml:space="preserve">
+    <value>Неделя</value>
+  </data>
+  <data name="LoyaltyAnalyticsProfit" xml:space="preserve">
+    <value>Заказы рефералов</value>
+  </data>
+  <data name="LoyaltyAnalyticsTheySelfClientsCount" xml:space="preserve">
+    <value>Привлечено новых клиентов без СЛ</value>
+  </data>
+  <data name="LoyaltyAnalyticsTitle" xml:space="preserve">
+    <value>Бонусная программа</value>
+  </data>
+  <data name="LoyaltyAnalyticsTodayNewClientsCount" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="LoyaltyAnalyticsTotalSpending" xml:space="preserve">
+    <value>Сумма заказов (рубли + додо-рубли)</value>
+  </data>
+  <data name="LoyaltyAnalyticsWholeNewClientsCount" xml:space="preserve">
+    <value>Всего новых клиентов за период</value>
+  </data>
+  <data name="LoyaltyAnalyticsYesterdayNewClientsCount" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="LunchSettings" xml:space="preserve">
+    <value>Настройка обедов</value>
+  </data>
+  <data name="ManagerSettingScheduleManagerLabel" xml:space="preserve">
+    <value>Контакты менеджера по графикам</value>
+  </data>
+  <data name="ManagerSettingsChoose" xml:space="preserve">
+    <value>Выберите сотрудника</value>
+  </data>
+  <data name="ManagerSettingsDepartmentDirectorLabel" xml:space="preserve">
+    <value>Директор подразделения</value>
+  </data>
+  <data name="ManagerSettingsHeader" xml:space="preserve">
+    <value>Контакты руководителей пиццерии</value>
+  </data>
+  <data name="ManagerSettingsHint" xml:space="preserve">
+    <value>Отображаются в личных кабинетах сотрудников</value>
+  </data>
+  <data name="ManagerSettingsScheduleManagerLabel" xml:space="preserve">
+    <value>Контакты менеджера по графикам</value>
+  </data>
+  <data name="ManagerSettingsUnitDirectorLabel" xml:space="preserve">
+    <value>Управляющий пиццерии</value>
+  </data>
+  <data name="ManagersLabel" xml:space="preserve">
+    <value>Менеджеры</value>
+  </data>
+  <data name="MarketingActivities" xml:space="preserve">
+    <value>Маркетинговые мероприятия</value>
+  </data>
+  <data name="MarketingTitle" xml:space="preserve">
+    <value>Маркетинг</value>
+  </data>
+  <data name="MateraialRemainingInfoBlock" xml:space="preserve">
+    <value>Данные считаются с момента проведения последней ревизии от </value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Сырьё</value>
+  </data>
+  <data name="MaterialConsumption" xml:space="preserve">
+    <value>Расход сырья</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialError" xml:space="preserve">
+    <value>Выбрано более 15 типов сырья</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByMaterialMessage" xml:space="preserve">
+    <value>При выборе одного отдела можно построить расход по всем позициям сырья. Если выберите два и более отдела, то расход можно построить максимум по 15 позициям. Период должен быть не больше 35 дней.</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByPeriodError" xml:space="preserve">
+    <value>Выбран период более 35 дней</value>
+  </data>
+  <data name="MaterialConsumptionFranchiseeFilterByUnitsError" xml:space="preserve">
+    <value>Не выбрано ни одного отдела</value>
+  </data>
+  <data name="MaterialConsumptionReportCancelled" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="MaterialConsumptionReportDefect" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="MaterialConsumptionReportPersonalFood" xml:space="preserve">
+    <value>Пит. персонала</value>
+  </data>
+  <data name="MaterialConsumptionReportSales" xml:space="preserve">
+    <value>Продажи</value>
+  </data>
+  <data name="MaterialMeasurements" xml:space="preserve">
+    <value>Замеры</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Сырье</value>
+  </data>
+  <data name="MaterialsType" xml:space="preserve">
+    <value>Тип сырья</value>
+  </data>
+  <data name="MaterialTransfer" xml:space="preserve">
+    <value>Перемещения</value>
+  </data>
+  <data name="MaterialTransferSetup" xml:space="preserve">
+    <value>Настройка перемещений</value>
+  </data>
+  <data name="MaterialTypeTransferReportType" xml:space="preserve">
+    <value>перемещения</value>
+  </data>
+  <data name="MaterialTypeTransfer_ReceivingDateIsInvalid" xml:space="preserve">
+    <value>Дата приема не может быть раньше даты отгрузки</value>
+  </data>
+  <data name="MenuAllEmployees" xml:space="preserve">
+    <value>Все сотрудники</value>
+  </data>
+  <data name="MenuApplicantsInbox" xml:space="preserve">
+    <value>Анкеты</value>
+  </data>
+  <data name="MenuApplicantsStatistic" xml:space="preserve">
+    <value>Статистика по анкетам</value>
+  </data>
+  <data name="MenuCourierSchedule" xml:space="preserve">
+    <value>График курьеров</value>
+  </data>
+  <data name="MenuEmployeeBirthdays" xml:space="preserve">
+    <value>День рождения</value>
+  </data>
+  <data name="MenuEmployeeList" xml:space="preserve">
+    <value>Списки сотрудников</value>
+  </data>
+  <data name="MenuEmployees" xml:space="preserve">
+    <value>Сотрудники</value>
+  </data>
+  <data name="MenuEmployeeShiftSettings" xml:space="preserve">
+    <value>Корректировка смен</value>
+  </data>
+  <data name="MenuEmployeeStatistics" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="MenuEmployeeWorkingHours" xml:space="preserve">
+    <value>Рабочие часы</value>
+  </data>
+  <data name="MenuExperienceBonusRates" xml:space="preserve">
+    <value>Премия за стаж</value>
+  </data>
+  <data name="MenuExtraTimeReport" xml:space="preserve">
+    <value>Дополнительное время</value>
+  </data>
+  <data name="MenuFeatureCard" xml:space="preserve">
+    <value>Карта возможностей</value>
+  </data>
+  <data name="MenuHiringReport" xml:space="preserve">
+    <value>Показатели по персоналу</value>
+  </data>
+  <data name="MenuManagerSettings" xml:space="preserve">
+    <value>Контакты руководителей</value>
+  </data>
+  <data name="MenuMonthlyStatistics" xml:space="preserve">
+    <value>Месяц</value>
+  </data>
+  <data name="MenuOperationalStatistics" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="MenuProductivityNorms" xml:space="preserve">
+    <value>Нормы производительности</value>
+  </data>
+  <data name="MenuReports" xml:space="preserve">
+    <value>Отчёты</value>
+  </data>
+  <data name="MenuReviews" xml:space="preserve">
+    <value>Отзывы</value>
+  </data>
+  <data name="MenuSalaryHolidayFactors" xml:space="preserve">
+    <value>Календарь особых дней</value>
+  </data>
+  <data name="MenuSalaryNightFactors" xml:space="preserve">
+    <value>Ночной коэффициент</value>
+  </data>
+  <data name="MenuSalaryPremiums" xml:space="preserve">
+    <value>Премии</value>
+  </data>
+  <data name="MenuSalaryRates" xml:space="preserve">
+    <value>Ставки сотрудников</value>
+  </data>
+  <data name="MenuSalaryReport" xml:space="preserve">
+    <value>Заработная плата</value>
+  </data>
+  <data name="MenuSalaryReportWithExperienceRates" xml:space="preserve">
+    <value>Заработная плата (со стажем)</value>
+  </data>
+  <data name="MenuSalaryTaxes" xml:space="preserve">
+    <value>Налоговый коэффициент</value>
+  </data>
+  <data name="MenuSchedule" xml:space="preserve">
+    <value>График</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="MenuShiftEmployee" xml:space="preserve">
+    <value>Сотрудники на смене</value>
+  </data>
+  <data name="MenuShiftNorms" xml:space="preserve">
+    <value>Сводный анализ</value>
+  </data>
+  <data name="MenuShiftSchedule" xml:space="preserve">
+    <value>График</value>
+  </data>
+  <data name="MenuShiftSettings" xml:space="preserve">
+    <value>Параметры смен</value>
+  </data>
+  <data name="MenuStaff" xml:space="preserve">
+    <value>Персонал</value>
+  </data>
+  <data name="MenuStocks" xml:space="preserve">
+    <value>Запасы</value>
+  </data>
+  <data name="MenuTimeReport" xml:space="preserve">
+    <value>Фактическое время</value>
+  </data>
+  <data name="MenuTitle_Ratings" xml:space="preserve">
+    <value>Рейтинги</value>
+  </data>
+  <data name="MenuVacancyList" xml:space="preserve">
+    <value>Вакансии</value>
+  </data>
+  <data name="MenuZoneSettings" xml:space="preserve">
+    <value>Настройка пиццерии</value>
+  </data>
+  <data name="Menu_AuditedInventory" xml:space="preserve">
+    <value>Остатки по ревизии</value>
+  </data>
+  <data name="Menu_CalculateSMS" xml:space="preserve">
+    <value>Расчёты по смс</value>
+  </data>
+  <data name="Menu_Finance" xml:space="preserve">
+    <value>Финансы</value>
+  </data>
+  <data name="Menu_FinanceIndicators" xml:space="preserve">
+    <value>Показатели</value>
+  </data>
+  <data name="Menu_HolidaysAndWeekends" xml:space="preserve">
+    <value>Праздники и выходные</value>
+  </data>
+  <data name="Menu_InventoryManagement" xml:space="preserve">
+    <value>Учет</value>
+  </data>
+  <data name="Menu_KPI_Productivity" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="Menu_MaterialConsumption" xml:space="preserve">
+    <value>Расход сырья</value>
+  </data>
+  <data name="Menu_Metrics" xml:space="preserve">
+    <value>Метрики</value>
+  </data>
+  <data name="Menu_Revenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="Menu_RevenueInHourOnEmployee" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="Menu_RevisionDashboard" xml:space="preserve">
+    <value>Сводка учета</value>
+  </data>
+  <data name="Menu_ShopWindowPauseStatistic" xml:space="preserve">
+    <value>Простой витрины</value>
+  </data>
+  <data name="Menu_Suppliers" xml:space="preserve">
+    <value>Поставщики</value>
+  </data>
+  <data name="Menu_TargetsOnMonth" xml:space="preserve">
+    <value>Цели на месяц</value>
+  </data>
+  <data name="Menu_TargetsOnYear" xml:space="preserve">
+    <value>Цели на год</value>
+  </data>
+  <data name="Message_AddedDebiting" xml:space="preserve">
+    <value>Добавлена позиция {0}. Кол-во: {1}. Причина: {2}.</value>
+  </data>
+  <data name="Message_AddedSupplyComposition" xml:space="preserve">
+    <value>Добавлена позиция {0} - {1}, сумма без НДС - {2}, НДС - {3}, Сумма НДС - {4}, сумма с НДС - {5}, цена за ед. - {6}, цена за 1 кг - {7}</value>
+  </data>
+  <data name="Message_CantLoadChart" xml:space="preserve">
+    <value>Извините, график временно недоступен</value>
+  </data>
+  <data name="Message_Comment" xml:space="preserve">
+    <value>Комментарий: {0}.</value>
+  </data>
+  <data name="Message_DebitingComment" xml:space="preserve">
+    <value>Комментарий: был {0}, стал {1}."</value>
+  </data>
+  <data name="Message_DebitingReason" xml:space="preserve">
+    <value>Причина: была {0}, стала {1}.</value>
+  </data>
+  <data name="Message_EditedDebiting" xml:space="preserve">
+    <value>Изменена позиция {0}.</value>
+  </data>
+  <data name="Message_EnterVacancyFields" xml:space="preserve">
+    <value>Заполните поля вакансии</value>
+  </data>
+  <data name="Message_InvalidIntervals" xml:space="preserve">
+    <value>Возможности не были сохранены, выбраны периоды меньше 4 часов.</value>
+  </data>
+  <data name="Message_NotChoosedAnyUnit" xml:space="preserve">
+    <value>Вы не указали ни одной пиццерии.</value>
+  </data>
+  <data name="Message_RemovedDebiting" xml:space="preserve">
+    <value>Удалена позиция {0}. Кол-во: {1}. Причина: {2}.</value>
+  </data>
+  <data name="Message_SupplyChangeCostPerKgForMaterialType" xml:space="preserve">
+    <value>Цена за кг изменилась у типа сырья: </value>
+  </data>
+  <data name="Message_SupplyCompositionCount" xml:space="preserve">
+    <value>Кол-во: было {0}, стало {1}.</value>
+  </data>
+  <data name="Message_SupplyCompositionSaveQuestion" xml:space="preserve">
+    <value>Продолжить?</value>
+  </data>
+  <data name="Message_TemporarilyUnavailable" xml:space="preserve">
+    <value>Извините, временно недоступно</value>
+  </data>
+  <data name="MinimalShiftLengthForPersonalFood" xml:space="preserve">
+    <value>Минимальная длительность смены для получения бесплатного питания</value>
+  </data>
+  <data name="MinimalShiftToCashier" xml:space="preserve">
+    <value>"Минимальная длительность смены кассира"</value>
+  </data>
+  <data name="MinimalShiftToCourier" xml:space="preserve">
+    <value>"Минимальная длительность смены курьера"</value>
+  </data>
+  <data name="MinimalShiftToKitchenWorker" xml:space="preserve">
+    <value>"Минимальная длительность смены работника кухни"</value>
+  </data>
+  <data name="MinimalShiftToPersonalManager" xml:space="preserve">
+    <value>"Минимальная длительность смены менеджера по персоналу"</value>
+  </data>
+  <data name="MinimumStock" xml:space="preserve">
+    <value>Минимальный запас</value>
+  </data>
+  <data name="MinuteAbbr" xml:space="preserve">
+    <value>мин.</value>
+    <comment>Сокращение от "минута", Контекст "5 минут"</comment>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Понедельник</value>
+  </data>
+  <data name="MondayShort" xml:space="preserve">
+    <value>Пн</value>
+  </data>
+  <data name="MonthlySpeed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="MonthlyStatisticBuildLink" xml:space="preserve">
+    <value>Построить</value>
+  </data>
+  <data name="MonthlyStatisticByDelivery" xml:space="preserve">
+    <value>Доставка: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByDeliveryWithPercent" xml:space="preserve">
+    <value>Доставка: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByPickup" xml:space="preserve">
+    <value>Самовывоз: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByPickupWithPercent" xml:space="preserve">
+    <value>Самовывоз: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticByStationary" xml:space="preserve">
+    <value>Ресторан: {0} {1}</value>
+  </data>
+  <data name="MonthlyStatisticByStationaryWithPercent" xml:space="preserve">
+    <value>Ресторан: {0} {1} ({2}%)</value>
+  </data>
+  <data name="MonthlyStatisticDateFormat" xml:space="preserve">
+    <value>MMMM yy</value>
+  </data>
+  <data name="MonthlyStatisticPercentage" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheck" xml:space="preserve">
+    <value>Средний чек</value>
+  </data>
+  <data name="MonthlyStatisticsAverageCheckUnitOfMeasure" xml:space="preserve">
+    <value>руб.</value>
+  </data>
+  <data name="MonthlyStatisticsCertificates" xml:space="preserve">
+    <value>Сертификаты</value>
+  </data>
+  <data name="MonthlyStatisticsCertificatesUnitOfMeasure" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="MonthlyStatisticsCountByLastTwelveMonths" xml:space="preserve">
+    <value>Количество заказов за последние 24 месяца</value>
+  </data>
+  <data name="MonthlyStatisticsCountByPeriod" xml:space="preserve">
+    <value>Количество заказов за</value>
+  </data>
+  <data name="MonthlyStatisticsDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="MonthlyStatisticsEfficiency" xml:space="preserve">
+    <value>Эффективность</value>
+  </data>
+  <data name="MonthlyStatisticsGrowth" xml:space="preserve">
+    <value>Прирост выручки</value>
+  </data>
+  <data name="MonthlyStatisticsGrowthUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCost" xml:space="preserve">
+    <value>LC (кухня)</value>
+  </data>
+  <data name="MonthlyStatisticsLabourCostUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsLossesTitle" xml:space="preserve">
+    <value>Потери</value>
+  </data>
+  <data name="MonthlyStatisticsLossesUnit" xml:space="preserve">
+    <value>%(общий, от выручки)</value>
+  </data>
+  <data name="MonthlyStatisticsOrders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersGrowth" xml:space="preserve">
+    <value>Прирост заказов</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHour" xml:space="preserve">
+    <value>Заказов на курьера в час</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersOnCourierInHourUnitOfMeasure" xml:space="preserve">
+    <value>шт/чел ч</value>
+  </data>
+  <data name="MonthlyStatisticsOrdersUnitOfMeasure" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHour" xml:space="preserve">
+    <value>Пицц и закусок на человека в час</value>
+  </data>
+  <data name="MonthlyStatisticsPizzasAndSnacksOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>шт/чел ч</value>
+  </data>
+  <data name="MonthlyStatisticsProductivityTitle" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="MonthlyStatisticsRevenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByLastTwelveMonths" xml:space="preserve">
+    <value>Выручка за последние 24 месяца</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueByPeriod" xml:space="preserve">
+    <value>Выручка общая за</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHour" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueOnEmployeeInHourUnitOfMeasure" xml:space="preserve">
+    <value>руб/чел ч</value>
+  </data>
+  <data name="MonthlyStatisticsRevenueUnitOfMeasure" xml:space="preserve">
+    <value>руб.</value>
+  </data>
+  <data name="MonthlyStatisticsRevenuPerPerson" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="MonthlyStatisticsSaleTitle" xml:space="preserve">
+    <value>Продажи</value>
+  </data>
+  <data name="MonthlyStatisticsSpeed" xml:space="preserve">
+    <value>Скорость кухни</value>
+  </data>
+  <data name="MonthlyStatisticsSpeedUnitOfMeasure" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="MonthlyStatisticsStopSalesTimeTitle" xml:space="preserve">
+    <value>Стоп продажи</value>
+  </data>
+  <data name="MonthlyStatisticUnitOfMeasureCountShort" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Мой аккаунт</value>
+  </data>
+  <data name="NewBonus" xml:space="preserve">
+    <value>Новая премия</value>
+  </data>
+  <data name="NewClientsTitle" xml:space="preserve">
+    <value>Новые клиенты</value>
+  </data>
+  <data name="NewRate" xml:space="preserve">
+    <value>Новая премия</value>
+  </data>
+  <data name="NewRevenue" xml:space="preserve">
+    <value>Новое поступление</value>
+  </data>
+  <data name="NewTransfer" xml:space="preserve">
+    <value>Новое перемещение</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="NoAddedPosition" xml:space="preserve">
+    <value>нет добавленных позиций</value>
+  </data>
+  <data name="NoCallCenterFound" xml:space="preserve">
+    <value>Не найден открытый колл-центр</value>
+  </data>
+  <data name="NoEmployeeShift" xml:space="preserve">
+    <value>--:--</value>
+  </data>
+  <data name="NotApplicable" xml:space="preserve">
+    <value>не применимо</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Ничего не найдено</value>
+  </data>
+  <data name="NovicesLabel" xml:space="preserve">
+    <value>Стажеры</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="NumDay1" xml:space="preserve">
+    <value>день</value>
+    <comment>Слово "день" после числительного, первая форма: 1 день, 21 день и т.д.</comment>
+  </data>
+  <data name="NumDay2" xml:space="preserve">
+    <value>дня</value>
+    <comment>Слово "день" после числительного, вторая форма: 2 дня, 3 дня, 4 дня, 22 дня, 23 дня, 24 дня и т.д.</comment>
+  </data>
+  <data name="NumDay3" xml:space="preserve">
+    <value>дней</value>
+    <comment>Слово "день" после числительного, третья форма: 5 дней, 25 дней и т.д.</comment>
+  </data>
+  <data name="NumMonth1" xml:space="preserve">
+    <value>мес.</value>
+    <comment>Слово "месяц" после числительного, первая форма: 1 месяц, 21 месяц и т.д.</comment>
+  </data>
+  <data name="NumMonth2" xml:space="preserve">
+    <value>мес.</value>
+    <comment>Слово "месяц" после числительного, вторая форма: 2 месяца, 3 месяца, 4 месяца, 22 месяца, 23 месяца, 24 месяца и т.д.</comment>
+  </data>
+  <data name="NumMonth3" xml:space="preserve">
+    <value>мес.</value>
+    <comment>Слово "месяц" после числительного, третья форма: 5 месяцев, 25 месяцев и т.д.</comment>
+  </data>
+  <data name="NumYear1" xml:space="preserve">
+    <value>год</value>
+    <comment>Слово "год" после числительного, первая форма: 1 год, 21 год и т.д.</comment>
+  </data>
+  <data name="NumYear2" xml:space="preserve">
+    <value>года</value>
+    <comment>Слово "года" после числительного, вторая форма: 2 года, 3 года, 4 года, 22 года, 23 года, 24 года и т.д.</comment>
+  </data>
+  <data name="NumYear3" xml:space="preserve">
+    <value>лет</value>
+    <comment>Слово "год" после числительного, третья форма: 5 лет, 25 лет и т.д.</comment>
+  </data>
+  <data name="OfficeManagerRoleText" xml:space="preserve">
+    <value>Администратор подразделения</value>
+  </data>
+  <data name="OperationalStatistics" xml:space="preserve">
+    <value>Сводка</value>
+  </data>
+  <data name="OperationalStatistics2WeekAgo" xml:space="preserve">
+    <value>2 недели назад</value>
+  </data>
+  <data name="OperationalStatisticsAssemblyTable" xml:space="preserve">
+    <value>Начинение</value>
+  </data>
+  <data name="OperationalStatisticsAveragePreparationOrdersTime" xml:space="preserve">
+    <value>Среднее время приготовления заказов</value>
+  </data>
+  <data name="OperationalStatisticsCertificates" xml:space="preserve">
+    <value>Сертификаты</value>
+  </data>
+  <data name="OperationalStatisticsCompositeProductsTable" xml:space="preserve">
+    <value>Закуски</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndComposite" xml:space="preserve">
+    <value>Пицц и закусок</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasAndCompositeOnEmployee" xml:space="preserve">
+    <value>Количество пицц и закусок на человека в час</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployee" xml:space="preserve">
+    <value>Количество пицц на человека в час</value>
+  </data>
+  <data name="OperationalStatisticsCountPizzasOnEmployeeShort" xml:space="preserve">
+    <value>Пицц на человека в час</value>
+  </data>
+  <data name="OperationalStatisticsCouriersCountAndInQueue" xml:space="preserve">
+    <value>Курьеры всего / в очереди</value>
+  </data>
+  <data name="OperationalStatisticsCulture" xml:space="preserve">
+    <value>ru-RU</value>
+  </data>
+  <data name="OperationalStatisticsDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="OperationalStatisticsDelayedProducts" xml:space="preserve">
+    <value>Отложено</value>
+  </data>
+  <data name="OperationalStatisticsDelivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryAndPickup" xml:space="preserve">
+    <value>Доставка и самовывоз</value>
+  </data>
+  <data name="OperationalStatisticsDeliveryWorkTitle" xml:space="preserve">
+    <value>Работа доставки</value>
+  </data>
+  <data name="OperationalStatisticsDontDeliveredOrders" xml:space="preserve">
+    <value>Заказов остывает на тепловой полке</value>
+  </data>
+  <data name="OperationalStatisticsDoughTable" xml:space="preserve">
+    <value>Тесто</value>
+  </data>
+  <data name="OperationalStatisticsEmployeesOnShiftNow" xml:space="preserve">
+    <value>Сотрудников на смене сейчас</value>
+  </data>
+  <data name="OperationalStatisticsForCurrentDay" xml:space="preserve">
+    <value>Сводка за день</value>
+  </data>
+  <data name="OperationalStatisticsInProduction" xml:space="preserve">
+    <value>В работе</value>
+  </data>
+  <data name="OperationalStatisticsInQueue" xml:space="preserve">
+    <value>В очереди</value>
+  </data>
+  <data name="OperationalStatisticsKitchenLoad" xml:space="preserve">
+    <value>Загруженность линии</value>
+  </data>
+  <data name="OperationalStatisticsKitchenPizzaLoad" xml:space="preserve">
+    <value>Загруженность линии:</value>
+  </data>
+  <data name="OperationalStatisticsKitchenWork" xml:space="preserve">
+    <value>Работа кухни</value>
+  </data>
+  <data name="OperationalStatisticsLastFourWeek" xml:space="preserve">
+    <value>Последние четыре недели</value>
+  </data>
+  <data name="OperationalStatisticsNow" xml:space="preserve">
+    <value>Сейчас</value>
+  </data>
+  <data name="OperationalStatisticsOrders" xml:space="preserve">
+    <value>Заказы</value>
+  </data>
+  <data name="OperationalStatisticsOrdersCountOnCourierInHour" xml:space="preserve">
+    <value>Заказов на курьера в час</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWork" xml:space="preserve">
+    <value>Заказы в производстве</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkInStationary" xml:space="preserve">
+    <value>В ресторан</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkOnDelivery" xml:space="preserve">
+    <value>На доставку</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkPickup" xml:space="preserve">
+    <value>Самовывоз</value>
+  </data>
+  <data name="OperationalStatisticsOrdersInWorkTotalCount" xml:space="preserve">
+    <value>Всего заказов</value>
+  </data>
+  <data name="OperationalStatisticsOrdersOnDelivery" xml:space="preserve">
+    <value>Заказов на доставку</value>
+  </data>
+  <data name="OperationalStatisticsPackingTable" xml:space="preserve">
+    <value>Упаковка</value>
+  </data>
+  <data name="OperationalStatisticsProductivity" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="OperationalStatisticsProductsInWork" xml:space="preserve">
+    <value>Продукты в производстве</value>
+  </data>
+  <data name="OperationalStatisticsRevenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="OperationalStatisticsRevenueDelivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="OperationalStatisticsRevenueOnEmployee" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="OperationalStatisticsRevenuePickup" xml:space="preserve">
+    <value>Самовывоз</value>
+  </data>
+  <data name="OperationalStatisticsRevenueStationary" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="OperationalStatisticsRevenueTotal" xml:space="preserve">
+    <value>Общая</value>
+  </data>
+  <data name="OperationalStatisticsRevenueWithCurrency" xml:space="preserve">
+    <value>Выручка, руб.</value>
+  </data>
+  <data name="OperationalStatisticsShortCurrency" xml:space="preserve">
+    <value>руб.</value>
+  </data>
+  <data name="OperationalStatisticsStationary" xml:space="preserve">
+    <value>Ресторан</value>
+  </data>
+  <data name="OperationalStatisticsStopSale" xml:space="preserve">
+    <value>Остановка продаж</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersCount" xml:space="preserve">
+    <value>Кол-во просроченных заказов</value>
+  </data>
+  <data name="OperationalStatisticsTimeOutOrdersPercent" xml:space="preserve">
+    <value>Доля просроченных заказов</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnDelivery" xml:space="preserve">
+    <value>Заказы, доставка</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersOnStationary" xml:space="preserve">
+    <value>Заказы, ресторан</value>
+  </data>
+  <data name="OperationalStatisticsTitleOrdersTimeOutPercentage" xml:space="preserve">
+    <value>Доля просроченных заказов</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnDelivery" xml:space="preserve">
+    <value>Выручка, доставка</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueOnStationary" xml:space="preserve">
+    <value>Выручка, ресторан</value>
+  </data>
+  <data name="OperationalStatisticsTitleRevenueTotal" xml:space="preserve">
+    <value>Выручка, общая</value>
+  </data>
+  <data name="OperationalStatisticsToday" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="OperationalStatisticsTotalRevenueNow" xml:space="preserve">
+    <value>Выручка общая сейчас</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgo" xml:space="preserve">
+    <value>Неделю назад</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoInCurrentHour" xml:space="preserve">
+    <value>Неделю назад в этот час</value>
+  </data>
+  <data name="OperationalStatisticsWeekAgoOnCurrentHour" xml:space="preserve">
+    <value>Неделю назад на этот час</value>
+  </data>
+  <data name="OperationalStatisticsYesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+  <data name="Ordered" xml:space="preserve">
+    <value>Заказано</value>
+  </data>
+  <data name="OrderedCount" xml:space="preserve">
+    <value>Заказанное кол-во</value>
+  </data>
+  <data name="OrdersCountTitle" xml:space="preserve">
+    <value>Количество заказов</value>
+  </data>
+  <data name="OrdersForecastForDay" xml:space="preserve">
+    <value>Прогноз за день</value>
+  </data>
+  <data name="OrdersIncreaseTooltip" xml:space="preserve">
+    <value>Прирост количества заказов по сравнению с тем же днем недели в прошлом году</value>
+  </data>
+  <data name="OrdersOnCourierInHourTooltip" xml:space="preserve">
+    <value>Сколько заказов в час отвозит один курьер</value>
+  </data>
+  <data name="OrdersPerTrip" xml:space="preserve">
+    <value>Заказов за поездку</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Организация</value>
+  </data>
+  <data name="PackageDamaged" xml:space="preserve">
+    <value>Повреждение упаковки</value>
+  </data>
+  <data name="PenultimateAudit" xml:space="preserve">
+    <value>Предпоследняя ревизия</value>
+  </data>
+  <data name="PeopleAbbr" xml:space="preserve">
+    <value>чел.</value>
+    <comment>Сокращение от "человек", контекст: "10 чел."</comment>
+  </data>
+  <data name="PerformanceAlarm" xml:space="preserve">
+    <value>производительность ниже цели дня</value>
+  </data>
+  <data name="PerformanceOk" xml:space="preserve">
+    <value>производительность соответствует цели дня</value>
+  </data>
+  <data name="PerformanceYellow" xml:space="preserve">
+    <value>производительность в 2 раза выше цели дня</value>
+  </data>
+  <data name="PersonalFoodReportType" xml:space="preserve">
+    <value>питание персонала</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="PhoneNumberMask" xml:space="preserve">
+    <value>+7 (999) 999-99-99</value>
+  </data>
+  <data name="PizzasAndSnacksOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Сколько пицц и закусок в час приходится на одного сотрудника кухни</value>
+  </data>
+  <data name="PLCaption" xml:space="preserve">
+    <value>P&amp;L</value>
+  </data>
+  <data name="PreviosTwelveMonths" xml:space="preserve">
+    <value>Предыдущие 12 месяцев</value>
+  </data>
+  <data name="PreviousWeek" xml:space="preserve">
+    <value>Прошлая неделя</value>
+  </data>
+  <data name="PreviousYear" xml:space="preserve">
+    <value>Год назад</value>
+  </data>
+  <data name="PriceLabel" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="PricePerKillogramm" xml:space="preserve">
+    <value>Цена за кг</value>
+     <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="PricePerKillogrammWithoutVAT" xml:space="preserve">
+    <value>Цена за кг без НДС</value>
+     <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="PricePerPiece" xml:space="preserve">
+    <value>Цена за ед.</value>
+     <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="PricePerPieceWithoutVAT" xml:space="preserve">
+    <value>Цена за ед. товара без НДС</value>
+     <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="ProductionSpeedBadColumnTitle" xml:space="preserve">
+    <value>Медленнее</value>
+    <comment>Название столбца, в котором указан процент продуктов, попавших в штрафной мотивационный интервал</comment>
+  </data>
+  <data name="ProductionSpeedGoodColumnTitle" xml:space="preserve">
+    <value>Быстрее</value>
+    <comment>Название столбца, в котором указан процент продуктов, попавших в бонусный мотивационный интервал</comment>
+  </data>
+  <data name="ProductionSpeedHeader" xml:space="preserve">
+    <value>Скорость приготовления</value>
+  </data>
+  <data name="ProductionSpeedNormalColumnTitle" xml:space="preserve">
+    <value>Норма</value>
+    <comment>Название столбца, в котором указан процент продуктов, попавших в нейтральный мотивационный интервал</comment>
+  </data>
+  <data name="ProductionSpeedShiftsNames" xml:space="preserve">
+    <value>Утренняя смена,Вечерняя смена,Ночная смена</value>
+    <comment>Список названий смен, разделённых запятыми</comment>
+  </data>
+  <data name="ProductShort" xml:space="preserve">
+    <value>&lt;span class="product-short-label"&gt;прод&lt;/span&gt;</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Получено</value>
+  </data>
+  <data name="ReceivedCount" xml:space="preserve">
+    <value>Полученное кол-во</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Удален</value>
+  </data>
+  <data name="RemovePeriod" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="ReportByPeriod" xml:space="preserve">
+    <value>период</value>
+  </data>
+  <data name="ReportDay" xml:space="preserve">
+    <value>по дням</value>
+  </data>
+  <data name="ReportDayForExcel" xml:space="preserve">
+    <value>Расход за 7 дней</value>
+  </data>
+  <data name="ReportLabel" xml:space="preserve">
+    <value>Отчет</value>
+  </data>
+  <data name="ReportMonth" xml:space="preserve">
+    <value>по месяцам</value>
+  </data>
+  <data name="ReportMonthForExcel" xml:space="preserve">
+    <value>Расход за 7 месяцев</value>
+  </data>
+  <data name="ReportPeriodVariant" xml:space="preserve">
+    <value>Показать расход:</value>
+  </data>
+  <data name="ReportTypeLabel" xml:space="preserve">
+    <value>Выберите вид расхода</value>
+  </data>
+  <data name="ReportWeek" xml:space="preserve">
+    <value>по неделям</value>
+  </data>
+  <data name="ReportWeekForExcel" xml:space="preserve">
+    <value>Расход за 7 недель</value>
+  </data>
+  <data name="ReserveFriday" xml:space="preserve">
+    <value>Запас, ПТ</value>
+  </data>
+  <data name="ReserveMonday" xml:space="preserve">
+    <value>Запас, ПН</value>
+  </data>
+  <data name="ReserveSaturday" xml:space="preserve">
+    <value>Запас, СБ</value>
+  </data>
+  <data name="ReserveSunday" xml:space="preserve">
+    <value>Запас, ВС</value>
+  </data>
+  <data name="ReserveThursday" xml:space="preserve">
+    <value>Запас, ЧТ</value>
+  </data>
+  <data name="ReserveTuesday" xml:space="preserve">
+    <value>Запас, ВТ</value>
+  </data>
+  <data name="ReserveWednesday" xml:space="preserve">
+    <value>Запас, СР</value>
+  </data>
+  <data name="ReturnToSupplies" xml:space="preserve">
+    <value>Вернуться к вводу прихода</value>
+  </data>
+  <data name="ReturnToTransfers" xml:space="preserve">
+    <value>Вернуться к вводу перемещений</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Выручка</value>
+  </data>
+  <data name="RevenueCurrency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="RevenueDate" xml:space="preserve">
+    <value>Дата приёма</value>
+    <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="RevenueFrom" xml:space="preserve">
+    <value>От кого (поставщик)</value>
+  </data>
+  <data name="RevenueIncreaseTooltip" xml:space="preserve">
+    <value>Прирост выручки по сравнению с тем же днем недели в прошлом году</value>
+  </data>
+  <data name="RevenueInfo" xml:space="preserve">
+    <value>Информация о поступлении</value>
+  </data>
+  <data name="RevenueNumber" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="RevenueOnEmployeeInHourTooltip" xml:space="preserve">
+    <value>Сколько выручки в час приходится на одного сотрудника кухни</value>
+  </data>
+  <data name="RevenueText" xml:space="preserve">
+    <value>/чел. в час</value>
+  </data>
+  <data name="RevenueTo" xml:space="preserve">
+    <value>Куда (cклад)</value>
+  </data>
+  <data name="RevenueTotal" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="RevenueUser" xml:space="preserve">
+    <value>Кто принял</value>
+  </data>
+  <data name="RevenueWhoTook" xml:space="preserve">
+    <value>Кто принял</value>
+  </data>
+  <data name="Revision" xml:space="preserve">
+    <value>Ревизия</value>
+  </data>
+  <data name="RevisionNotExecuted" xml:space="preserve">
+    <value>Ревизия за данный период не проводилась</value>
+  </data>
+  <data name="RevisionNotExecutedYet" xml:space="preserve">
+    <value>Ревизия еще не была проведена</value>
+  </data>
+  <data name="RevisionSettings" xml:space="preserve">
+    <value>Настройка ревизии</value>
+  </data>
+  <data name="RomanianLeu" xml:space="preserve">
+    <value>Румынский лей</value>
+  </data>
+  <data name="Ruble" xml:space="preserve">
+    <value>Рубль</value>
+  </data>
+  <data name="SalesReportType" xml:space="preserve">
+    <value>продажи</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Суббота</value>
+  </data>
+  <data name="SaturdayShort" xml:space="preserve">
+    <value>Сб</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>Сохранить и выйти</value>
+  </data>
+  <data name="SaveAndSend" xml:space="preserve">
+    <value>Сохранить и отправить</value>
+  </data>
+  <data name="ScheduleAbsenceLabel" xml:space="preserve">
+    <value>Отсутствует</value>
+  </data>
+  <data name="ScheduleActionsLink" xml:space="preserve">
+    <value>действия</value>
+  </data>
+  <data name="ScheduleAddItemLink" xml:space="preserve">
+    <value>в график</value>
+  </data>
+  <data name="ScheduleAllEmployeeTypesLabel" xml:space="preserve">
+    <value>Все должности</value>
+  </data>
+  <data name="ScheduleAvailableTitle" xml:space="preserve">
+    <value>Доступны</value>
+    <comment>Контекст "Сотрудники, которые доступны в этот день"</comment>
+  </data>
+  <data name="ScheduleCategoryLabel" xml:space="preserve">
+    <value>Ставка</value>
+  </data>
+  <data name="ScheduleChangeCategoryHeader" xml:space="preserve">
+    <value>Выберите временную категорию сотрудника</value>
+  </data>
+  <data name="ScheduleChangeCategoryNoneLabel" xml:space="preserve">
+    <value>Не менять категорию</value>
+  </data>
+  <data name="ScheduleCommentAddLabel" xml:space="preserve">
+    <value>+ Добавить комментарий</value>
+  </data>
+  <data name="ScheduleCommentLabel" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="ScheduleDaySwticher" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="ScheduleDeleteLink" xml:space="preserve">
+    <value>Убрать из графика</value>
+  </data>
+  <data name="ScheduleDescription" xml:space="preserve">
+    <value>Инструмент для составления рабочего графика смены.</value>
+  </data>
+  <data name="ScheduleEveningLabel" xml:space="preserve">
+    <value>Вечер</value>
+  </data>
+  <data name="ScheduleFoundLabel" xml:space="preserve">
+    <value>Найдено</value>
+  </data>
+  <data name="ScheduleHeader" xml:space="preserve">
+    <value>График смены</value>
+  </data>
+  <data name="ScheduleHint" xml:space="preserve">
+    <value>Установите время на графике, чтобы увидеть списки доступных сотрудников.</value>
+  </data>
+  <data name="ScheduleHolidayTitle" xml:space="preserve">
+    <value>Выходной</value>
+  </data>
+  <data name="ScheduleHoursLabel" xml:space="preserve">
+    <value>отработано</value>
+  </data>
+  <data name="ScheduleHoursSortLabel" xml:space="preserve">
+    <value>Отработано часов</value>
+  </data>
+  <data name="ScheduleLastShiftLabel" xml:space="preserve">
+    <value>послед. смена</value>
+  </data>
+  <data name="ScheduleMorningLabel" xml:space="preserve">
+    <value>Утро</value>
+  </data>
+  <data name="ScheduleMoveLink" xml:space="preserve">
+    <value>Переместить</value>
+  </data>
+  <data name="ScheduleNameSortLabel" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="ScheduleNightLabel" xml:space="preserve">
+    <value>Ночь</value>
+  </data>
+  <data name="ScheduleOtherTitle" xml:space="preserve">
+    <value>Остальные</value>
+    <comment>Контекст "Остальные сотрудники"</comment>
+  </data>
+  <data name="SchedulePizzeriaOption" xml:space="preserve">
+    <value>Пиццерия</value>
+  </data>
+  <data name="ScheduleProductivityFact" xml:space="preserve">
+    <value>Производ., факт.</value>
+  </data>
+  <data name="ScheduleProductivityForecast" xml:space="preserve">
+    <value>Производ., прогноз.</value>
+  </data>
+  <data name="ScheduleRecommendedTitle" xml:space="preserve">
+    <value>Рекомендуемые</value>
+    <comment>Контекст "Рекомендуемые сотрудники"</comment>
+  </data>
+  <data name="ScheduleRemoveItemLink" xml:space="preserve">
+    <value>Убрать из графика</value>
+  </data>
+  <data name="ScheduleSearchAllLink" xml:space="preserve">
+    <value>Искать во всех пиццериях</value>
+  </data>
+  <data name="ScheduleSearchPlaceholder" xml:space="preserve">
+    <value>фамилия</value>
+  </data>
+  <data name="ScheduleSearchText" xml:space="preserve">
+    <value>Поиск по фамилии</value>
+  </data>
+  <data name="ScheduleShift8Option" xml:space="preserve">
+    <value>8-часовая смена</value>
+  </data>
+  <data name="ScheduleShiftCountWarning" xml:space="preserve">
+    <value>У сотрудника {0} смены в один день</value>
+  </data>
+  <data name="ScheduleShiftError" xml:space="preserve">
+    <value>Невозможно сохранить изменения. У сотрудника уже есть смена c {0} до {1}  в отделе {2} на станции {3}.</value>
+  </data>
+  <data name="ScheduleShiftLengthWarning" xml:space="preserve">
+    <value>У сотрудника смена длиной в {0} часов</value>
+  </data>
+  <data name="ScheduleShiftSortLabel" xml:space="preserve">
+    <value>Последняя смена</value>
+  </data>
+  <data name="ScheduleTableTitle" xml:space="preserve">
+    <value>В графике</value>
+  </data>
+  <data name="ScheduleTodayText" xml:space="preserve">
+    <value>сегодня</value>
+  </data>
+  <data name="ScheduleUnknownError" xml:space="preserve">
+    <value>Невозможно сохранить изменения. Произошла неизвестная ошибка.</value>
+  </data>
+  <data name="ScheduleWeekSwitcher" xml:space="preserve">
+    <value>Неделя</value>
+  </data>
+  <data name="ScheduleZoneLabel" xml:space="preserve">
+    <value>Станция</value>
+  </data>
+  <data name="SelectAllLabel" xml:space="preserve">
+    <value>Выбрать всё </value>
+  </data>
+  <data name="SelectAvailableView" xml:space="preserve">
+    <value>выберите нужный вид</value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>выберите дату</value>
+  </data>
+  <data name="Selected" xml:space="preserve">
+    <value>Выбрано</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>Выберите организацию</value>
+  </data>
+  <data name="SelectPeriod" xml:space="preserve">
+    <value>Выберите период</value>
+  </data>
+  <data name="SelectPeriodEndDate" xml:space="preserve">
+    <value>Выберите дату окончания периода</value>
+  </data>
+  <data name="SelectPeriodStartDate" xml:space="preserve">
+    <value>Выберите дату начала периода</value>
+  </data>
+  <data name="SelectReasonLabel" xml:space="preserve">
+    <value>Выберите причину списания</value>
+  </data>
+  <data name="SelectUnitLabel" xml:space="preserve">
+    <value>Выберите отдел</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Send_Duplicate[1]" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="SetTarget" xml:space="preserve">
+    <value>установить</value>
+  </data>
+  <data name="ShiftDay" xml:space="preserve">
+    <value>день</value>
+  </data>
+  <data name="ShiftEmployeeAwayText" xml:space="preserve">
+    <value>ушёл</value>
+    <comment>Контекст "сотрудник ушел"</comment>
+  </data>
+  <data name="ShiftEmployeeCategoryColumnTitle" xml:space="preserve">
+    <value>Категория</value>
+    <comment>Категория сотрудника</comment>
+  </data>
+  <data name="ShiftEmployeeCountLabel" xml:space="preserve">
+    <value>Сейчас на смене</value>
+  </data>
+  <data name="ShiftEmployeeFullNameColumnTitle" xml:space="preserve">
+    <value>ФИО</value>
+    <comment>Сокращение от "Фамилия, Имя, Отчество"</comment>
+  </data>
+  <data name="ShiftEmployeeShiftText" xml:space="preserve">
+    <value>на смене</value>
+    <comment>Контекст "сотрудник на смене"</comment>
+  </data>
+  <data name="ShiftEmployeeStatusColumnTitle" xml:space="preserve">
+    <value>Статус</value>
+    <comment>Статус сотрудника</comment>
+  </data>
+  <data name="ShiftEmployeeTimeColumnTitle" xml:space="preserve">
+    <value>Время смены</value>
+  </data>
+  <data name="ShiftEmployeeTodayAwayTitle" xml:space="preserve">
+    <value>Ушли сегодня</value>
+    <comment>Контекст "Сотрудники, которые ушли сегодня со смены"</comment>
+  </data>
+  <data name="ShiftEmployeeTodayShiftTitle" xml:space="preserve">
+    <value>На смене</value>
+    <comment>Сокращение от "На смене: 10 человек"</comment>
+  </data>
+  <data name="ShiftEmployeeYesterdayAwayTitle" xml:space="preserve">
+    <value>Ушли вчера</value>
+    <comment>Контекст "Сотрудники, которые ушли вчера со смены"</comment>
+  </data>
+  <data name="ShiftEvening" xml:space="preserve">
+    <value>вечер</value>
+  </data>
+  <data name="ShiftMorning" xml:space="preserve">
+    <value>утро-день</value>
+  </data>
+  <data name="ShiftNight" xml:space="preserve">
+    <value>ночь</value>
+  </data>
+  <data name="ShiftNormsCashierLabel" xml:space="preserve">
+    <value>касса</value>
+  </data>
+  <data name="ShiftNormsChooseDateLabel" xml:space="preserve">
+    <value>Выберите дату</value>
+  </data>
+  <data name="ShiftNormsCleaningLabel" xml:space="preserve">
+    <value>чистота</value>
+  </data>
+  <data name="ShiftNormsCouriersLabel" xml:space="preserve">
+    <value>курьеры</value>
+  </data>
+  <data name="ShiftNormsDay0Label" xml:space="preserve">
+    <value>Нетиповой день</value>
+  </data>
+  <data name="ShiftNormsDeliveryLabel" xml:space="preserve">
+    <value>доставка</value>
+  </data>
+  <data name="ShiftNormsExcelExportLink" xml:space="preserve">
+    <value>Экспорт в Excel</value>
+  </data>
+  <data name="ShiftNormsFillTableLink" xml:space="preserve">
+    <value>Заполнить таблицу</value>
+  </data>
+  <data name="ShiftNormsHeader" xml:space="preserve">
+    <value>Нормы смены</value>
+  </data>
+  <data name="ShiftNormsKitchenLabel" xml:space="preserve">
+    <value>кухня</value>
+  </data>
+  <data name="ShiftNormsLastChangedLabel" xml:space="preserve">
+    <value>Последнее изменение</value>
+    <comment>Контекст "Последнее изменение: 01.01.2050"</comment>
+  </data>
+  <data name="ShiftNormsLastChangedNoneLabel" xml:space="preserve">
+    <value>нет</value>
+    <comment>Контекст "Последнее изменение: нет"</comment>
+  </data>
+  <data name="ShiftNormsManagersLabel" xml:space="preserve">
+    <value>менеджеры</value>
+  </data>
+  <data name="ShiftNormsNormLabel" xml:space="preserve">
+    <value>Норма</value>
+  </data>
+  <data name="ShiftNormsNormsLabel" xml:space="preserve">
+    <value>Нормы</value>
+  </data>
+  <data name="ShiftNormsNovicesLabel" xml:space="preserve">
+    <value>стажеры</value>
+  </data>
+  <data name="ShiftNormsProductivityColumnTitle" xml:space="preserve">
+    <value>Производ.</value>
+    <comment>Сокращение от "Производительность"</comment>
+  </data>
+  <data name="ShiftNormsProductivityLabel" xml:space="preserve">
+    <value>Производительность</value>
+  </data>
+  <data name="ShiftNormsRecommendedColumnTitle" xml:space="preserve">
+    <value>Рекоменд.</value>
+    <comment>Сокращение от "Рекомендация"</comment>
+  </data>
+  <data name="ShiftNormsSalesForecastColumnTitle" xml:space="preserve">
+    <value>Прогноз продаж</value>
+  </data>
+  <data name="ShiftNormsSaveLink" xml:space="preserve">
+    <value>Сохранить изменения</value>
+  </data>
+  <data name="ShiftNormsTimeColumnTitle" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="ShiftSettingsHeader" xml:space="preserve">
+    <value>Параметры смен</value>
+  </data>
+  <data name="ShiftSettingsNoNightShift" xml:space="preserve">
+    <value>Нет ночной смены</value>
+  </data>
+  <data name="ShiftSettingsShiftOverlapError" xml:space="preserve">
+    <value>Смены не могут пересекаться</value>
+  </data>
+  <data name="ShiftSettingsTotalTimeError" xml:space="preserve">
+    <value>Суммарное время не может быть больше 24 часов</value>
+  </data>
+  <data name="Shipment" xml:space="preserve">
+    <value>Отгрузка</value>
+  </data>
+  <data name="ShippedCount" xml:space="preserve">
+    <value>Отгруженное кол-во</value>
+  </data>
+  <data name="ShippingDate" xml:space="preserve">
+    <value>Дата отгрузки</value>
+  </data>
+  <data name="ShortRuble" xml:space="preserve">
+    <value>руб</value>
+  </data>
+  <data name="SpeedTooltip" xml:space="preserve">
+    <value>Доля продуктов, приготовленных вовремя </value>
+  </data>
+  <data name="StaffLanch" xml:space="preserve">
+    <value>Питание персонала</value>
+  </data>
+  <data name="StaffOverloaded" xml:space="preserve">
+    <value>Персонал перегружен</value>
+  </data>
+  <data name="Station_Backup" xml:space="preserve">
+    <value>Резерв</value>
+  </data>
+  <data name="Station_Delivery" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="Station_Sanitation" xml:space="preserve">
+    <value>Чистота</value>
+  </data>
+  <data name="Station_Trainees" xml:space="preserve">
+    <value>Стажеры</value>
+  </data>
+  <data name="Station_СashboxAndHoll" xml:space="preserve">
+    <value>Касса и зал</value>
+  </data>
+  <data name="StockBalance" xml:space="preserve">
+    <value>Складские остатки</value>
+  </data>
+  <data name="StockBalanceMenuItem" xml:space="preserve">
+    <value>Складские остатки</value>
+  </data>
+  <data name="StopSaleTimeTooltip" xml:space="preserve">
+    <value>Общая длительность полных остановок продаж</value>
+  </data>
+  <data name="Substation_Line" xml:space="preserve">
+    <value>Горячий цех</value>
+  </data>
+  <data name="Substation_Prep" xml:space="preserve">
+    <value>Холодный цех</value>
+  </data>
+  <data name="Substation_SlicingAndPacking" xml:space="preserve">
+    <value>Нарезка и упаковка</value>
+  </data>
+  <data name="Substation_Supplies" xml:space="preserve">
+    <value>Запасы</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Готово!</value>
+  </data>
+  <data name="SummaLabel" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="SummaOfVAT" xml:space="preserve">
+    <value>Сумма НДС</value>
+    <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="SummaWithoutVAT" xml:space="preserve">
+    <value>Сумма без НДС</value>
+    <comment>Менеджер офиса / Учет / Списания</comment>
+  </data>
+  <data name="SummaWithVAT" xml:space="preserve">
+    <value>Сумма с НДС</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Воскресенье</value>
+  </data>
+  <data name="SundayShort" xml:space="preserve">
+    <value>Вс</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Поставщик</value>
+  </data>
+  <data name="SupplierAddDebt" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="SupplierAddDebtTitle" xml:space="preserve">
+    <value>Добавить задолженность</value>
+  </data>
+  <data name="SupplierCloseDebt" xml:space="preserve">
+    <value>Погасить</value>
+  </data>
+  <data name="SupplierConfirmDebtClose" xml:space="preserve">
+    <value>Действительно погасить задолженность?</value>
+  </data>
+  <data name="SupplierDebt" xml:space="preserve">
+    <value>Задолженность</value>
+  </data>
+  <data name="SupplierListHeader" xml:space="preserve">
+    <value>Поставщики</value>
+  </data>
+  <data name="SuppliersAndMaterials" xml:space="preserve">
+    <value>Поставщики и cырьё</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>Поступления</value>
+  </data>
+  <data name="SupplyDebiting" xml:space="preserve">
+    <value>Списания</value>
+  </data>
+  <data name="SupplyIncoming" xml:space="preserve">
+    <value>Приходы</value>
+  </data>
+  <data name="SupplyMaterialLabel" xml:space="preserve">
+    <value>Приход сырья</value>
+  </data>
+  <data name="Supply_MaterialUnavailable" xml:space="preserve">
+    <value>Присутствует материал, недоступный на дату прихода</value>
+  </data>
+  <data name="Supply_TaraUnavailable" xml:space="preserve">
+    <value>Тара была изменена на базовую единицу измерения</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>Табло</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Цель</value>
+  </data>
+  <data name="TargetNotReached" xml:space="preserve">
+    <value>Цель не достигнута</value>
+  </data>
+  <data name="TargetsOnMonthElement_Defect" xml:space="preserve">
+    <value>Брак</value>
+  </data>
+  <data name="TargetsOnMonthElement_OrdersOnСourier" xml:space="preserve">
+    <value>Заказов на курьера в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_PicesOnPeople" xml:space="preserve">
+    <value>Пицц и закусок на человека в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_Piece" xml:space="preserve">
+    <value>шт.</value>
+  </data>
+  <data name="TargetsOnMonthElement_PieceManH" xml:space="preserve">
+    <value>шт/чел. в час</value>
+    <comment>штук на человека в час</comment>
+  </data>
+  <data name="TargetsOnMonthElement_PieceOnСourier" xml:space="preserve">
+    <value>шт/ кур. в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnPeople" xml:space="preserve">
+    <value>Выручка на человека в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_RevenueOnСourier" xml:space="preserve">
+    <value>Выручка на курьера в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_RubManH" xml:space="preserve">
+    <value>руб/чел. в час</value>
+    <comment>рублей на человека в час</comment>
+  </data>
+  <data name="TargetsOnMonthElement_Sertificates" xml:space="preserve">
+    <value>Сертификаты</value>
+  </data>
+  <data name="TargetsOnMonthElement_Speed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH" xml:space="preserve">
+    <value>тенге/чел. в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_TengeManH_Duplicate[1]" xml:space="preserve">
+    <value>тенге/чел. в час</value>
+  </data>
+  <data name="TargetsOnMonthElement_ToDefect" xml:space="preserve">
+    <value>Списания брак</value>
+  </data>
+  <data name="TargetsOnMonthElement_UnaccountedLosses" xml:space="preserve">
+    <value>Неучтенные потери</value>
+  </data>
+  <data name="TargetsOnYearElement_EmployeeDynamic" xml:space="preserve">
+    <value>Текучесть</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>Шаблон</value>
+  </data>
+  <data name="TemplateCreating" xml:space="preserve">
+    <value>Создание шаблона</value>
+  </data>
+  <data name="Tenge" xml:space="preserve">
+    <value>Тенге</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Четверг</value>
+  </data>
+  <data name="ThursdayShort" xml:space="preserve">
+    <value>Чт</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>Дата начала смены</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>Время начала смены</value>
+  </data>
+  <data name="TimeReportBuildLink" xml:space="preserve">
+    <value>Построить</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>Категория</value>
+  </data>
+  <data name="TimeReportChooseDateLabel" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="TimeReportChooseNameLabel" xml:space="preserve">
+    <value>Фамилия, имя</value>
+  </data>
+  <data name="TimeReportChooseTypeLabel" xml:space="preserve">
+    <value>Выберите типы сотрудников</value>
+  </data>
+  <data name="TimeReportChooseUnitLabel" xml:space="preserve">
+    <value>Выберите отдел</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>День</value>
+  </data>
+  <data name="TimeReportDescription" xml:space="preserve">
+    <value>Фактически отработанное сотрудниками время для расчета заработной платы</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>Фамилия, имя</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>Дата окончания смены</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>Время окончания смены</value>
+  </data>
+  <data name="TimeReportExcelExportLink" xml:space="preserve">
+    <value>Экспорт в Excel</value>
+  </data>
+  <data name="TimeReportGroupByEmployee" xml:space="preserve">
+    <value>Группировать по сотруднику</value>
+  </data>
+  <data name="TimeReportHeader" xml:space="preserve">
+    <value>Фактическое время</value>
+  </data>
+  <data name="TimeReportInvalidTimePeriod" xml:space="preserve">
+    <value>Временной период не должен превышать {0} дней</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>Ночь</value>
+  </data>
+  <data name="TimeReportTypeLabel" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="TimeReportWarning" xml:space="preserve">
+    <value>Показаны не все данные, так как найдено слишком много данных за указанный период. Попробуйте сузить условия отчета.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="Title_YouListen" xml:space="preserve">
+    <value>ТЫ СЛУШАЕШЬ</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>до</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>сегодня</value>
+  </data>
+  <data name="ToUnit" xml:space="preserve">
+    <value>Куда (склад)</value>
+  </data>
+  <data name="TrainingHistory_BeginDateFailedMessage" xml:space="preserve">
+    <value>Дата начала действия новой категории должна быть больше даты действия предыдущей категории</value>
+  </data>
+  <data name="TrainingHistory_NotDefinedCurrentStage" xml:space="preserve">
+    <value>Не определен текущий этап обучения</value>
+  </data>
+  <data name="TrainingHistory_ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Укажите дату увольнения сотрудника</value>
+  </data>
+  <data name="TransactionCompletedState" xml:space="preserve">
+    <value>Завершена</value>
+  </data>
+  <data name="TransactionDate" xml:space="preserve">
+    <value>Дата транзакции</value>
+  </data>
+  <data name="TransactionHeader" xml:space="preserve">
+    <value>Управление транзакциями</value>
+  </data>
+  <data name="TransactionID" xml:space="preserve">
+    <value>ID транзакции</value>
+  </data>
+  <data name="TransactionNotCompletedState" xml:space="preserve">
+    <value>Не завершена</value>
+  </data>
+  <data name="TransactionOptions" xml:space="preserve">
+    <value>Опции</value>
+  </data>
+  <data name="TransactionOrderNumber" xml:space="preserve">
+    <value>№ заказа</value>
+  </data>
+  <data name="TransactionsFromLabel" xml:space="preserve">
+    <value>Транзакции</value>
+  </data>
+  <data name="TransactionStatus" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="TransactionSumma" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="TransferCanceled" xml:space="preserve">
+    <value>Заявка на перемещение {0} отменена</value>
+  </data>
+  <data name="TransferConfirmed" xml:space="preserve">
+    <value>Заявка на перемещение {0} сформирована</value>
+  </data>
+  <data name="TransferCreated" xml:space="preserve">
+    <value>Создано перемещение {0}</value>
+  </data>
+  <data name="TransferCreationDate" xml:space="preserve">
+    <value>Заказано</value>
+  </data>
+  <data name="TransferDeleted" xml:space="preserve">
+    <value>Заявка на перемещение {0} удалена</value>
+  </data>
+  <data name="TransferDestinationUnit" xml:space="preserve">
+    <value>Куда</value>
+  </data>
+  <data name="TransferEdited" xml:space="preserve">
+    <value>Перемещение {0} сохранено</value>
+  </data>
+  <data name="TransferExpectedDate" xml:space="preserve">
+    <value>Когда нужно</value>
+  </data>
+  <data name="TransferInfo" xml:space="preserve">
+    <value>Информация о перемещении</value>
+  </data>
+  <data name="TransferItems" xml:space="preserve">
+    <value>Состав перемещения</value>
+  </data>
+  <data name="TransferLoadTemplate" xml:space="preserve">
+    <value>Загрузить шаблон</value>
+  </data>
+  <data name="TransferMaterialTypesList" xml:space="preserve">
+    <value>Сырье</value>
+  </data>
+  <data name="TransferNumber" xml:space="preserve">
+    <value>Номер</value>
+  </data>
+  <data name="TransferOriginUnit" xml:space="preserve">
+    <value>От кого</value>
+  </data>
+  <data name="TransferReceived" xml:space="preserve">
+    <value>Заявка на перемещение {0} получена</value>
+  </data>
+  <data name="TransferReceivingDate" xml:space="preserve">
+    <value>Дата приема</value>
+  </data>
+  <data name="TransferReport_Taken" xml:space="preserve">
+    <value>Принято</value>
+  </data>
+  <data name="TransferReport_TitleHeader" xml:space="preserve">
+    <value>Перемещение № {0} от {1}</value>
+  </data>
+  <data name="TransferShipped" xml:space="preserve">
+    <value>Заявка на перемещение {0} отгружена</value>
+  </data>
+  <data name="TransferShippingAmount" xml:space="preserve">
+    <value>Отгружено</value>
+  </data>
+  <data name="TransferSourceUnit" xml:space="preserve">
+    <value>От кого</value>
+  </data>
+  <data name="TransferStatus" xml:space="preserve">
+    <value>Статус</value>
+  </data>
+  <data name="TransferTemplate_AmountIsInvalid" xml:space="preserve">
+    <value>Недопустимое значение для сырья {0}, {1}</value>
+  </data>
+  <data name="Transfer_EmptyItems" xml:space="preserve">
+    <value>Заполните состав перемещения</value>
+  </data>
+  <data name="Transfer_Incoming" xml:space="preserve">
+    <value>Входящие</value>
+  </data>
+  <data name="Transfer_Incoming_Duplicate[1]" xml:space="preserve">
+    <value>Входящие</value>
+  </data>
+  <data name="Transfer_OrderedQuantityIsInvalid" xml:space="preserve">
+    <value>Поле "Заказано" не заполнено для сырья {0}</value>
+  </data>
+  <data name="Transfer_Outcoming" xml:space="preserve">
+    <value>Исходящие</value>
+  </data>
+  <data name="Transfer_Outcoming_Duplicate[1]" xml:space="preserve">
+    <value>Исходящие</value>
+  </data>
+  <data name="Transfer_ReceivedQuantityIsInvalid" xml:space="preserve">
+    <value>Поле "Получено" не заполнено для сырья {0}</value>
+  </data>
+  <data name="Transfer_Ship" xml:space="preserve">
+    <value>Отгрузить</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid" xml:space="preserve">
+    <value>Поле "Отгружено" не заполнено для сырья {0}</value>
+  </data>
+  <data name="Transfer_ShippedQuantityIsInvalid_Duplicate[1]" xml:space="preserve">
+    <value>Поле "Отгружено" не заполнено для сырья {0}</value>
+  </data>
+  <data name="Transfer_Ship_Duplicate[1]" xml:space="preserve">
+    <value>Отгрузить</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Вторник</value>
+  </data>
+  <data name="TuesdayShort" xml:space="preserve">
+    <value>Вт</value>
+  </data>
+  <data name="TypicalReport" xml:space="preserve">
+    <value>по дням недели</value>
+  </data>
+  <data name="TypicalReportNotificationText" xml:space="preserve">
+    <value>Данный отчёт, покажет вам средний расход по дням недели за последние 5 недель</value>
+  </data>
+  <data name="UnitLevelHoliday" xml:space="preserve">
+    <value>Праздник отдела</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>Ед. изм.</value>
+  </data>
+  <data name="UnitOfMeasureAcromin" xml:space="preserve">
+    <value>Ед. изм.</value>
+  </data>
+  <data name="UnitOfMeasureFull" xml:space="preserve">
+    <value>Единица измерения</value>
+  </data>
+  <data name="UnitOfMeasureLabel" xml:space="preserve">
+    <value>Ед. изм</value>
+  </data>
+  <data name="UpCurrentDate" xml:space="preserve">
+    <value>по н.в.</value>
+    <comment>контекст: дата от - по н.в.</comment>
+  </data>
+  <data name="VacancyEditActiveLabel" xml:space="preserve">
+    <value>Активна</value>
+  </data>
+  <data name="VacancyEditAgeFromLabel" xml:space="preserve">
+    <value>от:</value>
+    <comment>Контекст: возраст от 18 лет</comment>
+  </data>
+  <data name="VacancyEditAgeLabel" xml:space="preserve">
+    <value>Предпочительный возраст:</value>
+  </data>
+  <data name="VacancyEditAgeToLabel" xml:space="preserve">
+    <value>до:</value>
+    <comment>Контекст: возраст до 100 лет</comment>
+  </data>
+  <data name="VacancyEditCategoryLabel" xml:space="preserve">
+    <value>Кем будет работать сотрудник?</value>
+  </data>
+  <data name="VacancyEditHeader" xml:space="preserve">
+    <value>Редактирование вакансии</value>
+  </data>
+  <data name="VacancyEditInputNameText" xml:space="preserve">
+    <value>Введите вакансию</value>
+  </data>
+  <data name="VacancyEditNameLabel" xml:space="preserve">
+    <value>Кого ищем?</value>
+  </data>
+  <data name="VacancyEditSmokingLabel" xml:space="preserve">
+    <value>Курение</value>
+  </data>
+  <data name="VacancyEditSmokingPreferenceText" xml:space="preserve">
+    <value>желательно некурящих</value>
+    <comment>Контекст: брать на работу желательно некурящих</comment>
+  </data>
+  <data name="VacancyEditTypeLabel" xml:space="preserve">
+    <value>Выберите тип:</value>
+  </data>
+  <data name="VacancyEditUnitLabel" xml:space="preserve">
+    <value>Укажите пиццерии</value>
+  </data>
+  <data name="VacancyLink_Active" xml:space="preserve">
+    <value>Активные</value>
+  </data>
+  <data name="VacancyLink_Disabled" xml:space="preserve">
+    <value>Закрытые</value>
+  </data>
+  <data name="VacancyListActiveColumn" xml:space="preserve">
+    <value>Активна?</value>
+  </data>
+  <data name="VacancyListActiveLabel" xml:space="preserve">
+    <value>Активна</value>
+  </data>
+  <data name="VacancyListAgeFromLabel" xml:space="preserve">
+    <value>От</value>
+    <comment>Контекст: возраст от 18 лет</comment>
+  </data>
+  <data name="VacancyListAgeToLabel" xml:space="preserve">
+    <value>до</value>
+    <comment>Контекст: возраст до 100 лет</comment>
+  </data>
+  <data name="VacancyListCriteriaColumn" xml:space="preserve">
+    <value>Критерий</value>
+  </data>
+  <data name="VacancyListFromLabel" xml:space="preserve">
+    <value>c</value>
+    <comment>Контекст: вакансия активна с 1 июня</comment>
+  </data>
+  <data name="VacancyListHeader" xml:space="preserve">
+    <value>Вакансии</value>
+  </data>
+  <data name="VacancyListInactiveLabel" xml:space="preserve">
+    <value>Не активна</value>
+  </data>
+  <data name="VacancyListNameColumn" xml:space="preserve">
+    <value>Вакансия</value>
+  </data>
+  <data name="VacancyListNewLink" xml:space="preserve">
+    <value>Новая вакансия</value>
+  </data>
+  <data name="VacancyListNonSmokingLabel" xml:space="preserve">
+    <value>Не курит</value>
+  </data>
+  <data name="VacancyListSmokingLabel" xml:space="preserve">
+    <value>Курит</value>
+  </data>
+  <data name="VacancyListToLabel" xml:space="preserve">
+    <value>по</value>
+    <comment>Контекст: вакансия активна по 1 июля</comment>
+  </data>
+  <data name="VacancyListTypeLabel" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="VacancyNewHeader" xml:space="preserve">
+    <value>Добавление новой вакансии</value>
+  </data>
+  <data name="ValidationRequiredTerminationDate" xml:space="preserve">
+    <value>Укажите дату увольнения сотрудника</value>
+  </data>
+  <data name="VAT" xml:space="preserve">
+    <value>НДС</value>
+  </data>
+  <data name="ViewDebiting" xml:space="preserve">
+    <value>Просмотр списани</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Среда</value>
+  </data>
+  <data name="WednesdayShort" xml:space="preserve">
+    <value>Ср</value>
+  </data>
+  <data name="Weekdays" xml:space="preserve">
+    <value>Будни</value>
+  </data>
+  <data name="WeekdaysTooltip" xml:space="preserve">
+    <value>Понедельник - Четверг</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Выходные</value>
+  </data>
+  <data name="Weekends" xml:space="preserve">
+    <value>Выходные</value>
+  </data>
+  <data name="WeekendsSettingsAllowToSelect" xml:space="preserve">
+    <value>Разрешить выбирать в качестве выходного</value>
+  </data>
+  <data name="WeekendsSettingsCountInWeek" xml:space="preserve">
+    <value>Количество выходных в неделю</value>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartOne" xml:space="preserve">
+    <value>Нельзя выбрать больше</value>
+    <comment>контекст: нельзя выбрать больше 2 выходных</comment>
+  </data>
+  <data name="WeekendsSettingsFailedSelectedWeekendsCountPartTwo" xml:space="preserve">
+    <value>выходных</value>
+    <comment>контекст: нельзя выбрать больше 2 выходных</comment>
+  </data>
+  <data name="WeekendsSettingsFailedWeekendsCount" xml:space="preserve">
+    <value>Нельзя указать больше {0} выходных в неделю</value>
+  </data>
+  <data name="WeekendTooltip" xml:space="preserve">
+    <value>Пятница - Воскресенье</value>
+  </data>
+  <data name="WellDone" xml:space="preserve">
+    <value>Так держать!</value>
+  </data>
+  <data name="WorkExperience" xml:space="preserve">
+    <value>Стаж</value>
+  </data>
+  <data name="WorkExperienceOfPizzeria" xml:space="preserve">
+    <value>Средний стаж пиццерии</value>
+  </data>
+  <data name="WorkingHoursEmployeeName" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="WorkingHoursInContextOfUnits" xml:space="preserve">
+    <value>В разрезе по пиццериям</value>
+  </data>
+  <data name="WorkingHoursTitle" xml:space="preserve">
+    <value>Рабочие часы</value>
+  </data>
+  <data name="WorkingHoursTotal" xml:space="preserve">
+    <value>Всего</value>
+  </data>
+  <data name="WorkingHoursTotalHours" xml:space="preserve">
+    <value>часов</value>
+  </data>
+  <data name="WorkingHoursTotalMinutes" xml:space="preserve">
+    <value>минут</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>вчера</value>
+  </data>
+  <data name="ZoneSettingsAddLink" xml:space="preserve">
+    <value>Создать станцию</value>
+  </data>
+  <data name="ZoneSettingsCategoriesLabel" xml:space="preserve">
+    <value>Категории сотрудников</value>
+  </data>
+  <data name="ZoneSettingsDeleteLink" xml:space="preserve">
+    <value>Удалить станцию</value>
+  </data>
+  <data name="ZoneSettingsDescription" xml:space="preserve">
+    <value>Редактирование производственных станций</value>
+  </data>
+  <data name="ZoneSettingsEditLink" xml:space="preserve">
+    <value>редактировать</value>
+  </data>
+  <data name="ZoneSettingsHeader" xml:space="preserve">
+    <value>Производственные станции</value>
+  </data>
+  <data name="ZoneSettingsNameLabel" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="ZoneSettingsNoCategoriesText" xml:space="preserve">
+    <value>нет категорий</value>
+    <comment>Категории сотрудника не выбраны</comment>
+  </data>
+  <data name="ZoneSettingsPeriod0Option" xml:space="preserve">
+    <value>(нет)</value>
+  </data>
+  <data name="ZoneSettingsPeriod14Option" xml:space="preserve">
+    <value>две недели</value>
+  </data>
+  <data name="ZoneSettingsPeriod30Option" xml:space="preserve">
+    <value>месяц</value>
+  </data>
+  <data name="ZoneSettingsPeriod7Option" xml:space="preserve">
+    <value>неделя</value>
+  </data>
+  <data name="ZoneSettingsPeriodLabel" xml:space="preserve">
+    <value>Период планирования карты возможностей</value>
+  </data>
+  <data name="ZoneSettingsShowLink" xml:space="preserve">
+    <value>Показывать в графике</value>
+  </data>
+  <data name="ZoneSettingsSubzonesLabel" xml:space="preserve">
+    <value>Подстанции</value>
+  </data>
+  <data name="UnitateLevelHoliday" xml:space="preserve">
+    <value>Праздник департамента</value>
+  </data>
+</root>

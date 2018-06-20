@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alley" xml:space="preserve">
+    <value>Aleea</value>
+  </data>
+  <data name="AlleyDecrease" xml:space="preserve">
+    <value>Aleea</value>
+  </data>
+  <data name="Anex" xml:space="preserve">
+    <value>Suburbie</value>
+  </data>
+  <data name="AnexDecrease" xml:space="preserve">
+    <value>Suburbie</value>
+  </data>
+  <data name="Arcade" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="ArcadeDecrease" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Piata</value>
+  </data>
+  <data name="AreaDecrease" xml:space="preserve">
+    <value>Pta</value>
+  </data>
+  <data name="Avenue" xml:space="preserve">
+    <value>Drumul</value>
+  </data>
+  <data name="AvenueDecrease" xml:space="preserve">
+    <value>Drumul</value>
+  </data>
+  <data name="Beach" xml:space="preserve">
+    <value>Plaja</value>
+  </data>
+  <data name="BeachDecrease" xml:space="preserve">
+    <value>Plaja</value>
+  </data>
+  <data name="Bend" xml:space="preserve">
+    <value>Curba</value>
+  </data>
+  <data name="BendDecrease" xml:space="preserve">
+    <value>Curba</value>
+  </data>
+  <data name="Block" xml:space="preserve">
+    <value>Cartier</value>
+  </data>
+  <data name="BlockDecrease" xml:space="preserve">
+    <value>Cvartal</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="BottomDecrease" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="Boulevard" xml:space="preserve">
+    <value>Bulevardul</value>
+  </data>
+  <data name="BoulevardDecrease" xml:space="preserve">
+    <value>Bd.</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Ramificatie</value>
+  </data>
+  <data name="BranchDecrease" xml:space="preserve">
+    <value>Ramificatie</value>
+  </data>
+  <data name="Bridge" xml:space="preserve">
+    <value>Pod</value>
+  </data>
+  <data name="BridgeDecrease" xml:space="preserve">
+    <value>Pod</value>
+  </data>
+  <data name="BroadStreet" xml:space="preserve">
+    <value>Strada lata</value>
+  </data>
+  <data name="BroadStreetDecrease" xml:space="preserve">
+    <value>Strada lata</value>
+  </data>
+  <data name="Broadway" xml:space="preserve">
+    <value>Bulevard</value>
+  </data>
+  <data name="BroadwayDecrease" xml:space="preserve">
+    <value>Bulevard</value>
+  </data>
+  <data name="Brook" xml:space="preserve">
+    <value>Parau</value>
+  </data>
+  <data name="BrookDecrease" xml:space="preserve">
+    <value>Parau</value>
+  </data>
+  <data name="Burg" xml:space="preserve">
+    <value>Cetate</value>
+  </data>
+  <data name="BurgDecrease" xml:space="preserve">
+    <value>Cetate</value>
+  </data>
+  <data name="Bypass" xml:space="preserve">
+    <value>Ocolire</value>
+  </data>
+  <data name="BypassDecrease" xml:space="preserve">
+    <value>Ocolire</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Suna!</value>
+  </data>
+  <data name="CallIntercome" xml:space="preserve">
+    <value>Suna</value>
+  </data>
+  <data name="Camp" xml:space="preserve">
+    <value>Tabara</value>
+  </data>
+  <data name="CampDecrease" xml:space="preserve">
+    <value>Tabara</value>
+  </data>
+  <data name="Canyon" xml:space="preserve">
+    <value>Canion</value>
+  </data>
+  <data name="CanyonDecrease" xml:space="preserve">
+    <value>Canion</value>
+  </data>
+  <data name="Causeway" xml:space="preserve">
+    <value>Trotuar</value>
+  </data>
+  <data name="CausewayDecrease" xml:space="preserve">
+    <value>Trotuar</value>
+  </data>
+  <data name="Circle" xml:space="preserve">
+    <value>Rond</value>
+  </data>
+  <data name="CircleDecrease" xml:space="preserve">
+    <value>Rond</value>
+  </data>
+  <data name="Circus" xml:space="preserve">
+    <value>Piata rotunda</value>
+  </data>
+  <data name="CircusDecrease" xml:space="preserve">
+    <value>Piata rotunda</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Curte</value>
+  </data>
+  <data name="CloseDecrease" xml:space="preserve">
+    <value>Curte</value>
+  </data>
+  <data name="Condominium" xml:space="preserve">
+    <value>Ansamblu de apartamente</value>
+  </data>
+  <data name="CondominiumDeclare" xml:space="preserve">
+    <value>Ansamblu de apartamente</value>
+  </data>
+  <data name="Corner" xml:space="preserve">
+    <value>Colt</value>
+  </data>
+  <data name="CornerDecrease" xml:space="preserve">
+    <value>Colt</value>
+  </data>
+  <data name="CottageSettlement" xml:space="preserve">
+    <value>Ansamblu de vile</value>
+  </data>
+  <data name="CottageSettlementDeclare" xml:space="preserve">
+    <value>Ansamblu de vile</value>
+  </data>
+  <data name="CountyRoad" xml:space="preserve">
+    <value>Drum forestier</value>
+  </data>
+  <data name="CountyRoadDecrease" xml:space="preserve">
+    <value>Drum forestier</value>
+  </data>
+  <data name="Course" xml:space="preserve">
+    <value>Sosea</value>
+  </data>
+  <data name="CourseDecrease" xml:space="preserve">
+    <value>Sosea</value>
+  </data>
+  <data name="Court" xml:space="preserve">
+    <value>Curte</value>
+  </data>
+  <data name="CourtDecrease" xml:space="preserve">
+    <value>Curte</value>
+  </data>
+  <data name="Cove" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="CoveDecrease" xml:space="preserve">
+    <value>Golf</value>
+  </data>
+  <data name="Creek" xml:space="preserve">
+    <value>Parau</value>
+  </data>
+  <data name="CreekDecrease" xml:space="preserve">
+    <value>Parau</value>
+  </data>
+  <data name="Crescent" xml:space="preserve">
+    <value>Strada in curba</value>
+  </data>
+  <data name="CrescentDecrease" xml:space="preserve">
+    <value>Strada in curba</value>
+  </data>
+  <data name="Crossing" xml:space="preserve">
+    <value>Trecere</value>
+  </data>
+  <data name="CrossingDecrease" xml:space="preserve">
+    <value>Trecere</value>
+  </data>
+  <data name="Crossroads" xml:space="preserve">
+    <value>Intersectie</value>
+  </data>
+  <data name="CrossroadsDecrease" xml:space="preserve">
+    <value>Intersectie</value>
+  </data>
+  <data name="Curve" xml:space="preserve">
+    <value>Curba</value>
+  </data>
+  <data name="CurveDecrease" xml:space="preserve">
+    <value>Curba</value>
+  </data>
+  <data name="Dale" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="DaleDecrease" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="Depot" xml:space="preserve">
+    <value>Halta</value>
+  </data>
+  <data name="DepotDecrease" xml:space="preserve">
+    <value>Halta</value>
+  </data>
+  <data name="District" xml:space="preserve">
+    <value>Cartier</value>
+  </data>
+  <data name="DistrictDecrease" xml:space="preserve">
+    <value>Cart.</value>
+  </data>
+  <data name="Drive" xml:space="preserve">
+    <value>Drum acces</value>
+  </data>
+  <data name="DriveDecrease" xml:space="preserve">
+    <value>Drum acces</value>
+  </data>
+  <data name="Embankment" xml:space="preserve">
+    <value>Splaiul</value>
+  </data>
+  <data name="EmbankmentDecrease" xml:space="preserve">
+    <value>Spl.</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Prelungire</value>
+  </data>
+  <data name="ExtensionDecrease" xml:space="preserve">
+    <value>Prelungire</value>
+  </data>
+  <data name="FirstFloor" xml:space="preserve">
+    <value>Parter</value>
+  </data>
+  <data name="Fraternity" xml:space="preserve">
+    <value>Fraternitate</value>
+  </data>
+  <data name="FraternityDeclare" xml:space="preserve">
+    <value>Fraternitate</value>
+  </data>
+  <data name="FullAddressInformation_Building" xml:space="preserve">
+    <value>Bloc</value>
+  </data>
+  <data name="FullAddressInformation_Flat" xml:space="preserve">
+    <value>, ap.</value>
+  </data>
+  <data name="FullAddressInformation_Floor" xml:space="preserve">
+    <value>, et.</value>
+  </data>
+  <data name="FullAddressInformation_House" xml:space="preserve">
+    <value>, nr.</value>
+  </data>
+  <data name="FullAddressInformation_Intercome" xml:space="preserve">
+    <value>, int.</value>
+  </data>
+  <data name="FullAddressInformation_Porch" xml:space="preserve">
+    <value>, sc.</value>
+  </data>
+  <data name="Garden" xml:space="preserve">
+    <value>Gradina</value>
+  </data>
+  <data name="GardenDecrease" xml:space="preserve">
+    <value>Gradina</value>
+  </data>
+  <data name="Gardens" xml:space="preserve">
+    <value>Gradini</value>
+  </data>
+  <data name="GardensDecrease" xml:space="preserve">
+    <value>Gradini</value>
+  </data>
+  <data name="Glen" xml:space="preserve">
+    <value>Valea raului</value>
+  </data>
+  <data name="GlenDecrease" xml:space="preserve">
+    <value>Valea raului</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Poiana</value>
+  </data>
+  <data name="GreenDecrease" xml:space="preserve">
+    <value>Poiana</value>
+  </data>
+  <data name="Grove" xml:space="preserve">
+    <value>Dumbrava</value>
+  </data>
+  <data name="GroveDecrease" xml:space="preserve">
+    <value>Dumbrava</value>
+  </data>
+  <data name="Hall" xml:space="preserve">
+    <value>Hol</value>
+  </data>
+  <data name="HallDeclare" xml:space="preserve">
+    <value>Hol</value>
+  </data>
+  <data name="Highway" xml:space="preserve">
+    <value>Sosea</value>
+  </data>
+  <data name="HighwayDecrease" xml:space="preserve">
+    <value>sos.</value>
+  </data>
+  <data name="Hill" xml:space="preserve">
+    <value>Deal</value>
+  </data>
+  <data name="HillDecrease" xml:space="preserve">
+    <value>Deal</value>
+  </data>
+  <data name="Horticultural" xml:space="preserve">
+    <value>Gradinarie</value>
+  </data>
+  <data name="HorticulturalDeclare" xml:space="preserve">
+    <value>Gradinarie</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="HotelDeclare" xml:space="preserve">
+    <value>Hotel</value>
+  </data>
+  <data name="Housing" xml:space="preserve">
+    <value>Ansamblu rezidential</value>
+  </data>
+  <data name="HousingDeclare" xml:space="preserve">
+    <value>Ansamblu rezidential</value>
+  </data>
+  <data name="Impasse" xml:space="preserve">
+    <value>Intrarea</value>
+  </data>
+  <data name="ImpasseDecrease" xml:space="preserve">
+    <value>Intr.</value>
+  </data>
+  <data name="Intercome" xml:space="preserve">
+    <value>Interfon</value>
+  </data>
+  <data name="Junction" xml:space="preserve">
+    <value>Trecere</value>
+  </data>
+  <data name="JunctionDecrease" xml:space="preserve">
+    <value>Trecere</value>
+  </data>
+  <data name="Lake" xml:space="preserve">
+    <value>Lac</value>
+  </data>
+  <data name="LakeDecrease" xml:space="preserve">
+    <value>lac</value>
+  </data>
+  <data name="Lane" xml:space="preserve">
+    <value>Stradela</value>
+  </data>
+  <data name="LaneDecrease" xml:space="preserve">
+    <value>Str-la.</value>
+  </data>
+  <data name="LastFloor" xml:space="preserve">
+    <value>Ultimul etaj</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Linie</value>
+  </data>
+  <data name="LineDecrease" xml:space="preserve">
+    <value>Linie</value>
+  </data>
+  <data name="Loop" xml:space="preserve">
+    <value>Centura</value>
+  </data>
+  <data name="Mall" xml:space="preserve">
+    <value>Mall</value>
+  </data>
+  <data name="Message_InvalidAddress" xml:space="preserve">
+    <value>Adresa introdusa gresit</value>
+  </data>
+  <data name="Microdistrict" xml:space="preserve">
+    <value>Cartier</value>
+  </data>
+  <data name="MicrodistrictDecrease" xml:space="preserve">
+    <value>Cart.</value>
+  </data>
+  <data name="MiniPath" xml:space="preserve">
+    <value>Carare</value>
+  </data>
+  <data name="Motel" xml:space="preserve">
+    <value>Motel</value>
+  </data>
+  <data name="MotelDeclare" xml:space="preserve">
+    <value>Motel</value>
+  </data>
+  <data name="Mount" xml:space="preserve">
+    <value>Inaltare</value>
+  </data>
+  <data name="Mountain" xml:space="preserve">
+    <value>Munte</value>
+  </data>
+  <data name="MountainDecrease" xml:space="preserve">
+    <value>Munte</value>
+  </data>
+  <data name="MountDecrease" xml:space="preserve">
+    <value>Inaltare</value>
+  </data>
+  <data name="NoIntercome" xml:space="preserve">
+    <value>Nu</value>
+  </data>
+  <data name="OnTheWatch" xml:space="preserve">
+    <value>La portar</value>
+  </data>
+  <data name="Park" xml:space="preserve">
+    <value>Parc</value>
+  </data>
+  <data name="ParkDecrease" xml:space="preserve">
+    <value>Parc</value>
+  </data>
+  <data name="Parkway" xml:space="preserve">
+    <value>Bulevard</value>
+  </data>
+  <data name="ParkwayDecrease" xml:space="preserve">
+    <value>Bulevard</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Trecere</value>
+  </data>
+  <data name="Passage" xml:space="preserve">
+    <value>Pasajul</value>
+  </data>
+  <data name="PassageDecrease" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Calea</value>
+  </data>
+  <data name="PathDecrease" xml:space="preserve">
+    <value>Calea</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Locusor</value>
+  </data>
+  <data name="PlaceDecrease" xml:space="preserve">
+    <value>Locusor</value>
+  </data>
+  <data name="Plain" xml:space="preserve">
+    <value>Campie</value>
+  </data>
+  <data name="PlainDecrease" xml:space="preserve">
+    <value>Campie</value>
+  </data>
+  <data name="Point" xml:space="preserve">
+    <value>Punct</value>
+  </data>
+  <data name="PointDecrease" xml:space="preserve">
+    <value>Punct</value>
+  </data>
+  <data name="PrivateHouse" xml:space="preserve">
+    <value>Casa / Vila</value>
+  </data>
+  <data name="PrivateRoad" xml:space="preserve">
+    <value>Drum privat</value>
+  </data>
+  <data name="PrivateRoadDecrease" xml:space="preserve">
+    <value>Drum privat</value>
+  </data>
+  <data name="Ramp" xml:space="preserve">
+    <value>Rampa</value>
+  </data>
+  <data name="Ridge" xml:space="preserve">
+    <value>Faleza</value>
+  </data>
+  <data name="RidgeDecrease" xml:space="preserve">
+    <value>Faleza</value>
+  </data>
+  <data name="RidgeDescrease" xml:space="preserve">
+    <value>Faleza</value>
+  </data>
+  <data name="River" xml:space="preserve">
+    <value>Rau</value>
+  </data>
+  <data name="RiverDecrease" xml:space="preserve">
+    <value>Rau</value>
+  </data>
+  <data name="Road" xml:space="preserve">
+    <value>Drum</value>
+  </data>
+  <data name="RoadDecrease" xml:space="preserve">
+    <value>Drum</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Cale</value>
+  </data>
+  <data name="RouteDecrease" xml:space="preserve">
+    <value>Cale</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Rand</value>
+  </data>
+  <data name="Saint" xml:space="preserve">
+    <value>Biserica</value>
+  </data>
+  <data name="SaintDecrease" xml:space="preserve">
+    <value>Biserica</value>
+  </data>
+  <data name="SeparateEntrance" xml:space="preserve">
+    <value>Intrare separata</value>
+  </data>
+  <data name="Settlement" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="SettlementDeclare" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="SocleFloor" xml:space="preserve">
+    <value>Demisol</value>
+  </data>
+  <data name="Sorority" xml:space="preserve">
+    <value>Sorority</value>
+  </data>
+  <data name="SororityDeclare" xml:space="preserve">
+    <value>Sorority</value>
+  </data>
+  <data name="Square" xml:space="preserve">
+    <value>Piata</value>
+  </data>
+  <data name="SquareDecrease" xml:space="preserve">
+    <value>Scuar</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Strada</value>
+  </data>
+  <data name="StreetDecrease" xml:space="preserve">
+    <value>Str.</value>
+  </data>
+  <data name="Terrace" xml:space="preserve">
+    <value>Terasa</value>
+  </data>
+  <data name="TerraceDecrease" xml:space="preserve">
+    <value>Teritoriu</value>
+  </data>
+  <data name="Terrene" xml:space="preserve">
+    <value>Teritoriu</value>
+  </data>
+  <data name="TerreneDecrease" xml:space="preserve">
+    <value>Teritoriu</value>
+  </data>
+  <data name="Trace" xml:space="preserve">
+    <value>Carare</value>
+  </data>
+  <data name="TraceDecrease" xml:space="preserve">
+    <value>Carare</value>
+  </data>
+  <data name="Track" xml:space="preserve">
+    <value>Carare</value>
+  </data>
+  <data name="TrackDecrease" xml:space="preserve">
+    <value>Carare</value>
+  </data>
+  <data name="Trail" xml:space="preserve">
+    <value>Poteca</value>
+  </data>
+  <data name="TrailDecrease" xml:space="preserve">
+    <value>Poteca</value>
+  </data>
+  <data name="University" xml:space="preserve">
+    <value>Universitate</value>
+  </data>
+  <data name="UniversityDeclare" xml:space="preserve">
+    <value>Universitate</value>
+  </data>
+  <data name="Valley" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="ValleyDecrease" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="Village" xml:space="preserve">
+    <value>Comuna</value>
+  </data>
+  <data name="VillageDecrease" xml:space="preserve">
+    <value>Com.</value>
+  </data>
+  <data name="Vista" xml:space="preserve">
+    <value>Alee</value>
+  </data>
+  <data name="VistaDecrease" xml:space="preserve">
+    <value>Alee</value>
+  </data>
+  <data name="Walk" xml:space="preserve">
+    <value>Ocolire</value>
+  </data>
+  <data name="WithOutStreet" xml:space="preserve">
+    <value>Fara strada</value>
+  </data>
+  <data name="Drumul" xml:space="preserve">
+    <value>Drumul</value>
+  </data>
+  <data name="DrumulDecrease" xml:space="preserve">
+    <value>Drumul</value>
+  </data>
+</root>

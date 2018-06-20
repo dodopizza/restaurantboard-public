@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accountant" xml:space="preserve">
+    <value>Бухгалтер</value>
+  </data>
+  <data name="AllPizzerias" xml:space="preserve">
+    <value>Все пиццерии</value>
+  </data>
+  <data name="AllReasons" xml:space="preserve">
+    <value>Все причины</value>
+  </data>
+  <data name="BonusAccruedByFriends" xml:space="preserve">
+    <value>За приглашение друзей</value>
+  </data>
+  <data name="BonusAccruedTitle" xml:space="preserve">
+    <value>Начислено "Додо рублей"</value>
+  </data>
+  <data name="BonusAll" xml:space="preserve">
+    <value>Всего</value>
+  </data>
+  <data name="BonusPercentage" xml:space="preserve">
+    <value>Процент от заказов</value>
+  </data>
+  <data name="BonusPercentageFromFriends" xml:space="preserve">
+    <value>Процент от заказов друзей</value>
+  </data>
+  <data name="BonusSpentPercentage" xml:space="preserve">
+    <value>Процент использованных "Додо рублей" от выручки</value>
+  </data>
+  <data name="BonusSpentTitle" xml:space="preserve">
+    <value>Потрачено "Додо рублей"</value>
+  </data>
+  <data name="CashBoxModel_Citizen" xml:space="preserve">
+    <value>Citizen CT-S310II</value>
+  </data>
+  <data name="Cashier" xml:space="preserve">
+    <value>Кассир ресторана</value>
+  </data>
+  <data name="ClientTreatment_Name" xml:space="preserve">
+    <value>по имени</value>
+  </data>
+  <data name="ClientTreatment_RandomImage" xml:space="preserve">
+    <value>случайное изображение</value>
+  </data>
+  <data name="Consumption" xml:space="preserve">
+    <value>Расход</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Курьер</value>
+  </data>
+  <data name="CourierMotivationScreen" xml:space="preserve">
+    <value>Табло мотивации курьеров</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>Вышел срок годности</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>Виновное лицо</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>Повреждение упаковки</value>
+  </data>
+  <data name="DeliveryCashier" xml:space="preserve">
+    <value>Кассир доставки</value>
+  </data>
+  <data name="DepartmentAdmin" xml:space="preserve">
+    <value>Администратор подразделения</value>
+  </data>
+  <data name="DodoControl" xml:space="preserve">
+    <value>Додо Контроллинг</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="EmployeesOnShiftScreen" xml:space="preserve">
+    <value>Табло сотрудники</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>Некорректная цена. Должна быть кратна 100.</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>Некорректная цена. Должна быть кратна 1.</value>
+  </data>
+  <data name="ExpressProductsScreen" xml:space="preserve">
+    <value>Экспресс продукты</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>Федеральный</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>Для всех отделов</value>
+  </data>
+  <data name="FranchiseeOfficeManager" xml:space="preserve">
+    <value>Центральный менеджер офиса - франчайзи</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Приход</value>
+  </data>
+  <data name="IndexValue" xml:space="preserve">
+    <value>Показатель</value>
+  </data>
+  <data name="InvestorOfficeManager" xml:space="preserve">
+    <value>Менеджер офиса - инвестор</value>
+  </data>
+  <data name="KitchenMotivationScreen" xml:space="preserve">
+    <value>Табло мотивации кухни</value>
+  </data>
+  <data name="LoginNotCorrect" xml:space="preserve">
+    <value>Логин может состоять только из латинских букв, цифр и символов, нижнего подчеркивания и точки</value>
+  </data>
+  <data name="LoginNotRequired" xml:space="preserve">
+    <value>Логин не может быть пустым</value>
+  </data>
+  <data name="LoginTooLong" xml:space="preserve">
+    <value>Логин не может быть длиннее 50 символов</value>
+  </data>
+  <data name="LoyaltyManager" xml:space="preserve">
+    <value>Менеджер бонусной системы</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Разработчик</value>
+  </data>
+  <data name="MysteryShopperManager" xml:space="preserve">
+    <value>Управление ТП</value>
+  </data>
+  <data name="NewClients" xml:space="preserve">
+    <value>Новые клиенты</value>
+  </data>
+  <data name="NewClientsByLoyaltyTotalCount" xml:space="preserve">
+    <value>Количество клиентов, привлеченных Бонусной программой</value>
+  </data>
+  <data name="NewClientsTotalCount" xml:space="preserve">
+    <value>Количество новых клиентов</value>
+  </data>
+  <data name="OfficeManager" xml:space="preserve">
+    <value>Менеджер офиса</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Оператор</value>
+  </data>
+  <data name="PasswordNotRequired" xml:space="preserve">
+    <value>Пароль не может быть пустым</value>
+  </data>
+  <data name="PasswordsNotEqual" xml:space="preserve">
+    <value>Пароли не совпадают</value>
+  </data>
+  <data name="PasswordTooLong" xml:space="preserve">
+    <value>Пароль не может быть длиннее 100 символов</value>
+  </data>
+  <data name="Pizzamaker" xml:space="preserve">
+    <value>Пиццамейкер</value>
+  </data>
+  <data name="PrepositionalAliasCaption" xml:space="preserve">
+    <value>Имя в предложном падеже</value>
+  </data>
+  <data name="PublicCaption" xml:space="preserve">
+    <value>Публичный</value>
+  </data>
+  <data name="PublicPages" xml:space="preserve">
+    <value>Публичные экраны</value>
+  </data>
+  <data name="Report_MaterialDebiting" xml:space="preserve">
+    <value>Списание сырья</value>
+  </data>
+  <data name="RestaurantScreen" xml:space="preserve">
+    <value>Табло ресторана</value>
+  </data>
+  <data name="RevenueNewClientsByLoyaltyTotal" xml:space="preserve">
+    <value>Сумма заказов новых клиентов, привлеченных Бонусной программой</value>
+  </data>
+  <data name="RevisionAt" xml:space="preserve">
+    <value>Ревизия от {0}</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>Ревизор</value>
+  </data>
+  <data name="RootAdmin" xml:space="preserve">
+    <value>Центральный администратор</value>
+  </data>
+  <data name="RootOfficeManager" xml:space="preserve">
+    <value>Центральный менеджер офиса</value>
+  </data>
+  <data name="RootOperator" xml:space="preserve">
+    <value>Центральный оператор</value>
+  </data>
+  <data name="ShiftManager" xml:space="preserve">
+    <value>Менеджер смены</value>
+  </data>
+  <data name="ShopWindowItemsScreen" xml:space="preserve">
+    <value>Витрина</value>
+  </data>
+  <data name="StartBonus" xml:space="preserve">
+    <value>Стартовый бонус</value>
+  </data>
+  <data name="TakenLosses" xml:space="preserve">
+    <value>Учтённые потери</value>
+  </data>
+  <data name="Title_LossesAndExceesReport" xml:space="preserve">
+    <value>Неучтённые потери</value>
+  </data>
+  <data name="Title_LoyaltyReport" xml:space="preserve">
+    <value>Бонусная программа</value>
+  </data>
+  <data name="TrackingManager" xml:space="preserve">
+    <value>Трекинг</value>
+  </data>
+  <data name="TrackingManagerOnColdAssemblyTable" xml:space="preserve">
+    <value>Трекинг - Закуски</value>
+  </data>
+  <data name="TrackingManagerOnDoughTable" xml:space="preserve">
+    <value>Трекинг - Тесто</value>
+  </data>
+  <data name="TrackingManagerOnHotAssemblyTable" xml:space="preserve">
+    <value>Трекинг - Линия</value>
+  </data>
+  <data name="TrackingManagerOnOvenTable" xml:space="preserve">
+    <value>Трекинг - Печь</value>
+  </data>
+  <data name="TrackingManagerOnOrdersToDelivery" xml:space="preserve">
+    <value>Трекинг - Курьеры</value>
+  </data>
+  <data name="TrackingManagerOnOrdersToStationary" xml:space="preserve">
+    <value>Трекинг - Ресторан</value>
+  </data>
+  <data name="TrackingManagerOnPackingTable" xml:space="preserve">
+    <value>Трекинг - Упаковка</value>
+  </data>
+  <data name="TrackingManagerOnSliceDebiting" xml:space="preserve">
+    <value>Трекинг - Списание кусочков</value>
+  </data>
+  <data name="TvBoard" xml:space="preserve">
+    <value>ТВ-борды</value>
+  </data>
+  <data name="UserRoleNotExist" xml:space="preserve">
+    <value>Не выбрана роль</value>
+  </data>
+  <data name="UserUnitNotRequired" xml:space="preserve">
+    <value>Не выбран отдел</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Значение</value>
+  </data>
+  <data name="YandexTransactionManager" xml:space="preserve">
+    <value>Менеджер транзакций Я.Деньги</value>
+  </data>
+  <data name="UnitateAdmin" xml:space="preserve">
+    <value>Администратор подразделения</value>
+  </data>
+  <data name="EmailIsNotValidMessage" xml:space="preserve">
+    <value>Введен некорректный адрес электронной почты</value>
+  </data>
+</root>

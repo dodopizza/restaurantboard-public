@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>积极</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>积极（弹出式窗口）</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>被动</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>被动（在购物车页面上的组）</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>所有的天</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>总金额</value>
+  </data>
+  <data name="AmountWithOutNDS" xml:space="preserve">
+    <value>纳税之前总额</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>自动的</value>
+  </data>
+  <data name="AverageCheck" xml:space="preserve">
+    <value>订单均价</value>
+  </data>
+  <data name="AverageWorkLoad" xml:space="preserve">
+    <value>平均负荷</value>
+  </data>
+  <data name="BadBonus" xml:space="preserve">
+    <value>长久</value>
+  </data>
+  <data name="BannerPosition_None" xml:space="preserve">
+    <value>没有价格</value>
+  </data>
+  <data name="BannerPricePrefix" xml:space="preserve">
+    <value>前缀价格</value>
+  </data>
+  <data name="BasicData" xml:space="preserve">
+    <value>初始资料</value>
+  </data>
+  <data name="BeginDate" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="BonusAction" xml:space="preserve">
+    <value>活动</value>
+  </data>
+  <data name="BonusActionDescription" xml:space="preserve">
+    <value>活动描述</value>
+  </data>
+  <data name="BonusActionEndPoint" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="BonusActionName" xml:space="preserve">
+    <value>活动的名</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProduct" xml:space="preserve">
+    <value>订单中包含以下任意单品</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_AnyProductInAmount" xml:space="preserve">
+    <value>订单至少含"{0}"个{1}中产品</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_BigPizzas" xml:space="preserve">
+    <value>订单至少含"{1}"个大号披萨</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_Combo" xml:space="preserve">
+    <value>订单至少含"{0}"个“{0}“套餐</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ComboMultiple" xml:space="preserve">
+    <value>订单至少含"{0}"个“{0}“套餐</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_Default" xml:space="preserve">
+    <value>分类方式：{0}
+产品分类：{1}
+具体产品：{2}
+产品数量：{3}</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_FromCategory" xml:space="preserve">
+    <value>订单至少含"{1}"个\“{0}“\分类中产品</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_MediumPizzas" xml:space="preserve">
+    <value>订单至少含"{0}"个中号披萨</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmount" xml:space="preserve">
+    <value>订单至少含"{1}"个\"0"\产品</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_ProductInAmountEach" xml:space="preserve">
+    <value>订单中每个\"0"\中产品至少含"{1}"个</value>
+  </data>
+  <data name="BonusAction_ConditionDescription_SmallPizzas" xml:space="preserve">
+    <value>订单至少含"{0}"个小号披萨</value>
+  </data>
+  <data name="CallCenterDailyReportXmlHeader" xml:space="preserve">
+    <value>客厅中心订单日报告</value>
+  </data>
+  <data name="CallCenterReportXmlHeader" xml:space="preserve">
+    <value>客服中心订单报告</value>
+  </data>
+  <data name="CashBoxShifts" xml:space="preserve">
+    <value>钱箱的班次：</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>客户名</value>
+  </data>
+  <data name="ColdAssemblyTable" xml:space="preserve">
+    <value>馅子，冷</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>消耗品</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="CountWorkedHours" xml:space="preserve">
+    <value>耗时</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>外卖员</value>
+  </data>
+  <data name="CourierNumber" xml:space="preserve">
+    <value>外卖员编号</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期/时间</value>
+  </data>
+  <data name="DateBeginSale" xml:space="preserve">
+    <value>恢复日期</value>
+  </data>
+  <data name="DateFilter_Day" xml:space="preserve">
+    <value>具体日期</value>
+  </data>
+  <data name="DateFilter_DayOfWeek" xml:space="preserve">
+    <value>平常日</value>
+  </data>
+  <data name="DateFilter_Period" xml:space="preserve">
+    <value>期限</value>
+  </data>
+  <data name="DatePeriod" xml:space="preserve">
+    <value>期间日期：</value>
+  </data>
+  <data name="DateStopSale" xml:space="preserve">
+    <value>停止日期</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>日期/时间</value>
+  </data>
+  <data name="DefectiveStage" xml:space="preserve">
+    <value>站</value>
+  </data>
+  <data name="DefectProduct" xml:space="preserve">
+    <value>残次品</value>
+  </data>
+  <data name="DelayReason" xml:space="preserve">
+    <value>过期的原因</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="DeliveryAddress" xml:space="preserve">
+    <value>送货地址</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>送货部和饭馆</value>
+  </data>
+  <data name="DeliverySectorName" xml:space="preserve">
+    <value>扇形区</value>
+  </data>
+  <data name="DeliveryZone" xml:space="preserve">
+    <value>送货区域</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>部门</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描写</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>打折</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>正在发送</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>等候</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Dough25" xml:space="preserve">
+    <value>厚25</value>
+  </data>
+  <data name="Dough30" xml:space="preserve">
+    <value>厚30</value>
+  </data>
+  <data name="Dough30Thin" xml:space="preserve">
+    <value>薄30</value>
+  </data>
+  <data name="Dough35" xml:space="preserve">
+    <value>厚35</value>
+  </data>
+  <data name="Dough35Thin" xml:space="preserve">
+    <value>薄35</value>
+  </data>
+  <data name="DoughTable" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>行动</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>员工</value>
+  </data>
+  <data name="EmployeeDateFormat" xml:space="preserve">
+    <value>yyyy.MM.dd</value>
+  </data>
+  <data name="EmployeeTimeFormat" xml:space="preserve">
+    <value>HH:mm</value>
+  </data>
+  <data name="EmployeeType" xml:space="preserve">
+    <value>人员类型</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="EndPointType" xml:space="preserve">
+    <value>目的地</value>
+  </data>
+  <data name="EndStopSale" xml:space="preserve">
+    <value>恢复日期</value>
+  </data>
+  <data name="ErrorMessage_CancelAccuralToMysteryShopper" xml:space="preserve">
+    <value>在客户的帐户资金不足核销</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>每个天的</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>每个月的</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>订单金额（{0}）少花dodo美元（{1}）</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>除外</value>
+  </data>
+  <data name="ExcludeDismissedEmployees" xml:space="preserve">
+    <value>已被解职工作者除外</value>
+  </data>
+  <data name="ExpiredOrdersCount" xml:space="preserve">
+    <value>超时</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByOrders" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="Filter_PizzeriaLoadByProducts" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Filter_ProductsByCategories" xml:space="preserve">
+    <value>按类别产品</value>
+  </data>
+  <data name="Filter_ProductsByTypes" xml:space="preserve">
+    <value>按类型产品</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>成品</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="FirstOrderDate" xml:space="preserve">
+    <value>首次订单日期</value>
+  </data>
+  <data name="FirstOrderTime" xml:space="preserve">
+    <value>首次订单时间</value>
+  </data>
+  <data name="Fridays" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>从</value>
+  </data>
+  <data name="FunctionFilter_Avg" xml:space="preserve">
+    <value>平均</value>
+  </data>
+  <data name="FunctionFilter_Max" xml:space="preserve">
+    <value>最大</value>
+  </data>
+  <data name="FunctionFilter_Min" xml:space="preserve">
+    <value>最小</value>
+  </data>
+  <data name="GoodBonus" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>克</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>克</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>节日</value>
+  </data>
+  <data name="HotAssemblyTable" xml:space="preserve">
+    <value>馅子，热</value>
+  </data>
+  <data name="Houses" xml:space="preserve">
+    <value>在家里</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>食材</value>
+  </data>
+  <data name="InQueue" xml:space="preserve">
+    <value>在排队</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>库存</value>
+  </data>
+  <data name="Kg" xml:space="preserve">
+    <value>公斤</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>公斤</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>公斤</value>
+  </data>
+  <data name="LabourCostShort" xml:space="preserve">
+    <value>LC</value>
+  </data>
+  <data name="LastOrderDate" xml:space="preserve">
+    <value>最后订单的日期</value>
+  </data>
+  <data name="LastOrderTime" xml:space="preserve">
+    <value>最后订单时间</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>升</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>站</value>
+  </data>
+  <data name="Locality" xml:space="preserve">
+    <value>局部性</value>
+  </data>
+  <data name="LongPreparationProduct" xml:space="preserve">
+    <value>做很长时间, %</value>
+  </data>
+  <data name="MeasureUnit" xml:space="preserve">
+    <value>测量单位</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>无效促销代码</value>
+  </data>
+  <data name="Message_InvalidTime" xml:space="preserve">
+    <value>设定不正确的时间格式</value>
+  </data>
+  <data name="Message_UnitIdsRequired" xml:space="preserve">
+    <value>无任何部门可供选择</value>
+  </data>
+  <data name="MetaProduct" xml:space="preserve">
+    <value>Metaprodukt</value>
+  </data>
+  <data name="MethodOfCalculation" xml:space="preserve">
+    <value>结算方式</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>毫米</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>毫米</value>
+  </data>
+  <data name="Mondays" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>一月，二月，三月，四月，五月，六月，七月，八月，九月，十月，十一月，十二月</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="NDS" xml:space="preserve">
+    <value>增值税,%</value>
+  </data>
+  <data name="NormalBonus" xml:space="preserve">
+    <value>中立的间隔</value>
+  </data>
+  <data name="NotDefined" xml:space="preserve">
+    <value>未确定</value>
+  </data>
+  <data name="OnHallSquare" xml:space="preserve">
+    <value>每大厅平方米</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>只周末</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>只平日</value>
+  </data>
+  <data name="OperationCount" xml:space="preserve">
+    <value>阳性数</value>
+  </data>
+  <data name="OrderAmount" xml:space="preserve">
+    <value>订单总额</value>
+  </data>
+  <data name="OrderDateOfReceipt" xml:space="preserve">
+    <value>订单日期</value>
+  </data>
+  <data name="OrderLinesCount" xml:space="preserve">
+    <value>地位</value>
+  </data>
+  <data name="OrderNumber" xml:space="preserve">
+    <value>订单号</value>
+  </data>
+  <data name="OrderOperator" xml:space="preserve">
+    <value>订单操作者</value>
+  </data>
+  <data name="OrderPaymentType" xml:space="preserve">
+    <value>支付方式</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="OrdersAmount" xml:space="preserve">
+    <value>订单金额</value>
+  </data>
+  <data name="OrdersCount" xml:space="preserve">
+    <value>订单数量</value>
+  </data>
+  <data name="OrdersCountOnCouriers" xml:space="preserve">
+    <value>一小时个快递员订单数量</value>
+  </data>
+  <data name="OrdersDelivered" xml:space="preserve">
+    <value>订单已经发送</value>
+  </data>
+  <data name="OrdersOnCouriersInHourCount" xml:space="preserve">
+    <value>一小时个快递员订单</value>
+  </data>
+  <data name="OrderSourceMobile" xml:space="preserve">
+    <value>手机软件</value>
+  </data>
+  <data name="OrderSources" xml:space="preserve">
+    <value>订单来源</value>
+  </data>
+  <data name="OrderSourceSite" xml:space="preserve">
+    <value>网站</value>
+  </data>
+  <data name="OrderStatus" xml:space="preserve">
+    <value>订单的状态</value>
+  </data>
+  <data name="OrderType" xml:space="preserve">
+    <value>订单类型</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>组织</value>
+  </data>
+  <data name="OverdueBonus" xml:space="preserve">
+    <value>罚款 （等候）</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="PackingTable" xml:space="preserve">
+    <value>包装</value>
+  </data>
+  <data name="Patronymic" xml:space="preserve">
+    <value>父名</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>期限</value>
+  </data>
+  <data name="PersonalFood" xml:space="preserve">
+    <value>人员饮餐</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="Pickup" xml:space="preserve">
+    <value>自提</value>
+  </data>
+  <data name="Pizza" xml:space="preserve">
+    <value>比萨</value>
+  </data>
+  <data name="PizzaAndCompositionCountOnEmployee" xml:space="preserve">
+    <value>以小时个人披萨和小吃数量</value>
+  </data>
+  <data name="PizzaCountOnEmployee" xml:space="preserve">
+    <value>以小时个人披萨数量</value>
+  </data>
+  <data name="Pizzeria" xml:space="preserve">
+    <value>比萨饼店</value>
+  </data>
+  <data name="Portion" xml:space="preserve">
+    <value>份额</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>制作</value>
+  </data>
+  <data name="PreparationTime" xml:space="preserve">
+    <value>制作时间</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>礼物</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="ProductCategories" xml:space="preserve">
+    <value>产品分类</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="ProductID" xml:space="preserve">
+    <value>产品Id</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>制作</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>产品名</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="ProductSales" xml:space="preserve">
+    <value>销售</value>
+  </data>
+  <data name="ProductsGroup" xml:space="preserve">
+    <value>产品组</value>
+  </data>
+  <data name="ProductType" xml:space="preserve">
+    <value>产品类型</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>促销代码</value>
+  </data>
+  <data name="PromoCode" xml:space="preserve">
+    <value>促销代码</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>个</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>电脑。</value>
+  </data>
+  <data name="ReasonStopSale" xml:space="preserve">
+    <value>究其原因，停止</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>报告：</value>
+  </data>
+  <data name="ReportName_ConsumptionProducts" xml:space="preserve">
+    <value>消费类产品</value>
+  </data>
+  <data name="ReportName_DeliverySectorsReport" xml:space="preserve">
+    <value>送货区域</value>
+  </data>
+  <data name="ReportName_ExpressProductsStatistics" xml:space="preserve">
+    <value>急送产品延期</value>
+  </data>
+  <data name="ReportName_ProductivityCouriersStatistic" xml:space="preserve">
+    <value>外卖员工作率</value>
+  </data>
+  <data name="ReportName_ProductsSalesForCalculationCard" xml:space="preserve">
+    <value>产品销售报告</value>
+  </data>
+  <data name="ReportName_ReportKitchenMotivation" xml:space="preserve">
+    <value>动机厨工</value>
+  </data>
+  <data name="ReportName_Revenue" xml:space="preserve">
+    <value>销售额</value>
+  </data>
+  <data name="RestOfDeliverySectors" xml:space="preserve">
+    <value>其余的</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>销售额</value>
+  </data>
+  <data name="RevenueOnEmployee" xml:space="preserve">
+    <value>一小时个人进款</value>
+  </data>
+  <data name="RevisionType" xml:space="preserve">
+    <value>审计类型</value>
+  </data>
+  <data name="Revisor" xml:space="preserve">
+    <value>审计：</value>
+  </data>
+  <data name="SalaryCategory" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="SalaryDayHours" xml:space="preserve">
+    <value>日间小时</value>
+  </data>
+  <data name="SalaryDayMoney" xml:space="preserve">
+    <value>工资，天</value>
+  </data>
+  <data name="SalaryEmployeeName" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="SalaryHolidayFactor" xml:space="preserve">
+    <value>系数特殊的日子</value>
+  </data>
+  <data name="SalaryHolidayHours" xml:space="preserve">
+    <value>节日小时</value>
+  </data>
+  <data name="SalaryKitchenStaff" xml:space="preserve">
+    <value>工资厨工</value>
+  </data>
+  <data name="SalaryNightFactor" xml:space="preserve">
+    <value>夜间系数</value>
+  </data>
+  <data name="SalaryNightHours" xml:space="preserve">
+    <value>夜时</value>
+  </data>
+  <data name="SalaryNightMoney" xml:space="preserve">
+    <value>工资，夜时</value>
+  </data>
+  <data name="SalaryPremiumMoney" xml:space="preserve">
+    <value>工资，奖金</value>
+  </data>
+  <data name="SalaryRate" xml:space="preserve">
+    <value>费率</value>
+  </data>
+  <data name="SalaryShiftEndDate" xml:space="preserve">
+    <value>班次结束日期</value>
+  </data>
+  <data name="SalaryShiftEndTime" xml:space="preserve">
+    <value>班次结束时间</value>
+  </data>
+  <data name="SalaryShiftStartDate" xml:space="preserve">
+    <value>班次结束日期</value>
+  </data>
+  <data name="SalaryShiftStartTime" xml:space="preserve">
+    <value>班次开始时间</value>
+  </data>
+  <data name="SalaryShiftTime" xml:space="preserve">
+    <value>班次时间</value>
+  </data>
+  <data name="SalaryTotalHours" xml:space="preserve">
+    <value>总小时数</value>
+  </data>
+  <data name="SalaryTotalMoney" xml:space="preserve">
+    <value>共计</value>
+  </data>
+  <data name="SalesType" xml:space="preserve">
+    <value>销售形式</value>
+  </data>
+  <data name="SaleTime" xml:space="preserve">
+    <value>销售时间（打印发票）</value>
+  </data>
+  <data name="SaleType" xml:space="preserve">
+    <value>销售方向</value>
+  </data>
+  <data name="Saturdays" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="SecondName" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="Sector" xml:space="preserve">
+    <value>扇形区</value>
+  </data>
+  <data name="SelectInventoryType" xml:space="preserve">
+    <value>选取原料等级</value>
+  </data>
+  <data name="SelectUnitsOfMeasure" xml:space="preserve">
+    <value>选择测量单位</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>半成品</value>
+  </data>
+  <data name="ShiftNumber" xml:space="preserve">
+    <value>班次号</value>
+  </data>
+  <data name="Shifts" xml:space="preserve">
+    <value>早班次、晚上班次、夜时班次</value>
+  </data>
+  <data name="ShiftType" xml:space="preserve">
+    <value>班次类型</value>
+  </data>
+  <data name="SliderType_Default" xml:space="preserve">
+    <value>标准的</value>
+  </data>
+  <data name="SliderType_ForPieces" xml:space="preserve">
+    <value>小块使用</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>不是所有选定的产品都有指定的价格。</value>
+  </data>
+  <data name="SpecialPrice" xml:space="preserve">
+    <value>特价</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>统计</value>
+  </data>
+  <data name="StopSale" xml:space="preserve">
+    <value>停止销售</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>街</value>
+  </data>
+  <data name="Sundays" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="TabNo" xml:space="preserve">
+    <value>工号</value>
+  </data>
+  <data name="TechnicalDescription" xml:space="preserve">
+    <value>类型描述</value>
+  </data>
+  <data name="Thursdays" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>时间</value>
+  </data>
+  <data name="TimeOutOrdersPercentage" xml:space="preserve">
+    <value>过期%</value>
+  </data>
+  <data name="TimeOutPeriod" xml:space="preserve">
+    <value>等待</value>
+  </data>
+  <data name="TimeReportBeginDateColumnTitle" xml:space="preserve">
+    <value>班次开始日期</value>
+  </data>
+  <data name="TimeReportBeginTimeColumnTitle" xml:space="preserve">
+    <value>班次开始时间</value>
+  </data>
+  <data name="TimeReportCategoryColumnTitle" xml:space="preserve">
+    <value>分类</value>
+  </data>
+  <data name="TimeReportDayHoursColumnTitle" xml:space="preserve">
+    <value>日时间</value>
+  </data>
+  <data name="TimeReportEmployeeColumnTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="TimeReportEndDateColumnTitle" xml:space="preserve">
+    <value>班次结束日期</value>
+  </data>
+  <data name="TimeReportEndTimeColumnTitle" xml:space="preserve">
+    <value>班次结束时间</value>
+  </data>
+  <data name="TimeReportHoursTotalColumnTitle" xml:space="preserve">
+    <value>共计</value>
+  </data>
+  <data name="TimeReportNightHoursColumnTitle" xml:space="preserve">
+    <value>夜时</value>
+  </data>
+  <data name="Title_ActivityDeliverySectors" xml:space="preserve">
+    <value>送货扇形区活性</value>
+  </data>
+  <data name="Title_BonusActionActivityReport" xml:space="preserve">
+    <value>活动活性</value>
+  </data>
+  <data name="Title_BonusActionsReport" xml:space="preserve">
+    <value>应用自动活动</value>
+  </data>
+  <data name="Title_ClientsStatisicReport" xml:space="preserve">
+    <value>客户统计</value>
+  </data>
+  <data name="Title_CourierStatisicReport" xml:space="preserve">
+    <value>外卖员分析</value>
+  </data>
+  <data name="Title_CourierTasks" xml:space="preserve">
+    <value>外卖员行程</value>
+  </data>
+  <data name="Title_DefectiveProductsReport" xml:space="preserve">
+    <value>残次品</value>
+  </data>
+  <data name="Title_DeliveryStatistic" xml:space="preserve">
+    <value>送货统计</value>
+  </data>
+  <data name="Title_DoughReport" xml:space="preserve">
+    <value>耗面量</value>
+  </data>
+  <data name="Title_LabourCost" xml:space="preserve">
+    <value>Labour Cost</value>
+  </data>
+  <data name="Title_OrdersReport" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="Title_ProductionTimeReport" xml:space="preserve">
+    <value>制作时间</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoad" xml:space="preserve">
+    <value>工作量报告</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadOrders" xml:space="preserve">
+    <value>订单</value>
+  </data>
+  <data name="Title_ReportPizzeriaLoadProducts" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Title_ReportPopularityProducts" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Title_ReportProductivity" xml:space="preserve">
+    <value>产量</value>
+  </data>
+  <data name="Title_ReportPromoCodeUsed" xml:space="preserve">
+    <value>促销代码耗量</value>
+  </data>
+  <data name="Title_ReportSaleByCashBoxSessions" xml:space="preserve">
+    <value>周期总金额</value>
+  </data>
+  <data name="Title_RevenuePercentage" xml:space="preserve">
+    <value>销售额比例，%</value>
+  </data>
+  <data name="Title_SalaryReport" xml:space="preserve">
+    <value>工资</value>
+  </data>
+  <data name="Title_SaleCount" xml:space="preserve">
+    <value>销售，个</value>
+  </data>
+  <data name="Title_StopSaleReport" xml:space="preserve">
+    <value>停止销售</value>
+  </data>
+  <data name="Title_TimeReport" xml:space="preserve">
+    <value>实际时间</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>共计</value>
+  </data>
+  <data name="TotalNDS" xml:space="preserve">
+    <value>增值税总数</value>
+  </data>
+  <data name="TotalOrdersPrice" xml:space="preserve">
+    <value>订单活动数额</value>
+  </data>
+  <data name="TotalPayableForPeriod" xml:space="preserve">
+    <value>周期总金额</value>
+  </data>
+  <data name="Tuesdays" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="UnitName" xml:space="preserve">
+    <value>部分</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>部分：</value>
+  </data>
+  <data name="UserBeginSale" xml:space="preserve">
+    <value>谁恢复</value>
+  </data>
+  <data name="UserStopSale" xml:space="preserve">
+    <value>谁停止</value>
+  </data>
+  <data name="UsingCount" xml:space="preserve">
+    <value>应用数量</value>
+  </data>
+  <data name="ValidationRequiredMockupDaysOfWeek" xml:space="preserve">
+    <value>没有填写一周中的日子 </value>
+  </data>
+  <data name="ValidationRequiredMockupName" xml:space="preserve">
+    <value>没有指出模型名称</value>
+  </data>
+  <data name="WaitingTime" xml:space="preserve">
+    <value>等待</value>
+  </data>
+  <data name="Wednesdays" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>休息日</value>
+  </data>
+  <data name="WorkLoad" xml:space="preserve">
+    <value>劳动</value>
+  </data>
+</root>

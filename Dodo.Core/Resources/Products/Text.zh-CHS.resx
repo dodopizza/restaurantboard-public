@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalSaleTypeActive" xml:space="preserve">
+    <value>积极</value>
+  </data>
+  <data name="AdditionalSaleTypeActiveTitle" xml:space="preserve">
+    <value>积极（弹出式窗口）</value>
+  </data>
+  <data name="AdditionalSaleTypePassive" xml:space="preserve">
+    <value>被动</value>
+  </data>
+  <data name="AdditionalSaleTypePassiveTitle" xml:space="preserve">
+    <value>被动（在购物车页面上的组）</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>所有的天</value>
+  </data>
+  <data name="Automatic" xml:space="preserve">
+    <value>自动的</value>
+  </data>
+  <data name="BigPizzas" xml:space="preserve">
+    <value>大号披萨</value>
+  </data>
+  <data name="CategoryDesserts" xml:space="preserve">
+    <value>甜</value>
+  </data>
+  <data name="CategoryDrinks" xml:space="preserve">
+    <value>饮料</value>
+  </data>
+  <data name="CategoryGoods" xml:space="preserve">
+    <value>货物</value>
+  </data>
+  <data name="CategoryPieces" xml:space="preserve">
+    <value>小块儿</value>
+  </data>
+  <data name="CategoryPizza" xml:space="preserve">
+    <value>比萨</value>
+  </data>
+  <data name="CategorySauces" xml:space="preserve">
+    <value>调味汁</value>
+  </data>
+  <data name="CategorySnacks" xml:space="preserve">
+    <value>小吃</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="DeliveryAndStationary" xml:space="preserve">
+    <value>送货部和饭馆</value>
+  </data>
+  <data name="DeliveryMenu" xml:space="preserve">
+    <value>送货菜单</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>打折</value>
+  </data>
+  <data name="DistributionStatusSending" xml:space="preserve">
+    <value>正在发送</value>
+  </data>
+  <data name="DistributionStatusWaiting" xml:space="preserve">
+    <value>等候</value>
+  </data>
+  <data name="DistributionStatusСompleted" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="ErrorMessage_PriceMustBePositive" xml:space="preserve">
+    <value>价格不能小于 0</value>
+  </data>
+  <data name="ErrorMessage_PriceValueHasInvalidValue" xml:space="preserve">
+    <value>“价格”字段包含无效的数值</value>
+  </data>
+  <data name="ErrorMessage_PriceValueRequired" xml:space="preserve">
+    <value>“价格”字段得填好</value>
+  </data>
+  <data name="Error_EmptyDimensionalCharacteristics" xml:space="preserve">
+    <value>不正确的数量</value>
+  </data>
+  <data name="Error_IncorrectPriceInHundred" xml:space="preserve">
+    <value>价格有错误，价格得被100除尽</value>
+  </data>
+  <data name="Error_IncorrectPriceInOneNumber" xml:space="preserve">
+    <value>价格有错误，价格得被1除尽</value>
+  </data>
+  <data name="Error_Number" xml:space="preserve">
+    <value>尺寸特性的名称太长</value>
+  </data>
+  <data name="Error_SalePeriod_EndDateLessThanStartDate" xml:space="preserve">
+    <value>销售结束日期不得低于起始日期</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotBeInThePast" xml:space="preserve">
+    <value>不能指定在过去销售开始日期</value>
+  </data>
+  <data name="Error_SalePeriod_StartDateCannotChange" xml:space="preserve">
+    <value>只能更改未来开始销售的日期</value>
+  </data>
+  <data name="Error_TooLongDimensionalCharacteristics" xml:space="preserve">
+    <value>尺寸特性的名称太长</value>
+  </data>
+  <data name="European" xml:space="preserve">
+    <value>欧洲式</value>
+  </data>
+  <data name="ExceptionMessageTemplateApplyDodollars" xml:space="preserve">
+    <value>订单金额（{0}）少花dodo美元（{1}）</value>
+  </data>
+  <data name="Food" xml:space="preserve">
+    <value>食品的</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>推荐 </value>
+  </data>
+  <data name="Halal" xml:space="preserve">
+    <value>清真</value>
+  </data>
+  <data name="HalfHalal" xml:space="preserve">
+    <value>半清真</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>不活泼的</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>食材</value>
+  </data>
+  <data name="MediumPizzas" xml:space="preserve">
+    <value>中号披萨</value>
+  </data>
+  <data name="MenuAccessibility_Delivery" xml:space="preserve">
+    <value>外卖</value>
+  </data>
+  <data name="MenuAccessibility_Personal" xml:space="preserve">
+    <value>人员饮餐</value>
+  </data>
+  <data name="MenuAccessibility_Stationary" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="Message_InvalidPromoCode" xml:space="preserve">
+    <value>无效促销代码</value>
+  </data>
+  <data name="Months" xml:space="preserve">
+    <value>一月，二月，三月，四月，五月，六月，七月，八月，九月，十月，十一月，十二月</value>
+  </data>
+  <data name="Nonfood" xml:space="preserve">
+    <value>非食品</value>
+  </data>
+  <data name="OnlyWeekDays" xml:space="preserve">
+    <value>只周末</value>
+  </data>
+  <data name="OnlyWorkDays" xml:space="preserve">
+    <value>只平日</value>
+  </data>
+  <data name="PersonalMenu" xml:space="preserve">
+    <value>人员饭菜</value>
+  </data>
+  <data name="PizzaScheme" xml:space="preserve">
+    <value>比萨方案</value>
+  </data>
+  <data name="Present" xml:space="preserve">
+    <value>礼物</value>
+  </data>
+  <data name="PriorityHigh" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="PriorityLow" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="PriorityMedium" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="Promo" xml:space="preserve">
+    <value>促销代码</value>
+  </data>
+  <data name="RestaurantMenu" xml:space="preserve">
+    <value>堂食菜单</value>
+  </data>
+  <data name="SandwichScheme" xml:space="preserve">
+    <value>三明治方案</value>
+  </data>
+  <data name="SimpleScheme" xml:space="preserve">
+    <value>无生产方案</value>
+  </data>
+  <data name="SmallPizzas" xml:space="preserve">
+    <value>小号披萨</value>
+  </data>
+  <data name="SnacksScheme" xml:space="preserve">
+    <value>小吃方案</value>
+  </data>
+  <data name="SomeProductsHaveNoPrice" xml:space="preserve">
+    <value>不是所有选定的产品都有指定的价格</value>
+  </data>
+  <data name="Stationary" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="ThinDoughAlias" xml:space="preserve">
+    <value>薄的面</value>
+  </data>
+  <data name="TypeBaked" xml:space="preserve">
+    <value>饼</value>
+  </data>
+  <data name="TypeComposite" xml:space="preserve">
+    <value>部件</value>
+  </data>
+  <data name="TypeSimple" xml:space="preserve">
+    <value>简单</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>没确定</value>
+  </data>
+  <data name="WithoutSpecialization" xml:space="preserve">
+    <value>没有特点</value>
+  </data>
+</root>

@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicUnitOfMeasure" xml:space="preserve">
+    <value>Baasi mõõtühik</value>
+  </data>
+  <data name="BasicUnitOfMeasureShort" xml:space="preserve">
+    <value>Baasühik</value>
+  </data>
+  <data name="BeginDateRequired" xml:space="preserve">
+    <value>Sisestage alguskuupäeva</value>
+  </data>
+  <data name="Bottle" xml:space="preserve">
+    <value>Pudel</value>
+  </data>
+  <data name="Box" xml:space="preserve">
+    <value>Karp</value>
+  </data>
+  <data name="Bucket" xml:space="preserve">
+    <value>Ämber</value>
+  </data>
+  <data name="Consumables" xml:space="preserve">
+    <value>Kulumaterjalid</value>
+  </data>
+  <data name="ConsumptionType_All" xml:space="preserve">
+    <value>Kõik</value>
+  </data>
+  <data name="ConsumptionType_Canceled" xml:space="preserve">
+    <value>Tellimuse tühistamine</value>
+  </data>
+  <data name="ConsumptionType_Defect" xml:space="preserve">
+    <value>Praak</value>
+  </data>
+  <data name="ConsumptionType_PersonalFood" xml:space="preserve">
+    <value>Personali toitlustamine</value>
+  </data>
+  <data name="ConsumptionType_Sales" xml:space="preserve">
+    <value>Müügid</value>
+  </data>
+  <data name="ConsumptionType_Transfers" xml:space="preserve">
+    <value>Liikumised</value>
+  </data>
+  <data name="ContainerSize" xml:space="preserve">
+    <value>Taara suurus</value>
+  </data>
+  <data name="ContainerTypeNone" xml:space="preserve">
+    <value>Ilma pakendita</value>
+  </data>
+  <data name="DebitingReason_Corruption" xml:space="preserve">
+    <value>Toore rikenemine</value>
+  </data>
+  <data name="DebitingReason_Expired" xml:space="preserve">
+    <value>Parim enne möödas</value>
+  </data>
+  <data name="DebitingReason_GuiltyPerson" xml:space="preserve">
+    <value>Süüdiolev isik</value>
+  </data>
+  <data name="DebitingReason_MarketingActivities" xml:space="preserve">
+    <value>Müügiüritused</value>
+  </data>
+  <data name="DebitingReason_PackageDamaged" xml:space="preserve">
+    <value>Pakendi kahjustamine</value>
+  </data>
+  <data name="DryWeight" xml:space="preserve">
+    <value>Kuivkaal</value>
+  </data>
+  <data name="EndDateRequired" xml:space="preserve">
+    <value>Sisestage lõppkuupäeva</value>
+  </data>
+  <data name="EveningShift" xml:space="preserve">
+    <value>Õhtune vahetus</value>
+  </data>
+  <data name="EveryDay" xml:space="preserve">
+    <value>Päev</value>
+  </data>
+  <data name="EveryMonth" xml:space="preserve">
+    <value>Kuu</value>
+  </data>
+  <data name="EveryWeek" xml:space="preserve">
+    <value>Nädal</value>
+  </data>
+  <data name="Federal" xml:space="preserve">
+    <value>Föderaalne</value>
+  </data>
+  <data name="FieldMustBePositive" xml:space="preserve">
+    <value>Välja {0} väärtus peab olema positiivne</value>
+  </data>
+  <data name="FinishedProduct" xml:space="preserve">
+    <value>Valmistooted</value>
+  </data>
+  <data name="ForAllUnits" xml:space="preserve">
+    <value>Kõikidele osakondadele</value>
+  </data>
+  <data name="FreeTara" xml:space="preserve">
+    <value>Vaba kaal</value>
+  </data>
+  <data name="Gram" xml:space="preserve">
+    <value>Gramm</value>
+  </data>
+  <data name="GramShort" xml:space="preserve">
+    <value>g.</value>
+  </data>
+  <data name="Ingredient" xml:space="preserve">
+    <value>Koostisosa</value>
+  </data>
+  <data name="Inventory" xml:space="preserve">
+    <value>Inventar</value>
+  </data>
+  <data name="Jar" xml:space="preserve">
+    <value>Purk</value>
+  </data>
+  <data name="Kilogram" xml:space="preserve">
+    <value>Kilogramm</value>
+  </data>
+  <data name="KilogramShort" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="Lexan1" xml:space="preserve">
+    <value>Lexan 1/1</value>
+  </data>
+  <data name="Lexan2" xml:space="preserve">
+    <value>Lexan 1/2</value>
+  </data>
+  <data name="Lexan3" xml:space="preserve">
+    <value>Lexan 1/3</value>
+  </data>
+  <data name="Lexan6" xml:space="preserve">
+    <value>Lexan 1/6</value>
+  </data>
+  <data name="Lexan9" xml:space="preserve">
+    <value>Lexan 1/9</value>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liiter</value>
+  </data>
+  <data name="LiterShort" xml:space="preserve">
+    <value>l</value>
+  </data>
+  <data name="Material_MaterialNameIsRequired" xml:space="preserve">
+    <value>Pealkiri pole sisestatud</value>
+  </data>
+  <data name="Material_MaterialTypeIsRequired" xml:space="preserve">
+    <value>Tooraine liik pole valitud</value>
+  </data>
+  <data name="MeasureTypeVariation_Breakfast" xml:space="preserve">
+    <value>Suupiste</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml" xml:space="preserve">
+    <value>Klaas 100 ml</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_2" xml:space="preserve">
+    <value>1/2</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml1_4" xml:space="preserve">
+    <value>1/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass100Ml3_4" xml:space="preserve">
+    <value>3/4</value>
+  </data>
+  <data name="MeasureTypeVariation_Glass200Ml" xml:space="preserve">
+    <value>Klaas 200 ml</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfLargeGlass" xml:space="preserve">
+    <value>1/2 suurt klaasi</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfMediumGlass" xml:space="preserve">
+    <value>1/2 keskmist klaasi</value>
+  </data>
+  <data name="MeasureTypeVariation_HalfOfSmallGlass" xml:space="preserve">
+    <value>1/2 väikest klaasi</value>
+  </data>
+  <data name="MeasureTypeVariation_HickeyOneHickey" xml:space="preserve">
+    <value>Üks tükk</value>
+  </data>
+  <data name="MeasureTypeVariation_LargeGlass" xml:space="preserve">
+    <value>Suur klaas</value>
+  </data>
+  <data name="MeasureTypeVariation_MediumGlass" xml:space="preserve">
+    <value>Keskmine klaas</value>
+  </data>
+  <data name="MeasureTypeVariation_PinchOnePinch" xml:space="preserve">
+    <value>Üks näpuotsatäis</value>
+  </data>
+  <data name="MeasureTypeVariation_Portion14Pieces" xml:space="preserve">
+    <value>Portsjon 14 tk</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixNugget" xml:space="preserve">
+    <value>Dodomix portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDoDoMixPotatoes" xml:space="preserve">
+    <value>Dodomix portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_2L" xml:space="preserve">
+    <value>0,2 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_3L" xml:space="preserve">
+    <value>0,3 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_5L" xml:space="preserve">
+    <value>0,5 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionDrink0_6L" xml:space="preserve">
+    <value>0,6 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza25" xml:space="preserve">
+    <value>Pizza 25</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza30" xml:space="preserve">
+    <value>Pizza 30</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForPizza35" xml:space="preserve">
+    <value>Pizza 35</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionForSandwich" xml:space="preserve">
+    <value>Sandwitch</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCream" xml:space="preserve">
+    <value>Jäätise portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionIceCreamOne" xml:space="preserve">
+    <value>Üks portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionOfDrink0_05L" xml:space="preserve">
+    <value>0,05 l</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionSalmonOne" xml:space="preserve">
+    <value>Üks portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionShrimpOne" xml:space="preserve">
+    <value>Üks portsjon</value>
+  </data>
+  <data name="MeasureTypeVariation_PortionVillage" xml:space="preserve">
+    <value>Portsjon küla moodi</value>
+  </data>
+  <data name="MeasureTypeVariation_PressingGunOnePress" xml:space="preserve">
+    <value>Üks vajutus</value>
+  </data>
+  <data name="MeasureTypeVariation_ShakeOneShake" xml:space="preserve">
+    <value>Üks raputus</value>
+  </data>
+  <data name="MeasureTypeVariation_Slice" xml:space="preserve">
+    <value>Slice</value>
+  </data>
+  <data name="MeasureTypeVariation_SmallGlass" xml:space="preserve">
+    <value>Väike klaas</value>
+  </data>
+  <data name="MeasureType_Americano" xml:space="preserve">
+    <value>Americano</value>
+  </data>
+  <data name="MeasureType_Cappuccino" xml:space="preserve">
+    <value>Cappuccino</value>
+  </data>
+  <data name="MeasureType_CheesseCup" xml:space="preserve">
+    <value>Juustutops</value>
+  </data>
+  <data name="MeasureType_Espresso" xml:space="preserve">
+    <value>Espresso</value>
+  </data>
+  <data name="MeasureType_Glass100Ml" xml:space="preserve">
+    <value>Klaas 100 ml</value>
+  </data>
+  <data name="MeasureType_Glass200Ml" xml:space="preserve">
+    <value>Klaas 200 ml</value>
+  </data>
+  <data name="MeasureType_Hickey" xml:space="preserve">
+    <value>Tükk</value>
+  </data>
+  <data name="MeasureType_Latte" xml:space="preserve">
+    <value>Latte</value>
+  </data>
+  <data name="MeasureType_Pinch" xml:space="preserve">
+    <value>näputäis</value>
+  </data>
+  <data name="MeasureType_PortionDrink" xml:space="preserve">
+    <value>Joogi portsjon</value>
+  </data>
+  <data name="MeasureType_PortionForProduct" xml:space="preserve">
+    <value>Portsjon pitsas/ suupistes/ sandwitchis</value>
+  </data>
+  <data name="MeasureType_PortionIceCream" xml:space="preserve">
+    <value>Jäätise portsjon</value>
+  </data>
+  <data name="MeasureType_PortionNuggets" xml:space="preserve">
+    <value>Naggetsite portsjon</value>
+  </data>
+  <data name="MeasureType_PortionPotatoes" xml:space="preserve">
+    <value>Kartuli portsjon</value>
+  </data>
+  <data name="MeasureType_PortionSalmon" xml:space="preserve">
+    <value>Lõhe portsjon</value>
+  </data>
+  <data name="MeasureType_PortionShrimp" xml:space="preserve">
+    <value>Krevettide portsjon</value>
+  </data>
+  <data name="MeasureType_PressingGun" xml:space="preserve">
+    <value>Püstoli vajutamine</value>
+  </data>
+  <data name="MeasureType_Shake" xml:space="preserve">
+    <value>Raputamine</value>
+  </data>
+  <data name="MeasureType_Slice" xml:space="preserve">
+    <value>Slice</value>
+  </data>
+  <data name="MeasureType_SoupLadle" xml:space="preserve">
+    <value>Kulp</value>
+  </data>
+  <data name="Message_RequiredOrganizationType" xml:space="preserve">
+    <value>"Tüüp"</value>
+  </data>
+  <data name="Message_RequiredPaymentOption" xml:space="preserve">
+    <value>"Töö vorm"</value>
+  </data>
+  <data name="Message_RequiredSupplierName" xml:space="preserve">
+    <value>"Nimetus"</value>
+  </data>
+  <data name="Metr" xml:space="preserve">
+    <value>meeter</value>
+  </data>
+  <data name="MetrShort" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliiter</value>
+  </data>
+  <data name="MilliliterShort" xml:space="preserve">
+    <value>ml</value>
+  </data>
+  <data name="MorningShift" xml:space="preserve">
+    <value>Hommikune vahetus</value>
+  </data>
+  <data name="NightShift" xml:space="preserve">
+    <value>Öine vahetus</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Kott</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>Pakkimine</value>
+  </data>
+  <data name="Packing" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="PaymentOption_Deferment" xml:space="preserve">
+    <value>Edasilükkamne</value>
+  </data>
+  <data name="PaymentOption_Prepaid" xml:space="preserve">
+    <value>Ettemaks</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Tükk</value>
+  </data>
+  <data name="QuantityShort" xml:space="preserve">
+    <value>tk</value>
+  </data>
+  <data name="SemiFinishedProduct" xml:space="preserve">
+    <value>Pooltoode</value>
+  </data>
+  <data name="Tara_Bag" xml:space="preserve">
+    <value>Kott</value>
+  </data>
+  <data name="Tara_Balloon" xml:space="preserve">
+    <value>Balloon</value>
+  </data>
+  <data name="Tara_Bottle" xml:space="preserve">
+    <value>Pudel</value>
+  </data>
+  <data name="Tara_Box" xml:space="preserve">
+    <value>Karp</value>
+  </data>
+  <data name="Tara_Bucket" xml:space="preserve">
+    <value>Ämber</value>
+  </data>
+  <data name="Tara_CuppingGlass" xml:space="preserve">
+    <value>Purk</value>
+  </data>
+  <data name="Tara_Kega" xml:space="preserve">
+    <value>Tünn</value>
+  </data>
+  <data name="Tara_Packing" xml:space="preserve">
+    <value>Pakend</value>
+  </data>
+  <data name="Tara_Roll" xml:space="preserve">
+    <value>Rull</value>
+  </data>
+</root>

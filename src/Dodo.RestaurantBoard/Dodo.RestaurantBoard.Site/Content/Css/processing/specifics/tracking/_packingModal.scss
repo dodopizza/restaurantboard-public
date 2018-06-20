@@ -1,0 +1,60 @@
+﻿.packingModal {
+	position: absolute;
+	width: 40%;
+	min-width: 320px;
+	left: 30%;
+	top: 30%;
+	background: #ffffe5;
+	border: 1px solid #ccccb8;
+	z-index: 1100;
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5), 0 1px 24px 0 rgba(0, 0, 0, 0.5);
+}
+
+.packingModalTitle {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 36px;
+	line-height: normal;
+}
+
+.packingModalButtons {
+	text-align: center;
+
+	a {
+		background: #fff;
+		border: 1px solid #ccc;
+		font-size: 46px;
+		line-height: normal;
+		text-align: center;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		color: #000;
+		text-decoration: none !important;
+		padding: 10px 0;
+		width: 40%;
+		display: inline-block;
+		margin: 0 4%;
+		box-sizing: border-box;
+
+		&:visited, &:link, &:active, &:hover {
+			background: #fff;
+			border: 1px solid #ccc;
+			font-size: 46px;
+			line-height: normal;
+			text-align: center;
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			color: #000;
+			text-decoration: none !important;
+			padding: 10px 0;
+			width: 40%;
+			display: inline-block;
+			margin: 0 4%;
+			box-sizing: border-box;
+		}
+	}
+}

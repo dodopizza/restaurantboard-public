@@ -1,0 +1,163 @@
+﻿.orders-holder-table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	vertical-align: top;
+
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	tr > td {
+		padding: 0;
+	}
+}
+
+.orders-holder {
+	height: 100%;
+	width: 33%;
+	vertical-align: top;
+	font-size: 14px;
+
+	* {
+		line-height: 1.2 !important;
+	}
+}
+
+.orders-holder_border-left {
+	border-left: 1px solid gray;
+}
+
+
+.orders-holder__row {
+	height: 5%;
+
+	&:before {
+		content: " ";
+		/* 1 */
+		display: table;
+		/* 2 */
+	}
+
+	&:after {
+		content: " ";
+		/* 1 */
+		display: table;
+		/* 2 */
+		clear: both;
+	}
+}
+
+.orders-holder__row_last {
+	border-bottom: 2px solid gray;
+	height: 3.5%;
+	margin: 0 0 1.5% !important;
+	padding: 0 10px;
+}
+
+.orders-holder__row_seporator {
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 1%;
+	height: 4%;
+}
+
+.orders-holder {
+	.order-header__number {
+		background: #dddedc;
+		padding: 3px 10px;
+		float: left;
+		font-size: 1.2em !important;
+	}
+
+	.order-header__type {
+		float: right;
+		font-size: 1.3em !important;
+		margin-right: 10px;
+	}
+
+	.order-item {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.order-item__mark {
+		width: 10px;
+		height: 10px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		border-radius: 50%;
+		background: #a8a8a8;
+		float: left;
+		margin-right: 10px;
+		margin-top: 0.3em;
+		margin-left: 10px;
+	}
+
+	.order-item__mark_squer {
+		width: 15px;
+		height: 15px;
+		background: #e1117b;
+		-ms-border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		margin-top: 0.2em;
+		margin-right: 5px;
+	}
+
+	.order-item__name {
+		float: left;
+	}
+
+	.order-item__name_marked {
+		background: #fff400;
+	}
+
+	.order-item__multi {
+		float: left;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+
+	.order-item__souce-holder {
+		float: right;
+	}
+
+	.order-item__souce-holder__item {
+		width: 20px;
+		height: 20px;
+		border: 1px solid #d5d5d5;
+		float: left;
+		margin-right: 5px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.order-item__souce-holder__item_milk {
+		width: 40px;
+	}
+
+	.order-item__souce-holder__item_black {
+		background: #000;
+		color: #fff;
+		padding-bottom: 2px;
+	}
+
+	&:before {
+		content: " ";
+		/* 1 */
+		display: table;
+		/* 2 */
+	}
+
+	&:after {
+		content: " ";
+		/* 1 */
+		display: table;
+		/* 2 */
+		clear: both;
+	}
+}
