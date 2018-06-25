@@ -1,9 +1,7 @@
-﻿@using System.Web.Optimization
-@using Dodo.Core.DomainModel.Departments.Units
-@using Dodo.RestaurantBoard.Site.Common.Extensions
-@using Dodo.RestaurantBoard.Site.Controllers
+﻿@using Dodo.Core.DomainModel.Departments.Units
 @using Dodo.RestaurantBoard.Site.Resources
 @model Dodo.RestaurantBoard.Site.Models.OrdersReadinessToStationaryModel
+
 @{
     Layout = null;
 }
@@ -16,11 +14,15 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     <meta http-equiv="cache-control" content="max-age"/>
 
-    @Styles.Render("~/bundle/css/processing")
 
-    @Html.ScriptVersioned("~/Scripts/jquery-1.9.min.js")
-    @Html.ScriptVersioned("~/Scripts/angular.min.js")
-    @Html.ScriptVersioned("~/Scripts/angular-route.min.js")
+    <environment include="Development">
+        <link rel="stylesheet" href="~/Content/Css/processing.css" />
+    </environment>
+
+    <environment include="Development">
+        <script src="~/Scripts/jquery-1.9.min.js"></script>
+        <script src="~/Scripts/angular.min.js"></script>
+    </environment>
 
     <script>
         window.resources =
@@ -34,7 +36,7 @@
 
 
     <style>
-        .bannersContainer { background: url("@Url.LocalizedContent("Tracking-Scoreboard-Empty.jpg")") #ffffff; }
+        .bannersContainer { background: url("/LocalizedResources/Tracking-Scoreboard-Empty.jpg") #ffffff; }
     </style>
 
     <style>
@@ -124,7 +126,8 @@
 <body style="min-height: 0; overflow: hidden;">
 <label style="position: absolute; right: 5px; font-size: 10px; color: red;">{{message}}</label>
 
-@Html.Partial("PartialRestaurantBoard");
+@await Html.PartialAsync("PartialRestaurantBoard")
+
 
 
 <audio id="myTune">
@@ -142,11 +145,15 @@
     </div>
 </div>
 
-@Html.ScriptVersioned("~/app/app.js")
-@Html.ScriptVersioned("~/app/controllers/OrdersReadinessToStationaryController.js")
-@Html.ScriptVersioned("~/app/services/OrdersReadinessToStationaryService.js")
-@Html.ScriptVersioned("~/Scripts/flowtype.js")
-@Html.ScriptVersioned("~/Scripts/publicPagesToFullscreen.js")
+<environment include="Development">
+    <script src="~/app/app.js"></script>
+    <script src="~/app/controllers/OrdersReadinessToStationaryController.js"></script>
+    <script src="~/app/services/OrdersReadinessToStationaryService.js"></script>
+    <script src="~/Scripts/flowtype.js"></script>
+    <script src="~/Scripts/publicPagesToFullscreen.js"></script>
+</environment>
+
+
 <script>
     $('.musicInfo').flowtype({
         minFont: 24,
