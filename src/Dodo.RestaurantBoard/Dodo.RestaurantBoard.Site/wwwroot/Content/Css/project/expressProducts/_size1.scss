@@ -1,0 +1,41 @@
+﻿.size1 {
+	.product_inner {
+		@include font-size(270);
+	}
+
+	.orderNumber {
+		@include font-size(150);
+	}
+
+	.productName {
+		@include font-size(120);
+	}
+
+	.clientName {
+		padding-left: 0;
+	}
+
+	.red .productStatus,
+	.snack .baked .productStatus {
+		@include font-size(190);
+		margin-top: -10px;
+
+		@media (min-width:1400px) and (min-height:800px) {
+			@include font-size(220);
+			margin-top: 0;
+		}
+
+		@media (min-width:1410px) and (min-height:900px) {
+			@include font-size(220);
+			margin-top: 35px;
+		}
+	}
+
+	.b-products-row {
+		height: 100%;
+	}
+
+	.b-product {
+		width: 100%;
+	}
+}

@@ -1,0 +1,60 @@
+﻿
+#ready {
+
+	.ready_product {
+		background-color: #87b359;
+		vertical-align: top;
+		font-family: VAGRoundedLTCYR-Light, Trebuchet, Verdana;
+		text-align: left;
+
+		&.empty {
+			background-color: #f7f7f7;
+		}
+
+		&.ready_express_product {
+			height: 100%;
+		}
+	}
+
+	.ready_express_product {
+		&.green {
+			background-color: #88c941;
+		}
+
+		&.red {
+			background-color: #e66e49;
+		}
+
+		&.yellow {
+			background: #f5ac2c;
+		}
+	}
+}
+
+.ready_product {
+	.product_order {
+		position: relative;
+		height: 100%;
+	}
+
+	.r_number {
+		display: block;
+		padding: 3% 0 0 3%;
+		line-height: normal;
+		font-weight: 600;
+	}
+
+	.r_hero {
+		position: absolute;
+		z-index: 9999;
+		bottom: -12px;
+		right: 14px;
+		left: 0;
+		text-align: right;
+
+		img {
+			width: 43%;
+			height: auto;
+		}
+	}
+}

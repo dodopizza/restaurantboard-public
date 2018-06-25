@@ -1,0 +1,48 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.price-block {
+    height: 235px;
+    margin-bottom: 5%;
+    text-align: right;
+}
+
+.price {
+    @include font-size(234);
+    line-height: 1;
+    vertical-align: top;
+
+    @include media-queries(lg) {
+        @include font-size(230);
+    }
+}
+
+.price-currency {
+    @include font-size(165);
+    font-family: 'VAGRoundedLTCYRRuble-Black', 'VAGRoundedLTCYR-Black', sans-serif;
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+
+.currency-ruble {
+    font-family: 'VAGRoundedLTCYRRuble-Black', 'VAGRoundedLTCYR-Black', sans-serif;
+}
+
+.price-for-piece {
+    @include font-size(18);
+    position: relative;
+    width: 105px;
+    text-align: left;
+
+    @include media-queries(lg) {
+        top: -23px;
+    }
+}
+
+.overdue-piece {
+    position: absolute;
+    top: 210px;
+    right: 15px;
+    @include font-size(39);
+    color: $color-000;
+}

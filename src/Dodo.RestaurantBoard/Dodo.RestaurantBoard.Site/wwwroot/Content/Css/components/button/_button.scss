@@ -1,0 +1,45 @@
+﻿// Structure
+
+@mixin button($selector, $defaultSkin: true) {
+	#{$selector} {
+		display: inline-block;
+		width: 100%;
+		height: 44px;
+		margin-top: 10px;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;		
+	}
+
+	@if $defaultSkin != false {
+		@include button-skin-default($selector);
+	}
+}
+
+
+// Default skin
+
+@mixin button-skin-default($selector) {
+	#{$selector} {
+		color: $color-fff;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		border-radius: 4px;
+		border: none;
+		@include user-select;
+		@include box-shadow(inset 0px -1px 0px 0px #d0621d);
+		@include gradient(#f6912b, #f6912b, #f37c26);
+	}
+
+		#{$selector}:hover:not(:active),
+		#{$selector}:focus {
+			@include gradient($primary-hover-gradient-top, $primary-hover-gradient-top, $primary-hover-gradient-bottom);
+		}
+
+		#{$selector}:active {
+			box-shadow: 0 0 1px rgba(208,98,29,.9) inset, 0 1px 3px rgba(208,98,29,.9) inset, 0 1px 1px rgba(255,255,255,.1);
+		}
+}

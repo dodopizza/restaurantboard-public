@@ -1,0 +1,111 @@
+﻿body {
+	height: 100%;
+	//font-size: 11px;
+}
+
+.publicPage_table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	font-size: 1.5em;
+
+	tbody tr td {
+		&:first-child,
+		&:nth-child(3) {
+			border-right: none;
+		}
+
+		&:last-child,
+		&:nth-child(2) {
+			border-left: none;
+		}
+	}
+
+	a {
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	tfoot {
+
+		td {
+			border: 1px solid #999;
+		}
+		a.logOff {
+			padding: 5px 25px;
+			background: #da251e;
+			color: #fff;
+		}
+	}
+}
+
+.publicPage_row {
+	width: 100%;
+}
+
+.publicPage_item,
+.publicPage_colored {
+	border: 1px solid #999;
+}
+
+.publicPage_item {
+	width: 48%;
+	text-align: center;
+	height: 25%;
+
+	div {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		background: #eee;
+	}
+
+	&.empty:hover {
+		background: none;
+	}
+}
+
+.publicPage_link {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.publicPage_colored {
+	width: 2%;
+
+	&.boards {
+		background-color: #3e80eb;
+	}
+
+	&.shopWindow {
+		background-color: #ecf22a;
+	}
+
+	&.courierMotivation {
+		background-color: #fd9480;
+	}
+
+	&.motivationScreen {
+		background-color: #f12338;
+	}
+
+	&.employeesOnShift {
+		background-color: #94de8a;
+	}
+
+	&.express {
+		background-color: #5e17cd;
+	}
+
+	&.ordersReadinessToStationary {
+		background-color: #bcf3fc;
+	}
+}

@@ -1,0 +1,142 @@
+﻿.o-left {
+	width: 28px;
+	height: 28px;
+	background: url(/Content/Images/left.gif) no-repeat center center #dededc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	float: left;
+	cursor: pointer;
+}
+
+.ordersTab {
+	overflow: hidden;
+	zoom: 1;
+	padding: 10px 10px 9px !important;
+}
+
+.o-center {
+	float: left;
+	padding: 0px 15px 0;
+}
+
+.o-right {
+	width: 28px;
+	height: 28px;
+	background: url(/Content/Images/right.gif) no-repeat center center #dededc;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	float: left;
+	cursor: pointer;
+}
+
+.ordersListTable {
+	width: 100%;
+	border: 0 none;
+	border-collapse: collapse;
+	empty-cells: show;
+
+	td {
+		vertical-align: top;
+		border: 1px solid #d5d5d5;
+		width: 33%;
+		padding: 0;
+	}
+}
+
+.orderListItem {
+	padding: 5px 0 30px;
+
+	&.underlined {
+		border-bottom: 1px solid #d5d5d5;
+	}
+}
+
+.orderListHeader {
+	overflow: hidden;
+	zoom: 1;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.orderListType {
+	float: right;
+	font-size: 1.3em;
+	margin-right: 10px;
+}
+
+.orderListNumber {
+	background: #dddedc;
+	padding: 3px 10px;
+	float: left;
+	font-size: 1.2em;
+}
+
+.orderListProduct {
+	overflow: hidden;
+	clear: both;
+	zoom: 1;
+	margin: 0 10px 10px;
+}
+
+.o-misc {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #d5d5d5;
+	float: right;
+	margin-left: 5px;
+	text-align: center;
+	font-weight: bold;
+
+	&.black {
+		background: #000;
+		color: #fff;
+	}
+}
+
+.o-mark {
+	width: 10px;
+	height: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background: #a8a8a8;
+	float: left;
+	margin-right: 10px;
+	margin-top: 0.3em;
+
+	&.purple {
+		width: 15px;
+		height: 15px;
+		background: #e1117b;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		margin-top: 0.2em;
+		margin-right: 5px;
+	}
+}
+
+.o-name {
+	float: left;
+	padding: 0 2px;
+
+	&.marked {
+		background: #fff400;
+	}
+}
+
+.o-line {
+	height: 1px;
+	font-size: 0;
+	line-height: 0;
+	margin: 10px;
+	background: #d5d5d5;
+}
+
+.o-multi {
+	float: left;
+	font-weight: bold;
+	margin-left: 20px;
+}

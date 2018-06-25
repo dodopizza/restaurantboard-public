@@ -1,0 +1,15 @@
+﻿.print {
+	background-image: url(/Content/Images/dodo-printer.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #dededc;
+	width: 100px;
+	text-align: center;
+	height: 100%;
+	z-index: 5;
+	display: block;
+
+	&.used {
+		background-image: url(/Content/Images/dodo-printer-used.png);
+	}
+}

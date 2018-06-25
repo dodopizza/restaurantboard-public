@@ -1,0 +1,131 @@
+﻿/// <reference path="../../../../utils/__utils.scss" />
+
+.shop-window {
+    margin: 0 7%;
+    padding-top: 5%;
+    font-family: 'VAGRoundedLTCYR-Light', sans-serif;
+    @include font-size(16);
+    color: $color-000;
+    letter-spacing: 2px;
+    line-height: normal;
+
+    @include media-queries(lg) {
+        margin: 0 15%;
+        padding-top: 7%;
+    }
+
+    @include custom-queries(1300px) {
+        padding-top: 5%;
+    }
+
+    // хак для планшетов с разрешением 1280*800
+    // проблема с шириной. Если без хака, то планшет считается большим экраном
+    @media only screen and (min-device-width: 1270px) and (max-device-width: 1290px) {
+        margin: 0 7%;
+    }
+}
+
+.pizza-name,
+.status-name,
+.overdue-piece {
+    letter-spacing: 3px;
+}
+
+.pizza-name,
+.price-block,
+.time-label,
+.status-name,
+.note {
+    font-family: 'VAGRoundedLTCYR-Black', sans-serif;
+}
+
+.price,
+.price-currency-block {
+    display: inline-block;
+    position: relative;
+    top: 0;
+}
+
+.cook-time-label,
+.time-minutes-label,
+.status-name {
+    @include font-size(36);
+}
+
+.cook-time-label,
+.time-minutes-label,
+.pizza-name,
+.status-name,
+.price-currency-block,
+.overdue-piece {
+    text-transform: uppercase;
+}
+
+.cook-description {
+    font-size: 4em;
+    //@include font-size();
+    //@include font-size-vh();
+    color: $color-ready;
+    margin-top: 52px;
+}
+
+.vivid-orange {
+    color: $color-ready;
+}
+
+.vivid-orange-border {
+    border-color: $color-ready;
+}
+
+.vivid-red {
+    color: $color-overdue;
+}
+
+.vivid-red-border {
+    border-color: $color-overdue;
+}
+
+.dark-gray {
+    color: $color-80;
+}
+
+.dark-gray-border {
+    border-color: $color-80;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 40px !important;
+    border: 0;
+    border-top: 1px solid $color-999 !important;
+
+    @include media-queries(lg) {
+        margin-top: 40px !important;
+        margin-bottom: 70px !important;
+    }
+}
+
+.colon-center {
+    position: relative;
+    top: -15px;
+}
+
+
+.street-banner {
+    .pizza-name {
+        @include font-size(42);
+        margin-bottom: 20px;
+    }
+}
+
+.cook-time-label {
+    @include media-queries(lg) {
+        position: relative;
+        bottom: 15px;
+    }
+}
+
+.time-minutes-label {
+    position: relative;
+    top: -10px;
+}

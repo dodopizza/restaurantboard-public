@@ -1,0 +1,39 @@
+﻿.condensed-milk {
+	position: absolute;
+	background: #00a2e8;
+	line-height: 1;
+	left: 7px;
+	bottom: 2px;
+	padding: 0.15em 0.08em;
+	padding-bottom: 0.35em;
+	font-size: 15px;
+}
+
+.condensed-milk__text {
+	background: #fff;
+	color: #00a2e8;
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+.condensed-milk__amt {
+	color: #fff;
+	font-weight: bold;
+	font-size: 19px;
+	padding-left: 0.4em;
+	padding-right: 0.3em;
+	min-width: 0.3em;
+	min-height: 0.99em;
+	display: inline-block;
+	margin-bottom: -0.15em;
+	margin-top: 0.1em;
+}
+
+.condensed-milk_completed {
+	background: #000;
+}
+
+.condensed-milk__text_completed {
+	background: #fff;
+	color: #000;
+}

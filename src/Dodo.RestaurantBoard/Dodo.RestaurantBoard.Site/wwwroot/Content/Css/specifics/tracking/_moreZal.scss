@@ -1,0 +1,93 @@
+﻿#more_zal {
+	&.tableContainer td {
+		border: 2px solid #a8a8a8;
+	}
+
+	.header {
+		height: 14%;
+		font-size: 3em;
+		padding: 0;
+		margin: 0;
+	}
+
+	#numOrder {
+		width: 19%;
+		background-color: #dededc;
+		text-align: left;
+		border-right: none;
+		padding: 0 0 0 0.5em;
+	}
+
+	#sum {
+		font-weight: bold;
+		color: #009242;
+		padding: 0 1.9% 0 3.0%;
+	}
+
+	#name {
+		color: #db241e;
+		padding: 0 0.9%;
+	}
+
+	#time {
+		float: right;
+		padding: 0 3.5%;
+	}
+
+	.prod_item, .quan_item {
+		border: 2px solid #464543;
+		height: 7.4%;
+		color: #191512;
+		cursor: pointer;
+	}
+
+	.prod_item:empty, .quan_item:empty {
+		cursor: default;
+	}
+
+	.prod_item {
+		width: 38%;
+		font-size: 2.3em;
+		text-align: left;
+		padding: 0 0 0 0.5em;
+	}
+
+		.quan_item {
+		width: 12%;
+		font-size: 2.3em;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.footer_left {
+		height: 12%;
+		text-align: center;
+		font-size: 2.3em;
+		border-collapse: collapse;
+		color: #191512;
+		cursor: pointer;
+		background-color: #dededc;
+	}
+
+	.footer_right {
+		height: 12%;
+		text-align: center;
+		font-size: 2.3em;
+		border-collapse: collapse;
+		color: #191512;
+		cursor: pointer;
+		background-color: #b8dc7c;
+	}
+
+	.prod_item:hover,
+	.quan_item:hover,
+	.footer_left:hover,
+	.footer_right:hover {
+		background-color: #efefef;
+	}
+
+	.prod_item:empty:hover,
+	.quan_item:empty:hover {
+		background-color: #ffffff;
+	}
+}

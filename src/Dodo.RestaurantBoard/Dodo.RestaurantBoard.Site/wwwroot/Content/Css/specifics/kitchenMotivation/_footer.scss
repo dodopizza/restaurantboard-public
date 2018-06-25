@@ -1,0 +1,31 @@
+﻿.b-motiv__footer {
+	width: 100%;
+	height: 8%;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #fff;
+}
+
+.b-motiv__footer__good,
+.b-motiv__footer__bad {
+	display: table;
+	float: left;
+	height: 100%;
+	padding: 5px;
+	background-clip: content-box;
+
+	div {
+		height: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+
+.b-motiv__footer__good {
+	background-color: #59B259;
+}
+
+.b-motiv__footer__bad {
+	background-color: #EF5656;
+}
