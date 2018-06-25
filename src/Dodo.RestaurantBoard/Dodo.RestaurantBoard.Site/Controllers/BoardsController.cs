@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Web.Mvc;
 using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
@@ -10,11 +9,17 @@ using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
-using Dodo.RestaurantBoard.Site.Common.Filters;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Models.DodoFM;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using ActionResult = Microsoft.AspNetCore.Mvc.ActionResult;
+using Controller = Microsoft.AspNetCore.Mvc.Controller;
+using JsonResult = Microsoft.AspNetCore.Mvc.JsonResult;
+using ViewResult = Microsoft.AspNetCore.Mvc.ViewResult;
 
 namespace Dodo.RestaurantBoard.Site.Controllers
 {
@@ -24,24 +29,38 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IClientsService _clientsService;
         private readonly IManagementService _managementService;
         private readonly ITrackerClient _trackerClient;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
-            ITrackerClient trackerClient)
+            ITrackerClient trackerClient,
+            IHostingEnvironment hostingEnvironment
+            )
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _managementService = managementService;
             _trackerClient = trackerClient;
+            _hostingEnvironment = hostingEnvironment;
         }
 
 
         private int[] CurrentProductsIds
         {
-            get { return (int[])Session["IdProductUnit"] ?? new int[0]; }
-            set { Session["IdProductUnit"] = value; }
+            get
+            {
+                var currentProductsIds = HttpContext.Session.GetString("IdProductUnit");
+                return !string.IsNullOrEmpty(currentProductsIds)
+                    ? JsonConvert.DeserializeObject<int[]>(currentProductsIds)
+                    : new int[0];
+            }
+            set
+            {
+                var serialized = JsonConvert.SerializeObject(value);
+                HttpContext.Session.SetString("IdProductUnit", serialized);
+            }
         }
 
         public ActionResult Index()
@@ -66,8 +85,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return View(model);
         }
 
-        [NoCache]
-        [HttpGet]
+        [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetOrderReadinessToStationary(int unitId)
         {
             const int maxCountOrders = 16;
@@ -111,7 +129,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                     .OrderByDescending(x => x.OrderReadyTimestamp)
             };
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(result);
         }
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
@@ -125,8 +143,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return icons[iconIndex].GetUrl(fileStorageHost);
         }
 
-        [NoCache]
-        [HttpGet]
+        [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
             var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
@@ -147,10 +164,10 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(HttpContext.Server, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
             }
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(result);
         }
 
         #endregion Ресторан.Готовность заказов

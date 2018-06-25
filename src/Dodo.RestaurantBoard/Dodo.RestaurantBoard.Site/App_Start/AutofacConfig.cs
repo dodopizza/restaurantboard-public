@@ -1,22 +1,23 @@
 ﻿using Autofac;
-using Autofac.Integration.Mvc;
+using Autofac.Extensions.DependencyInjection;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Dodo.RestaurantBoard.Site
 {
 	public static class AutofacConfig
 	{
-		private static IContainer Container { get; set; }
-
-		public static IContainer Register()
+		public static IContainer Register(IServiceCollection services)
 		{
-			Container = new ContainerBuilder()
-				.RegisterServices()
-				.RegisterComponents()
-				.Build();
+			var builder = new ContainerBuilder()
+				.RegisterServices();
 
-			return Container;
+			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			builder.Populate(services);
+
+			return builder.Build();
 		}
 
 		private static ContainerBuilder RegisterServices(this ContainerBuilder builder)
@@ -26,14 +27,6 @@ namespace Dodo.RestaurantBoard.Site
 			builder.RegisterType<ClientService>().As<IClientsService>().SingleInstance();
 
 			builder.RegisterType<TrackerClient>().As<ITrackerClient>();
-
-			return builder;
-		}
-
-		private static ContainerBuilder RegisterComponents(this ContainerBuilder builder)
-		{
-			builder.RegisterControllers(typeof(MvcApplication).Assembly);
-			builder.RegisterFilterProvider();
 
 			return builder;
 		}
