@@ -7,7 +7,7 @@ namespace Dodo.Core.Tests
     public class UuidTests
     {
         [Fact]
-        public void Constructor_ValidValue_CreateClass()
+        public void ConstructorAcceptingString_IfAcceptsValidValue_ThenCreatesClass()
         {
             var guidStr = "411dee2c7a3111e8adc0fa7ae01bbebc";
             
