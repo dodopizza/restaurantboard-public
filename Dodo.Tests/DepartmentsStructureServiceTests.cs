@@ -26,24 +26,8 @@ namespace Dodo.Tests
             actualDepartment.Should().BeEquivalentTo(expectedDepartment, 
                 o => o.Excluding(x => x.CurrentDateTime).Excluding(x => x.CurrentDateTimeUtc));
 
-            actualDepartment.CurrentDateTime.Should().BeAfter(expectedDepartment.CurrentDateTime);
-            actualDepartment.CurrentDateTimeUtc.Should().BeAfter(expectedDepartment.CurrentDateTimeUtc);
-        }
-
-        [Fact]
-        public void DivideByZero()
-        {
-            var a = 10;
-            var b = 0;
-
-            Action divideByZeroAction = () => Divide(a, b);
-
-            Assert.ThrowsAny<Exception>(divideByZeroAction);
-        }
-
-        private static int Divide(int a, int b)
-        {
-            return a / b;
+            actualDepartment.CurrentDateTime.Should().BeCloseTo(expectedDepartment.CurrentDateTime);
+            actualDepartment.CurrentDateTimeUtc.Should().BeCloseTo(expectedDepartment.CurrentDateTimeUtc);
         }
     }
 }
