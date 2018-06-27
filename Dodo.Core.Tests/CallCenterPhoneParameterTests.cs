@@ -10,7 +10,7 @@ namespace Dodo.Core.Tests
         [Theory]
         [InlineData(null)]
         [InlineData("")]
-        public void NumberWithoutMarks__IfNumberIsNullOrEmpty_ThenReturnsNumberWithoutChanges(string value)
+        public void NumberWithoutMarks_IfNumberIsNullOrEmpty_ThenReturnsNumberWithoutChanges(string value)
         {
             var callCenterPhoneParameter = new CallCenterPhoneParameter
             {
@@ -25,17 +25,16 @@ namespace Dodo.Core.Tests
         [Theory]
         [InlineData("321-67", "32167")]
         [InlineData("(867) 53-09", "8675309")]
-        public void NumberWithoutMarks__IfNumberWithSplitters_ThenReturnsNumberWithoutSplitters(string value)
+        public void NumberWithoutMarks_IfNumberWithVisualSplitters_ThenReturnsNumberWithoutSplitters(string inValue, string outValue)
         {
-            var number
             var callCenterPhoneParameter = new CallCenterPhoneParameter
             {
-                Number = value,
+                Number = inValue,
             };
 
             var numberWithoutMarks = callCenterPhoneParameter.NumberWithoutMarks;
             
-            Assert.Equal(numberWithoutMarks, value);
+            Assert.Equal(numberWithoutMarks, outValue);
         }
     }
 }
