@@ -16,7 +16,7 @@ namespace Dodo.Core.UnitTests
         }
 
         [Test]
-        public void When_pass_date_greater_than_pizzeria_begin_date_returns_correct_pizzeria_age_in_years()
+        public void When_pass_date_greater_than_pizzeria_begin_date_returns_age_in_years()
         {
             var pizzeriaBeginWorkDate = new DateTime(2010, 1, 2);
             var currentDate = new DateTime(2018, 1, 1);
