@@ -38,7 +38,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 					Id = 58,
 					Number = 6,
 					ClientName = "Бухгалтер"
-				},
+				}
 			};
 			return orders;
 		}
