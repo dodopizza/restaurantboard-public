@@ -7,7 +7,7 @@ namespace Dodo.Core.UnitTests.DSL
 {
     public class ObjectMother
     {
-        public Pizzeria CreatePizzeriaWithBeginDateTimeWork(DateTime beginDateTimeWork)
+        public Pizzeria CreatePizzeriaWithBeginDateTimeWork(DateTime? beginDateTimeWork)
         {
             return new Pizzeria(
                 id: 29,

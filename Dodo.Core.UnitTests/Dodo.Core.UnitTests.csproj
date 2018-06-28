@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DomainModel\Departments" />
     <Folder Include="DomainModel\Units" />
   </ItemGroup>
   <ItemGroup>
