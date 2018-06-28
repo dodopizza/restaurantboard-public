@@ -9,9 +9,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DomainModel\Departments" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
   </ItemGroup>
 </Project>
