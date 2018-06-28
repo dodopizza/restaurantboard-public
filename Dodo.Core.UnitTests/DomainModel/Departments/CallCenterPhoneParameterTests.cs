@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Dodo.Core.DomainModel.Departments;
 using Dodo.Core.UnitTests.DSL;
 
 namespace Dodo.Core.UnitTests.DomainModel.Departments
