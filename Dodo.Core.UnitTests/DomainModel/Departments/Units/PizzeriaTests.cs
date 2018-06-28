@@ -45,7 +45,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
         
         [Test]
-        public void When_pass_date_greater_than_pizzeria_begin_date_returns_age_in_months()
+        public void When_pass_date_greater_than_pizzeria_begin_date_less_than_year_returns_age_in_months()
         {
             var pizzeriaBeginWorkDate = new DateTime(2010, 1, 1);
             var currentDate = new DateTime(2010, 5, 1);
@@ -55,7 +55,17 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void When_pass_date_less_then_begin_date_in_months_throws_exception()
+        public void When_pass_date_greater_than_pizzeria_begin_date_more_than_year_returns_age_in_months()
+        {
+            var pizzeriaBeginWorkDate = new DateTime(2010, 1, 1);
+            var currentDate = new DateTime(2012, 5, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(pizzeriaBeginWorkDate);
+
+            Assert.AreEqual(28, pizzeria.GetMonthsOld(currentDate));
+        }
+
+        [Test]
+        public void When_pass_date_less_then_begin_date_for_months_throws_exception()
         {
             var beginDate = new DateTime(2018, 5, 1);
             var currentDate = new DateTime(2018, 1, 1);

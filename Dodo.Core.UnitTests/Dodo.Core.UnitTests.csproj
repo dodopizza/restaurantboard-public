@@ -10,9 +10,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DomainModel\Departments" />
-    <Folder Include="DomainModel\Units" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DomainModel\Units\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="DomainModel\Units\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DomainModel\Units\**" />
   </ItemGroup>
 </Project>
