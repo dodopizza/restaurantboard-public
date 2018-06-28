@@ -2,7 +2,7 @@ using System;
 using Dodo.Core.UnitTests.DSL;
 using NUnit.Framework;
 
-namespace Dodo.Core.UnitTests
+namespace Dodo.Core.UnitTests.DomainModel.Units
 {
     [TestFixture]
     public class PizzeriaTests
