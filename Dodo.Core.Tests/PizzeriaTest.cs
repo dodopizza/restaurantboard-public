@@ -60,6 +60,17 @@ namespace Dodo.Core.Tests
             Assert.AreEqual(expected, result);
         }
 
+        [TestMethod]
+        public void IsExistsPizzeriaFormat_NotExists()
+        {
+            PizzeriaFormat pizzeriaFormat = null;
+            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, null, "", null, null, null, ClientTreatment.DefaultName, false, pizzeriaFormat);
+
+            bool result = sut.IsExistsPizzeriaFormat;
+
+            Assert.IsFalse(result);
+        }
+
         OrganizationShortInfo mockOrganization = new DomainModel.Management.Organizations.OrganizationShortInfo(0, "", "", null, "", "", "", 0, "", "", "");
         PizzeriaFormat mockPizzeriaFormat = new PizzeriaFormat(0, "", "");
     }
