@@ -14,13 +14,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="DomainModel\Units\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Remove="DomainModel\Units\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="DomainModel\Units\**" />
-  </ItemGroup>
 </Project>
