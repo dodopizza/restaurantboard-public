@@ -27,7 +27,13 @@ namespace Dodo.RestaurantBoard.Domain.Services
 					Number = 4,
 					ClientName = "Лупа"
 				},
-			};
+                new ProductionOrder
+                {
+                    Id = 57,
+                    Number = 5,
+                    ClientName = "Петя"
+                },
+            };
 
 			return orders;
 		}
