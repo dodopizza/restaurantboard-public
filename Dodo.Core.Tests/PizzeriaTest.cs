@@ -23,5 +23,19 @@ namespace Dodo.Core.Tests
 
         OrganizationShortInfo mockOrganization = new DomainModel.Management.Organizations.OrganizationShortInfo(0, "", "", null, "", "", "", 0, "", "", "");
         PizzeriaFormat mockPizzeriaFormat = new PizzeriaFormat(0, "", "");
+
+        [TestMethod]
+        public void GetYearsOld_PizzeriaOpenedYearBefore()
+        {
+            var beginDateTimeWork = DateTime.MinValue;
+            var currentDate = beginDateTimeWork.AddYears(1);
+            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, beginDateTimeWork, "", null, null, null, ClientTreatment.DefaultName, false, mockPizzeriaFormat);
+            int expected = 1;
+
+            int result = sut.GetYearsOld(currentDate);
+
+            Assert.AreEqual(expected, result);
+        }
+
     }
 }
