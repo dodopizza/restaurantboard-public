@@ -9,6 +9,8 @@ namespace Dodo.Core.Tests
         [Test]
         [TestCase("00000000000000000000000000000000")]
         [TestCase("00000000000000000000000000000001")]
+        [TestCase("0000000000000000000000000000001a")]
+        [TestCase("0000000000000000000000000000001A")]
         public void Constructor_AcceptsCorrectString(string s)
         {
             // ReSharper disable once ObjectCreationAsStatement
@@ -30,6 +32,13 @@ namespace Dodo.Core.Tests
             var s = new string('0', len);
             // ReSharper disable once ObjectCreationAsStatement
             Assert.Throws<ArgumentException>(() => new Uuid(s));
+        }
+
+        [Test]
+        public void Constructor_ThrowsWhenStringContainsInvalidChars()
+        {
+            // ReSharper disable once ObjectCreationAsStatement
+            Assert.Throws<ArgumentException>(() => new Uuid("0000000000000000000000000000000!"));
         }
     }
 }
