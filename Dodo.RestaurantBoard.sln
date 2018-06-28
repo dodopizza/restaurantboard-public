@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.RestaurantBoard.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.RestaurantBoard.Site", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj", "{C73097A9-078D-41A9-85FA-71F7BF0571C5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{06533E67-33A8-43B2-880A-55D1A7F4E705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.Core.UnitTests", "Dodo.Core.UnitTests\Dodo.Core.UnitTests.csproj", "{F5705CB6-E84B-4B90-98C2-DC129081A639}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5705CB6-E84B-4B90-98C2-DC129081A639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5705CB6-E84B-4B90-98C2-DC129081A639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5705CB6-E84B-4B90-98C2-DC129081A639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5705CB6-E84B-4B90-98C2-DC129081A639}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5705CB6-E84B-4B90-98C2-DC129081A639} = {06533E67-33A8-43B2-880A-55D1A7F4E705}
 	EndGlobalSection
 EndGlobal
