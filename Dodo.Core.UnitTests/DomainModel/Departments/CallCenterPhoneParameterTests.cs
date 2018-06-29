@@ -70,15 +70,15 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments
         [Test]
         [TestCase("we/are/the/best/team\\")]
         [TestCase("we/are\\the/best/team\\")]
-        public void When_pass_icon_path_returns_string_with_updated_host_and_end(string iconPathParameter)
+        public void When_pass_icon_path_returns_combined_url_string(string iconPathParameter)
         {
-            string host = "localhost:5000\\";
+            string host = "https://dodopizza.ru/";
 
             var iconPath = _builder
                 .WithIconPath(iconPathParameter)
                 .Build();
 
-            Assert.AreEqual("localhost:5000/we/are/the/best/team/", iconPath.GetIconUrl(host));
+            Assert.AreEqual("https://dodopizza.ru/we/are/the/best/team/", iconPath.GetIconUrl(host));
         }
         
         [Test]
