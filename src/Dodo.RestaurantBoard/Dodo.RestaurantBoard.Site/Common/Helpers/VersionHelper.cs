@@ -7,6 +7,8 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 	[Description("VersionHelper у каждой сборки должен быть свой, т.к. он зависит от Assembly")]
 	public static class VersionHelper
 	{
+		
+		
 		public const string VERSION_QUERY_PARAMETER = "v";
 
 		private static readonly Version _version =
