@@ -13,6 +13,8 @@ namespace Dodo.Tests
 {
     public class UnitLunchParametersTests
     {
+        private const int defaultValue = 8;
+
         private const string testXml =
         @"<qwe>
 	        <Lunch>
@@ -32,6 +34,13 @@ namespace Dodo.Tests
 	        </Lunch>
         </qwe>";
 
+        private const string incompleteXml =
+        @"<qwe>
+	        <Lunch>
+		        <MinimalShiftToKitchenWorker> 111 </MinimalShiftToKitchenWorker>
+	        </Lunch>
+        </qwe>";
+
         private const string wrongXml =
         @"<qwe>
 	        <Lunch>
@@ -44,7 +53,7 @@ namespace Dodo.Tests
         [InlineData(null)]
         public void ConvertToUnitLunchParameters_SetNullOrEmptyString(string xmlParameters)
         {
-            var expected = new UnitLunchParameters(8, 8, 8, 8);
+            var expected = new UnitLunchParameters(defaultValue, defaultValue, defaultValue, defaultValue);
             var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameters);
 
             result.Should().BeEquivalentTo(expected);
@@ -67,6 +76,17 @@ namespace Dodo.Tests
             Assert.Equal(45, lunchParams.MinimalShiftToCashier);
             Assert.Equal(67, lunchParams.MinimalShiftToCourier);
             Assert.Equal(333, lunchParams.MinimalShiftToPersonalManager);
+        }
+
+        [Fact]
+        public void ConvertToUnitLunchParameters_IncompleteXml()
+        {
+            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
+
+            Assert.Equal(111, lunchParams.MinimalShiftToKitchenWorker);
+            Assert.Equal(defaultValue, lunchParams.MinimalShiftToCashier);
+            Assert.Equal(defaultValue, lunchParams.MinimalShiftToCourier);
+            Assert.Equal(defaultValue, lunchParams.MinimalShiftToPersonalManager);
         }
 
         [Fact]
