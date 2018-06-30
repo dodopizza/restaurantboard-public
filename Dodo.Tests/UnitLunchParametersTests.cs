@@ -13,6 +13,17 @@ namespace Dodo.Tests
 {
     public class UnitLunchParametersTests
     {
+        [Theory]
+        [InlineData("")]
+        [InlineData(null)]
+        public void ConvertToUnitLunchParameters_SetNullOrEmptyString(string xmlParameters)
+        {
+            var expected = new UnitLunchParameters(8, 8, 8, 8);
+            var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameters);
+
+            result.Should().BeEquivalentTo(expected);
+        }
+
         [Fact]
         public void ConvertToUnitLunchParameters_WrongXml_ShouldThrowException()
         {
