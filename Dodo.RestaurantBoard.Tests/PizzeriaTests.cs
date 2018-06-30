@@ -63,7 +63,6 @@ namespace Dodo.RestaurantBoard.Tests
             // А он не хэндлит. Поэтому тест не проходит.
             var totalYears = pizzeria.GetYearsOld(new DateTime(2018, 30, 6));
             Assert.Equal(0, totalYears);
-            var totalMonth = pizzeria.GetMonthsOld(new DateTime(2018, 30, 6));
         }
 
         [Fact]
