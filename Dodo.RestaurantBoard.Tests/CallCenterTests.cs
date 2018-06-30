@@ -48,13 +48,7 @@ namespace Dodo.RestaurantBoard.Tests
 
         }
 
-        [Fact]
-        public void ShouldNotContainsMarks()
-        {
-            var ccPhoneParameter = new CallCenterPhoneParameter { Number = "123-456( 789)" };
-            Assert.Equal("123456789", ccPhoneParameter.NumberWithoutMarks);
-        }
-
+      
 
         [Theory]
         [InlineData(1)]
@@ -73,5 +67,13 @@ namespace Dodo.RestaurantBoard.Tests
             Assert.Equal(initCount, phones.Length);
 
         }
+
+        [Fact]
+        public void ShouldNotContainsMarks()
+        {
+            var ccPhoneParameter = new CallCenterPhoneParameter { Number = "123-456( 789)" };
+            Assert.Equal("123456789", ccPhoneParameter.NumberWithoutMarks);
+        }
+
     }
 }
