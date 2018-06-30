@@ -28,21 +28,21 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
         private readonly IManagementService _managementService;
-        private readonly ITrackerClient _trackerClient;
+        private readonly IEnumerable<ITrackerClient> _trackerClients;
         private readonly IHostingEnvironment _hostingEnvironment;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
-            ITrackerClient trackerClient,
+            IEnumerable<ITrackerClient> trackerClients,
             IHostingEnvironment hostingEnvironment
             )
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _managementService = managementService;
-            _trackerClient = trackerClient;
+            _trackerClients = trackerClients;
             _hostingEnvironment = hostingEnvironment;
         }
 
@@ -92,10 +92,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            var orders = _trackerClient
-                .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
-                .Select(MapToRestaurantReadnessOrders)
-                .ToArray();
+            var orders = _trackerClients.SelectMany(tc => tc.GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
+                .Select(MapToRestaurantReadnessOrders)).ToArray();
 
 
             var clientTreatment = pizzeria.ClientTreatment;
