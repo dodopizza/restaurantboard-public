@@ -14,23 +14,30 @@ namespace Dodo.Tests
     public class UnitLunchParametersTests
     {
         private const string testXml =
-            @"<qwe>
-	<Lunch>
-		<MinimalShiftToKitchenWorker> 23 </MinimalShiftToKitchenWorker>
-	</Lunch>
-	<Lunch>
-		<MinimalShiftToCashier> 45 </MinimalShiftToCashier>
-	</Lunch>
-	<Lunch>
-		<MinimalShiftToCourier> 67 </MinimalShiftToCourier>
-	</Lunch>
-	<Lunch>
-		<MinimalShiftToKitchenWorker> 100 </MinimalShiftToKitchenWorker>
-	</Lunch>
-    <Lunch>
-		<MinimalShiftToPersonalManager> 333 </MinimalShiftToPersonalManager>
-	</Lunch>
-</qwe>";
+        @"<qwe>
+	        <Lunch>
+		        <MinimalShiftToKitchenWorker> 23 </MinimalShiftToKitchenWorker>
+	        </Lunch>
+	        <Lunch>
+		        <MinimalShiftToCashier> 45 </MinimalShiftToCashier>
+	        </Lunch>
+	        <Lunch>
+		        <MinimalShiftToCourier> 67 </MinimalShiftToCourier>
+	        </Lunch>
+	        <Lunch>
+		        <MinimalShiftToKitchenWorker> 100 </MinimalShiftToKitchenWorker>
+	        </Lunch>
+            <Lunch>
+		        <MinimalShiftToPersonalManager> 333 </MinimalShiftToPersonalManager>
+	        </Lunch>
+        </qwe>";
+
+        private const string wrongXml =
+        @"<qwe>
+	        <Lunch>
+		        <MinimalShiftToKitchenWorker> string data </MinimalShiftToKitchenWorker>
+	        </Lunch>
+        </qwe>";
 
         [Theory]
         [InlineData("")]
@@ -60,6 +67,14 @@ namespace Dodo.Tests
             Assert.Equal(45, lunchParams.MinimalShiftToCashier);
             Assert.Equal(67, lunchParams.MinimalShiftToCourier);
             Assert.Equal(333, lunchParams.MinimalShiftToPersonalManager);
+        }
+
+        [Fact]
+        public void ConvertToUnitLunchParameters_WrongParameter()
+        {
+            Action convert = () => UnitLunchParameters.ConvertToUnitLunchParameters(wrongXml);
+
+            Assert.Throws<FormatException>(convert);
         }
     }
 }
