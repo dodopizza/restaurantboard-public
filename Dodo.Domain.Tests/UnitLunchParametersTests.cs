@@ -1,5 +1,4 @@
-﻿using System;
-using Dodo.Core.DomainModel.Departments.Parameters.Unit;
+﻿using Dodo.Core.DomainModel.Departments.Parameters.Unit;
 using NUnit.Framework;
 
 namespace Dodo.Domain.Tests
