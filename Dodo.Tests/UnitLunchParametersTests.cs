@@ -13,6 +13,25 @@ namespace Dodo.Tests
 {
     public class UnitLunchParametersTests
     {
+        private const string testXml =
+            @"<qwe>
+	<Lunch>
+		<MinimalShiftToKitchenWorker> 23 </MinimalShiftToKitchenWorker>
+	</Lunch>
+	<Lunch>
+		<MinimalShiftToCashier> 45 </MinimalShiftToCashier>
+	</Lunch>
+	<Lunch>
+		<MinimalShiftToCourier> 67 </MinimalShiftToCourier>
+	</Lunch>
+	<Lunch>
+		<MinimalShiftToKitchenWorker> 100 </MinimalShiftToKitchenWorker>
+	</Lunch>
+    <Lunch>
+		<MinimalShiftToPersonalManager> 333 </MinimalShiftToPersonalManager>
+	</Lunch>
+</qwe>";
+
         [Theory]
         [InlineData("")]
         [InlineData(null)]
@@ -30,6 +49,17 @@ namespace Dodo.Tests
             Action convert = () => UnitLunchParameters.ConvertToUnitLunchParameters("hguygfhgfj");
 
             Assert.Throws<XmlException>(convert);
+        }
+
+        [Fact]
+        public void ConvertToUnitLunchParameters_ValidXml()
+        {
+            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+            
+            Assert.Equal(100, lunchParams.MinimalShiftToKitchenWorker);
+            Assert.Equal(45, lunchParams.MinimalShiftToCashier);
+            Assert.Equal(67, lunchParams.MinimalShiftToCourier);
+            Assert.Equal(333, lunchParams.MinimalShiftToPersonalManager);
         }
     }
 }
