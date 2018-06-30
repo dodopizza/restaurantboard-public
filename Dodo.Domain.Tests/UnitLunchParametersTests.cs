@@ -8,72 +8,60 @@ namespace Dodo.Domain.Tests
 	{
 		[Test]
 		[Sequential]
-		public void ConvertingFromXml_ShouldGenerateCorrectObject(
-			[Values(1, 5)] int shiftToKitchenWorker,
-			[Values(2, 6)] int shiftToCashier,
-			[Values(3, 7)] int shiftToCourier,
-			[Values(4, 8)] int shiftToPersonalManager)
+		public void ConvertingFromXml_SingleLunch_ShouldGenerateCorrectObject(
+			[Values(1, 5)] int minimalShiftToKitchenWorker,
+			[Values(2, 6)] int minimalShiftToCashier,
+			[Values(3, 7)] int minimalShiftToCourier,
+			[Values(4, 8)] int minimalShiftToPersonalManager)
 		{
-			const string xmlTemplate =
-				@"
+			var xml = $@"
 <Lunch>
-	<MinimalShiftToKitchenWorker>{0}</MinimalShiftToKitchenWorker>
-	<MinimalShiftToCashier>{1}</MinimalShiftToCashier>
-	<MinimalShiftToCourier>{2}</MinimalShiftToCourier>
-	<MinimalShiftToPersonalManager>{3}</MinimalShiftToPersonalManager>
+	<MinimalShiftToKitchenWorker>{minimalShiftToKitchenWorker}</MinimalShiftToKitchenWorker>
+	<MinimalShiftToCashier>{minimalShiftToCashier}</MinimalShiftToCashier>
+	<MinimalShiftToCourier>{minimalShiftToCourier}</MinimalShiftToCourier>
+	<MinimalShiftToPersonalManager>{minimalShiftToPersonalManager}</MinimalShiftToPersonalManager>
 </Lunch>";
-			var xml = String.Format(xmlTemplate,
-				shiftToKitchenWorker,
-				shiftToCashier,
-				shiftToCourier,
-				shiftToPersonalManager);
+			var expected = new UnitLunchParameters(
+				minimalShiftToKitchenWorker,
+				minimalShiftToCashier,
+				minimalShiftToCourier,
+				minimalShiftToPersonalManager);
 
 			var actual = UnitLunchParameters.ConvertToUnitLunchParameters(xml);
-			var expected = new UnitLunchParameters(
-				shiftToKitchenWorker,
-				shiftToCashier,
-				shiftToCourier,
-				shiftToPersonalManager);
 
 			AssertUnitLunchParameters(expected, actual);
 		}
 
 		[Test]
 		[Sequential]
-		public void ConvertingFromXml_ShouldGenerateCorrectObjectFrom(
-			[Values(1, 5)] int shiftToKitchenWorker,
-			[Values(2, 6)] int shiftToCashier,
-			[Values(3, 7)] int shiftToCourier,
-			[Values(4, 8)] int shiftToPersonalManager)
+		public void ConvertingFromXml_MultipleLunch_ShouldGenerateCorrectObject(
+			[Values(1, 5)] int minimalShiftToKitchenWorker,
+			[Values(2, 6)] int minimalShiftToCashier,
+			[Values(3, 7)] int minimalShiftToCourier,
+			[Values(4, 8)] int minimalShiftToPersonalManager)
 		{
-			const string xmlTemplate =
-				@"
+			var xml = $@"
 <Document>
 	<Lunch>
-		<MinimalShiftToKitchenWorker>{0}</MinimalShiftToKitchenWorker>
+		<MinimalShiftToKitchenWorker>{minimalShiftToKitchenWorker}</MinimalShiftToKitchenWorker>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToCourier>{2}</MinimalShiftToCourier>
+		<MinimalShiftToCourier>{minimalShiftToCourier}</MinimalShiftToCourier>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToCashier>{1}</MinimalShiftToCashier>
+		<MinimalShiftToCashier>{minimalShiftToCashier}</MinimalShiftToCashier>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToPersonalManager>{3}</MinimalShiftToPersonalManager>
+		<MinimalShiftToPersonalManager>{minimalShiftToPersonalManager}</MinimalShiftToPersonalManager>
 	</Lunch>
 </Document>";
-			var xml = String.Format(xmlTemplate,
-				shiftToKitchenWorker,
-				shiftToCashier,
-				shiftToCourier,
-				shiftToPersonalManager);
+			var expected = new UnitLunchParameters(
+				minimalShiftToKitchenWorker,
+				minimalShiftToCashier,
+				minimalShiftToCourier,
+				minimalShiftToPersonalManager);
 
 			var actual = UnitLunchParameters.ConvertToUnitLunchParameters(xml);
-			var expected = new UnitLunchParameters(
-				shiftToKitchenWorker,
-				shiftToCashier,
-				shiftToCourier,
-				shiftToPersonalManager);
 
 			AssertUnitLunchParameters(expected, actual);
 		}
