@@ -3,7 +3,6 @@ using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Finance;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
-using System;
 using Xunit;
 using FluentAssertions;
 
@@ -26,6 +25,7 @@ namespace Dodo.Tests
             actualDepartment.Should().BeEquivalentTo(expectedDepartment, 
                 o => o.Excluding(x => x.CurrentDateTime).Excluding(x => x.CurrentDateTimeUtc));
 
+            // todo: перенести в отдельный тест. эта проверка не очень имеет смысла
             actualDepartment.CurrentDateTime.Should().BeCloseTo(expectedDepartment.CurrentDateTime);
             actualDepartment.CurrentDateTimeUtc.Should().BeCloseTo(expectedDepartment.CurrentDateTimeUtc);
         }
