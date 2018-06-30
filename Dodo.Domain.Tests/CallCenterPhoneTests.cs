@@ -1,5 +1,4 @@
-﻿using System.Xml;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
 using Dodo.Core.DomainModel.Departments;
 using NUnit.Framework;
 
@@ -55,7 +54,7 @@ namespace Dodo.Domain.Tests
 
 		[Test]
 		[Combinatorial]
-		public void SerializeObject_ShouldReturnedXmlElement(
+		public void CreateXmlNode_ShouldReturnedXmlElement(
 			[Values("123", null)]string number,
 			[Values("www.example.com", null)]string iconSitePath,
 			[Values("www.tedt.com/test", null)]string iconPath)
@@ -74,7 +73,7 @@ namespace Dodo.Domain.Tests
 		}
 
 		[Test]
-		public void DeserializeXml_IfEmptyContainer_ShouldReturnEmptyArray()
+		public void GetCallCenterPhonesFromXml_IfEmptyContainer_ShouldReturnEmptyArray()
 		{
 			var container = new XElement("Phone");
 			
@@ -84,12 +83,12 @@ namespace Dodo.Domain.Tests
 		}
 		
 		[Test]
-		public void DeserializeXml_ShouldReturnObject(
+		public void GetCallCenterPhonesFromXml_ShouldReturnPhonesArray(
 			[Values("123", "")]string number,
 			[Values("www.example.com", "")]string iconSitePath,
 			[Values("www.tedt.com/test", "")]string iconPath)
 		{
-			var expected = new CallCenterPhoneParameter()
+			var expected = new CallCenterPhoneParameter
 			{
 				Number = number,
 				IconPath = iconPath,
