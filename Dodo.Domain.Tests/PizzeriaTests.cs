@@ -13,9 +13,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		[Sequential]
 		public void GetYearsOld_ShouldReturnCountYearsFromBeginDateTimeWork(
-			[Values("2005 02 22")] string beginDate,
-			[Values("2008 01 11")] string currentDate,
-			[Values(3)] int expectedYears)
+			[Values("2005 02 22", "2005 02 22", "2005 02 22")] string beginDate,
+			[Values("2008 01 11", "2008 02 11", "2008 03 11")] string currentDate,
+			[Values(2, 2, 3)] int expectedYears)
 		{
 			var beginDateTimeWork = DateTime.Parse(beginDate);
 			var currentDateTime = DateTime.Parse(currentDate);
@@ -29,10 +29,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetYearsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroYears()
 		{
-			DateTime? beginDateTimeWork = null;
-			Int32 expectedYears = 0;
+			const int expectedYears = 0;
 			var currentDateTime = DateTime.Now;
-			var pizzeria = CreatePizzeria(beginDateTimeWork);
+			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
 			var actualYears = pizzeria.GetYearsOld(currentDateTime);
 
@@ -58,10 +57,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetMonthsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroMonths()
 		{
-			DateTime? beginDateTimeWork = null;
-			Int32 expectedMonths = 0;
+			const int expectedMonths = 0;
 			var currentDateTime = DateTime.Now;
-			var pizzeria = CreatePizzeria(beginDateTimeWork);
+			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
 			var actualMonths = pizzeria.GetMonthsOld(currentDateTime);
 

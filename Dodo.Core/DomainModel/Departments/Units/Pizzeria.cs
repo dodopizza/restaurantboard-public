@@ -44,10 +44,10 @@ namespace Dodo.Core.DomainModel.Departments.Units
 		{
 			if (!BeginDateTimeWork.HasValue) return 0;
 
-			DateTime zeroDate = new DateTime(1,1,1);
+			DateTime zeroDate = new DateTime(1, 1, 1);
 			TimeSpan diffDate = currentDateTime.Subtract(BeginDateTimeWork.Value);
 
-			return (zeroDate + diffDate).Year;
+			return (zeroDate + diffDate).Year - 1;
 		}
 
 		public Int32 GetMonthsOld(DateTime currentDateTime)
