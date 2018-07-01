@@ -83,6 +83,7 @@ namespace Dodo.Domain.Tests
 		}
 		
 		[Test]
+		[Combinatorial]
 		public void GetCallCenterPhonesFromXml_ShouldReturnPhonesArray(
 			[Values("123", "")]string number,
 			[Values("www.example.com", "")]string iconSitePath,

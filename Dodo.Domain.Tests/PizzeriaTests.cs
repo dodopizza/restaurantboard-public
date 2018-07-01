@@ -26,7 +26,49 @@ namespace Dodo.Domain.Tests
 			Assert.AreEqual(expectedYears, actualYears);
 		}
 
-		private static Pizzeria CreatePizzeria(DateTime beginDateTimeWork)
+		[Test]
+		public void GetYearsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroYears()
+		{
+			DateTime? beginDateTimeWork = null;
+			Int32 expectedYears = 0;
+			var currentDateTime = DateTime.Now;
+			var pizzeria = CreatePizzeria(beginDateTimeWork);
+
+			var actualYears = pizzeria.GetYearsOld(currentDateTime);
+
+			Assert.AreEqual(expectedYears, actualYears);
+		}
+		
+		[Test]
+		[Sequential]
+		public void GetMonthsOld_ShouldReturnCountMonthsFromBeginDateTimeWork(
+			[Values("2008 02 22")] string beginDate,
+			[Values("2008 06 11")] string currentDate,
+			[Values(3)] int expectedMonths)
+		{
+			var beginDateTimeWork = DateTime.Parse(beginDate);
+			var currentDateTime = DateTime.Parse(currentDate);
+			var pizzeria = CreatePizzeria(beginDateTimeWork);
+
+			var actualMonths = pizzeria.GetMonthsOld(currentDateTime);
+
+			Assert.AreEqual(expectedMonths, actualMonths);
+		}
+
+		[Test]
+		public void GetMonthsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroMonths()
+		{
+			DateTime? beginDateTimeWork = null;
+			Int32 expectedMonths = 0;
+			var currentDateTime = DateTime.Now;
+			var pizzeria = CreatePizzeria(beginDateTimeWork);
+
+			var actualMonths = pizzeria.GetMonthsOld(currentDateTime);
+
+			Assert.AreEqual(expectedMonths, actualMonths);
+		}
+		
+		private static Pizzeria CreatePizzeria(DateTime? beginDateTimeWork)
 		{
 			var fixture = new Fixture();
 
