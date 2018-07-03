@@ -6,10 +6,13 @@ namespace Dodo.RestaurantBoard.Tests
     public class OrganizationTests
     {
         [Fact]
-        public void ShouldBeCorrectShortHeadManagerName()
+        public void OrganizationTests_GetPizzeriaShortHeadManagerName_Pizzeria_ShortNameIsCorrect()
         {
-            var prc = new PizzeriaRestaurant("Test Name");
-            Assert.Equal("Test N.", prc.ShortHeadManagerName);
+            var pizzeriaRestaurant = new PizzeriaRestaurant("Test Name");
+
+            var shortManagerName = pizzeriaRestaurant.ShortHeadManagerName;
+
+            Assert.Equal("Test N.", shortManagerName);
         }
     }
 }
