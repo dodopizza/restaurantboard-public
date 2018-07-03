@@ -12,6 +12,7 @@ namespace Dodo.RestaurantBoard.Tests
     {
 
         IDepartmentsStructureService departmentsStructureService;
+        int sampleDepartmentId = 1;
 
         public DepartmentsStructureServiceTests()
         {
@@ -20,32 +21,33 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void PizzaIsNotNull()
+        public void DepartmentsStructureServiceTests_GetPizzeria_Pizzeria_PizzaIsNotNull()
         {
             var service = departmentsStructureService;
-            var pizza = service.GetPizzeriaOrCache(1);
-            Assert.NotNull(pizza);
-        }
-        [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
 
-        public void IsDepartmentCountryAlwaysRussia(int departmentId)
-        {
-            var department = departmentsStructureService.GetDepartmentOrCache<Department>(departmentId);
-            Assert.Equal("Russia", department.Country.Name);
+            var pizzeria = service.GetPizzeriaOrCache(1);
+
+            Assert.NotNull(pizzeria);
         }
 
-        [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
-
-        public void IsDepartmentByUidCurrencyAlwaysRubble(int iud)
+        [Fact]
+        public void DepartmentsStructureServiceTests_GetDepartmentCountryName_Department_CountryAlwaysRussia()
         {
-            var department = departmentsStructureService.GetDepartmentByUnitOrCache(iud);
-            Assert.Equal(Currency.Ruble, department.Country.Currency);
+            var department = departmentsStructureService.GetDepartmentOrCache<Department>(sampleDepartmentId);
+
+            var departmentCountryName = department.Country.Name;
+
+            Assert.Equal("Russia", departmentCountryName);
+        }
+
+        [Fact]
+        public void DepartmentsStructureServiceTests_GetDepartmentCountryCurrency_Department_CountryCurrencyAlwaysRubble()
+        {
+            var department = departmentsStructureService.GetDepartmentByUnitOrCache(sampleDepartmentId);
+
+            var contryCurrency = department.Country.Currency;
+
+            Assert.Equal(Currency.Ruble, contryCurrency);
         }
 
 
