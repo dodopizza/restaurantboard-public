@@ -21,6 +21,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
+<<<<<<< HEAD
         public void DepartmentsStructureServiceTests_GetPizzeria_Pizzeria_PizzaIsNotNull()
         {
             var service = departmentsStructureService;
@@ -29,6 +30,18 @@ namespace Dodo.RestaurantBoard.Tests
 
             Assert.NotNull(pizzeria);
         }
+=======
+                 public void PizzaIsNotNull()
+                 {
+                     var service = departmentsStructureService;
+                     var pizza = service.GetPizzeriaOrCache(1);
+                     Assert.NotNull(pizza);
+                 }
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+>>>>>>> origin/HW02_Aleksey_Anton
 
         [Fact]
         public void DepartmentsStructureServiceTests_GetDepartmentCountryName_Department_CountryAlwaysRussia()
