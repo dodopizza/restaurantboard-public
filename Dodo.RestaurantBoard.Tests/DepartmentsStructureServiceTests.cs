@@ -20,12 +20,12 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void PizzaIsNotNull()
-        {
-            var service = departmentsStructureService;
-            var pizza = service.GetPizzeriaOrCache(1);
-            Assert.NotNull(pizza);
-        }
+                 public void PizzaIsNotNull()
+                 {
+                     var service = departmentsStructureService;
+                     var pizza = service.GetPizzeriaOrCache(1);
+                     Assert.NotNull(pizza);
+                 }
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
