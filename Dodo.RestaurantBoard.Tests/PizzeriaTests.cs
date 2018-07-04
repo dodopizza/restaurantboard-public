@@ -13,7 +13,7 @@ namespace Dodo.RestaurantBoard.Tests
     {
 
 
-        public Pizzeria CreatePizzeriaWithCurrentDate(DateTime startDate)
+        private Pizzeria CreatePizzeriaWithCurrentBeginDateTimeWork(DateTime startDate)
         {
             var orgInfo = new OrganizationShortInfo(0, string.Empty, string.Empty, OrganizationType.Rus_OOO, string.Empty, string.Empty, string.Empty, 1, string.Empty, string.Empty, string.Empty);
             return new Pizzeria(29, new Uuid("000D3A240C719A8711E68ABA13F83227"), "Сык-1", string.Empty,
@@ -22,60 +22,48 @@ namespace Dodo.RestaurantBoard.Tests
             true, new PizzeriaFormat(0, string.Empty, string.Empty));
         }
 
-        [Theory]
-        [MemberData(nameof(CheckYearsData))]
-        public void VerifyYearsOld(DateTime startDate, DateTime now, int expertedYears)
-        {
-            var pizzeria = CreatePizzeriaWithCurrentDate(startDate);
-
-            Assert.Equal(expertedYears, pizzeria.GetYearsOld(now));
-        }
-
-        public static IEnumerable<object[]> CheckYearsData = new List<object[]>
-        {
-            new object[] {new DateTime(2011,1,1), new DateTime(2016, 1, 1), 6 },
-            new object[] {new DateTime(2011,1,1), new DateTime(2018, 2, 1), 8 },
-            new object[] {new DateTime(2011,2,1), new DateTime(2021, 1, 1), 10 }
-        };
-
-
-        [Theory]
-        [MemberData(nameof(CheckMonthsData))]
-        public void VerifyMonthOld(DateTime startDate, DateTime now, int expectedMonths)
-        {
-            var pizzeria = CreatePizzeriaWithCurrentDate(startDate);
-
-            Assert.Equal(expectedMonths, pizzeria.GetMonthsOld(now));
-        }
-
-        public static IEnumerable<object[]> CheckMonthsData = new List<object[]>
-        {
-            new object[] {new DateTime(2011,1,1), new DateTime(2016, 1, 1), 72 },
-            new object[] {new DateTime(2011,1,1), new DateTime(2018, 2, 1), 97 },
-            new object[] {new DateTime(2011,2,1), new DateTime(2021, 1, 1), 131 }
-        };
-
-
         [Fact]
-        public void ShouldCorrectlyHandleIncorredDatesInGetYears()
+        public void PizzeriaTests_GetYearsOld_Pizzeria_CorrectYearsOld()
         {
-            var pizzeria = CreatePizzeriaWithCurrentDate(new DateTime(2020, 1, 1));
-            // А он не хэндлит. Поэтому тест не проходит.
-            var totalYears = pizzeria.GetYearsOld(new DateTime(2018, 30, 6));
-            Assert.Equal(0, totalYears);
+            var nowDate = new DateTime(2016, 1, 1);
+            var startDate = new DateTime(2011, 1, 1);
+            var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(startDate);
+
+            var yearsOld = pizzeria.GetYearsOld(nowDate);
+
+            Assert.Equal(6, yearsOld);
         }
 
         [Fact]
-        public void ShouldCorrectlyHandleIncorredDatesInGetMonth()
+        public void PizzeriaTests_GetMonthsOld_Pizzeria_CorrectMonthOld()
         {
-            var pizzeria = CreatePizzeriaWithCurrentDate(new DateTime(2020, 1, 1));
-            // А он не хэндлит. Поэтому тест не проходит.
-            var totalMonth = pizzeria.GetMonthsOld(new DateTime(2018, 30, 6));
-            Assert.Equal(0, totalMonth);
+            var nowDate = new DateTime(2016, 1, 1);
+            var startDate = new DateTime(2011, 1, 1);
+            var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(startDate);
 
+            var monthOld = pizzeria.GetMonthsOld(nowDate);
+
+            Assert.Equal(72, monthOld);
         }
 
+        [Fact]
+        public void PizzeriaTests_GetYearsOldNowDateEarlyBeginDateTimeWork_Pizzeria_Return0()
+        {
+            var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
+            var totalYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 30, 6));
 
+            Assert.Equal(0, totalYearsOld);
+        }
+
+        [Fact]
+        public void PizzeriaTests_GetMonthsOldNowDateEarlyBeginDateTimeWork_Pizzeria_Return0()
+        {
+            var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
+            
+            var totalMonthsOld = pizzeria.GetMonthsOld(new DateTime(2018, 30, 6));
+
+            Assert.Equal(0, totalMonthsOld);
+        }
     }
 }

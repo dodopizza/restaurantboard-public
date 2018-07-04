@@ -21,7 +21,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void DepartmentsStructureServiceTests_GetPizzeria_Pizzeria_PizzaIsNotNull()
+        public void DepartmentsStructureServiceTests_GetPizzeria_Department_PizzaIsNotNull()
         {
             var service = departmentsStructureService;
 

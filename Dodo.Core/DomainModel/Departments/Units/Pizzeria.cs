@@ -43,6 +43,7 @@ namespace Dodo.Core.DomainModel.Departments.Units
 		public Int32 GetYearsOld(DateTime currentDateTime)
 		{
 			if (!BeginDateTimeWork.HasValue) return 0;
+            if (currentDateTime < BeginDateTimeWork) return 0;
 
 			DateTime zeroDate = new DateTime(1,1,1);
 			TimeSpan diffDate = currentDateTime.Subtract(BeginDateTimeWork.Value);
@@ -55,8 +56,9 @@ namespace Dodo.Core.DomainModel.Departments.Units
 			const Int32 monthInYear = 12;
 
 			if (!BeginDateTimeWork.HasValue) return 0;
+            if (currentDateTime < BeginDateTimeWork) return 0;
 
-			DateTime zeroDate = new DateTime(1, 1, 1);
+            DateTime zeroDate = new DateTime(1, 1, 1);
 			TimeSpan diffDate = currentDateTime.Subtract(BeginDateTimeWork.Value);
 
 			return (zeroDate + diffDate).Month - 1 + (monthInYear * GetYearsOld(currentDateTime));
