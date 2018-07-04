@@ -16,7 +16,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateGreaterThanBeginDateTimeWork_ThenPizzeriaYearsOldIsPositiveNumber()
+        public void WhenDateGreaterThanBeginDateTimeWork_ThenYearsOldIsPositiveNumber()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 2));
@@ -27,7 +27,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateLessThanBeginDateTimeWork_ThenPizzeriaYearsOldThrowsArgumentOutOfRangeException()
+        public void WhenDateLessThanBeginDateTimeWork_ThenYearsOldThrowsArgumentOutOfRangeException()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
@@ -36,7 +36,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenBeginDateTimeWorkIsNull_ThenPizzeriaYearsOldEqualsZeroForAnyDate()
+        public void WhenBeginDateTimeWorkIsNull_ThenYearsOldEqualsZeroForAnyDate()
         {
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(null);
 
@@ -50,7 +50,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateGreaterThanBeginDateTimeWorkOnLessThanYear_ThenPizzeriaMonthsOldIsPositiveNumber()
+        public void WhenDateGreaterThanBeginDateTimeWorkOnLessThanYear_ThenMonthsOldIsPositiveNumberLessThan12()
         {
             var date = new DateTime(2010, 5, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 1));
@@ -61,7 +61,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateGreaterThanBeginDateTimeWorkOnMoreThanYear_ThenPizzeriaMonthsOldIsPositiveNumber()
+        public void WhenDateGreaterThanBeginDateTimeWorkOnMoreThanYear_ThenMonthsOldIsPositiveNumberMoreThan12()
         {
             var date = new DateTime(2012, 5, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 1));
@@ -72,7 +72,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateLessThanBeginDateTimeWork_ThenPizzeriaMonthsOldThrowsArgumentOutOfRangeException()
+        public void WhenDateLessThanBeginDateTimeWork_ThenMonthsOldThrowsArgumentOutOfRangeException()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
