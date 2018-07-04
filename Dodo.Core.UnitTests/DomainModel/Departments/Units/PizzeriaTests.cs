@@ -16,62 +16,68 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void When_pass_date_greater_than_pizzeria_begin_date_returns_age_in_years()
+        public void WhenDateGreaterThanBeginDateTimeWork_ThenPizzeriaYearsOldIsPositiveNumber()
         {
-            var pizzeriaBeginWorkDate = new DateTime(2010, 1, 2);
-            var currentDate = new DateTime(2018, 1, 1);
-            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(pizzeriaBeginWorkDate);
+            var date = new DateTime(2018, 1, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 2));
 
-            Assert.AreEqual(8, pizzeria.GetYearsOld(currentDate));
+            var pizzeriaYearsOld = pizzeria.GetYearsOld(date);
+
+            Assert.AreEqual(8, pizzeriaYearsOld);
         }
 
         [Test]
-        public void When_begin_date_is_null_returns_zero()
+        public void WhenDateLessThanBeginDateTimeWork_ThenPizzeriaYearsOldThrowsArgumentOutOfRangeException()
         {
-            var currentDate = new DateTime(2018, 1, 1);
+            var date = new DateTime(2018, 1, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => pizzeria.GetYearsOld(date));
+        }
+
+        [Test]
+        public void WhenBeginDateTimeWorkIsNull_ThenPizzeriaYearsOldEqualsZeroForAnyDate()
+        {
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(null);
 
-            Assert.AreEqual(0, pizzeria.GetYearsOld(currentDate));
+            var pizzeriaYearsOld2010 = pizzeria.GetYearsOld(new DateTime(2010, 1, 1));
+            var pizzeriaYearsOld2020 = pizzeria.GetYearsOld(new DateTime(2020, 1, 1));
+            var pizzeriaYearsOld2030 = pizzeria.GetYearsOld(new DateTime(2030, 1, 1));
+
+            Assert.AreEqual(0, pizzeriaYearsOld2010);
+            Assert.AreEqual(0, pizzeriaYearsOld2020);
+            Assert.AreEqual(0, pizzeriaYearsOld2030);
         }
 
         [Test]
-        public void When_pass_date_less_then_begin_date_throws_exception()
+        public void WhenDateGreaterThanBeginDateTimeWorkOnLessThanYear_ThenPizzeriaMonthsOldIsPositiveNumber()
         {
-            var beginDate = new DateTime(2018, 5, 1);
-            var currentDate = new DateTime(2018, 1, 1);
-            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(beginDate);
+            var date = new DateTime(2010, 5, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 1));
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => pizzeria.GetYearsOld(currentDate));
-        }
-        
-        [Test]
-        public void When_pass_date_greater_than_pizzeria_begin_date_less_than_year_returns_age_in_months()
-        {
-            var pizzeriaBeginWorkDate = new DateTime(2010, 1, 1);
-            var currentDate = new DateTime(2010, 5, 1);
-            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(pizzeriaBeginWorkDate);
+            var pizzeriaMonthsOld = pizzeria.GetMonthsOld(date);
 
-            Assert.AreEqual(4, pizzeria.GetMonthsOld(currentDate));
+            Assert.AreEqual(4, pizzeriaMonthsOld);
         }
 
         [Test]
-        public void When_pass_date_greater_than_pizzeria_begin_date_more_than_year_returns_age_in_months()
+        public void WhenDateGreaterThanBeginDateTimeWorkOnMoreThanYear_ThenPizzeriaMonthsOldIsPositiveNumber()
         {
-            var pizzeriaBeginWorkDate = new DateTime(2010, 1, 1);
-            var currentDate = new DateTime(2012, 5, 1);
-            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(pizzeriaBeginWorkDate);
+            var date = new DateTime(2012, 5, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 1));
 
-            Assert.AreEqual(28, pizzeria.GetMonthsOld(currentDate));
+            var pizzeriaMonthsOld = pizzeria.GetMonthsOld(date);
+
+            Assert.AreEqual(28, pizzeriaMonthsOld);
         }
 
         [Test]
-        public void When_pass_date_less_then_begin_date_for_months_throws_exception()
+        public void WhenDateLessThanBeginDateTimeWork_ThenPizzeriaMonthsOldThrowsArgumentOutOfRangeException()
         {
-            var beginDate = new DateTime(2018, 5, 1);
-            var currentDate = new DateTime(2018, 1, 1);
-            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(beginDate);
+            var date = new DateTime(2018, 1, 1);
+            var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => pizzeria.GetMonthsOld(currentDate));
+            Assert.Throws<ArgumentOutOfRangeException>(() => pizzeria.GetMonthsOld(date));
         }
     }
 
