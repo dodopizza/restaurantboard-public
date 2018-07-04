@@ -9,45 +9,61 @@ namespace Dodo.Core.Tests.Common
         [Fact]
         public void ShouldNotCreateUUId_WhenCreateFromEmptyString()
         {
-            var uuidFrom = "";
+            var emptyString = "";
 
-            Action act = () => new Uuid(uuidFrom);
+            Action act = () => new Uuid(emptyString);
             
             Assert.Throws<ArgumentNullException>(act);
         }
-        
-        [Theory]
-        [InlineData(null)]
-        public void Uuid_ThrowArgumentNullException_IfEmptyOrNullString(string uuid)
-        {
-            Assert.Throws<ArgumentNullException>(() => new Uuid(uuid));
-        }
 
-        [Theory]
-        [InlineData("123")]
-        [InlineData("1234567890123456789012345678901234567890")]
-        public void Uuid_ThrowArgumentException_IfIncorrectLength(string uuid)
+        [Fact]
+        public void ShouldNotCreateUUId_WhenCreateFromNull()
         {
-            var exception = Assert.Throws<ArgumentException>(() => new Uuid(uuid));
-            Assert.Equal("The length of the String for UUID must be exactly 32 chars.\r\nParameter name: uuid", exception.Message);
-        }
+            string nullString = null;
 
-        [Theory]
-        [InlineData("12345678901234z67890123456789012")]
-        public void Uuid_ThrowArgumentException_IfNotGuid(string uuid)
-        {
-            var exception = Assert.Throws<ArgumentException>(() => new Uuid(uuid));
-            Assert.Equal("UUId must have the same characters like guid", exception.Message);
+            Action act = () => new Uuid(nullString);
+
+            Assert.Throws<ArgumentNullException>(act);
         }
 
         [Fact]
-        public void Uuid_ShouldCreate_IfGuid()
+        public void ShouldNotCreateUUId_WhenCreateFromStringShorterThan32Symbols()
         {
-            var guid = Guid.NewGuid().ToString().Replace("-", "");
+            var shortString = "123";
 
-            var uuid = new Uuid(guid);
+            Action act = () => new Uuid(shortString);
 
-            Assert.Equal(uuid.ToString(), guid);
+            Assert.Throws<ArgumentException>(act);
+        }
+
+        [Fact]
+        public void ShouldNotCreateUUId_WhenCreateFromStringLongerThan32Symbols()
+        {
+            var longString = new string(' ', 33);
+
+            Action act = () => new Uuid(longString);
+
+            Assert.Throws<ArgumentException>(act);
+        }
+
+        [Fact]
+        public void ShouldNotCreateUUId_WhenCreateFromStringIsNotGuid()
+        {
+            var notGuidString = new string('h', 32);
+
+            Action act = () => new Uuid(notGuidString);
+
+            Assert.Throws<ArgumentException>(act);
+        }
+
+        [Fact]
+        public void ShouldCreateUUId_WhenCreateFromGuidString()
+        {
+            var guidString = Guid.NewGuid().ToString().Replace("-", "");
+
+            var uuid = new Uuid(guidString);
+
+            Assert.Equal(uuid.ToString(), guidString);
         }
 
     }
