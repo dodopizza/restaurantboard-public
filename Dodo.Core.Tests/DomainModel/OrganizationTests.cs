@@ -8,23 +8,42 @@ namespace Dodo.Core.Tests.DomainModel
 {
     public class OrganizationTests
     {
-        [Theory]
-        [InlineData("Гендольф Антон Борисович", "Гендольф А.Б.")]
-        [InlineData("Гендольф.Антон     Борисович", "Гендольф А.Б.")]
-        [InlineData("", "")]
-        [InlineData("    ", "")]
-        [InlineData("Гендольф", "Гендольф ")]
-        [InlineData(" .. .. ...", "")]
-        public void ShortHeadManagerName_IfFio_SurnameWithInitials(string headManagerName, string expectedShortName)
+        [Fact]
+        public void ShouldBecomeSurnameWithInitials_WhenFullNameContainsALotOfDotsAndSpaces()
         {
-            var country = new Country(0, "", "", 0, "", Currency.Ruble, "");
-            var organization = new OrganizationStub(0, new Uuid(), "", "", "", "", headManagerName, country, "", "", "");
+            var organization = CreateOrganization("Гендольф.....Антон     Борисович");
 
-            var actual = organization.ShortHeadManagerName;
+            var surnameWithInitials = organization.ShortHeadManagerName;
 
-            Assert.Equal(expectedShortName, actual);
+            Assert.Equal("Гендольф А.Б.", surnameWithInitials);
         }
 
+        [Fact]
+        public void ShouldBecomeSurnameWithInitials_WhenOrdinaryFullName()
+        {
+            var organization = CreateOrganization("Гендольф Антон Борисович");
 
+            var surnameWithInitials = organization.ShortHeadManagerName;
+
+            Assert.Equal("Гендольф А.Б.", surnameWithInitials);
+        }
+
+        [Fact]
+        public void ShouldBeEmpty_WhenFullNameIsEmpty()
+        {
+            var organization = CreateOrganization("");
+
+            var surnameWithInitials = organization.ShortHeadManagerName;
+
+            Assert.Equal("", surnameWithInitials);
+        }
+
+        private static OrganizationStub CreateOrganization(string headManagerName)
+        {
+            var country = new Country(0, "", "", 0, "", Currency.Ruble, "");
+            var organization =
+                new OrganizationStub(0, new Uuid(), "", "", "", "", headManagerName, country, "", "", "");
+            return organization;
+        }
     }
 }
