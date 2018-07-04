@@ -14,7 +14,6 @@ namespace Dodo.Core.Tests
             var uuid = new Uuid(validString);
 
             Assert.NotNull(uuid);
-            Assert.Equal(validString, uuid.ToString());
         }
 
         [Fact]
@@ -38,9 +37,9 @@ namespace Dodo.Core.Tests
         }
         
         [Fact]
-        public void ThrowArgumentException_IfTooLongStringIsPassedIntoConstructor()
+        public void ThrowArgumentException_IfStringLongerThan32CharactersIsPassedIntoConstructor()
         {
-            const string tooLongString = "1411dee2c7a3111e8adc0fa7ae01bbebc";
+            var tooLongString = new string('0', 33);
 
             var ex = Assert.Throws<ArgumentException>(() => new Uuid(tooLongString));
             
@@ -49,9 +48,9 @@ namespace Dodo.Core.Tests
         }
         
         [Fact]
-        public void ThrowArgumentException_IfTooShortStringIsPassedIntoConstructor()
+        public void ThrowArgumentException_IfStringShorterThan32CharactersIsPassedIntoConstructor()
         {
-            const string tooShortString = "11dee2c7a3111e8adc0fa7ae01bbebc";
+            var tooShortString = new string('0', 31);
 
             var ex = Assert.Throws<ArgumentException>(() => new Uuid(tooShortString));
             
@@ -62,7 +61,7 @@ namespace Dodo.Core.Tests
         [Fact]
         public void ThrowArgumentException_IfStringWithNonGuidCharactersIsPassedIntoConstructor()
         {
-            const string nonGuidString = "411dee2c7a3111e8adc0fa7ae01bbeb!";
+            var nonGuidString = new string('!', 32);
 
             var ex = Assert.Throws<ArgumentException>(() => new Uuid(nonGuidString));
             
