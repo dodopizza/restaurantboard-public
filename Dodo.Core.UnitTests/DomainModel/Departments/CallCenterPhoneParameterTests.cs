@@ -13,44 +13,101 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments
         {
             _builder = new CallCenterPhoneParameterBuilder();
         }
-
+        
         [Test]
-        [TestCase("7(999)999-99-99")]
-        [TestCase("7(999)999-99 99")]
-        [TestCase("7 999 999-99-99")]
-        [TestCase("7  999  999 99 99")]
-        [TestCase("79999999999")]
-        public void When_pass_number_with_marks_returns_replaced_string_with_only_digits(string phoneNumber)
+        public void WhenNumberContainsOnlyDigits_ThenNumberWithoutMarksContainsOnlyDigits()
         {
             var phoneParameter = _builder
-                .WithNumber(phoneNumber)
+                .WithNumber("79999999999")
+                .Build();
+            
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+
+            Assert.AreEqual("79999999999", numberWithoutMarks);
+        }
+        
+        [Test]
+        public void WhenNumberContainsDigitsAndDashes_ThenNumberWithoutMarksContainsOnlyDigits()
+        {
+            var phoneParameter = _builder
+                .WithNumber("7-999-999-99-99")
                 .Build();
 
-            Assert.AreEqual("79999999999", phoneParameter.NumberWithoutMarks);
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+            
+            Assert.AreEqual("79999999999", numberWithoutMarks);
+        }
+        
+        [Test]
+        public void WhenNumberContainsDigitsAndSpaces_ThenNumberWithoutMarksContainsOnlyDigits()
+        {
+            var phoneParameter = _builder
+                .WithNumber("7 999 999 99 99")
+                .Build();
+
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+            
+            Assert.AreEqual("79999999999", numberWithoutMarks);
+        }
+        
+        [Test]
+        public void WhenNumberContainsDigitsAndBraces_ThenNumberWithoutMarksContainsOnlyDigits()
+        {
+            var phoneParameter = _builder
+                .WithNumber("7(999)9999999")
+                .Build();
+
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+            
+            Assert.AreEqual("79999999999", numberWithoutMarks);
+        }
+        
+        [Test]
+        public void WhenNumberContainsDigitsSpacesDashesBraces_ThenNumberWithoutMarksContainsOnlyDigits()
+        {
+            var phoneParameter = _builder
+                .WithNumber("7 (999) 999-99-99")
+                .Build();
+
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+            
+            Assert.AreEqual("79999999999", numberWithoutMarks);
         }
 
         [Test]
-        public void When_pass_number_with_plus_sign_keep_it_in_result()
+        public void WhenNumberContainsDigitsAndPlusSign_ThenNumberWithoutMarksKeepsPlusSignAndDigits()
         {
-            string phoneNumber = "+79999999999";
-
             var phoneParameter = _builder
-                .WithNumber(phoneNumber)
+                .WithNumber("+79999999999")
                 .Build();
 
-            Assert.AreEqual("+79999999999", phoneParameter.NumberWithoutMarks);
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+
+            Assert.AreEqual("+79999999999", numberWithoutMarks);
         }
 
         [Test]
-        [TestCase("")]
-        [TestCase(null)]
-        public void When_pass_null_or_empty_returns_the_same_string(string phoneNumber)
+        public void WhenNumberIsEmpty_ThenNumberWithoutMarksIsEmpty()
         {
             var phoneParameter = _builder
-                .WithNumber(phoneNumber)
+                .WithNumber("")
                 .Build();
 
-            Assert.AreEqual(phoneNumber, phoneParameter.NumberWithoutMarks);
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+
+            Assert.AreEqual("", numberWithoutMarks);
+        }
+        
+        [Test]
+        public void WhenNumberIsNull_ThenNumberWithoutMarksIsNull()
+        {
+            var phoneParameter = _builder
+                .WithNumber(null)
+                .Build();
+
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
+            
+            Assert.AreEqual(null, numberWithoutMarks);
         }
         
         
