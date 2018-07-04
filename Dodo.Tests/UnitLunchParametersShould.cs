@@ -8,21 +8,6 @@ namespace Dodo.Tests
 {
     public class UnitLunchParametersShould
     {
-        
-
-        private const string incompleteXml =
-        @"<qwe>
-	        <Lunch>
-		        <MinimalShiftToKitchenWorker> 111 </MinimalShiftToKitchenWorker>
-	        </Lunch>
-        </qwe>";
-
-        private const string wrongXml =
-        @"<qwe>
-	        <Lunch>
-		        <MinimalShiftToKitchenWorker> string data </MinimalShiftToKitchenWorker>
-	        </Lunch>
-        </qwe>";
 
         [Fact]
         public void ConvertNullXmlToDefaultUnitLunchParameters()
@@ -51,7 +36,7 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void ThrowExceptionWhenConvertInvalidXmlParameter()
+        public void ThrowExceptionWhenConvertingInvalidXmlParameter()
         {
             var invalidXml = "hguygfhgfj";
 
@@ -80,7 +65,7 @@ namespace Dodo.Tests
             </qwe>";
 
             var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
-            
+
             Assert.Equal(23, lunchParams.MinimalShiftToKitchenWorker);
             Assert.Equal(45, lunchParams.MinimalShiftToCashier);
             Assert.Equal(67, lunchParams.MinimalShiftToCourier);
@@ -88,20 +73,52 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void ConvertToUnitLunchParameters_IncompleteXml()
+        public void SetMinimalShiftsFromLastXmlValue()
         {
-            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
+            var testXml =
+            @"<qwe>
+	            <Lunch>
+		            <MinimalShiftToKitchenWorker> 1 </MinimalShiftToKitchenWorker>
+	            </Lunch>
+	            <Lunch>
+		            <MinimalShiftToKitchenWorker> 2 </MinimalShiftToKitchenWorker>
+	            </Lunch>
+            </qwe>";
 
-            Assert.Equal(111, lunchParams.MinimalShiftToKitchenWorker);
-            Assert.Equal(defaultValue, lunchParams.MinimalShiftToCashier);
-            Assert.Equal(defaultValue, lunchParams.MinimalShiftToCourier);
-            Assert.Equal(defaultValue, lunchParams.MinimalShiftToPersonalManager);
+            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+
+            Assert.Equal(2, lunchParams.MinimalShiftToKitchenWorker);
         }
 
         [Fact]
-        public void ConvertToUnitLunchParameters_WrongParameter()
+        public void SetDefaultMinimalShiftsForMissingXmlValues()
         {
-            Action convert = () => UnitLunchParameters.ConvertToUnitLunchParameters(wrongXml);
+            var incompleteXml =
+            @"<qwe>
+	            <Lunch>
+		            <MinimalShiftToKitchenWorker> 111 </MinimalShiftToKitchenWorker>
+	            </Lunch>
+            </qwe>";
+
+            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
+
+            Assert.Equal(111, lunchParams.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, lunchParams.MinimalShiftToCashier);
+            Assert.Equal(8, lunchParams.MinimalShiftToCourier);
+            Assert.Equal(8, lunchParams.MinimalShiftToPersonalManager);
+        }
+
+        [Fact]
+        public void ThrowFormatExceptionWhenConvertingNonIntXmlValue()
+        {
+            var invalidValueXml =
+            @"<qwe>
+	            <Lunch>
+		            <MinimalShiftToKitchenWorker> string data </MinimalShiftToKitchenWorker>
+	            </Lunch>
+            </qwe>";
+
+            Action convert = () => UnitLunchParameters.ConvertToUnitLunchParameters(invalidValueXml);
 
             Assert.Throws<FormatException>(convert);
         }
