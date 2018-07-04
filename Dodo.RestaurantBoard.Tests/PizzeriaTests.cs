@@ -51,7 +51,7 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
-            var totalYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 30, 6));
+            var totalYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 1, 6));
 
             Assert.Equal(0, totalYearsOld);
         }
@@ -61,7 +61,7 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
             
-            var totalMonthsOld = pizzeria.GetMonthsOld(new DateTime(2018, 30, 6));
+            var totalMonthsOld = pizzeria.GetMonthsOld(new DateTime(2018, 1, 6));
 
             Assert.Equal(0, totalMonthsOld);
         }

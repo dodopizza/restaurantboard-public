@@ -22,12 +22,12 @@ namespace Dodo.RestaurantBoard.Tests
                 ));
         }
 
-        private XElement CreatePhoneXmlNode()
+        private XElement CreatePhoneXmlNode(string phone="", string iconPath="", string iconSitePath = "")
         {
             return new XElement("Phone",
-                new XAttribute("number", defaultPhone),
-                new XAttribute("iconPath", defaultIconPath),
-                new XAttribute("iconSitePath", defaultIconSitePath));
+                new XAttribute("number", phone),
+                new XAttribute("iconPath", iconPath),
+                new XAttribute("iconSitePath", iconSitePath));
         }
 
 
@@ -35,44 +35,72 @@ namespace Dodo.RestaurantBoard.Tests
 
 
         [Fact]
-        public void ShouldHaveCorrectValues()
+        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithPhone_CallCenterPhoneParameterPhoneEqualXmlPhone()
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
-                        CreatePhoneXmlNode()
+                        CreatePhoneXmlNode(phone:defaultPhone)
                 );
-            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
-            Assert.Equal(defaultPhone, phone.Number);
-            Assert.Equal(defaultIconPath, phone.IconPath);
-            Assert.Equal(defaultIconSitePath, phone.IconSitePath);
 
+            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var phoneNumber = phone.Number;
+
+            Assert.Equal(defaultPhone, phoneNumber);
+        }
+
+        [Fact]
+        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithSitePath_CallCenterPhoneParameterIconPathEqualXmlIconPath()
+        {
+            var callCenterPhonesXml =
+                CreatePhonesXmlNode(
+                        CreatePhoneXmlNode(iconPath:defaultIconPath)
+                );
+
+            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var iconPath = phone.IconPath;
+
+            Assert.Equal(defaultIconPath, iconPath);
+        }
+
+        [Fact]
+        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWIthIconSitePath_CallCenterPhoneParameterIconSitePathEqualXmlIconSitePath()
+        {
+            var callCenterPhonesXml =
+                CreatePhonesXmlNode(
+                        CreatePhoneXmlNode(iconSitePath:defaultIconSitePath)
+                );
+
+            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var iconSitePath = phone.IconSitePath;
+
+            Assert.Equal(defaultIconSitePath, iconSitePath);
         }
 
       
 
-        [Theory]
-        [InlineData(1)]
-        [InlineData(100)]
-        [InlineData(10000)]
-        [InlineData(1000000)]
-        public void ShoudContainsCorrectPhonesCount(int initCount)
+        [Fact]
+        public void CallCenterTests_GetCallCenterPhonesFromXml_CallCenterPhonesXElement3Phones_Contains3Phones()
         {
             var callCenterPhonesXml =
                CreatePhonesXmlNode(
-                    Enumerable.Range(0, initCount).Select(i => CreatePhoneXmlNode()).ToArray()
+                    CreatePhoneXmlNode(),
+                    CreatePhoneXmlNode(),
+                    CreatePhoneXmlNode()
                );
-            var output = callCenterPhonesXml.ToString();
-
+            
             var phones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml);
-            Assert.Equal(initCount, phones.Length);
 
+            Assert.Equal(3, phones.Length);
         }
 
         [Fact]
-        public void ShouldNotContainsMarks()
+        public void CallCenterTests_GetPhoneNumberWithoutMarks_CallCenterPhoneParameter_NotContainsMarks()
         {
             var ccPhoneParameter = new CallCenterPhoneParameter { Number = "123-456( 789)" };
-            Assert.Equal("123456789", ccPhoneParameter.NumberWithoutMarks);
+
+            var phoneWithoutMarks = ccPhoneParameter.NumberWithoutMarks;
+
+            Assert.Equal("123456789", phoneWithoutMarks);
         }
 
     }
