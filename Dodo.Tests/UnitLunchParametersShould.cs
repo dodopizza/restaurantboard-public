@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace Dodo.Tests
 {
-    public class UnitLunchParametersTests
+    public class UnitLunchParametersShould
     {
         private const int defaultValue = 8;
 
@@ -47,6 +47,32 @@ namespace Dodo.Tests
 		        <MinimalShiftToKitchenWorker> string data </MinimalShiftToKitchenWorker>
 	        </Lunch>
         </qwe>";
+
+        [Fact]
+        public void ConvertNullXmlToDefaultUnitLunchParameters()
+        {
+            string xmlParameter = null;
+
+            var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
+
+            Assert.Equal(8, result.MinimalShiftToCashier);
+            Assert.Equal(8, result.MinimalShiftToCourier);
+            Assert.Equal(8, result.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, result.MinimalShiftToPersonalManager);
+        }
+
+        [Fact]
+        public void ConvertWhitespaceXmlToDefaultUnitLunchParameters()
+        {
+            var xmlParameter = "    ";
+
+            var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
+
+            Assert.Equal(8, result.MinimalShiftToCashier);
+            Assert.Equal(8, result.MinimalShiftToCourier);
+            Assert.Equal(8, result.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, result.MinimalShiftToPersonalManager);
+        }
 
         [Theory]
         [InlineData("")]
