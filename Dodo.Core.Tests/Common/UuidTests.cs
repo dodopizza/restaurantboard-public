@@ -6,8 +6,17 @@ namespace Dodo.Core.Tests.Common
 {
     public class UuidTests
     {
+        [Fact]
+        public void ShouldNotCreateUUId_WhenCreateFromEmptyString()
+        {
+            var uuidFrom = "";
+
+            Action act = () => new Uuid(uuidFrom);
+            
+            Assert.Throws<ArgumentNullException>(act);
+        }
+        
         [Theory]
-        [InlineData("")]
         [InlineData(null)]
         public void Uuid_ThrowArgumentNullException_IfEmptyOrNullString(string uuid)
         {

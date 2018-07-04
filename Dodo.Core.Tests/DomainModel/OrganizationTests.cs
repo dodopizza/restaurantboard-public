@@ -9,7 +9,7 @@ namespace Dodo.Core.Tests.DomainModel
     public class OrganizationTests
     {
         [Fact]
-        public void ShouldBecomeSurnameWithInitials_WhenFullNameContainsALotOfDotsAndSpaces()
+        public void ShortHeadManagerName_ShouldBecomeSurnameWithInitials_WhenFullNameContainsALotOfDotsAndSpaces()
         {
             var organization = CreateOrganization("Гендольф.....Антон     Борисович");
 
@@ -19,7 +19,7 @@ namespace Dodo.Core.Tests.DomainModel
         }
 
         [Fact]
-        public void ShouldBecomeSurnameWithInitials_WhenOrdinaryFullName()
+        public void ShortHeadManagerName_ShouldBecomeSurnameWithInitials_WhenOrdinaryFullName()
         {
             var organization = CreateOrganization("Гендольф Антон Борисович");
 
@@ -29,7 +29,7 @@ namespace Dodo.Core.Tests.DomainModel
         }
 
         [Fact]
-        public void ShouldBeEmpty_WhenFullNameIsEmpty()
+        public void ShortHeadManagerName_ShouldBeEmpty_WhenFullNameIsEmpty()
         {
             var organization = CreateOrganization("");
 
