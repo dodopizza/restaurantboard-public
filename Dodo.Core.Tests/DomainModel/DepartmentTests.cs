@@ -1,22 +1,38 @@
-﻿using System;
-using Dodo.Core.Tests.DomainModel.Dsl;
+﻿using Dodo.Core.Tests.DomainModel.Dsl;
 using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
 {
     public class DepartmentTests
     {
-        [Theory]
-        [InlineData(100, "+100")]
-        [InlineData(0, " 0")]
-        [InlineData(-100, "-100")]
-        public void TimeZoneShiftString_StringWithSign(Int16 timeZoneShift, string expected)
+        [Fact]
+        public void TimeZoneShiftString_ShouldStartWithPlus_WhenTimeZoneShiftIsPositive()
         {
-            var department = new DepartmentStub {TempTimeZoneShift = timeZoneShift };
+            var department = new DepartmentStub {TempTimeZoneShift = 100 };
 
-            var actual = department.TimeZoneShiftString;
+            var timeZoneShiftString = department.TimeZoneShiftString;
 
-            Assert.Equal(expected, actual);
+            Assert.Equal("+100", timeZoneShiftString);
+        }
+        
+        [Fact]
+        public void TimeZoneShiftString_ShouldStartWithMinus_WhenTimeZoneShiftIsNegative()
+        {
+            var department = new DepartmentStub {TempTimeZoneShift = -100 };
+
+            var timeZoneShiftString = department.TimeZoneShiftString;
+
+            Assert.Equal("-100", timeZoneShiftString);
+        }
+        
+        [Fact]
+        public void TimeZoneShiftString_ShouldStartWithSpace_WhenTimeZoneShiftIsZero()
+        {
+            var department = new DepartmentStub {TempTimeZoneShift = 0 };
+
+            var timeZoneShiftString = department.TimeZoneShiftString;
+
+            Assert.Equal(" 0", timeZoneShiftString);
         }
     }
 }
