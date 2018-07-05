@@ -6,71 +6,49 @@ namespace Dodo.Domain.Tests
 	public class UnitLunchParametersTests
 	{
 		[Test]
-		[Sequential]
-		public void ConvertingFromXml_SingleLunch_ShouldGenerateCorrectObject(
-			[Values(1, 5)] int minimalShiftToKitchenWorker,
-			[Values(2, 6)] int minimalShiftToCashier,
-			[Values(3, 7)] int minimalShiftToCourier,
-			[Values(4, 8)] int minimalShiftToPersonalManager)
+		public void ConvertToUnitLunchParameters_XmlDocumentWithSingleLunch_ShouldParseParameters()
 		{
-			var xml = $@"
+			const string source = @"
 <Lunch>
-	<MinimalShiftToKitchenWorker>{minimalShiftToKitchenWorker}</MinimalShiftToKitchenWorker>
-	<MinimalShiftToCashier>{minimalShiftToCashier}</MinimalShiftToCashier>
-	<MinimalShiftToCourier>{minimalShiftToCourier}</MinimalShiftToCourier>
-	<MinimalShiftToPersonalManager>{minimalShiftToPersonalManager}</MinimalShiftToPersonalManager>
+	<MinimalShiftToKitchenWorker>1</MinimalShiftToKitchenWorker>
+	<MinimalShiftToCashier>2</MinimalShiftToCashier>
+	<MinimalShiftToCourier>3</MinimalShiftToCourier>
+	<MinimalShiftToPersonalManager>4</MinimalShiftToPersonalManager>
 </Lunch>";
-			var expected = new UnitLunchParameters(
-				minimalShiftToKitchenWorker,
-				minimalShiftToCashier,
-				minimalShiftToCourier,
-				minimalShiftToPersonalManager);
 
-			var actual = UnitLunchParameters.ConvertToUnitLunchParameters(xml);
+			var parameters = UnitLunchParameters.ConvertToUnitLunchParameters(source);
 
-			AssertUnitLunchParameters(expected, actual);
+			Assert.AreEqual(1, parameters.MinimalShiftToKitchenWorker);
+			Assert.AreEqual(2, parameters.MinimalShiftToCashier);
+			Assert.AreEqual(3, parameters.MinimalShiftToCourier);
+			Assert.AreEqual(4, parameters.MinimalShiftToPersonalManager);
 		}
 
 		[Test]
-		[Sequential]
-		public void ConvertingFromXml_MultipleLunch_ShouldGenerateCorrectObject(
-			[Values(1, 5)] int minimalShiftToKitchenWorker,
-			[Values(2, 6)] int minimalShiftToCashier,
-			[Values(3, 7)] int minimalShiftToCourier,
-			[Values(4, 8)] int minimalShiftToPersonalManager)
+		public void ConvertToUnitLunchParameters_XmlDocumentWithMultipleLunch_ShouldParseParameters()
 		{
-			var xml = $@"
+			var source = $@"
 <Document>
 	<Lunch>
-		<MinimalShiftToKitchenWorker>{minimalShiftToKitchenWorker}</MinimalShiftToKitchenWorker>
+		<MinimalShiftToKitchenWorker>1</MinimalShiftToKitchenWorker>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToCourier>{minimalShiftToCourier}</MinimalShiftToCourier>
+		<MinimalShiftToCashier>2</MinimalShiftToCashier>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToCashier>{minimalShiftToCashier}</MinimalShiftToCashier>
+		<MinimalShiftToCourier>3</MinimalShiftToCourier>
 	</Lunch>
 	<Lunch>
-		<MinimalShiftToPersonalManager>{minimalShiftToPersonalManager}</MinimalShiftToPersonalManager>
+		<MinimalShiftToPersonalManager>4</MinimalShiftToPersonalManager>
 	</Lunch>
 </Document>";
-			var expected = new UnitLunchParameters(
-				minimalShiftToKitchenWorker,
-				minimalShiftToCashier,
-				minimalShiftToCourier,
-				minimalShiftToPersonalManager);
 
-			var actual = UnitLunchParameters.ConvertToUnitLunchParameters(xml);
+			var parameters = UnitLunchParameters.ConvertToUnitLunchParameters(source);
 
-			AssertUnitLunchParameters(expected, actual);
-		}
-
-		private static void AssertUnitLunchParameters(UnitLunchParameters expected, UnitLunchParameters actual)
-		{
-			Assert.AreEqual(expected.MinimalShiftToKitchenWorker, actual.MinimalShiftToKitchenWorker);
-			Assert.AreEqual(expected.MinimalShiftToCashier, actual.MinimalShiftToCashier);
-			Assert.AreEqual(expected.MinimalShiftToCourier, actual.MinimalShiftToCourier);
-			Assert.AreEqual(expected.MinimalShiftToPersonalManager, actual.MinimalShiftToPersonalManager);
+			Assert.AreEqual(1, parameters.MinimalShiftToKitchenWorker);
+			Assert.AreEqual(2, parameters.MinimalShiftToCashier);
+			Assert.AreEqual(3, parameters.MinimalShiftToCourier);
+			Assert.AreEqual(4, parameters.MinimalShiftToPersonalManager);
 		}
 	}
 }
