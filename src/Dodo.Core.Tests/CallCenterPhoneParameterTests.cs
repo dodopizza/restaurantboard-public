@@ -3,20 +3,19 @@ using NUnit.Framework;
 
 namespace Dodo.Core.Tests
 {    
-    public class CallCenterPhoneParameterTests
+    public class CallCenterPhoneParameterShould
     {
-        [TestCase("+7(985)123-45-67", "+79851234567")]
-        [TestCase(" +7(985) 123-45-67", "+79851234567")]
-        public void NumberWithoutMarks_ReplacesCertainCharactersFromNumber(string dirtyPhoneNumber, string expected)
+        [Test]
+        public void HaveCleanPhoneNumberAsNumberWithoutMarks_WhenNumberIsDirty()
         {
-            // Init
-            var phone = new CallCenterPhoneParameter {Number = dirtyPhoneNumber};
+            // Arrange
+            var phone = new CallCenterPhoneParameter {Number = "+7(985) 123-45-67"};
 
             // Act
             var actual = phone.NumberWithoutMarks;
 
             // Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual("+79851234567", actual);
         }
     }
 }
