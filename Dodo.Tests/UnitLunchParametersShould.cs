@@ -14,12 +14,12 @@ namespace Dodo.Tests
         {
             string xmlParameter = null;
 
-            var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
 
-            Assert.Equal(8, result.MinimalShiftToCashier);
-            Assert.Equal(8, result.MinimalShiftToCourier);
-            Assert.Equal(8, result.MinimalShiftToKitchenWorker);
-            Assert.Equal(8, result.MinimalShiftToPersonalManager);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCashier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCourier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToPersonalManager);
         }
 
         [Fact]
@@ -27,12 +27,12 @@ namespace Dodo.Tests
         {
             var xmlParameter = "    ";
 
-            var result = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(xmlParameter);
 
-            Assert.Equal(8, result.MinimalShiftToCashier);
-            Assert.Equal(8, result.MinimalShiftToCourier);
-            Assert.Equal(8, result.MinimalShiftToKitchenWorker);
-            Assert.Equal(8, result.MinimalShiftToPersonalManager);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCashier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCourier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToPersonalManager);
         }
 
         [Fact]
@@ -46,34 +46,67 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void SetMinimalShiftsFromXmlValues()
+        public void SetMinimalShiftToKitchenWorkerFromXmlValue()
         {
             var testXml =
             @"<qwe>
 	            <Lunch>
 		            <MinimalShiftToKitchenWorker> 23 </MinimalShiftToKitchenWorker>
 	            </Lunch>
+            </qwe>";
+
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+
+            Assert.Equal(23, unitLunchParameters.MinimalShiftToKitchenWorker);
+        }
+
+        [Fact]
+        public void SetMinimalShiftToCashierFromXmlValue()
+        {
+            var testXml =
+            @"<qwe>
 	            <Lunch>
 		            <MinimalShiftToCashier> 45 </MinimalShiftToCashier>
 	            </Lunch>
+            </qwe>";
+
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+
+            Assert.Equal(45, unitLunchParameters.MinimalShiftToCashier);
+        }
+
+        [Fact]
+        public void SetMinimalShiftToCourierFromXmlValue()
+        {
+            var testXml =
+            @"<qwe>
 	            <Lunch>
 		            <MinimalShiftToCourier> 67 </MinimalShiftToCourier>
 	            </Lunch>
+            </qwe>";
+
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+
+            Assert.Equal(67, unitLunchParameters.MinimalShiftToCourier);
+        }
+
+        [Fact]
+        public void SetMinimalShiftToPersonalManagerFromXmlValue()
+        {
+            var testXml =
+            @"<qwe>
                 <Lunch>
 		            <MinimalShiftToPersonalManager> 333 </MinimalShiftToPersonalManager>
 	            </Lunch>
             </qwe>";
 
-            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
 
-            Assert.Equal(23, lunchParams.MinimalShiftToKitchenWorker);
-            Assert.Equal(45, lunchParams.MinimalShiftToCashier);
-            Assert.Equal(67, lunchParams.MinimalShiftToCourier);
-            Assert.Equal(333, lunchParams.MinimalShiftToPersonalManager);
+            Assert.Equal(333, unitLunchParameters.MinimalShiftToPersonalManager);
         }
 
         [Fact]
-        public void SetMinimalShiftsFromLastXmlValue()
+        public void SetMinimalShiftToKitchenWorkerFromLastXmlValue()
         {
             var testXml =
             @"<qwe>
@@ -85,13 +118,13 @@ namespace Dodo.Tests
 	            </Lunch>
             </qwe>";
 
-            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(testXml);
 
-            Assert.Equal(2, lunchParams.MinimalShiftToKitchenWorker);
+            Assert.Equal(2, unitLunchParameters.MinimalShiftToKitchenWorker);
         }
 
         [Fact]
-        public void SetDefaultMinimalShiftsForMissingXmlValues()
+        public void SetDefaultMinimalShiftToKitchenWorkerForMissingXmlValue()
         {
             var incompleteXml =
             @"<qwe>
@@ -100,12 +133,12 @@ namespace Dodo.Tests
 	            </Lunch>
             </qwe>";
 
-            var lunchParams = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
+            var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
 
-            Assert.Equal(111, lunchParams.MinimalShiftToKitchenWorker);
-            Assert.Equal(8, lunchParams.MinimalShiftToCashier);
-            Assert.Equal(8, lunchParams.MinimalShiftToCourier);
-            Assert.Equal(8, lunchParams.MinimalShiftToPersonalManager);
+            Assert.Equal(111, unitLunchParameters.MinimalShiftToKitchenWorker);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCashier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToCourier);
+            Assert.Equal(8, unitLunchParameters.MinimalShiftToPersonalManager);
         }
 
         [Fact]
