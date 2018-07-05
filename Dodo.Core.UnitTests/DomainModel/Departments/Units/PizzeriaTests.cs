@@ -38,9 +38,10 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         [Test]
         public void GetYearsOld_ReturnsZero_ForAnyDateWhenPizzeriaOpeningDateIsNotSet()
         {
+            var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(null);
 
-            var pizzeriaYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 1, 1));
+            var pizzeriaYearsOld = pizzeria.GetYearsOld(date);
 
             Assert.AreEqual(0, pizzeriaYearsOld);
         }
