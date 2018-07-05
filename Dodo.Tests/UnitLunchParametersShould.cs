@@ -124,7 +124,7 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void SetDefaultMinimalShiftToKitchenWorkerForMissingXmlValue()
+        public void SetDefaultUnitLunchParametersForMissingXmlValues()
         {
             var incompleteXml =
             @"<qwe>
