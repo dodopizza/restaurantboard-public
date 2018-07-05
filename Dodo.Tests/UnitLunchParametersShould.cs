@@ -128,9 +128,6 @@ namespace Dodo.Tests
         {
             var incompleteXml =
             @"<qwe>
-	            <Lunch>
-		            <SomeOtherParameter> SomeValue </SomeOtherParameter>
-	            </Lunch>
             </qwe>";
 
             var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
