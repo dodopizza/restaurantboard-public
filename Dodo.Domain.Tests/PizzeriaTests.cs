@@ -11,7 +11,7 @@ namespace Dodo.Domain.Tests
 	public class PizzeriaTests
 	{
 		[Test]
-		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByMonths_ShouldReturnCountOfMonths()
+		public void GetMonthsOld_IfBeginDateTimeWorkDifferFromCurrentDateByMonths_ShouldReturnCountOfMonths()
 		{
 			var beginDateTimeWork = new DateTime(2008, 3, 10);
 			var pizzeria = CreatePizzeria(beginDateTimeWork);
@@ -21,7 +21,7 @@ namespace Dodo.Domain.Tests
 		}
 
 		[Test]
-		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByYearAndMonths_ShouldReturnTotalMonths()
+		public void GetMonthsOld_IfBeginDateTimeWorkDifferFromCurrentDateByYearAndMonths_ShouldReturnTotalMonths()
 		{
 			var beginDateTimeWork = new DateTime(2008, 3, 10);
 			var pizzeria = CreatePizzeria(beginDateTimeWork);
@@ -33,7 +33,7 @@ namespace Dodo.Domain.Tests
 		}
 
 		[Test]
-		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByYears_ShouldReturnCountOfYears()
+		public void GetYearsOld_IfBeginDateTimeWorkDifferFromCurrentDateByYears_ShouldReturnCountOfYears()
 		{
 			var beginDateTimeWork = new DateTime(2008, 3, 10);
 			var pizzeria = CreatePizzeria(beginDateTimeWork);
@@ -44,7 +44,7 @@ namespace Dodo.Domain.Tests
 		}
 
 		[Test]
-		public void GetYearsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroYears()
+		public void GetYearsOld_IfBeginDateTimeWorkIsNull_ShouldReturnZeroYears()
 		{
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
@@ -53,7 +53,7 @@ namespace Dodo.Domain.Tests
 		}
 
 		[Test]
-		public void GetMonthsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroMonths()
+		public void GetMonthsOld_IfBeginDateTimeWorkIsNull_ShouldReturnZeroMonths()
 		{
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);

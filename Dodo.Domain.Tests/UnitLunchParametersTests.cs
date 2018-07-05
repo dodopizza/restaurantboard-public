@@ -27,7 +27,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void ConvertToUnitLunchParameters_XmlDocumentWithMultipleLunch_ShouldParseParameters()
 		{
-			var source = $@"
+			const string source = @"
 <Document>
 	<Lunch>
 		<MinimalShiftToKitchenWorker>1</MinimalShiftToKitchenWorker>
