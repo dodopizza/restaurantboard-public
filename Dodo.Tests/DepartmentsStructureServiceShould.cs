@@ -11,7 +11,7 @@ namespace Dodo.Tests
         [InlineData(0)]
         [InlineData(int.MaxValue)]
         [InlineData(int.MinValue)]
-        public void ReturnRussianCityDepartmentWithAnyUnitId(int unitId)
+        public void ReturnStubCityDepartmentWithAnyUnitId(int unitId)
         {
             IDepartmentsStructureService testedService = new DepartmentsStructureService();
 

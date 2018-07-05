@@ -1,4 +1,5 @@
-﻿using Dodo.Core.DomainModel.Departments;
+﻿using System;
+using Dodo.Core.DomainModel.Departments;
 using Dodo.Core.DomainModel.Departments.Departments;
 using Xunit;
 
@@ -6,15 +7,15 @@ namespace Dodo.Tests
 {
     public class CityDepartmentShould
     {
-        [Fact]
-        public void SetZeroTimeShiftForMoscowTimezone()
+       [Fact]
+        public void SetZeroTimeShiftForUtcPlusThreeTimezone()
         {
-            Department testDepartment = new CityDepartment
+            Department department = new CityDepartment
             {
-                TimeZoneUTCOffset = 180
+                TimeZoneUTCOffset = (int)TimeSpan.FromHours(3).TotalMinutes
             };
 
-            var actualTimeZoneShift = testDepartment.TimeZoneShift;
+            var actualTimeZoneShift = department.TimeZoneShift;
 
             Assert.Equal(0, actualTimeZoneShift);
         }
@@ -22,12 +23,12 @@ namespace Dodo.Tests
         [Fact]
         public void SetMinus3HoursTimeShiftForZeroUtcTimezone()
         {
-            Department testDepartment = new CityDepartment
+            Department department = new CityDepartment
             {
                 TimeZoneUTCOffset = 0
             };
 
-            var actualTimeZoneShift = testDepartment.TimeZoneShift;
+            var actualTimeZoneShift = department.TimeZoneShift;
 
             Assert.Equal(-3, actualTimeZoneShift);
         }
