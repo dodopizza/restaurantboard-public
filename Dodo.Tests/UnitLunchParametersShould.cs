@@ -124,21 +124,18 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void SetDefaultUnitLunchParametersForMissingXmlValues()
+        public void SetDefaultMinimalShiftToCashierForMissingXmlValue()
         {
             var incompleteXml =
             @"<qwe>
 	            <Lunch>
-		            <MinimalShiftToKitchenWorker> 111 </MinimalShiftToKitchenWorker>
+		            <SomeOtherParameter> SomeValue </SomeOtherParameter>
 	            </Lunch>
             </qwe>";
 
             var unitLunchParameters = UnitLunchParameters.ConvertToUnitLunchParameters(incompleteXml);
 
-            Assert.Equal(111, unitLunchParameters.MinimalShiftToKitchenWorker);
             Assert.Equal(8, unitLunchParameters.MinimalShiftToCashier);
-            Assert.Equal(8, unitLunchParameters.MinimalShiftToCourier);
-            Assert.Equal(8, unitLunchParameters.MinimalShiftToPersonalManager);
         }
 
         [Fact]
