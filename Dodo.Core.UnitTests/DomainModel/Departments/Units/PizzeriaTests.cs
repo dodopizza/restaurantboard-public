@@ -16,7 +16,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void GetYearsOld_ReturnsAgeInYearsForPizzeria()
+        public void GetYearsOld_ReturnsAgeInYears_ForPizzeria()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2010, 1, 2));
@@ -27,7 +27,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateLessThanBeginDateTimeWork_ThenGetYearsOldThrowsArgumentOutOfRangeException()
+        public void GetYearsOld_ThrowsArgumentOutOfRangeException_ForDatesBeforePizzeriaOpening()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
@@ -36,17 +36,13 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenBeginDateTimeWorkIsNull_ThenYearsOldEqualsZeroForAnyDate()
+        public void GetYearsOld_ReturnsZero_ForAnyDateWhenPizzeriaOpeningDateIsNotSet()
         {
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(null);
 
-            var pizzeriaYearsOld2010 = pizzeria.GetYearsOld(new DateTime(2010, 1, 1));
-            var pizzeriaYearsOld2020 = pizzeria.GetYearsOld(new DateTime(2020, 1, 1));
-            var pizzeriaYearsOld2030 = pizzeria.GetYearsOld(new DateTime(2030, 1, 1));
+            var pizzeriaYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 1, 1));
 
-            Assert.AreEqual(0, pizzeriaYearsOld2010);
-            Assert.AreEqual(0, pizzeriaYearsOld2020);
-            Assert.AreEqual(0, pizzeriaYearsOld2030);
+            Assert.AreEqual(0, pizzeriaYearsOld);
         }
 
         [Test]
@@ -72,7 +68,7 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments.Units
         }
 
         [Test]
-        public void WhenDateLessThanBeginDateTimeWork_ThenGetMonthsOldThrowsArgumentOutOfRangeException()
+        public void GetMonthsOld_ThrowsArgumentOutOfRangeException_ForDatesBeforePizzeriaOpening()
         {
             var date = new DateTime(2018, 1, 1);
             var pizzeria = _objectMother.CreatePizzeriaWithBeginDateTimeWork(new DateTime(2018, 5, 1));
