@@ -11,59 +11,54 @@ namespace Dodo.Domain.Tests
 	public class PizzeriaTests
 	{
 		[Test]
-		[Sequential]
-		public void GetYearsOld_ShouldReturnCountYearsFromBeginDateTimeWork(
-			[Values("2005 02 22", "2005 02 22", "2005 02 22")] string beginDate,
-			[Values("2008 01 11", "2008 02 11", "2008 03 11")] string currentDate,
-			[Values(2, 2, 3)] int expectedYears)
+		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByMonths_ShouldReturnCountOfMonths()
 		{
-			var beginDateTimeWork = DateTime.Parse(beginDate);
-			var currentDateTime = DateTime.Parse(currentDate);
+			var beginDateTimeWork = new DateTime(2008, 3, 10);
 			var pizzeria = CreatePizzeria(beginDateTimeWork);
+			var currentDateTime = beginDateTimeWork.AddMonths(3);
 
-			var actualYears = pizzeria.GetYearsOld(currentDateTime);
+			Assert.AreEqual(3, pizzeria.GetMonthsOld(currentDateTime));
+		}
 
-			Assert.AreEqual(expectedYears, actualYears);
+		[Test]
+		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByYearAndMonths_ShouldReturnTotalMonths()
+		{
+			var beginDateTimeWork = new DateTime(2008, 3, 10);
+			var pizzeria = CreatePizzeria(beginDateTimeWork);
+			var currentDateTime = beginDateTimeWork
+				.AddYears(3)
+				.AddMonths(3);
+
+			Assert.AreEqual(39, pizzeria.GetMonthsOld(currentDateTime));
+		}
+
+		[Test]
+		public void GetMonthsOld_IfBeginWorkDateDifferFromCurrentDateByYears_ShouldReturnCountOfYears()
+		{
+			var beginDateTimeWork = new DateTime(2008, 3, 10);
+			var pizzeria = CreatePizzeria(beginDateTimeWork);
+			var currentDateTime = new DateTime(2008, 3, 10)
+				.AddYears(3);
+
+			Assert.AreEqual(3, pizzeria.GetYearsOld(currentDateTime));
 		}
 
 		[Test]
 		public void GetYearsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroYears()
 		{
-			const int expectedYears = 0;
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-			var actualYears = pizzeria.GetYearsOld(currentDateTime);
-
-			Assert.AreEqual(expectedYears, actualYears);
-		}
-		
-		[Test]
-		[Sequential]
-		public void GetMonthsOld_ShouldReturnCountMonthsFromBeginDateTimeWork(
-			[Values("2008 02 22")] string beginDate,
-			[Values("2008 06 11")] string currentDate,
-			[Values(3)] int expectedMonths)
-		{
-			var beginDateTimeWork = DateTime.Parse(beginDate);
-			var currentDateTime = DateTime.Parse(currentDate);
-			var pizzeria = CreatePizzeria(beginDateTimeWork);
-
-			var actualMonths = pizzeria.GetMonthsOld(currentDateTime);
-
-			Assert.AreEqual(expectedMonths, actualMonths);
+			Assert.AreEqual(0, pizzeria.GetYearsOld(currentDateTime));
 		}
 
 		[Test]
 		public void GetMonthsOld_IfBeginDateTimeWorkNull_ShouldReturnZeroMonths()
 		{
-			const int expectedMonths = 0;
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-			var actualMonths = pizzeria.GetMonthsOld(currentDateTime);
-
-			Assert.AreEqual(expectedMonths, actualMonths);
+			Assert.AreEqual(0, pizzeria.GetMonthsOld(currentDateTime));
 		}
 		
 		private static Pizzeria CreatePizzeria(DateTime? beginDateTimeWork)
