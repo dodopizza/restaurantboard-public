@@ -1,3 +1,5 @@
+using Dodo.Core.Common;
+using Dodo.Core.DomainModel.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.DomainModel.Management.Organizations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,80 +11,95 @@ namespace Dodo.Core.Tests
     public class PizzeriaTest
     {
         [TestMethod]
-        public void GetYearsOld_NotOpenedPizzeria()
+        public void GetYearsOld_WhenNotOpened_ThenZero()
         {
+            // Arrange
             var currentDate = DateTime.MinValue;
-            DateTime? beginDateTimeWork = null;
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, beginDateTimeWork, "", null, null, null, ClientTreatment.DefaultName, false, mockPizzeriaFormat);
-            int expected = 0;
+            Pizzeria pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-            int result = sut.GetYearsOld(currentDate);
+            // Act
+            int yearsOld = pizzeria.GetYearsOld(currentDate);
 
-            Assert.AreEqual(result, expected);
+            // Assert
+            Assert.AreEqual(0, yearsOld);
         }
 
         [TestMethod]
-        public void GetYearsOld_PizzeriaOpenedYearBefore()
+        public void GetYearsOld_WhenOpenedYearAgo_ThenOne()
         {
+            // Arrange
             var beginDateTimeWork = DateTime.MinValue;
             var currentDate = beginDateTimeWork.AddYears(1);
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, beginDateTimeWork, "", null, null, null, ClientTreatment.DefaultName, false, mockPizzeriaFormat);
-            int expected = 1;
+            var pizzeria = CreatePizzeria(beginDateTimeWork: beginDateTimeWork);
 
-            int result = sut.GetYearsOld(currentDate);
+            // Act
+            int yearsOld = pizzeria.GetYearsOld(currentDate);
 
-            Assert.AreEqual(expected, result);
+            // Assert
+            Assert.AreEqual(1, yearsOld);
         }
 
         [TestMethod]
-        public void GetMonthsOld_NotOpenedPizzeria()
+        public void GetMonthsOld_WhenNotOpened_ThenZero()
         {
+            // Arrange
             var currentDate = DateTime.MinValue;
-            DateTime? beginDateTimeWork = null;
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, beginDateTimeWork, "", null, null, null, ClientTreatment.DefaultName, false, mockPizzeriaFormat);
-            int expected = 0;
+            var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-            int result = sut.GetMonthsOld(currentDate);
+            // Act
+            int monthsOld = pizzeria.GetMonthsOld(currentDate);
 
-            Assert.AreEqual(result, expected);
+            // Assert
+            Assert.AreEqual(0, monthsOld);
         }
 
         [TestMethod]
-        public void GetMonthsOld_PizzeriaOpenedMonthBefore()
+        public void GetMonthsOld_WhenOpenedMonthAgo_ThenOne()
         {
+            // Arrange
             var beginDateTimeWork = DateTime.MinValue;
             var currentDate = beginDateTimeWork.AddMonths(1);
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, beginDateTimeWork, "", null, null, null, ClientTreatment.DefaultName, false, mockPizzeriaFormat);
-            int expected = 1;
+            var pizzeria = CreatePizzeria(beginDateTimeWork: beginDateTimeWork);
 
-            int result = sut.GetMonthsOld(currentDate);
+            // Act
+            int monthsOld = pizzeria.GetMonthsOld(currentDate);
 
-            Assert.AreEqual(expected, result);
+            // Assert
+            Assert.AreEqual(1, monthsOld);
         }
 
         [TestMethod]
-        public void IsExistsPizzeriaFormat_NotExists()
+        public void IsExistsPizzeriaFormat_WhenNoFormat_ThenFalse()
         {
-            PizzeriaFormat pizzeriaFormat = null;
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, null, "", null, null, null, ClientTreatment.DefaultName, false, pizzeriaFormat);
+            // Arrange
+            var pizzeria = CreatePizzeria(pizzeriaFormat: null);
 
-            bool result = sut.IsExistsPizzeriaFormat;
-
-            Assert.IsFalse(result);
+            // Act & Assert
+            Assert.IsFalse(pizzeria.IsExistsPizzeriaFormat);
         }
 
         [TestMethod]
-        public void IsExistsPizzeriaFormat_Exists()
+        public void IsExistsPizzeriaFormat_WhenHasFormat_ThenTrue()
         {
-            PizzeriaFormat pizzeriaFormat = mockPizzeriaFormat;
-            var sut = new Pizzeria(0, Common.Uuid.Empty, "", "", "", DomainModel.Departments.UnitApprove.Approved, DomainModel.Departments.UnitState.Close, 0, Common.Uuid.Empty, 0, mockOrganization, 0, null, "", null, null, null, ClientTreatment.DefaultName, false, pizzeriaFormat);
+            // Arrange
+            PizzeriaFormat mockPizzeriaFormat = new PizzeriaFormat(0, "", "");
+            var pizzeria = CreatePizzeria(pizzeriaFormat: mockPizzeriaFormat);
 
-            bool result = sut.IsExistsPizzeriaFormat;
-
-            Assert.IsTrue(result);
+            // Act & Assert
+            Assert.IsTrue(pizzeria.IsExistsPizzeriaFormat);
         }
 
-        OrganizationShortInfo mockOrganization = new DomainModel.Management.Organizations.OrganizationShortInfo(0, "", "", null, "", "", "", 0, "", "", "");
-        PizzeriaFormat mockPizzeriaFormat = new PizzeriaFormat(0, "", "");
+        private Pizzeria CreatePizzeria(
+            Int32 id = 0, Uuid uuid = null, String name = "", String alias = "", String translitAlias = "", UnitApprove approve = new UnitApprove(), UnitState state = new UnitState(),
+            Int32 departmentId = 0, Uuid departmentUuid = null, Int32 countryId = 0, OrganizationShortInfo organization = null, Double square = 0,
+            DateTime? beginDateTimeWork = null, String orientation = "", Boolean? cardPaymentPickup = null, Decimal? coordinateX = null, Decimal? coordinateY = null,
+            ClientTreatment clientTreatment = new ClientTreatment(), Boolean terminalAtCourier = false, PizzeriaFormat pizzeriaFormat = null)
+        {
+            return new Pizzeria(
+                id, uuid, name, alias, translitAlias, approve, state,
+                departmentId, departmentUuid, countryId, organization, square,
+                beginDateTimeWork, orientation, cardPaymentPickup, coordinateX, coordinateY,
+                clientTreatment, terminalAtCourier, pizzeriaFormat);
+        }
     }
 }
