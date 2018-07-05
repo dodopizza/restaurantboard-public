@@ -113,52 +113,47 @@ namespace Dodo.Core.UnitTests.DomainModel.Departments
         [Test]
         public void WhenIconPathContainsMixedSlashes_ThenIconUrlIsCombinedFromHostAndIconPathWithNormalSlashes()
         {
-            string host = "https://dodopizza.ru/";
             var phoneParameter = _builder
                 .WithIconPath("we\\are\\the/best/team\\")
                 .Build();
 
-            var iconUrl = phoneParameter.GetIconUrl(host);
+            var iconUrl = phoneParameter.GetIconUrl("https://dodopizza.ru/");
 
             Assert.AreEqual("https://dodopizza.ru/we/are/the/best/team/", iconUrl);
         }
 
         [Test]
-        public void WhenIconSiteIsNullAndIconSitePathIsNotNull_ThenIconUrlIsEqualsToIconSitePathForAnyHost()
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase("localhost")]
+        [TestCase("https://dodopizza.ru/")]
+        public void WhenIconSiteIsNullAndIconSitePathIsNotNull_ThenIconUrlIsEqualsToIconSitePathForAnyHost(string host)
         {
             var phoneParameter = _builder
                 .WithIconPath(null)
                 .WithIconSitePath("http://we/are/the/best/team")
                 .Build();
 
-            var iconUrlForNullHost = phoneParameter.GetIconUrl(null);
-            var iconUrlForEmptyHost = phoneParameter.GetIconUrl("");
-            var iconUrlForLocalHost = phoneParameter.GetIconUrl("localhost");
-            var iconUrlForRealHost = phoneParameter.GetIconUrl("https://dodopizza.ru/");
+            var iconUrl = phoneParameter.GetIconUrl(host);
 
-            Assert.AreEqual("http://we/are/the/best/team", iconUrlForNullHost);
-            Assert.AreEqual("http://we/are/the/best/team", iconUrlForEmptyHost);
-            Assert.AreEqual("http://we/are/the/best/team", iconUrlForLocalHost);
-            Assert.AreEqual("http://we/are/the/best/team", iconUrlForRealHost);
+            Assert.AreEqual("http://we/are/the/best/team", iconUrl);
         }
 
         [Test]
-        public void WhenIconSiteIsNullAndIconSitePathIsNull_ThenIconUrlIsEmptyStringForAnyHost()
+        [TestCase(null)]
+        [TestCase("")]
+        [TestCase("localhost")]
+        [TestCase("https://dodopizza.ru/")]
+        public void WhenIconSiteIsNullAndIconSitePathIsNull_ThenIconUrlIsEmptyStringForAnyHost(string host)
         {
             var phoneParameter = _builder
                 .WithIconPath(null)
                 .WithIconSitePath(null)
                 .Build();
 
-            var iconUrlForNullHost = phoneParameter.GetIconUrl(null);
-            var iconUrlForEmptyHost = phoneParameter.GetIconUrl("");
-            var iconUrlForLocalHost = phoneParameter.GetIconUrl("localhost");
-            var iconUrlForRealHost = phoneParameter.GetIconUrl("https://dodopizza.ru/");
+            var iconUrl = phoneParameter.GetIconUrl(host);
 
-            Assert.AreEqual("", iconUrlForNullHost);
-            Assert.AreEqual("", iconUrlForEmptyHost);
-            Assert.AreEqual("", iconUrlForLocalHost);
-            Assert.AreEqual("", iconUrlForRealHost);
+            Assert.AreEqual("", iconUrl);
         }
     }
 }
