@@ -1,22 +1,26 @@
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using NUnit.Framework;
 
 namespace Dodo.RestaurantBoard.Domain.Tests
 {
-    public class TrackerClientTests
+    public class TrackerClientShould
     {
         [Test]
-        public void GetOrdersByType_ReturnsActualNumberOfItems()
+        public void ReturnActualNumberOfItems_WhenStationaryOrderTypeRequested()
         {
-            // Init
-            var client = new TrackerClient();
-
             // Act
-            var actual = client.GetOrdersByType(null, default(OrderType), null, 0);
+            var actual = GetOrdersByType(OrderType.Stationary);
 
             // Assert
             Assert.AreEqual(4, actual.Length);
+        }
+
+        private static ProductionOrder[] GetOrdersByType(OrderType orderType)
+        {
+            var client = new TrackerClient();
+            return client.GetOrdersByType(null, orderType, null, 0);
         }
     }
 }
