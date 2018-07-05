@@ -21,7 +21,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void DepartmentsStructureServiceTests_GetPizzeria_Department_PizzaIsNotNull()
+        public void GetPizzeria_Department_PizzaIsNotNull()
         {
             var service = departmentsStructureService;
 
@@ -32,7 +32,7 @@ namespace Dodo.RestaurantBoard.Tests
 
 
         [Fact]
-        public void DepartmentsStructureServiceTests_GetDepartmentCountryName_Department_CountryAlwaysRussia()
+        public void GetDepartmentCountryName_Department_CountryAlwaysRussia()
         {
             var department = departmentsStructureService.GetDepartmentOrCache<Department>(sampleDepartmentId);
 
@@ -42,7 +42,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void DepartmentsStructureServiceTests_GetDepartmentCountryCurrency_Department_CountryCurrencyAlwaysRubble()
+        public void GetDepartmentCountryCurrency_Department_CountryCurrencyAlwaysRubble()
         {
             var department = departmentsStructureService.GetDepartmentByUnitOrCache(sampleDepartmentId);
 

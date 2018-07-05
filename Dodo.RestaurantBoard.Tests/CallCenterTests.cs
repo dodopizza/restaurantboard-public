@@ -35,7 +35,7 @@ namespace Dodo.RestaurantBoard.Tests
 
 
         [Fact]
-        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithPhone_CallCenterPhoneParameterPhoneEqualXmlPhone()
+        public void GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithPhone_CallCenterPhoneParameterPhoneEqualXmlPhone()
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
@@ -49,7 +49,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithSitePath_CallCenterPhoneParameterIconPathEqualXmlIconPath()
+        public void GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithSitePath_CallCenterPhoneParameterIconPathEqualXmlIconPath()
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
@@ -63,7 +63,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void CallCenterTests_GetCallCenterPhoneFromXml_CallCenterPhoneXElementWIthIconSitePath_CallCenterPhoneParameterIconSitePathEqualXmlIconSitePath()
+        public void GetCallCenterPhoneFromXml_CallCenterPhoneXElementWIthIconSitePath_CallCenterPhoneParameterIconSitePathEqualXmlIconSitePath()
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
@@ -79,7 +79,7 @@ namespace Dodo.RestaurantBoard.Tests
       
 
         [Fact]
-        public void CallCenterTests_GetCallCenterPhonesFromXml_CallCenterPhonesXElement3Phones_Contains3Phones()
+        public void GetCallCenterPhonesFromXml_CallCenterPhonesXElement3Phones_Contains3Phones()
         {
             var callCenterPhonesXml =
                CreatePhonesXmlNode(
@@ -94,7 +94,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void CallCenterTests_GetPhoneNumberWithoutMarks_CallCenterPhoneParameter_NotContainsMarks()
+        public void GetPhoneNumberWithoutMarks_CallCenterPhoneParameterWithMarks_NotContainsMarks()
         {
             var ccPhoneParameter = new CallCenterPhoneParameter { Number = "123-456( 789)" };
 

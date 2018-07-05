@@ -8,8 +8,12 @@ namespace Dodo.RestaurantBoard.Tests
 {
     public class UuidTests
     {
+        string uuidWithNotEqual32Length = new String('0', 31);
+        string uuidWithUnsuitablecharacters = $"r{new String('0', 31)}";
+        string uuidWithCorrectContent = new String('0', 32);
+
         [Fact]
-        public void UuidTests_CreateUuidWithEmptyString_Uuid_ThrowArgumentNullExceptin()
+        public void CreateUuidWithEmptyString_Uuid_ThrowArgumentNullExceptin()
         {
             //Arrange
             Action createEmptyUUidAction = () =>  new Uuid("");
@@ -19,17 +23,17 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void UuidTests_CreateUuidWithNotEqual32LengthString_UUid_ThrowArgumentExeption()
+        public void CreateUuidWithNotEqual32LengthString_UUid_ThrowArgumentExeption()
         {
-            Action createEmptyUUidAction = () => new Uuid(new String('0',31));
+            Action createEmptyUUidAction = () => new Uuid(uuidWithNotEqual32Length);
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
         }
 
         [Fact]
-        public void UuidTests_CreateUuidWithUnsuitableCharacters_Uuid_ThrowArgumentExeptionWithSpecificMessage()
+        public void CreateUuidWithUnsuitableCharacters_Uuid_ThrowArgumentExeptionWithSpecificMessage()
         {
-            Action createEmptyUUidAction = () => new Uuid($"r{new String('0', 31)}");
+            Action createEmptyUUidAction = () => new Uuid(uuidWithUnsuitablecharacters);
 
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
@@ -37,14 +41,13 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void UuidTests_UseToStringMethod_Uuid_ToStringMethodIsOverrided()
+        public void UseToStringMethod_Uuid_ToStringMethodIsOverrided()
         {
-            var uuidStr = new String('0', 32);
-            var uuid = new Uuid(uuidStr);
+            var uuid = new Uuid(uuidWithCorrectContent);
 
             var toStringResult = uuid.ToString();
 
-            Assert.Equal(uuidStr, toStringResult);
+            Assert.Equal(uuidWithCorrectContent, toStringResult);
         }
     }
 }

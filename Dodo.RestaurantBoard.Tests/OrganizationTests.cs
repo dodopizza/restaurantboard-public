@@ -6,7 +6,7 @@ namespace Dodo.RestaurantBoard.Tests
     public class OrganizationTests
     {
         [Fact]
-        public void OrganizationTests_GetPizzeriaShortHeadManagerName_Pizzeria_ShortNameIsCorrect()
+        public void GetPizzeriaHeadManagerShortName_PizzeriaWithHeadManagerName_HeadManagerShortName()
         {
             var pizzeriaRestaurant = new PizzeriaRestaurant("Test Name");
 
