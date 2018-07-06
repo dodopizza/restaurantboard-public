@@ -16,36 +16,46 @@ namespace Dodo.Core.Tests
         [Test]
         public void ThrowException_OnNullString()
         {
+            const string nullString = (string)null;
+
             // ReSharper disable once ObjectCreationAsStatement
-            Assert.Throws<ArgumentNullException>(() => new Uuid((string)null));
+            Assert.Throws<ArgumentNullException>(() => new Uuid(nullString));
         }
         
         [Test]
         public void ThrowException_OnEmptyString()
         {
-            // ReSharper disable once ObjectCreationAsStatement
-            Assert.Throws<ArgumentNullException>(() => new Uuid(""));
+            const string emptyString = "";
+            
+            // ReSharper disable once ObjectCreationAsStatement            
+            Assert.Throws<ArgumentNullException>(() => new Uuid(emptyString));
         }
 
         [Test]
-        public void ThrowException_WhenStringIsTooShort()
+        public void ThrowException_WhenStringIsLessThen32Chars()
         {
-            // ReSharper disable once ObjectCreationAsStatement
-            Assert.Throws<ArgumentException>(() => new Uuid(new string('0', 31)));
+            var shortString = new string('0', 31);
+            
+            // ReSharper disable once ObjectCreationAsStatement            
+            Assert.Throws<ArgumentException>(() => new Uuid(shortString));
         }
         
         [Test]
-        public void ThrowException_WhenStringIsTooLong()
+        public void ThrowException_WhenStringIsLargerThen32Chars()
         {
-            // ReSharper disable once ObjectCreationAsStatement
-            Assert.Throws<ArgumentException>(() => new Uuid(new string('0', 33)));
+            var longString = new string('0', 33);
+            
+            // ReSharper disable once ObjectCreationAsStatement            
+            Assert.Throws<ArgumentException>(() => new Uuid(longString));
         }
 
         [Test]
         public void ThrowException_WhenStringContainsInvalidChars()
         {
+            const string stringWithInvalidChars = "0000000000000000000000000000000!";
+
             // ReSharper disable once ObjectCreationAsStatement
-            Assert.Throws<ArgumentException>(() => new Uuid("0000000000000000000000000000000!"));
+            Assert.Throws<ArgumentException>(() => new Uuid(stringWithInvalidChars));
         }
     }
 }
