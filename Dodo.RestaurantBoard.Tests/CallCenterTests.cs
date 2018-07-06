@@ -39,27 +39,27 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
-                        CreatePhoneXmlNode(phone:defaultPhone)
+                        CreatePhoneXmlNode(phone:"123")
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
             var phoneNumber = phone.Number;
 
-            Assert.Equal(defaultPhone, phoneNumber);
+            Assert.Equal("123", phoneNumber);
         }
 
         [Fact]
-        public void GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithSitePath_CallCenterPhoneParameterIconPathEqualXmlIconPath()
+        public void GetCallCenterPhoneFromXml_CallCenterPhoneXElementWithIconPath_CallCenterPhoneParameterIconPathEqualXmlIconPath()
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
-                        CreatePhoneXmlNode(iconPath:defaultIconPath)
+                        CreatePhoneXmlNode(iconPath:"iconPath")
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
             var iconPath = phone.IconPath;
 
-            Assert.Equal(defaultIconPath, iconPath);
+            Assert.Equal("iconPath", iconPath);
         }
 
         [Fact]
@@ -67,13 +67,13 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var callCenterPhonesXml =
                 CreatePhonesXmlNode(
-                        CreatePhoneXmlNode(iconSitePath:defaultIconSitePath)
+                        CreatePhoneXmlNode(iconSitePath:"iconSitePath")
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
             var iconSitePath = phone.IconSitePath;
 
-            Assert.Equal(defaultIconSitePath, iconSitePath);
+            Assert.Equal("iconSitePath", iconSitePath);
         }
 
       

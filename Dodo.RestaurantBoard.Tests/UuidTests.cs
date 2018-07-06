@@ -8,9 +8,6 @@ namespace Dodo.RestaurantBoard.Tests
 {
     public class UuidTests
     {
-        string uuidWithNotEqual32Length = new String('0', 31);
-        string uuidWithUnsuitablecharacters = $"r{new String('0', 31)}";
-        string uuidWithCorrectContent = new String('0', 32);
 
         [Fact]
         public void CreateUuidWithEmptyString_Uuid_ThrowArgumentNullExceptin()
@@ -25,7 +22,7 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void CreateUuidWithNotEqual32LengthString_UUid_ThrowArgumentExeption()
         {
-            Action createEmptyUUidAction = () => new Uuid(uuidWithNotEqual32Length);
+            Action createEmptyUUidAction = () => new Uuid(new String('0', 31));
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
         }
@@ -33,7 +30,7 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void CreateUuidWithUnsuitableCharacters_Uuid_ThrowArgumentExeptionWithSpecificMessage()
         {
-            Action createEmptyUUidAction = () => new Uuid(uuidWithUnsuitablecharacters);
+            Action createEmptyUUidAction = () => new Uuid($"r{new String('0', 31)}");
 
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
@@ -41,13 +38,14 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void UseToStringMethod_Uuid_ToStringMethodIsOverrided()
+        public void UuidToString_Uuid_ReturnUuidString()
         {
-            var uuid = new Uuid(uuidWithCorrectContent);
+            var uuidString = new String('0', 32);
+            var uuid = new Uuid(uuidString);
 
             var toStringResult = uuid.ToString();
 
-            Assert.Equal(uuidWithCorrectContent, toStringResult);
+            Assert.Equal(uuidString, toStringResult);
         }
     }
 }
