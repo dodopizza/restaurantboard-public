@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
 {
-    public class DepartmentTests
+    public class Department
     {
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithPlus_WhenTimeZoneShiftIsPositive()

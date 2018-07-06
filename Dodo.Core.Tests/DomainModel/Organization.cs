@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
 {
-    public class OrganizationTests
+    public class Organization
     {
         [Fact]
         public void ShortHeadManagerName_ShouldBecomeSurnameWithInitials_WhenFullNameContainsALotOfDotsAndSpaces()
