@@ -7,14 +7,16 @@ namespace Dodo.Domain.Tests
 	public class CallCenterPhoneTests
 	{
 		[Test]
-		public void NumberWithoutMarks_IfSpecifiedNumberContainsDashes_ShouldRemoveIt()
+		public void NumberWithoutMarks_IfNumberContainsDashes_ShouldReturnNumberWithoutDashes()
 		{
 			var phone = new CallCenterPhoneParameter
 			{
 				Number = "8-999-123-45-67"
 			};
 
-			Assert.AreEqual("89991234567", phone.NumberWithoutMarks);
+			var phoneNumberWithputMarks = phone.NumberWithoutMarks;
+
+			Assert.AreEqual("89991234567", phoneNumberWithputMarks);
 		}
 
 		[Test]
@@ -25,7 +27,9 @@ namespace Dodo.Domain.Tests
 				Number = "8(999)1234567"
 			};
 
-			Assert.AreEqual("89991234567", phone.NumberWithoutMarks);
+			var phoneNumberWithputMarks = phone.NumberWithoutMarks;
+			
+			Assert.AreEqual("89991234567", phoneNumberWithputMarks);
 		}
 
 		[Test]
@@ -36,18 +40,22 @@ namespace Dodo.Domain.Tests
 				Number = "8   999 123   45 67"
 			};
 
-			Assert.AreEqual("89991234567", phone.NumberWithoutMarks);
+			var phoneNumberWithputMarks = phone.NumberWithoutMarks;
+			
+			Assert.AreEqual("89991234567", phoneNumberWithputMarks);
 		}
 
 		[Test]
-		public void GetIconUrl_IfSpecifiedIconPathWithBackSlashes_ShouldReturnCorrectUri()
+		public void GetIconUrl_IfIconPathContainsBackSlashes_ShouldReturnUriWithReplacedBackSlashesBySlashes()
 		{
 			var phone = new CallCenterPhoneParameter
 			{
 				IconPath = "test\\test2"
 			};
 
-			Assert.AreEqual("www.example.com/test/test2", phone.GetIconUrl("www.example.com"));
+			var urlBackSlashesReplacedBySlashes = phone.GetIconUrl("www.example.com");
+
+			Assert.AreEqual("www.example.com/test/test2", urlBackSlashesReplacedBySlashes);
 		}
 
 		[Test]
@@ -58,7 +66,9 @@ namespace Dodo.Domain.Tests
 				IconPath = "test"
 			};
 
-			Assert.AreEqual("www.example.com/test", phone.GetIconUrl("www.example.com"));
+			var transformedUri = phone.GetIconUrl("www.example.com");
+
+			Assert.AreEqual("www.example.com/test", transformedUri);
 		}
 
 		[Test]
@@ -69,11 +79,13 @@ namespace Dodo.Domain.Tests
 				IconSitePath = "www.sitepath.ru/icon"
 			};
 
-			Assert.AreEqual("www.sitepath.ru/icon", phone.GetIconUrl("www.example.com"));
+			var theSameUri = phone.GetIconUrl("www.example.com");
+
+			Assert.AreEqual("www.sitepath.ru/icon", theSameUri);
 		}
 
 		[Test]
-		public void CreateXmlNode_IfPhoneParametersSpecified_ShouldReturnXmlWithCorrectAttributeValues()
+		public void CreateXmlNode_ForPhoneWithParams_ShouldReturnXmlWithCorrectAttributeValues()
 		{
 			var phone = new CallCenterPhoneParameter
 			{
@@ -84,12 +96,13 @@ namespace Dodo.Domain.Tests
 
 			const string expected =
 				"<Phone number=\"89991234567\" iconPath=\"icon\" iconSitePath=\"www.images.com/icon\" />";
+			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
 
-			Assert.AreEqual(expected, phone.CreateXmlNode().ToString());
+			Assert.AreEqual(expected, serializedPhoneAsString);
 		}
 
 		[Test]
-		public void CreateXmlNode_IfPhoneParametersNotSpecified_ShouldReturnXmlWithEmptyAttributeValues()
+		public void CreateXmlNode_ForPhoneWithEmptyParams_ShouldReturnXmlWithEmptyAttributeValues()
 		{
 			var phone = new CallCenterPhoneParameter
 			{
@@ -98,19 +111,24 @@ namespace Dodo.Domain.Tests
 				IconSitePath = null
 			};
 
-			Assert.AreEqual("<Phone number=\"\" iconPath=\"\" iconSitePath=\"\" />", phone.CreateXmlNode().ToString());
+			const string expected = "<Phone number=\"\" iconPath=\"\" iconSitePath=\"\" />";
+			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
+			
+			Assert.AreEqual(expected, serializedPhoneAsString);
 		}
 
 		[Test]
-		public void GetCallCenterPhonesFromXml_IfCallCenterPhonesNotExistsInDocument_ShouldReturnEmptyArray()
+		public void GetCallCenterPhonesFromXml_IfCallCenterPhonesNotExistsInXml_ShouldReturnEmptyPhonesArray()
 		{
 			var container = new XElement("Root");
 
-			Assert.IsEmpty(CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container));
+			var deserializedXmlWhichNotContainsPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+
+			Assert.IsEmpty(deserializedXmlWhichNotContainsPhones);
 		}
 
 		[Test]
-		public void GetCallCenterPhonesFromXml_IfDocumentContainsCallCenterPhones_ShouldReturnCollectionOfObjects()
+		public void GetCallCenterPhonesFromXml_IfXmlContainsCallCenterPhone_ShouldReturnDeserializedPhone()
 		{
 			var container = XElement.Parse(@"
 <Root>
@@ -120,12 +138,37 @@ namespace Dodo.Domain.Tests
 </Root>
 ");
 
-			var phones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+			var expectedPhone = new CallCenterPhoneParameter()
+			{
+				Number = "89991234567",
+				IconPath = "icon",
+				IconSitePath = "www.images.com/icon"
+			};
+			var deserializedPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
 
-			Assert.AreEqual(1, phones.Length);
-			Assert.AreEqual("89991234567", phones[0].Number);
-			Assert.AreEqual("icon", phones[0].IconPath);
-			Assert.AreEqual("www.images.com/icon", phones[0].IconSitePath);
+			Assert.AreEqual(1, deserializedPhones.Length);
+			Assert.AreEqual(expectedPhone.Number, deserializedPhones[0].Number);
+			Assert.AreEqual(expectedPhone.IconPath, deserializedPhones[0].IconPath);
+			Assert.AreEqual(expectedPhone.IconSitePath, deserializedPhones[0].IconSitePath);
 		}
+		
+		[Test]
+		public void GetCallCenterPhonesFromXml_IfXmlContainsThreeCallCenterPhones_ShouldReturnThreeDeserializedPhones()
+		{
+			var container = XElement.Parse(@"
+<Root>
+	<CallCenterPhones>
+		<Phone number=""89991234567"" iconPath=""icon"" iconSitePath=""www.images.com/icon"" />
+		<Phone number=""89991234567"" iconPath=""icon"" iconSitePath=""www.images.com/icon"" />
+		<Phone number=""89991234567"" iconPath=""icon"" iconSitePath=""www.images.com/icon"" />
+	</CallCenterPhones>
+</Root>
+");
+
+			var deserializedPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+
+			Assert.AreEqual(3, deserializedPhones.Length);
+		}
+
 	}
 }

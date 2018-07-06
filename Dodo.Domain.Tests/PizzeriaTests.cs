@@ -17,7 +17,9 @@ namespace Dodo.Domain.Tests
 			var pizzeria = CreatePizzeria(beginDateTimeWork);
 			var currentDateTime = beginDateTimeWork.AddMonths(3);
 
-			Assert.AreEqual(3, pizzeria.GetMonthsOld(currentDateTime));
+			var cntMonthsOld = pizzeria.GetMonthsOld(currentDateTime);
+			
+			Assert.AreEqual(3, cntMonthsOld);
 		}
 
 		[Test]
@@ -29,7 +31,9 @@ namespace Dodo.Domain.Tests
 				.AddYears(3)
 				.AddMonths(3);
 
-			Assert.AreEqual(39, pizzeria.GetMonthsOld(currentDateTime));
+			var cntMonthsOld = pizzeria.GetMonthsOld(currentDateTime);
+			
+			Assert.AreEqual(39, cntMonthsOld);
 		}
 
 		[Test]
@@ -40,7 +44,9 @@ namespace Dodo.Domain.Tests
 			var currentDateTime = new DateTime(2008, 3, 10)
 				.AddYears(3);
 
-			Assert.AreEqual(3, pizzeria.GetYearsOld(currentDateTime));
+			var cntYearsOld = pizzeria.GetYearsOld(currentDateTime);
+
+			Assert.AreEqual(3, cntYearsOld);
 		}
 
 		[Test]
@@ -49,7 +55,9 @@ namespace Dodo.Domain.Tests
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-			Assert.AreEqual(0, pizzeria.GetYearsOld(currentDateTime));
+			var cntYearsOld = pizzeria.GetYearsOld(currentDateTime);
+			
+			Assert.AreEqual(0, cntYearsOld);
 		}
 
 		[Test]
@@ -58,7 +66,9 @@ namespace Dodo.Domain.Tests
 			var currentDateTime = DateTime.Now;
 			var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
-			Assert.AreEqual(0, pizzeria.GetMonthsOld(currentDateTime));
+			var cntMonthsOld = pizzeria.GetMonthsOld(currentDateTime);
+			
+			Assert.AreEqual(0, cntMonthsOld);
 		}
 		
 		private static Pizzeria CreatePizzeria(DateTime? beginDateTimeWork)
