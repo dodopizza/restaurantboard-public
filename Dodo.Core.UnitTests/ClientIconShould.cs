@@ -4,10 +4,10 @@ using Dodo.Core.DomainModel.Clients;
 
 namespace Dodo.Core.UnitTests
 {
-    public class ClientIconTest
+    public class ClientIconShould
     {
         [Fact]
-        public void GetUrlTest()
+        public void CreateFullPath_ByKnownHostAndFileName()
         {
             var clientIcon = new ClientIcon(1, "icon.png");
             var url = clientIcon.GetUrl("https://testFileStorageHost/");
