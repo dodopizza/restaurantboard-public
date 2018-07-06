@@ -10,10 +10,12 @@ namespace Dodo.Core.UnitTests
         [Fact]
         public void KeepOnlyDigitsInPhone_WhenPhoneIsStringWithSpacesDashesAndBraces()
         {
-            var callCenterPhoneParameter = new CallCenterPhoneParameter();
-            callCenterPhoneParameter.Number = "8 (922) 123-45-67";
+            var phoneParameter = new CallCenterPhoneParameter
+            {
+                Number = "8 (922) 123-45-67"
+            };
 
-            var numberWithoutMarks = callCenterPhoneParameter.NumberWithoutMarks;
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
             
             Assert.Equal("89221234567", numberWithoutMarks);
         }
@@ -21,9 +23,9 @@ namespace Dodo.Core.UnitTests
         [Fact]
         public void ReturnNull_WhenPhoneHasNotBeenSet()
         {
-            var callCenterPhoneParameter = new CallCenterPhoneParameter();
+            var phoneParameter = new CallCenterPhoneParameter();
 
-            var numberWithoutMarks = callCenterPhoneParameter.NumberWithoutMarks;
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
             
             Assert.Null(numberWithoutMarks);
         }
@@ -31,34 +33,40 @@ namespace Dodo.Core.UnitTests
         [Fact]
         public void ReturnEmptyString_WhenPhoneIsEmptyString()
         {
-            var callCenterPhoneParameter = new CallCenterPhoneParameter();
-            callCenterPhoneParameter.Number = string.Empty;
+            var phoneParameter = new CallCenterPhoneParameter
+            {
+                Number = string.Empty
+            };
 
-            var numberWithoutMarks = callCenterPhoneParameter.NumberWithoutMarks;
+            var numberWithoutMarks = phoneParameter.NumberWithoutMarks;
             
             Assert.Equal("", numberWithoutMarks);
         }
 
         [Fact]
-        public void CreateFullPath_ByKnownHostAndFileName()
+        public void CreateFullPath_ByConcatinateHostAndFileName()
         {
-            var callCenterPhoneParameter = new CallCenterPhoneParameter();
-            callCenterPhoneParameter.IconPath = @"icons\2.png";
-            
+            var phoneParameter = new CallCenterPhoneParameter
+            {
+                IconPath = @"icons\2.png"
+            };
+
             var host = "http://dodopizza.com"; 
-            var url = callCenterPhoneParameter.GetIconUrl(host);
+            var url = phoneParameter.GetIconUrl(host);
                 
             Assert.Equal("http://dodopizza.com/icons/2.png", url);
         }
         
         [Fact]
-        public void GenerateNode_ByKnownParameters()
+        public void CreateXmlNode_ByKnownParameters()
         {
-            var callCenterPhoneParameter = new CallCenterPhoneParameter();
-            callCenterPhoneParameter.IconPath = @"icons\2.png";
-            callCenterPhoneParameter.Number = "8 (902) 123-45-67";
+            var phoneParameter = new CallCenterPhoneParameter
+            {
+                IconPath = @"icons\2.png",
+                Number = "8 (902) 123-45-67"
+            };
 
-            var node = callCenterPhoneParameter.CreateXmlNode();
+            var node = phoneParameter.CreateXmlNode();
             
             var expectedNode = new XElement("Phone",
                 new XAttribute("number", "8 (902) 123-45-67"),
