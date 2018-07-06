@@ -11,65 +11,65 @@ namespace Dodo.Core.Tests
     public class PizzeriaTest
     {
         [TestMethod]
-        public void GetYearsOld_WhenNotOpened_ThenZero()
+        public void GetYearsOld_ReturnsZero_WhenBeginDateTimeWorkIsNull()
         {
             // Arrange
-            var currentDate = DateTime.MinValue;
+            var date = new DateTime(1234, 1, 1);
             Pizzeria pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
             // Act
-            int yearsOld = pizzeria.GetYearsOld(currentDate);
+            int yearsOld = pizzeria.GetYearsOld(currentDateTime: date);
 
             // Assert
             Assert.AreEqual(0, yearsOld);
         }
 
         [TestMethod]
-        public void GetYearsOld_WhenOpenedYearAgo_ThenOne()
+        public void GetYearsOld_ReturnsOne_WhenBeginDateTimeWorkIsYearAgo()
         {
             // Arrange
-            var beginDateTimeWork = DateTime.MinValue;
-            var currentDate = beginDateTimeWork.AddYears(1);
-            var pizzeria = CreatePizzeria(beginDateTimeWork: beginDateTimeWork);
+            var date = new DateTime(1234, 1, 1);
+            var dateYearAfter = date.AddYears(1);
+            var pizzeria = CreatePizzeria(beginDateTimeWork: date);
 
             // Act
-            int yearsOld = pizzeria.GetYearsOld(currentDate);
+            int yearsOld = pizzeria.GetYearsOld(currentDateTime: dateYearAfter);
 
             // Assert
             Assert.AreEqual(1, yearsOld);
         }
 
         [TestMethod]
-        public void GetMonthsOld_WhenNotOpened_ThenZero()
+        public void GetMonthsOld_ReturnsZero_WhenBeginDateTimeWorkIsNull()
         {
             // Arrange
-            var currentDate = DateTime.MinValue;
+            var date = new DateTime(1234, 1, 1);
             var pizzeria = CreatePizzeria(beginDateTimeWork: null);
 
             // Act
-            int monthsOld = pizzeria.GetMonthsOld(currentDate);
+            int monthsOld = pizzeria.GetMonthsOld(currentDateTime: date);
 
             // Assert
             Assert.AreEqual(0, monthsOld);
         }
 
         [TestMethod]
-        public void GetMonthsOld_WhenOpenedMonthAgo_ThenOne()
+        public void GetMonthsOld_ReturnsOne_WhenBeginDateTimeWorkIsMonthAgo()
         {
             // Arrange
-            var beginDateTimeWork = DateTime.MinValue;
-            var currentDate = beginDateTimeWork.AddMonths(1);
-            var pizzeria = CreatePizzeria(beginDateTimeWork: beginDateTimeWork);
+            var date = new DateTime(1234, 1, 1);
+            var dateMonthAfter = date.AddMonths(1);
+            var pizzeria = CreatePizzeria(beginDateTimeWork: date);
 
             // Act
-            int monthsOld = pizzeria.GetMonthsOld(currentDate);
+            int monthsOld = pizzeria.GetMonthsOld(currentDateTime: dateMonthAfter);
 
             // Assert
             Assert.AreEqual(1, monthsOld);
         }
 
         [TestMethod]
-        public void IsExistsPizzeriaFormat_WhenNoFormat_ThenFalse()
+        public void IsExistsPizzeriaFormat_IsFalse_WhenPizzeriaFormatIsNull()
         {
             // Arrange
             var pizzeria = CreatePizzeria(pizzeriaFormat: null);
@@ -79,11 +79,11 @@ namespace Dodo.Core.Tests
         }
 
         [TestMethod]
-        public void IsExistsPizzeriaFormat_WhenHasFormat_ThenTrue()
+        public void IsExistsPizzeriaFormat_IsTrue_WhenPizzeriaFormatIsNotNull()
         {
             // Arrange
-            PizzeriaFormat mockPizzeriaFormat = new PizzeriaFormat(0, "", "");
-            var pizzeria = CreatePizzeria(pizzeriaFormat: mockPizzeriaFormat);
+            PizzeriaFormat pizzeriaFormat = new PizzeriaFormat(0, "", "");
+            var pizzeria = CreatePizzeria(pizzeriaFormat: pizzeriaFormat);
 
             // Act & Assert
             Assert.IsTrue(pizzeria.IsExistsPizzeriaFormat);

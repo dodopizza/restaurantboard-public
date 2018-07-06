@@ -8,13 +8,13 @@ namespace Dodo.Core.Tests
     public class UuidTest
     {
         [TestMethod]
-        public void Ctor_WhenUuIdIsNull_ThenTrowsArgumentNullException()
+        public void Constructor_TrowsArgumentNullException_WhenInputStringIsNull()
         {
             // Arrange
-            string uuid = null;
+            string nullString = null;
 
             // Act & Assert
-            Assert.ThrowsException<ArgumentNullException>(() => { new Uuid(uuid); });
+            Assert.ThrowsException<ArgumentNullException>(() => { new Uuid(nullString); });
         }        
     }
 }
