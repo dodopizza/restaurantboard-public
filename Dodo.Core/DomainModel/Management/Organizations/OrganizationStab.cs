@@ -1,8 +1,8 @@
 ﻿namespace Dodo.Core.DomainModel.Management.Organizations
 {
-    public class PizzeriaRestaurant: Organization
+    public class OrganizationStab: Organization
     {
-        public PizzeriaRestaurant(string headManagerName) : base(5, null, null, null, null, null, headManagerName, null, null, null,
+        public OrganizationStab(string headManagerName) : base(5, null, null, null, null, null, headManagerName, null, null, null,
             null)
         {
             

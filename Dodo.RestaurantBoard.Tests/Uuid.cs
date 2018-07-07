@@ -6,42 +6,40 @@ using Xunit;
 
 namespace Dodo.RestaurantBoard.Tests
 {
-    public class UuidTests
+    public class Uuid
     {
 
         [Fact]
-        public void CreateUuidWithEmptyString_Uuid_ThrowArgumentNullExceptin()
+        public void ShouldThrowArgumentNullException_WhenCreateEmptyString()
         {
-            //Arrange
-            Action createEmptyUUidAction = () =>  new Uuid("");
+            Action createEmptyUUidAction = () =>  new Core.Common.Uuid("");
             
-            //Act Assert
             var exc = Assert.Throws<ArgumentNullException>(()=> createEmptyUUidAction());
         }
 
         [Fact]
-        public void CreateUuidWithNotEqual32LengthString_UUid_ThrowArgumentExeption()
+        public void ShouldThrowArgumentExeption_WhenCreateFromStringNot32Symbols()
         {
-            Action createEmptyUUidAction = () => new Uuid(new String('0', 31));
+            Action createEmptyUUidAction = () => new Core.Common.Uuid(new String('0', 31));
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
         }
 
         [Fact]
-        public void CreateUuidWithUnsuitableCharacters_Uuid_ThrowArgumentExeptionWithSpecificMessage()
+        public void ShouldThrowArgumentExeptionWithSpecificMessage_WhenStringContainLetters()
         {
-            Action createEmptyUUidAction = () => new Uuid($"r{new String('0', 31)}");
-
+            Action createEmptyUUidAction = () => new Core.Common.Uuid($"r{new String('0', 31)}");
 
             var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
+
             Assert.Equal("UUId must have the same characters like guid", exc.Message);
         }
 
         [Fact]
-        public void UuidToString_Uuid_ReturnUuidString()
+        public void ShouldReturnUuid_WhenInvokeToStringMethod()
         {
             var uuidString = new String('0', 32);
-            var uuid = new Uuid(uuidString);
+            var uuid = new Core.Common.Uuid(uuidString);
 
             var toStringResult = uuid.ToString();
 

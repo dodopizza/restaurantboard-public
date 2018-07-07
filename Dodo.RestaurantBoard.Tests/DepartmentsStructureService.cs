@@ -8,20 +8,20 @@ using Xunit;
 
 namespace Dodo.RestaurantBoard.Tests
 {
-    public class DepartmentsStructureServiceTests
+    public class DepartmentsStructureService
     {
 
         IDepartmentsStructureService departmentsStructureService;
-        int sampleDepartmentId = 1;
+        
 
-        public DepartmentsStructureServiceTests()
+        public DepartmentsStructureService()
         {
-            departmentsStructureService = new DepartmentsStructureService();
+            departmentsStructureService = new Domain.Services.DepartmentsStructureService();
 
         }
 
         [Fact]
-        public void GetPizzeria_Department_PizzaIsNotNull()
+        public void WhenGetPizzeria_ItNotNull()
         {
             var service = departmentsStructureService;
 
@@ -32,8 +32,9 @@ namespace Dodo.RestaurantBoard.Tests
 
 
         [Fact]
-        public void GetDepartmentCountryName_Department_CountryAlwaysRussia()
+        public void WhenGetDepartment_CountryNameShouldBeRussia()
         {
+            int sampleDepartmentId = 1;
             var department = departmentsStructureService.GetDepartmentOrCache<Department>(sampleDepartmentId);
 
             var departmentCountryName = department.Country.Name;
@@ -42,16 +43,14 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void GetDepartmentCountryCurrency_Department_CountryCurrencyAlwaysRubble()
+        public void WhenGetDepartment_CountryCurrencyShouldBeRuble()
         {
+            int sampleDepartmentId = 1;
             var department = departmentsStructureService.GetDepartmentByUnitOrCache(sampleDepartmentId);
 
             var contryCurrency = department.Country.Currency;
 
             Assert.Equal(Currency.Ruble, contryCurrency);
         }
-
-
-
     }
 }
