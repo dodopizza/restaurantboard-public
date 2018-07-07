@@ -35,9 +35,8 @@ namespace Dodo.RestaurantBoard.Tests
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
-            var phoneNumber = phone.Number;
 
-            Assert.Equal("+79261234567", phoneNumber);
+            Assert.Equal("+79261234567", phone.Number);
         }
 
         [Fact]
@@ -49,9 +48,8 @@ namespace Dodo.RestaurantBoard.Tests
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
-            var iconPath = phone.IconPath;
 
-            Assert.Equal(@"C:\temp\restaurantboard-public\icon.ico", iconPath);
+            Assert.Equal(@"C:\temp\restaurantboard-public\icon.ico", phone.IconPath);
         }
 
         [Fact]
@@ -63,9 +61,8 @@ namespace Dodo.RestaurantBoard.Tests
                 );
 
             var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
-            var iconSitePath = phone.IconSitePath;
 
-            Assert.Equal("dodopizza/restaurantboard-public/icon.ico", iconSitePath);
+            Assert.Equal("dodopizza/restaurantboard-public/icon.ico", phone.IconSitePath);
         }
 
       
@@ -90,9 +87,7 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var ccPhoneParameter = new CallCenterPhoneParameter { Number = "8(926)1234567" };
 
-            var phoneWithoutMarks = ccPhoneParameter.NumberWithoutMarks;
-
-            Assert.Equal("89261234567", phoneWithoutMarks);
+            Assert.Equal("89261234567", ccPhoneParameter.NumberWithoutMarks);
         }
 
     }

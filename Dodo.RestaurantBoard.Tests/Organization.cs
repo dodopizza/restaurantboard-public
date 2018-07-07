@@ -10,9 +10,7 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var pizzeria = new OrganizationStab("Иванов Иван Иванович");
 
-            var shortManagerName = pizzeria.ShortHeadManagerName;
-
-            Assert.Equal("Иванов И.И.", shortManagerName);
+            Assert.Equal("Иванов И.И.", pizzeria.ShortHeadManagerName);
         }
     }
 }

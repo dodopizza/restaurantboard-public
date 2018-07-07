@@ -30,9 +30,7 @@ namespace Dodo.RestaurantBoard.Tests
             var startDate = new DateTime(2011, 1, 1);
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(startDate);
 
-            var yearsOld = pizzeria.GetYearsOld(nowDate);
-
-            Assert.Equal(6, yearsOld);
+            Assert.Equal(6, pizzeria.GetYearsOld(nowDate));
         }
 
         [Fact]
@@ -42,9 +40,7 @@ namespace Dodo.RestaurantBoard.Tests
             var startDate = new DateTime(2011, 1, 1);
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(startDate);
 
-            var monthOld = pizzeria.GetMonthsOld(nowDate);
-
-            Assert.Equal(72, monthOld);
+            Assert.Equal(72, pizzeria.GetMonthsOld(nowDate));
         }
 
         [Fact]
@@ -52,19 +48,15 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
-            var totalYearsOld = pizzeria.GetYearsOld(new DateTime(2018, 1, 6));
-
-            Assert.Equal(0, totalYearsOld);
+            Assert.Equal(0, pizzeria.GetYearsOld(new DateTime(2018, 1, 6)));
         }
 
         [Fact]
         public void WhenPizzeriaOpenInFuture_ShouldBeZeroMonthsOld()
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
-            
-            var totalMonthsOld = pizzeria.GetMonthsOld(new DateTime(2018, 1, 6));
 
-            Assert.Equal(0, totalMonthsOld);
+            Assert.Equal(0, pizzeria.GetMonthsOld(new DateTime(2018, 1, 6)));
         }
     }
 }

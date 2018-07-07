@@ -34,23 +34,17 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void WhenGetDepartment_CountryNameShouldBeRussia()
         {
-            int sampleDepartmentId = 1;
-            var department = departmentsStructureService.GetDepartmentOrCache<Department>(sampleDepartmentId);
+            var department = departmentsStructureService.GetDepartmentOrCache<Department>(departmentId:1);
 
-            var departmentCountryName = department.Country.Name;
-
-            Assert.Equal("Russia", departmentCountryName);
+            Assert.Equal("Russia", department.Country.Name);
         }
 
         [Fact]
         public void WhenGetDepartment_CountryCurrencyShouldBeRuble()
         {
-            int sampleDepartmentId = 1;
-            var department = departmentsStructureService.GetDepartmentByUnitOrCache(sampleDepartmentId);
+            var department = departmentsStructureService.GetDepartmentByUnitOrCache(unitId:1);
 
-            var contryCurrency = department.Country.Currency;
-
-            Assert.Equal(Currency.Ruble, contryCurrency);
+            Assert.Equal(Currency.Ruble, department.Country.Currency);
         }
     }
 }

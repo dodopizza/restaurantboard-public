@@ -12,25 +12,19 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void ShouldThrowArgumentNullException_WhenCreateEmptyString()
         {
-            Action createEmptyUUidAction = () =>  new Core.Common.Uuid("");
-            
-            var exc = Assert.Throws<ArgumentNullException>(()=> createEmptyUUidAction());
+            Assert.Throws<ArgumentNullException>(()=> new Core.Common.Uuid(""));
         }
 
         [Fact]
         public void ShouldThrowArgumentExeption_WhenCreateFromStringNot32Symbols()
         {
-            Action createEmptyUUidAction = () => new Core.Common.Uuid(new String('0', 31));
-
-            var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
+            Assert.Throws<ArgumentException>(() => new Core.Common.Uuid(new String('0', 31)));
         }
 
         [Fact]
         public void ShouldThrowArgumentExeptionWithSpecificMessage_WhenStringContainLetters()
         {
-            Action createEmptyUUidAction = () => new Core.Common.Uuid($"r{new String('0', 31)}");
-
-            var exc = Assert.Throws<ArgumentException>(() => createEmptyUUidAction());
+            var exc = Assert.Throws<ArgumentException>(() => new Core.Common.Uuid($"r{new String('0', 31)}"));
 
             Assert.Equal("UUId must have the same characters like guid", exc.Message);
         }
@@ -38,12 +32,9 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void ShouldReturnUuid_WhenInvokeToStringMethod()
         {
-            var uuidString = new String('0', 32);
-            var uuid = new Core.Common.Uuid(uuidString);
+            var uuid = new Core.Common.Uuid(new String('0', 32));
 
-            var toStringResult = uuid.ToString();
-
-            Assert.Equal(uuidString, toStringResult);
+            Assert.Equal(new String('0', 32), uuid.ToString());
         }
     }
 }
