@@ -5,10 +5,11 @@ using System.Text;
 using System.Xml.Linq;
 using System.Linq;
 using Xunit;
+using Domain = Dodo.Core.DomainModel.Departments;
 
 namespace Dodo.RestaurantBoard.Tests
 {
-    public class CallCenter
+    public class CallCenterPhoneParameter
     {
         private XElement CreatePhonesXmlNode(params XElement[] childs)
         {
@@ -34,7 +35,7 @@ namespace Dodo.RestaurantBoard.Tests
                         CreatePhoneXmlNode(phone:"+79261234567")
                 );
 
-            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var phone = Domain::CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
 
             Assert.Equal("+79261234567", phone.Number);
         }
@@ -47,7 +48,7 @@ namespace Dodo.RestaurantBoard.Tests
                         CreatePhoneXmlNode(iconPath: @"C:\temp\restaurantboard-public\icon.ico")
                 );
 
-            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var phone = Domain::CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
 
             Assert.Equal(@"C:\temp\restaurantboard-public\icon.ico", phone.IconPath);
         }
@@ -60,7 +61,7 @@ namespace Dodo.RestaurantBoard.Tests
                         CreatePhoneXmlNode(iconSitePath: "dodopizza/restaurantboard-public/icon.ico")
                 );
 
-            var phone = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
+            var phone = Domain::CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml).Single();
 
             Assert.Equal("dodopizza/restaurantboard-public/icon.ico", phone.IconSitePath);
         }
@@ -77,7 +78,7 @@ namespace Dodo.RestaurantBoard.Tests
                     CreatePhoneXmlNode()
                );
             
-            var phones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml);
+            var phones = Domain::CallCenterPhoneParameter.GetCallCenterPhonesFromXml(callCenterPhonesXml);
 
             Assert.Equal(3, phones.Length);
         }
@@ -85,7 +86,7 @@ namespace Dodo.RestaurantBoard.Tests
         [Fact]
         public void NumberWithoutMarksContainOnlyDigits_WhenNumberContainBrackets()
         {
-            var ccPhoneParameter = new CallCenterPhoneParameter { Number = "8(926)1234567" };
+            var ccPhoneParameter = new Core.DomainModel.Departments.CallCenterPhoneParameter { Number = "8(926)1234567" };
 
             Assert.Equal("89261234567", ccPhoneParameter.NumberWithoutMarks);
         }

@@ -44,7 +44,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenPizzeriaOpenInFuture_ShouldBeZeroYearsOld()
+        public void WhenOpenInFuture_ShouldBeZeroYearsOld()
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
@@ -52,7 +52,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenPizzeriaOpenInFuture_ShouldBeZeroMonthsOld()
+        public void WhenOpenInFuture_ShouldBeZeroMonthsOld()
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
