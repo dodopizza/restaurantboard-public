@@ -18,7 +18,7 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void WhenCityDepartmentCallToString_Result—omposedCityDepartmentNameTypeState()
+        public void WhenCityDepartmentCallToString_ResultComposedCityDepartmentNameTypeState()
         {
             cityDepartment = new CityDepartment();
             var relevantData = $"{cityDepartment.Name} Type: {cityDepartment.Type} State: {cityDepartment.State}";
