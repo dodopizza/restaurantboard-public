@@ -6,7 +6,7 @@ namespace Dodo.RestaurantBoard.Tests
     public class Organization
     {
         [Fact]
-        public void ShortHeadManagerName_HasSurnameWithInitials_WhenOrdinaryFullName()
+        public void ShouldHasSurnameWithInitials_WhenShortHeadManagerNameHasOrdinaryFullName()
         {
             var pizzeria = new OrganizationStab("Иванов Иван Иванович");
 

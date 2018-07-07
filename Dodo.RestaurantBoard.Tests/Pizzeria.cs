@@ -24,7 +24,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenGetYearsOld_ShouldReturnAgeInYears()
+        public void ShouldReturnAgeInYears_WhenGetYearsOld()
         {
             var nowDate = new DateTime(2016, 1, 1);
             var startDate = new DateTime(2011, 1, 1);
@@ -34,7 +34,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenGetMonthsOld_ShouldReturnAgeInMonths()
+        public void ShouldReturnAgeInMonths_WhenGetMonthsOld()
         {
             var nowDate = new DateTime(2016, 1, 1);
             var startDate = new DateTime(2011, 1, 1);
@@ -44,7 +44,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenOpenInFuture_ShouldBeZeroYearsOld()
+        public void ShouldBeZeroYearsOld_WhenOpenInFuture()
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
@@ -52,7 +52,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void WhenOpenInFuture_ShouldBeZeroMonthsOld()
+        public void ShouldBeZeroMonthsOld_WhenOpenInFuture()
         {
             var pizzeria = CreatePizzeriaWithCurrentBeginDateTimeWork(new DateTime(2020, 1, 1));
 
