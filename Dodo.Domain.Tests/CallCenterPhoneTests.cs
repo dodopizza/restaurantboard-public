@@ -94,11 +94,11 @@ namespace Dodo.Domain.Tests
 				IconSitePath = "www.images.com/icon"
 			};
 
-			const string expected =
-				"<Phone number=\"89991234567\" iconPath=\"icon\" iconSitePath=\"www.images.com/icon\" />";
 			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
 
-			Assert.AreEqual(expected, serializedPhoneAsString);
+			Assert.AreEqual(
+				"<Phone number=\"89991234567\" iconPath=\"icon\" iconSitePath=\"www.images.com/icon\" />",
+				serializedPhoneAsString);
 		}
 
 		[Test]
@@ -111,10 +111,9 @@ namespace Dodo.Domain.Tests
 				IconSitePath = null
 			};
 
-			const string expected = "<Phone number=\"\" iconPath=\"\" iconSitePath=\"\" />";
 			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
 			
-			Assert.AreEqual(expected, serializedPhoneAsString);
+			Assert.AreEqual("<Phone number=\"\" iconPath=\"\" iconSitePath=\"\" />", serializedPhoneAsString);
 		}
 
 		[Test]
@@ -138,18 +137,12 @@ namespace Dodo.Domain.Tests
 </Root>
 ");
 
-			var expectedPhone = new CallCenterPhoneParameter()
-			{
-				Number = "89991234567",
-				IconPath = "icon",
-				IconSitePath = "www.images.com/icon"
-			};
 			var deserializedPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
 
 			Assert.AreEqual(1, deserializedPhones.Length);
-			Assert.AreEqual(expectedPhone.Number, deserializedPhones[0].Number);
-			Assert.AreEqual(expectedPhone.IconPath, deserializedPhones[0].IconPath);
-			Assert.AreEqual(expectedPhone.IconSitePath, deserializedPhones[0].IconSitePath);
+			Assert.AreEqual("89991234567", deserializedPhones[0].Number);
+			Assert.AreEqual("icon", deserializedPhones[0].IconPath);
+			Assert.AreEqual("www.images.com/icon", deserializedPhones[0].IconSitePath);
 		}
 		
 		[Test]
