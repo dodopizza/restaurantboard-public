@@ -14,7 +14,7 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void ToLocalDateTime_Null()
+        public void WhenCityDepartment.—onvertsNullToLocalDateTime_ResultIsNull()
         {
             var restult = _cityDepartment.ToLocalDateTime(null);
 
@@ -22,13 +22,13 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void ToString_Override()
+        public void WhenCityDepartment.CallToString_Result—omposedTheRelevantData()
         {
             Assert.Equal(_cityDepartment.ToString(), $"{_cityDepartment.Name} Type: {_cityDepartment.Type} State: {_cityDepartment.State}");
         }
 
         [Fact]
-        public void DateUTC_UTCNow()
+        public void WhenCityDepartment.GetUtcDateTimeWithTimeZoneUtcOffsetSetupOnMe_HourEqualMyHour()
         {
             _cityDepartment.TimeZoneUTCOffset = 180;
             var dateUtc = _cityDepartment.GetUtcDateTime(DateTime.Now);
@@ -36,14 +36,14 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void CurrentDate_NowDate()
+        public void WhenCityDepartment.CallCurrentDateWithTimeZoneUtcOffsetSetupOnMe_DateEqualMyDate()
         {
             _cityDepartment.TimeZoneUTCOffset = 180;
             Assert.Equal(_cityDepartment.CurrentDate, DateTime.Now.Date);
         }
 
         [Fact]
-        public void Uuid_Null()
+        public void WhenCityDepartmenCreate.UuidIsNull()
         {
             Assert.Null(_cityDepartment.Uuid);
         }
