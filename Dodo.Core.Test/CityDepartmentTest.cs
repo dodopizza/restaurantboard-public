@@ -6,46 +6,60 @@ namespace Dodo.Core.Test
 {
     public class CityDepartmentTest
     {
-        private CityDepartment _cityDepartment;
-
-        public CityDepartmentTest()
+        [Fact]
+        public void WhenCityDepartmentConvertsToLocalDateTime_Null_ResultIsNull() 
         {
-            _cityDepartment = new CityDepartment();
+            cityDepartment = new CityDepartment();
+            dataTimeToConverts = null;
+
+            var result = cityDepartment.ToLocalDateTime(dataTimeToConverts);
+
+            Assert.Null(result);
         }
 
         [Fact]
-        public void WhenCityDepartment.—onvertsNullToLocalDateTime_ResultIsNull()
+        public void WhenCityDepartmentCallToString_Result—omposedCityDepartmentNameTypeState()
         {
-            var restult = _cityDepartment.ToLocalDateTime(null);
+            cityDepartment = new CityDepartment();
+            var relevantData = $"{cityDepartment.Name} Type: {cityDepartment.Type} State: {cityDepartment.State}";
 
-            Assert.Null(restult);
+            var result = cityDepartment.ToString();
+
+            Assert.Equal(result, relevantData);
         }
 
         [Fact]
-        public void WhenCityDepartment.CallToString_Result—omposedTheRelevantData()
+        public void WhenCityDepartmentGetUtcDateTime_CityDepartmentTimeZoneUtcOffsetSetupInOursZone__ResultHourEqualOursTimeZoneHour()
         {
-            Assert.Equal(_cityDepartment.ToString(), $"{_cityDepartment.Name} Type: {_cityDepartment.Type} State: {_cityDepartment.State}");
+            cityDepartment = new CityDepartment();
+            myTimeZoneUTCOffset = 180;
+            cityDepartment.TimeZoneUTCOffset = myTimeZoneUTCOffset;
+            var oursTimeZone = DateTime.UtcNow;
+
+            var result = cityDepartment.GetUtcDateTime(DateTime.Now);
+            
+            Assert.Equal(result.Hour, OursTimeZone.Hour);
         }
 
         [Fact]
-        public void WhenCityDepartment.GetUtcDateTimeWithTimeZoneUtcOffsetSetupOnMe_HourEqualMyHour()
+        public void WhenCityDepartmentCallCurrentDateWithTimeZoneUtcOffset_CityDepartmentTimeZoneUtcOffsetSetupInOursZone_ResultDateEqualOursDate()
         {
-            _cityDepartment.TimeZoneUTCOffset = 180;
-            var dateUtc = _cityDepartment.GetUtcDateTime(DateTime.Now);
-            Assert.Equal(dateUtc.Hour, DateTime.UtcNow.Hour);
+            cityDepartment = new CityDepartment();
+            myTimeZoneUTCOffset = 180;
+            cityDepartment.TimeZoneUTCOffset = myTimeZoneUTCOffset;
+            var oursTimeZoneData = DateTime.Now.Date;
+
+            var result = cityDepartment.CurrentDate;
+
+            Assert.Equal(result, oursTimeZoneData);
         }
 
         [Fact]
-        public void WhenCityDepartment.CallCurrentDateWithTimeZoneUtcOffsetSetupOnMe_DateEqualMyDate()
+        public void WhenCityDepartmenCreate_UuidIsNull()
         {
-            _cityDepartment.TimeZoneUTCOffset = 180;
-            Assert.Equal(_cityDepartment.CurrentDate, DateTime.Now.Date);
-        }
+            cityDepartment = new CityDepartment();
 
-        [Fact]
-        public void WhenCityDepartmenCreate.UuidIsNull()
-        {
-            Assert.Null(_cityDepartment.Uuid);
+            Assert.Null(cityDepartment.Uuid);
         }
     }
 }
