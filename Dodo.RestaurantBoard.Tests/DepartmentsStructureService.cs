@@ -32,7 +32,7 @@ namespace Dodo.RestaurantBoard.Tests
 
 
         [Fact]
-        public void CountryNameShouldBeRussia_InReturnedDepartment()
+        public void CountryNameShouldBeRussia_WhenRequestingDepartment()
         {
             var department = departmentsStructureService.GetDepartmentOrCache<Department>(departmentId:1);
 
@@ -40,7 +40,7 @@ namespace Dodo.RestaurantBoard.Tests
         }
 
         [Fact]
-        public void CountryCurrencyShouldBeRuble_InReturnedDepartment()
+        public void CountryCurrencyShouldBeRuble_WhenRequestingdDepartment()
         {
             var department = departmentsStructureService.GetDepartmentByUnitOrCache(unitId:1);
 
