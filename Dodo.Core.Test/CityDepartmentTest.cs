@@ -1,16 +1,18 @@
 using Xunit;
 using System;
 using Dodo.Core.DomainModel.Departments.Departments;
+using Dodo.Core.DomainModel.Departments;
 
 namespace Dodo.Core.Test
 {
     public class CityDepartmentTest
     {
+
         [Fact]
-        public void WhenCityDepartmentConvertsToLocalDateTime_Null_ResultIsNull() 
+        public void WhenCityDepartmentConvertsToLocalDateTime_Null_ItIsNull()
         {
-            cityDepartment = new CityDepartment();
-            dataTimeToConverts = null;
+            var cityDepartment = new CityDepartment();
+            DateTime? dataTimeToConverts = null;
 
             var result = cityDepartment.ToLocalDateTime(dataTimeToConverts);
 
@@ -18,9 +20,9 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void WhenCityDepartmentCallToString_ResultComposedCityDepartmentNameTypeState()
+        public void WhenCityDepartmentCallToString_ItComposedCityDepartmentNameTypeState()
         {
-            cityDepartment = new CityDepartment();
+            var cityDepartment = new CityDepartment();
             var relevantData = $"{cityDepartment.Name} Type: {cityDepartment.Type} State: {cityDepartment.State}";
 
             var result = cityDepartment.ToString();
@@ -29,37 +31,34 @@ namespace Dodo.Core.Test
         }
 
         [Fact]
-        public void WhenCityDepartmentGetUtcDateTime_CityDepartmentTimeZoneUtcOffsetSetupInOursZone__ResultHourEqualOursTimeZoneHour()
-        {
-            cityDepartment = new CityDepartment();
-            myTimeZoneUTCOffset = 180;
-            cityDepartment.TimeZoneUTCOffset = myTimeZoneUTCOffset;
-            var oursTimeZone = DateTime.UtcNow;
-
-            var result = cityDepartment.GetUtcDateTime(DateTime.Now);
-            
-            Assert.Equal(result.Hour, OursTimeZone.Hour);
-        }
-
-        [Fact]
-        public void WhenCityDepartmentCallCurrentDateWithTimeZoneUtcOffset_CityDepartmentTimeZoneUtcOffsetSetupInOursZone_ResultDateEqualOursDate()
-        {
-            cityDepartment = new CityDepartment();
-            myTimeZoneUTCOffset = 180;
-            cityDepartment.TimeZoneUTCOffset = myTimeZoneUTCOffset;
-            var oursTimeZoneData = DateTime.Now.Date;
-
-            var result = cityDepartment.CurrentDate;
-
-            Assert.Equal(result, oursTimeZoneData);
-        }
-
-        [Fact]
         public void WhenCityDepartmenCreate_UuidIsNull()
         {
-            cityDepartment = new CityDepartment();
+            var cityDepartment = new CityDepartment();
 
             Assert.Null(cityDepartment.Uuid);
         }
+
+    }
+
+    public class DepartmentCultureDataTest
+    {
+
+        [Fact]
+        public void WhenDepartmentCultureDataCreate_ItIsEmpty()
+        {
+            var departmentCultureData = new DepartmentCultureData();
+
+            Assert.True(!departmentCultureData.IsFilled());
+        }
+
+        [Fact]
+        public void WhenDepartmentCultureDataGotName_ItIsFilled()
+        {
+            var departmentCultureData = new DepartmentCultureData();
+            departmentCultureData.Name = "uru_URU";
+
+            Assert.True(departmentCultureData.IsFilled());
+        }
+
     }
 }
