@@ -27,8 +27,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             IClientsService clientsService,
             IManagementService managementService,
             ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
-            )
+            IHostingEnvironment hostingEnvironment)
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
