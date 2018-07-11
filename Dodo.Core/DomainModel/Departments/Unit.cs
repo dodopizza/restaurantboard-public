@@ -40,5 +40,30 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			return $"{Name} Type: {Type} State: {State}";
 		}
+		
+		public String ToStringOffice()
+		{
+			return $"{Name} Type: Office State: {State}";
+		}
+		
+		public String ToStringPizzeria()
+		{
+			return $"{Name} Type: Pizzeria State: {State}";
+		}
+		
+		public String ToStringCallCenter()
+		{
+			return $"{Name} Type: CallCenter State: {State}";
+		}
+		
+		public String ToStringWarehouse()
+		{
+			return $"{Name} Type: Warehouse State: {State}";
+		}
+		
+		public String ToStringServiceDelivery()
+		{
+			return $"{Name} Type: ServiceDelivery State: {State}";
+		}
 	}
 }

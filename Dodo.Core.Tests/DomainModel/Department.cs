@@ -1,4 +1,6 @@
-﻿using Dodo.Core.Tests.DomainModel.Dsl;
+﻿using System;
+using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.Tests.DomainModel.Dsl;
 using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
@@ -33,6 +35,18 @@ namespace Dodo.Core.Tests.DomainModel
             var timeZoneShiftString = department.TimeZoneShiftString;
 
             Assert.Equal(" 0", timeZoneShiftString);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringOffice_WhenUnitTypeIsOffice()
+        {
+            var unitStub = new UnitStub(UnitType.Office);
+            var department = new Department();
+            department.AddUnit(unit);
+
+            department.GetAllNames();
+
+            Assert.Equals(1, unitStub.ToStringOfficeCount);
         }
     }
 }
