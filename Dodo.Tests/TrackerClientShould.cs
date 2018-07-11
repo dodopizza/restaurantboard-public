@@ -80,13 +80,25 @@ namespace Dodo.Tests
         [Fact]
         public void CallGetOrdersOnOrdersProvider_WhenGetOrdersIsCalled()
         {
-            
+            var ordersProviderMock = new Mock<IOrdersProvider>();
+            var dateProviderStub = new DateProvider();
+            var trackerClient = new TrackerClient(ordersProviderMock.Object, dateProviderStub);
+
+            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+
+            ordersProviderMock.Verify(op => op.GetOrders(), Times.Once);
         }
         
         [Fact]
         public void NotCallNowOnDateProvider_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
-            
+            var ordersProviderStub = new OrdersProvider();
+            var dateProviderMock = new Mock<IDateProvider>();
+            var trackerClient = new TrackerClient(ordersProviderStub, dateProviderMock.Object);
+
+            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+
+            dateProviderMock.Verify(dp => dp.Now(), Times.Never);
         }
         
         [Fact]
