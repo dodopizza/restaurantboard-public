@@ -7,26 +7,28 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	public interface ITrackerClient
 	{
 		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
-	}
+        ProductionOrder[] GetAllOrders();
 
-	public class TrackerClient : ITrackerClient
-	{
-		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
-		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
+    }
+
+    public class TrackerClient : ITrackerClient
+    {
+        public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+        {
+            var orders = new[]
+            {
+                new ProductionOrder
+                {
+                    Id = 55,
+                    Number = 3,
+                    ClientName = "Пупа"
+                },
+                new ProductionOrder
+                {
+                    Id = 56,
+                    Number = 4,
+                    ClientName = "Лупа"
+                },
                 new ProductionOrder
                 {
                     Id = 57,
@@ -35,7 +37,12 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 },
             };
 
-			return orders;
-		}
+            return orders;
+        }
+
+        public ProductionOrder[] GetAllOrders()
+        {
+            return new ProductionOrder[0];
+        }
 	}
 }

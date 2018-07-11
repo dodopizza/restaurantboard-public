@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
@@ -41,25 +42,18 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         {
             return Json(_departmentsStructureService.GetPizzeriaOrCache(id));
         }
-
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+      
+        [HttpGet("/orders")]
+        public JsonResult GetAllOrders()
         {
-            return "value";
+            return Json(_trackerClient.GetAllOrders());
         }
 
         // POST api/<controller>
         [HttpPost]
         public void Post([FromBody]string value)
         {
-        }
-
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        }       
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]

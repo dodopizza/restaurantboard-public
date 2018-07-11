@@ -14,24 +14,47 @@ namespace Dodo.Tests
         [Fact]
         public void OnGetPizzeria_GetPizzeriaOrCacheFromDepartmentsStructureService()
         {
-            var departmentsStructureServiceMock = new Mock<IDepartmentsStructureService>();
-            var clientsServiceStub = new Mock<IClientsService>();
-            var managementServiceStub = new Mock<IManagementService>();
-            var trackerClientStub = new Mock<ITrackerClient>();
-            var hostingEnvironmentStub = new Mock<IHostingEnvironment>();
+            var departmentsStructureServiceMock = new Mock<IDepartmentsStructureService>();     
 
             departmentsStructureServiceMock.Setup(d => d.GetPizzeriaOrCache(It.IsAny<int>()));
 
-            var apiController = new ApiController(
-                departmentsStructureServiceMock.Object,
-                clientsServiceStub.Object,
-                managementServiceStub.Object,
-                trackerClientStub.Object,
-                hostingEnvironmentStub.Object);
+            var apiController = GetTestApiController(
+              departmentsStructureService: departmentsStructureServiceMock.Object);
 
             apiController.GetPizzeria(5);
 
             departmentsStructureServiceMock.Verify(d => d.GetPizzeriaOrCache(5), Times.Once);
+        }
+
+        [Fact]
+        public void OnGetAllOrders_GetAllOrdersFromTrackerClient()
+        {
+            var trackerClientMock = new Mock<ITrackerClient>();
+
+            //trackerClientMock.Setup(t => t.GetAllOrders());
+
+            var apiController = GetTestApiController(
+              trackerClient: trackerClientMock.Object);
+
+            apiController.GetAllOrders();
+
+            trackerClientMock.Verify(t => t.GetAllOrders(), Times.Once);
+        }
+
+        public ApiController GetTestApiController(
+             IDepartmentsStructureService departmentsStructureService = null,
+            IClientsService clientsService = null,
+            IManagementService managementService = null,
+            ITrackerClient trackerClient = null,
+            IHostingEnvironment hostingEnvironment =null)
+        {
+            return new ApiController(
+                departmentsStructureService ?? new Mock<IDepartmentsStructureService>().Object,
+                clientsService ?? new Mock<IClientsService>().Object,
+                managementService ?? new Mock<IManagementService>().Object,
+                trackerClient ?? new Mock<ITrackerClient>().Object,
+                hostingEnvironment ?? new Mock<IHostingEnvironment>().Object
+                );
         }
     }
 }
