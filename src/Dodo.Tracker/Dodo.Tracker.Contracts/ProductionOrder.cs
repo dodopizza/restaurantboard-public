@@ -20,5 +20,10 @@ namespace Dodo.Tracker.Contracts
 
 		[DataMember]
 		public DateTime? ChangeDate { get; set; }
+
+        public bool IsExpiring(DateTime now)
+        {
+            return ChangeDate?.AddHours(1) < now;
+        }
 	}
 }

@@ -43,7 +43,7 @@ namespace Dodo.Tests
         public void ReturnOnlyExpiringOrders_IfIsExpiringParameterIsEqualToTrue()
         {
             var fakeDateProvider = new Mock<IDateProvider>();
-            fakeDateProvider.Setup(p => p.Now()).Returns(DateTime.Parse("07/11/2018 23:30"));
+            fakeDateProvider.Setup(p => p.Now()).Returns(DateTime.Parse("07/11/2018 23:00"));
             var expectedOrders = new ProductionOrder[]
             {
                 new ProductionOrder
@@ -51,14 +51,14 @@ namespace Dodo.Tests
                     Id = 1,
                     Number = 3,
                     ClientName = "Misha",
-                    ChangeDate = fakeDateProvider.Object.Now().AddMinutes(-59)
+                    ChangeDate = DateTime.Parse("07/11/2018 22:00")
                 },
                 new ProductionOrder
                 {
                     Id = 2,
                     Number = 4,
                     ClientName = "Tanya",
-                    ChangeDate = fakeDateProvider.Object.Now().AddMinutes(-60)
+                    ChangeDate = DateTime.Parse("07/11/2018 22:01")
                 },
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
@@ -67,7 +67,10 @@ namespace Dodo.Tests
 
             var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
 
-            Assert.Equal(expectedOrders, actualOrders);
+            foreach(var order in actualOrders)
+            {
+                Assert.True(order.IsExpiring(fakeDateProvider.Object.Now()));
+            }
         }
     }
 }
