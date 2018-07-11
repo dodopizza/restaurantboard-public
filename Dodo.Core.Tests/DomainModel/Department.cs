@@ -1,6 +1,7 @@
 ﻿using System;
 using Dodo.Core.DomainModel.Departments;
 using Dodo.Core.Tests.DomainModel.Dsl;
+using Moq;
 using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
@@ -10,7 +11,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithPlus_WhenTimeZoneShiftIsPositive()
         {
-            var department = new DepartmentStub {TempTimeZoneShift = 100 };
+            var department = new DepartmentFake {TempTimeZoneShift = 100 };
 
             var timeZoneShiftString = department.TimeZoneShiftString;
 
@@ -20,7 +21,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithMinus_WhenTimeZoneShiftIsNegative()
         {
-            var department = new DepartmentStub {TempTimeZoneShift = -100 };
+            var department = new DepartmentFake {TempTimeZoneShift = -100 };
 
             var timeZoneShiftString = department.TimeZoneShiftString;
 
@@ -30,23 +31,144 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithSpace_WhenTimeZoneShiftIsZero()
         {
-            var department = new DepartmentStub {TempTimeZoneShift = 0 };
+            var department = new DepartmentFake {TempTimeZoneShift = 0 };
 
             var timeZoneShiftString = department.TimeZoneShiftString;
 
             Assert.Equal(" 0", timeZoneShiftString);
         }
+
+        #region StateTests
+
+        [Fact]
+        public void ShouldCallToStringOffice_WhenUnitTypeIsOfficeStub()
+        {
+            var unitStub = UnitStub.Create(UnitType.Office);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitStub.ToStringOfficeCounter);
+        }
         
         [Fact]
-        public void ShouldCallToStringOffice_WhenUnitTypeIsOffice()
+        public void ShouldCallToStringPizzeria_WhenUnitTypeIsPizzeriaStub()
         {
-            var unitStub = new UnitStub(UnitType.Office);
-            var department = new Department();
-            department.AddUnit(unit);
+            var unitStub = UnitStub.Create(UnitType.Pizzeria);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
 
-            department.GetAllNames();
+            department.GetAllUnitsNames();
 
-            Assert.Equals(1, unitStub.ToStringOfficeCount);
+            Assert.Equal(1, unitStub.ToStringPizzeriaCounter);
         }
+        
+        [Fact]
+        public void ShouldCallToStringCallCenter_WhenUnitTypeIsCallCenterStub()
+        {
+            var unitStub = UnitStub.Create(UnitType.CallCenter);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitStub.ToStringCallCenterCounter);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringWarehouse_WhenUnitTypeIsWarehouseStub()
+        {
+            var unitStub = UnitStub.Create(UnitType.Warehouse);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitStub.ToStringWarehouseCounter);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringServiceDelivery_WhenUnitTypeIsServiceDeliveryStub()
+        {
+            var unitStub = UnitStub.Create(UnitType.ServiceDelivery);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitStub.ToStringServiceDeliveryCounter);
+        }
+
+        #endregion
+        
+        #region BehaviorTests
+        
+        [Fact]
+        public void ShouldCallToStringOffice_WhenUnitTypeIsOfficeMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.Office);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToStringOffice(), Times.Once);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringPizzeria_WhenUnitTypeIsPizzeriaMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.Pizzeria);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToStringPizzeria(), Times.Once);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringCallCenter_WhenUnitTypeIsCallCenterMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.CallCenter);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToStringCallCenter(), Times.Once);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringWarehouse_WhenUnitTypeIsWarehouseMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.Warehouse);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToStringWarehouse(), Times.Once);
+        }
+        
+        [Fact]
+        public void ShouldCallToStringServiceDelivery_WhenUnitTypeIsServiceDeliveryMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.ServiceDelivery);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToStringServiceDelivery(), Times.Once);
+        }
+        
+        #endregion
     }
 }

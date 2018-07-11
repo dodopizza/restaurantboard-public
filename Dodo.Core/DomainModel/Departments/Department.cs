@@ -110,7 +110,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public virtual DateTime CurrentDate => CurrentDateTime.Date;
 
-		private List<Unit> _units;
+		private readonly List<Unit> _units = new List<Unit>();
 		
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state, Int32 timeZoneUTCOffset,  Country country)
 		{

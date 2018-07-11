@@ -3,7 +3,7 @@ using Dodo.Core.DomainModel.Departments;
 
 namespace Dodo.Core.Tests.DomainModel.Dsl
 {
-    public class DepartmentStub : Core.DomainModel.Departments.Department
+    public class DepartmentFake : Core.DomainModel.Departments.Department
     {
         public Int16 TempTimeZoneShift { get; set; }
 
