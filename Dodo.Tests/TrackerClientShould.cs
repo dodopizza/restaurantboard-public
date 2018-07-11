@@ -116,19 +116,37 @@ namespace Dodo.Tests
         [Fact]
         public void NotCallIsExpiringOnEachProductionOrder_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
-            var ordersProviderFake = new OrdersProvider();
-            var trackerClient = new TrackerClient(ordersProviderFake, dateProviderMock.Object);
+            var productionOrderMock = new Mock<ProductionOrder>();
+            var expectedOrders = new ProductionOrder[]
+            {
+                productionOrderMock.Object
+            };
+            var ordersProviderStub = new Mock<IOrdersProvider>();
+            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
+            var dateProviderStub = new DateProvider();
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
             
             var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+
+            productionOrderMock.Verify(pom => pom.IsExpiring(It.IsAny<DateTime>()), Times.Never);
         }
 
         [Fact]
         public void CallIsExpiringOnEachProductionOrder_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
-            var ordersProviderFake = new OrdersProvider();
-            var trackerClient = new TrackerClient(ordersProviderFake, dateProviderMock.Object);
-            
+            var productionOrderMock = new Mock<ProductionOrder>();
+            var expectedOrders = new ProductionOrder[]
+            {
+                productionOrderMock.Object
+            };
+            var ordersProviderStub = new Mock<IOrdersProvider>();
+            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
+            var dateProviderStub = new DateProvider();
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
+
             var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+
+            productionOrderMock.Verify(pom => pom.IsExpiring(It.IsAny<DateTime>()), Times.Once);
         }
     }
 }
