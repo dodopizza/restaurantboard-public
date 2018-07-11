@@ -16,5 +16,7 @@ namespace Dodo.Core.DomainModel.OrderProcessing
 			OrderNumber = orderNumber;
 			OrderReadyDateTime = orderReadyDateTime;
 		}
+
+		public string Color => OrderNumber % 2 == 0 ? "red" : "green";
 	}
 }

@@ -6774,7 +6774,7 @@ body {
   display: inline-block;
   vertical-align: middle; }
 .restaurant-board__order-number {
-  background-color: #ffd452;
+  //background-color: #ffd452;
   color: #262626;
   text-align: center;
   line-height: 0.8;

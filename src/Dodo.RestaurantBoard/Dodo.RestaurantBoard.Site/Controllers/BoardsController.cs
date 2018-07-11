@@ -124,7 +124,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                                 ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
                                 : null,
                             OrderReadyTimestamp = x.OrderReadyDateTime.Ticks,
-                            OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture)
+                            OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture),
+                            x.Color,
                         })
                     .OrderByDescending(x => x.OrderReadyTimestamp)
             };
