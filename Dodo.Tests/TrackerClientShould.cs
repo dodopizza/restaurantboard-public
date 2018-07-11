@@ -12,7 +12,7 @@ namespace Dodo.Tests
     public class TrackerClientShould
     {
         [Fact]
-        public void ReturnAllOrders_IfIsExpiringParameterNotSpecifiedAndDefaultValueIsUsed()
+        public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
             var expectedOrders = new ProductionOrder[]
             {
@@ -40,7 +40,7 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void ReturnOnlyExpiringOrders_IfIsExpiringParameterIsEqualToTrue()
+        public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
             var fakeDateProvider = new Mock<IDateProvider>();
             fakeDateProvider.Setup(p => p.Now()).Returns(DateTime.Parse("07/11/2018 23:00"));
@@ -69,8 +69,30 @@ namespace Dodo.Tests
 
             foreach(var order in actualOrders)
             {
-                Assert.True(order.IsExpiring(fakeDateProvider.Object.Now()));
+                Assert.True(order.IsExpiring(DateTime.Parse("07/11/2018 23:00")));
             }
+        }
+
+
+
+
+
+        [Fact]
+        public void CallGetOrdersOnOrdersProvider_WhenGetOrdersIsCalled()
+        {
+            
+        }
+        
+        [Fact]
+        public void NotCallNowOnDateProvider_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
+        {
+            
+        }
+        
+        [Fact]
+        public void CallNowOnDateProvider_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
+        {
+            
         }
     }
 }

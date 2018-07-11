@@ -2,13 +2,14 @@
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using System;
+using System.Linq;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
 	public interface ITrackerClient
 	{
 		ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
-			bool isExpiring = false);
+			bool expiringOnly = false);
 	}
 
 	public class TrackerClient : ITrackerClient
@@ -23,16 +24,10 @@ namespace Dodo.RestaurantBoard.Domain.Services
         }
 
 		public ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
-			bool isExpiring = false)
+			bool expiringOnly = false)
 		{
-            var orders = _ordersProvider.GetOrders();
-
-            if (isExpiring)
-            {
-                var expiringDate = _dateProvider.Now().AddHours(-1);
-            }
-
-            return orders;
+			var orders = _ordersProvider.GetOrders();
+			return expiringOnly ? orders.Where(order => order.IsExpiring(_dateProvider.Now())).ToArray() : orders;
 		}
 	}
 }
