@@ -6,12 +6,14 @@ namespace Dodo.RestaurantBoard.Domain.Services
 {
 	public interface ITrackerClient
 	{
-		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
+		ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
+			bool isExpiring = false);
 	}
 
 	public class TrackerClient : ITrackerClient
 	{
-		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		public ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
+			bool isExpiring = false)
 		{
 			var orders = new[]
 			{
