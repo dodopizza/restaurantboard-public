@@ -104,7 +104,31 @@ namespace Dodo.Tests
         [Fact]
         public void CallNowOnDateProvider_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
+            var ordersProviderStub = new OrdersProvider();
+            var dateProviderMock = new Mock<IDateProvider>();
+            var trackerClient = new TrackerClient(ordersProviderStub, dateProviderMock.Object);
+
+            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+
+            dateProviderMock.Verify(dp => dp.Now(), Times.AtLeastOnce);
+        }
+        
+        [Fact]
+        public void NotCallIsExpiringOnEachProductionOrder_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
+        {
+            var ordersProviderFake = new OrdersProvider();
+            var trackerClient = new TrackerClient(ordersProviderFake, dateProviderMock.Object);
             
+            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+        }
+
+        [Fact]
+        public void CallIsExpiringOnEachProductionOrder_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
+        {
+            var ordersProviderFake = new OrdersProvider();
+            var trackerClient = new TrackerClient(ordersProviderFake, dateProviderMock.Object);
+            
+            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
         }
     }
 }
