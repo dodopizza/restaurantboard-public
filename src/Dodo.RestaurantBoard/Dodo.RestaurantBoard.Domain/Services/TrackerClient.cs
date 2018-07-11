@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.Common;
+using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 
@@ -13,36 +14,24 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
     public class TrackerClient : ITrackerClient
     {
+        private readonly IOrdersStorage ordersStorage;
+
+        public TrackerClient(IOrdersStorage ordersStorage)
+        {
+            this.ordersStorage = ordersStorage;
+
+            ordersStorage.AddProductionOrder("Пупа", 3);
+            ordersStorage.AddProductionOrder("Лупа", 4);
+        }
+
         public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
         {
-            var orders = new[]
-            {
-                new ProductionOrder
-                {
-                    Id = 55,
-                    Number = 3,
-                    ClientName = "Пупа"
-                },
-                new ProductionOrder
-                {
-                    Id = 56,
-                    Number = 4,
-                    ClientName = "Лупа"
-                },
-                new ProductionOrder
-                {
-                    Id = 57,
-                    Number = 5,
-                    ClientName = "Петя"
-                },
-            };
-
-            return orders;
+            return ordersStorage.GetAllProductionOrders();
         }
 
         public ProductionOrder[] GetAllOrders()
         {
-            return new ProductionOrder[0];
+            return ordersStorage.GetAllProductionOrders();
         }
-	}
+    }
 }

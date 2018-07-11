@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
-    class InMemoryOrderStorage : IOrdersStorage
+    public class InMemoryOrdersStorage : IOrdersStorage
     {
        private  int lastOrderId = 0;
        private Dictionary<int,ProductionOrder> productionOrders = new Dictionary<int, ProductionOrder>();
