@@ -30,8 +30,9 @@ namespace Dodo.Tests
                 },
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
+            var dateProviderStub = new DateProvider();
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var trackerClient = new TrackerClient(ordersProviderStub.Object);
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
 
             var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
             
@@ -41,6 +42,8 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnOnlyExpiringOrders_IfIsExpiringParameterIsEqualToTrue()
         {
+            var fakeDateProvider = new Mock<IDateProvider>();
+            fakeDateProvider.Setup(p => p.Now()).Returns(DateTime.Parse("07/11/2018 23:30"));
             var expectedOrders = new ProductionOrder[]
             {
                 new ProductionOrder
@@ -48,19 +51,19 @@ namespace Dodo.Tests
                     Id = 1,
                     Number = 3,
                     ClientName = "Misha",
-                    ChangeDate = DateTime.Now.AddHours(-2)
+                    ChangeDate = fakeDateProvider.Object.Now().AddMinutes(-59)
                 },
                 new ProductionOrder
                 {
                     Id = 2,
                     Number = 4,
                     ClientName = "Tanya",
-                    ChangeDate = DateTime.Now.AddMinutes(-20)
+                    ChangeDate = fakeDateProvider.Object.Now().AddMinutes(-60)
                 },
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var trackerClient = new TrackerClient(ordersProviderStub.Object);
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, fakeDateProvider.Object);
 
             var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
 

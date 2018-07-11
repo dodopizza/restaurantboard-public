@@ -13,11 +13,13 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
 	public class TrackerClient : ITrackerClient
 	{
-        private IOrdersProvider _ordersProvider;
+        private readonly IOrdersProvider _ordersProvider;
+		private readonly IDateProvider _dateProvider;
 
-        public TrackerClient(IOrdersProvider ordersProvider)
+        public TrackerClient(IOrdersProvider ordersProvider, IDateProvider dateProvider)
         {
             _ordersProvider = ordersProvider;
+	        _dateProvider = dateProvider;
         }
 
 		public ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
@@ -27,7 +29,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
             if (isExpiring)
             {
-                var expiringDate = DateTime.Now.AddHours(-1);
+                var expiringDate = _dateProvider.Now().AddHours(-1);
             }
 
             return orders;
