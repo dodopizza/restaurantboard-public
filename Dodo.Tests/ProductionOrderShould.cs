@@ -7,28 +7,42 @@ namespace Dodo.Tests
     public class ProductionOrderShould
     {
         [Fact]
+        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateForLessThanOneHour()
+        {
+            var order = new ProductionOrder()
+            {
+                ChangeDate = DateTime.Parse("07/11/2018 21:00")
+            };
+
+            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 21:59"));
+
+            Assert.False(isExpiring);
+        }
+        
+        [Fact]
+        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateExactlyForOneHour()
+        {
+            var order = new ProductionOrder()
+            {
+                ChangeDate = DateTime.Parse("07/11/2018 21:00")
+            };
+
+            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 22:00"));
+
+            Assert.False(isExpiring);
+        }
+
+        [Fact]
         public void ReturnTrue_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateAtLeastForOneHour()
         {
             var order = new ProductionOrder()
             {
-                ChangeDate = DateTime.Parse("07/11/2018 23:00")
+                ChangeDate = DateTime.Parse("07/11/2018 21:00")
             };
 
-            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 21:59"));
-            
+            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 22:01"));
+
             Assert.True(isExpiring);
-        }
-        
-        [Fact]
-        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsLessThanChangeDate()
-        {
-            
-        }
-        
-        [Fact]
-        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsEqualToChangeDate()
-        {
-            
         }
     }
 }
