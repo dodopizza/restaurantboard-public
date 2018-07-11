@@ -3,6 +3,7 @@ using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Moq;
+using System;
 using Xunit;
 
 
@@ -40,7 +41,30 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnOnlyExpiringOrders_IfIsExpiringParameterIsEqualToTrue()
         {
-            
+            var expectedOrders = new ProductionOrder[]
+            {
+                new ProductionOrder
+                {
+                    Id = 1,
+                    Number = 3,
+                    ClientName = "Misha",
+                    ChangeDate = DateTime.Now.AddHours(-2)
+                },
+                new ProductionOrder
+                {
+                    Id = 2,
+                    Number = 4,
+                    ClientName = "Tanya",
+                    ChangeDate = DateTime.Now.AddMinutes(-20)
+                },
+            };
+            var ordersProviderStub = new Mock<IOrdersProvider>();
+            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
+            var trackerClient = new TrackerClient(ordersProviderStub.Object);
+
+            var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+
+            Assert.Equal(expectedOrders, actualOrders);
         }
     }
 }

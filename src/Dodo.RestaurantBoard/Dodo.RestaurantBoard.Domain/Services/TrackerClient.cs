@@ -1,6 +1,7 @@
 ﻿using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using System;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
@@ -24,7 +25,10 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		{
             var orders = _ordersProvider.GetOrders();
 
-            //todo
+            if (isExpiring)
+            {
+                var expiringDate = DateTime.Now.AddHours(-1);
+            }
 
             return orders;
 		}
