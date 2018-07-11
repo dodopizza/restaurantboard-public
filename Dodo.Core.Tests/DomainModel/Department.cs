@@ -98,6 +98,33 @@ namespace Dodo.Core.Tests.DomainModel
             department.GetAllUnitsNames();
 
             Assert.Equal(1, unitStub.ToStringServiceDeliveryCounter);
+        } 
+        
+        [Fact]
+        public void ShouldCallToString_WhenUnitTypeIsProductionDistributionWorkshopStub()
+        {
+            var unitStub = UnitStub.Create(UnitType.ProductionDistributionWorkshop);
+            var department = new DepartmentFake();
+            department.AddUnit(unitStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitStub.ToStringDefaultCounter);
+        }
+        
+        [Fact]
+        public void ShouldCallSpecificToString_WhenUnitTypeIsOfficeAndCallCenterStabs()
+        {
+            var unitOfficeStub = UnitStub.Create(UnitType.Office);
+            var unitCallCenterStub = UnitStub.Create(UnitType.CallCenter);
+            var department = new DepartmentFake();
+            department.AddUnit(unitOfficeStub);
+            department.AddUnit(unitCallCenterStub);
+
+            department.GetAllUnitsNames();
+
+            Assert.Equal(1, unitCallCenterStub.ToStringCallCenterCounter);
+            Assert.Equal(1, unitOfficeStub.ToStringOfficeCounter);
         }
 
         #endregion
@@ -167,6 +194,36 @@ namespace Dodo.Core.Tests.DomainModel
             department.GetAllUnitsNames();
 
             unitMock.Verify(x => x.ToStringServiceDelivery(), Times.Once);
+        }
+                
+        [Fact]
+        public void ShouldCallToString_WhenUnitTypeIsFactorySemisMock()
+        {
+            var unitMock = new Mock<Unit>();
+            unitMock.SetupGet(x => x.Type).Returns(UnitType.FactorySemis);
+            var department = new DepartmentFake();
+            department.AddUnit(unitMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitMock.Verify(x => x.ToString(), Times.Once);
+        }
+
+        [Fact]
+        public void ShouldCallSpecificToString_WhenUnitTypeIsOfficeAndCallCenterMock()
+        {
+            var unitOfficeMock = new Mock<Unit>();
+            var unitCallCenterMock = new Mock<Unit>();
+            unitOfficeMock.SetupGet(x => x.Type).Returns(UnitType.Office);
+            unitCallCenterMock.SetupGet(x => x.Type).Returns(UnitType.CallCenter);
+            var department = new DepartmentFake();
+            department.AddUnit(unitOfficeMock.Object);
+            department.AddUnit(unitCallCenterMock.Object);
+
+            department.GetAllUnitsNames();
+
+            unitOfficeMock.Verify(x => x.ToStringOffice(), Times.Once);
+            unitCallCenterMock.Verify(x => x.ToStringCallCenter(), Times.Once);
         }
         
         #endregion
