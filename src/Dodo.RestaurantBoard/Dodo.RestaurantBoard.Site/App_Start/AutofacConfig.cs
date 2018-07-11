@@ -28,7 +28,9 @@ namespace Dodo.RestaurantBoard.Site
 
 			builder.RegisterType<TrackerClient>().As<ITrackerClient>();
 
-			return builder;
+            builder.RegisterType<OrdersProvider>().As<IOrdersProvider>();
+
+            return builder;
 		}
 	}
 }

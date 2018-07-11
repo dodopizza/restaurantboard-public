@@ -12,26 +12,21 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
 	public class TrackerClient : ITrackerClient
 	{
+        private IOrdersProvider _ordersProvider;
+
+        public TrackerClient(IOrdersProvider ordersProvider)
+        {
+            _ordersProvider = ordersProvider;
+        }
+
 		public ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
 			bool isExpiring = false)
 		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
+            var orders = _ordersProvider.GetOrders();
 
-			return orders;
+            //todo
+
+            return orders;
 		}
 	}
 }
