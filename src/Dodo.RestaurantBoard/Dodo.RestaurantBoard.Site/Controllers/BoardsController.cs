@@ -46,12 +46,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             _hostingEnvironment = hostingEnvironment;
         }
 
-
         private int[] CurrentProductsIds
         {
             get
             {
-                var currentProductsIds = HttpContext.Session.GetString("IdProductUnit");
+                var currentProductsIds = HttpContext?.Session?.GetString("IdProductUnit");
                 return !string.IsNullOrEmpty(currentProductsIds)
                     ? JsonConvert.DeserializeObject<int[]>(currentProductsIds)
                     : new int[0];
@@ -59,7 +58,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             set
             {
                 var serialized = JsonConvert.SerializeObject(value);
-                HttpContext.Session.SetString("IdProductUnit", serialized);
+                HttpContext?.Session?.SetString("IdProductUnit", serialized);
             }
         }
 
@@ -97,7 +96,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
-
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
             if (clientTreatment == ClientTreatment.RandomImage)
@@ -109,25 +107,26 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
             CurrentProductsIds = playTineParamIds;
 
-            var result = new
+            var result = new Order
             {
                 PlayTune = (int)ViewData["PlayTune"],
                 NewOrderArrived = (int)ViewData["PlayTune"] == 1,
                 SongName = orders.Length == 0 ? DodoFMProxy.GetSongName() : string.Empty,
                 ClientOrders = orders.Select(
-                        x => new
+                        x => new ClientOrder
                         {
-                            x.OrderId,
-                            x.OrderNumber,
-                            x.ClientName,
+                            OrderId = x.OrderId,
+                            OrderNumber = x.OrderNumber,
+                            ClientName = x.ClientName,
                             ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
                                 ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
                                 : null,
                             OrderReadyTimestamp = x.OrderReadyDateTime.Ticks,
                             OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture),
-                            x.Color,
+                            Color = x.Color,
                         })
                     .OrderByDescending(x => x.OrderReadyTimestamp)
+                    .ToArray()
             };
 
             return Json(result);
@@ -135,7 +134,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
         {
-            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
+            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName,
+                order.ChangeDate ?? DateTime.Now);
         }
 
         private static string GetIconPath(int orderNumber, IReadOnlyList<ClientIcon> icons, string fileStorageHost)

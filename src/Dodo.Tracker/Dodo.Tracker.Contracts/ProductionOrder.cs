@@ -10,15 +10,15 @@ namespace Dodo.Tracker.Contracts
 	public class ProductionOrder
 	{
 		[DataMember]
-		public int Id { get; set; }
+		public virtual int Id { get; set; }
 		
 		[DataMember]
-		public int Number { get; set; }
+		public virtual int Number { get; set; }
 
 		[DataMember]
-		public string ClientName { get; set; }
+		public virtual string ClientName { get; set; }
 
 		[DataMember]
-		public DateTime? ChangeDate { get; set; }
+		public virtual DateTime? ChangeDate { get; set; }
 	}
 }
