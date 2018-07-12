@@ -110,7 +110,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public virtual DateTime CurrentDate => CurrentDateTime.Date;
 
-		
+		private readonly List<Unit> _units = new List<Unit>();
 		
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state, Int32 timeZoneUTCOffset,  Country country)
 		{
@@ -144,6 +144,42 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 		}
 
+		public void AddUnit(Unit unit)
+		{
+			_units.Add(unit);
+		}
+
+		public List<string> GetAllUnitsNames()
+		{
+			var unitsNames = new List<string>();
+			foreach (var unit in _units)
+			{
+				switch (unit.Type)
+				{
+						case UnitType.Office:
+							unitsNames.Add(unit.ToStringOffice());
+							break;
+						case UnitType.Pizzeria:
+							unitsNames.Add(unit.ToStringPizzeria());
+							break;
+						case UnitType.CallCenter:
+							unitsNames.Add(unit.ToStringCallCenter());
+							break;
+						case UnitType.Warehouse:
+							unitsNames.Add(unit.ToStringWarehouse());
+							break;
+						case UnitType.ServiceDelivery:
+							unitsNames.Add(unit.ToStringServiceDelivery());
+							break;
+						default:
+							unitsNames.Add(unit.ToString());
+							break;
+				}
+			}
+
+			return unitsNames;
+		}
+		
 		public static DepartmentParameters GetDepartmentParametersFromXmlString(String value, DepartmentType departmentType)
 		{
 			if (String.IsNullOrEmpty(value)) return null;

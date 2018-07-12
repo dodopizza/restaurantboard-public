@@ -11,7 +11,7 @@ namespace Dodo.Core.DomainModel.Departments
 		public Uuid Uuid { get; private set; }
 		public String Name { get; private set; }
 		public String Alias { get; private set; }
-		public UnitType Type { get; private set; }
+		public virtual UnitType Type { get; private set; }
 
 		public String TranslitAlias { get; set; }
 		public UnitApprove Approve { get; set; }
@@ -35,10 +35,39 @@ namespace Dodo.Core.DomainModel.Departments
             CountryId = countryId;
             Organization = organization;
 		}
+		
+		protected Unit()
+		{
+		}
 
 		public override String ToString()
 		{
 			return $"{Name} Type: {Type} State: {State}";
+		}
+		
+		public virtual String ToStringOffice()
+		{
+			return $"{Name} Type: Office State: {State}";
+		}
+		
+		public virtual String ToStringPizzeria()
+		{
+			return $"{Name} Type: Pizzeria State: {State}";
+		}
+		
+		public virtual String ToStringCallCenter()
+		{
+			return $"{Name} Type: CallCenter State: {State}";
+		}
+		
+		public virtual String ToStringWarehouse()
+		{
+			return $"{Name} Type: Warehouse State: {State}";
+		}
+		
+		public virtual String ToStringServiceDelivery()
+		{
+			return $"{Name} Type: ServiceDelivery State: {State}";
 		}
 	}
 }
