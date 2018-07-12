@@ -1,6 +1,7 @@
 ﻿using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using System.Linq;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
@@ -20,7 +21,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
         public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
-			return ordersRepository.GetOrders();
+			return ordersRepository.GetOrders().Take(limit).ToArray();
 		}
 	}
 }
