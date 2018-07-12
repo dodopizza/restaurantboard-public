@@ -132,7 +132,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return Json(result);
         }
 
-        private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
+        private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(IProductionOrder order)
         {
             return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
         }

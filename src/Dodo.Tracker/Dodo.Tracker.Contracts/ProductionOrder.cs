@@ -4,11 +4,23 @@ using System.Runtime.Serialization;
 
 namespace Dodo.Tracker.Contracts
 {
-	[Serializable]
+    public interface IProductionOrder
+    {
+        int Id { get; set; }
+        int Number { get; set; }
+        string ClientName { get; set; }
+        DateTime? ChangeDate { get; set; }
+        DateTime OrderDate { get; set; }
+
+        bool IsExpired(DateTime now);
+
+    }
+
+    [Serializable]
 	[DataContract]
 	[DebuggerDisplay("{" + nameof(Id) + "} : {" + nameof(Number) + "}")]
-	public class ProductionOrder
-	{
+	public class ProductionOrder : IProductionOrder
+    {
 		[DataMember]
 		public int Id { get; set; }
 		
@@ -20,5 +32,12 @@ namespace Dodo.Tracker.Contracts
 
 		[DataMember]
 		public DateTime? ChangeDate { get; set; }
-	}
+        [DataMember]
+        public DateTime OrderDate { get; set; }
+
+        public bool IsExpired(DateTime now)
+        {
+            return (now - OrderDate).TotalMinutes>10;
+        }
+    }
 }
