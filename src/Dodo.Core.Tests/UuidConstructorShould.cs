@@ -52,7 +52,7 @@ namespace Dodo.Core.Tests
         [Test]
         public void ThrowException_WhenStringContainsInvalidChars()
         {
-            const string stringWithInvalidChars = "0000000000000000000000000000000!";
+            const string stringWithInvalidChars = "0000000000000000000000000000000!"; 
 
             // ReSharper disable once ObjectCreationAsStatement
             Assert.Throws<ArgumentException>(() => new Uuid(stringWithInvalidChars));
