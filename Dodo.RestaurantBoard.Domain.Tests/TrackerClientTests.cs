@@ -20,6 +20,17 @@ namespace Dodo.RestaurantBoard.Domain.Tests
             Assert.IsEmpty(orders);
         }
 
+        [Test]
+        public void GetOrdersByType_CallsRepositoryGetOrders_Once()
+        {
+            var mockRepository = new Mock<IOrdersRepository>();
+            var trackerClient = new TrackerClient(mockRepository.Object);
+
+            var orders = GetOrders(trackerClient);
+
+            mockRepository.Verify(x => x.GetOrders(), Times.Once());
+        }
+
         private static ProductionOrder[] GetOrders(TrackerClient trackerClient)
         {
             return trackerClient.GetOrdersByType(Uuid.Empty, Tracker.Contracts.Enums.OrderType.Stationary, new Tracker.Contracts.Enums.OrderState[] { }, 16);
@@ -32,6 +43,12 @@ namespace Dodo.RestaurantBoard.Domain.Tests
             return result.Object;
         }
 
-        
+        IOrdersRepository CreateCountingRepository()
+        {
+            var result = new Mock<IOrdersRepository>();
+            result.Setup(x => x.GetOrders());
+            return result.Object;
+        }
+
     }
 }
