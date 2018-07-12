@@ -40,6 +40,38 @@ namespace Dodo.Tests
         }
 
         [Fact]
+        public void SetChangeDateToUtcNow_WhenAddingOrder()
+        {
+            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
+
+            var dateBeforeCall = DateTime.UtcNow;
+
+            trackerClient.AddProductionOrder("John", 3);
+
+            var dateAfterCall = DateTime.UtcNow;
+
+            var orderAddDate = trackerClient.GetOrderByName("John").ChangeDate;
+
+            Assert.True(orderAddDate >= dateBeforeCall && orderAddDate <= dateAfterCall);
+        }
+
+        [Fact]
+        public void UpdateChangeDateToNewer_WhenUpdatingOrder()
+        {
+            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
+            trackerClient.AddProductionOrder("John", 3);
+            var orderDateAdd = trackerClient.GetOrderByName("John").ChangeDate;
+
+            trackerClient.AddProductionOrder("John", 2);
+
+            var orderUpdateDate = trackerClient.GetOrderByName("John").ChangeDate;
+
+            Assert.True(orderDateAdd < orderUpdateDate);
+        }
+
+
+
+        [Fact]
         public void OnAddProductionOrderWithExitingOrder_CallUpdateProductionOrder()
         {
             var orderStorageMock = new Mock<IOrdersStorage>();
