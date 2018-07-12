@@ -4,6 +4,8 @@ using Dodo.Tracker.Contracts;
 using Moq;
 using NUnit.Framework;
 using Dodo.Core.Common;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Dodo.RestaurantBoard.Domain.Tests
 {
@@ -23,13 +25,26 @@ namespace Dodo.RestaurantBoard.Domain.Tests
         [Test]
         public void GetOrdersByType_ReturnsOrdersUpToTheLimit_WhenOrdersRepositoryCountExceedsLimit()
         {
-            var stubRepository = CreateRepository();
+            int ordersLimit = 42;
+            var stubRepository = CreateRepository(ordersLimit + 1);
             var trackerClient = new TrackerClient(stubRepository);
-            int ordersLimit = 1;
             
             var orders = GetOrders(trackerClient, ordersLimit);
 
             Assert.AreEqual(ordersLimit, orders.Length);
+        }
+
+        [Test]
+        public void GetOrdersByType_ReturnsOrdersUpToTheRepositoryCount_WhenLimitExceedsRepositoryCount()
+        {
+            int ordersLimit = 42;
+            int repositoryCount = ordersLimit - 1;
+            var stubRepository = CreateRepository(repositoryCount);
+            var trackerClient = new TrackerClient(stubRepository);
+
+            var orders = GetOrders(trackerClient, ordersLimit);
+
+            Assert.AreEqual(repositoryCount, orders.Length);
         }
 
         [Test]
@@ -55,39 +70,21 @@ namespace Dodo.RestaurantBoard.Domain.Tests
             return result.Object;
         }
 
-        IOrdersRepository CreateRepository()
+        IOrdersRepository CreateRepository(int ordersCount)
         {
-            var orders = new[]
-            {
-                new ProductionOrder
-                {
-                    Id = 55,
-                    Number = 3,
-                    ClientName = "Пупа"
-                },
-                new ProductionOrder
-                {
-                    Id = 56,
-                    Number = 4,
-                    ClientName = "Лупа"
-                },
-                new ProductionOrder
-                {
-                    Id = 57,
-                    Number = 5,
-                    ClientName = "Петя"
-                },
-                new ProductionOrder
-                {
-                    Id = 58,
-                    Number = 6,
-                    ClientName = "Женя"
-                }
-            };
+            ProductionOrder[] orders = CreateOrders(ordersCount).ToArray();
 
             var result = new Mock<IOrdersRepository>();
             result.Setup(x => x.GetOrders()).Returns(orders);
             return result.Object;
+        }
+
+        private static IEnumerable<ProductionOrder> CreateOrders(int count)
+        {
+            for (var i = 0; i < count; i++)
+            {
+                yield return new ProductionOrder();
+            }
         }
     }
 }
