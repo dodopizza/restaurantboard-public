@@ -14,19 +14,37 @@ namespace Dodo.RestaurantBoard.Domain.Services
     {
         public ProductionOrder[] GetOrders()
         {
+            var random = new Random(DateTime.Now.Millisecond);
+            
             return new[]
             {
                 new ProductionOrder
                 {
                     Id = 55,
                     Number = 3,
-                    ClientName = "Пупа"
+                    ClientName = "Пупа",
+                    ChangeDate = DateTime.Now.AddMinutes(-random.Next(0, 120))
                 },
                 new ProductionOrder
                 {
                     Id = 56,
                     Number = 4,
-                    ClientName = "Лупа"
+                    ClientName = "Лупа",
+                    ChangeDate = DateTime.Now.AddMinutes(-random.Next(0, 120))
+                },
+                new ProductionOrder
+                {
+                    Id = 1,
+                    Number = 3,
+                    ClientName = "Миша",
+                    ChangeDate = DateTime.Now.AddMinutes(-random.Next(0, 120))
+                },
+                new ProductionOrder
+                {
+                    Id = 2,
+                    Number = 4,
+                    ClientName = "Таня",
+                    ChangeDate = DateTime.Now.AddMinutes(-random.Next(0, 120))
                 },
             };
         }
