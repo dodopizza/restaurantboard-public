@@ -2,6 +2,8 @@
 using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using System;
+using System.Linq;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
@@ -9,6 +11,8 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	{
 		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
         ProductionOrder[] GetAllOrders();
+
+        ProductionOrder[] GetOrdersAfterDate(DateTime dateTime);
 
         ProductionOrder GetOrderByName(string clientName);
         void AddProductionOrder(string clientName, int number);
@@ -29,12 +33,12 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
         public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
         {
-            return ordersStorage.GetAllProductionOrders();
+            return ordersStorage.GetAllProductionOrders().ToArray();
         }
 
         public ProductionOrder[] GetAllOrders()
         {
-            return ordersStorage.GetAllProductionOrders();
+            return ordersStorage.GetAllProductionOrders().ToArray();
         }
 
         public void AddProductionOrder(string clientName, int number)
@@ -54,6 +58,11 @@ namespace Dodo.RestaurantBoard.Domain.Services
         public ProductionOrder GetOrderByName(string clientName)
         {
             return ordersStorage.GetProductionOrderByName(clientName);
+        }
+
+        public ProductionOrder[] GetOrdersAfterDate(DateTime dateTime)
+        {
+            return ordersStorage.GetAllProductionOrders().Where(order => order.ChangeDate >= dateTime).ToArray();
         }
     }
 }

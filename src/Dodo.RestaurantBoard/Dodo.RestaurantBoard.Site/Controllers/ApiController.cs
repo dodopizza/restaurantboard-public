@@ -6,6 +6,7 @@ using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
@@ -48,16 +49,18 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return Json(_trackerClient.GetAllOrders());
         }
 
-        // POST api/<controller>
-        [HttpPost]
-        public void Post([FromBody]string value)
+        public JsonResult GetAllOrdersFromPizzeria(int unitId)
         {
-        }       
+            var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var pizzeriaOrders = _trackerClient
+                .GetOrdersByType(
+                    pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, int.MaxValue)                
+                .ToArray();
+
+            return Json(pizzeriaOrders);
         }
+
+       
     }
 }

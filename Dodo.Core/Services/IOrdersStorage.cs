@@ -7,7 +7,7 @@ namespace Dodo.Core.Services
 {
     public interface IOrdersStorage
     {
-        ProductionOrder[] GetAllProductionOrders();
+        IEnumerable<ProductionOrder> GetAllProductionOrders();
 
         ProductionOrder GetProductionOrderById(int id);
 

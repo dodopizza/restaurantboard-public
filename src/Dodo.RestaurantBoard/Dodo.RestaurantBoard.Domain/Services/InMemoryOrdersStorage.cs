@@ -29,9 +29,9 @@ namespace Dodo.RestaurantBoard.Domain.Services
             productionOrders.Remove(id);
         }
 
-        public ProductionOrder[] GetAllProductionOrders()
+        public IEnumerable<ProductionOrder> GetAllProductionOrders()
         {
-            return productionOrders.Values.ToArray();
+            return productionOrders.Values;
         }
 
         public ProductionOrder GetProductionOrderById(int id)
