@@ -34,7 +34,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	    public IProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
 			
-			return _ordersStore.GetOrders().ToArray();
+			return _ordersStore.GetOrders()?.ToArray();
 		}
 
 	    public IProductionOrder[] GetOrders()

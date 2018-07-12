@@ -53,6 +53,18 @@ namespace Dodo.RestarauntBoardTests
             orderStoreStub.Verify(m => m.GetOrders(), Times.Never);
         }
 
-    
+        [Fact]
+        public void ShouldNotReturnAnyOrder_WhenGetOrdersWithNoOrders()
+        {
+            var orderStoreMock = new Mock<IOrdersStore>();
+            orderStoreMock.Setup(o => o.GetOrders()).Returns(new List<IProductionOrder>());
+            var orderStore = orderStoreMock.Object;
+            var trackerClient = new TrackerClient(orderStore);
+
+            var orders = trackerClient.GetOrders();
+
+            Assert.Empty(orders);
+        }
+
     }
 }
