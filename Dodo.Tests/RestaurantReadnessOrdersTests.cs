@@ -8,6 +8,7 @@ namespace Dodo.Tests
     {
         private readonly ObjectMother _mother = new ObjectMother();
 
+        // State
         [Test]
         public void WhenRestaurantReadnessOrderHasOddNumber_ThenColorIsRed()
         {
@@ -16,6 +17,8 @@ namespace Dodo.Tests
             Assert.AreEqual("red", restaurantReadnessOrder.Color);
         }
 
+
+        // State
         [Test]
         public void WhenRestaurantReadnessOrderHasEvenNumber_ThenColorIsRed()
         {

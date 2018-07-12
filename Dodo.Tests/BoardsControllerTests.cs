@@ -1,13 +1,13 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Dodo.Core.Common;
+using Dodo.Core.DomainModel.Departments;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
-using Dodo.RestaurantBoard.Site.Controllers;
 using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
-using Microsoft.AspNetCore.Hosting;
 using Moq;
 using NUnit.Framework;
 
@@ -19,6 +19,7 @@ namespace Dodo.Tests
         private readonly ObjectMother _objectMother = new ObjectMother();
         private readonly BoardsControllerBuilder _boardsControllerBuilder = new BoardsControllerBuilder();
 
+        // Behaviour
         [Test]
         public void Index_ShouldCall_GetUnitOrCache()
         {
@@ -34,6 +35,7 @@ namespace Dodo.Tests
             departmentsStructureServiceMock.Verify(x => x.GetUnitOrCache(Uuid.Empty), Times.Once);
         }
 
+        // Behaviour
         [Test]
         public void OrdersReadinessToStationary_ShouldCall_GetDepartmentByUnitOrCacheAndGetPizzeriaOrCache()
         {
@@ -53,6 +55,22 @@ namespace Dodo.Tests
             departmentsStructureServiceMock.Verify(x => x.GetPizzeriaOrCache(1), Times.Once);
         }
 
+        // State
+        [Test]
+        public void OrdersReadinessToStationary_ShouldThrowArgumentException_WhenDepartmentNotFoundByUnitId()
+        {
+            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
+            departmentsStructureServiceStub
+                .Setup(x => x.GetDepartmentByUnitOrCache(1))
+                .Returns((Department)null);
+            var boardsControllerMock = _boardsControllerBuilder.
+                CreateBoardsControllerWithDepartmentService(departmentsStructureServiceStub.Object);
+
+            var argumentException = Assert.Throws<ArgumentException>(() => boardsControllerMock.OrdersReadinessToStationary(1));
+            Assert.That(argumentException.Message, Is.EqualTo("unitId"));
+        }
+
+        // Behaviour
         [Test]
         public void GetOrderReadinessToStationary_ShouldUse_UseNumberPropertyForEachOrder()
         {
@@ -80,6 +98,7 @@ namespace Dodo.Tests
             }
         }
 
+        // State
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveGreenColor()
         {
@@ -112,6 +131,7 @@ namespace Dodo.Tests
             }
         }
 
+        // State
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveRedColor()
         {
