@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using Dodo.Core.Common;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
@@ -10,10 +8,7 @@ using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Formatters.Json.Internal;
 using Moq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
 namespace Dodo.Tests
@@ -22,6 +17,7 @@ namespace Dodo.Tests
     public class BoardsControllerTests
     {
         private readonly ObjectMother _objectMother = new ObjectMother();
+        private readonly BoardsControllerBuilder _boardsControllerBuilder = new BoardsControllerBuilder();
 
         [Test]
         public void Index_ShouldCall_GetUnitOrCache()
@@ -30,17 +26,8 @@ namespace Dodo.Tests
             departmentsStructureServiceMock
                 .Setup(x => x.GetUnitOrCache(Uuid.Empty))
                 .Returns(_objectMother.CreateUnitWithUuid(Uuid.Empty));
-            var clientsServiceDummy = new Mock<IClientsService>();
-            var managementServiceDummy = new Mock<IManagementService>();
-            var trackerClientDummy = new Mock<ITrackerClient>();
-            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
-            var boardsControllerStub = new BoardsController(
-                departmentsStructureService: departmentsStructureServiceMock.Object,
-                clientsService: clientsServiceDummy.Object,
-                managementService: managementServiceDummy.Object,
-                trackerClient: trackerClientDummy.Object,
-                hostingEnvironment: hostingEnvironmentDummy.Object
-            );
+            var boardsControllerStub = _boardsControllerBuilder.
+                CreateBoardsControllerWithDepartmentService(departmentsStructureServiceMock.Object);
 
             boardsControllerStub.Index();
 
@@ -57,17 +44,8 @@ namespace Dodo.Tests
             departmentsStructureServiceMock
                 .Setup(x => x.GetPizzeriaOrCache(1))
                 .Returns(_objectMother.CreatePizzeria());
-            var clientsServiceDummy = new Mock<IClientsService>();
-            var managementServiceDummy = new Mock<IManagementService>();
-            var trackerClientDummy = new Mock<ITrackerClient>();
-            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
-            var boardsControllerStub = new BoardsController(
-                departmentsStructureService: departmentsStructureServiceMock.Object,
-                clientsService: clientsServiceDummy.Object,
-                managementService: managementServiceDummy.Object,
-                trackerClient: trackerClientDummy.Object,
-                hostingEnvironment: hostingEnvironmentDummy.Object
-            );
+            var boardsControllerStub = _boardsControllerBuilder.
+                    CreateBoardsControllerWithDepartmentService(departmentsStructureServiceMock.Object);
 
             boardsControllerStub.OrdersReadinessToStationary(1);
 
@@ -89,16 +67,10 @@ namespace Dodo.Tests
                 .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
                     new[] {OrderState.OnTheShelf}, 16))
                 .Returns(trackerOrderMocks.Select(x => x.Object).ToArray());
-            var clientsServiceDummy = new Mock<IClientsService>();
-            var managementServiceDummy = new Mock<IManagementService>();
-            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
-            var boardsControllerStub = new BoardsController(
-                departmentsStructureService: departmentsStructureServiceStub.Object,
-                clientsService: clientsServiceDummy.Object,
-                managementService: managementServiceDummy.Object,
-                trackerClient: trackerClientStub.Object,
-                hostingEnvironment: hostingEnvironmentDummy.Object
-            );
+            var boardsControllerStub = _boardsControllerBuilder
+                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
+                    departmentsStructureServiceStub.Object,
+                    trackerClientStub.Object);
 
             boardsControllerStub.GetOrderReadinessToStationary(1);
 
@@ -111,7 +83,7 @@ namespace Dodo.Tests
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveGreenColor()
         {
-            var trackerOrderStub = CreateTrackerOrderObjects();
+            var trackerOrderStubs = CreateTrackerOrderObjects();
             var pizzeriaStub = _objectMother.CreatePizzeria();
             var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
             departmentsStructureServiceStub
@@ -121,19 +93,13 @@ namespace Dodo.Tests
             trackerClientStub
                 .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
                     new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderStub.Select(x => x.Object).ToArray());
-            var clientsServiceDummy = new Mock<IClientsService>();
-            var managementServiceDummy = new Mock<IManagementService>();
-            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
-            var boardsControllerStub = new BoardsController(
-                departmentsStructureService: departmentsStructureServiceStub.Object,
-                clientsService: clientsServiceDummy.Object,
-                managementService: managementServiceDummy.Object,
-                trackerClient: trackerClientStub.Object,
-                hostingEnvironment: hostingEnvironmentDummy.Object
-            );
+                .Returns(trackerOrderStubs.Select(x => x.Object).ToArray());
+            var boardsControllerMock = _boardsControllerBuilder
+                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
+                    departmentsStructureServiceStub.Object,
+                    trackerClientStub.Object);
 
-            var jsonResult = boardsControllerStub.GetOrderReadinessToStationary(1);
+            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
             var order = jsonResult.Value as IOrder;
             var oddOrderColors = order.ClientOrders
                 .Where(x => x.OrderNumber % 2 == 0)
@@ -149,7 +115,7 @@ namespace Dodo.Tests
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveRedColor()
         {
-            var trackerOrderStub = CreateTrackerOrderObjects();
+            var trackerOrderStubs = CreateTrackerOrderObjects();
             var pizzeriaStub = _objectMother.CreatePizzeria();
             var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
             departmentsStructureServiceStub
@@ -159,19 +125,13 @@ namespace Dodo.Tests
             trackerClientStub
                 .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
                     new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderStub.Select(x => x.Object).ToArray());
-            var clientsServiceDummy = new Mock<IClientsService>();
-            var managementServiceDummy = new Mock<IManagementService>();
-            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
-            var boardsControllerStub = new BoardsController(
-                departmentsStructureService: departmentsStructureServiceStub.Object,
-                clientsService: clientsServiceDummy.Object,
-                managementService: managementServiceDummy.Object,
-                trackerClient: trackerClientStub.Object,
-                hostingEnvironment: hostingEnvironmentDummy.Object
-            );
+                .Returns(trackerOrderStubs.Select(x => x.Object).ToArray());
+            var boardsControllerMock = _boardsControllerBuilder
+                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
+                    departmentsStructureServiceStub.Object,
+                    trackerClientStub.Object);
 
-            var jsonResult = boardsControllerStub.GetOrderReadinessToStationary(1);
+            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
             var order = jsonResult.Value as IOrder;
             var oddOrderColors = order.ClientOrders
                 .Where(x => x.OrderNumber % 2 == 1)
