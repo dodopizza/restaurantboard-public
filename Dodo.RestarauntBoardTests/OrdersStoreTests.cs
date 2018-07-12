@@ -12,6 +12,7 @@ namespace Dodo.RestarauntBoardTests
 {
     public class OrdersStoreTests
     {
+        //State
         [Fact]
         public void ShouldContainSameOrder_WhenAddOrder()
         {
@@ -25,6 +26,7 @@ namespace Dodo.RestarauntBoardTests
             Assert.Contains(productOrder, orderStore.GetOrders());
         }
 
+        //State
         [Fact]
         public void ShoudContainExpiredOrder_WhenGetExpiredOrders()
         {
@@ -39,6 +41,7 @@ namespace Dodo.RestarauntBoardTests
             Assert.Contains(expiredOrder, expiredOrders);
         }
 
+        //State
         [Fact]
         public void ShoudNotContainUnExpiredOrder_WhenGetExpiredOrders()
         {
@@ -55,7 +58,7 @@ namespace Dodo.RestarauntBoardTests
 
 
       
-
+        //State
         [Fact]
         public void ShoudContainAllOrders_WhenGetOrders()
         {
@@ -75,6 +78,7 @@ namespace Dodo.RestarauntBoardTests
             Assert.Contains(unExpiredOrder, allOrders);
         }
 
+        // Behaviour
         [Fact]
         public void IsExpiredShoudInvokeOnceOnEachOrders_WhenGetExpiredOrders()
         {
@@ -93,6 +97,7 @@ namespace Dodo.RestarauntBoardTests
             productOrderMock2.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
         }
 
+        // Behaviour
         [Fact]
         public void IsExpiredShoudNotInvokeOnAnyOrder_WhenGetOrders()
         {

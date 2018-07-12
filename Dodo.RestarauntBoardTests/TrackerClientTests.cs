@@ -11,8 +11,8 @@ namespace Dodo.RestarauntBoardTests
 {
     public class TrackerClientTests
     {
-       
 
+        // Behaviour
         [Fact]
         public void AddOrdersShoudInvokeOnce_WhenPlaceOrder()
         {
@@ -27,6 +27,7 @@ namespace Dodo.RestarauntBoardTests
             orderStoreStub.Verify(m=>m.AddOrder(It.IsAny<IProductionOrder>()),Times.Once);
         }
 
+        // Behaviour
         [Fact]
         public void GetOrdersShoudInvokeOnce_WhenGetOrders()
         {
@@ -39,6 +40,8 @@ namespace Dodo.RestarauntBoardTests
 
             orderStoreStub.Verify(m => m.GetOrders(), Times.Once);
         }
+
+        // Behaviour
         [Fact]
         public void ShoudNotInvokeGetOrders_WhenPlaceOrder()
         {
@@ -53,6 +56,7 @@ namespace Dodo.RestarauntBoardTests
             orderStoreStub.Verify(m => m.GetOrders(), Times.Never);
         }
 
+        // State
         [Fact]
         public void ShouldNotReturnAnyOrder_WhenGetOrdersWithNoOrders()
         {
