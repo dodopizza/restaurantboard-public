@@ -21,8 +21,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 Id = lastOrderId,
                 ClientName = clientName,
                 Number = number
-            }
-                );
+            });
         }
 
         public void DeleteProductionOrder(int id)
@@ -53,6 +52,11 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 productionOrder.ClientName = clientName ?? productionOrder.ClientName;
                 productionOrder.Number = number ?? productionOrder.Number;
             }
+        }
+
+        public ProductionOrder GetProductionOrderByName(string clientName)
+        {
+            return  productionOrders.FirstOrDefault(pair => pair.Value.ClientName == clientName).Value;
         }
     }
 }

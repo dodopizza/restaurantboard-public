@@ -10,6 +10,9 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
         ProductionOrder[] GetAllOrders();
 
+        ProductionOrder GetOrderByName(string clientName);
+        void AddProductionOrder(string clientName, int number);
+
     }
 
     public class TrackerClient : ITrackerClient
@@ -32,6 +35,25 @@ namespace Dodo.RestaurantBoard.Domain.Services
         public ProductionOrder[] GetAllOrders()
         {
             return ordersStorage.GetAllProductionOrders();
+        }
+
+        public void AddProductionOrder(string clientName, int number)
+        {
+            var existingOrder =ordersStorage.GetProductionOrderByName(clientName);
+
+            if (existingOrder == null)
+            {
+                ordersStorage.AddProductionOrder(clientName, number);
+            }
+            else
+            {
+                ordersStorage.UpdateProductionOrder(existingOrder.Id, number: existingOrder.Number + number);
+            }
+        }
+
+        public ProductionOrder GetOrderByName(string clientName)
+        {
+            return ordersStorage.GetProductionOrderByName(clientName);
         }
     }
 }
