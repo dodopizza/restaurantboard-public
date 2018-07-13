@@ -1,6 +1,7 @@
 using System;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tracker.Contracts;
+using Dodo.Tracker.Contracts.Enums;
 using Moq;
 using NUnit.Framework;
 using Dodo.Core.Common;
@@ -115,7 +116,7 @@ namespace Dodo.RestaurantBoard.Domain.Tests
 
         private static ProductionOrder[] GetOrders(TrackerClient trackerClient, int limit = 42)
         {
-            return trackerClient.GetOrdersByType(Uuid.Empty, Tracker.Contracts.Enums.OrderType.Stationary, new Tracker.Contracts.Enums.OrderState[] { }, limit);
+            return trackerClient.GetOrdersByType(Uuid.Empty, default(OrderType), new OrderState[0], limit);
         }
 
         IOrdersRepository CreateEmptyRepository()
