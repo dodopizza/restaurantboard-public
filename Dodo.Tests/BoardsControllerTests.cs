@@ -15,17 +15,16 @@ namespace Dodo.Tests
     public class BoardsControllerTests
     {
         private readonly ObjectMother _objectMother = new ObjectMother();
-        private readonly BoardsControllerBuilder _boardsControllerBuilder = new BoardsControllerBuilder();
+        private readonly BoardsControllerCreator _boardsControllerCreator = new BoardsControllerCreator();
 
         // Behaviour
         [Test]
         public void Index_ShouldCall_GetUnitOrCache()
         {
-            var departmentsStructureServiceMock = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceMock
-                .Setup(x => x.GetUnitOrCache(Uuid.Empty))
-                .Returns(_objectMother.CreateUnitWithUuid(Uuid.Empty));
-            var boardsControllerStub = _boardsControllerBuilder.
+            var departmentsStructureServiceMock = new DepartmentStructureServiceMockBuilder()
+                .WithGetUnitOrCache(Uuid.Empty)
+                .Build();
+            var boardsControllerStub = _boardsControllerCreator.
                 CreateBoardsControllerWithDepartmentService(departmentsStructureServiceMock.Object);
 
             boardsControllerStub.Index();
@@ -37,14 +36,11 @@ namespace Dodo.Tests
         [Test]
         public void OrdersReadinessToStationary_ShouldCall_GetDepartmentByUnitOrCacheAndGetPizzeriaOrCache()
         {
-            var departmentsStructureServiceMock = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceMock
-                .Setup(x => x.GetDepartmentByUnitOrCache(1))
-                .Returns(_objectMother.CreateDepartment());
-            departmentsStructureServiceMock
-                .Setup(x => x.GetPizzeriaOrCache(1))
-                .Returns(_objectMother.CreatePizzeria());
-            var boardsControllerStub = _boardsControllerBuilder.
+            var departmentsStructureServiceMock = new DepartmentStructureServiceMockBuilder()
+                .WithGetDepartmentByUnitOrCache(1)
+                .WithGetPizzeriaOrCache(1)
+                .Build();
+            var boardsControllerStub = _boardsControllerCreator.
                     CreateBoardsControllerWithDepartmentService(departmentsStructureServiceMock.Object);
 
             boardsControllerStub.OrdersReadinessToStationary(1);
@@ -57,11 +53,10 @@ namespace Dodo.Tests
         [Test]
         public void OrdersReadinessToStationary_ShouldThrowArgumentException_WhenDepartmentNotFoundByUnitId()
         {
-            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceStub
-                .Setup(x => x.GetDepartmentByUnitOrCache(1))
-                .Returns((Department)null);
-            var boardsControllerMock = _boardsControllerBuilder.
+            var departmentsStructureServiceStub = new DepartmentStructureServiceMockBuilder()
+                .WithGetDepartmentByUnitOrCacheWithResult(unitId: 1, resultDepartment: null)
+                .Build();
+            var boardsControllerMock = _boardsControllerCreator.
                 CreateBoardsControllerWithDepartmentService(departmentsStructureServiceStub.Object);
 
             var argumentException = Assert.Throws<ArgumentException>(() => boardsControllerMock.OrdersReadinessToStationary(1));
@@ -77,7 +72,7 @@ namespace Dodo.Tests
             var order2 = new Mock<ProductionOrder>();
             order2.Setup(x => x.Number).Returns(2);
             var boardsControllerStub =
-                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] { order1, order2 });
+                _boardsControllerCreator.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] { order1, order2 });
 
             boardsControllerStub.GetOrderReadinessToStationary(1);
 
@@ -92,7 +87,7 @@ namespace Dodo.Tests
             var oddOrder = Mock.Of<ProductionOrder>(x => x.Number == 1);
             var evenOrder = Mock.Of<ProductionOrder>(x => x.Number == 2);
             var boardsControllerMock =
-                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
+                _boardsControllerCreator.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
             var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 
@@ -107,7 +102,7 @@ namespace Dodo.Tests
             var oddOrder = Mock.Of<ProductionOrder>(x => x.Number == 1);
             var evenOrder = Mock.Of<ProductionOrder>(x => x.Number == 2);
             var boardsControllerMock =
-                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
+                _boardsControllerCreator.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
             var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 

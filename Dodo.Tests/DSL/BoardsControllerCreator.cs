@@ -9,7 +9,7 @@ using Moq;
 
 namespace Dodo.Tests.DSL
 {
-    public class BoardsControllerBuilder
+    public class BoardsControllerCreator
     {
         private readonly ObjectMother _objectMother = new ObjectMother();
 
