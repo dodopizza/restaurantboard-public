@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Controllers;
@@ -80,5 +81,33 @@ namespace Dodo.Tests.DSL
                 hostingEnvironment: hostingEnvironmentDummy.Object
             );
         }
+
+
+        public BoardsController CreateBoardsControllerWithClientServiceAndPizzeria(
+            IClientsService clientService,
+            Pizzeria pizzeria)
+        {
+            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
+            departmentsStructureServiceStub
+                .Setup(x => x.GetPizzeriaOrCache(1))
+                .Returns(pizzeria);
+
+            var trackerClientStub = new Mock<ITrackerClient>();
+            trackerClientStub
+                .Setup(x => x.GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] {OrderState.OnTheShelf}, 16))
+                .Returns(new ProductionOrder[0]);
+
+            var managementServiceDummy = new Mock<IManagementService>();
+            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
+
+            return new BoardsController(
+                departmentsStructureService: departmentsStructureServiceStub.Object,
+                clientsService: clientService,
+                managementService: managementServiceDummy.Object,
+                trackerClient: trackerClientStub.Object,
+                hostingEnvironment: hostingEnvironmentDummy.Object
+            );
+        }
+
     }
 }

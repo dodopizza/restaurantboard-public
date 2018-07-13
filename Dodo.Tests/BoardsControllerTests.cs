@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Dodo.Core.Common;
-using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.DomainModel.OrderProcessing;
-using Dodo.Core.Services;
 using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Moq;
@@ -108,6 +107,40 @@ namespace Dodo.Tests
 
             var evenClientOrder = order.ClientOrders.First(x => x.OrderNumber == 2);
             Assert.AreEqual("green", evenClientOrder.Color);
+        }
+
+        // Behaviour
+        [Test]
+        public void GetOrderReadinessToStationary_ShouldGetIconsFromClientService_ForPizzeriaClientTreatmentRandomImage()
+        {
+            var pizzeriaStub = _objectMother.CreatePizzeriaWithClientTreatment(ClientTreatment.RandomImage);
+            var clientServiceMock = new ClientServiceMockBuilder()
+                .WithGetIcons()
+                .Build();
+            var boardsControllerStub =
+                _boardsControllerCreator.CreateBoardsControllerWithClientServiceAndPizzeria(
+                    clientServiceMock.Object, pizzeriaStub);
+
+            boardsControllerStub.GetOrderReadinessToStationary(1);
+
+            clientServiceMock.Verify(x => x.GetIcons(), Times.Once);
+        }
+
+        // Behaviour
+        [Test]
+        public void GetOrderReadinessToStationary_ShouldNotCallGetIconsFromClientService_ForPizzeriaClientTreatmentOtherThanRandomImage()
+        {
+            var pizzeriaStub = _objectMother.CreatePizzeriaWithClientTreatment(ClientTreatment.DefaultName);
+            var clientServiceMock = new ClientServiceMockBuilder()
+                .WithGetIcons()
+                .Build();
+            var boardsControllerStub =
+                _boardsControllerCreator.CreateBoardsControllerWithClientServiceAndPizzeria(
+                    clientServiceMock.Object, pizzeriaStub);
+
+            boardsControllerStub.GetOrderReadinessToStationary(1);
+
+            clientServiceMock.Verify(x => x.GetIcons(), Times.Never);
         }
     }
 }

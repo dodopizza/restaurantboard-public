@@ -8,7 +8,7 @@ namespace Dodo.Tests.DSL
     public class DepartmentStructureServiceMockBuilder
     {
         private readonly ObjectMother _objectMother = new ObjectMother();
-        private Mock<IDepartmentsStructureService> _service;
+        private readonly Mock<IDepartmentsStructureService> _service;
 
         public DepartmentStructureServiceMockBuilder()
         {
