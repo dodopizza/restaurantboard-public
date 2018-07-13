@@ -79,14 +79,14 @@ namespace Dodo.Tests
         public void OnAddProductionOrderWithExitingOrder_CallUpdateProductionOrder()
         {
             var orderStorageMock = new Mock<IOrdersStorage>();
-            orderStorageMock.Setup(o => o.GetProductionOrderByName(It.IsAny<string>())).Returns(new ProductionOrder());            
+            orderStorageMock.Setup(o => o.GetProductionOrderByName(It.IsAny<string>()))
+                .Returns(new ProductionOrder() {Id= 5 });            
 
             var trackerClient = new TrackerClient(orderStorageMock.Object);
 
             trackerClient.AddProductionOrder("John", 1);
 
-            orderStorageMock.Verify(o => o.UpdateProductionOrder(
-                It.IsAny<int>(), It.IsAny<string>(), It.IsAny<int?>()), Times.Once);
+            orderStorageMock.Verify(o => o.UpdateProductionOrder(5, null, 1), Times.Once);
 
         }
         [Fact]
@@ -95,15 +95,11 @@ namespace Dodo.Tests
             var orderStorageMock = new Mock<IOrdersStorage>();
             orderStorageMock.Setup(o => o.GetProductionOrderByName(It.IsAny<string>())).Returns<ProductionOrder>(null);
 
-            var trackerClient = new TrackerClient(orderStorageMock.Object);
-
-            //Убираем предыдущие вызовы, так как есть дефолтные значения в конструкторе
-            orderStorageMock.ResetCalls();
+            var trackerClient = new TrackerClient(orderStorageMock.Object);            
 
             trackerClient.AddProductionOrder("John", 1);
 
-            orderStorageMock.Verify(o => o.AddProductionOrder(
-               It.IsAny<string>(), It.IsAny<int>()), Times.Once);
+            orderStorageMock.Verify(o => o.AddProductionOrder("John", 1), Times.Once);
         }
 
         [Fact]
@@ -111,28 +107,22 @@ namespace Dodo.Tests
         {
             var orderStorageMock = new Mock<IOrdersStorage>();
 
-            var expectedOrder = new ProductionOrder { ChangeDate = new DateTime(2018, 12, 01) };
+            var expectedOrders = new[] { new ProductionOrder { ChangeDate = new DateTime(2018, 12, 01) } };
+            var allOrders = new List<ProductionOrder>(expectedOrders);
+            allOrders.Add(new ProductionOrder { ChangeDate = new DateTime(2018, 01, 01) });
 
-            orderStorageMock.Setup(o => o.GetAllProductionOrders())
-                .Returns(new List<ProductionOrder>
-                {
-                    new ProductionOrder { ChangeDate = new DateTime(2018, 01, 01)},
-                    new ProductionOrder { ChangeDate = new DateTime(2018, 01, 01)},
-                    new ProductionOrder { ChangeDate = new DateTime(2018, 01, 01)},
-                    expectedOrder,
-                });
+            orderStorageMock.Setup(o => o.GetAllProductionOrders()).Returns(allOrders);
 
             var trackerClient = new TrackerClient(orderStorageMock.Object);
 
             var orders = trackerClient.GetOrdersAfterDate(new DateTime(2018, 06, 01));
 
-            Assert.Single(orders);
-            Assert.Equal(expectedOrder, orders[0]);
+            Assert.Equal(expectedOrders, orders);
         }
 
         private IOrdersStorage GetOrderStorageTest(IDateTimeProvider dateTimeProvider = null)
         {
-            return new InMemoryOrdersStorage(dateTimeProvider ?? new DateTimeProvider());
+            return new InMemoryOrdersStorage(dateTimeProvider ?? new DateTimeProviderUtcNow());
         }
     }
 }

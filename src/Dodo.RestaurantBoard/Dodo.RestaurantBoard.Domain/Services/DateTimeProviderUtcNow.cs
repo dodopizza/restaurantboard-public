@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
-    public class DateTimeProvider : IDateTimeProvider
+    public class DateTimeProviderUtcNow : IDateTimeProvider
     {
         public DateTime GetDateTime()
         {

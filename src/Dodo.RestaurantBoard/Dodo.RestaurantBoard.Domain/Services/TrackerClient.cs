@@ -26,9 +26,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
         public TrackerClient(IOrdersStorage ordersStorage)
         {
             this.ordersStorage = ordersStorage;
-
-            ordersStorage.AddProductionOrder("Пупа", 3);
-            ordersStorage.AddProductionOrder("Лупа", 4);
+            
         }
 
         public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
