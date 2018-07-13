@@ -1,12 +1,17 @@
-﻿using Dodo.Tracker.Contracts;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Dodo.Tracker.Contracts;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
     public class OrdersRepository : IOrdersRepository
     {
-        public ProductionOrder[] GetOrders()
+        private readonly List<ProductionOrder> _orders;
+
+        public OrdersRepository()
         {
-            return new[]
+            _orders = new List<ProductionOrder>
             {
                 new ProductionOrder
                 {
@@ -21,6 +26,33 @@ namespace Dodo.RestaurantBoard.Domain.Services
                     ClientName = "Лупа"
                 },
             };
+        }
+
+        public IEnumerable<ProductionOrder> GetOrders()
+        {
+            return _orders;
+        }
+
+        public void AddOrder(ProductionOrder order)
+        {
+            if (order == null)
+                throw new ArgumentException(nameof(order));
+
+            order.Id = _orders.Any()
+                ? _orders.Max(x => x.Id) + 1
+                : 1;
+
+            _orders.Append(order);
+        }
+
+        public void DeleteOrder(int id)
+        {
+            var order = _orders.FirstOrDefault(p => p.Id == id);
+
+            if (order != null)
+            {
+                _orders.Remove(order);
+            }
         }
     }
 }

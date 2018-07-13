@@ -1,16 +1,14 @@
 using System;
-using Dodo.Core.DomainModel.Departments;
-using Dodo.Core.DomainModel.Departments.Departments;
-using Dodo.Core.DomainModel.Finance;
-using Moq;
 using NUnit.Framework;
-using Dodo.Core.Services;
-using Dodo.RestaurantBoard.Domain.Services;
-using Dodo.RestaurantBoard.Site.Controllers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
 using AutoFixture;
+using Dodo.Core.Services;
+using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.RestaurantBoard.Site.Controllers;
 
 namespace Dodo.RestaurantBoard.Site.Tests
 {
@@ -45,16 +43,16 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
         private BoardsController CreateController(IDepartmentsStructureService departmentsStructureService)
         {
-            var dummyClientsService = new Mock<IClientsService>();
-            var dummyManagementService = new Mock<IManagementService>();
-            var dummyTrackerClient = new Mock<ITrackerClient>();
-            var dummyHostingEnvironment = new Mock<IHostingEnvironment>();
+            var dummyClientsService = new Mock<IClientsService>().Object;
+            var dummyManagementService = new Mock<IManagementService>().Object;
+            var dummyTrackerClient = new Mock<ITrackerClient>().Object;
+            var dummyHostingEnvironment = new Mock<IHostingEnvironment>().Object;
 
             return new BoardsController(departmentsStructureService,
-                dummyClientsService.Object,
-                dummyManagementService.Object,
-                dummyTrackerClient.Object,
-                dummyHostingEnvironment.Object);
+                dummyClientsService,
+                dummyManagementService,
+                dummyTrackerClient,
+                dummyHostingEnvironment);
         }
     }
 }

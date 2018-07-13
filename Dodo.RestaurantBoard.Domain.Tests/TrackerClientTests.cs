@@ -1,4 +1,3 @@
-using System;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tracker.Contracts;
 using Moq;
