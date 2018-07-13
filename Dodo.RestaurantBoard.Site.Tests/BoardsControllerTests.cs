@@ -14,6 +14,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
 {
     public class BoardsControllerTests
     {
+        // Behaviour test
         [Test]
         public void OrdersReadinessToStationary_ThrowsArgumentException_WhenDepartmentIsNull()
         {
@@ -25,6 +26,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             Assert.Throws<ArgumentException>(() => boardsController.OrdersReadinessToStationary(42));
         }
 
+        // State test
         [Test]
         public void OrdersReadinessToStationary_ReturnsViewResult_WhenDepartmentIsNotNull()
         {
