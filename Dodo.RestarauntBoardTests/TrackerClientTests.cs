@@ -17,28 +17,28 @@ namespace Dodo.RestarauntBoardTests
         public void AddOrdersShoudInvokeOnce_WhenPlaceOrder()
         {
             var productOrderDummy = new Mock<IProductionOrder>();
-            var orderStoreStub = new Mock<IOrdersStore>();
+            var orderStoreMock = new Mock<IOrdersStore>();
             var productOrder = productOrderDummy.Object;
-            var orderStore = orderStoreStub.Object;
+            var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 
             trackerClient.PlaceOrder(productOrder);
 
-            orderStoreStub.Verify(m=>m.AddOrder(It.IsAny<IProductionOrder>()),Times.Once);
+            orderStoreMock.Verify(m=>m.AddOrder(It.IsAny<IProductionOrder>()),Times.Once);
         }
 
         // Behaviour
         [Fact]
         public void GetOrdersShoudInvokeOnce_WhenGetOrders()
         {
-            var orderStoreStub = new Mock<IOrdersStore>();
-            orderStoreStub.Setup(o => o.GetOrders()).Returns(It.IsAny<List<IProductionOrder>>());
-            var orderStore = orderStoreStub.Object;
+            var orderStoreMock = new Mock<IOrdersStore>();
+            orderStoreMock.Setup(o => o.GetOrders()).Returns(It.IsAny<List<IProductionOrder>>());
+            var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 
             trackerClient.GetOrders();
 
-            orderStoreStub.Verify(m => m.GetOrders(), Times.Once);
+            orderStoreMock.Verify(m => m.GetOrders(), Times.Once);
         }
 
         // Behaviour
@@ -46,14 +46,14 @@ namespace Dodo.RestarauntBoardTests
         public void ShoudNotInvokeGetOrders_WhenPlaceOrder()
         {
             var productOrderDummy = new Mock<IProductionOrder>();
-            var orderStoreStub = new Mock<IOrdersStore>();
+            var orderStoreMock = new Mock<IOrdersStore>();
             var productOrder = productOrderDummy.Object;
-            var orderStore = orderStoreStub.Object;
+            var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 
             trackerClient.PlaceOrder(productOrder);
 
-            orderStoreStub.Verify(m => m.GetOrders(), Times.Never);
+            orderStoreMock.Verify(m => m.GetOrders(), Times.Never);
         }
 
         // State
