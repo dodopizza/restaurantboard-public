@@ -28,6 +28,7 @@ namespace Dodo.RestaurantBoard.Site
 
 			builder.RegisterType<TrackerClient>().As<ITrackerClient>();
             builder.RegisterType<InMemoryOrdersStorage>().As<IOrdersStorage>();
+            builder.RegisterType<IDateTimeProvider>().As<DateTimeProvider>();
 
             return builder;
 		}

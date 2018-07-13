@@ -15,20 +15,19 @@ namespace Dodo.Tests
         [Fact]
         public void UpdateOrderNumber_WhenAddingOrderWithSameName()
         {
-            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
+            var trackerClient = new TrackerClient(GetOrderStorageTest());
 
             trackerClient.AddProductionOrder("John", 3);
             trackerClient.AddProductionOrder("John", 2);
+            
 
-            var result = trackerClient.GetOrderByName("John");
-
-            Assert.Equal(5, result.Number);
+            Assert.Equal(3 + 2, trackerClient.GetOrderByName("John").Number);
         }
 
         [Fact]
         public void AddingNewOrder_WhenAddingWithDifferentClientNames()
         {
-            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
+            var trackerClient = new TrackerClient(GetOrderStorageTest());
 
             trackerClient.AddProductionOrder("John", 3);
             trackerClient.AddProductionOrder("Tom", 2);
@@ -41,35 +40,39 @@ namespace Dodo.Tests
         }
 
         [Fact]
-        public void SetChangeDateToUtcNow_WhenAddingOrder()
+        public void SetChangeDateFromDateTimeProvider_WhenAddingOrder()
         {
-            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
-
-            var dateBeforeCall = DateTime.UtcNow;
+            var dateTimeExpected = new DateTime(2018, 1, 1, 1, 1, 1);
+            var dateTimeProviderStub = new Mock<IDateTimeProvider>();
+            dateTimeProviderStub.Setup(d => d.GetDateTime()).Returns(dateTimeExpected);
+            var trackerClient = new TrackerClient(GetOrderStorageTest(dateTimeProviderStub.Object));
 
             trackerClient.AddProductionOrder("John", 3);
-
-            var dateAfterCall = DateTime.UtcNow;
-
+            
             var orderAddDate = trackerClient.GetOrderByName("John").ChangeDate;
 
-            Assert.True(orderAddDate >= dateBeforeCall && orderAddDate <= dateAfterCall);
+            Assert.Equal(dateTimeExpected, orderAddDate);
         }
 
         [Fact]
-        public void UpdateChangeDateToNewer_WhenUpdatingOrder()
+        public void UpdateChangeDate_WhenUpdatingOrder()
         {
-            var trackerClient = new TrackerClient(new InMemoryOrdersStorage());
+            var dateTimeCreated = new DateTime(2018, 1, 1, 1, 1, 1);
+            var dateTimeProviderStub = new Mock<IDateTimeProvider>();
+
+            var trackerClient = new TrackerClient(GetOrderStorageTest(dateTimeProviderStub.Object));
+            dateTimeProviderStub.SetupSequence(d => d.GetDateTime())
+                .Returns(dateTimeCreated)
+                .Returns(dateTimeCreated.AddSeconds(10));
+
             trackerClient.AddProductionOrder("John", 3);
             var orderDateAdd = trackerClient.GetOrderByName("John").ChangeDate;
-
-            Task.Delay(10).Wait();
 
             trackerClient.AddProductionOrder("John", 2);
 
             var orderUpdateDate = trackerClient.GetOrderByName("John").ChangeDate;
 
-            Assert.True(orderDateAdd < orderUpdateDate);
+            Assert.True(orderDateAdd != orderUpdateDate);
         }
 
         [Fact]
@@ -125,6 +128,11 @@ namespace Dodo.Tests
 
             Assert.Single(orders);
             Assert.Equal(expectedOrder, orders[0]);
+        }
+
+        private IOrdersStorage GetOrderStorageTest(IDateTimeProvider dateTimeProvider = null)
+        {
+            return new InMemoryOrdersStorage(dateTimeProvider ?? new DateTimeProvider());
         }
     }
 }

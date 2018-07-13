@@ -20,8 +20,6 @@ namespace Dodo.Tests
         {
             var departmentsStructureServiceMock = new Mock<IDepartmentsStructureService>();     
 
-            departmentsStructureServiceMock.Setup(d => d.GetPizzeriaOrCache(It.IsAny<int>()));
-
             var apiController = GetTestApiController(
               departmentsStructureService: departmentsStructureServiceMock.Object);
 
@@ -35,8 +33,6 @@ namespace Dodo.Tests
         {
             var trackerClientMock = new Mock<ITrackerClient>();
 
-            //trackerClientMock.Setup(t => t.GetAllOrders());
-
             var apiController = GetTestApiController(
               trackerClient: trackerClientMock.Object);
 
@@ -45,18 +41,19 @@ namespace Dodo.Tests
             trackerClientMock.Verify(t => t.GetAllOrders(), Times.Once);
         }
         [Fact]
-        public void OnGetAllOrdersFromPizzeria_CallGetOrdersByTypeWithUuidFromDepartmentsStructureService()
+        public void OnGetAllOrdersFromPizzeria_CallGetOrdersByTypeWithPizzeriaUuid()
         {
             var expectedUuid = new Uuid("11111111111111111111111111111111");
+            var pizzeriaId = 1;
 
             var trackerClientMock = new Mock<ITrackerClient>();
             var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceStub.Setup(d => d.GetPizzeriaOrCache(It.IsAny<int>()))
+            departmentsStructureServiceStub.Setup(d => d.GetPizzeriaOrCache(pizzeriaId))
                 .Returns(CreatePizzeria(uuid: expectedUuid));
             var apiController = GetTestApiController(departmentsStructureService: departmentsStructureServiceStub.Object,
               trackerClient: trackerClientMock.Object);
 
-            apiController.GetAllOrdersFromPizzeria(1);
+            apiController.GetAllOrdersFromPizzeria(pizzeriaId);
 
             trackerClientMock.Verify(t => t.GetOrdersByType(
                     expectedUuid, 

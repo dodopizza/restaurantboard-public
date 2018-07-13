@@ -11,6 +11,13 @@ namespace Dodo.RestaurantBoard.Domain.Services
     {
        private  int lastOrderId = 0;
        private Dictionary<int,ProductionOrder> productionOrders = new Dictionary<int, ProductionOrder>();
+        private readonly IDateTimeProvider dateTimeProvider;
+
+        public InMemoryOrdersStorage(IDateTimeProvider dateTimeProvider)
+        {
+            this.dateTimeProvider = dateTimeProvider;
+        }
+
 
         public void AddProductionOrder(string clientName, int number)
         {
@@ -20,7 +27,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 Id = lastOrderId,
                 ClientName = clientName,
                 Number = number,
-                ChangeDate = DateTime.UtcNow
+                ChangeDate = dateTimeProvider.GetDateTime()
             });
         }
 
@@ -51,7 +58,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
             {
                 productionOrder.ClientName = clientName ?? productionOrder.ClientName;
                 productionOrder.Number = number ?? productionOrder.Number;
-                productionOrder.ChangeDate = DateTime.UtcNow;
+                productionOrder.ChangeDate = dateTimeProvider.GetDateTime();
             }
         }
 
