@@ -77,105 +77,59 @@ namespace Dodo.Tests
         [Test]
         public void GetOrderReadinessToStationary_ShouldUseNumberProperty_ForEachOrder()
         {
-            var trackerOrderMocks = CreateTrackerOrderObjects();
-            var pizzeriaStub = _objectMother.CreatePizzeria();
-            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceStub
-                .Setup(x => x.GetPizzeriaOrCache(1))
-                .Returns(pizzeriaStub);
-            var trackerClientStub = new Mock<ITrackerClient>();
-            trackerClientStub
-                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
-                    new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderMocks.Select(x => x.Object).ToArray());
-            var boardsControllerStub = _boardsControllerBuilder
-                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
-                    departmentsStructureServiceStub.Object,
-                    trackerClientStub.Object);
+            var order1 = new Mock<ProductionOrder>();
+            order1.Setup(x => x.Number).Returns(1);
+            var order2 = new Mock<ProductionOrder>();
+            order2.Setup(x => x.Number).Returns(2);
+            var boardsControllerStub =
+                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {order1, order2});
 
             boardsControllerStub.GetOrderReadinessToStationary(1);
 
-            foreach (var trackerOrderMock in trackerOrderMocks)
-            {
-                trackerOrderMock.Verify(x => x.Number, Times.Once);
-            }
-        }
-
-        // State
-        [Test]
-        public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveGreenColor()
-        {
-            var trackerOrderStubs = CreateTrackerOrderObjects();
-            var pizzeriaStub = _objectMother.CreatePizzeria();
-            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceStub
-                .Setup(x => x.GetPizzeriaOrCache(1))
-                .Returns(pizzeriaStub);
-            var trackerClientStub = new Mock<ITrackerClient>();
-            trackerClientStub
-                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
-                    new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderStubs.Select(x => x.Object).ToArray());
-            var boardsControllerMock = _boardsControllerBuilder
-                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
-                    departmentsStructureServiceStub.Object,
-                    trackerClientStub.Object);
-
-            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
-            var order = jsonResult.Value as IOrder;
-            var oddOrderColors = order.ClientOrders
-                .Where(x => x.OrderNumber % 2 == 0)
-                .Select(s => s.Color)
-                .ToArray();
-
-            foreach (var orderColor in oddOrderColors)
-            {
-                Assert.AreEqual("green", orderColor);
-            }
+            order1.Verify(x => x.Number, Times.Once);
+            order2.Verify(x => x.Number, Times.Once);
         }
 
         // State
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveRedColor()
         {
-            var trackerOrderStubs = CreateTrackerOrderObjects();
-            var pizzeriaStub = _objectMother.CreatePizzeria();
-            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
-            departmentsStructureServiceStub
-                .Setup(x => x.GetPizzeriaOrCache(1))
-                .Returns(pizzeriaStub);
-            var trackerClientStub = new Mock<ITrackerClient>();
-            trackerClientStub
-                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
-                    new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderStubs.Select(x => x.Object).ToArray());
-            var boardsControllerMock = _boardsControllerBuilder
-                .CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
-                    departmentsStructureServiceStub.Object,
-                    trackerClientStub.Object);
+            var oddOrder = new Mock<ProductionOrder>();
+            oddOrder.Setup(x => x.Number).Returns(1);
+            var evenOrder = new Mock<ProductionOrder>();
+            evenOrder.Setup(x => x.Number).Returns(2);
+            var boardsControllerMock =
+                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
             var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
             var order = jsonResult.Value as IOrder;
-            var oddOrderColors = order.ClientOrders
-                .Where(x => x.OrderNumber % 2 == 1)
+            var oddOrderColor = order.ClientOrders
+                .Where(x => x.OrderNumber == 1)
                 .Select(s => s.Color)
-                .ToArray();
+                .First();
 
-            foreach (var orderColor in oddOrderColors)
-            {
-                Assert.AreEqual("red", orderColor);
-            }
+            Assert.AreEqual("red", oddOrderColor);
         }
 
-        private Mock<ProductionOrder>[] CreateTrackerOrderObjects()
+        // State
+        [Test]
+        public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveGreenColor()
         {
-            var order1 = new Mock<ProductionOrder>();
-            order1.Setup(x => x.Number).Returns(1);
+            var oddOrder = new Mock<ProductionOrder>();
+            oddOrder.Setup(x => x.Number).Returns(1);
+            var evenOrder = new Mock<ProductionOrder>();
+            evenOrder.Setup(x => x.Number).Returns(2);
+            var boardsControllerMock =
+                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
-            var order2 = new Mock<ProductionOrder>();
-            order2.Setup(x => x.Number).Returns(2);
+            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
+            var order = jsonResult.Value as IOrder;
+            var evenOrderColor = order.ClientOrders
+                .Where(x => x.OrderNumber == 2)
+                .Select(s => s.Color)
+                .First();
 
-            return new[] { order1, order2 };
+            Assert.AreEqual("green", evenOrderColor);
         }
     }
 }

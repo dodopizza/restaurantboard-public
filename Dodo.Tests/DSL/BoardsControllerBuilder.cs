@@ -1,6 +1,9 @@
-﻿using Dodo.Core.Services;
+﻿using System.Linq;
+using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Controllers;
+using Dodo.Tracker.Contracts;
+using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
 using Moq;
 
@@ -8,6 +11,8 @@ namespace Dodo.Tests.DSL
 {
     public class BoardsControllerBuilder
     {
+        private readonly ObjectMother _objectMother = new ObjectMother();
+
         public BoardsController CreateBoardsControllerWithDepartmentService(
             IDepartmentsStructureService departmentsStructureService)
         {
@@ -25,19 +30,31 @@ namespace Dodo.Tests.DSL
             );
         }
 
-        public BoardsController CreateBoardsControllerWithDepartmentServiceAndTrackerClient(
-            IDepartmentsStructureService departmentsStructureService,
-            ITrackerClient trackerClient)
+        public BoardsController CreateBoardsControllerWithTrackerProductionOrderFakes(
+            Mock<ProductionOrder>[] trackerOrderFakes)
         {
+            var pizzeriaStub = _objectMother.CreatePizzeria();
+
+            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
+            departmentsStructureServiceStub
+                .Setup(x => x.GetPizzeriaOrCache(1))
+                .Returns(pizzeriaStub);
+
+            var trackerClientStub = new Mock<ITrackerClient>();
+            trackerClientStub
+                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
+                    new[] {OrderState.OnTheShelf}, 16))
+                .Returns(trackerOrderFakes.Select(x => x.Object).ToArray());
+
             var clientsServiceDummy = new Mock<IClientsService>();
             var managementServiceDummy = new Mock<IManagementService>();
             var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
 
             return new BoardsController(
-                departmentsStructureService: departmentsStructureService,
+                departmentsStructureService: departmentsStructureServiceStub.Object,
                 clientsService: clientsServiceDummy.Object,
                 managementService: managementServiceDummy.Object,
-                trackerClient: trackerClient,
+                trackerClient: trackerClientStub.Object,
                 hostingEnvironment: hostingEnvironmentDummy.Object
             );
         }
