@@ -13,4 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DomainModel\UnitStub.cs" />
+  </ItemGroup>
 </Project>

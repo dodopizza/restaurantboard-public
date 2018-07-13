@@ -5,7 +5,7 @@ using Dodo.Core.DomainModel.Management.Organizations;
 namespace Dodo.Core.DomainModel.Departments
 {
 	[Serializable]
-	public abstract class Unit
+	public class Unit
 	{
 		public Int32 Id { get; private set; }
 		public Uuid Uuid { get; private set; }
@@ -36,38 +36,73 @@ namespace Dodo.Core.DomainModel.Departments
             Organization = organization;
 		}
 		
-		protected Unit()
+		public Unit(UnitType type)
+		{
+			Type = type;
+		}
+		
+		public Unit()
 		{
 		}
 
+		public string GetName()
+		{
+			if (string.IsNullOrEmpty(Name))
+			{
+				switch (Type)
+				{
+					case UnitType.Office:
+						Name = ToStringOffice();
+						break;
+					case UnitType.Pizzeria:
+						Name = ToStringPizzeria();
+						break;
+					case UnitType.CallCenter:
+						Name = ToStringCallCenter();
+						break;
+					case UnitType.Warehouse:
+						Name = ToStringWarehouse();
+						break;
+					case UnitType.ServiceDelivery:
+						Name = ToStringServiceDelivery();
+						break;
+					default:
+						Name = ToString();
+						break;
+				}
+			}
+
+			return Name;
+		}
+		
 		public override String ToString()
 		{
-			return $"{Name} Type: {Type} State: {State}";
+			return "Type: Unknown";
 		}
 		
 		public virtual String ToStringOffice()
 		{
-			return $"{Name} Type: Office State: {State}";
+			return "Type: Office";
 		}
 		
 		public virtual String ToStringPizzeria()
 		{
-			return $"{Name} Type: Pizzeria State: {State}";
+			return "Type: Pizzeria";
 		}
 		
 		public virtual String ToStringCallCenter()
 		{
-			return $"{Name} Type: CallCenter State: {State}";
+			return "Type: CallCenter";
 		}
 		
 		public virtual String ToStringWarehouse()
 		{
-			return $"{Name} Type: Warehouse State: {State}";
+			return "Type: Warehouse";
 		}
 		
 		public virtual String ToStringServiceDelivery()
 		{
-			return $"{Name} Type: ServiceDelivery State: {State}";
+			return "Type: ServiceDelivery";
 		}
 	}
 }
