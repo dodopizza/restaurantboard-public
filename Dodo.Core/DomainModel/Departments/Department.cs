@@ -8,7 +8,7 @@ using Dodo.Core.Common;
 namespace Dodo.Core.DomainModel.Departments
 {
 	[Serializable]
-	public abstract class Department : Entity
+	public class Department : Entity
 	{
 		public virtual Uuid Uuid { get; set; }
 		public virtual String Name { get; set; }
@@ -33,6 +33,8 @@ namespace Dodo.Core.DomainModel.Departments
 				return (Int16)Math.Round(((Double)TimeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
 			}
 		}
+
+		public int ManagedTimeZoneShift { get; set; }
 
 		public virtual Country Country { get; set; }
 
@@ -59,20 +61,20 @@ namespace Dodo.Core.DomainModel.Departments
 			}
 		}
 
-		public virtual String TimeZoneShiftString
-		{
-			get
-			{
-				Char mathSimbol;
-				if (TimeZoneShift > 0)
-					mathSimbol = '+';
-				else if (TimeZoneShift < 0)
-					mathSimbol = '-';
-				else
-					mathSimbol = ' ';
+		public virtual String TimeZoneShiftString => getTimeZoneShiftString(TimeZoneShift);
+		public virtual String ManagedTimeZoneShiftString => getTimeZoneShiftString(ManagedTimeZoneShift);
 
-				return String.Format("{0}{1}", mathSimbol, Math.Abs(TimeZoneShift));
-			}
+		private string getTimeZoneShiftString(int timeZoneShift)
+		{
+			Char mathSimbol;
+			if (timeZoneShift > 0)
+				mathSimbol = '+';
+			else if (timeZoneShift < 0)
+				mathSimbol = '-';
+			else
+				mathSimbol = ' ';
+
+			return String.Format("{0}{1}", mathSimbol, Math.Abs(timeZoneShift));	
 		}
 
 		public virtual TimeSpan CurrentTimeZoneUTCOffset
@@ -110,7 +112,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public virtual DateTime CurrentDate => CurrentDateTime.Date;
 
-		
+		public readonly List<Unit> Units = new List<Unit>();
 		
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state, Int32 timeZoneUTCOffset,  Country country)
 		{
@@ -144,6 +146,22 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 		}
 
+		public void AddUnit(Unit unit)
+		{
+			Units.Add(unit);
+		}
+
+		public List<string> GetAllUnitNames()
+		{
+			var unitsNames = new List<string>();
+			foreach (var unit in Units)
+			{
+				unitsNames.Add(unit.GetName());
+			}
+
+			return unitsNames;
+		}
+		
 		public static DepartmentParameters GetDepartmentParametersFromXmlString(String value, DepartmentType departmentType)
 		{
 			if (String.IsNullOrEmpty(value)) return null;
