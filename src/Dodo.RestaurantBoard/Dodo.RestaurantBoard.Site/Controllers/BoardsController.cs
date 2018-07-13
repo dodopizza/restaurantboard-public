@@ -97,7 +97,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
-
+            
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
             if (clientTreatment == ClientTreatment.RandomImage)
@@ -119,6 +119,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                         {
                             x.OrderId,
                             x.OrderNumber,
+                            x.IsExpired,
                             x.ClientName,
                             ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
                                 ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
@@ -134,7 +135,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(IProductionOrder order)
         {
-            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
+            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now, isExpired: order.IsExpired(DateTime.Now));
         }
 
         private static string GetIconPath(int orderNumber, IReadOnlyList<ClientIcon> icons, string fileStorageHost)

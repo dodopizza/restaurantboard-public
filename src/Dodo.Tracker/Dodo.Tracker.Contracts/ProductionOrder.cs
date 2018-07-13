@@ -37,7 +37,7 @@ namespace Dodo.Tracker.Contracts
 
         public bool IsExpired(DateTime now)
         {
-            return (now - OrderDate).TotalMinutes>10;
+            return (now - OrderDate).TotalSeconds>10;
         }
     }
 }
