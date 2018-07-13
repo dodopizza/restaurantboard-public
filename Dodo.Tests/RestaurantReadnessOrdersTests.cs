@@ -1,4 +1,5 @@
 ﻿using Dodo.Tests.DSL;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using NUnit.Framework;
 
 namespace Dodo.Tests
@@ -14,9 +15,10 @@ namespace Dodo.Tests
         {
             var restaurantReadnessOrder = _mother.CreateRestaurantReadnessOrderWithNumber(1);
 
-            Assert.AreEqual("red", restaurantReadnessOrder.Color);
-        }
+            var color = restaurantReadnessOrder.Color;
 
+            Assert.AreEqual("red", color);
+        }
 
         // State
         [Test]
@@ -24,7 +26,9 @@ namespace Dodo.Tests
         {
             var restaurantReadnessOrder = _mother.CreateRestaurantReadnessOrderWithNumber(2);
 
-            Assert.AreEqual("green", restaurantReadnessOrder.Color);
+            var color = restaurantReadnessOrder.Color;
+
+            Assert.AreEqual("green", color);
         }
     }
 }

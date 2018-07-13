@@ -2,7 +2,10 @@
 using System.Linq;
 using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.DomainModel.Departments.Departments;
+using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
+using Dodo.Core.DomainModel.Products;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tests.DSL;
@@ -72,7 +75,7 @@ namespace Dodo.Tests
 
         // Behaviour
         [Test]
-        public void GetOrderReadinessToStationary_ShouldUse_UseNumberPropertyForEachOrder()
+        public void GetOrderReadinessToStationary_ShouldUseNumberProperty_ForEachOrder()
         {
             var trackerOrderMocks = CreateTrackerOrderObjects();
             var pizzeriaStub = _objectMother.CreatePizzeria();
@@ -172,16 +175,7 @@ namespace Dodo.Tests
             var order2 = new Mock<ProductionOrder>();
             order2.Setup(x => x.Number).Returns(2);
 
-            var order3 = new Mock<ProductionOrder>();
-            order3.Setup(x => x.Number).Returns(3);
-
-            var order4 = new Mock<ProductionOrder>();
-            order4.Setup(x => x.Number).Returns(4);
-
-            var order5 = new Mock<ProductionOrder>();
-            order5.Setup(x => x.Number).Returns(5);
-
-            return new[] { order1, order2, order3, order4, order5 };
+            return new[] { order1, order2 };
         }
     }
 }

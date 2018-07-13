@@ -41,5 +41,22 @@ namespace Dodo.Tests.DSL
                 hostingEnvironment: hostingEnvironmentDummy.Object
             );
         }
+
+        public BoardsController CreateBoardsControllerWithDepartmentServiceAndManagementService(
+            IDepartmentsStructureService departmentsStructureService,
+            IManagementService managementService)
+        {
+            var clientsServiceDummy = new Mock<IClientsService>();
+            var trackerClientDummy = new Mock<ITrackerClient>();
+            var hostingEnvironmentDummy = new Mock<IHostingEnvironment>();
+
+            return new BoardsController(
+                departmentsStructureService: departmentsStructureService,
+                clientsService: clientsServiceDummy.Object,
+                managementService: managementService,
+                trackerClient: trackerClientDummy.Object,
+                hostingEnvironment: hostingEnvironmentDummy.Object
+            );
+        }
     }
 }
