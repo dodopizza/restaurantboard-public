@@ -54,5 +54,10 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 _orders.Remove(order);
             }
         }
+
+        public ProductionOrder GetOrder(int id)
+        {
+            return _orders.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

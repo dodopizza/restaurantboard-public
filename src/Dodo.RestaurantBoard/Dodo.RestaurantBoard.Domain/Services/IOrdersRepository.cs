@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Dodo.Tracker.Contracts;
+
 namespace Dodo.RestaurantBoard.Domain.Services
 {
     public interface IOrdersRepository
@@ -7,5 +8,6 @@ namespace Dodo.RestaurantBoard.Domain.Services
         IEnumerable<ProductionOrder> GetOrders();
         void AddOrder(ProductionOrder order);
         void DeleteOrder(int id);
+        ProductionOrder GetOrder(int id);
     }
 }
