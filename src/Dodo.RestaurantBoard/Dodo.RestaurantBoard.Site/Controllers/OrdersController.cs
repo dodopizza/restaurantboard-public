@@ -22,12 +22,13 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             try
             {
                 _trackerClient.AddOrder(order);
-                return Ok();
             }
-            catch (Exception)
+            catch (ArgumentNullException)
             {
                 return BadRequest();
             }
+
+            return Ok();
         }
     }
 }

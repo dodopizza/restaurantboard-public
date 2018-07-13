@@ -30,7 +30,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	    public void AddOrder(ProductionOrder order)
 	    {
 	        if (string.IsNullOrEmpty(order.ClientName))
-                throw new Exception($"{nameof(order.ClientName)} can not be null");
+                throw new ArgumentNullException($"{nameof(order.ClientName)} can not be null");
 
             ordersRepository.AddOrder(order);
 	    }
