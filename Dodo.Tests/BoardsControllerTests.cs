@@ -2,15 +2,10 @@
 using System.Linq;
 using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Departments;
-using Dodo.Core.DomainModel.Departments.Departments;
-using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
-using Dodo.Core.DomainModel.Products;
 using Dodo.Core.Services;
-using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
-using Dodo.Tracker.Contracts.Enums;
 using Moq;
 using NUnit.Framework;
 
@@ -82,7 +77,7 @@ namespace Dodo.Tests
             var order2 = new Mock<ProductionOrder>();
             order2.Setup(x => x.Number).Returns(2);
             var boardsControllerStub =
-                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {order1, order2});
+                _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] { order1, order2 });
 
             boardsControllerStub.GetOrderReadinessToStationary(1);
 
@@ -94,42 +89,30 @@ namespace Dodo.Tests
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveRedColor()
         {
-            var oddOrder = new Mock<ProductionOrder>();
-            oddOrder.Setup(x => x.Number).Returns(1);
-            var evenOrder = new Mock<ProductionOrder>();
-            evenOrder.Setup(x => x.Number).Returns(2);
+            var oddOrder = Mock.Of<ProductionOrder>(x => x.Number == 1);
+            var evenOrder = Mock.Of<ProductionOrder>(x => x.Number == 2);
             var boardsControllerMock =
                 _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
-            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
-            var order = jsonResult.Value as IOrder;
-            var oddOrderColor = order.ClientOrders
-                .Where(x => x.OrderNumber == 1)
-                .Select(s => s.Color)
-                .First();
+            var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 
-            Assert.AreEqual("red", oddOrderColor);
+            var oddClientOrder = order.ClientOrders.First(x => x.OrderNumber == 1);
+            Assert.AreEqual("red", oddClientOrder.Color);
         }
 
         // State
         [Test]
         public void GetOrderReadinessToStationary_ShouldInResultJsonForEachOddOrderNumber_HaveGreenColor()
         {
-            var oddOrder = new Mock<ProductionOrder>();
-            oddOrder.Setup(x => x.Number).Returns(1);
-            var evenOrder = new Mock<ProductionOrder>();
-            evenOrder.Setup(x => x.Number).Returns(2);
+            var oddOrder = Mock.Of<ProductionOrder>(x => x.Number == 1);
+            var evenOrder = Mock.Of<ProductionOrder>(x => x.Number == 2);
             var boardsControllerMock =
                 _boardsControllerBuilder.CreateBoardsControllerWithTrackerProductionOrderFakes(new[] {oddOrder, evenOrder});
 
-            var jsonResult = boardsControllerMock.GetOrderReadinessToStationary(1);
-            var order = jsonResult.Value as IOrder;
-            var evenOrderColor = order.ClientOrders
-                .Where(x => x.OrderNumber == 2)
-                .Select(s => s.Color)
-                .First();
+            var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 
-            Assert.AreEqual("green", evenOrderColor);
+            var evenClientOrder = order.ClientOrders.First(x => x.OrderNumber == 2);
+            Assert.AreEqual("green", evenClientOrder.Color);
         }
     }
 }

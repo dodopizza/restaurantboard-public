@@ -30,8 +30,7 @@ namespace Dodo.Tests.DSL
             );
         }
 
-        public BoardsController CreateBoardsControllerWithTrackerProductionOrderFakes(
-            Mock<ProductionOrder>[] trackerOrderFakes)
+        public BoardsController CreateBoardsControllerWithTrackerProductionOrderFakes(ProductionOrder[] trackerOrderFakes)
         {
             var pizzeriaStub = _objectMother.CreatePizzeria();
 
@@ -42,9 +41,8 @@ namespace Dodo.Tests.DSL
 
             var trackerClientStub = new Mock<ITrackerClient>();
             trackerClientStub
-                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary,
-                    new[] {OrderState.OnTheShelf}, 16))
-                .Returns(trackerOrderFakes.Select(x => x.Object).ToArray());
+                .Setup(x => x.GetOrdersByType(pizzeriaStub.Uuid, OrderType.Stationary, new[] {OrderState.OnTheShelf}, 16))
+                .Returns(trackerOrderFakes.ToArray());
 
             var clientsServiceDummy = new Mock<IClientsService>();
             var managementServiceDummy = new Mock<IManagementService>();
@@ -57,6 +55,13 @@ namespace Dodo.Tests.DSL
                 trackerClient: trackerClientStub.Object,
                 hostingEnvironment: hostingEnvironmentDummy.Object
             );
+        }
+
+        public BoardsController CreateBoardsControllerWithTrackerProductionOrderFakes(
+            Mock<ProductionOrder>[] trackerOrderFakeObjects)
+        {
+            return CreateBoardsControllerWithTrackerProductionOrderFakes(
+                trackerOrderFakeObjects.Select(x => x.Object).ToArray());
         }
 
         public BoardsController CreateBoardsControllerWithDepartmentServiceAndManagementService(
