@@ -10,31 +10,21 @@ using Xunit;
 namespace Dodo.Tests
 {
     public class TrackerClientShould
-    {
+    {                               
         [Fact]
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
             var expectedOrders = new ProductionOrder[]
             {
-                new ProductionOrder
-                {
-                    Id = 1,
-                    Number = 3,
-                    ClientName = "Misha"
-                },
-                new ProductionOrder
-                {
-                    Id = 2,
-                    Number = 4,
-                    ClientName = "Tanya"
-                },
+                new ProductionOrder(),
+                new ProductionOrder()
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
-            var dateProviderStub = new DateProvider();
+            var dateProviderDummy = new DateProvider();
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
 
-            var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+            var actualOrders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
             
             Assert.Equal(expectedOrders, actualOrders);
         }
@@ -42,49 +32,45 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
-            var fakeDateProvider = new Mock<IDateProvider>();
-            fakeDateProvider.Setup(p => p.Now()).Returns(DateTime.Parse("07/11/2018 23:00"));
+            var dateProviderStub = new Mock<IDateProvider>();
+            dateProviderStub.Setup(p => p.Now()).Returns(new DateTime(2018, 07, 11, 23, 00, 00));
+            var notExpiringOrder = new ProductionOrder
+            {
+                Id = 1,
+                Number = 3,
+                ClientName = "Misha",
+                ChangeDate = new DateTime(2018, 07, 11, 22, 00, 00)
+            };
+            var expiringOrder = new ProductionOrder
+            {
+                Id = 2,
+                Number = 4,
+                ClientName = "Tanya",
+                ChangeDate = new DateTime(2018, 07, 11, 21, 59, 00)
+            };
             var expectedOrders = new ProductionOrder[]
             {
-                new ProductionOrder
-                {
-                    Id = 1,
-                    Number = 3,
-                    ClientName = "Misha",
-                    ChangeDate = DateTime.Parse("07/11/2018 22:00")
-                },
-                new ProductionOrder
-                {
-                    Id = 2,
-                    Number = 4,
-                    ClientName = "Tanya",
-                    ChangeDate = DateTime.Parse("07/11/2018 22:01")
-                },
+                notExpiringOrder,
+                expiringOrder
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var trackerClient = new TrackerClient(ordersProviderStub.Object, fakeDateProvider.Object);
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub.Object);
 
-            var actualOrders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
 
-            foreach(var order in actualOrders)
-            {
-                Assert.True(order.IsExpiring(DateTime.Parse("07/11/2018 23:00")));
-            }
+            Assert.Equal(new[]{ expiringOrder }, actualOrders);
         }
-
-
-
 
 
         [Fact]
         public void CallGetOrdersOnOrdersProvider_WhenGetOrdersIsCalled()
         {
             var ordersProviderMock = new Mock<IOrdersProvider>();
-            var dateProviderStub = new DateProvider();
-            var trackerClient = new TrackerClient(ordersProviderMock.Object, dateProviderStub);
+            var dateProviderDummy = new DateProvider();
+            var trackerClient = new TrackerClient(ordersProviderMock.Object, dateProviderDummy);
 
-            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+            var orders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
 
             ordersProviderMock.Verify(op => op.GetOrders(), Times.Once);
         }
@@ -96,7 +82,7 @@ namespace Dodo.Tests
             var dateProviderMock = new Mock<IDateProvider>();
             var trackerClient = new TrackerClient(ordersProviderStub, dateProviderMock.Object);
 
-            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+            var orders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
 
             dateProviderMock.Verify(dp => dp.Now(), Times.Never);
         }
@@ -108,9 +94,9 @@ namespace Dodo.Tests
             var dateProviderMock = new Mock<IDateProvider>();
             var trackerClient = new TrackerClient(ordersProviderStub, dateProviderMock.Object);
 
-            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+            var orders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
 
-            dateProviderMock.Verify(dp => dp.Now(), Times.AtLeastOnce);
+            dateProviderMock.Verify(dp => dp.Now(), Times.Once);
         }
         
         [Fact]
@@ -123,10 +109,10 @@ namespace Dodo.Tests
             };
             var ordersProviderStub = new Mock<IOrdersProvider>();
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var dateProviderStub = new DateProvider();
-            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
+            var dateProviderDummy = new DateProvider();
+            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
             
-            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+            var orders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
 
             productionOrderMock.Verify(pom => pom.IsExpiring(It.IsAny<DateTime>()), Times.Never);
         }
@@ -144,9 +130,20 @@ namespace Dodo.Tests
             var dateProviderStub = new DateProvider();
             var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub);
 
-            var orders = trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
+            var orders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
 
             productionOrderMock.Verify(pom => pom.IsExpiring(It.IsAny<DateTime>()), Times.Once);
+        }
+        
+        
+        private ProductionOrder[] GetOrdersWithoutExpiringOnlyParameter(ITrackerClient trackerClient)
+        {
+            return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
+        }
+        
+        private ProductionOrder[] GetOrdersWithExpiringOnlyParameterEqualToTrue(ITrackerClient trackerClient)
+        {
+            return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
         }
     }
 }

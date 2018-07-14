@@ -27,7 +27,11 @@ namespace Dodo.RestaurantBoard.Domain.Services
 			bool expiringOnly = false)
 		{
 			var orders = _ordersProvider.GetOrders();
-			return expiringOnly ? orders.Where(order => order.IsExpiring(_dateProvider.Now())).ToArray() : orders;
+
+			if (!expiringOnly) return orders;
+			
+			var now = _dateProvider.Now();
+			return orders.Where(order => order.IsExpiring(now)).ToArray();
 		}
 	}
 }

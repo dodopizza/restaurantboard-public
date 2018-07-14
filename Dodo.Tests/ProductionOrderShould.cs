@@ -7,42 +7,39 @@ namespace Dodo.Tests
     public class ProductionOrderShould
     {
         [Fact]
-        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateForLessThanOneHour()
+        public void NotExpire_If60MinutesHasElapsed()
         {
             var order = new ProductionOrder()
             {
-                ChangeDate = DateTime.Parse("07/11/2018 21:00")
+                ChangeDate = new DateTime(2018, 07, 11, 21, 00, 00)
             };
 
-            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 21:59"));
+            var isExpiring = order.IsExpiring(new DateTime(2018, 07, 11, 22, 00, 00));
 
             Assert.False(isExpiring);
+        }
+
+        [Fact]
+        public void Expire_If61MinutesHasElapsed()
+        {
+            var order = new ProductionOrder()
+            {
+                ChangeDate = new DateTime(2018, 07, 11, 21, 00, 00)
+            };
+
+            var isExpiring = order.IsExpiring(new DateTime(2018, 07, 11, 22, 01, 00));
+
+            Assert.True(isExpiring);
         }
         
         [Fact]
-        public void ReturnFalse_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateExactlyForOneHour()
+        public void NotExpire_IfDateOfCreationIsUnknown()
         {
-            var order = new ProductionOrder()
-            {
-                ChangeDate = DateTime.Parse("07/11/2018 21:00")
-            };
+            var order = new ProductionOrder();
 
-            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 22:00"));
+            var isExpiring = order.IsExpiring(new DateTime(2018, 07, 11, 22, 01, 00));
 
             Assert.False(isExpiring);
-        }
-
-        [Fact]
-        public void ReturnTrue_WhenIsExpiringIsCalled_AndNowParameterIsGreaterThanChangeDateAtLeastForOneHour()
-        {
-            var order = new ProductionOrder()
-            {
-                ChangeDate = DateTime.Parse("07/11/2018 21:00")
-            };
-
-            var isExpiring = order.IsExpiring(DateTime.Parse("07/11/2018 22:01"));
-
-            Assert.True(isExpiring);
         }
     }
 }
