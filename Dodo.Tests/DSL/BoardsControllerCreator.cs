@@ -82,7 +82,6 @@ namespace Dodo.Tests.DSL
             );
         }
 
-
         public BoardsController CreateBoardsControllerWithClientServiceAndPizzeria(
             IClientsService clientService,
             Pizzeria pizzeria)

@@ -90,7 +90,7 @@ namespace Dodo.Tests
 
             var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 
-            var oddClientOrder = order.ClientOrders.First(x => x.OrderNumber == 1);
+            var oddClientOrder = order.ClientOrders.Single(x => x.OrderNumber == 1);
             Assert.AreEqual("red", oddClientOrder.Color);
         }
 
@@ -105,7 +105,7 @@ namespace Dodo.Tests
 
             var order = boardsControllerMock.GetOrderReadinessToStationary(1).Value as IOrder;
 
-            var evenClientOrder = order.ClientOrders.First(x => x.OrderNumber == 2);
+            var evenClientOrder = order.ClientOrders.Single(x => x.OrderNumber == 2);
             Assert.AreEqual("green", evenClientOrder.Color);
         }
 
