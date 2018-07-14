@@ -16,15 +16,14 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void AddOrdersShoudInvokeOnce_WhenPlaceOrder()
         {
-            var productOrderDummy = new Mock<IProductionOrder>();
+            var productOrder = new ProductionOrder();
             var orderStoreMock = new Mock<IOrdersStore>();
-            var productOrder = productOrderDummy.Object;
             var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 
             trackerClient.PlaceOrder(productOrder);
 
-            orderStoreMock.Verify(m=>m.AddOrder(It.IsAny<IProductionOrder>()),Times.Once);
+            orderStoreMock.Verify(m=>m.AddOrder(productOrder),Times.Once);
         }
 
         // Behaviour
@@ -32,7 +31,6 @@ namespace Dodo.RestarauntBoardTests
         public void GetOrdersShoudInvokeOnce_WhenGetOrders()
         {
             var orderStoreMock = new Mock<IOrdersStore>();
-            orderStoreMock.Setup(o => o.GetOrders()).Returns(It.IsAny<List<IProductionOrder>>());
             var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 
@@ -45,9 +43,8 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShoudNotInvokeGetOrders_WhenPlaceOrder()
         {
-            var productOrderDummy = new Mock<IProductionOrder>();
             var orderStoreMock = new Mock<IOrdersStore>();
-            var productOrder = productOrderDummy.Object;
+            var productOrder = new ProductionOrder();
             var orderStore = orderStoreMock.Object;
             var trackerClient = new TrackerClient(orderStore);
 

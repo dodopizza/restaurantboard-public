@@ -14,6 +14,7 @@ namespace Dodo.Tracker.Contracts
 
         bool IsExpired(DateTime now);
 
+        int ExpirationTime {get;}
     }
 
     [Serializable]
@@ -37,7 +38,9 @@ namespace Dodo.Tracker.Contracts
 
         public bool IsExpired(DateTime now)
         {
-            return (now - OrderDate).TotalSeconds>10;
+            return (now - OrderDate).TotalSeconds>ExpirationTime;
         }
+
+        public  int ExpirationTime {get;} =10;
     }
 }

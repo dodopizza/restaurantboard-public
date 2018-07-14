@@ -9,7 +9,7 @@ namespace Dodo.RestarauntBoardTests
     public class ProducOrderTests
     {
         [Fact]
-        public void ShoudBeExpired_WhenPlace11SecondsAgo()
+        public void ShoudBeExpired_WHenExpirationTimeCome()
         {
             var orderDate = new DateTime(2018, 1, 1, 12, 12, 12);
             var order = new ProductionOrder()
@@ -17,8 +17,9 @@ namespace Dodo.RestarauntBoardTests
                 OrderDate = orderDate
             };
             
-            Assert.True(order.IsExpired(orderDate.AddSeconds(11)));
+            Assert.True(order.IsExpired(orderDate.AddSeconds(order.ExpirationTime+1)));
 
         }
     }
 }
+

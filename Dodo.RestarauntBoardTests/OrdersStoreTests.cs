@@ -16,8 +16,7 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShouldContainSameOrder_WhenAddOrder()
         {
-            var productOrderStub = new Mock<IProductionOrder>();
-            var productOrder = productOrderStub.Object;
+            var productOrder = new ProductionOrder();
             var orderStore = new OrdersStore();
 
 
@@ -30,28 +29,27 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShoudContainExpiredOrder_WhenGetExpiredOrders()
         {
-            var productOrderMock = new Mock<IProductionOrder>();
-            productOrderMock.Setup(p => p.IsExpired(It.IsAny<DateTime>())).Returns(true);
-            var expiredOrder = productOrderMock.Object;
+            var orderDate = new DateTime(2018, 1, 1);
+            var order = new ProductionOrder(){OrderDate =  orderDate };
             var orderStore = new OrdersStore();
-            orderStore.AddOrder(expiredOrder);
+            orderStore.AddOrder(order);
 
-            var expiredOrders = orderStore.GetExpiredOrders(new DateTime(2018, 1, 1));
+            var expiredOrders = orderStore.GetExpiredOrders(orderDate.AddSeconds(order.ExpirationTime+1));
 
-            Assert.Contains(expiredOrder, expiredOrders);
+            Assert.Contains(order, expiredOrders);
         }
 
         //State
         [Fact]
         public void ShoudNotContainUnExpiredOrder_WhenGetExpiredOrders()
         {
-            var productOrderMock = new Mock<IProductionOrder>();
-            productOrderMock.Setup(p => p.IsExpired(It.IsAny<DateTime>())).Returns(false);
-            var expiredOrder = productOrderMock.Object;
+           
+            var orderDate = new DateTime(2018, 1, 1);
+            var order = new ProductionOrder(){OrderDate =  orderDate };
             var orderStore = new OrdersStore();
-            orderStore.AddOrder(expiredOrder);
+            orderStore.AddOrder(order);
 
-            var expiredOrders = orderStore.GetExpiredOrders(new DateTime(2018, 1, 1));
+            var expiredOrders = orderStore.GetExpiredOrders(orderDate);
 
             Assert.Empty(expiredOrders);
         }
@@ -62,60 +60,44 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShoudContainAllOrders_WhenGetOrders()
         {
-            var productOrderMock1 = new Mock<IProductionOrder>();
-            productOrderMock1.Setup(p => p.IsExpired(It.IsAny<DateTime>())).Returns(true);
-            var expiredOrder = productOrderMock1.Object;
-            var productOrderMock2 = new Mock<IProductionOrder>();
-            productOrderMock2.Setup(p => p.IsExpired(It.IsAny<DateTime>())).Returns(false);
-            var unExpiredOrder = productOrderMock2.Object;
+            var order1 = new ProductionOrder();
+            var order2 = new ProductionOrder();
             var orderStore = new OrdersStore();
-            orderStore.AddOrder(expiredOrder);
-            orderStore.AddOrder(unExpiredOrder);
+            orderStore.AddOrder(order1);
+            orderStore.AddOrder(order2);
 
             var allOrders = orderStore.GetOrders();
 
-            Assert.Contains(expiredOrder, allOrders);
-            Assert.Contains(unExpiredOrder, allOrders);
+            Assert.Contains(order1, allOrders);
+            Assert.Contains(order2, allOrders);
         }
 
         // Behaviour
         [Fact]
-        public void IsExpiredShoudInvokeOnceOnEachOrders_WhenGetExpiredOrders()
+        public void IsExpiredShoudInvokeOncePerOrder_WhenGetExpiredOrders()
         {
-            var productOrderMock1 = new Mock<IProductionOrder>();
-            var productOrderMock2 = new Mock<IProductionOrder>();
-            var expiredOrder1 = productOrderMock1.Object;
-            var expiredOrder2 = productOrderMock2.Object;
-
+            var productOrderMock = new Mock<IProductionOrder>();
+            var order = productOrderMock.Object;
             var orderStore = new OrdersStore();
-            orderStore.AddOrder(expiredOrder1);
-            orderStore.AddOrder(expiredOrder2);
+            orderStore.AddOrder(order);
 
             orderStore.GetExpiredOrders(new DateTime(2018, 1, 1));
 
-            productOrderMock1.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
-            productOrderMock2.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
+            productOrderMock.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
         }
 
         // Behaviour
         [Fact]
         public void IsExpiredShoudNotInvokeOnAnyOrder_WhenGetOrders()
         {
-            var productOrderMock1 = new Mock<IProductionOrder>();
-            var productOrderMock2 = new Mock<IProductionOrder>();
-            var expiredOrder1 = productOrderMock1.Object;
-            var expiredOrder2 = productOrderMock2.Object;
-
+            var productOrderMock = new Mock<IProductionOrder>();
+            var order = productOrderMock.Object;
             var orderStore = new OrdersStore();
-            orderStore.AddOrder(expiredOrder1);
-            orderStore.AddOrder(expiredOrder2);
+            orderStore.AddOrder(order);
 
             orderStore.GetOrders();
 
-            productOrderMock1.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
-            productOrderMock2.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
+            productOrderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
         }
-
-
     }
 }
