@@ -1,35 +1,37 @@
 ﻿using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using System;
+using System.Linq;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
 	public interface ITrackerClient
 	{
-		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
+		ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
+			bool expiringOnly = false);
 	}
 
 	public class TrackerClient : ITrackerClient
 	{
-		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
-		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
+        private readonly IOrdersProvider _ordersProvider;
+		private readonly IDateProvider _dateProvider;
 
-			return orders;
+        public TrackerClient(IOrdersProvider ordersProvider, IDateProvider dateProvider)
+        {
+            _ordersProvider = ordersProvider;
+	        _dateProvider = dateProvider;
+        }
+
+		public ProductionOrder[] GetOrders(Uuid unitUuid, OrderType type, OrderState[] states, int limit,
+			bool expiringOnly = false)
+		{
+			var orders = _ordersProvider.GetOrders();
+
+			if (!expiringOnly) return orders;
+			
+			var now = _dateProvider.Now();
+			return orders.Where(order => order.IsExpiring(now)).ToArray();
 		}
 	}
 }
