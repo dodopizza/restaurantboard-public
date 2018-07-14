@@ -21,7 +21,7 @@ namespace Dodo.Tests
 		private IDictionary<string, object> ViewDataDummy { get; } =
 			new Dictionary<string, object>();
 
-		private ICollection<int> ProductIdsDummy { get; } =
+		private ICollection<int> OrderIdsDummy { get; } =
 			new List<int>();
 
 		[Fact]
@@ -40,7 +40,7 @@ namespace Dodo.Tests
 			orderService.GetOrdersForUnit(
 				1,
 				ViewDataDummy,
-				ProductIdsDummy);
+				OrderIdsDummy);
 
 			iconPathMock.Verify(_ =>
 				_.GetIconPath(
@@ -64,7 +64,7 @@ namespace Dodo.Tests
 			orderService.GetOrdersForUnit(
 				1,
 				ViewDataDummy,
-				ProductIdsDummy);
+				OrderIdsDummy);
 
 			iconPathMock.Verify(_ =>
 					_.GetIconPath(
@@ -88,7 +88,7 @@ namespace Dodo.Tests
 			orderService.GetOrdersForUnit(
 				1,
 				ViewDataDummy,
-				ProductIdsDummy);
+				OrderIdsDummy);
 
 			clientsServiceMock.Verify(_ => _.GetIcons(), Times.Once);
 		}
@@ -107,12 +107,13 @@ namespace Dodo.Tests
 			orderService.GetOrdersForUnit(
 				1,
 				ViewDataDummy,
-				ProductIdsDummy);
+				OrderIdsDummy);
 
 			clientsServiceMock.Verify(_ => _.GetIcons(), Times.Never);
 		}
 
 		[Fact]
+		[Description("При каждом вызове GetOrdersForUnit должен быть вызван GetPizzeriaOrCache")]
 		public void GetOrdersForUnit_ForUnitId_ShouldExecuteGetPizzeriaOrCacheWithSpecifiedUnitId()
 		{
 			const int unitId = 1;
@@ -127,9 +128,47 @@ namespace Dodo.Tests
 			orderService.GetOrdersForUnit(
 				unitId,
 				ViewDataDummy,
-				ProductIdsDummy);
+				OrderIdsDummy);
 
 			departmentServiceMock.Verify(_ => _.GetPizzeriaOrCache(It.IsIn(unitId)), Times.Once);
+		}
+
+		[Fact]
+		[Description("Если появились новые заказы, то необходимо проигрывать музыку")]
+		public void GetOrdersForUnit_IfNewOrdersArrived_ShouldPlayMusic()
+		{
+			var existingOrderIds = new[] { 1, 2, 3 };
+			var orderService = new OrdersService(
+				CreateDepartmentStructureService(),
+				Mock.Of<IClientsService>(),
+				CreateTrackerClientService(ordersCount: 5),
+				Mock.Of<IIconPathService>());
+
+			var result = orderService.GetOrdersForUnit(
+				1,
+				ViewDataDummy,
+				existingOrderIds);
+
+			Assert.Equal(1, result.ClientOrdersModel.PlayTune);
+		}
+
+		[Fact]
+		[Description("Если новых заказов нет, то музыка должна быть выключена")]
+		public void GetOrdersForUnit_IfNewOrdesNotArrived_ShouldTurnOffMusic()
+		{
+			var existingOrderIds = new[] { 1, 2, 3 };
+			var orderService = new OrdersService(
+				CreateDepartmentStructureService(),
+				Mock.Of<IClientsService>(),
+				CreateTrackerClientService(ordersCount: 3),
+				Mock.Of<IIconPathService>());
+
+			var result = orderService.GetOrdersForUnit(
+				1,
+				ViewDataDummy,
+				existingOrderIds);
+
+			Assert.Equal(0, result.ClientOrdersModel.PlayTune);
 		}
 
 		private static ITrackerClient CreateTrackerClientService(int ordersCount)
