@@ -42,7 +42,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
                 ? _orders.Max(x => x.Id) + 1
                 : 1;
 
-            _orders.Append(order);
+            _orders.Add(order);
         }
 
         public void DeleteOrder(int id)
