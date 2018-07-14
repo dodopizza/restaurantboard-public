@@ -36,16 +36,10 @@ namespace Dodo.Tests
             dateProviderStub.Setup(p => p.Now()).Returns(new DateTime(2018, 07, 11, 23, 00, 00));
             var notExpiringOrder = new ProductionOrder
             {
-                Id = 1,
-                Number = 3,
-                ClientName = "Misha",
                 ChangeDate = new DateTime(2018, 07, 11, 22, 00, 00)
             };
             var expiringOrder = new ProductionOrder
             {
-                Id = 2,
-                Number = 4,
-                ClientName = "Tanya",
                 ChangeDate = new DateTime(2018, 07, 11, 21, 59, 00)
             };
             var expectedOrders = new ProductionOrder[]
