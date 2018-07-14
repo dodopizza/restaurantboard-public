@@ -23,6 +23,10 @@ body {
     width: 100%;
 }
 
+.red {
+    color: red;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;
