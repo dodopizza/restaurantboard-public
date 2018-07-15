@@ -14,8 +14,8 @@ namespace Dodo.Tests
         public void UpdateOrderNumber_WhenAddingOrderWithSameName()
         {
             var trackerClient = new TrackerClient(GetOrderStorageTest());
-
             trackerClient.AddProductionOrder("John", 3);
+
             trackerClient.AddProductionOrder("John", 2);
 
             Assert.Equal(3 + 2, trackerClient.GetOrderByName("John").Number);
@@ -25,26 +25,22 @@ namespace Dodo.Tests
         public void AddingNewOrder_WhenAddingWithDifferentClientNames()
         {
             var trackerClient = new TrackerClient(GetOrderStorageTest());
-
             trackerClient.AddProductionOrder("John", 3);
+
             trackerClient.AddProductionOrder("Tom", 2);
 
-            var tomResult = trackerClient.GetOrderByName("Tom");
-
-            Assert.Equal(2, tomResult.Number);
+            Assert.Equal(2, trackerClient.GetOrderByName("Tom").Number);
         }
 
         [Fact]
         public void NotChangingOldOrder_WhenAddingWithDifferentClientNames()
         {
             var trackerClient = new TrackerClient(GetOrderStorageTest());
-
             trackerClient.AddProductionOrder("John", 3);
+
             trackerClient.AddProductionOrder("Tom", 2);
 
-            var johnResult = trackerClient.GetOrderByName("John");
-
-            Assert.Equal(3, johnResult.Number);
+            Assert.Equal(3, trackerClient.GetOrderByName("John").Number);
         }
 
         [Fact]
@@ -58,7 +54,6 @@ namespace Dodo.Tests
             trackerClient.AddProductionOrder("John", 3);
             
             var orderAddDate = trackerClient.GetOrderByName("John").ChangeDate;
-
             Assert.Equal(dateTimeExpected, orderAddDate);
         }
 
@@ -80,7 +75,7 @@ namespace Dodo.Tests
 
             var orderUpdateDate = trackerClient.GetOrderByName("John").ChangeDate;
 
-            Assert.True(orderDateAdd.Value.AddSeconds(10) == orderUpdateDate.Value);
+            Assert.Equal(orderDateAdd.Value.AddSeconds(10), orderUpdateDate.Value);
         }
 
         [Fact]
