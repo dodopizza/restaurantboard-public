@@ -44,6 +44,9 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             _managementService = managementService;
             _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
+
+            _trackerClient.AddProductionOrder("Пупа", 3);
+            _trackerClient.AddProductionOrder("Лупа", 4);
         }
 
 
