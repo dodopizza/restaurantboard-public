@@ -32,7 +32,7 @@ namespace Dodo.Tests
 
 			var iconPathMock = new Mock<IIconPathService>();
 			var orderService = new OrdersService(
-				CreateDepartmentStructureService(),
+				CreateDepartmentStructureService(ClientTreatment.RandomImage),
 				Mock.Of<IClientsService>(),
 				CreateTrackerClientService(ordersCount),
 				iconPathMock.Object);
@@ -58,7 +58,7 @@ namespace Dodo.Tests
 			var orderService = new OrdersService(
 				CreateDepartmentStructureService(),
 				Mock.Of<IClientsService>(),
-				CreateTrackerClientService(0),
+				CreateTrackerClientService(ordersCount: 0),
 				iconPathMock.Object);
 
 			orderService.GetOrdersForUnit(
@@ -137,11 +137,11 @@ namespace Dodo.Tests
 		[Description("Если появились новые заказы, то необходимо проигрывать музыку")]
 		public void GetOrdersForUnit_IfNewOrdersArrived_ShouldPlayMusic()
 		{
-			var existingOrderIds = new[] { 1, 2, 3 };
+			var existingOrderIds = new[] { 1 };
 			var orderService = new OrdersService(
 				CreateDepartmentStructureService(),
 				Mock.Of<IClientsService>(),
-				CreateTrackerClientService(ordersCount: 5),
+				CreateTrackerClientService(ordersCount: 2),
 				Mock.Of<IIconPathService>());
 
 			var result = orderService.GetOrdersForUnit(
@@ -156,11 +156,11 @@ namespace Dodo.Tests
 		[Description("Если новых заказов нет, то музыка должна быть выключена")]
 		public void GetOrdersForUnit_IfNewOrdesNotArrived_ShouldTurnOffMusic()
 		{
-			var existingOrderIds = new[] { 1, 2, 3 };
+			var existingOrderIds = new[] { 1 };
 			var orderService = new OrdersService(
 				CreateDepartmentStructureService(),
 				Mock.Of<IClientsService>(),
-				CreateTrackerClientService(ordersCount: 3),
+				CreateTrackerClientService(ordersCount: 1),
 				Mock.Of<IIconPathService>());
 
 			var result = orderService.GetOrdersForUnit(
@@ -191,7 +191,7 @@ namespace Dodo.Tests
 		}
 
 		private static IDepartmentsStructureService CreateDepartmentStructureService(
-			ClientTreatment pizzeriaClientTreatment = ClientTreatment.RandomImage)
+			ClientTreatment pizzeriaClientTreatment = ClientTreatment.Name)
 		{
 			return CreateDepartmentStructureServiceMock(pizzeriaClientTreatment).Object;
 		}
