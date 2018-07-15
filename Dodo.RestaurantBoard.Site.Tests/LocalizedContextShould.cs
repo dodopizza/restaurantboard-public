@@ -21,5 +21,18 @@ namespace Dodo.RestaurantBoard.Site.Tests
             fileServiceMock.Verify(foo => foo.Exists(It.IsAny<string>()), Times.AtLeastOnce);
         }
 
+        [Fact]
+        public void ReturnCorrectUrl_IfContentPathIsCorrectAndContentIsExist()
+        {
+            var fileServiceStub = new Mock<IFileService>();
+            fileServiceStub.Setup(x => x.Exists(It.IsAny<string>())).Returns(true);
+            var hostingEnvironmentStub = new Mock<IHostingEnvironment>();
+            hostingEnvironmentStub.SetupGet(x => x.WebRootPath).Returns("/usr/local/sbin:/usr/local/");
+
+            var res = LocalizedContext.LocalizedContent(hostingEnvironmentStub.Object, fileServiceStub.Object, "Tracking-Scoreboard-Empty.jpg");
+            
+            Assert.Equal("//LocalizedResources/ru/Tracking-Scoreboard-Empty.jpg", res);
+        }
+
     }
 }

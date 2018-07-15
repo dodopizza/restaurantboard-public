@@ -100,7 +100,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
-
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
             if (clientTreatment == ClientTreatment.RandomImage)
@@ -167,12 +166,16 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new { BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
             }
 
             return Json(result);
         }
 
+        public virtual string GetLocalizedContext()
+        {
+            return LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg");
+        }
         #endregion Ресторан.Готовность заказов
     }
 }
