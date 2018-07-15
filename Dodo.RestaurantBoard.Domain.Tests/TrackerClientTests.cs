@@ -27,26 +27,23 @@ namespace Dodo.RestaurantBoard.Domain.Tests
         [Test]
         public void GetOrdersByType_ReturnsOrdersUpToTheLimit_WhenOrdersRepositoryCountExceedsLimit()
         {
-            int ordersLimit = 42;
-            var stubRepository = CreateRepository(ordersLimit + 1);
+            var stubRepository = CreateRepository(ordersCount: 2);
             var trackerClient = new TrackerClient(stubRepository);
             
-            var orders = GetOrders(trackerClient, ordersLimit);
+            var orders = GetOrders(trackerClient, limit: 1);
 
-            Assert.AreEqual(ordersLimit, orders.Length);
+            Assert.AreEqual(1, orders.Length);
         }
 
         [Test]
         public void GetOrdersByType_ReturnsOrdersUpToTheRepositoryCount_WhenLimitExceedsRepositoryCount()
         {
-            int ordersLimit = 42;
-            int repositoryCount = ordersLimit - 1;
-            var stubRepository = CreateRepository(repositoryCount);
+            var stubRepository = CreateRepository(ordersCount: 1);
             var trackerClient = new TrackerClient(stubRepository);
 
-            var orders = GetOrders(trackerClient, ordersLimit);
+            var orders = GetOrders(trackerClient, limit: 2);
 
-            Assert.AreEqual(repositoryCount, orders.Length);
+            Assert.AreEqual(1, orders.Length);
         }
         #endregion State tests
 
@@ -54,12 +51,12 @@ namespace Dodo.RestaurantBoard.Domain.Tests
         [Test]
         public void GetOrdersByType_CallsRepositoryGetOrders_Once()
         {
-            var mockRepository = new Mock<IOrdersRepository>();
-            var trackerClient = new TrackerClient(mockRepository.Object);
+            var repositoryMock = new Mock<IOrdersRepository>();
+            var trackerClient = new TrackerClient(repositoryMock.Object);
 
             var orders = GetOrders(trackerClient);
 
-            mockRepository.Verify(x => x.GetOrders(), Times.Once());
+            repositoryMock.Verify(x => x.GetOrders(), Times.Once());
         }
 
         [Test]
@@ -72,14 +69,14 @@ namespace Dodo.RestaurantBoard.Domain.Tests
                 ClientName = string.Empty
             };
 
-            Assert.Throws<Exception>(() => trackerClient.AddOrder(productionOrder));
+            Assert.Throws<ArgumentNullException>(() => trackerClient.AddOrder(productionOrder));
         }
 
         [Test]
         public void AddOrder_CallsRepositoryAddOrder_WhenClientNameIsSpecified()
         {
-            var mockRepository = new Mock<IOrdersRepository>();
-            var trackerClient = new TrackerClient(mockRepository.Object);
+            var repositoryMock = new Mock<IOrdersRepository>();
+            var trackerClient = new TrackerClient(repositoryMock.Object);
             var productionOrder = new ProductionOrder()
             {
                 ClientName = "John Doe"
@@ -87,16 +84,16 @@ namespace Dodo.RestaurantBoard.Domain.Tests
 
             trackerClient.AddOrder(productionOrder);
 
-            mockRepository.Verify(x => x.AddOrder(productionOrder), Times.Once);
+            repositoryMock.Verify(x => x.AddOrder(productionOrder), Times.Once);
         }
 
         [Test]
         public void DeleteOrder_ThrowsException_WhenOrderNotFound()
         {
-            var mockRepository = new Mock<IOrdersRepository>();
-            mockRepository.Setup(x => x.GetOrder(It.IsAny<int>())).Returns(() => null);
+            var repositoryMock = new Mock<IOrdersRepository>();
+            repositoryMock.Setup(x => x.GetOrder(It.IsAny<int>())).Returns(() => null);
 
-            var trackerClient = new TrackerClient(mockRepository.Object);
+            var trackerClient = new TrackerClient(repositoryMock.Object);
 
             Assert.Throws<Exception>(() => trackerClient.DeleteOrder(42));
         }
@@ -104,13 +101,13 @@ namespace Dodo.RestaurantBoard.Domain.Tests
         [Test]
         public void DeleteOrder_CallsRepositoryDeleteOrder_WhenOrderFound()
         {
-            var mockRepository = new Mock<IOrdersRepository>();
-            mockRepository.Setup(x => x.GetOrder(It.IsAny<int>())).Returns(new ProductionOrder());
-            var trackerClient = new TrackerClient(mockRepository.Object);
+            var repositoryMock = new Mock<IOrdersRepository>();
+            repositoryMock.Setup(x => x.GetOrder(It.IsAny<int>())).Returns(new ProductionOrder());
+            var trackerClient = new TrackerClient(repositoryMock.Object);
 
             trackerClient.DeleteOrder(42);
 
-            mockRepository.Verify(x => x.DeleteOrder(It.IsAny<int>()), Times.Once);
+            repositoryMock.Verify(x => x.DeleteOrder(42), Times.Once);
         }
         #endregion
 

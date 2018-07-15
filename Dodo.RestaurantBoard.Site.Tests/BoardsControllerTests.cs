@@ -18,10 +18,10 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Test]
         public void OrdersReadinessToStationary_ThrowsArgumentException_WhenDepartmentIsNull()
         {
-            var stubDepartmentsStructureService = new Mock<IDepartmentsStructureService>();
-            stubDepartmentsStructureService.Setup(x => x.GetDepartmentByUnitOrCache(It.IsAny<int>()))
+            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
+            departmentsStructureServiceStub.Setup(x => x.GetDepartmentByUnitOrCache(It.IsAny<int>()))
                 .Returns(() => null);
-            var boardsController = CreateController(stubDepartmentsStructureService.Object);
+            var boardsController = CreateController(departmentsStructureServiceStub.Object);
 
             Assert.Throws<ArgumentException>(() => boardsController.OrdersReadinessToStationary(42));
         }
@@ -31,12 +31,12 @@ namespace Dodo.RestaurantBoard.Site.Tests
         public void OrdersReadinessToStationary_ReturnsViewResult_WhenDepartmentIsNotNull()
         {
             var fixture = new Fixture();
-            var stubDepartmentsStructureService = new Mock<IDepartmentsStructureService>();
-            stubDepartmentsStructureService.Setup(x => x.GetDepartmentByUnitOrCache(It.IsAny<int>()))
+            var departmentsStructureServiceStub = new Mock<IDepartmentsStructureService>();
+            departmentsStructureServiceStub.Setup(x => x.GetDepartmentByUnitOrCache(It.IsAny<int>()))
                 .Returns(fixture.Create<CityDepartment>());
-            stubDepartmentsStructureService.Setup(x => x.GetPizzeriaOrCache(It.IsAny<int>()))
+            departmentsStructureServiceStub.Setup(x => x.GetPizzeriaOrCache(It.IsAny<int>()))
                 .Returns(fixture.Create<Pizzeria>());
-            var boardsController = CreateController(stubDepartmentsStructureService.Object);
+            var boardsController = CreateController(departmentsStructureServiceStub.Object);
 
             var result = boardsController.OrdersReadinessToStationary(42);
 
