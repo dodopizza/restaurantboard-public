@@ -1,4 +1,4 @@
-﻿namespace Dodo.RestaurantBoard.Site.Models.DodoFM
+﻿namespace Dodo.RestaurantBoard.Domain
 {
 	public class DodoFMProxy
 	{
