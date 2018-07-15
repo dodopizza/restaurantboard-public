@@ -57,9 +57,9 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShouldNotReturnAnyOrder_WhenGetOrdersWithNoOrders()
         {
-            var orderStoreMock = new Mock<IOrdersStore>();
-            orderStoreMock.Setup(o => o.GetOrders()).Returns(new List<IProductionOrder>());
-            var orderStore = orderStoreMock.Object;
+            var orderStoreStub = new Mock<IOrdersStore>();
+            orderStoreStub.Setup(o => o.GetOrders()).Returns(new List<IProductionOrder>());
+            var orderStore = orderStoreStub.Object;
             var trackerClient = new TrackerClient(orderStore);
 
             var orders = trackerClient.GetOrders();
