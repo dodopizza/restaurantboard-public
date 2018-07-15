@@ -49,7 +49,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
             }
             else
             {
-                ordersStorage.UpdateProductionOrder(existingOrder.Id, number: existingOrder.Number + number);
+                ordersStorage.UpdateProductionOrderNumber(existingOrder.Id, existingOrder.Number + number);
             }
         }
 

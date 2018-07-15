@@ -15,7 +15,9 @@ namespace Dodo.Core.Services
 
         void DeleteProductionOrder(int id);
 
-        void UpdateProductionOrder(int id, string clientName = null, int? number = null);
+        void UpdateProductionOrderName(int id, string clientName);
+
+        void UpdateProductionOrderNumber(int id, int number);
 
         ProductionOrder GetProductionOrderByName(string clientName);
     }

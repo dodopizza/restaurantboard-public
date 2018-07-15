@@ -52,12 +52,20 @@ namespace Dodo.RestaurantBoard.Domain.Services
             return null;
         }
 
-        public void UpdateProductionOrder(int id, string clientName = null, int? number = null)
+        public void UpdateProductionOrderName(int id, string clientName)
         {
             if (productionOrders.TryGetValue(id, out var productionOrder))
             {
-                productionOrder.ClientName = clientName ?? productionOrder.ClientName;
-                productionOrder.Number = number ?? productionOrder.Number;
+                productionOrder.ClientName = clientName;
+                productionOrder.ChangeDate = dateTimeProvider.GetDateTime();
+            }
+        }
+
+        public void UpdateProductionOrderNumber(int id, int number)
+        {
+            if (productionOrders.TryGetValue(id, out var productionOrder))
+            {
+                productionOrder.Number = number;
                 productionOrder.ChangeDate = dateTimeProvider.GetDateTime();
             }
         }

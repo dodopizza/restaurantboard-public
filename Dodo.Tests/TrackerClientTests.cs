@@ -107,7 +107,7 @@ namespace Dodo.Tests
 
             trackerClient.AddProductionOrder("John", 1);
 
-            orderStorageMock.Verify(o => o.UpdateProductionOrder(5, null, 1 + 3), Times.Once);
+            orderStorageMock.Verify(o => o.UpdateProductionOrderNumber(5, 1 + 3), Times.Once);
 
         }
         [Fact]
