@@ -60,21 +60,21 @@ namespace Dodo.RestarauntBoardTests
 
             var allOrders = orderStore.GetOrders();
 
-            ListOfOrderExtensions.Contains(allOrders, pizza).And(cola);
+            AssertThat(allOrders.Contains(pizza) && allOrders.Contains(cola));
         }
+
+       
 
         // Behaviour
         [Fact]
         public void IsExpiredShoudInvokeOncePerOrder_WhenGetExpiredOrders()
         {
-            var productOrderMock = new Mock<IProductionOrder>();
-            var order = productOrderMock.Object;
-            var orderStore = new OrdersStore();
-            orderStore.AddOrder(order);
+            var order = Create.Order;
+            var orderStore = Create.OrderStore.With(order).Please();
 
             orderStore.GetExpiredOrders(new DateTime(2018, 1, 1));
 
-            productOrderMock.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
+            order.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
         }
 
         // Behaviour
@@ -91,6 +91,11 @@ namespace Dodo.RestarauntBoardTests
             productOrderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
         }
 
+        private static void AssertThat(bool expression)
+        {
+            Assert.True(expression);
+        }
+
     }
 
     internal static class Create
@@ -102,36 +107,41 @@ namespace Dodo.RestarauntBoardTests
 
     public class ProductionOrderBuilder
     {
-        private ProductionOrder _order;
+        private Mock<ProductionOrder> _orderMock;
 
         public ProductionOrderBuilder()
         {
-            _order = new ProductionOrder();
+            _orderMock = new Mock<ProductionOrder>();
         }
 
         internal ProductionOrderBuilder WithDate(string dateString)
         {
             var date = DateTime.Parse(dateString);
-            _order.OrderDate = date;
+            _orderMock.Object.OrderDate = date;
 
             return this;
         }
 
         internal ProductionOrder Please()
         {
-            return _order;
+            return _orderMock.Object;
+        }
+
+        internal Mock<ProductionOrder> Please()
+        {
+            return _orderMock;
         }
     }
 
     public class OrdersStoreBuilder
     {
         private OrdersStore _ordersStore;
-        private ProductionOrder _order;
+        private Mock<ProductionOrder> _orderMock;
 
         public OrdersStoreBuilder()
         {
             _ordersStore = new OrdersStore();
-            _order = new ProductionOrder();
+            _orderMock = new Mock<ProductionOrder>();
         }
 
         internal OrdersStore Please()
@@ -139,10 +149,15 @@ namespace Dodo.RestarauntBoardTests
             return _ordersStore;
         }
 
-        internal OrdersStoreBuilder With(ProductionOrder order)
+        internal OrdersStoreBuilder With(ProductionOrderBuilder orderBuilder)
         {
-            _order = order;
+            _orderMock = orderBuilder;
             return this;
+        }
+
+        public Verify(Action action, Moq.Times times)
+        {
+
         }
     }
 
@@ -159,9 +174,9 @@ namespace Dodo.RestarauntBoardTests
         }
     }
 
-    public static class ListOfOrderExtensions
+    public static class ListOfOrderExtension
     {
-        public static List<IProductionOrder> Contains(this List<IProductionOrder> list, ProductionOrder order)
+        public static List<IProductionOrder> Contain(this List<IProductionOrder> list, ProductionOrder order)
         {
             Assert.Contains(order, list);
             return list;
@@ -169,7 +184,7 @@ namespace Dodo.RestarauntBoardTests
 
         public static List<IProductionOrder> And(this List<IProductionOrder> list, ProductionOrder order)
         {
-            return Contains(list, order);
+            return Contain(list, order);
         }
     }
 
