@@ -70,25 +70,23 @@ namespace Dodo.RestarauntBoardTests
         public void IsExpiredShoudInvokeOncePerOrder_WhenGetExpiredOrders()
         {
             var order = Create.Order;
-            var orderStore = Create.OrderStore.With(order).Please();
+            var orderStore = Create.OrderStore.With(order.Please()).Please();
 
-            orderStore.GetExpiredOrders(new DateTime(2018, 1, 1));
+            orderStore.GetExpiredOrders("01-01-2018");
 
-            order.Verify(p=>p.IsExpired(It.IsAny<DateTime>()),Times.Once);
+            order.VerifyThatIsExpiredWasCalledOnce();
         }
 
         // Behaviour
         [Fact]
         public void IsExpiredShoudNotInvokeOnAnyOrder_WhenGetOrders()
         {
-            var productOrderMock = new Mock<IProductionOrder>();
-            var order = productOrderMock.Object;
-            var orderStore = new OrdersStore();
-            orderStore.AddOrder(order);
+            var order = Create.Order;
+            var orderStore = Create.OrderStore.With(order.Please()).Please();
 
             orderStore.GetOrders();
 
-            productOrderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
+            order.VerifyIsExpiredWaseNeverCalled();
         }
 
         private static void AssertThat(bool expression)
@@ -127,21 +125,27 @@ namespace Dodo.RestarauntBoardTests
             return _orderMock.Object;
         }
 
-        internal Mock<ProductionOrder> Please()
+
+        internal void VerifyThatIsExpiredWasCalledOnce()
         {
-            return _orderMock;
+            _orderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Once);
+        }
+
+        internal void VerifyIsExpiredWaseNeverCalled()
+        {
+            _orderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
         }
     }
 
     public class OrdersStoreBuilder
     {
         private OrdersStore _ordersStore;
-        private Mock<ProductionOrder> _orderMock;
+        private ProductionOrder _order;
 
         public OrdersStoreBuilder()
         {
             _ordersStore = new OrdersStore();
-            _orderMock = new Mock<ProductionOrder>();
+            _order = new ProductionOrder();
         }
 
         internal OrdersStore Please()
@@ -149,15 +153,19 @@ namespace Dodo.RestarauntBoardTests
             return _ordersStore;
         }
 
-        internal OrdersStoreBuilder With(ProductionOrderBuilder orderBuilder)
+        internal OrdersStoreBuilder With(ProductionOrder order)
         {
-            _orderMock = orderBuilder;
+            _order = order;
             return this;
         }
-
-        public Verify(Action action, Moq.Times times)
+    }
+    
+    public static class OrderStoreExtensions
+    {
+        public static void GetExpiredOrders(this OrdersStore orderStore, string dateString)
         {
-
+            var date = DateTime.Parse(dateString);
+            orderStore.GetExpiredOrders(date);
         }
     }
 
