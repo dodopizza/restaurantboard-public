@@ -54,16 +54,13 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void ShoudContainAllOrders_WhenGetOrders()
         {
-            var order1 = new ProductionOrder();
-            var order2 = new ProductionOrder();
-            var orderStore = new OrdersStore();
-            orderStore.AddOrder(order1);
-            orderStore.AddOrder(order2);
+            var pizza = Create.Order.Please();
+            var cola = Create.Order.Please();
+            var orderStore = Create.OrderStore.With(pizza).With(cola).Please();
 
             var allOrders = orderStore.GetOrders();
 
-            Assert.Contains(order1, allOrders);
-            Assert.Contains(order2, allOrders);
+            ListOfOrderExtensions.Contains(allOrders, pizza).And(cola);
         }
 
         // Behaviour
@@ -159,6 +156,20 @@ namespace Dodo.RestarauntBoardTests
         public static DateTime Date(this ProductionOrder order)
         {
             return order.OrderDate;
+        }
+    }
+
+    public static class ListOfOrderExtensions
+    {
+        public static List<IProductionOrder> Contains(this List<IProductionOrder> list, ProductionOrder order)
+        {
+            Assert.Contains(order, list);
+            return list;
+        }
+
+        public static List<IProductionOrder> And(this List<IProductionOrder> list, ProductionOrder order)
+        {
+            return Contains(list, order);
         }
     }
 
