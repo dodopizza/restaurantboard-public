@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.Core", "Dodo.Core\Dodo.Core.csproj", "{AAE81232-F8EE-46B5-894A-6486E92DBE30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9796881B-145B-40EC-8996-D148379845E3} = {9796881B-145B-40EC-8996-D148379845E3}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.Tracker.Contracts", "src\Dodo.Tracker\Dodo.Tracker.Contracts\Dodo.Tracker.Contracts.csproj", "{9796881B-145B-40EC-8996-D148379845E3}"
 EndProject
@@ -11,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestaurantBoard.Domain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestaurantBoard.Site", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj", "{C73097A9-078D-41A9-85FA-71F7BF0571C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.RestarauntBoardTests", "Dodo.RestarauntBoardTests\Dodo.RestarauntBoardTests.csproj", "{6B5CED1A-2300-427E-935A-181033AADE48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestarauntBoardTests", "Dodo.RestarauntBoardTests\Dodo.RestarauntBoardTests.csproj", "{6B5CED1A-2300-427E-935A-181033AADE48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,7 +19,6 @@ namespace Dodo.RestarauntBoardTests
             var productOrder = new ProductionOrder();
             var orderStore = new OrdersStore();
 
-
             orderStore.AddOrder(productOrder);
 
             Assert.Contains(productOrder, orderStore.GetOrders());
