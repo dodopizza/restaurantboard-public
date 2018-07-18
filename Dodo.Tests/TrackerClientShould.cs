@@ -142,9 +142,14 @@ namespace Dodo.Tests
 
     public static class AssertThat
     {
-       public static AssertBuilder The(ProductionOrder[] orders)
+        public static AssertBuilder The(ProductionOrder[] orders)
         {
             return new AssertBuilder(orders);
+        }
+
+        public static AssertBuilder The(ProductionOrder order)
+        {
+            return new AssertBuilder( new[] { order });
         }
     }
 
@@ -161,28 +166,43 @@ namespace Dodo.Tests
         {
             Assert.Equal(otherOrders, _orders);
         }
+
+        public void EqualTo(ProductionOrder otherOrder)
+        {
+            Assert.Equal(new[] { otherOrder }, _orders);
+        }
     }
 
     public static class WhichIs
     {        
         internal static DateTimeBuilder EarlierThan(DateTime date)
         {
-            return new DateTimeBuilder(date);
+
+            return new DateTimeBuilder(date, true);
         }
     }
 
     class DateTimeBuilder
     {
         private DateTime _date;
+        private readonly bool _isEarlier;
 
-        public DateTimeBuilder(DateTime initialDate)
+        public DateTimeBuilder(DateTime initialDate, bool isEarlier)
         {
-            _date = initialDate;            
+            _date = initialDate;
+            _isEarlier = isEarlier;
         }
 
         public DateTimeBuilder For(TimeSpan timeSpan)
         {
-            _date += timeSpan;
+            if (_isEarlier)
+            {
+                _date -= timeSpan;
+            }
+            else
+            {
+                _date += timeSpan;
+            }
             return this;
         }
         
@@ -214,41 +234,16 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
-//            var dateProviderStub = new Mock<IDateProvider>();
-//            dateProviderStub.Setup(p => p.Now()).Returns();
-
-            //
             var date = new DateTime(2018, 07, 11, 23, 00, 00);
             
-            var expiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour())).Please();
-            var notExpiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour()).And().For(1.Minute())).Please();
-
-            //            var notExpiringOrder = new ProductionOrder
-            //            {
-            //                ChangeDate = new DateTime(2018, 07, 11, 22, 00, 00)
-            //            };
-            //            var expiringOrder = new ProductionOrder
-            //            {
-            //                ChangeDate = new DateTime(2018, 07, 11, 21, 59, 00)
-            //            };
-            //            var expectedOrders = new ProductionOrder[]
-            //            {
-            //                notExpiringOrder,
-            //                expiringOrder
-            //            };
-
-
-            //            var ordersProviderStub = new Mock<IOrdersProvider>();
-            //            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            //            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub.Object);
+            var notExpiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour())).Please();
+            var expiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour()).And().For(1.Minute())).Please();
+           
 
             var trackerClient = Create.TrackerClient().With(expiringOrder).And().With(notExpiringOrder);
-
-            //            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
             var receivedOrders = Get.OrdersFrom(trackerClient).ExpiringOn(date).Please();
 
-            
-//            Assert.Equal(new[] { expiringOrder }, actualOrders);
+            AssertThat.The(receivedOrders).EqualTo(expiringOrder);
         }
 
 
