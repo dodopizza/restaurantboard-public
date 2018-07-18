@@ -67,35 +67,36 @@ namespace Dodo.Tests
 
     public static class Get
     {
-        public static ProductionOrder[] OrdersFrom(ITrackerClient trackerClient)
+        public static GetOrdersCallBuilder OrdersFrom(ITrackerClient trackerClient)
         {
-            return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
-        }
-        
-        public static ProductionOrder[] ExpiringOrdersFrom(ITrackerClient trackerClient)
-        {
-            return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
-        }
+            return new GetOrdersCallBuilder(trackerClient);
+        }       
 
-        public static GetOrdersCallBuilder ExpiringOrders()
-        {
-            return new GetOrdersCallBuilder(true);
-        }
+        //public static GetOrdersCallBuilder ExpiringOrdersFrom(ITrackerClient trackerClient)
+        //{
+        //    return new GetOrdersCallBuilder(trackerClient, true);
+        //}
     }
 
     public class GetOrdersCallBuilder
     {
-        private TrackerClient _trackerClient = null;  
+        private readonly ITrackerClient _trackerClient;  
         private bool _expiringOnly;
 
-        public GetOrdersCallBuilder(bool expiringOnly)
+        public GetOrdersCallBuilder(ITrackerClient client)
         {
-            _expiringOnly = expiringOnly;
+            _trackerClient = client;
         }
         
         public ProductionOrder[] Please()
         {
-            return 
+            return _trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, _expiringOnly);
+        }
+
+        internal object ExpiringOn(DateTime date)
+        {
+            _expiringOnly = true;
+            
         }
     }
 
@@ -193,9 +194,9 @@ namespace Dodo.Tests
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
             var orders = 2.Orders();
-            var trackerClient = Create.TrackerClient().WithOrders(orders).Please();
+            var trackerClient = Create.TrackerClient().WithOrders(orders);
 
-            var receivedOrders = Get.OrdersFrom(trackerClient);
+            var receivedOrders = Get.OrdersFrom(trackerClient).Please();
 
             AssertThat.The(receivedOrders).EqualTo(orders);
         }
@@ -231,10 +232,10 @@ namespace Dodo.Tests
             //            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
             //            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub.Object);
 
-            var trackerClient = Create.TrackerClient().With(expiringOrder).And().With(notExpiringOrder).Please();
+            var trackerClient = Create.TrackerClient().With(expiringOrder).And().With(notExpiringOrder);
 
             //            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
-            var receivedOrders = Get.ExpiringOrdersFrom(trackerClient).On(date).Please();
+            var receivedOrders = Get.OrdersFrom(trackerClient).ExpiringOn(date).Please();
 
 //            Assert.Equal(new[] { expiringOrder }, actualOrders);
         }
