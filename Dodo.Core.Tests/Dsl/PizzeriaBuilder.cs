@@ -13,7 +13,7 @@ namespace Tests.Dsl
             return this;
         }
 
-        public PizzeriaBuilder WhichNotOpenedYet()
+        public PizzeriaBuilder WhichOpenningDateIsNotApproved()
         {
             return this;
         }

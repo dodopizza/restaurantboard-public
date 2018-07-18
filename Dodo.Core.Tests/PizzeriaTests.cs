@@ -22,7 +22,7 @@ namespace Tests
         public void GetYearsOld_ShouldReturnsZero_WhenBeginDateTimeWorkIsUnknown()
         {
             var pizzeria = Create.Pizzeria
-                .WhichNotOpenedYet()
+                .WhichOpenningDateIsNotApproved()
                 .Please();
 
             var actualYears = pizzeria.GetYearsOld(09.July(2020));
