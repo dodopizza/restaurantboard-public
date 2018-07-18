@@ -9,25 +9,42 @@ using Xunit;
 
 namespace Dodo.Tests
 {
+    public static class Extensions
+    {
+        static ProductionOrder Orders(this int orderCount)
+        {
+            return new ProductionOrder[];
+        }
+    }
+    
     public class TrackerClientShould
     {                               
         [Fact]
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
-            var expectedOrders = new ProductionOrder[]
-            {
-                new ProductionOrder(),
-                new ProductionOrder()
-            };
-            var ordersProviderStub = new Mock<IOrdersProvider>();
-            var dateProviderDummy = new DateProvider();
-            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
+            // create two orders
+            var expectedOrders = 2.Orders;
+            // create tracker client with these orders
 
-            var actualOrders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
-            
-            Assert.Equal(expectedOrders, actualOrders);
-        }
+            // get orders from tracker client
+
+            // assert that expected orders equal to actual ones
+
+
+//            var expectedOrders = new ProductionOrder[]
+//            {
+//                new ProductionOrder(),
+//                new ProductionOrder()
+//            };
+//            var ordersProviderStub = new Mock<IOrdersProvider>();
+//            var dateProviderDummy = new DateProvider();
+//            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
+//            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
+//
+//            var actualOrders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
+//            
+//            Assert.Equal(expectedOrders, actualOrders);
+        }        
 
         [Fact]
         public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
