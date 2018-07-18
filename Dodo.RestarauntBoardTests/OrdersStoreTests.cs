@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Domain.Stores;
 using Dodo.Tracker.Contracts;
 using Moq;
-using NLog.Filters;
 using Xunit;
 
 namespace Dodo.RestarauntBoardTests
@@ -49,7 +46,7 @@ namespace Dodo.RestarauntBoardTests
         }
 
 
-      
+
         //State
         [Fact]
         public void ShoudContainAllOrders_WhenGetOrders()
@@ -63,14 +60,14 @@ namespace Dodo.RestarauntBoardTests
             AssertThat(allOrders.Contains(pizza) && allOrders.Contains(cola));
         }
 
-       
+
 
         // Behaviour
         [Fact]
         public void IsExpiredShoudInvokeOncePerOrder_WhenGetExpiredOrders()
         {
-            var order = Create.Order;
-            var orderStore = Create.OrderStore.With(order.Please()).Please();
+            var order = Create.OrderToWatch;
+            var orderStore = Create.OrderStore.With(order).Please();
 
             orderStore.GetExpiredOrders("01-01-2018");
 
@@ -81,12 +78,12 @@ namespace Dodo.RestarauntBoardTests
         [Fact]
         public void IsExpiredShoudNotInvokeOnAnyOrder_WhenGetOrders()
         {
-            var order = Create.Order;
-            var orderStore = Create.OrderStore.With(order.Please()).Please();
+            var order = Create.OrderToWatch;
+            var orderStore = Create.OrderStore.With(order).Please();
 
             orderStore.GetOrders();
 
-            order.VerifyIsExpiredWaseNeverCalled();
+            order.VerifyIsExpiredWasNeverCalled();
         }
 
         private static void AssertThat(bool expression)
@@ -99,28 +96,27 @@ namespace Dodo.RestarauntBoardTests
     internal static class Create
     {
         public static OrdersStoreBuilder OrderStore => new OrdersStoreBuilder();
+        public static ProductionOrderMockBuilder OrderToWatch => new ProductionOrderMockBuilder();
         public static ProductionOrderBuilder Order => new ProductionOrderBuilder();
-
     }
 
-    public class ProductionOrderBuilder
+    public class ProductionOrderMockBuilder
     {
-        private Mock<ProductionOrder> _orderMock;
+        private Mock<IProductionOrder> _orderMock;
 
-        public ProductionOrderBuilder()
+        public ProductionOrderMockBuilder()
         {
-            _orderMock = new Mock<ProductionOrder>();
+            _orderMock = new Mock<IProductionOrder>();
         }
 
-        internal ProductionOrderBuilder WithDate(string dateString)
+        internal ProductionOrderMockBuilder WithDate(string dateString)
         {
             var date = DateTime.Parse(dateString);
-            _orderMock.Object.OrderDate = date;
 
             return this;
         }
 
-        internal ProductionOrder Please()
+        internal IProductionOrder GetMock()
         {
             return _orderMock.Object;
         }
@@ -131,21 +127,41 @@ namespace Dodo.RestarauntBoardTests
             _orderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Once);
         }
 
-        internal void VerifyIsExpiredWaseNeverCalled()
+        internal void VerifyIsExpiredWasNeverCalled()
         {
             _orderMock.Verify(p => p.IsExpired(It.IsAny<DateTime>()), Times.Never);
+        }
+    }
+
+    public class ProductionOrderBuilder
+    {
+        private ProductionOrder _order;
+
+        public ProductionOrderBuilder()
+        {
+            _order = new ProductionOrder();
+        }
+
+        internal ProductionOrderBuilder WithDate(string dateString)
+        {
+            var date = DateTime.Parse(dateString);
+
+            return this;
+        }
+
+        internal ProductionOrder Please()
+        {
+            return _order;
         }
     }
 
     public class OrdersStoreBuilder
     {
         private OrdersStore _ordersStore;
-        private ProductionOrder _order;
 
         public OrdersStoreBuilder()
         {
             _ordersStore = new OrdersStore();
-            _order = new ProductionOrder();
         }
 
         internal OrdersStore Please()
@@ -153,13 +169,19 @@ namespace Dodo.RestarauntBoardTests
             return _ordersStore;
         }
 
-        internal OrdersStoreBuilder With(ProductionOrder order)
+        internal OrdersStoreBuilder With(IProductionOrder order)
         {
-            _order = order;
+            _ordersStore.AddOrder(order);
+            return this;
+        }
+
+        internal OrdersStoreBuilder With(ProductionOrderMockBuilder orderMockBuilder)
+        {
+            _ordersStore.AddOrder(orderMockBuilder.GetMock());
             return this;
         }
     }
-    
+
     public static class OrderStoreExtensions
     {
         public static void GetExpiredOrders(this OrdersStore orderStore, string dateString)
@@ -171,12 +193,12 @@ namespace Dodo.RestarauntBoardTests
 
     public static class ProductioOrderExtensions
     {
-        public static DateTime ExpireDate(this ProductionOrder order)
+        public static DateTime ExpireDate(this IProductionOrder order)
         {
-            return order.OrderDate.AddMilliseconds(order.ExpirationTime + 1);
+            return order.OrderDate.AddSeconds((new ProductionOrder()).ExpirationTime + 1);
         }
 
-        public static DateTime Date(this ProductionOrder order)
+        public static DateTime Date(this IProductionOrder order)
         {
             return order.OrderDate;
         }
