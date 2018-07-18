@@ -22,6 +22,10 @@ namespace Dodo.Tests
 
             return orders.ToArray();
         }
+        public static TimeSpan Hour(this int hours)
+        {
+           
+        }       
     }
 
     public static class Create
@@ -29,6 +33,21 @@ namespace Dodo.Tests
         public static TrackerClientBuilder TrackerClient()
         {
             return new TrackerClientBuilder();
+        }
+
+        public static OrderBuilder Order()
+        {
+            return new OrderBuilder();
+        }
+    }
+
+    public class OrderBuilder
+    {
+        private DateTime _creationDate = DateTime.Now;
+        internal OrderBuilder CreatedOnDate(DateTime date)
+        {
+            _creationDate = date;
+            return this;
         }
     }
 
@@ -87,6 +106,30 @@ namespace Dodo.Tests
         }
     }
 
+    public static class WhichIs
+    {        
+        internal static DateTimeBuilder EarlierThan(DateTime date)
+        {
+            return new DateTimeBuilder(date);
+        }
+    }
+
+    class DateTimeBuilder
+    {
+        private DateTime _initialDate = DateTime.Now;
+
+        public DateTimeBuilder(DateTime date)
+        {
+            _initialDate = date;            
+        }
+
+        public DateTimeBuilder For(TimeSpan timeSpan)
+        {
+            _initialDate += timeSpan;
+            return this;
+        }
+    }
+
 
     public class TrackerClientShould
     {
@@ -110,8 +153,8 @@ namespace Dodo.Tests
             //
             var date = new DateTime(2018, 07, 11, 23, 00, 00);
             
-            var expiringOrder = Create.Order.WithCreationDate(WhichIs.EarlierThan(date).For(1.Hour));
-            var notExpiringOrder = Create.Order.WithCreationDate(WhichIs.EarlierThan(date).For(1.Hour).And.For(1.Minute));
+            var expiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour)).Please();
+            var notExpiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour).And.For(1.Minute)).Please();
 
             //            var notExpiringOrder = new ProductionOrder
             //            {
@@ -134,8 +177,8 @@ namespace Dodo.Tests
 
             var trackerClient = Create.TrackerClient().With(expiringOrder).And.With(notExpiringOrder).Please();
 
-//            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
-            var receivedOrders = Get.ExpiringOrdersFrom(trackerClient);
+            //            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
+            var receivedOrders = Get.ExpiringOrders.From(trackerClient).On(date).Please();
 
 //            Assert.Equal(new[] { expiringOrder }, actualOrders);
         }
@@ -224,6 +267,8 @@ namespace Dodo.Tests
             return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
         }
     }
+
+  
 }
 
     
