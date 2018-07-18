@@ -24,32 +24,50 @@ namespace Dodo.Tests
         }
     }
 
-    public class Create
+    public static class Create
     {
-        public TrackerClientBuilder TrackerClient ()
+        public static TrackerClientBuilder TrackerClient ()
         {
             return new TrackerClientBuilder();
         }
     }
 
-    public class TrackerClientBuilder
+    public static class Get
     {
-        public TrackerClientBuilder WithOrders (ProductionOrder[] productionOrders)
+        public static ProductionOrder[] OrdersFrom(ITrackerClient trackerClient)
         {
-
+            return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0);
         }
     }
 
+    public class TrackerClientBuilder
+    {
+        private ProductionOrder[] _orders;
+        
+        public TrackerClientBuilder WithOrders (ProductionOrder[] productionOrders)
+        {
+            _orders = productionOrders;
+            return this;
+        }
+
+        public TrackerClient Please()
+        {
+            var ordersProviderStub = new Mock<IOrdersProvider>();
+            var dateProviderDummy = new DateProvider();
+            ordersProviderStub.Setup(p => p.GetOrders()).Returns(_orders);
+            return new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
+        }
+    }
+    
     public class TrackerClientShould
-    {                               
+    {                
         [Fact]
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
-            // create two orders
             var orders = 2.Orders();
-            var trackerClient = Create.TrackerClient.WithOrders(orders).Please();
-            // create tracker client with these orders
-
+            var trackerClient = Create.TrackerClient().WithOrders(orders).Please();
+            
+            var givenOrders = Get.OrdersFrom(trackerClient);
             // get orders from tracker client
 
             // assert that expected orders equal to actual ones
