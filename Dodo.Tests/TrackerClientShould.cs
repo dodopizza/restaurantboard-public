@@ -105,12 +105,13 @@ namespace Dodo.Tests
         public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
             //            var dateProviderStub = new Mock<IDateProvider>();
-            //            dateProviderStub.Setup(p => p.Now()).Returns(new DateTime(2018, 07, 11, 23, 00, 00));
+            //            dateProviderStub.Setup(p => p.Now()).Returns();
 
             //
-            var date;
-            var expiringOrder = Create.Order.WithDate(1.HourErlierThan(date));
-            var notExpiringOrder = Create.Order.WithDate(1.Hour.And.1.Minute.EarlierThan(date));
+            var date = new DateTime(2018, 07, 11, 23, 00, 00);
+            
+            var expiringOrder = Create.Order.WithCreationDate(WhichIs.EarlierThan(date).For(1.Hour));
+            var notExpiringOrder = Create.Order.WithCreationDate(WhichIs.EarlierThan(date).For(1.Hour).And.For(1.Minute));
 
             //            var notExpiringOrder = new ProductionOrder
             //            {
@@ -131,7 +132,7 @@ namespace Dodo.Tests
             //            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
             //            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub.Object);
 
-            var trackerClient = Create.TrackerClient().WithDateProvider().WithOrders(orders).Please();
+            var trackerClient = Create.TrackerClient().With(expiringOrder).And.With(notExpiringOrder).Please();
 
 //            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
             var receivedOrders = Get.ExpiringOrdersFrom(trackerClient);
