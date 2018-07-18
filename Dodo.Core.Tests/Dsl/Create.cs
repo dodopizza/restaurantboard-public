@@ -4,5 +4,8 @@
     {
         public static CallCenterPhoneParametersBuilder CallCenterPhoneParameter =>
             new CallCenterPhoneParametersBuilder();
+
+        public static PizzeriaBuilder Pizzeria =>
+            new PizzeriaBuilder();
     }
 }
