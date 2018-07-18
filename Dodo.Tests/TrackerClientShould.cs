@@ -22,6 +22,11 @@ namespace Dodo.Tests
 
             return orders.ToArray();
         }
+        
+        public static AssertBuilder That(this Assert _, ProductionOrder[] orders)
+        {
+            return new AssertBuilder(orders);
+        }
     }
 
     public static class Create
@@ -57,22 +62,21 @@ namespace Dodo.Tests
             ordersProviderStub.Setup(p => p.GetOrders()).Returns(_orders);
             return new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
         }
-    }
-
-    public static class AssertThat
-    {
-       public  AssertBuilder Orders(ProductionOrder[] orders)
-        {
-            _orders = orders;
-            return this;
-        }
-    }
+    }    
 
     public class AssertBuilder
     {
         private ProductionOrder[] _orders;
-        
 
+        public AssertBuilder(ProductionOrder[] orders)
+        {
+            _orders = orders;
+        }
+
+        public void EqualTo(ProductionOrder[] otherOrders)
+        {
+            Assert.Equal(otherOrders, _orders);
+        }
     }
 
 
@@ -86,25 +90,7 @@ namespace Dodo.Tests
 
             var receivedOrders = Get.OrdersFrom(trackerClient);
 
-            AssertThat.Orders(orders).EqualTo(givenOrders);
-            // get orders from tracker client
-
-            // assert that expected orders equal to actual ones
-
-
-            //            var expectedOrders = new ProductionOrder[]
-            //            {
-            //                new ProductionOrder(),
-            //                new ProductionOrder()
-            //            };
-            //            var ordersProviderStub = new Mock<IOrdersProvider>();
-            //            var dateProviderDummy = new DateProvider();
-            //            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
-            //            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
-            //
-            //            var actualOrders = GetOrdersWithoutExpiringOnlyParameter(trackerClient);
-            //            
-            //            Assert.Equal(expectedOrders, actualOrders);
+            Assert.That(receivedOrders).EqualTo(orders);
         }
 
         [Fact]
