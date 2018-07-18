@@ -22,10 +22,16 @@ namespace Dodo.Tests
 
             return orders.ToArray();
         }
-        public static TimeSpan Hour(this int hours)
+        
+        public static TimeSpan Hour(this int hour)
         {
-           
+            return new TimeSpan(hour, 0, 0);
         }       
+        
+        public static TimeSpan Minute(this int minute)
+        {
+            return new TimeSpan(0, minute, 0);
+        }
     }
 
     public static class Create
@@ -49,6 +55,14 @@ namespace Dodo.Tests
             _creationDate = date;
             return this;
         }
+
+        public ProductionOrder Please()
+        {
+            return new ProductionOrder()
+            {
+                ChangeDate = _creationDate
+            };
+        }
     }
 
     public static class Get
@@ -62,23 +76,55 @@ namespace Dodo.Tests
         {
             return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
         }
+
+        public static GetOrdersCallBuilder ExpiringOrders()
+        {
+            return new GetOrdersCallBuilder(true);
+        }
+    }
+
+    public class GetOrdersCallBuilder
+    {
+        private TrackerClient _trackerClient = null;  
+        private bool _expiringOnly;
+
+        public GetOrdersCallBuilder(bool expiringOnly)
+        {
+            _expiringOnly = expiringOnly;
+        }
+        
+        public ProductionOrder[] Please()
+        {
+            return 
+        }
     }
 
     public class TrackerClientBuilder
     {
-        private ProductionOrder[] _orders;
+        private List<ProductionOrder> _orders = new List<ProductionOrder>();
 
         public TrackerClientBuilder WithOrders(ProductionOrder[] productionOrders)
         {
-            _orders = productionOrders;
+            _orders.AddRange(productionOrders);
+            return this;
+        }        
+
+        public TrackerClientBuilder With(ProductionOrder order)
+        {
+            _orders.Add(order);
             return this;
         }
 
+        public TrackerClientBuilder And()
+        {
+            return this;
+        }
+        
         public TrackerClient Please()
         {
             var ordersProviderStub = new Mock<IOrdersProvider>();
             var dateProviderDummy = new DateProvider();
-            ordersProviderStub.Setup(p => p.GetOrders()).Returns(_orders);
+            ordersProviderStub.Setup(p => p.GetOrders()).Returns(_orders.ToArray());
             return new TrackerClient(ordersProviderStub.Object, dateProviderDummy);
         }
     }
@@ -116,17 +162,27 @@ namespace Dodo.Tests
 
     class DateTimeBuilder
     {
-        private DateTime _initialDate = DateTime.Now;
+        private DateTime _date;
 
-        public DateTimeBuilder(DateTime date)
+        public DateTimeBuilder(DateTime initialDate)
         {
-            _initialDate = date;            
+            _date = initialDate;            
         }
 
         public DateTimeBuilder For(TimeSpan timeSpan)
         {
-            _initialDate += timeSpan;
+            _date += timeSpan;
             return this;
+        }
+        
+        public DateTimeBuilder And()
+        {
+            return this;
+        }
+        
+        public static implicit operator DateTime(DateTimeBuilder builder)
+        {
+            return builder._date;
         }
     }
 
@@ -153,8 +209,8 @@ namespace Dodo.Tests
             //
             var date = new DateTime(2018, 07, 11, 23, 00, 00);
             
-            var expiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour)).Please();
-            var notExpiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour).And.For(1.Minute)).Please();
+            var expiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour())).Please();
+            var notExpiringOrder = Create.Order().CreatedOnDate(WhichIs.EarlierThan(date).For(1.Hour()).And().For(1.Minute())).Please();
 
             //            var notExpiringOrder = new ProductionOrder
             //            {
@@ -175,10 +231,10 @@ namespace Dodo.Tests
             //            ordersProviderStub.Setup(p => p.GetOrders()).Returns(expectedOrders);
             //            var trackerClient = new TrackerClient(ordersProviderStub.Object, dateProviderStub.Object);
 
-            var trackerClient = Create.TrackerClient().With(expiringOrder).And.With(notExpiringOrder).Please();
+            var trackerClient = Create.TrackerClient().With(expiringOrder).And().With(notExpiringOrder).Please();
 
             //            var actualOrders = GetOrdersWithExpiringOnlyParameterEqualToTrue(trackerClient);
-            var receivedOrders = Get.ExpiringOrders.From(trackerClient).On(date).Please();
+            var receivedOrders = Get.ExpiringOrdersFrom(trackerClient).On(date).Please();
 
 //            Assert.Equal(new[] { expiringOrder }, actualOrders);
         }
