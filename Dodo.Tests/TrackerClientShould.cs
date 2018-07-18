@@ -4,6 +4,7 @@ using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Moq;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 
@@ -11,19 +12,42 @@ namespace Dodo.Tests
 {
     public static class Extensions
     {
-        static ProductionOrder Orders(this int orderCount)
+       public static ProductionOrder[] Orders(this int orderCount)
         {
-            return new ProductionOrder[];
+            var orders = new List<ProductionOrder>();
+            for (int i =0; i< orderCount; i++)
+            {
+                orders.Add(new ProductionOrder());
+            }
+
+            return orders.ToArray();
         }
     }
-    
+
+    public class Create
+    {
+        public TrackerClientBuilder TrackerClient ()
+        {
+            return new TrackerClientBuilder();
+        }
+    }
+
+    public class TrackerClientBuilder
+    {
+        public TrackerClientBuilder WithOrders (ProductionOrder[] productionOrders)
+        {
+
+        }
+    }
+
     public class TrackerClientShould
     {                               
         [Fact]
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
             // create two orders
-            var expectedOrders = 2.Orders;
+            var orders = 2.Orders();
+            var trackerClient = Create.TrackerClient.WithOrders(orders).Please();
             // create tracker client with these orders
 
             // get orders from tracker client
@@ -157,4 +181,6 @@ namespace Dodo.Tests
             return trackerClient.GetOrders(new Uuid(), OrderType.Delivery, new OrderState[1], 0, true);
         }
     }
+
+    
 }
