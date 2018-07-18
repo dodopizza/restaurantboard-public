@@ -41,11 +41,6 @@ namespace Dodo.Tracker.Contracts
             return (now - OrderDate).TotalSeconds>ExpirationTime;
         }
 
-        public ProductionOrder WithDate(string v)
-        {
-            throw new NotImplementedException();
-        }
-
         public  int ExpirationTime {get;} =10;
     }
 }
