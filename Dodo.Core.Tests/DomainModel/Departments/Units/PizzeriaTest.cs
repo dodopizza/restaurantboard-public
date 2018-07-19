@@ -35,6 +35,16 @@ namespace Dodo.Core.Tests.DomainModel.Departments
                 .Please();
             
             PizzeriaAssert.That(pizzeria).At(14.JulyOf(2018)).HasAgeOf(1, In.Months);
+        }   
+        
+        [Fact]
+        public void IsZeroMonthsOld_WhenPizzeriaIsNotOpened()
+        {
+            Pizzeria pizzeria = CreatePizzeria()
+                .ThatIsNotOpened()
+                .Please();
+            
+            PizzeriaAssert.That(pizzeria).At(14.JulyOf(2018)).HasAgeOf(0, In.Months);
         }
 
         private PizzeriaBuilder CreatePizzeria()
