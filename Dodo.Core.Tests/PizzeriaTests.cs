@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.Tests.Dsl;
 using NUnit.Framework;
 using Tests.Dsl;
 
@@ -37,7 +38,12 @@ namespace Tests
                 .WhichBeginsWorkAt(10.July(2008))
                 .Please();
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => pizzeria.GetYearsOld(09.July(1999)));
+            AssertThat(pizzeria).SpecifiedDateFromThePastIsNotValid(09.July(1999));
+        }
+
+        private static PizzeriaAssert AssertThat(Pizzeria pizzeria)
+        {
+            return new PizzeriaAssert(pizzeria);
         }
     }
 }

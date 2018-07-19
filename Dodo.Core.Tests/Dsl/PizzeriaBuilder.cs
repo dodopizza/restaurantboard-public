@@ -7,6 +7,8 @@ namespace Tests.Dsl
 {
     public class PizzeriaBuilder
     {
+        private DateTime? _beginDateTimeWork;
+
         public PizzeriaBuilder WhichBeginsWorkAt(DateTime beginDateTimeWork)
         {
             _beginDateTimeWork = beginDateTimeWork;
@@ -43,7 +45,5 @@ namespace Tests.Dsl
                 pizzeriaFormat: null
             );
         }
-
-        private DateTime? _beginDateTimeWork;
     }
 }

@@ -4,6 +4,10 @@ namespace Tests.Dsl
 {
     public class CallCenterPhoneParametersBuilder
     {
+        private string _number;
+        private string _iconPath;
+        private string _iconSitePath;
+
         public CallCenterPhoneParametersBuilder WithIconPath(string iconPath)
         {
             _iconPath = iconPath;
@@ -31,9 +35,5 @@ namespace Tests.Dsl
                 IconSitePath = _iconSitePath
             };
         }
-
-        private string _number;
-        private string _iconPath;
-        private string _iconSitePath;
     }
 }
