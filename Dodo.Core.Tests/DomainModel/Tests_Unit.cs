@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.Tests.DomainModel.DSL;
 using Moq;
 using Xunit;
 
@@ -75,10 +76,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeOffice_ShouldCallToStringOffice_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Office);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Office).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
@@ -88,10 +87,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypePizzeria_ShouldCallToStringPizzeria_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Pizzeria);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Pizzeria).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
@@ -101,10 +98,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeCallCenter_ShouldCallToStringCallCenter_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.CallCenter);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.CallCenter).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
@@ -114,10 +109,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeWarehouse_ShouldCallToStringWarehouse_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Warehouse);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Warehouse).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
@@ -127,10 +120,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeServiceDelivery_ShouldCallToStringServiceDelivery_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.ServiceDelivery);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.ServiceDelivery).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
@@ -140,10 +131,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeFactorySemis_ShouldCallToString_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.FactorySemis);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.FactorySemis).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 

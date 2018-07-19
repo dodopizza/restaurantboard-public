@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.Tests.DomainModel.DSL;
 using Moq;
 using Xunit;
 
@@ -9,8 +10,8 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithPlus_WhenTimeZoneShiftIsPositive()
         {
-            var department = new Department() {ManagedTimeZoneShift = 100};
-
+            var department = Create.Department.WithTimeZoneShift(100).Please();
+            
             var timeZoneShiftString = department.ManagedTimeZoneShiftString;
 
             Assert.Equal("+100", timeZoneShiftString);
@@ -19,7 +20,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithMinus_WhenTimeZoneShiftIsNegative()
         {
-            var department = new Department {ManagedTimeZoneShift = -100};
+            var department = Create.Department.WithTimeZoneShift(-100).Please();
 
             var timeZoneShiftString = department.ManagedTimeZoneShiftString;
 
@@ -29,7 +30,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void TimeZoneShiftString_ShouldStartWithSpace_WhenTimeZoneShiftIsZero()
         {
-            var department = new Department {ManagedTimeZoneShift = 0};
+            var department = Create.Department.WithTimeZoneShift(0).Please();
 
             var timeZoneShiftString = department.ManagedTimeZoneShiftString;
 
@@ -41,10 +42,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void ShouldContainsOneUnit_WhenAddUnit()
         {
-            var unit = new Unit();
-            var department = new Department();
-            
-            department.AddUnit(unit);
+            var department = Create.Department.WithUnit(Create.Unit.Please()).Please();
             
             Assert.Equal(1, department.Units.Count);
         }
@@ -52,12 +50,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void ShouldContainsTwoUnits_WhenAddTwoUnits()
         {
-            var unitOne = new Unit();
-            var unitTwo = new Unit();
-            var department = new Department();
-            
-            department.AddUnit(unitOne);
-            department.AddUnit(unitTwo);
+            var department = Create.Department.WithUnits(2).Please();
             
             Assert.Equal(2, department.Units.Count);
         }
@@ -65,11 +58,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTwoUnits_ShouldContainsTwoUnitNames_WhenGetAllUnitNames()
         {
-            var unitOne = new Unit();
-            var unitTwo = new Unit();
-            var department = new Department();
-            department.AddUnit(unitOne);
-            department.AddUnit(unitTwo);
+            var department = Create.Department.WithUnits(2).Please();
 
             var unitNames = department.GetAllUnitNames();
             
