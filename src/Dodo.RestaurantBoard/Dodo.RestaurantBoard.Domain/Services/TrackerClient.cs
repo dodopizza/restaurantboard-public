@@ -41,7 +41,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
         public void AddProductionOrder(string clientName, int number)
         {
-            var existingOrder =ordersStorage.GetProductionOrderByName(clientName);
+            var existingOrder = ordersStorage.GetProductionOrderByName(clientName);
 
             if (existingOrder == null)
             {

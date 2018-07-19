@@ -1,5 +1,6 @@
 ﻿using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Moq;
 using System;
@@ -13,7 +14,8 @@ namespace Dodo.Tests
         [Fact]
         public void UpdateOrderNumber_WhenAddingOrderWithSameName()
         {
-            var trackerClient = new TrackerClient(GetOrderStorageTest());
+            var trackerClient = Gimmy.TrackerClient().Default().RightNow();
+
             trackerClient.AddProductionOrder("John", 3);
 
             trackerClient.AddProductionOrder("John", 2);
