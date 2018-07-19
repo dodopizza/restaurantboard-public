@@ -12,7 +12,7 @@ namespace Dodo.Tests
         [Fact]
         public void UpdateOrderNumber_WhenAddingOrderWithSameName()
         {
-            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
+            var trackerClient = Gimme.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("John", 2);
 
@@ -22,7 +22,7 @@ namespace Dodo.Tests
         [Fact]
         public void AddingNewOrder_WhenAddingWithDifferentClientNames()
         {
-            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
+            var trackerClient = Gimme.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("Tom", 2);
 
@@ -32,7 +32,7 @@ namespace Dodo.Tests
         [Fact]
         public void NotChangingOldOrder_WhenAddingWithDifferentClientNames()
         {
-            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
+            var trackerClient = Gimme.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("Tom", 2);
 
@@ -42,9 +42,9 @@ namespace Dodo.Tests
         [Fact]
         public void SetChangeDateFromDateTimeProvider_WhenAddingOrder()
         {
-            var dateTimeProviderStub = Gimmy.DateTimeProviderStub(1.January(2018)).RightNow();
-            var orderStorage = Gimmy.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
-            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorage).RightNow();
+            var dateTimeProviderStub = Gimme.DateTimeProviderStub(1.January(2018)).RightNow();
+            var orderStorage = Gimme.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
+            var trackerClient = Gimme.TrackerClient().WithOrderStorage(orderStorage).RightNow();
 
             trackerClient.AddProductionOrder("John", 3);
 
@@ -54,9 +54,9 @@ namespace Dodo.Tests
         [Fact]
         public void UpdateChangeDate_WhenUpdatingOrder()
         {
-            var dateTimeProviderStub = Gimmy.DateTimeProviderStub().WithDates(1.January(2018), 2.January(2018)).RightNow();
-            var orderStorage = Gimmy.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
-            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorage).RightNow();
+            var dateTimeProviderStub = Gimme.DateTimeProviderStub().WithDates(1.January(2018), 2.January(2018)).RightNow();
+            var orderStorage = Gimme.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
+            var trackerClient = Gimme.TrackerClient().WithOrderStorage(orderStorage).RightNow();
 
             trackerClient.AddProductionOrder("John", 3);
             var orderDateAdd = trackerClient.ChangeDateFor("John");
@@ -70,9 +70,9 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnsExpectedOrders_WhenGetOrdersAfterDate()
         {
-            var expectedOrders = new[] { Gimmy.ProductionOrder(1.January(2018)) };
-            var orderStorageStub = Gimmy.OrderStorageStub().WithExistingOrders(expectedOrders).RightNow();
-            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorageStub).RightNow();
+            var expectedOrders = new[] { Gimme.ProductionOrder(1.January(2018)) };
+            var orderStorageStub = Gimme.OrderStorageStub().WithExistingOrders(expectedOrders).RightNow();
+            var trackerClient = Gimme.TrackerClient().WithOrderStorage(orderStorageStub).RightNow();
 
             var orders = trackerClient.GetOrdersAfterDate(1.June(2018));
 

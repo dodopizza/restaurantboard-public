@@ -31,7 +31,7 @@ namespace Dodo.Tests.DSL
 
         private void SetDefault()
         {
-            _dateTimeProvider = Gimmy.DefaultDateTimeProvider();
+            _dateTimeProvider = Gimme.DefaultDateTimeProvider();
         }
     }
 }
