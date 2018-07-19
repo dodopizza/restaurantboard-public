@@ -1,5 +1,6 @@
 ﻿using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using System;
 
 namespace Dodo.Tests.DSL
 {
@@ -17,9 +18,14 @@ namespace Dodo.Tests.DSL
 
         public static IDateTimeProvider DefaultDateTimeProvider() => new DateTimeProviderUtcNow();
 
-        //public static DateTimeProviderBuilder DateTimeProvider()
-        //{
-        //    return new DateTimeProviderBuilder();
-        //}
+        public static DateTimeProviderStub DateTimeProviderStub()
+        {
+            return new DateTimeProviderStub();
+        }
+
+        public static DateTimeProviderStub DateTimeProviderStub(DateTime dateTime)
+        {
+            return new DateTimeProviderStub(dateTime);
+        }
     }
 }

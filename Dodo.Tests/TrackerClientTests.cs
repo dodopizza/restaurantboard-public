@@ -3,7 +3,6 @@ using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Moq;
-using System;
 using System.Collections.Generic;
 using Xunit;
 
@@ -14,70 +13,59 @@ namespace Dodo.Tests
         [Fact]
         public void UpdateOrderNumber_WhenAddingOrderWithSameName()
         {
-            var trackerClient = Gimmy.TrackerClient().Default().RightNow();
-
-            trackerClient.AddProductionOrder("John", 3);
+            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("John", 2);
 
-            Assert.Equal(3 + 2, trackerClient.GetOrderByName("John").Number);
+            trackerClient.NumberFor("John").ShouldBe(3 + 2);
         }
 
         [Fact]
         public void AddingNewOrder_WhenAddingWithDifferentClientNames()
         {
-            var trackerClient = new TrackerClient(GetOrderStorageTest());
-            trackerClient.AddProductionOrder("John", 3);
+            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("Tom", 2);
 
-            Assert.Equal(2, trackerClient.GetOrderByName("Tom").Number);
+            trackerClient.NumberFor("Tom").ShouldBe(2);
         }
 
         [Fact]
         public void NotChangingOldOrder_WhenAddingWithDifferentClientNames()
         {
-            var trackerClient = new TrackerClient(GetOrderStorageTest());
-            trackerClient.AddProductionOrder("John", 3);
+            var trackerClient = Gimmy.TrackerClient().Default().WithExistingOrder("John", 3).RightNow();
 
             trackerClient.AddProductionOrder("Tom", 2);
 
-            Assert.Equal(3, trackerClient.GetOrderByName("John").Number);
+            trackerClient.NumberFor("John").ShouldBe(3);
         }
 
         [Fact]
         public void SetChangeDateFromDateTimeProvider_WhenAddingOrder()
         {
-            var dateTimeExpected = new DateTime(2018, 1, 1, 1, 1, 1);
-            var dateTimeProviderStub = new Mock<IDateTimeProvider>();
-            dateTimeProviderStub.Setup(d => d.GetDateTime()).Returns(dateTimeExpected);
-            var trackerClient = new TrackerClient(GetOrderStorageTest(dateTimeProviderStub.Object));
+            var dateTimeProviderStub = Gimmy.DateTimeProviderStub(1.January(2018)).RightNow();
+            var orderStorage = Gimmy.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
+            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorage).RightNow();
 
             trackerClient.AddProductionOrder("John", 3);
-            
-            var orderAddDate = trackerClient.GetOrderByName("John").ChangeDate;
-            Assert.Equal(dateTimeExpected, orderAddDate);
+
+            trackerClient.ChangeDateFor("John").ShouldBe(1.January(2018));
         }
 
         [Fact]
         public void UpdateChangeDate_WhenUpdatingOrder()
         {
-            var dateTimeCreated = new DateTime(2018, 1, 1, 1, 1, 1);
-            var dateTimeProviderStub = new Mock<IDateTimeProvider>();
-
-            var trackerClient = new TrackerClient(GetOrderStorageTest(dateTimeProviderStub.Object));
-            dateTimeProviderStub.SetupSequence(d => d.GetDateTime())
-                .Returns(dateTimeCreated)
-                .Returns(dateTimeCreated.AddSeconds(10));
+            var dateTimeProviderStub = Gimmy.DateTimeProviderStub().WithDates(1.January(2018), 2.January(2018)).RightNow();
+            var orderStorage = Gimmy.OrderStorage().WithDateTimeProvider(dateTimeProviderStub).RightNow();
+            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorage).RightNow();
 
             trackerClient.AddProductionOrder("John", 3);
-            var orderDateAdd = trackerClient.GetOrderByName("John").ChangeDate;
+            var orderDateAdd = trackerClient.ChangeDateFor("John");
 
             trackerClient.AddProductionOrder("John", 2);
+            var orderUpdateDate = trackerClient.ChangeDateFor("John");
 
-            var orderUpdateDate = trackerClient.GetOrderByName("John").ChangeDate;
-
-            Assert.Equal(orderDateAdd.Value.AddSeconds(10), orderUpdateDate.Value);
+            Difference.Between(orderDateAdd).And(orderUpdateDate).ShouldBe(1.Days());
         }
 
         [Fact]
@@ -85,15 +73,15 @@ namespace Dodo.Tests
         {
             var orderStorageStub = new Mock<IOrdersStorage>();
 
-            var expectedOrders = new[] { new ProductionOrder { ChangeDate = new DateTime(2018, 12, 01) } };
+            var expectedOrders = new[] { new ProductionOrder { ChangeDate = 1.December(2018) } };
             var allOrders = new List<ProductionOrder>(expectedOrders);
-            allOrders.Add(new ProductionOrder { ChangeDate = new DateTime(2018, 01, 01) });
+            allOrders.Add(new ProductionOrder { ChangeDate = 1.January(2018) });
 
             orderStorageStub.Setup(o => o.GetAllProductionOrders()).Returns(allOrders);
 
             var trackerClient = new TrackerClient(orderStorageStub.Object);
 
-            var orders = trackerClient.GetOrdersAfterDate(new DateTime(2018, 06, 01));
+            var orders = trackerClient.GetOrdersAfterDate(1.June(2018));
 
             Assert.Equal(expectedOrders, orders);
         }

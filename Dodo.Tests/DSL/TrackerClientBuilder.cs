@@ -24,6 +24,12 @@ namespace Dodo.Tests.DSL
             return this;
         }
 
+        public TrackerClientBuilder WithExistingOrder(string clientName, int number)
+        {
+            _ordersStorage.AddProductionOrder(clientName, number);
+            return this;
+        }
+
         public ITrackerClient RightNow()
         {
             return new TrackerClient(_ordersStorage);
@@ -31,7 +37,7 @@ namespace Dodo.Tests.DSL
 
         private void SetDefault()
         {
-            _ordersStorage = Gimmy.OrderStorage().RightNow();
+            _ordersStorage = Gimmy.OrderStorage().Default().RightNow();
         }
     }
 }
