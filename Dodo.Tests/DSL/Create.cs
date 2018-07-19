@@ -12,9 +12,6 @@ namespace Dodo.Tests.DSL
 
         public static ProductionOrderBuilder Order => new ProductionOrderBuilder();
 
-        public static ProductionOrder[] Orders(int count)
-        {
-            return new ProductionOrder[count];
-        }
+        public static ProductionOrder[] Orders(int count) => new ProductionOrder[count];
     }
 }

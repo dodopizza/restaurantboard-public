@@ -1,5 +1,7 @@
 ﻿using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.Tracker.Contracts;
 using Moq;
+using System;
 
 namespace Dodo.Tests.DSL
 {
@@ -9,13 +11,6 @@ namespace Dodo.Tests.DSL
 
         private IOrdersProvider _ordersProvider;
 
-        internal TrackerClientBuilder WithDateProviderAs(IDateProvider dateProvider)
-        {
-            _dateProvider = dateProvider;
-
-            return this;
-        }
-
         internal TrackerClientBuilder WithDateProviderAs(Mock<IDateProvider> dateProviderMock)
         {
             _dateProvider = dateProviderMock.Object;
@@ -23,16 +18,23 @@ namespace Dodo.Tests.DSL
             return this;
         }
 
-        internal TrackerClientBuilder WithOrdersProviderAs(IOrdersProvider ordersProvider)
+        internal TrackerClientBuilder WithOrdersProviderAs(Mock<IOrdersProvider> ordersProviderMock)
         {
-            _ordersProvider = ordersProvider;
+            _ordersProvider = ordersProviderMock.Object;
 
             return this;
         }
 
-        internal TrackerClientBuilder WithOrdersProviderAs(Mock<IOrdersProvider> ordersProviderMock)
+        internal TrackerClientBuilder WithOrders(params ProductionOrder[] orders)
         {
-            _ordersProvider = ordersProviderMock.Object;
+            _ordersProvider = Create.OrdersProvider.WithOrders(orders).Please();
+
+            return this;
+        }
+
+        internal TrackerClientBuilder WithNowAs(DateTime nowDate)
+        {
+            _dateProvider = Create.DateProvider.WithNowAs(nowDate).Please().Object;
 
             return this;
         }

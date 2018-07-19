@@ -16,14 +16,14 @@ namespace Dodo.Tests.DSL
             _orders = new List<ProductionOrder>();
         }
 
-        internal OrdersProviderMockBuilder AddOrder(ProductionOrder order)
+        internal OrdersProviderMockBuilder WithOrder(ProductionOrder order)
         {
             _orders.Add(order);
 
             return this;
         }
 
-        internal OrdersProviderMockBuilder AddOrders(ProductionOrder[] orders)
+        internal OrdersProviderMockBuilder WithOrders(ProductionOrder[] orders)
         {
             _orders.AddRange(orders);
 

@@ -9,8 +9,7 @@ namespace Dodo.Tests
         public void ReturnAllOrders_WhenGetOrdersIsCalledWithoutExpiringOnlyParameter()
         {
             var expectedOrders = Create.Orders(2);
-            var ordersProvider = Create.OrdersProvider.AddOrders(expectedOrders).Please();
-            var trackerClient = Create.TrackerClient.WithOrdersProviderAs(ordersProvider).Please();
+            var trackerClient = Create.TrackerClient.WithOrders(expectedOrders).Please();
             
             var actualOrders = trackerClient.GetOrdersWithoutExpiringOnlyParameter();
             
@@ -20,11 +19,9 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnOnlyExpiringOrders_WhenGetOrdersIsCalledWithExpiringOnlyParameterEqualToTrue()
         {
-            var dateProvider = Create.DateProvider.WithNowAs(11.July(2018).TimeIs("23:00")).Please();
             var notExpiringOrder = Create.Order.WithChangeDate(11.July(2018).TimeIs("22:00")).Please();
             var expiringOrder = Create.Order.WithChangeDate(11.July(2018).TimeIs("21:59")).Please();
-            var ordersProvider = Create.OrdersProvider.AddOrder(notExpiringOrder).AddOrder(expiringOrder).Please();
-            var trackerClient = Create.TrackerClient.WithDateProviderAs(dateProvider).WithOrdersProviderAs(ordersProvider).Please();
+            var trackerClient = Create.TrackerClient.WithNowAs(11.July(2018).TimeIs("23:00")).WithOrders(notExpiringOrder, expiringOrder).Please();
 
             var actualOrders = trackerClient.GetOrdersWithExpiringOnlyParameterEqualToTrue();
 
