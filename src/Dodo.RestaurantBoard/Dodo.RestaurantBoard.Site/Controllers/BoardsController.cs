@@ -78,7 +78,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         public ViewResult OrdersReadinessToStationary(int unitId)
         {
             var department = _departmentsStructureService.GetDepartmentByUnitOrCache(unitId);
-            if (department == null) throw new ArgumentException(nameof(unitId));
+            if (department == null) throw new ArgumentException(nameof(unitId), nameof(unitId));
 
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
@@ -99,7 +99,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
-
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
@@ -154,12 +153,12 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
                 .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
 
-            IEnumerable<object> result;
+            IEnumerable<BannerModel> result;
 
             if (restaurantBanners.Any())
             {
                 result = restaurantBanners.Select(
-                    x => new
+                    x => new BannerModel
                     {
                         BannerUrl = x.Url.Replace('\\', '/'),
                         DisplayTime = x.DisplayTime * 1000
@@ -167,12 +166,16 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
             }
 
             return Json(result);
         }
 
+        public virtual string GetLocalizedContext()
+        {
+            return LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg");
+        }
         #endregion Ресторан.Готовность заказов
     }
 }
