@@ -10,10 +10,5 @@ namespace Dodo.RestarauntBoardTests.DslTools
         {
             return orders.All(list.Contains);
         }
-
-        public static bool EqualsWith(this List<IProductionOrder> list, ProductionOrder order)
-        {
-            return list.Contains(order);
-        }
     }
 }

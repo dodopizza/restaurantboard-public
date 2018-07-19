@@ -28,7 +28,7 @@ namespace Dodo.RestarauntBoardTests
 
             var expiredOrders = orderStore.GetExpiredOrders(order.ExpireDate());
 
-            AssertThat(expiredOrders.EqualsWith(order));
+            AssertThat(expiredOrders.Contains(order));
         }
 
         //State
@@ -51,9 +51,9 @@ namespace Dodo.RestarauntBoardTests
             var orderWithCola = Create.Order.Please();
             var orderStore = Create.OrderStore.With(orderWithPizza).With(orderWithCola).Please();
 
-            var allOrders = orderStore.GetOrders();
+            var orderFromStore = orderStore.GetOrders();
 
-            AssertThat(allOrders.Contains(orderWithPizza, orderWithCola));
+            AssertThat(orderFromStore.Contains(orderWithPizza, orderWithCola));
         }
 
         // Behaviour
