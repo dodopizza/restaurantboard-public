@@ -3,7 +3,6 @@ using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tests.DSL;
 using Dodo.Tracker.Contracts;
 using Moq;
-using System.Collections.Generic;
 using Xunit;
 
 namespace Dodo.Tests
@@ -71,15 +70,9 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnsExpectedOrders_WhenGetOrdersAfterDate()
         {
-            var orderStorageStub = new Mock<IOrdersStorage>();
-
-            var expectedOrders = new[] { new ProductionOrder { ChangeDate = 1.December(2018) } };
-            var allOrders = new List<ProductionOrder>(expectedOrders);
-            allOrders.Add(new ProductionOrder { ChangeDate = 1.January(2018) });
-
-            orderStorageStub.Setup(o => o.GetAllProductionOrders()).Returns(allOrders);
-
-            var trackerClient = new TrackerClient(orderStorageStub.Object);
+            var expectedOrders = new[] { Gimmy.ProductionOrder(1.January(2018)) };
+            var orderStorageStub = Gimmy.OrderStorageStub().WithExistingOrders(expectedOrders).RightNow();
+            var trackerClient = Gimmy.TrackerClient().WithOrderStorage(orderStorageStub).RightNow();
 
             var orders = trackerClient.GetOrdersAfterDate(1.June(2018));
 
@@ -98,8 +91,8 @@ namespace Dodo.Tests
             trackerClient.AddProductionOrder("John", 1);
 
             orderStorageMock.Verify(o => o.UpdateProductionOrderNumber(5, 1 + 3), Times.Once);
-
         }
+
         [Fact]
         public void OnAddProductionOrderWithoutExistingOrder_CallAddProductionOrder()
         {

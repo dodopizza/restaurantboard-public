@@ -37,7 +37,7 @@ namespace Dodo.Tests.DSL
 
         private void SetDefault()
         {
-            _ordersStorage = Gimmy.OrderStorage().Default().RightNow();
+            _ordersStorage = Gimme.OrderStorage().Default().RightNow();
         }
     }
 }
