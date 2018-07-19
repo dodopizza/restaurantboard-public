@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.DomainModel.Management.Organizations;
+using Dodo.Core.Tests.DomainModel.DSL;
 using Xunit;
 
 namespace Dodo.Core.Tests.DomainModel
@@ -8,7 +9,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void ShortHeadManagerName_ShouldBecomeSurnameWithInitials_WhenFullNameContainsALotOfDotsAndSpaces()
         {
-            var organization = new Organization("Гендольф.....Антон     Борисович");
+            var organization = Create.Organization.WithHeadManagerName("Гендольф.....Антон     Борисович").Please();
 
             var surnameWithInitials = organization.ShortHeadManagerName;
 
@@ -18,7 +19,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void ShortHeadManagerName_ShouldBecomeSurnameWithInitials_WhenOrdinaryFullName()
         {
-            var organization = new Organization("Гендольф Антон Борисович");
+            var organization = Create.Organization.WithHeadManagerName("Гендольф Антон Борисович").Please();
 
             var surnameWithInitials = organization.ShortHeadManagerName;
 
@@ -28,7 +29,7 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void ShortHeadManagerName_ShouldBeEmpty_WhenFullNameIsEmpty()
         {
-            var organization = new Organization("");
+            var organization = Create.Organization.WithHeadManagerName("").Please();
 
             var surnameWithInitials = organization.ShortHeadManagerName;
 
