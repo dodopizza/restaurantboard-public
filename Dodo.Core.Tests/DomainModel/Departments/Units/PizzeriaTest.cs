@@ -45,6 +45,16 @@ namespace Dodo.Core.Tests.DomainModel.Departments
                 .Please();
             
             PizzeriaAssert.That(pizzeria).At(14.JulyOf(2018)).HasAgeOf(0, In.Months);
+        }      
+        
+        [Fact]
+        public void HasNoFormat_WhenPizzeriaIsCreatedWithoutFormat()
+        {
+            Pizzeria pizzeria = CreatePizzeria()
+                .WithoutFormat()
+                .Please();
+
+            PizzeriaAssert.That(pizzeria).HasNoFormat();
         }
 
         private PizzeriaBuilder CreatePizzeria()
@@ -103,15 +113,27 @@ namespace Dodo.Core.Tests.DomainModel.Departments
             currentDateTime = date;
             return this;
         }
+
+        public void HasNoFormat()
+        {
+            Assert.Null(_pizzeria.Format);
+        }
     }
 
     internal class PizzeriaBuilder
     {
         private DateTime? openingDate;
+        private PizzeriaFormat pizzeriaFormat;
 
         public PizzeriaBuilder ThatIsNotOpened()
         {
             openingDate = null;
+            return this;
+        }
+        
+        public PizzeriaBuilder WithoutFormat()
+        {
+            pizzeriaFormat = null;
             return this;
         }
 
@@ -125,7 +147,7 @@ namespace Dodo.Core.Tests.DomainModel.Departments
         {
             return new Pizzeria(0, null, "", null, "", UnitApprove.Approved, UnitState.Close, 0, null, 0, null, 0.0,
                 openingDate,
-                "", null, null, null, ClientTreatment.DefaultName, false, null);
+                "", null, null, null, ClientTreatment.DefaultName, false, pizzeriaFormat);
         }
     }
 }
