@@ -43,6 +43,11 @@ namespace Dodo.Tests
         {
             return times;
         }
+        
+        public static DateTimeBuilder July(this int day, int year)
+        {
+            return new DateTimeBuilder(day, 7, year);
+        }
     }
 
     public static class Create
@@ -70,6 +75,13 @@ namespace Dodo.Tests
         public static Mock<IDateProvider> MockForDateProvider()
         {
             return new Mock<IDateProvider>();
+        }
+        
+        public static Mock<IDateProvider> MockForDateProviderAlwaysReturning(DateTime date)
+        {
+            var dateProviderMock = MockForDateProvider();
+            dateProviderMock.Setup(dp => dp.Now()).Returns(date);
+            return dateProviderMock;
         }
     }
 
