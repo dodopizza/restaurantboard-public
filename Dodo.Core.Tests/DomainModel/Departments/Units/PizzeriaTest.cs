@@ -14,17 +14,27 @@ namespace Dodo.Core.Tests.DomainModel.Departments
                 .ThatIsNotOpened()
                 .Please();
             
-            PizzeriaAssert.That(pizzeria).At(DateTime.Now).HasAgeOf(0);
+            PizzeriaAssert.That(pizzeria).At(4.JulyOf(1856)).HasAgeOf(0, In.Years);
         }
 
         [Fact]
-        public void IsOneYearOld_WhenOpenedYearFromViewDate()
+        public void IsOneYearOld_WhenOpenedOneYearFromViewDate()
         {
             Pizzeria pizzeria = CreatePizzeria()
                 .ThatIsOpened(14.JulyOf(2019))
                 .Please();
             
-            PizzeriaAssert.That(pizzeria).At(14.JulyOf(2020)).HasAgeOf(1);
+            PizzeriaAssert.That(pizzeria).At(14.JulyOf(2020)).HasAgeOf(1, In.Years);
+        }
+        
+        [Fact]
+        public void IsOneMonthsOld_WhenOpenedOneMonthFromViewDate()
+        {
+            Pizzeria pizzeria = CreatePizzeria()
+                .ThatIsOpened(14.JuneOf(2018))
+                .Please();
+            
+            PizzeriaAssert.That(pizzeria).At(14.JulyOf(2018)).HasAgeOf(1, In.Months);
         }
 
         private PizzeriaBuilder CreatePizzeria()
@@ -33,11 +43,22 @@ namespace Dodo.Core.Tests.DomainModel.Departments
         }
     }
 
+    public static class In
+    {
+        public static string Years => "Years";
+        public static string Months => "Months";
+    }
+
     public static class IntegerExtensions
     {
         public static DateTime JulyOf(this int day, int year)
         {
             return new DateTime(year, 7, day);
+        }
+        
+        public static DateTime JuneOf(this int day, int year)
+        {
+            return new DateTime(year, 6, day);
         }
     }
 
@@ -56,13 +77,15 @@ namespace Dodo.Core.Tests.DomainModel.Departments
             return new PizzeriaAssert(pizzeria);
         }
 
-        public void HasAgeOf(int age)
+        public void HasAgeOf(int expectedAge, string kind)
         {
             if (currentDateTime == null)
             {
                 throw new Exception("Setup incomplete: set not-null currentDateTime");
             }
-            Assert.Equal(age, _pizzeria.GetYearsOld(currentDateTime.Value));
+            var actualAge = kind == In.Years ? _pizzeria.GetYearsOld(currentDateTime.Value) : _pizzeria.GetMonthsOld(currentDateTime.Value);
+
+            Assert.Equal(expectedAge, actualAge);
         }
 
         public PizzeriaAssert At(DateTime date)
