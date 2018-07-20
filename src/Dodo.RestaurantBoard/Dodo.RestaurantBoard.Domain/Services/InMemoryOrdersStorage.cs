@@ -1,23 +1,20 @@
 ﻿using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
     public class InMemoryOrdersStorage : IOrdersStorage
     {
-       private  int lastOrderId = 0;
-       private Dictionary<int,ProductionOrder> productionOrders = new Dictionary<int, ProductionOrder>();
+        private  int lastOrderId = 0;
+        private Dictionary<int, ProductionOrder> productionOrders = new Dictionary<int, ProductionOrder>();
         private readonly IDateTimeProvider dateTimeProvider;
 
         public InMemoryOrdersStorage(IDateTimeProvider dateTimeProvider)
         {
             this.dateTimeProvider = dateTimeProvider;
         }
-
 
         public void AddProductionOrder(string clientName, int number)
         {
