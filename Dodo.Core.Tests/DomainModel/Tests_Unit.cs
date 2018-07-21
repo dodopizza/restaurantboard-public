@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.DomainModel.Departments;
+using Dodo.Core.Tests.DomainModel.DSL;
 using Moq;
 using Xunit;
 
@@ -75,81 +76,74 @@ namespace Dodo.Core.Tests.DomainModel
         [Fact]
         public void WithTypeOffice_ShouldCallToStringOffice_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Office);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Office).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringOffice(), Times.Once);
+            AssertThat(unitMock).ToStringOfficeMethod();
         }
 
         [Fact]
         public void WithTypePizzeria_ShouldCallToStringPizzeria_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Pizzeria);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Pizzeria).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringPizzeria(), Times.Once);
+            AssertThat(unitMock).ToStringPizzeriaMethod();
         }
 
         [Fact]
         public void WithTypeCallCenter_ShouldCallToStringCallCenter_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.CallCenter);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.CallCenter).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringCallCenter(), Times.Once);
+            AssertThat(unitMock).ToStringCallCenterMethod();
         }
 
         [Fact]
         public void WithTypeWarehouse_ShouldCallToStringWarehouse_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.Warehouse);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.Warehouse).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringWarehouse(), Times.Once);
+            AssertThat(unitMock).ToStringWarehouseMethod();
         }
 
         [Fact]
         public void WithTypeServiceDelivery_ShouldCallToStringServiceDelivery_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.ServiceDelivery);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.ServiceDelivery).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringServiceDelivery(), Times.Once);
+            AssertThat(unitMock).ToStringServiceDeliveryMethod();
         }
 
         [Fact]
         public void WithTypeFactorySemis_ShouldCallToString_WhenDepartmentGetAllUnitNames()
         {
-            var unitMock = new Mock<Unit>();
-            unitMock.SetupGet(x => x.Type).Returns(UnitType.FactorySemis);
-            var department = new Department();
-            department.AddUnit(unitMock.Object);
+            var unitMock = Create.UnitMock.WithType(UnitType.FactorySemis).Please();
+            var department = Create.Department.WithUnit(unitMock.Object).Please();
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToString(), Times.Once);
+            AssertThat(unitMock).ToStringMethod();
         }
 
         #endregion
+
+        private UnitAssertBuilder AssertThat(Mock<Unit> UnitMock)
+        {
+            return new UnitAssertBuilder(UnitMock);
+        }
     }
 }
