@@ -30,13 +30,15 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IManagementService _managementService;
         private readonly ITrackerClient _trackerClient;
         private readonly IHostingEnvironment _hostingEnvironment;
-
+        private readonly IFileService _fileService;
+        
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
             ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
+            IHostingEnvironment hostingEnvironment, 
+            IFileService fileService
             )
         {
             _departmentsStructureService = departmentsStructureService;
@@ -44,6 +46,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             _managementService = managementService;
             _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
+            _fileService = fileService;
         }
 
 
@@ -51,7 +54,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         {
             get
             {
-                var currentProductsIds = HttpContext.Session.GetString("IdProductUnit");
+                var currentProductsIds = HttpContext?.Session?.GetString("IdProductUnit");
                 return !string.IsNullOrEmpty(currentProductsIds)
                     ? JsonConvert.DeserializeObject<int[]>(currentProductsIds)
                     : new int[0];
@@ -59,7 +62,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             set
             {
                 var serialized = JsonConvert.SerializeObject(value);
-                HttpContext.Session.SetString("IdProductUnit", serialized);
+                HttpContext?.Session?.SetString("IdProductUnit", serialized);
             }
         }
 
@@ -75,7 +78,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         public ViewResult OrdersReadinessToStationary(int unitId)
         {
             var department = _departmentsStructureService.GetDepartmentByUnitOrCache(unitId);
-            if (department == null) throw new ArgumentException(nameof(unitId));
+            if (department == null) throw new ArgumentException(nameof(unitId), nameof(unitId));
 
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
@@ -96,7 +99,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
-
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
@@ -151,25 +153,26 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
                 .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
 
-            IEnumerable<object> result;
+            IEnumerable<BannerModel> result;
 
             if (restaurantBanners.Any())
             {
-                result = restaurantBanners.Select(
-                    x => new
-                    {
-                        BannerUrl = x.Url.Replace('\\', '/'),
-                        DisplayTime = x.DisplayTime * 1000
-                    });
+                result = restaurantBanners
+                    .Select(x => new BannerModel(x))
+                    .ToArray();
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
             }
 
             return Json(result);
         }
 
+        public virtual string GetLocalizedContext()
+        {
+            return LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg");
+        }
         #endregion Ресторан.Готовность заказов
     }
 }
