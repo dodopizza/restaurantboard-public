@@ -35,6 +35,15 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
             return this;
         }
 
+        public DepartmentsStructureServiceMockBuilder WithDepartmentAndPizzeria()
+        {
+            var cityDepartment = Create.CityDepartment.WithContry().Please();
+            var pizzeria = Create.Pizzeria.WithClientTreatmentAsRandomImage().Please();
+            return Create.DepartmentsStructureService
+                .WithDepartment(cityDepartment)
+                .WithPizzeria(pizzeria);
+        }
+
         public DepartmentsStructureServiceMockBuilder WithPizzeria(Pizzeria pizzeria = null)
         {
             _service

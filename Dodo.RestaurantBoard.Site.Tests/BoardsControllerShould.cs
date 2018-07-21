@@ -29,12 +29,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Fact]
         public void ThrowArgumentException_IfGetDepartmentByUnitOrCacheReturnNull()
         {
-            var boardsController = Create.BoardController
-                .With(Create
-                    .DepartmentsStructureService
-                    .WithoutDepartments()
-                    .Please())
-                .Please();
+            var boardsController = Create.BoardController.WithoutDepartments().Please();
 
             AssertThat(boardsController)
                 .Throws<ArgumentException>()
@@ -44,13 +39,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Fact]
         public void ThrowNullReferenceException_IfGetPizzeriaOrCacheReturnNull()
         {
-            var boardsController = Create.BoardController
-                .With(Create
-                    .DepartmentsStructureService
-                    .WithDepartment()
-                    .WithoutPizzeria()
-                    .Please())
-                .Please();
+            var boardsController = Create.BoardController.Please();
 
             AssertThat(boardsController)
                 .Throws<NullReferenceException>()
@@ -60,22 +49,15 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Fact]
         public void ReturnBannerModel_OnGetRestaurantBannerUrl()
         {
-            var cityDepartment = Create
-                .CityDepartment
-                .WithMenuSpecializationTypeAsEuropean()
-                .Please();
+
             var restaurantBanner = Create
                 .RestaurantBanner
                 .WithMenuSpecializationTypeAsEuropean()
                 .Please();
+
             var boardsController = Create
                 .BoardController
-                .With(Create.DepartmentsStructureService
-                    .WithDepartment(cityDepartment)
-                    .Please())
-                .With(Create.ManagementServiceMock
-                    .WithAvailableBanner(restaurantBanner)
-                    .Please())
+                .WithDepartmentServiceAndAviableBanner(restaurantBanner)
                 .Please();
 
             var bannerModels = (BannerModel[])boardsController.GetRestaurantBannerUrl(1, 2, 3).Value;
@@ -103,12 +85,9 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Fact]
         public void CallGetPizzeriaOrCache_IfDepartmentFoundedByUnitOrCache()
         {
-            var cityDepartment = Create.CityDepartment.WithContry().Please();
-            var pizzeria = Create.Pizzeria.WithClientTreatmentAsRandomImage().Please();
             var departmentsStructureServiceMock =
                 Create.DepartmentsStructureService
-                    .WithDepartment(cityDepartment)
-                    .WithPizzeria(pizzeria)
+                    .WithDepartmentAndPizzeria()
                     .MockPlease();
             var boardsController = Create.BoardController.With(departmentsStructureServiceMock.Object).Please();
 

@@ -1,4 +1,5 @@
-﻿using Dodo.Core.Services;
+﻿using Dodo.Core.DomainModel.Management;
+using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Controllers;
 using Dodo.RestaurantBoard.Site.Tests.Factories;
@@ -15,7 +16,21 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
         public BoardControllerBuilder()
         {
             _trackerClient = Create.TrackerClient.WithEmptyOrderList().Please();
+            _departmentsStructureService = Create
+                .DepartmentsStructureService
+                .WithDepartment()
+                .WithoutPizzeria()
+                .Please();
         }
+        public BoardControllerBuilder WithoutDepartments()
+        {
+            _departmentsStructureService = Create
+                .DepartmentsStructureService
+                .WithoutDepartments()
+                .Please();
+            return this;
+        }
+
 
         public BoardControllerBuilder With(IDepartmentsStructureService departmentsStructureService)
         {
@@ -37,6 +52,25 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
             return this;
         }
 
+        public BoardControllerBuilder WithDepartmentServiceAndAviableBanner(RestaurantBanner banner)
+        {
+            var cityDepartment = Create
+                .CityDepartment
+                .WithMenuSpecializationTypeAsEuropean()
+                .Please();
+           
+
+            _departmentsStructureService = Create.DepartmentsStructureService
+                .WithDepartment(cityDepartment)
+                .Please();
+
+            _managementService = Create.ManagementServiceMock
+                .WithAvailableBanner(banner)
+                .Please();
+
+            return this;
+
+        }
 
 
         public BoardControllerBuilder With(IManagementService managementService)
