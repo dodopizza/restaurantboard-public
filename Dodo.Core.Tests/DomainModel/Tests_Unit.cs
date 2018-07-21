@@ -81,7 +81,7 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringOffice(), Times.Once);
+            AssertThat(unitMock).ToStringOfficeMethod();
         }
 
         [Fact]
@@ -92,7 +92,7 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringPizzeria(), Times.Once);
+            AssertThat(unitMock).ToStringPizzeriaMethod();
         }
 
         [Fact]
@@ -103,7 +103,7 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringCallCenter(), Times.Once);
+            AssertThat(unitMock).ToStringCallCenterMethod();
         }
 
         [Fact]
@@ -114,7 +114,7 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringWarehouse(), Times.Once);
+            AssertThat(unitMock).ToStringWarehouseMethod();
         }
 
         [Fact]
@@ -125,7 +125,7 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToStringServiceDelivery(), Times.Once);
+            AssertThat(unitMock).ToStringServiceDeliveryMethod();
         }
 
         [Fact]
@@ -136,9 +136,14 @@ namespace Dodo.Core.Tests.DomainModel
 
             department.GetAllUnitNames();
 
-            unitMock.Verify(x => x.ToString(), Times.Once);
+            AssertThat(unitMock).ToStringMethod();
         }
 
         #endregion
+
+        private UnitAssertBuilder AssertThat(Mock<Unit> UnitMock)
+        {
+            return new UnitAssertBuilder(UnitMock);
+        }
     }
 }
