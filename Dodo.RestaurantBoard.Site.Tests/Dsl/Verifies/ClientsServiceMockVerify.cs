@@ -15,11 +15,9 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Verifies
             _clientsService = clientsService;
         }
 
-        public void CallGetIconsOnce()
+        public void CallGetIcons(int callCount)
         {
-            _clientsService.Verify(foo => foo.GetIcons(), Times.Once());
-        }
-
-      
+            _clientsService.Verify(foo => foo.GetIcons(), Times.Exactly(callCount));
+        } 
     }
 }

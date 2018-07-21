@@ -157,12 +157,9 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
             if (restaurantBanners.Any())
             {
-                result = restaurantBanners.Select(
-                    x => new BannerModel
-                    {
-                        BannerUrl = x.Url.Replace('\\', '/'),
-                        DisplayTime = x.DisplayTime * 1000
-                    }).ToArray();
+                result = restaurantBanners
+                    .Select(x => new BannerModel(x))
+                    .ToArray();
             }
             else
             {

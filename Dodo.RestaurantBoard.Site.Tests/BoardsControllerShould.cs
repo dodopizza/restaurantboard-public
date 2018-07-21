@@ -13,6 +13,7 @@ using Dodo.RestaurantBoard.Site.Controllers;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Tests.Dsl;
 using Dodo.RestaurantBoard.Site.Tests.Dsl.Asserts;
+using Dodo.RestaurantBoard.Site.Tests.Dsl.Extensions;
 using Dodo.RestaurantBoard.Site.Tests.Dsl.Verifies;
 using Dodo.RestaurantBoard.Site.Tests.Factories;
 using Dodo.Tracker.Contracts;
@@ -35,9 +36,9 @@ namespace Dodo.RestaurantBoard.Site.Tests
                     .Please())
                 .Please();
 
-            AssertIt(boardsController)
-                .ExecuteOrdersReadinessToStationary<ArgumentException>()
-                .CousesErrorWithParamName("unitId");
+            AssertThat(boardsController)
+                .Throws<ArgumentException>()
+                .On(() => boardsController.OrdersReadinessToStationary(200));
         }
 
         [Fact]
@@ -47,18 +48,17 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 .With(Create
                     .DepartmentsStructureService
                     .WithDepartment()
-                    .WithOutPizzeria()
+                    .WithoutPizzeria()
                     .Please())
                 .Please();
 
-
-            AssertIt(boardsController)
-                .ExecuteOrdersReadinessToStationary<NullReferenceException>()
-                .CousesErrorWithMessage(message: "Object reference not set to an instance of an object.");
+            AssertThat(boardsController)
+                .Throws<NullReferenceException>()
+                .On(() => boardsController.OrdersReadinessToStationary(200));
         }
 
         [Fact]
-        public void ReturnBannerUrls_IfGetAvailableBannersReturnNotEmptyArray()
+        public void ReturnBannerModel_OnGetRestaurantBannerUrl()
         {
             var cityDepartment = Create
                 .CityDepartment
@@ -80,11 +80,11 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             var bannerModels = (BannerModel[])boardsController.GetRestaurantBannerUrl(1, 2, 3).Value;
 
-            AssertIt(bannerModels).OnlyOne().SameAs(restaurantBanner);
+            AssertThat(bannerModels).Contains(new BannerModel(restaurantBanner));
         }
 
         [Fact]
-        public void CallGetIcons_IfClientTreatmentIsRandomImage()
+        public void CallClientsServiceGetIcons_IfPizzeriavClientTreatmentIsRandomImage()
         {
             var pizzeria = Create
                 .Pizzeria
@@ -94,23 +94,18 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 .DepartmentsStructureService
                 .WithPizzeria(pizzeria)
                 .Please();
-            var trackerClient = Create
-                .TrackerClient
-                .WithEmptyOrderList()
-                .Please();
             var clientsServiceMock = Create
                 .ClientsService
                 .WithEmptyClientIconList()
                 .MockPlease();
             var boardsController = Create.BoardController
                 .With(departmentsStructureService)
-                .With(trackerClient)
                 .With(clientsServiceMock.Object)
                 .Please();
 
             boardsController.GetOrderReadinessToStationary(132);
 
-            VerifyIt(clientsServiceMock).CallGetIconsOnce();
+            VerifyThat(clientsServiceMock).CallGetIcons(1.Times());
 
         }
 
@@ -128,24 +123,24 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             boardsController.OrdersReadinessToStationary(132);
 
-            VerifyIt(departmentsStructureServiceMock).CallGetPizzeriaOrCacheOnce();
+            VerifyThat(departmentsStructureServiceMock).CallGetPizzeriaOrCache(1.Times());
         }
 
-        private DepartmentsStructureServiceMockVerify VerifyIt(Mock<IDepartmentsStructureService> departmentsStructureServiceMock)
+        private DepartmentsStructureServiceMockVerify VerifyThat(Mock<IDepartmentsStructureService> departmentsStructureServiceMock)
         {
             return new DepartmentsStructureServiceMockVerify(departmentsStructureServiceMock);
         }
 
-        public static ControllerAssert AssertIt(BoardsController controller)
+        public static ControllerAssert AssertThat(BoardsController controller)
         {
             return new ControllerAssert(controller);
         }
-        public static BannersAssert AssertIt(BannerModel[] banners)
+        public static BannersAssert AssertThat(BannerModel[] banners)
         {
             return new BannersAssert(banners);
         }
 
-        public static ClientsServiceMockVerify VerifyIt(Mock<IClientsService> clientsService)
+        public static ClientsServiceMockVerify VerifyThat(Mock<IClientsService> clientsService)
         {
             return new ClientsServiceMockVerify(clientsService);
         }

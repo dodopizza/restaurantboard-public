@@ -7,14 +7,14 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Verifies
     {
         private readonly Mock<IDepartmentsStructureService> _service;
 
-        public DepartmentsStructureServiceMockVerify(Mock<IDepartmentsStructureService> service )
+        public DepartmentsStructureServiceMockVerify(Mock<IDepartmentsStructureService> service)
         {
             _service = service;
         }
 
-        public void CallGetPizzeriaOrCacheOnce()
+        public void CallGetPizzeriaOrCache(int callCount)
         {
-            _service.Verify(foo => foo.GetPizzeriaOrCache(It.IsAny<int>()), Times.Once());
+            _service.Verify(foo => foo.GetPizzeriaOrCache(It.IsAny<int>()), Times.Exactly(callCount));
         }
     }
 }

@@ -43,7 +43,7 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
             return this;
         }
 
-        public DepartmentsStructureServiceMockBuilder WithOutPizzeria()
+        public DepartmentsStructureServiceMockBuilder WithoutPizzeria()
         {
 
             _service

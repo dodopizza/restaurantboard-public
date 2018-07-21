@@ -12,6 +12,11 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
         private ITrackerClient _trackerClient;
         private IClientsService _clientsService;
 
+        public BoardControllerBuilder()
+        {
+            _trackerClient = Create.TrackerClient.WithEmptyOrderList().Please();
+        }
+
         public BoardControllerBuilder With(IDepartmentsStructureService departmentsStructureService)
         {
             _departmentsStructureService = departmentsStructureService;

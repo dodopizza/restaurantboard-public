@@ -17,26 +17,9 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Asserts
             _banners = banners;
         }
 
-        public BannerAssert OnlyOne()
+        public void Contains(BannerModel bannerModel)
         {
-            Assert.Single(_banners);
-            return new BannerAssert(_banners.Single());
-        }
-    }
-
-    public class BannerAssert
-    {
-        private readonly BannerModel _model;
-
-        public BannerAssert(BannerModel model)
-        {
-            _model = model;
-        }
-
-        public void SameAs(RestaurantBanner banner)
-        {
-            Assert.Equal(_model.BannerUrl, banner.Url);
-            Assert.Equal(_model.DisplayTime, banner.DisplayTime*1000);
+            Assert.Contains(bannerModel, _banners);
         }
     }
 }
