@@ -86,27 +86,18 @@ namespace Dodo.RestaurantBoard.Site.Tests
         [Fact]
         public void CallClientsServiceGetIcons_IfPizzeriavClientTreatmentIsRandomImage()
         {
-            var pizzeria = Create
-                .Pizzeria
-                .WithClientTreatmentAsRandomImage()
-                .Please();
-            var departmentsStructureService = Create
-                .DepartmentsStructureService
-                .WithPizzeria(pizzeria)
-                .Please();
             var clientsServiceMock = Create
                 .ClientsService
                 .WithEmptyClientIconList()
                 .MockPlease();
             var boardsController = Create.BoardController
-                .With(departmentsStructureService)
+                .WithDepartmentServiceAndRandomImageThreatment()
                 .With(clientsServiceMock.Object)
                 .Please();
 
             boardsController.GetOrderReadinessToStationary(132);
 
             VerifyThat(clientsServiceMock).CallGetIcons(1.Times());
-
         }
 
         [Fact]

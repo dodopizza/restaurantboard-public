@@ -23,6 +23,22 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
             return this;
         }
 
+        public BoardControllerBuilder WithDepartmentServiceAndRandomImageThreatment()
+        {
+            var pizzeria = Create
+                .Pizzeria
+                .WithClientTreatmentAsRandomImage()
+                .Please();
+            var departmentsStructureService = Create
+                .DepartmentsStructureService
+                .WithPizzeria(pizzeria)
+                .Please();
+            _departmentsStructureService = departmentsStructureService;
+            return this;
+        }
+
+
+
         public BoardControllerBuilder With(IManagementService managementService)
         {
             _managementService = managementService;
