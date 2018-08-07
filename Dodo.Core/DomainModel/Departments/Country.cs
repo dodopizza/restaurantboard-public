@@ -42,7 +42,7 @@ namespace Dodo.Core.DomainModel.Departments
 		/// </summary>
 		public CountryCode Code => (CountryCode)Id;
 
-		public Country(Int32 id, String name, String phoneCode, Decimal? taxRate, String phoneMask, Currency currency, String xmlParameters)
+		public Country(int id, string name, string phoneCode, decimal? taxRate, string phoneMask, Currency currency)
 		{
 			Id = id;
 			Name = name;

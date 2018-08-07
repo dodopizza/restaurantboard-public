@@ -20,12 +20,12 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		
 		public T GetDepartmentOrCache<T>(int departmentId) where T : Department
 		{
-			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble, string.Empty)} as T;
+			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble)} as T;
 		}
 
 		public Department GetDepartmentByUnitOrCache(int unitId)
 		{
-			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble, string.Empty)};
+			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble)};
 		}
 
 		public Unit GetUnitOrCache(Uuid unitUuid)
