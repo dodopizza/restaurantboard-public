@@ -1,48 +1,47 @@
 ﻿using System;
-using System.Globalization;
 using System.IO;
-using System.Text;
 using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Dodo.RestaurantBoard.Site.Controllers {
-    public static class LocalizedContext
+    public static class HostingEnvironmentExtensions
     {
-        public static string LocalizedContent(IHostingEnvironment hostingEnvironment, string contentPath)
+        private const string _localizedResourcesFolder = "LocalizedResources";
+
+        public static string LocalizedContent(this IHostingEnvironment hostingEnvironment, string contentPath)
         {
             if (string.IsNullOrEmpty(contentPath))
             {
                 throw new ArgumentNullException(nameof(contentPath));
             }
-                
-            var stringBuilder = new StringBuilder();
-            var currentUiCulture = Thread.CurrentThread.CurrentUICulture;
-
-            var serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
 
             contentPath = contentPath.Trim('/');
-            var path1 = hostingEnvironment.WebRootPath + "/"
-                        + Path.Combine("LocalizedResources", currentUiCulture.TwoLetterISOLanguageName, contentPath);
 
-            if (File.Exists(path1))
+            var localizedPath = hostingEnvironment.GetResourcePath(contentPath, true);
+            var globalPath = hostingEnvironment.GetResourcePath(contentPath, false);
+
+            foreach (var path in new[] { localizedPath, globalPath })
             {
-                return ConvertLocalPathToRelativeUrl(path1, serverPathLength);
+                if (File.Exists(path))
+                {
+                    return ConvertLocalPathToRelativeUrl(path, hostingEnvironment.WebRootPath);
+                }
             }
 
-            stringBuilder.AppendLine(path1);
-            var path2 = hostingEnvironment.WebRootPath + "/" + Path.Combine("LocalizedResources", contentPath);
-            if (File.Exists(path2))
-            {
-                return ConvertLocalPathToRelativeUrl(path2, serverPathLength);
-            }
-
-            stringBuilder.AppendLine(path2);
-            throw new FileNotFoundException(stringBuilder.ToString());
+            throw new FileNotFoundException($"{localizedPath}{Environment.NewLine}{globalPath}");
         }
 
-        private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
+        private static string ConvertLocalPathToRelativeUrl(string path, string webrootpath)
         {
+            var serverPathLength = webrootpath.Length - 1;
             return path.Substring(serverPathLength).Replace('\\', '/');
+        }
+
+        private static string GetResourcePath(this IHostingEnvironment hostingEnvironment, string contentPath, bool localized)
+        {
+            return hostingEnvironment.WebRootPath + "/" + (localized 
+                ? Path.Combine(_localizedResourcesFolder, Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName, contentPath)
+                : Path.Combine(_localizedResourcesFolder, contentPath));
         }
     }
 }
