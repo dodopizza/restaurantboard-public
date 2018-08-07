@@ -73,34 +73,34 @@ namespace Dodo.Core.DomainModel.Departments
 			if(phns==null)
 				return new CallCenterPhone[0];
 
-			var callCenterPhones = phns.Elements().Select(x =>
-			{
-				string number = "";
-				var numberAttribute = x.Attribute("number");
-				if (numberAttribute != null)
-					number = numberAttribute.Value;
-
-				string iconPath = "";
-				var iconPathAttribute = x.Attribute("iconPath");
-				if (iconPathAttribute != null)
-					iconPath = iconPathAttribute.Value;
-
-				string iconSitePath = "";
-				var iconSitePathAttribute = x.Attribute("iconSitePath");
-				if (iconSitePathAttribute != null)
-					iconSitePath = iconSitePathAttribute.Value;
-
-				return new CallCenterPhone
-				{
-					Number = number,
-					IconPath = iconPath,
-					IconSitePath = iconSitePath
-				};
-			});
+			var callCenterPhones = phns.Elements().Select(CreatePhoneFromXml);
 
 			return callCenterPhones.ToArray();
 		}
 
+		private static CallCenterPhone CreatePhoneFromXml(XElement element)
+		{
+			var number = "";
+			var numberAttribute = element.Attribute("number");
+			if (numberAttribute != null)
+				number = numberAttribute.Value;
 
+			var iconPath = "";
+			var iconPathAttribute = element.Attribute("iconPath");
+			if (iconPathAttribute != null)
+				iconPath = iconPathAttribute.Value;
+
+			var iconSitePath = "";
+			var iconSitePathAttribute = element.Attribute("iconSitePath");
+			if (iconSitePathAttribute != null)
+				iconSitePath = iconSitePathAttribute.Value;
+
+			return new CallCenterPhone
+			{
+				Number = number,
+				IconPath = iconPath,
+				IconSitePath = iconSitePath
+			};
+		}
 	}
 }
