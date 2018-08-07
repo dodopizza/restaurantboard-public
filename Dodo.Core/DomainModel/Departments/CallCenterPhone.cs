@@ -5,7 +5,7 @@ using System.Xml.Linq;
 namespace Dodo.Core.DomainModel.Departments
 {
 	[Serializable]
-	public class CallCenterPhoneParameter
+	public class CallCenterPhone
 	{
 		public String Number { get; set; }
 
@@ -24,7 +24,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			if (!String.IsNullOrEmpty(IconPath))
 			{
-				return (host.TrimEnd('/', '\\') + "/" + IconPath).Replace('\\', '/');
+				return GetUrlForIconPath(host);
 			}
 
 			if (!String.IsNullOrEmpty(IconSitePath))
@@ -35,6 +35,10 @@ namespace Dodo.Core.DomainModel.Departments
 			return String.Empty;
 		}
 
+		private string GetUrlForIconPath(string host)
+		{
+			return (host.TrimEnd('/', '\\') + "/" + IconPath).Replace('\\', '/');
+		}
 
 		public String NumberWithoutMarks
 		{
@@ -53,8 +57,6 @@ namespace Dodo.Core.DomainModel.Departments
 			}
 		}
 
-
-
 		public XElement CreateXmlNode()
 		{
 			return new XElement("Phone",
@@ -63,40 +65,38 @@ namespace Dodo.Core.DomainModel.Departments
 				new XAttribute("iconSitePath", IconSitePath ?? String.Empty));
 		}
 
-		public static CallCenterPhoneParameter[] GetCallCenterPhonesFromXml(XElement container)
+		public static CallCenterPhone[] GetCallCenterPhonesFromXml(XElement container)
 		{
 			var phns = container.Element("CallCenterPhones");
 			if(phns==null)
-				return new CallCenterPhoneParameter[0];
+				return new CallCenterPhone[0];
 
-			var callCenterPhones = phns.Elements().Select(x =>
-			{
-				string number = "";
-				var numberAttribute = x.Attribute("number");
-				if (numberAttribute != null)
-					number = numberAttribute.Value;
-
-				string iconPath = "";
-				var iconPathAttribute = x.Attribute("iconPath");
-				if (iconPathAttribute != null)
-					iconPath = iconPathAttribute.Value;
-
-				string iconSitePath = "";
-				var iconSitePathAttribute = x.Attribute("iconSitePath");
-				if (iconSitePathAttribute != null)
-					iconSitePath = iconSitePathAttribute.Value;
-
-				return new CallCenterPhoneParameter
-				{
-					Number = number,
-					IconPath = iconPath,
-					IconSitePath = iconSitePath
-				};
-			});
+			var callCenterPhones = phns.Elements().Select(CreatePhoneFromXml);
 
 			return callCenterPhones.ToArray();
 		}
 
+		private static CallCenterPhone CreatePhoneFromXml(XElement element)
+		{
+			var number = ExtractAttributeValue(element, "number");
+			var iconPath = ExtractAttributeValue(element, "iconPath");
+			var iconSitePath = ExtractAttributeValue(element, "iconSitePath");
 
+			return new CallCenterPhone
+			{
+				Number = number,
+				IconPath = iconPath,
+				IconSitePath = iconSitePath
+			};
+		}
+
+		private static string ExtractAttributeValue(XElement element, string attributeName)
+		{
+			var attribute = element.Attribute(attributeName);
+			if (attribute != null)
+				return attribute.Value;
+
+			return "";
+		}
 	}
 }

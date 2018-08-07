@@ -26,9 +26,9 @@ namespace Tests.Dsl
             return this;
         }
 
-        public CallCenterPhoneParameter Please()
+        public CallCenterPhone Please()
         {
-            return new CallCenterPhoneParameter
+            return new CallCenterPhone
             {
                 Number = _number,
                 IconPath = _iconPath,

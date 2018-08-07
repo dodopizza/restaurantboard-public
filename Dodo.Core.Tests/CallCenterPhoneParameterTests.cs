@@ -1,4 +1,6 @@
 using System;
+using System.Xml.Linq;
+using Dodo.Core.DomainModel.Departments;
 using NUnit.Framework;
 using Tests.Dsl;
 
@@ -83,6 +85,26 @@ namespace Tests
             var expectedNumberWithoutMarks = phone.NumberWithoutMarks;
 
             Assert.AreEqual("89999999999", expectedNumberWithoutMarks);
+        }
+
+        [Test]
+        public void ShouldCreateCorrectPhoneFromXml()
+        {
+            var element = new XElement("root",
+                new XElement("CallCenterPhones",
+                    new XElement("phone",
+                        new XAttribute("number", "89999999999"),
+                        new XAttribute("iconPath", "/myIconPath"),
+                        new XAttribute("iconSitePath", "/myIconSitePath")
+                    )
+                )
+            );
+
+            var phone = CallCenterPhone.GetCallCenterPhonesFromXml(element)[0];
+
+            Assert.AreEqual("89999999999", phone.Number);
+            Assert.AreEqual("/myIconPath", phone.IconPath);
+            Assert.AreEqual("/myIconSitePath", phone.IconSitePath);
         }
     }
 }
