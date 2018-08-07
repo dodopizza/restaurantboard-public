@@ -80,20 +80,9 @@ namespace Dodo.Core.DomainModel.Departments
 
 		private static CallCenterPhone CreatePhoneFromXml(XElement element)
 		{
-			var number = "";
-			var numberAttribute = element.Attribute("number");
-			if (numberAttribute != null)
-				number = numberAttribute.Value;
-
-			var iconPath = "";
-			var iconPathAttribute = element.Attribute("iconPath");
-			if (iconPathAttribute != null)
-				iconPath = iconPathAttribute.Value;
-
-			var iconSitePath = "";
-			var iconSitePathAttribute = element.Attribute("iconSitePath");
-			if (iconSitePathAttribute != null)
-				iconSitePath = iconSitePathAttribute.Value;
+			var number = ExtractAttributeValue(element, "number");
+			var iconPath = ExtractAttributeValue(element, "iconPath");
+			var iconSitePath = ExtractAttributeValue(element, "iconSitePath");
 
 			return new CallCenterPhone
 			{
@@ -101,6 +90,15 @@ namespace Dodo.Core.DomainModel.Departments
 				IconPath = iconPath,
 				IconSitePath = iconSitePath
 			};
+		}
+
+		private static string ExtractAttributeValue(XElement element, string attributeName)
+		{
+			var attribute = element.Attribute(attributeName);
+			if (attribute != null)
+				return attribute.Value;
+
+			return "";
 		}
 	}
 }
