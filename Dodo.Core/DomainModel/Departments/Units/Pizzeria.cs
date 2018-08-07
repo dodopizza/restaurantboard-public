@@ -59,7 +59,10 @@ namespace Dodo.Core.DomainModel.Departments.Units
 			DateTime zeroDate = new DateTime(1, 1, 1);
 			TimeSpan diffDate = currentDateTime.Subtract(BeginDateTimeWork.Value);
 
-			return (zeroDate + diffDate).Month - 1 + (monthInYear * GetYearsOld(currentDateTime));
+			var previousYearsMonths = monthInYear * GetYearsOld(currentDateTime);
+			var currentYearMonths = (zeroDate + diffDate).Month - 1;
+
+			return previousYearsMonths + currentYearMonths;
 		}
 	}
 }
