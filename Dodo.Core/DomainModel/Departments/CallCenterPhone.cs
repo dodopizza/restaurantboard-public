@@ -5,7 +5,7 @@ using System.Xml.Linq;
 namespace Dodo.Core.DomainModel.Departments
 {
 	[Serializable]
-	public class CallCenterPhoneParameter
+	public class CallCenterPhone
 	{
 		public String Number { get; set; }
 
@@ -67,11 +67,11 @@ namespace Dodo.Core.DomainModel.Departments
 				new XAttribute("iconSitePath", IconSitePath ?? String.Empty));
 		}
 
-		public static CallCenterPhoneParameter[] GetCallCenterPhonesFromXml(XElement container)
+		public static CallCenterPhone[] GetCallCenterPhonesFromXml(XElement container)
 		{
 			var phns = container.Element("CallCenterPhones");
 			if(phns==null)
-				return new CallCenterPhoneParameter[0];
+				return new CallCenterPhone[0];
 
 			var callCenterPhones = phns.Elements().Select(x =>
 			{
@@ -90,7 +90,7 @@ namespace Dodo.Core.DomainModel.Departments
 				if (iconSitePathAttribute != null)
 					iconSitePath = iconSitePathAttribute.Value;
 
-				return new CallCenterPhoneParameter
+				return new CallCenterPhone
 				{
 					Number = number,
 					IconPath = iconPath,
