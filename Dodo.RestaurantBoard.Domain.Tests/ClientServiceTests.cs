@@ -31,6 +31,27 @@ namespace Dodo.RestaurantBoard.Domain.Tests
 
             Assert.AreEqual(0, icons.Length);
         }
+
+        [Test]
+        public void GetClientIconPath_ReturnNull_WhenClientTreatmentIsNotRandomImage()
+        {
+            var clientTreatment = ClientTreatment.DefaultName;
+            var clientService = new ClientService();
+
+            var clientIconPath = clientService.GetClientIconPath(1, clientTreatment);
+
+            Assert.IsNull(clientIconPath);
+        }
+        [Test]
+        public void GetClientIconPath_ReturnPath_WhenClientTreatmentIsNotRandomImage()
+        {
+            var clientTreatment = ClientTreatment.RandomImage;
+            var clientService = new ClientService();
+
+            var clientIconPath = clientService.GetClientIconPath(1, clientTreatment);
+
+            Assert.IsNotNull(clientIconPath);
+        }
     }
 }
 

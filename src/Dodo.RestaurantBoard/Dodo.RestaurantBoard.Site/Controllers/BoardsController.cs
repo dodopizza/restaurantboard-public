@@ -97,10 +97,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
-
-            var clientTreatment = pizzeria.ClientTreatment;
-            ClientIcon[] icons = _clientsService.GetIcons(clientTreatment);
-
             var playTineParamIds = orders.Select(x => x.OrderId).ToArray();
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
             CurrentProductsIds = playTineParamIds;
@@ -116,9 +112,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                             x.OrderId,
                             x.OrderNumber,
                             x.ClientName,
-                            ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
-                                ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
-                                : null,
+                            ClientIconPath = _clientsService.GetClientIconPath(x.OrderNumber, pizzeria.ClientTreatment),
                             OrderReadyTimestamp = x.OrderReadyDateTime.Ticks,
                             OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture)
                         })
@@ -131,12 +125,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
         {
             return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
-        }
-
-        private static string GetIconPath(int orderNumber, IReadOnlyList<ClientIcon> icons, string fileStorageHost)
-        {
-            var iconIndex = orderNumber % icons.Count;
-            return icons[iconIndex].GetUrl(fileStorageHost);
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet]

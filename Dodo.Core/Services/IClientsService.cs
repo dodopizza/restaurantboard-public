@@ -26,5 +26,6 @@ namespace Dodo.Core.Services
 	public interface IClientsService
 	{
 		ClientIcon[] GetIcons(ClientTreatment clientTreatment);
+	    string GetClientIconPath(int orderNumber, ClientTreatment clientTreatment, string fileStorageHost = null);
 	}
 }
