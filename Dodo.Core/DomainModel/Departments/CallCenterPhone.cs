@@ -57,8 +57,6 @@ namespace Dodo.Core.DomainModel.Departments
 			}
 		}
 
-
-
 		public XElement CreateXmlNode()
 		{
 			return new XElement("Phone",

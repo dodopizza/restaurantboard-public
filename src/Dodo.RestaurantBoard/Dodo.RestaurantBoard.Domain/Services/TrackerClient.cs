@@ -13,7 +13,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	{
 		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
-			var orders = new[]
+			return new[]
 			{
 				new ProductionOrder
 				{
@@ -28,8 +28,6 @@ namespace Dodo.RestaurantBoard.Domain.Services
 					ClientName = "Лупа"
 				},
 			};
-
-			return orders;
 		}
 	}
 }
