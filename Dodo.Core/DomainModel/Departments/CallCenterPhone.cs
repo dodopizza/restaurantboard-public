@@ -24,7 +24,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			if (!String.IsNullOrEmpty(IconPath))
 			{
-				return (host.TrimEnd('/', '\\') + "/" + IconPath).Replace('\\', '/');
+				return GetUrlForIconPath(host);
 			}
 
 			if (!String.IsNullOrEmpty(IconSitePath))
@@ -35,6 +35,10 @@ namespace Dodo.Core.DomainModel.Departments
 			return String.Empty;
 		}
 
+		private string GetUrlForIconPath(string host)
+		{
+			return (host.TrimEnd('/', '\\') + "/" + IconPath).Replace('\\', '/');
+		}
 
 		public String NumberWithoutMarks
 		{
