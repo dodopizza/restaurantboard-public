@@ -8,7 +8,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 {
 	public interface ITrackerClient
 	{
-		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
+		ProductionOrder[] GetOrdersByType(int limit);
 	    void AddOrder(ProductionOrder order);
 	    void DeleteOrder(int id);
 	}
@@ -22,7 +22,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
             this.ordersRepository = ordersRepository;
         }
 
-        public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+        public ProductionOrder[] GetOrdersByType(int limit)
 		{
 			return ordersRepository.GetOrders().Take(limit).ToArray();
 		}

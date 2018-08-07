@@ -93,7 +93,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
             var orders = _trackerClient
-                .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
+                .GetOrdersByType(maxCountOrders)
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
