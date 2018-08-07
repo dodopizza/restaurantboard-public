@@ -99,11 +99,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
 
             var clientTreatment = pizzeria.ClientTreatment;
-            ClientIcon[] icons = { };
-            if (clientTreatment == ClientTreatment.RandomImage)
-            {
-                icons = _clientsService.GetIcons();
-            }
+            ClientIcon[] icons = _clientsService.GetIcons(clientTreatment);
 
             var playTineParamIds = orders.Select(x => x.OrderId).ToArray();
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;

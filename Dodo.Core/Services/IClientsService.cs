@@ -1,4 +1,5 @@
 ﻿using Dodo.Core.DomainModel.Clients;
+using Dodo.Core.DomainModel.Departments.Units;
 
 namespace Dodo.Core.Services
 {
@@ -24,6 +25,6 @@ namespace Dodo.Core.Services
 
 	public interface IClientsService
 	{
-		ClientIcon[] GetIcons();
+		ClientIcon[] GetIcons(ClientTreatment clientTreatment);
 	}
 }
