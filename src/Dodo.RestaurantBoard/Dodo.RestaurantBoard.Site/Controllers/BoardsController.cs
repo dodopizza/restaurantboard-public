@@ -79,8 +79,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            bool isNewBoard = true;
-            var model = new OrdersReadinessToStationaryModel(department.Id, department.Country.Id, unitId, isNewBoard, pizzeria.ClientTreatment);
+            var model = new OrdersReadinessToStationaryModel(department.Id, department.Country.Id, unitId, 
+                isNewBoard: true, clientTreatment: pizzeria.ClientTreatment);
 
             return View(model);
         }
