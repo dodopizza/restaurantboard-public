@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
@@ -8,7 +9,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 {
 	public interface ITrackerClient
 	{
-		ProductionOrder[] GetOrdersByType(int limit);
+		IEnumerable<ProductionOrder> GetOrdersByLimit(int limit);
 	    void AddOrder(ProductionOrder order);
 	    void DeleteOrder(int id);
 	}
@@ -22,9 +23,9 @@ namespace Dodo.RestaurantBoard.Domain.Services
             this.ordersRepository = ordersRepository;
         }
 
-        public ProductionOrder[] GetOrdersByType(int limit)
+        public IEnumerable<ProductionOrder> GetOrdersByLimit(int limit)
 		{
-			return ordersRepository.GetOrders().Take(limit).ToArray();
+			return ordersRepository.GetOrders().Take(limit);
 		}
 
 	    public void AddOrder(ProductionOrder order)

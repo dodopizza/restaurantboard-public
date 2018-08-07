@@ -113,7 +113,7 @@ namespace Dodo.RestaurantBoard.Domain.Tests
 
         private static ProductionOrder[] GetOrders(TrackerClient trackerClient, int limit = 42)
         {
-            return trackerClient.GetOrdersByType(limit);
+            return trackerClient.GetOrdersByLimit(limit).ToArray();
         }
 
         IOrdersRepository CreateEmptyRepository()
