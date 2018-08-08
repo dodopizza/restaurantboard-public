@@ -20,5 +20,13 @@ namespace Dodo.Tests
 
             Assert.Equal("-2", cityDepartment.TimeZoneShiftString);
         }
+        
+        [Fact]
+        public void ShouldReturnTimeZoneShiftEqualMinusTwo()
+        {
+            var cityDepartment = new CityDepartment(new TestUtcOffsetProvider(2));
+
+            Assert.Equal(-2, cityDepartment.TimeZoneShift);
+        }
     }
 }
