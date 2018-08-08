@@ -75,14 +75,7 @@ namespace Dodo.Core.DomainModel.Departments
 			}
 		}
 
-		public virtual TimeSpan CurrentTimeZoneUTCOffset
-		{
-			get
-			{
-				TimeSpan result = TimeSpan.FromMinutes(TimeZoneUTCOffset);
-				return result;
-			}
-		}
+		public virtual TimeSpan CurrentTimeZoneUTCOffset => TimeSpan.FromMinutes(TimeZoneUTCOffset);
 
 		/// <summary>
 		/// Приводит dateTime ко времени в UTC с учетом часового пояса департамента
