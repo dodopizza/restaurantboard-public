@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Dodo.Core.DomainModel.Departments
@@ -6,6 +7,8 @@ namespace Dodo.Core.DomainModel.Departments
 	[Serializable]
 	public class CallCenterPhone
 	{
+		private static readonly string[] ReplacedMarks = { "-", " ", "(", ")" };
+		
 		public String Number { get; set; }
 
 		/// <summary>
@@ -34,7 +37,6 @@ namespace Dodo.Core.DomainModel.Departments
 			return String.Empty;
 		}
 
-
 		public String NumberWithoutMarks
 		{
 			get
@@ -42,13 +44,7 @@ namespace Dodo.Core.DomainModel.Departments
 				if (String.IsNullOrEmpty(Number))
 					return Number;
 
-				String[] replacedMarks = { "-", " ", "(", ")" };
-				String replacedNumber = Number;
-				foreach (String mark in replacedMarks)
-				{
-					replacedNumber = replacedNumber.Replace(mark, "");
-				}
-				return replacedNumber;
+				return ReplacedMarks.Aggregate(Number, (current, mark) => current.Replace(mark, ""));
 			}
 		}
 
