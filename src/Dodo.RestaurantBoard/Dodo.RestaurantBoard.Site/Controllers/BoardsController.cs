@@ -6,6 +6,7 @@ using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
@@ -153,20 +154,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
                 .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
 
-            IEnumerable<BannerModel> result;
-
-            if (restaurantBanners.Any())
-            {
-                result = restaurantBanners
-                    .Select(x => new BannerModel(x))
-                    .ToArray();
-            }
-            else
-            {
-                result = new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
-            }
-
-            return Json(result);
+            return Json(GetBannerModelsFrom(restaurantBanners));
         }
 
         public virtual string GetLocalizedContext()
@@ -174,5 +162,18 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg");
         }
         #endregion Ресторан.Готовность заказов
+
+        private BannerModel[] GetBannerModelsFrom(IEnumerable<RestaurantBanner> restaurantBanners)
+        {
+
+            if (restaurantBanners.Any())
+            {
+                return restaurantBanners
+                    .Select(x => new BannerModel(x))
+                    .ToArray();
+            }
+
+            return new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
+        }
     }
 }
