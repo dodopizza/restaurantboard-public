@@ -4,7 +4,7 @@ using System.Xml.Linq;
 namespace Dodo.Core.DomainModel.Departments
 {
 	[Serializable]
-	public class CallCenterPhoneParameter
+	public class CallCenterPhone
 	{
 		public String Number { get; set; }
 

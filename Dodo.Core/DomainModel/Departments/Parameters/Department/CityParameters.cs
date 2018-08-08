@@ -27,7 +27,7 @@ namespace Dodo.Core.DomainModel.Departments.Parameters.Department
 		public Boolean CardPaymentIsDisabled { get; private set; }
 		public Decimal MaxPersonalOrderPrice { get; private set; }
 		public String CallCenterPhone { get; private set; }
-		public CallCenterPhoneParameter[] CallCenterPhonesParameter { get; private set; }
+		public CallCenterPhone[] CallCenterPhones { get; private set; }
 		public Boolean IsCalculateSalesTax { get; private set; }
 		public Boolean IsCalculateVatTowardsSales { get; private set; }
 		public String YandexMetrikaId { get; private set; }
@@ -50,7 +50,7 @@ namespace Dodo.Core.DomainModel.Departments.Parameters.Department
 			Decimal minOrderPrice,
 			Decimal maxPersonalOrderPrice,
 			String phone,
-			CallCenterPhoneParameter[] callCenterPhonesParameter,
+			CallCenterPhone[] callCenterPhones,
 			Boolean isCalculateSalesTax,
 			Boolean isCalculateVatTowardsSales,
 			String yandexMetrikaId,
@@ -72,7 +72,7 @@ namespace Dodo.Core.DomainModel.Departments.Parameters.Department
 			KroogiLink = kroogiLink;
 			MaxPersonalOrderPrice = maxPersonalOrderPrice;
 			CallCenterPhone = phone;
-			CallCenterPhonesParameter = callCenterPhonesParameter;
+			CallCenterPhones = callCenterPhones;
 			IsCalculateSalesTax = isCalculateSalesTax;
 		    IsCalculateVatTowardsSales = isCalculateVatTowardsSales;
 			YandexMetrikaId = yandexMetrikaId;
@@ -147,7 +147,7 @@ namespace Dodo.Core.DomainModel.Departments.Parameters.Department
 			get
 			{
 				return new CityParameters(String.Empty, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty,
-					String.Empty, String.Empty, String.Empty, String.Empty, 0, 0, String.Empty, new CallCenterPhoneParameter[0], false, false, String.Empty,
+					String.Empty, String.Empty, String.Empty, String.Empty, 0, 0, String.Empty, new CallCenterPhone[0], false, false, String.Empty,
 					String.Empty, String.Empty);
 			}
 		}

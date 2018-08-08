@@ -9,7 +9,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void NumberWithoutMarks_IfNumberContainsDashes_ShouldReturnNumberWithoutDashes()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				Number = "8-999-123-45-67"
 			};
@@ -22,7 +22,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void NumberWithoutMarks_IfSpecifiedNumberContainsBrackets_ShouldRemoveIt()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				Number = "8(999)1234567"
 			};
@@ -35,7 +35,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void NumberWithoutMarks_IfSpecifiedNumberContainsSpaces_ShouldRemoveIt()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				Number = "8   999 123   45 67"
 			};
@@ -48,7 +48,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfIconPathContainsBackSlashes_ShouldReturnUriWithReplacedBackSlashesBySlashes()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				IconPath = "test\\test2"
 			};
@@ -61,7 +61,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfSpecifiedIconPathWithoutSlashes_ShouldReturnCorrectUri()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				IconPath = "test"
 			};
@@ -74,7 +74,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfSpecifiedIconSitePath_ShouldReturnIt()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				IconSitePath = "www.sitepath.ru/icon"
 			};
@@ -87,7 +87,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void CreateXmlNode_ForPhoneWithParams_ShouldReturnXmlWithCorrectAttributeValues()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				Number = "89991234567",
 				IconPath = "icon",
@@ -104,7 +104,7 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void CreateXmlNode_ForPhoneWithEmptyParams_ShouldReturnXmlWithEmptyAttributeValues()
 		{
-			var phone = new CallCenterPhoneParameter
+			var phone = new CallCenterPhone
 			{
 				Number = null,
 				IconPath = "",
