@@ -21,25 +21,27 @@ namespace Dodo.Core.DomainModel.Departments
             return (short)Math.Round(((Double)_timeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
         }
         
-        public string TimeZoneUTCOffsetString(int utcOffset, int shift)
+        public string TimeZoneUTCOffsetString()
         {
             char mathSimbol;
 
-            if (utcOffset > 0)
+            if (_timeZoneUTCOffset > 0)
                 mathSimbol = '+';
-            else if (shift < 0)
+            else if (TimeZoneShift() < 0)
                 mathSimbol = '-';
             else
                 mathSimbol = ' ';
 
-            var timeSpan = TimeSpan.FromMinutes(Math.Abs(utcOffset));
+            var timeSpan = TimeSpan.FromMinutes(Math.Abs(_timeZoneUTCOffset));
             var fromTimeString = timeSpan.ToString(@"hh\:mm");
 
             return String.Format("{0}{1}", mathSimbol, fromTimeString);
         }
 
-        public string TimeZoneShiftString(int shift)
+        public string TimeZoneShiftString()
         {
+            var shift = TimeZoneShift();
+
             Char mathSimbol;
             if (shift > 0)
                 mathSimbol = '+';

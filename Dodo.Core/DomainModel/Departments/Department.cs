@@ -36,23 +36,11 @@ namespace Dodo.Core.DomainModel.Departments
 		public virtual String OwnerPhone  { get; set; }
 		public virtual String OwnerEMail  { get; set; }
 
-		public virtual String TimeZoneUTCOffsetString
-		{
-			get
-			{
-                return _timeZone.TimeZoneUTCOffsetString(TimeZoneUTCOffset, TimeZoneShift);
-			}
-		}
+        public virtual String TimeZoneUTCOffsetString => _timeZone.TimeZoneUTCOffsetString();
 
-		public virtual String TimeZoneShiftString
-		{
-			get
-			{
-				return _timeZone.TimeZoneShiftString(TimeZoneShift);
-			}
-		}
+        public virtual String TimeZoneShiftString => _timeZone.TimeZoneShiftString();
 
-		public virtual TimeSpan CurrentTimeZoneUTCOffset
+        public virtual TimeSpan CurrentTimeZoneUTCOffset
 		{
 			get
 			{
