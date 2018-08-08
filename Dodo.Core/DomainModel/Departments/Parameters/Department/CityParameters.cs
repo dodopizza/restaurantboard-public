@@ -131,7 +131,7 @@ namespace Dodo.Core.DomainModel.Departments.Parameters.Department
 					 GetDecimalFromXml(container, "MinOrderPrice", 295),
 					 GetDecimalFromXml(container, "MaxPersonalOrderPrice"),
 					 GetStringFromXml(container, "CallCenterPhone"),
-					 CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container),
+					 container.GetCallCenterPhones(),
 					 GetBooleanFromXml(container, "IsCalculateSalesTax"),
 					 GetBooleanFromXml(container, "IsCalculateVatTowardsSales"),
 					 GetStringFromXml(container, "YandexMetrikaId"),

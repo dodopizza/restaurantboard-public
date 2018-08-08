@@ -121,7 +121,7 @@ namespace Dodo.Domain.Tests
 		{
 			var container = new XElement("Root");
 
-			var deserializedXmlWhichNotContainsPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+			var deserializedXmlWhichNotContainsPhones = container.GetCallCenterPhones();
 
 			Assert.IsEmpty(deserializedXmlWhichNotContainsPhones);
 		}
@@ -137,7 +137,7 @@ namespace Dodo.Domain.Tests
 </Root>
 ");
 
-			var deserializedPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+			var deserializedPhones = container.GetCallCenterPhones();
 
 			Assert.AreEqual(1, deserializedPhones.Length);
 			Assert.AreEqual("89991234567", deserializedPhones[0].Number);
@@ -158,7 +158,7 @@ namespace Dodo.Domain.Tests
 </Root>
 ");
 
-			var deserializedPhones = CallCenterPhoneParameter.GetCallCenterPhonesFromXml(container);
+			var deserializedPhones = container.GetCallCenterPhones();
 
 			Assert.AreEqual(3, deserializedPhones.Length);
 		}
