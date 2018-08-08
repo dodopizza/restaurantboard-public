@@ -18,9 +18,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public Boolean IsFilled()
 		{
-			if ( String.IsNullOrEmpty(Name) )
-				return false;
-			return true;
+			return !String.IsNullOrEmpty(Name);
 		}
 
 		public DepartmentCultureData(Int32 id, String cultureName, Int32 departmentId, String name)
