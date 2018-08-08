@@ -13,5 +13,14 @@ namespace Dodo.Tests
 
             Assert.Equal("-00:00", cityDepartment.TimeZoneUTCOffsetString);
         }
+        
+        
+        [Fact]
+        public void TimeZoneShiftString()
+        {
+            var cityDepartment = new CityDepartment();
+
+            Assert.Equal("-1", cityDepartment.TimeZoneShiftString);
+        }
     }
 }
