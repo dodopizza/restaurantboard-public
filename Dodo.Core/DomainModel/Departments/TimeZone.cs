@@ -4,7 +4,7 @@ namespace Dodo.Core.DomainModel.Departments
 {
     public class TimeZone
     {
-        public string TimeZoneUTCOffsetString(int utcOffset, int shift)
+        public static string TimeZoneUTCOffsetString(int utcOffset, int shift)
         {
             char mathSimbol;
 
