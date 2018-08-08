@@ -44,18 +44,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-				Char mathSimbol;
-				if (TimeZoneUTCOffset > 0)
-					mathSimbol = '+';
-				else if (TimeZoneShift < 0)
-					mathSimbol = '-';
-				else
-					mathSimbol = ' ';
-
-				TimeSpan timeSpan = TimeSpan.FromMinutes(Math.Abs(TimeZoneUTCOffset));
-				String fromTimeString = timeSpan.ToString(@"hh\:mm");
-
-				return String.Format("{0}{1}", mathSimbol, fromTimeString);
+                return TimeZone.TimeZoneUTCOffsetString(TimeZoneUTCOffset, TimeZoneShift);
 			}
 		}
 
@@ -110,8 +99,6 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public virtual DateTime CurrentDate => CurrentDateTime.Date;
 
-		
-		
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state, Int32 timeZoneUTCOffset,  Country country)
 		{
 			Id = id;
