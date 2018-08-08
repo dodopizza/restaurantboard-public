@@ -118,9 +118,9 @@ namespace Dodo.Core.DomainModel.Departments
 			TimeZoneUTCOffset = timeZoneUTCOffset;
 		}
 
-		public Department (int timeZoneUTCOffset, UtcOffsetProvider dateTimeProvider = null)
+		public Department (int timeZoneUTCOffset, UtcOffsetProvider currentUtcOffsetProvider = null)
 		{
-            _utcOffsetProvider = dateTimeProvider ?? new UtcOffsetProvider();
+            _utcOffsetProvider = currentUtcOffsetProvider ?? new UtcOffsetProvider();
             _timeZone = new TimeZone(_utcOffsetProvider, timeZoneUTCOffset);
         }
 
