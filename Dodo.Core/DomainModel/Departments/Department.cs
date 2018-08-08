@@ -10,6 +10,8 @@ namespace Dodo.Core.DomainModel.Departments
 	[Serializable]
 	public abstract class Department : Entity
 	{
+        private UtcOffsetProvider _utcOffsetProvider;
+
 		public virtual Uuid Uuid { get; set; }
 		public virtual String Name { get; set; }
 
@@ -29,7 +31,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-				Double currentTimeZoneUTCOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).TotalMinutes;
+				Double currentTimeZoneUTCOffset = _utcOffsetProvider.GetUtcOffset().TotalMinutes;
 				return (Int16)Math.Round(((Double)TimeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
 			}
 		}
@@ -85,13 +87,15 @@ namespace Dodo.Core.DomainModel.Departments
 		/// <summary>
 		/// Текущее время подразделения (с учетом часового пояса)
 		/// </summary>
-		public virtual DateTime CurrentDateTime => DateTime.SpecifyKind( DateTime.UtcNow.AddMinutes(TimeZoneUTCOffset), DateTimeKind.Unspecified);
+		public virtual DateTime CurrentDateTime => DateTime.SpecifyKind(DateTime.UtcNow.AddMinutes(TimeZoneUTCOffset), DateTimeKind.Unspecified);
 
 		public virtual DateTime CurrentDateTimeUtc => GetUtcDateTime(CurrentDateTime);
 
 		public virtual DateTime CurrentDate => CurrentDateTime.Date;
 
-		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state, Int32 timeZoneUTCOffset,  Country country)
+		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  
+            DepartmentState state, Int32 timeZoneUTCOffset, Country country,
+            UtcOffsetProvider dateTimeProvider = null) : this(dateTimeProvider)
 		{
 			Id = id;
 			Uuid = uuid;
@@ -104,7 +108,8 @@ namespace Dodo.Core.DomainModel.Departments
 		}
 
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state,
-			Int32 timeZoneUTCOffset,  Country country, String ownerName, String ownerPhone, String ownerEMail)
+			Int32 timeZoneUTCOffset,  Country country, String ownerName, String ownerPhone, String ownerEMail, 
+            UtcOffsetProvider dateTimeProvider = null) : this(dateTimeProvider)
 		{
 			Id = id;
 			Uuid = uuid;
@@ -119,9 +124,10 @@ namespace Dodo.Core.DomainModel.Departments
 			TimeZoneUTCOffset = timeZoneUTCOffset;
 		}
 
-		public Department ( )
+		public Department (UtcOffsetProvider dateTimeProvider = null)
 		{
-		}
+            _utcOffsetProvider = dateTimeProvider ?? new UtcOffsetProvider();
+        }
 
 		public static DepartmentParameters GetDepartmentParametersFromXmlString(String value, DepartmentType departmentType)
 		{

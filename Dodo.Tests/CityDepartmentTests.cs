@@ -1,5 +1,4 @@
 using Dodo.Core.DomainModel.Departments.Departments;
-using System;
 using Xunit;
 
 namespace Dodo.Tests
@@ -9,18 +8,17 @@ namespace Dodo.Tests
         [Fact]
         public void ShouldReturnZeroUtcOffset()
         {
-            var cityDepartment = new CityDepartment();
+            var cityDepartment = new CityDepartment(new TestUtcOffsetProvider(2));
 
             Assert.Equal("-00:00", cityDepartment.TimeZoneUTCOffsetString);
         }
         
-        
         [Fact]
-        public void TimeZoneShiftString()
+        public void ShouldReturnTimeZoneShiftStringEqualMinusTwo()
         {
-            var cityDepartment = new CityDepartment();
+            var cityDepartment = new CityDepartment(new TestUtcOffsetProvider(2));
 
-            Assert.Equal("-1", cityDepartment.TimeZoneShiftString);
+            Assert.Equal("-2", cityDepartment.TimeZoneShiftString);
         }
     }
 }
