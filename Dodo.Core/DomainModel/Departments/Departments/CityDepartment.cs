@@ -10,7 +10,7 @@ namespace Dodo.Core.DomainModel.Departments.Departments
 		public MenuSpecializationType MenuSpecializationType { get; set; }
 
 		[Description("Just for tests")]
-		public CityDepartment(UtcOffsetProvider dateTimeProvider = null) : base(dateTimeProvider)
+		public CityDepartment(UtcOffsetProvider dateTimeProvider = null) : base(0, dateTimeProvider)
         {
         }
 	}

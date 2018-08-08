@@ -11,6 +11,7 @@ namespace Dodo.Core.DomainModel.Departments
 	public abstract class Department : Entity
 	{
         private UtcOffsetProvider _utcOffsetProvider;
+        private TimeZone _timeZone;
 
 		public virtual Uuid Uuid { get; set; }
 		public virtual String Name { get; set; }
@@ -22,12 +23,12 @@ namespace Dodo.Core.DomainModel.Departments
 		/// <summary>
 		/// Отклонение от UTC в минутах
 		/// </summary>
-		public virtual Int32 TimeZoneUTCOffset { get; set; }
+		public virtual Int32 TimeZoneUTCOffset { get; }
 
 		/// <summary>
 		/// Отклонение от серверного времени(Москва) в часах
 		/// </summary>
-		public virtual Int16 TimeZoneShift => new TimeZone(_utcOffsetProvider).TimeZoneShift(TimeZoneUTCOffset);
+		public virtual Int16 TimeZoneShift => _timeZone.TimeZoneShift(TimeZoneUTCOffset);
 
 		public virtual Country Country { get; set; }
 
@@ -88,7 +89,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  
             DepartmentState state, Int32 timeZoneUTCOffset, Country country,
-            UtcOffsetProvider dateTimeProvider = null) : this(dateTimeProvider)
+            UtcOffsetProvider dateTimeProvider = null) : this(timeZoneUTCOffset, dateTimeProvider)
 		{
 			Id = id;
 			Uuid = uuid;
@@ -102,7 +103,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		protected Department(Int32 id, Uuid uuid, String name, DepartmentType type,  DepartmentState state,
 			Int32 timeZoneUTCOffset,  Country country, String ownerName, String ownerPhone, String ownerEMail, 
-            UtcOffsetProvider dateTimeProvider = null) : this(dateTimeProvider)
+            UtcOffsetProvider dateTimeProvider = null) : this(timeZoneUTCOffset, dateTimeProvider)
 		{
 			Id = id;
 			Uuid = uuid;
@@ -117,9 +118,10 @@ namespace Dodo.Core.DomainModel.Departments
 			TimeZoneUTCOffset = timeZoneUTCOffset;
 		}
 
-		public Department (UtcOffsetProvider dateTimeProvider = null)
+		public Department (int timeZoneUTCOffset, UtcOffsetProvider dateTimeProvider = null)
 		{
             _utcOffsetProvider = dateTimeProvider ?? new UtcOffsetProvider();
+            _timeZone = new TimeZone(_utcOffsetProvider, timeZoneUTCOffset);
         }
 
 		public static DepartmentParameters GetDepartmentParametersFromXmlString(String value, DepartmentType departmentType)

@@ -5,16 +5,20 @@ namespace Dodo.Core.DomainModel.Departments
     public class TimeZone
     {
         private UtcOffsetProvider _utcOffsetProvider;
-        
-        public TimeZone(UtcOffsetProvider utcOffsetProvider)
+        private int _timeZoneUTCOffset;
+
+        public int TimeZoneUTCOffset => _timeZoneUTCOffset;
+
+        public TimeZone(UtcOffsetProvider utcOffsetProvider, int timeZoneUTCOffset)
         {
             _utcOffsetProvider = utcOffsetProvider;
+            _timeZoneUTCOffset = timeZoneUTCOffset;
         }
 
-        public Int16 TimeZoneShift(Int32 utcOffset)
+        public short TimeZoneShift(Int32 utcOffset)
         {
-            Double currentTimeZoneUTCOffset = _utcOffsetProvider.GetUtcOffset().TotalMinutes;
-            return (Int16)Math.Round(((Double)utcOffset - currentTimeZoneUTCOffset) / 60);
+            var currentTimeZoneUTCOffset = _utcOffsetProvider.GetUtcOffset().TotalMinutes;
+            return (short)Math.Round(((Double)utcOffset - currentTimeZoneUTCOffset) / 60);
         }
         
         public static string TimeZoneUTCOffsetString(int utcOffset, int shift)
