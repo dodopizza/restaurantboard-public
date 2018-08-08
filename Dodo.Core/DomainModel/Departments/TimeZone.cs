@@ -21,7 +21,7 @@ namespace Dodo.Core.DomainModel.Departments
             return (short)Math.Round(((Double)_timeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
         }
         
-        public static string TimeZoneUTCOffsetString(int utcOffset, int shift)
+        public string TimeZoneUTCOffsetString(int utcOffset, int shift)
         {
             char mathSimbol;
 
@@ -38,7 +38,7 @@ namespace Dodo.Core.DomainModel.Departments
             return String.Format("{0}{1}", mathSimbol, fromTimeString);
         }
 
-        public static string TimeZoneShiftString(int shift)
+        public string TimeZoneShiftString(int shift)
         {
             Char mathSimbol;
             if (shift > 0)

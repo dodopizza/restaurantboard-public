@@ -40,7 +40,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-                return TimeZone.TimeZoneUTCOffsetString(TimeZoneUTCOffset, TimeZoneShift);
+                return _timeZone.TimeZoneUTCOffsetString(TimeZoneUTCOffset, TimeZoneShift);
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-				return TimeZone.TimeZoneShiftString(TimeZoneShift);
+				return _timeZone.TimeZoneShiftString(TimeZoneShift);
 			}
 		}
 
