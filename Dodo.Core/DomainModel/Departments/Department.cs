@@ -27,14 +27,7 @@ namespace Dodo.Core.DomainModel.Departments
 		/// <summary>
 		/// Отклонение от серверного времени(Москва) в часах
 		/// </summary>
-		public virtual Int16 TimeZoneShift
-		{
-			get
-			{
-				Double currentTimeZoneUTCOffset = _utcOffsetProvider.GetUtcOffset().TotalMinutes;
-				return (Int16)Math.Round(((Double)TimeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
-			}
-		}
+		public virtual Int16 TimeZoneShift => new TimeZone(_utcOffsetProvider).TimeZoneShift(TimeZoneUTCOffset);
 
 		public virtual Country Country { get; set; }
 
