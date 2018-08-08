@@ -71,20 +71,9 @@ namespace Dodo.Core.DomainModel.Departments
 
 			var callCenterPhones = phns.Elements().Select(x =>
 			{
-				string number = "";
-				var numberAttribute = x.Attribute("number");
-				if (numberAttribute != null)
-					number = numberAttribute.Value;
-
-				string iconPath = "";
-				var iconPathAttribute = x.Attribute("iconPath");
-				if (iconPathAttribute != null)
-					iconPath = iconPathAttribute.Value;
-
-				string iconSitePath = "";
-				var iconSitePathAttribute = x.Attribute("iconSitePath");
-				if (iconSitePathAttribute != null)
-					iconSitePath = iconSitePathAttribute.Value;
+				var number = GetElement(x, "number");
+				var iconPath = GetElement(x, "iconPath");
+				var iconSitePath = GetElement(x, "iconSitePath");
 
 				return new CallCenterPhoneParameter
 				{
@@ -97,6 +86,9 @@ namespace Dodo.Core.DomainModel.Departments
 			return callCenterPhones.ToArray();
 		}
 
-
+		private static string GetElement(XElement element, string attribute)
+		{
+			return element.Attribute(attribute)?.Value ?? "";
+		}
 	}
 }
