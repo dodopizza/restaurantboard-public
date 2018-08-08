@@ -1,12 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.Core", "Dodo.Core\Dodo.Core.csproj", "{AAE81232-F8EE-46B5-894A-6486E92DBE30}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.Core", "Dodo.Core\Dodo.Core.csproj", "{AAE81232-F8EE-46B5-894A-6486E92DBE30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.Tracker.Contracts", "src\Dodo.Tracker\Dodo.Tracker.Contracts\Dodo.Tracker.Contracts.csproj", "{9796881B-145B-40EC-8996-D148379845E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.Tracker.Contracts", "src\Dodo.Tracker\Dodo.Tracker.Contracts\Dodo.Tracker.Contracts.csproj", "{9796881B-145B-40EC-8996-D148379845E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.RestaurantBoard.Domain", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Domain\Dodo.RestaurantBoard.Domain.csproj", "{4EE25C17-4020-420E-8EE5-97B8A0822B65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestaurantBoard.Domain", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Domain\Dodo.RestaurantBoard.Domain.csproj", "{4EE25C17-4020-420E-8EE5-97B8A0822B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.RestaurantBoard.Site", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj", "{C73097A9-078D-41A9-85FA-71F7BF0571C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestaurantBoard.Site", "src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj", "{C73097A9-078D-41A9-85FA-71F7BF0571C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.Tests", "Dodo.Tests\Dodo.Tests.csproj", "{330CA5FC-64D4-48C2-8F45-7FD94F6368F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +35,15 @@ Global
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C73097A9-078D-41A9-85FA-71F7BF0571C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330CA5FC-64D4-48C2-8F45-7FD94F6368F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330CA5FC-64D4-48C2-8F45-7FD94F6368F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330CA5FC-64D4-48C2-8F45-7FD94F6368F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330CA5FC-64D4-48C2-8F45-7FD94F6368F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E3E7C7B-D3DD-4677-BAB3-08EF5D9FCE73}
 	EndGlobalSection
 EndGlobal
