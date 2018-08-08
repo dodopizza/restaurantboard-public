@@ -1,10 +1,19 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Dodo.Core.DomainModel.Departments
 {
-	public static class XElementCallCenterPhoneExtensions
+	public static class CallCenterPhoneXmlConverter
 	{
+		public static XElement CreateXmlNode(CallCenterPhoneParameter phone)
+		{
+			return new XElement("Phone",
+				new XAttribute("number", phone.Number ?? String.Empty),
+				new XAttribute("iconPath", phone.IconPath ?? String.Empty),
+				new XAttribute("iconSitePath", phone.IconSitePath ?? String.Empty));
+		}
+
 		public static CallCenterPhoneParameter[] GetCallCenterPhones(this XElement container)
 		{
 			var phns = container.Element("CallCenterPhones");

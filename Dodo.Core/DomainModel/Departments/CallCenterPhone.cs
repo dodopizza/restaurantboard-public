@@ -54,10 +54,7 @@ namespace Dodo.Core.DomainModel.Departments
 
 		public XElement CreateXmlNode()
 		{
-			return new XElement("Phone",
-				new XAttribute("number", Number ?? String.Empty),
-				new XAttribute("iconPath", IconPath ?? String.Empty),
-				new XAttribute("iconSitePath", IconSitePath ?? String.Empty));
+			return CallCenterPhoneXmlConverter.CreateXmlNode(this);
 		}
 	}
 }
