@@ -20,5 +20,18 @@ namespace Dodo.Core.DomainModel.Departments
 
             return String.Format("{0}{1}", mathSimbol, fromTimeString);
         }
+
+        public static string TimeZoneShiftString(int shift)
+        {
+            Char mathSimbol;
+            if (shift > 0)
+                mathSimbol = '+';
+            else if (shift < 0)
+                mathSimbol = '-';
+            else
+                mathSimbol = ' ';
+
+            return String.Format("{0}{1}", mathSimbol, Math.Abs(shift));
+        } 
     }
 }

@@ -52,15 +52,7 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-				Char mathSimbol;
-				if (TimeZoneShift > 0)
-					mathSimbol = '+';
-				else if (TimeZoneShift < 0)
-					mathSimbol = '-';
-				else
-					mathSimbol = ' ';
-
-				return String.Format("{0}{1}", mathSimbol, Math.Abs(TimeZoneShift));
+				return TimeZone.TimeZoneShiftString(TimeZoneShift);
 			}
 		}
 
