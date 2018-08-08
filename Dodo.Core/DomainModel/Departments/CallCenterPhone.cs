@@ -69,21 +69,17 @@ namespace Dodo.Core.DomainModel.Departments
 			if(phns==null)
 				return new CallCenterPhoneParameter[0];
 
-			var callCenterPhones = phns.Elements().Select(x =>
+			return phns.Elements().Select(ParseCallCenterPhone).ToArray();
+		}
+
+		private static CallCenterPhoneParameter ParseCallCenterPhone(XElement element)
+		{
+			return new CallCenterPhoneParameter
 			{
-				var number = GetElement(x, "number");
-				var iconPath = GetElement(x, "iconPath");
-				var iconSitePath = GetElement(x, "iconSitePath");
-
-				return new CallCenterPhoneParameter
-				{
-					Number = number,
-					IconPath = iconPath,
-					IconSitePath = iconSitePath
-				};
-			});
-
-			return callCenterPhones.ToArray();
+				Number = GetElement(element, "number"),
+				IconPath = GetElement(element, "iconPath"),
+				IconSitePath = GetElement(element, "iconSitePath")
+			};
 		}
 
 		private static string GetElement(XElement element, string attribute)
