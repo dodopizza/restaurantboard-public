@@ -16,6 +16,7 @@ using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ActionResult = Microsoft.AspNetCore.Mvc.ActionResult;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
@@ -89,7 +90,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return View(model);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         public JsonResult GetOrderReadinessToStationary(int unitId)
         {
             const int maxCountOrders = 16;
@@ -146,7 +147,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return icons[iconIndex].GetUrl(fileStorageHost);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
             var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
