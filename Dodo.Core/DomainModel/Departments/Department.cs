@@ -28,7 +28,7 @@ namespace Dodo.Core.DomainModel.Departments
 		/// <summary>
 		/// Отклонение от серверного времени(Москва) в часах
 		/// </summary>
-		public virtual Int16 TimeZoneShift => _timeZone.TimeZoneShift(TimeZoneUTCOffset);
+		public virtual Int16 TimeZoneShift => _timeZone.TimeZoneShift();
 
 		public virtual Country Country { get; set; }
 

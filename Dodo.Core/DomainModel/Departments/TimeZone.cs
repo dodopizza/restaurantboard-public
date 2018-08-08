@@ -15,10 +15,10 @@ namespace Dodo.Core.DomainModel.Departments
             _timeZoneUTCOffset = timeZoneUTCOffset;
         }
 
-        public short TimeZoneShift(Int32 utcOffset)
+        public short TimeZoneShift()
         {
             var currentTimeZoneUTCOffset = _utcOffsetProvider.GetUtcOffset().TotalMinutes;
-            return (short)Math.Round(((Double)utcOffset - currentTimeZoneUTCOffset) / 60);
+            return (short)Math.Round(((Double)_timeZoneUTCOffset - currentTimeZoneUTCOffset) / 60);
         }
         
         public static string TimeZoneUTCOffsetString(int utcOffset, int shift)
