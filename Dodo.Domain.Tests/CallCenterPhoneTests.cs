@@ -48,12 +48,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfIconPathContainsBackSlashes_ShouldReturnUriWithReplacedBackSlashesBySlashes()
 		{
-			var phone = new CallCenterPhone
-			{
-				IconPath = "test\\test2"
-			};
+			var icon = new Icon(path: "test\\test2", sitePath: "");
 
-			var urlBackSlashesReplacedBySlashes = phone.GetIconUrl("www.example.com");
+			var urlBackSlashesReplacedBySlashes = icon.GetUrl("www.example.com");
 
 			Assert.AreEqual("www.example.com/test/test2", urlBackSlashesReplacedBySlashes);
 		}
@@ -61,12 +58,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfSpecifiedIconPathWithoutSlashes_ShouldReturnCorrectUri()
 		{
-			var phone = new CallCenterPhone
-			{
-				IconPath = "test"
-			};
-
-			var transformedUri = phone.GetIconUrl("www.example.com");
+			var icon = new Icon(path: "test", sitePath: "");
+			
+			var transformedUri = icon.GetUrl("www.example.com");
 
 			Assert.AreEqual("www.example.com/test", transformedUri);
 		}
@@ -74,12 +68,9 @@ namespace Dodo.Domain.Tests
 		[Test]
 		public void GetIconUrl_IfSpecifiedIconSitePath_ShouldReturnIt()
 		{
-			var phone = new CallCenterPhone
-			{
-				IconSitePath = "www.sitepath.ru/icon"
-			};
+			var icon = new Icon(path: "", sitePath: "www.sitepath.ru/icon");
 
-			var theSameUri = phone.GetIconUrl("www.example.com");
+			var theSameUri = icon.GetUrl("www.example.com");
 
 			Assert.AreEqual("www.sitepath.ru/icon", theSameUri);
 		}
@@ -90,8 +81,7 @@ namespace Dodo.Domain.Tests
 			var phone = new CallCenterPhone
 			{
 				Number = "89991234567",
-				IconPath = "icon",
-				IconSitePath = "www.images.com/icon"
+				Icon = new Icon("icon", "www.images.com/icon")
 			};
 
 			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
@@ -107,8 +97,7 @@ namespace Dodo.Domain.Tests
 			var phone = new CallCenterPhone
 			{
 				Number = null,
-				IconPath = "",
-				IconSitePath = null
+				Icon = new Icon("", null)
 			};
 
 			var serializedPhoneAsString = phone.CreateXmlNode().ToString();
@@ -141,8 +130,8 @@ namespace Dodo.Domain.Tests
 
 			Assert.AreEqual(1, deserializedPhones.Length);
 			Assert.AreEqual("89991234567", deserializedPhones[0].Number);
-			Assert.AreEqual("icon", deserializedPhones[0].IconPath);
-			Assert.AreEqual("www.images.com/icon", deserializedPhones[0].IconSitePath);
+			Assert.AreEqual("icon", deserializedPhones[0].Icon.Path);
+			Assert.AreEqual("www.images.com/icon", deserializedPhones[0].Icon.SitePath);
 		}
 		
 		[Test]

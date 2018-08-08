@@ -11,32 +11,6 @@ namespace Dodo.Core.DomainModel.Departments
 		
 		public String Number { get; set; }
 
-		/// <summary>
-		/// Путь на внешнем сервере (файл сервер)
-		/// </summary>
-		public String IconPath { set; get; }
-
-		/// <summary>
-		/// Путь в текущем каталоге сайта
-		/// </summary>
-		public String IconSitePath { set; get; }
-
-
-		public String GetIconUrl(String host)
-		{
-			if (!String.IsNullOrEmpty(IconPath))
-			{
-				return (host.TrimEnd('/', '\\') + "/" + IconPath).Replace('\\', '/');
-			}
-
-			if (!String.IsNullOrEmpty(IconSitePath))
-			{
-				return IconSitePath;
-			}
-
-			return String.Empty;
-		}
-
 		public String NumberWithoutMarks
 		{
 			get
@@ -47,6 +21,8 @@ namespace Dodo.Core.DomainModel.Departments
 				return ReplacedMarks.Aggregate(Number, (current, mark) => current.Replace(mark, ""));
 			}
 		}
+
+		public Icon Icon { get; set; }
 
 		public XElement CreateXmlNode()
 		{

@@ -10,8 +10,8 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			return new XElement("Phone",
 				new XAttribute("number", phone.Number ?? String.Empty),
-				new XAttribute("iconPath", phone.IconPath ?? String.Empty),
-				new XAttribute("iconSitePath", phone.IconSitePath ?? String.Empty));
+				new XAttribute("iconPath", phone.Icon.Path ?? String.Empty),
+				new XAttribute("iconSitePath", phone.Icon.SitePath ?? String.Empty));
 		}
 
 		public static CallCenterPhone[] GetCallCenterPhones(this XElement container)
@@ -28,8 +28,7 @@ namespace Dodo.Core.DomainModel.Departments
 			return new CallCenterPhone
 			{
 				Number = GetElement(element, "number"),
-				IconPath = GetElement(element, "iconPath"),
-				IconSitePath = GetElement(element, "iconSitePath")
+				Icon = new Icon(GetElement(element, "iconPath"), GetElement(element, "iconSitePath"))
 			};
 		}
 
