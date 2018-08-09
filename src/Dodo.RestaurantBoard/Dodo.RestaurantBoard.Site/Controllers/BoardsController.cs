@@ -6,6 +6,7 @@ using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
@@ -15,6 +16,7 @@ using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ActionResult = Microsoft.AspNetCore.Mvc.ActionResult;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
@@ -88,7 +90,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return View(model);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         public JsonResult GetOrderReadinessToStationary(int unitId)
         {
             const int maxCountOrders = 16;
@@ -99,13 +101,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
-
-            var clientTreatment = pizzeria.ClientTreatment;
-            ClientIcon[] icons = { };
-            if (clientTreatment == ClientTreatment.RandomImage)
-            {
-                icons = _clientsService.GetIcons();
-            }
 
             var playTineParamIds = orders.Select(x => x.OrderId).ToArray();
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
@@ -122,16 +117,26 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                             x.OrderId,
                             x.OrderNumber,
                             x.ClientName,
-                            ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
-                                ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
-                                : null,
+                            ClientIconPath = GetClientIconPath(pizzeria.ClientTreatment, x.OrderNumber),
                             OrderReadyTimestamp = x.OrderReadyDateTime.Ticks,
                             OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture)
                         })
                     .OrderByDescending(x => x.OrderReadyTimestamp)
+                    .ToArray()
             };
 
             return Json(result);
+        }
+
+        private string GetClientIconPath(ClientTreatment clientTreatment, int orderNumber)
+        {
+            if (clientTreatment == ClientTreatment.RandomImage 
+                && _clientsService.GetIcons().Any())
+            {
+                return GetIconPath(orderNumber, _clientsService.GetIcons(), "https://wedevstorage.blob.core.windows.net/");
+            }
+
+            return null;
         }
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
@@ -145,7 +150,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return icons[iconIndex].GetUrl(fileStorageHost);
         }
 
-        [Microsoft.AspNetCore.Mvc.HttpGet]
+        [HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
             var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
@@ -153,20 +158,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
                 .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
 
-            IEnumerable<BannerModel> result;
-
-            if (restaurantBanners.Any())
-            {
-                result = restaurantBanners
-                    .Select(x => new BannerModel(x))
-                    .ToArray();
-            }
-            else
-            {
-                result = new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
-            }
-
-            return Json(result);
+            return Json(GetBannerModelsFrom(restaurantBanners));
         }
 
         public virtual string GetLocalizedContext()
@@ -174,5 +166,18 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             return LocalizedContext.LocalizedContent(_hostingEnvironment, _fileService, "Tracking-Scoreboard-Empty.jpg");
         }
         #endregion Ресторан.Готовность заказов
+
+        private BannerModel[] GetBannerModelsFrom(IEnumerable<RestaurantBanner> restaurantBanners)
+        {
+
+            if (restaurantBanners.Any())
+            {
+                return restaurantBanners
+                    .Select(x => new BannerModel(x))
+                    .ToArray();
+            }
+
+            return new[] { new BannerModel{ BannerUrl = GetLocalizedContext(), DisplayTime = 60000 } };
+        }
     }
 }

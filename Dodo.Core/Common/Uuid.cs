@@ -12,6 +12,8 @@ namespace Dodo.Core.Common
         private const String _emptyUUId = "00000000000000000000000000000000";
         private const Int32 _uuid_bytes_length = 16;
         private const Int32 _uuid_length = 32;
+        private const Int32 HexLength = 2;
+        private const Int32 HexBase = 16;
         private readonly String _uuid;
 
         public Uuid()
@@ -104,20 +106,21 @@ namespace Dodo.Core.Common
 
         public Byte[] ToByteArray()
         {
-            if (_uuid.Length % 2 != 0)
+            if (_uuid.Length % HexLength != 0)
             {
                 throw new ArgumentException("hexString must have an even length");
             }
 
-            Byte[] bytes = new Byte[_uuid.Length / 2];
+            Byte[] bytes = new Byte[_uuid.Length / HexLength];
 
             for (Int32 i = 0; i < bytes.Length; i++)
             {
-                String currentHex = _uuid.Substring(i * 2, 2);
-                bytes[i] = Convert.ToByte(currentHex, 16);
+                String currentHex = _uuid.Substring(i * HexLength, HexLength);
+                bytes[i] = Convert.ToByte(currentHex, HexBase);
             }
             return bytes;
         }
+
 
         private String ByteArrayToString(Byte[] bytes)
         {
