@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using Dodo.Core.DomainModel.Departments.Parameters.Department;
 using Dodo.Core.DomainModel.Localization;
@@ -154,13 +155,13 @@ namespace Dodo.Core.DomainModel.Departments
 
         private Cultures[] availableCultures;
 
-        public Cultures[] AvailableCultures
+        public virtual Cultures[] AvailableCultures
         {
-            get { return availableCultures; }
+            get => availableCultures;
             set
             {
                 availableCultures = value;
-                departmentCultureData = GetCultureData(CurrentCultureName, DepartmentCultureData, availableCultures);
+                departmentCultureData = GetCultureData(DepartmentCultureData);
             }
         }
 
@@ -184,33 +185,50 @@ namespace Dodo.Core.DomainModel.Departments
 
         public DepartmentCultureData[] DepartmentCultureData
         {
-            get { return departmentCultureData; }
-            set
-            {
-                departmentCultureData = GetCultureData(CurrentCultureName, value, AvailableCultures);
-            }
+            get => departmentCultureData;
+            set => departmentCultureData = GetCultureData(value);
         }
 
-        private DepartmentCultureData[] GetCultureData(String selectedCultureName, DepartmentCultureData[] cultureData, Cultures[] availableCultures)
+        private DepartmentCultureData[] GetCultureData(DepartmentCultureData[] cultureData)
         {
-            List<DepartmentCultureData> result = new List<DepartmentCultureData>();
+            var result = new List<DepartmentCultureData>();
 
-            if (availableCultures == null || cultureData == null)
+            if (AvailableCultures == null || cultureData == null)
                 return cultureData;
+            
 
-            foreach (var culture in availableCultures)
-            {
-                if (cultureData.Any(c => (c.CultureName == culture.CultureName)))
-                    result.Add(cultureData.FirstOrDefault(c => (c.CultureName == culture.CultureName)));
-                else if (String.Equals(NativeCultureName, culture.CultureName))
-                    result.Add(new DepartmentCultureData(0, culture.CultureName, this.Id, this.Name));
-                else
-                    result.Add(new DepartmentCultureData(0, culture.CultureName, this.Id, ""));
-            }
-
+            result.AddRange(GetAvailablesCulturesByCultureNameFrom(cultureData));
+            result.AddRange(GetCulturesWithNativeCultureNameWithout(result));
+            
             return result.ToArray();
         }
 
+        private IEnumerable<DepartmentCultureData> GetCulturesWithNativeCultureNameWithout(
+            IEnumerable<DepartmentCultureData> cultureData)
+        {
+            var intersected = 
+                from ac in AvailableCultures
+                join cd in cultureData on ac.CultureName equals cd.CultureName
+                select ac;
+
+            return
+                from culture in AvailableCultures.Except(intersected)
+                select new DepartmentCultureData
+                (
+                    0, 
+                    culture.CultureName, 
+                    Id,
+                    String.Equals(NativeCultureName, culture.CultureName) ? Name : ""
+                );
+        }
+
+        private IEnumerable<DepartmentCultureData> GetAvailablesCulturesByCultureNameFrom(DepartmentCultureData[] cultureData)
+        {
+            return 
+                from culture in AvailableCultures 
+                where cultureData.Any(c => c.CultureName == culture.CultureName) 
+                select cultureData.FirstOrDefault(c => c.CultureName == culture.CultureName);
+        }
         #endregion		
     }
 }
