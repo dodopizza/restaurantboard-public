@@ -27,5 +27,13 @@ namespace Dodo.RestaurantBoard.Site.Tests.Dsl.Builders
         {
             return _service.Object;
         }
+
+        public TrackerClientMockBuilder WithOneOrder(ProductionOrder productionOrder)
+        {
+            _service
+                .Setup(x => x.GetOrdersByType(It.IsAny<Uuid>(), It.IsAny<OrderType>(), It.IsAny<OrderState[]>(), It.IsAny<int>()))
+                .Returns(() => new [] { productionOrder });
+            return this;
+        }
     }
 }

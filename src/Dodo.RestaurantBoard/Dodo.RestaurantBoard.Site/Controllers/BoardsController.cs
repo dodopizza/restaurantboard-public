@@ -102,13 +102,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
 
-            var clientTreatment = pizzeria.ClientTreatment;
-            ClientIcon[] icons = { };
-            if (clientTreatment == ClientTreatment.RandomImage)
-            {
-                icons = _clientsService.GetIcons();
-            }
-
             var playTineParamIds = orders.Select(x => x.OrderId).ToArray();
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
             CurrentProductsIds = playTineParamIds;
@@ -124,16 +117,26 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                             x.OrderId,
                             x.OrderNumber,
                             x.ClientName,
-                            ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
-                                ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
-                                : null,
+                            ClientIconPath = GetClientIconPath(pizzeria.ClientTreatment, x.OrderNumber),
                             OrderReadyTimestamp = x.OrderReadyDateTime.Ticks,
                             OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture)
                         })
                     .OrderByDescending(x => x.OrderReadyTimestamp)
+                    .ToArray()
             };
 
             return Json(result);
+        }
+
+        private string GetClientIconPath(ClientTreatment clientTreatment, int orderNumber)
+        {
+            if (clientTreatment == ClientTreatment.RandomImage 
+                && _clientsService.GetIcons().Any())
+            {
+                return GetIconPath(orderNumber, _clientsService.GetIcons(), "https://wedevstorage.blob.core.windows.net/");
+            }
+
+            return null;
         }
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)

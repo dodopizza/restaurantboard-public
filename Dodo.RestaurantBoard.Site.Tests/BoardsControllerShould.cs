@@ -72,9 +72,11 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 .ClientsService
                 .WithEmptyClientIconList()
                 .MockPlease();
+            var trackerClient = Create.TrackerClient.WithOneOrder(new ProductionOrder()).Please();
             var boardsController = Create.BoardController
                 .WithDepartmentServiceAndRandomImageThreatment()
                 .With(clientsServiceMock.Object)
+                .With(trackerClient)
                 .Please();
 
             boardsController.GetOrderReadinessToStationary(132);
