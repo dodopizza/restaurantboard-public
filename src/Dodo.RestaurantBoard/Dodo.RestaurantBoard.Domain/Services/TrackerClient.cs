@@ -1,4 +1,5 @@
-﻿using Dodo.Core.Common;
+﻿using System.Linq;
+using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 
@@ -30,6 +31,13 @@ namespace Dodo.RestaurantBoard.Domain.Services
 			};
 
 			return orders;
+		}
+
+		public ProductionOrder[] GetOrdersByLimit(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		{
+			var orders = GetOrdersByType(unitUuid, type, states, limit);
+
+			return orders.Take(limit).ToArray();
 		}
 	}
 }

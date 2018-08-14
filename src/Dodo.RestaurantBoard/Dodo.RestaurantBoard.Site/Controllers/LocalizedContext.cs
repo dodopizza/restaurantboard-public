@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Dodo.RestaurantBoard.Site.Controllers {
-    public static class LocalizedContext
+    public class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
@@ -18,11 +19,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
             CultureInfo currentUiCulture = Thread.CurrentThread.CurrentUICulture;
             int serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
             contentPath = contentPath.Trim('/');
-            string path1 = hostingEnvironment.WebRootPath + "/" + Path.Combine("LocalizedResources", currentUiCulture.TwoLetterISOLanguageName, contentPath);
+            string path1 = new LocalizedContext().GetLocalizedPathWithCulture(hostingEnvironment.WebRootPath, contentPath, currentUiCulture);
             if (File.Exists(path1))
                 return ConvertLocalPathToRelativeUrl(path1, serverPathLength);
             stringBuilder.AppendLine(path1);
-            string path2 = hostingEnvironment.WebRootPath + "/" + Path.Combine("LocalizedResources", contentPath);
+            string path2 = GetLocalizedPath(hostingEnvironment.WebRootPath, contentPath);
             if (File.Exists(path2))
                 return ConvertLocalPathToRelativeUrl(path2, serverPathLength);
             stringBuilder.AppendLine(path2);
@@ -32,6 +33,16 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
+        }
+
+        public string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
+        {
+            return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
+        }
+
+        public static string GetLocalizedPath(string webRootPath, string contentPath)
+        {
+            return webRootPath + "/" + Path.Combine("LocalizedResources", contentPath);
         }
     }
 }
