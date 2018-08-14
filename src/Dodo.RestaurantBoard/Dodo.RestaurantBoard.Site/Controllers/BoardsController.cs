@@ -6,14 +6,15 @@ using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Models.DodoFM;
+using Dodo.RestaurantBoard.Site.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using ActionResult = Microsoft.AspNetCore.Mvc.ActionResult;
@@ -27,25 +28,20 @@ namespace Dodo.RestaurantBoard.Site.Controllers
     {
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
-        private readonly IManagementService _managementService;
         private readonly ITrackerClient _trackerClient;
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly RestorauntBannerService _restorauntBannerService;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
-            IManagementService managementService,
             ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
-            )
+            RestorauntBannerService restorauntBannerService)
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
-            _managementService = managementService;
             _trackerClient = trackerClient;
-            _hostingEnvironment = hostingEnvironment;
+            _restorauntBannerService = restorauntBannerService;
         }
-
 
         private int[] CurrentProductsIds
         {
@@ -146,27 +142,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
-            var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
-            var restaurantBanners = _managementService
-                .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
-                .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
-
-            IEnumerable<object> result;
-
-            if (restaurantBanners.Any())
-            {
-                result = restaurantBanners.Select(
-                    x => new
-                    {
-                        BannerUrl = x.Url.Replace('\\', '/'),
-                        DisplayTime = x.DisplayTime * 1000
-                    });
-            }
-            else
-            {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
-            }
-
+            var result = _restorauntBannerService.GetBanners(countryId, departmentId, unitId);
             return Json(result);
         }
 
