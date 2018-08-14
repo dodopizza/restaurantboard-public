@@ -19,7 +19,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
             CultureInfo currentUiCulture = Thread.CurrentThread.CurrentUICulture;
             int serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
             contentPath = contentPath.Trim('/');
-            string path1 = GetLocalizedPathWithCulture(hostingEnvironment.WebRootPath, contentPath, currentUiCulture);
+            string path1 = new LocalizedContext().GetLocalizedPathWithCultureNew(hostingEnvironment.WebRootPath, contentPath, currentUiCulture);
             if (File.Exists(path1))
                 return ConvertLocalPathToRelativeUrl(path1, serverPathLength);
             stringBuilder.AppendLine(path1);
@@ -33,11 +33,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
-        }
-
-        public static string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
-        {
-            return new LocalizedContext().GetLocalizedPathWithCultureNew(webRootPath, contentPath, culture);
         }
 
         public string GetLocalizedPathWithCultureNew(string webRootPath, string contentPath, CultureInfo culture)
