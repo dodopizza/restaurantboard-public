@@ -37,7 +37,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
 
         public static string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
         {
-            return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
+            return new LocalizedContext().GetLocalizedPathWithCultureNew(webRootPath, contentPath, culture);
         }
 
         public string GetLocalizedPathWithCultureNew(string webRootPath, string contentPath, CultureInfo culture)
