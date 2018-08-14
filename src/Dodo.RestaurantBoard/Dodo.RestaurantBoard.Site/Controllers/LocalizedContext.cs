@@ -33,5 +33,10 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
         }
+
+        public static string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
+        {
+            return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
+        }
     }
 }
