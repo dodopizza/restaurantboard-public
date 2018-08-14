@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -37,6 +38,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         public static string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
         {
             return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
+        }
+
+        public static string GetLocalizedPath(string webRootPath, string contentPath)
+        {
+            return webRootPath + "/" + Path.Combine("LocalizedResources", contentPath);
         }
     }
 }

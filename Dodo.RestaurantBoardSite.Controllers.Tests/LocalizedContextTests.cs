@@ -19,5 +19,15 @@ namespace Dodo.RestaurantBoardSite.Controllers.Tests
             Assert.Equal("example.com/LocalizedResources\\en\\content", localizedPathWithCulture);
 
         }
+        
+        [Fact]
+        public void GetLocalizedPathWithoutCulture_ShouldReturnValidCombinedPath()
+        {
+            var localizedPath = LocalizedContext.GetLocalizedPath(
+                webRootPath: "example.com", contentPath: "content");
+
+            Assert.Equal("example.com/LocalizedResources\\content", localizedPath);
+
+        }
     }
 }
