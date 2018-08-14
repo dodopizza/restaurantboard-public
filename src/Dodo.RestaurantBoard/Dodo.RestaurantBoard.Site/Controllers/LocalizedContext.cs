@@ -6,14 +6,14 @@ using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Dodo.RestaurantBoard.Site.Controllers {
-    public static class LocalizedContext
+    public class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
-        public static string LocalizedContent(IHostingEnvironment hostingEnvironment, string contentPath)
+        public string LocalizedContent(IHostingEnvironment hostingEnvironment, string contentPath)
         {
             if (string.IsNullOrEmpty(contentPath))
-                throw new ArgumentNullException(nameof (contentPath));
+                throw new ArgumentNullException(nameof(contentPath));
             StringBuilder stringBuilder = new StringBuilder();
             CultureInfo currentUiCulture = Thread.CurrentThread.CurrentUICulture;
             int serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
