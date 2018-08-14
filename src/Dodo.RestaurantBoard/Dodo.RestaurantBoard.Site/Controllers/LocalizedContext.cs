@@ -7,7 +7,7 @@ using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Dodo.RestaurantBoard.Site.Controllers {
-    public static class LocalizedContext
+    public class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
@@ -36,6 +36,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         }
 
         public static string GetLocalizedPathWithCulture(string webRootPath, string contentPath, CultureInfo culture)
+        {
+            return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
+        }
+
+        public string GetLocalizedPathWithCultureNew(string webRootPath, string contentPath, CultureInfo culture)
         {
             return webRootPath + "/" + Path.Combine("LocalizedResources", culture.TwoLetterISOLanguageName, contentPath);
         }

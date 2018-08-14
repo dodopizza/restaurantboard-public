@@ -17,8 +17,19 @@ namespace Dodo.RestaurantBoardSite.Controllers.Tests
                 webRootPath: "example.com", contentPath: "content", culture: cultureInfo);
 
             Assert.Equal("example.com/LocalizedResources\\en\\content", localizedPathWithCulture);
-
         }
+        
+        [Fact]
+        public void GetLocalizedPathWithCultureNew_ShouldReturnValidCombinedPath_DependsOnThreadCulture()
+        {
+            var cultureInfo = new CultureInfo("en-US");
+
+            var localizedPathWithCulture = new LocalizedContext().GetLocalizedPathWithCultureNew(
+                webRootPath: "example.com", contentPath: "content", culture: cultureInfo);
+
+            Assert.Equal("example.com/LocalizedResources\\en\\content", localizedPathWithCulture);
+        }
+        
         
         [Fact]
         public void GetLocalizedPathWithoutCulture_ShouldReturnValidCombinedPath()
@@ -27,7 +38,6 @@ namespace Dodo.RestaurantBoardSite.Controllers.Tests
                 webRootPath: "example.com", contentPath: "content");
 
             Assert.Equal("example.com/LocalizedResources\\content", localizedPath);
-
         }
     }
 }
