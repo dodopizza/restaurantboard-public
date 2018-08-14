@@ -6,6 +6,7 @@ using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
 using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.DomainModel.Management;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
@@ -147,26 +148,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
-            var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
-            var restaurantBanners = _managementService
-                .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
-                .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
-
-            IEnumerable<object> result;
-
-            if (restaurantBanners.Any())
-            {
-                result = restaurantBanners.Select(
-                    x => new
-                    {
-                        BannerUrl = x.Url.Replace('\\', '/'),
-                        DisplayTime = x.DisplayTime * 1000
-                    });
-            }
-            else
-            {
-                result = new RestorauntBannerService(_hostingEnvironment).GetDefaultResult();
-            }
+            var service = new RestorauntBannerService(
+                _hostingEnvironment,
+                _departmentsStructureService,
+                _managementService);
+            var result = service.GetBanners(countryId, departmentId, unitId);
 
             return Json(result);
         }
