@@ -15,7 +15,6 @@ using Dodo.RestaurantBoard.Site.Models.DodoFM;
 using Dodo.RestaurantBoard.Site.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using ActionResult = Microsoft.AspNetCore.Mvc.ActionResult;
@@ -29,25 +28,20 @@ namespace Dodo.RestaurantBoard.Site.Controllers
     {
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
-        private readonly IManagementService _managementService;
         private readonly ITrackerClient _trackerClient;
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly RestorauntBannerService _restorauntBannerService;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
-            IManagementService managementService,
             ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
-            )
+            RestorauntBannerService restorauntBannerService)
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
-            _managementService = managementService;
             _trackerClient = trackerClient;
-            _hostingEnvironment = hostingEnvironment;
+            _restorauntBannerService = restorauntBannerService;
         }
-
 
         private int[] CurrentProductsIds
         {
@@ -148,12 +142,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
-            var service = new RestorauntBannerService(
-                _hostingEnvironment,
-                _departmentsStructureService,
-                _managementService);
-            var result = service.GetBanners(countryId, departmentId, unitId);
-
+            var result = _restorauntBannerService.GetBanners(countryId, departmentId, unitId);
             return Json(result);
         }
 

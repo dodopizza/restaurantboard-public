@@ -2,6 +2,7 @@
 using Autofac.Extensions.DependencyInjection;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.RestaurantBoard.Site.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,8 +26,8 @@ namespace Dodo.RestaurantBoard.Site
 			builder.RegisterType<DepartmentsStructureService>().As<IDepartmentsStructureService>().SingleInstance();
 			builder.RegisterType<ManagementService>().As<IManagementService>().SingleInstance();
 			builder.RegisterType<ClientService>().As<IClientsService>().SingleInstance();
-
 			builder.RegisterType<TrackerClient>().As<ITrackerClient>();
+			builder.RegisterType<RestorauntBannerService>();
 
 			return builder;
 		}
