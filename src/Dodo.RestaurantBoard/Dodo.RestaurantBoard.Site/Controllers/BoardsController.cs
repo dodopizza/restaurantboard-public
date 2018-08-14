@@ -11,6 +11,7 @@ using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Models.DodoFM;
+using Dodo.RestaurantBoard.Site.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
@@ -164,7 +165,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new RestorauntBannerService(_hostingEnvironment).GetDefaultResult();
             }
 
             return Json(result);
