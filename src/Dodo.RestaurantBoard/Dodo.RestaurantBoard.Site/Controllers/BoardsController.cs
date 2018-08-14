@@ -164,7 +164,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new { BannerUrl = new LocalizedContext().LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
             }
 
             return Json(result);
