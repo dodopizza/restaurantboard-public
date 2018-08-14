@@ -18,7 +18,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
             CultureInfo currentUiCulture = Thread.CurrentThread.CurrentUICulture;
             int serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
             contentPath = contentPath.Trim('/');
-            string path1 = hostingEnvironment.WebRootPath + "/" + Path.Combine("LocalizedResources", currentUiCulture.TwoLetterISOLanguageName, contentPath);
+            string path1 = GetLocalizedPathWithCulture(hostingEnvironment.WebRootPath, contentPath, currentUiCulture);
             if (File.Exists(path1))
                 return ConvertLocalPathToRelativeUrl(path1, serverPathLength);
             stringBuilder.AppendLine(path1);
