@@ -23,7 +23,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
             if (File.Exists(path1))
                 return ConvertLocalPathToRelativeUrl(path1, serverPathLength);
             stringBuilder.AppendLine(path1);
-            string path2 = hostingEnvironment.WebRootPath + "/" + Path.Combine("LocalizedResources", contentPath);
+            string path2 = GetLocalizedPath(hostingEnvironment.WebRootPath, contentPath);
             if (File.Exists(path2))
                 return ConvertLocalPathToRelativeUrl(path2, serverPathLength);
             stringBuilder.AppendLine(path2);
