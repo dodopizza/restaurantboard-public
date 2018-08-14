@@ -29,7 +29,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
             throw new FileNotFoundException(stringBuilder.ToString());
         }
 
-        private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
+        private string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
         }
