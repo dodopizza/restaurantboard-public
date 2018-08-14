@@ -16,16 +16,16 @@ namespace Dodo.RestaurantBoard.Domain.Services
 			string.Empty, UnitApprove.Approved, UnitState.Open, 2, new Uuid("000D3A240C719A8711E68ABA13FC4A39"), 1,
 			organizationShortInfo, 100, DateTime.MinValue, "Gay", true, 1, 1, ClientTreatment.Name,
 			true, new PizzeriaFormat(0, string.Empty, string.Empty));
-		
-		
-		public T GetDepartmentOrCache<T>(int departmentId) where T : Department
-		{
-			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble, string.Empty)} as T;
-		}
 
-		public Department GetDepartmentByUnitOrCache(int unitId)
+
+	    public T GetDepartmentOrCache<T>(int departmentId) where T : Department
+	    {
+	        return new CityDepartment {Country = new CountryNew("Russia", "+7", Currency.Ruble)} as T;
+	    }
+
+	    public Department GetDepartmentByUnitOrCache(int unitId)
 		{
-			return new CityDepartment {Country = new Country(1, "Russia", "+7", null, string.Empty, Currency.Ruble, string.Empty)};
+			return new CityDepartment {Country = new CountryNew("Russia", "+7", Currency.Ruble)};
 		}
 
 		public Unit GetUnitOrCache(Uuid unitUuid)
