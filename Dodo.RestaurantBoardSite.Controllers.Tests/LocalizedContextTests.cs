@@ -13,7 +13,7 @@ namespace Dodo.RestaurantBoardSite.Controllers.Tests
         {
             var cultureInfo = new CultureInfo("en-US");
 
-            var localizedPathWithCulture = new LocalizedContext().GetLocalizedPathWithCultureNew("example.com", "content", cultureInfo);
+            var localizedPathWithCulture = new LocalizedContext().GetLocalizedPathWithCulture("example.com", "content", cultureInfo);
 
             Assert.Equal("example.com/LocalizedResources\\en\\content", localizedPathWithCulture);
         }
