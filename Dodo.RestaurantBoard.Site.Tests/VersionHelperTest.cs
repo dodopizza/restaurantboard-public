@@ -1,4 +1,6 @@
-﻿using Dodo.RestaurantBoard.Site.Common.Helpers;
+﻿using System;
+using System.Reflection;
+using Dodo.RestaurantBoard.Site.Common.Helpers;
 using NUnit.Framework;
 
 namespace Dodo.RestaurantBoard.Site.Tests
@@ -29,6 +31,14 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             // Assert
             Assert.True(urlWithVersion.StartsWith(url));
+        }
+
+        class TestableVersionHelper : VersionHelper
+        {
+            protected override Version GetVersion()
+            {
+                return new Version(1, 1, 0);
+            }
         }
     }
 }
