@@ -33,6 +33,21 @@ namespace Dodo.RestaurantBoard.Site.Tests
             Assert.True(urlWithVersion.StartsWith(url));
         }
 
+        [Test]
+        public void AddVersionToken_AddsVersion()
+        {
+            // Arrange
+            var url = "foo";
+            var version = "2.0";
+            var helper = new TestableVersionHelper(version);
+
+            // Act
+            var urlWithVersion = helper.AddVersionToken(url);
+
+            // Assert
+            Assert.True(urlWithVersion.Contains(version));
+        }
+
         class TestableVersionHelper : VersionHelper
         {
             private readonly string _version;
