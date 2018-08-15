@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using Dodo.Core.Common;
 using Dodo.Core.Common.Enums;
@@ -73,6 +74,7 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 				if (parts.Length > 0) parts[0] += " ";
 
 				GetInititals(parts);
+				AddSpaceAfterDot(parts);
 
 				return String.Join(String.Empty, parts);
 			}
@@ -81,6 +83,11 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 		public void GetInititals(string[] parts)
 		{
 			for (Int32 i = 1; i < parts.Length; i++) parts[i] = parts[i][0] + ".";
+		}
+
+		public void AddSpaceAfterDot(string[] parts)
+		{
+			parts = parts.Select(x => x.Replace(".", ". ")).ToArray();
 		}
 
 		public OrganizationType[] GetAvailableTypes()
