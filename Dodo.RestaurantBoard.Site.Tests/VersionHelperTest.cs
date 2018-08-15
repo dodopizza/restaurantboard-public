@@ -14,7 +14,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             var url = "foo";
             
             // Act
-            var urlWithVersion = VersionHelper.AddVersionToken(url);
+            var urlWithVersion = new VersionHelper().AddVersionToken(url);
 
             // Assert
             Assert.True(urlWithVersion.Contains("?"));
@@ -27,7 +27,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             var url = "foo";
 
             // Act
-            var urlWithVersion = VersionHelper.AddVersionToken(url);
+            var urlWithVersion = new VersionHelper().AddVersionToken(url);
 
             // Assert
             Assert.True(urlWithVersion.StartsWith(url));
