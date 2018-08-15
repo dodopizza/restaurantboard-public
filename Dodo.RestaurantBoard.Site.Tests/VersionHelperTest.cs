@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Dodo.RestaurantBoard.Site.Common.Helpers;
+﻿using Dodo.RestaurantBoard.Site.Common.Helpers;
 using NUnit.Framework;
 
 namespace Dodo.RestaurantBoard.Site.Tests
@@ -17,6 +16,19 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             // Assert
             Assert.True(urlWithVersion.Contains("?"));
+        }
+
+        [Test]
+        public void AddVersionToken_SavesBaseUrl()
+        {
+            // Arrange
+            var url = "foo";
+
+            // Act
+            var urlWithVersion = VersionHelper.AddVersionToken(url);
+
+            // Assert
+            Assert.True(urlWithVersion.StartsWith(url));
         }
     }
 }
