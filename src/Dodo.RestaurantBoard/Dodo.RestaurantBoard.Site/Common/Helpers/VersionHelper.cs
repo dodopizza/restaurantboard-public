@@ -19,7 +19,7 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 
         public string AddVersionToken(string url)
         {
-            var versionToken = new VersionHelper().GetVersionToken();
+            var versionToken = GetVersionToken();
             url = FormatUrl(url, versionToken);
 
             return url;
