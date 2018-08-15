@@ -5,7 +5,7 @@ using System.Reflection;
 namespace Dodo.RestaurantBoard.Site.Common.Helpers
 {
 	[Description("VersionHelper у каждой сборки должен быть свой, т.к. он зависит от Assembly")]
-	public static class VersionHelper
+	public class VersionHelper
 	{
 		public const string VERSION_QUERY_PARAMETER = "v";
 
