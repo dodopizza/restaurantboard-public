@@ -87,7 +87,10 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 
 		public void AddSpaceAfterDot(string[] parts)
 		{
-			parts = parts.Select(x => x.Replace(".", ". ")).ToArray();
+			for (int i = 0; i < parts.Length; i++)
+			{
+				parts[i] = parts[i].Replace(".", ". ");
+			}
 		}
 
 		public OrganizationType[] GetAvailableTypes()

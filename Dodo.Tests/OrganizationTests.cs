@@ -16,6 +16,17 @@ namespace Dodo.Tests
 
             AssertCollections(new[] {"QQQ", "W.", "E."}, names);
         }
+        
+        [Fact]
+        public void ShoudAddSpaceAfterEveryDot_AddSpaceAfterDot()
+        {
+            var organization = Create.Organization.Please();
+            var names = new []{"QQQ", "W.W.W", "EEE."};
+            
+            organization.AddSpaceAfterDot(names);
+
+            AssertCollections(new[] {"QQQ", "W. W. W", "EEE. "}, names);
+        }
 
         private void AssertCollections(string[] expected, string[] actual)
         {
