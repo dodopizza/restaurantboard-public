@@ -35,9 +35,16 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
         class TestableVersionHelper : VersionHelper
         {
+            private readonly string _version;
+
+            public TestableVersionHelper(string version)
+            {
+                _version = version;
+            }
+
             protected override Version GetVersion()
             {
-                return new Version(1, 1, 0);
+                return new Version(_version);
             }
         }
     }
