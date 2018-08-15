@@ -20,6 +20,7 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 		public String BankName { get; private set; }
 		public String CheckingAccount { get; private set; }
 		public String ShareCapital { get; private set; }
+		public CountryCode CountryCode { get; }
 
 		public Organization
 		(
@@ -82,6 +83,10 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 			for (Int32 i = 1; i < parts.Length; i++) parts[i] = parts[i][0] + ".";
 		}
 
+		public OrganizationType[] GetAvailableTypes()
+		{
+			return GetAvailableTypes(CountryCode);
+		}
 
 		public static OrganizationType[] GetAvailableTypes(CountryCode countryCode)
 		{
