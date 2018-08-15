@@ -2,6 +2,7 @@
 using Dodo.Core.Common;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using Dodo.RestaurantBoard.Domain.Repositories;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
@@ -34,30 +35,6 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		private ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
 		{
 			return orders.Take(limit).ToArray();
-		}
-		
-		
-	}
-
-	public class OrdersRepository
-	{
-		public ProductionOrder[] GetOrders()
-		{
-			return new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
-		}
+		}		
 	}
 }
