@@ -16,14 +16,20 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 			VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
 
 		public static string AddVersionToken(string url)
-		{
-			var versionToken = GetVersionToken();
-			var queryStart = url.IndexOf("?", StringComparison.Ordinal);
-			url = queryStart == -1
-				? url + "?" + versionToken
-				: url.Insert(queryStart + 1, versionToken + "&");
+        {
+            var versionToken = GetVersionToken();
+            url = FormatUrl(url, versionToken);
 
-			return url;
-		}
-	}
+            return url;
+        }
+
+        public static string FormatUrl(string url, string versionToken)
+        {
+            var queryStart = url.IndexOf("?", StringComparison.Ordinal);
+            url = queryStart == -1
+                ? url + "?" + versionToken
+                : url.Insert(queryStart + 1, versionToken + "&");
+            return url;
+        }
+    }
 }
