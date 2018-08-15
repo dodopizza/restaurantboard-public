@@ -8,27 +8,29 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 	public class VersionHelper
 	{
 		public const string VERSION_QUERY_PARAMETER = "v";
+        private readonly Version _version = Assembly.GetExecutingAssembly().GetName().Version;
 
-		private static readonly Version _version =
-			Assembly.GetExecutingAssembly().GetName().Version;
 
-		public static string GetVersionToken() =>
-			VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
+        public static string GetVersionToken() =>
+            new VersionHelper().GetVersionTokenNew();
 
-		public static string AddVersionToken(string url)
+        public string GetVersionTokenNew()=>
+            VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
+
+        public static string AddVersionToken(string url)
 		{
-			var versionToken = GetVersionToken();
-			var queryStart = url.IndexOf("?", StringComparison.Ordinal);
-			url = queryStart == -1
-				? url + "?" + versionToken
-				: url.Insert(queryStart + 1, versionToken + "&");
-
-			return url;
+            return new VersionHelper().AddVersionTokenNew(url);
 		}
 
         public string AddVersionTokenNew(string url)
         {
-            return AddVersionToken(url);
+            var versionToken = GetVersionToken();
+            var queryStart = url.IndexOf("?", StringComparison.Ordinal);
+            url = queryStart == -1
+                ? url + "?" + versionToken
+                : url.Insert(queryStart + 1, versionToken + "&");
+
+            return url;
         }
     }
 }
