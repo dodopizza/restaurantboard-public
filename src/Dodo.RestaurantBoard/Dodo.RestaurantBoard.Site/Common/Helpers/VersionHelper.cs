@@ -10,6 +10,9 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 		public const string VERSION_QUERY_PARAMETER = "v";
 
 	    public static string GetVersionToken() =>
+	        VERSION_QUERY_PARAMETER + "=" + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+
+        public string GetVersionTokenNew() =>
 			VERSION_QUERY_PARAMETER + "=" + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
 		public static string AddVersionToken(string url)
