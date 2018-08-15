@@ -13,23 +13,11 @@ namespace Dodo.RestaurantBoard.Domain.Services
 
 	public class TrackerClient : ITrackerClient
 	{
+		public OrdersRepository OrdersRepository = new OrdersRepository();
+		
 		public virtual ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
+			var orders = OrdersRepository.GetOrders();
 
 			orders = LimitOrders(orders, limit);
 
@@ -46,6 +34,30 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		private ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
 		{
 			return orders.Take(limit).ToArray();
+		}
+		
+		
+	}
+
+	public class OrdersRepository
+	{
+		public ProductionOrder[] GetOrders()
+		{
+			return new[]
+			{
+				new ProductionOrder
+				{
+					Id = 55,
+					Number = 3,
+					ClientName = "Пупа"
+				},
+				new ProductionOrder
+				{
+					Id = 56,
+					Number = 4,
+					ClientName = "Лупа"
+				},
+			};
 		}
 	}
 }
