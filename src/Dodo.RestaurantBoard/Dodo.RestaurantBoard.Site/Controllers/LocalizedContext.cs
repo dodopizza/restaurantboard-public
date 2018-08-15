@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Dodo.RestaurantBoard.Site.Controllers {
+namespace Dodo.RestaurantBoard.Site.Controllers
+{
     public class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
@@ -13,7 +14,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
         public string LocalizedContent(IHostingEnvironment hostingEnvironment, string contentPath)
         {
             if (string.IsNullOrEmpty(contentPath))
-                throw new ArgumentNullException(nameof (contentPath));
+                throw new ArgumentNullException(nameof(contentPath));
             StringBuilder stringBuilder = new StringBuilder();
             CultureInfo currentUiCulture = Thread.CurrentThread.CurrentUICulture;
             int serverPathLength = hostingEnvironment.WebRootPath.Length - 1;
@@ -27,16 +28,32 @@ namespace Dodo.RestaurantBoard.Site.Controllers {
                 return ConvertLocalPathToRelativeUrl(path2, serverPathLength);
             stringBuilder.AppendLine(path2);
 
-
+            string path3;
+            if (SearchInLocalPath(contentPath, out path3))
+                return ConvertLocalPathToRelativeUrl(path3, serverPathLength);
+            stringBuilder.AppendLine(path3);
 
             throw new FileNotFoundException(stringBuilder.ToString());
         }
 
-        private  string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
+        private string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
         }
 
+        public bool SearchInLocalPath(string contentPath, out string path)
+        {
+            path = Path.Combine(@"C:\Localizations", contentPath);
+            return SearchInFolder(path);
+        }
+
+        public virtual bool SearchInFolder(string folder)
+        {
+            return File.Exists(folder);
+        }
+
 
     }
+
+    
 }
