@@ -8,11 +8,12 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	public interface ITrackerClient
 	{
 		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
+		ProductionOrder[] GetSortedOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
 	}
 
 	public class TrackerClient : ITrackerClient
 	{
-		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		public virtual ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
 			var orders = new[]
 			{
@@ -33,6 +34,13 @@ namespace Dodo.RestaurantBoard.Domain.Services
 			orders = LimitOrders(orders, limit);
 
 			return orders;
+		}
+
+		public ProductionOrder[] GetSortedOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		{
+			var orders = this.GetOrdersByType(unitUuid, type, states, limit);
+
+			return orders.OrderBy(o => o.ClientName).ToArray();
 		}
 
 		private ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
