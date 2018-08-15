@@ -9,20 +9,9 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 	{
 		public const string VERSION_QUERY_PARAMETER = "v";
         private readonly Version _version = Assembly.GetExecutingAssembly().GetName().Version;
-
-
-        public static string GetVersionToken() =>
-            new VersionHelper().GetVersionTokenNew();
-
-        public string GetVersionTokenNew()=>
+        public string GetVersionToken()=>
             VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
-
-        public static string AddVersionToken(string url)
-		{
-            return new VersionHelper().AddVersionTokenNew(url);
-		}
-
-        public string AddVersionTokenNew(string url)
+        public string AddVersionToken(string url)
         {
             var versionToken = GetVersionToken();
             var queryStart = url.IndexOf("?", StringComparison.Ordinal);

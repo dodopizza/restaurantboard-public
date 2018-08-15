@@ -15,7 +15,7 @@ namespace Dodo.Tests
             var url = "http://localhost";
             var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
-            var urlwithToken = new VersionHelper().AddVersionTokenNew(url);
+            var urlwithToken = new VersionHelper().AddVersionToken(url);
 
             Assert.Equal($"{url}?v={assemblyVersion}", urlwithToken);
         }

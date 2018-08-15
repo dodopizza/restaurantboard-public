@@ -61,7 +61,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             {
                 var serialized = JsonConvert.SerializeObject(value);
                 HttpContext.Session.SetString("IdProductUnit", serialized);
-                HttpContext.Session.SetString("Dev_version",new VersionHelper().AddVersionTokenNew("http://localhost"));
+                HttpContext.Session.SetString("Dev_version",new VersionHelper().AddVersionToken("http://localhost"));
 
             }
         }
