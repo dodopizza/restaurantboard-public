@@ -71,10 +71,15 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 
 				if (parts.Length > 0) parts[0] += " ";
 
-				for (Int32 i = 1; i < parts.Length; i++) parts[i] = parts[i][0] + ".";
+				GetInititals(parts);
 
 				return String.Join(String.Empty, parts);
 			}
+		}
+
+		public void GetInititals(string[] parts)
+		{
+			for (Int32 i = 1; i < parts.Length; i++) parts[i] = parts[i][0] + ".";
 		}
 
 
