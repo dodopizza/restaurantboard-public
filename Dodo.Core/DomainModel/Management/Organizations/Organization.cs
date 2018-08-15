@@ -21,7 +21,7 @@ namespace Dodo.Core.DomainModel.Management.Organizations
 		public String BankName { get; private set; }
 		public String CheckingAccount { get; private set; }
 		public String ShareCapital { get; private set; }
-		public CountryCode CountryCode { get; }
+		public CountryCode CountryCode { get; set; }
 
 		public Organization
 		(
