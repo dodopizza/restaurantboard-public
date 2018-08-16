@@ -40,8 +40,8 @@ namespace Dodo.Core.DomainModel.Departments
 		{
 			get
 			{
-				if (String.IsNullOrEmpty(Number))
-					return Number;
+                if (CheckNumberIsNullOrEmpty(Number))
+                    return Number;
 
 				String[] replacedMarks = { "-", " ", "(", ")" };
 				String replacedNumber = Number;
@@ -53,7 +53,10 @@ namespace Dodo.Core.DomainModel.Departments
 			}
 		}
 
-
+        public bool CheckNumberIsNullOrEmpty(string number)
+        {
+            return (String.IsNullOrEmpty(number));
+        }
 
 		public XElement CreateXmlNode()
 		{
@@ -96,7 +99,5 @@ namespace Dodo.Core.DomainModel.Departments
 
 			return callCenterPhones.ToArray();
 		}
-
-
 	}
 }
