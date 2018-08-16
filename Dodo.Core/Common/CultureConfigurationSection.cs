@@ -63,16 +63,7 @@ namespace Dodo.Core.Common
 
                 if (countrySettings == null) return null;
 
-                var cultureCodes = new List<Cultures>();
-                for (int i = 0; i < countrySettings.Sections.Count; i++)
-                {
-                    cultureCodes.Add(
-                        new Cultures(
-                            countrySettings.Sections[i].Code,
-                            countrySettings.Sections[i].ShortName,
-                            countrySettings.Sections[i].IsDefault
-                        ));
-                }
+                var cultureCodes = GetCultureCodes(countrySettings);
 
                 return cultureCodes.ToArray();
             }
@@ -80,6 +71,22 @@ namespace Dodo.Core.Common
             {
                 return null;
             }
+        }
+
+        public virtual List<Cultures> GetCultureCodes(StartupSettingsCountryConfigSection countrySettings)
+        {
+            var cultureCodes = new List<Cultures>();
+            for (int i = 0; i < countrySettings.Sections.Count; i++)
+            {
+                cultureCodes.Add(
+                    new Cultures(
+                        countrySettings.Sections[i].Code,
+                        countrySettings.Sections[i].ShortName,
+                        countrySettings.Sections[i].IsDefault
+                    ));
+            }
+
+            return cultureCodes;
         }
 
         public virtual StartupSettingsCountryConfigSection GetCountrySettings()
