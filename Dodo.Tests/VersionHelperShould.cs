@@ -10,7 +10,7 @@ namespace Dodo.Tests
     public class VersionHelperShould
     {
         [Fact]
-        public void ReturnUrlWithVersionToken_OnRequest()
+        public void ReturnUrlWithVersionToken_WhenAddVersionToken()
         {
             var url = "http://localhost";
             var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
