@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
+    <ProjectReference Include="..\src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj" />
   </ItemGroup>
 
 </Project>
