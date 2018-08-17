@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -69,14 +70,19 @@ namespace Dodo.Core.DomainModel.Departments
 			if(phns==null)
 				return new CallCenterPhoneParameter[0];
 
-			var callCenterPhones = phns.Elements().Select(x => new CallCenterPhoneParameter
+			var callCenterPhones = GetCallCenterPhonesParameters(phns);
+
+			return callCenterPhones.ToArray();
+		}
+
+		public IEnumerable<CallCenterPhoneParameter> GetCallCenterPhonesParameters(XElement phns)
+		{
+			return phns.Elements().Select(x => new CallCenterPhoneParameter
 			{
 				Number = new XElementValueGetter(x).GetAttributeValueFrom("number"),
 				IconPath = new XElementValueGetter(x).GetAttributeValueFrom("iconPath"),
 				IconSitePath = new XElementValueGetter(x).GetAttributeValueFrom("iconSitePath")
 			});
-
-			return callCenterPhones.ToArray();
 		}
 	}
 

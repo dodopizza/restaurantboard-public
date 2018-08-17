@@ -16,7 +16,7 @@ namespace Dodo.Core.Tests
 
             var countrySettings = configManagerStub.Object.GetAvailableCultures();
             
-            Assert.Equal(null, countrySettings);
+            Assert.Null(countrySettings);
         }
         
         [Fact]
