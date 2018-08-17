@@ -63,40 +63,37 @@ namespace Dodo.Core.DomainModel.Departments
 				new XAttribute("iconSitePath", IconSitePath ?? String.Empty));
 		}
 
-		public static CallCenterPhoneParameter[] GetCallCenterPhonesFromXml(XElement container)
+		public CallCenterPhoneParameter[] GetCallCenterPhonesFromXml(XElement container)
 		{
 			var phns = container.Element("CallCenterPhones");
 			if(phns==null)
 				return new CallCenterPhoneParameter[0];
 
-			var callCenterPhones = phns.Elements().Select(x =>
+			var callCenterPhones = phns.Elements().Select(x => new CallCenterPhoneParameter
 			{
-				string number = "";
-				var numberAttribute = x.Attribute("number");
-				if (numberAttribute != null)
-					number = numberAttribute.Value;
-
-				string iconPath = "";
-				var iconPathAttribute = x.Attribute("iconPath");
-				if (iconPathAttribute != null)
-					iconPath = iconPathAttribute.Value;
-
-				string iconSitePath = "";
-				var iconSitePathAttribute = x.Attribute("iconSitePath");
-				if (iconSitePathAttribute != null)
-					iconSitePath = iconSitePathAttribute.Value;
-
-				return new CallCenterPhoneParameter
-				{
-					Number = number,
-					IconPath = iconPath,
-					IconSitePath = iconSitePath
-				};
+				Number = new XElementValueGetter(x).GetAttributeValueFrom("number"),
+				IconPath = new XElementValueGetter(x).GetAttributeValueFrom("iconPath"),
+				IconSitePath = new XElementValueGetter(x).GetAttributeValueFrom("iconSitePath")
 			});
 
 			return callCenterPhones.ToArray();
 		}
+	}
 
 
+	public class XElementValueGetter
+	{
+		private readonly XElement _xElement;
+	
+		public XElementValueGetter(XElement xElement)
+		{
+			_xElement = xElement;
+		}
+
+		public string GetAttributeValueFrom(string attributeName)
+		{
+			var attribute = _xElement.Attribute(attributeName);
+			return attribute?.Value ?? "";
+		}
 	}
 }
