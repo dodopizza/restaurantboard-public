@@ -20,6 +20,19 @@ namespace Dodo.RestaurantBoard.Site.Tests
             Assert.AreEqual("foo?v=2.0", urlWithVersion);
         }
 
+        [Test]
+        public void AddVersionToken_KeepsArguments()
+        {
+            // Arrange
+            var helper = new TestableVersionHelper("2.0");
+
+            // Act
+            var urlWithVersion = helper.AddVersionToken("foo?arg=val");
+
+            // Assert
+            Assert.AreEqual("foo?v=2.0&arg=val", urlWithVersion);
+        }
+
         class TestableVersionHelper : VersionHelper
         {
             private readonly string _version;
