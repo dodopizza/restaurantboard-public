@@ -51,7 +51,7 @@ namespace Dodo.Core.DomainModel.Departments
 			PhoneMask = phoneMask;
 			Currency = currency;
 
-			AvailableCultures = CultureConfigurationSectionElement.GetAvailableCultures();
+			AvailableCultures = new CultureConfigurationSectionElement().GetAvailableCultures();
 		}
 
 		public override String ToString() => Name;
