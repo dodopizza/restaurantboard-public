@@ -8,33 +8,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
     public class VersionHelperTest
     {
         [Test]
-        public void AddVersionToken_AddsQuestionMark()
-        {
-            // Arrange
-            var url = "foo";
-            
-            // Act
-            var urlWithVersion = new VersionHelper().AddVersionToken(url);
-
-            // Assert
-            Assert.True(urlWithVersion.Contains("?"));
-        }
-
-        [Test]
-        public void AddVersionToken_SavesBaseUrl()
-        {
-            // Arrange
-            var url = "foo";
-
-            // Act
-            var urlWithVersion = new VersionHelper().AddVersionToken(url);
-
-            // Assert
-            Assert.True(urlWithVersion.StartsWith(url));
-        }
-
-        [Test]
-        public void AddVersionToken_AddsVersion()
+        public void AddVersionToken()
         {
             // Arrange
             var helper = new TestableVersionHelper("2.0");
