@@ -13,12 +13,27 @@ namespace Dodo.Tests
         public void ReturnUrlWithVersionToken_WhenAddVersionToken()
         {
             var url = "http://localhost";
-            var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+            var versionHelper = new TestableVersionHelper("1.1");
 
-            var urlwithToken = new VersionHelper().AddVersionToken(url);
+            var urlwithToken = versionHelper.AddVersionToken(url);
 
-            Assert.Equal($"{url}?v={assemblyVersion}", urlwithToken);
+            Assert.Equal($"{url}?v=1.1", urlwithToken);
         }
 
     }
+
+    public class TestableVersionHelper : VersionHelper
+    {
+        private readonly string _version;
+
+        public TestableVersionHelper(string version)
+        {
+            _version = version;
+        }
+        public override Version GetExecutingAssemblyVersion()
+        {
+            return new Version(_version);
+        }
+    }
 }
+
