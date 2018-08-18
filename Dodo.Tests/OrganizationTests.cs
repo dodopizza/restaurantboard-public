@@ -20,16 +20,38 @@ namespace Dodo.Tests
         }
         
         [Fact]
-        public void ShoudAddSpaceAfterEveryDot_WhenAddSpaceAfterDot()
+        public void ShoudAddSpaceAfterLastDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new []{"QQQ", "W.W.W", "EEE."};
+            var names = new []{"QQQ", "WWW.", "EEE."};
             
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] {"QQQ", "W. W. W", "EEE. "}, names);
+            Assert.Equal(new[] {"QQQ", "WWW. ", "EEE. "}, names);
         }
-        
+
+        [Fact]
+        public void ShoudAddSpaceAfterCenterDot_WhenAddSpaceAfterDot()
+        {
+            var organization = Create.Organization.Please();
+            var names = new[] { "QQQ", "W.W.W", "E.E.E" };
+
+            organization.AddSpaceAfterDot(names);
+
+            Assert.Equal(new[] { "QQQ", "W. W. W", "E. E. E" }, names);
+        }
+
+        [Fact]
+        public void ShoudNotAddSpaceWithoutDot_WhenAddSpaceAfterDot()
+        {
+            var organization = Create.Organization.Please();
+            var names = new[] { "QQQ", "WWW", "EEE" };
+
+            organization.AddSpaceAfterDot(names);
+
+            Assert.Equal(new[] { "QQQ", "WWW", "EEE" }, names);
+        }
+
         [Fact]
         public void ShoudReturnEmpty_WhenGetAvailableTypesForZh()
         {
