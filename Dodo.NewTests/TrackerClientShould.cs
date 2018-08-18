@@ -25,6 +25,21 @@ namespace Dodo.NewTests
             Assert.Equal("Лупа", orders.First().ClientName);
             Assert.Equal("Пупа", orders.Last().ClientName);
         }
+        
+        [Fact]
+        public void ReturnOnlyOneOrder_IfLimitIsOne()
+        {
+            var orders = new[]
+            {
+                new ProductionOrder {ClientName = "Пупа"},
+                new ProductionOrder {ClientName = "Лупа"}
+            };
+            var trackerClient = CreateTrackerClientWhichReturnsOrders(orders);
+            
+            var limitedOrders = trackerClient.LimitOrders(orders, 1);
+
+            Assert.Equal(1, limitedOrders.Length);
+        }
 
         private TrackerClient CreateTrackerClientWhichReturnsOrders(ProductionOrder[] orders)
         {

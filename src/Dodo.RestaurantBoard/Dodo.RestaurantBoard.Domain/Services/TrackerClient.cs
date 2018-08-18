@@ -41,7 +41,7 @@ namespace Dodo.RestaurantBoard.Domain.Services
 			return orders;
 		}
 
-		private ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
+		public ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
 		{
 			return orders.Take(limit).ToArray();
 		}		
