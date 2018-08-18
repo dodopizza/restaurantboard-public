@@ -11,7 +11,7 @@ namespace Dodo.Tests
         [Fact]
         public void ReturnLocalPath_WhenSearchLocally()
         {
-            var localizedContext = new LocalizedContextTest(false);
+            var localizedContext = new TestableLocalizedContext(false);
             string localPath;
 
             localizedContext.SearchInLocalPath("banner.jpg", out localPath);
@@ -19,11 +19,11 @@ namespace Dodo.Tests
             Assert.Contains(@"C:\", localPath);
         }
 
-        public class LocalizedContextTest: LocalizedContext
+        public class TestableLocalizedContext: LocalizedContext
         {
             private readonly bool shouldFind;
 
-            public LocalizedContextTest(bool shouldFind)
+            public TestableLocalizedContext(bool shouldFind)
             {
                 this.shouldFind = shouldFind;
             }
