@@ -18,18 +18,27 @@ namespace Dodo.RestaurantBoard.Domain.Services
 		
 		public virtual ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
+			var orders = GetOrdersByType_LagacyImpl(unitUuid, type, states, limit);
+			
+			return orders;
+		}		
+
+		public ProductionOrder[] GetSortedOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		{
+			var orders = GetOrdersByType_LagacyImpl(unitUuid, type, states, limit);
+			
+			orders = orders.OrderBy(o => o.ClientName).ToArray();
+			
+			return orders;
+		}
+		
+		private ProductionOrder[] GetOrdersByType_LagacyImpl(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
+		{
 			var orders = OrdersRepository.GetOrders();
 
 			orders = LimitOrders(orders, limit);
 
 			return orders;
-		}
-
-		public ProductionOrder[] GetSortedOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
-		{
-			var orders = this.GetOrdersByType(unitUuid, type, states, limit);
-
-			return orders.OrderBy(o => o.ClientName).ToArray();
 		}
 
 		private ProductionOrder[] LimitOrders(ProductionOrder[] orders, int limit)
