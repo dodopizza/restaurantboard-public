@@ -19,5 +19,6 @@ namespace Dodo.Tests
 
             Assert.Equal($"{url}?v={assemblyVersion}", urlwithToken);
         }
+
     }
 }

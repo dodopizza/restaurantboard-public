@@ -8,9 +8,8 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
 	public class VersionHelper
 	{
 		public const string VERSION_QUERY_PARAMETER = "v";
-        private readonly Version _version = Assembly.GetExecutingAssembly().GetName().Version;
         public string GetVersionToken()=>
-            VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
+            VERSION_QUERY_PARAMETER + "=" + GetExecutingAssemblyVersion().ToString(2);
         public string AddVersionToken(string url)
         {
             var versionToken = GetVersionToken();
@@ -20,6 +19,11 @@ namespace Dodo.RestaurantBoard.Site.Common.Helpers
                 : url.Insert(queryStart + 1, versionToken + "&");
 
             return url;
+        }
+
+        public virtual Version GetExecutingAssemblyVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version;
         }
     }
 }
