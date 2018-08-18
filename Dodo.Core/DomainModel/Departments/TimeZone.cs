@@ -2,6 +2,7 @@
 
 namespace Dodo.Core.DomainModel.Departments
 {
+    [Obsolete("Use TimeZoneNew")]
     public class TimeZone
     {
         private UtcOffsetProvider _utcOffsetProvider;

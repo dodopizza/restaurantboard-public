@@ -9,6 +9,7 @@ using Dodo.Core.DomainModel.Departments.Units;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.RestaurantBoard.Site.Common.Helpers;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Models.DodoFM;
 using Dodo.Tracker.Contracts;
@@ -60,6 +61,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             {
                 var serialized = JsonConvert.SerializeObject(value);
                 HttpContext.Session.SetString("IdProductUnit", serialized);
+                HttpContext.Session.SetString("Dev_version",new VersionHelper().AddVersionToken("http://localhost"));
+
             }
         }
 
@@ -164,7 +167,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             }
             else
             {
-                result = new[] { new { BannerUrl = LocalizedContext.LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
+                result = new[] { new { BannerUrl = new LocalizedContext().LocalizedContent(_hostingEnvironment, "Tracking-Scoreboard-Empty.jpg"), DisplayTime = 60000 } };
             }
 
             return Json(result);

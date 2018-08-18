@@ -5,25 +5,25 @@ using System.Reflection;
 namespace Dodo.RestaurantBoard.Site.Common.Helpers
 {
 	[Description("VersionHelper у каждой сборки должен быть свой, т.к. он зависит от Assembly")]
-	public static class VersionHelper
+	public class VersionHelper
 	{
 		public const string VERSION_QUERY_PARAMETER = "v";
+        public string GetVersionToken()=>
+            VERSION_QUERY_PARAMETER + "=" + GetExecutingAssemblyVersion().ToString(2);
+        public string AddVersionToken(string url)
+        {
+            var versionToken = GetVersionToken();
+            var queryStart = url.IndexOf("?", StringComparison.Ordinal);
+            url = queryStart == -1
+                ? url + "?" + versionToken
+                : url.Insert(queryStart + 1, versionToken + "&");
 
-		private static readonly Version _version =
-			Assembly.GetExecutingAssembly().GetName().Version;
+            return url;
+        }
 
-		public static string GetVersionToken() =>
-			VERSION_QUERY_PARAMETER + "=" + _version.ToString(2);
-
-		public static string AddVersionToken(string url)
-		{
-			var versionToken = GetVersionToken();
-			var queryStart = url.IndexOf("?", StringComparison.Ordinal);
-			url = queryStart == -1
-				? url + "?" + versionToken
-				: url.Insert(queryStart + 1, versionToken + "&");
-
-			return url;
-		}
-	}
+        public virtual Version GetExecutingAssemblyVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version;
+        }
+    }
 }
