@@ -16,7 +16,7 @@ namespace Dodo.Tests
             
             organization.GetInititals(names);
 
-            AssertCollections(new[] {"QQQ", "W.", "E."}, names);
+            Assert.Equal(new[] {"QQQ", "W.", "E."}, names);
         }
         
         [Fact]
@@ -27,7 +27,7 @@ namespace Dodo.Tests
             
             organization.AddSpaceAfterDot(names);
 
-            AssertCollections(new[] {"QQQ", "W. W. W", "EEE. "}, names);
+            Assert.Equal(new[] {"QQQ", "W. W. W", "EEE. "}, names);
         }
         
         [Fact]
@@ -37,7 +37,7 @@ namespace Dodo.Tests
 
             var types = organization.GetAvailableTypes();
 
-            AssertCollections(new OrganizationType[0], types);
+            Assert.Equal(new OrganizationType[0], types);
         }
 
         [Fact]
@@ -49,27 +49,9 @@ namespace Dodo.Tests
 
             var types = organization.GetAvailableTypes();
 
-            AssertCollections(expected, types);
+            Assert.Equal(expected, types);
         }
 
-        private void AssertCollections(string[] expected, string[] actual)
-        {
-            Assert.Equal(expected.Length, actual.Length);
-
-            for (int i = 0; i < expected.Length; i++)
-            {
-                Assert.Equal(expected[i], actual[i]);
-            }
-        }
-
-        private void AssertCollections(OrganizationType[] expected, OrganizationType[] actual)
-        {
-            Assert.Equal(expected.Length, actual.Length);
-
-            for (int i = 0; i < expected.Length; i++)
-            {
-                Assert.Equal(expected[i], actual[i]);
-            }
-        }
+       
     }
 }
