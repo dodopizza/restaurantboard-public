@@ -11,11 +11,11 @@ namespace Dodo.Tests
         [Fact]
         public void NegativeTimeZoneMainOfficeOffsetString_WhenMainOfficeTimeZoneUTCOffsetNegative()
         {
-            var timeZone = new TimeZoneNew(-3);
+            var timeZone = new TimeZoneNew(-180);
 
             var offsetString = timeZone.TimeZoneMainOfficeOffsetString();
 
-            Assert.Contains("-", offsetString);
+            Assert.Equal("-03:00", offsetString);
         }
     }
 }

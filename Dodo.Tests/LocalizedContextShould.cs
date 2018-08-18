@@ -16,7 +16,7 @@ namespace Dodo.Tests
 
             localizedContext.SearchInLocalPath("banner.jpg", out localPath);
 
-            Assert.Contains(@"C:\", localPath);
+            Assert.Equal($@"C:\Localizations\banner.jpg", localPath);
         }
 
         public class TestableLocalizedContext: LocalizedContext
