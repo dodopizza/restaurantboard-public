@@ -12,7 +12,7 @@ namespace Dodo.NewTests
     public class TrackerClientShould
     {
         [Fact]
-        public void Return()
+        public void ReturnOrdersSortedByName()
         {
             var trackerClient = CreateTrackerClientWhichReturnsOrders(new[]
             {
