@@ -16,28 +16,36 @@ namespace Dodo.RestaurantBoard.Domain.Services
 	{
 		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
 		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
-
-			return orders;
+		    return QueryOrders();
 		}
 
         public ProductionOrder[] GetOrdersByCount(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
         {
             return GetOrdersByType(unitUuid, type, states, limit).Take(limit).ToArray();
         }
-	}
+
+	    public virtual ProductionOrder[] QueryOrders()
+	    {
+	        var orders = new[]
+	        {
+	            new ProductionOrder
+	            {
+	                Id = 55,
+	                Number = 3,
+	                ClientName = "Пупа"
+	            },
+	            new ProductionOrder
+	            {
+	                Id = 56,
+	                Number = 4,
+	                ClientName = "Лупа"
+	            },
+	        };
+
+	        return orders;
+        }
+
+
+
+    }
 }
