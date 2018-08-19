@@ -63,7 +63,7 @@ namespace Dodo.RestaurantBoard.Site.Services
 
         protected virtual string GetDefaultBannerUrl()
         {
-            return new LocalizedContext().LocalizedContentNew(_hostingEnvironment.WebRootPath, "Tracking-Scoreboard-Empty.jpg");
+            return new LocalizedContext().LocalizedContent(_hostingEnvironment.WebRootPath, "Tracking-Scoreboard-Empty.jpg");
         }
 
         protected virtual IEnumerable<RestaurantBanner> GetAvailableBanners(int countryId, int departmentId, int unitId)

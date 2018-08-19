@@ -10,12 +10,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
-        public static string LocalizedContent(string webRootPath, string contentPath)
-        {
-            return new LocalizedContext().LocalizedContentNew(webRootPath, contentPath);
-        }
-
-        public string LocalizedContentNew(string webRootPath, string contentPath)
+        public string LocalizedContent(string webRootPath, string contentPath)
         {
             if (string.IsNullOrEmpty(contentPath))
                 throw new ArgumentNullException(nameof(contentPath));
@@ -34,7 +29,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             throw new FileNotFoundException(stringBuilder.ToString());
         }
 
-        private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
+        private string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
         }
