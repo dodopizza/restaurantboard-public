@@ -12,6 +12,11 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         public static string LocalizedContent(string webRootPath, string contentPath)
         {
+            return new LocalizedContext().LocalizedContentNew(webRootPath, contentPath);
+        }
+
+        public string LocalizedContentNew(string webRootPath, string contentPath)
+        {
             if (string.IsNullOrEmpty(contentPath))
                 throw new ArgumentNullException(nameof(contentPath));
             StringBuilder stringBuilder = new StringBuilder();
