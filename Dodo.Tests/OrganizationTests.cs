@@ -16,40 +16,40 @@ namespace Dodo.Tests
             
             organization.GetInititals(names);
 
-            Assert.Equal(new[] {"QQQ", "W.", "E."}, names);
+            Assert.Equal(new[] {"QQQ", "W."}, names);
         }
         
         [Fact]
         public void ShoudAddSpaceAfterLastDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new []{"QQQ", "WWW.", "EEE."};
+            var names = new []{"WWW."};
             
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] {"QQQ", "WWW. ", "EEE. "}, names);
+            Assert.Equal(new[] {"WWW. "}, names);
         }
 
         [Fact]
         public void ShoudAddSpaceAfterCenterDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new[] { "QQQ", "W.W.W", "E.E.E" };
+            var names = new[] {"W.W.W"};
 
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] { "QQQ", "W. W. W", "E. E. E" }, names);
+            Assert.Equal(new[] {"W. W. W"}, names);
         }
 
         [Fact]
         public void ShoudNotAddSpaceWithoutDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new[] { "QQQ", "WWW", "EEE" };
+            var names = new[] {"WWW"};
 
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] { "QQQ", "WWW", "EEE" }, names);
+            Assert.Equal(new[] {"WWW"}, names);
         }
 
         [Fact]
