@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Dodo.RestaurantBoard.Site.Controllers
 {
-    public static class LocalizedContext
+    public class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
