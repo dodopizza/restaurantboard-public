@@ -12,44 +12,44 @@ namespace Dodo.Tests
         public void ShoudCutAllElementsFromSecond_WhenGetInititals()
         {
             var organization = Create.Organization.Please();
-            var names = new []{"QQQ", "WWW", "EEE"};
+            var names = new[] { "QQQ", "WWW", "EEE" };
             
             organization.GetInititals(names);
 
-            Assert.Equal(new[] {"QQQ", "W."}, names);
+            Assert.Equal(new[] { "QQQ", "W.", "E." }, names);
         }
         
         [Fact]
         public void ShoudAddSpaceAfterLastDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new []{"WWW."};
+            var names = new[] { "WWW." };
             
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] {"WWW. "}, names);
+            Assert.Equal(new[] { "WWW. " }, names);
         }
 
         [Fact]
         public void ShoudAddSpaceAfterCenterDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new[] {"W.W.W"};
+            var names = new[] { "W.W.W" };
 
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] {"W. W. W"}, names);
+            Assert.Equal(new[] { "W. W. W" }, names);
         }
 
         [Fact]
         public void ShoudNotAddSpaceWithoutDot_WhenAddSpaceAfterDot()
         {
             var organization = Create.Organization.Please();
-            var names = new[] {"WWW"};
+            var names = new[] { "WWW" };
 
             organization.AddSpaceAfterDot(names);
 
-            Assert.Equal(new[] {"WWW"}, names);
+            Assert.Equal(new[] { "WWW" }, names);
         }
 
         [Fact]
