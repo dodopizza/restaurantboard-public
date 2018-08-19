@@ -4,9 +4,9 @@ using System.Linq;
 using Dodo.Core.DomainModel.Management;
 using Xunit;
 
-namespace Dodo.RestorauntBoard.Tests
+namespace Dodo.RestaurantBoard.Tests
 {
-    public class RestorauntBannerServiceTests
+    public class RestaurantBannerServiceTests
     {
         private const int DepartmentId = 0;
         private const int CountryId = 0;
@@ -15,9 +15,9 @@ namespace Dodo.RestorauntBoard.Tests
         [Fact]
         public void GetDefaultResult_SholudReturnSingleObject()
         {
-            var restorauntBannerService = new RestorauntBannerServiceFake();
+            var restaurantBannerService = new RestaurantBannerServiceFake();
 
-            var defaultResult = restorauntBannerService.GetDefaultResult();
+            var defaultResult = restaurantBannerService.GetDefaultResult();
 
             Assert.Single(defaultResult);
         }
@@ -25,9 +25,9 @@ namespace Dodo.RestorauntBoard.Tests
         [Fact]
         public void GetAvailableBanners_IfAvailableBannersEmpty_ShouldReturnDefaultBanner()
         {
-            var restorauntBannerService = new RestorauntBannerServiceFake();
+            var restaurantBannerService = new RestaurantBannerServiceFake();
 
-            var availableBanners = restorauntBannerService.GetBanners(
+            var availableBanners = restaurantBannerService.GetBanners(
                DepartmentId,
                CountryId,
                UnitId);
@@ -36,9 +36,9 @@ namespace Dodo.RestorauntBoard.Tests
         }
     }
 
-    public class RestorauntBannerServiceFake : RestorauntBannerService
+    public class RestaurantBannerServiceFake : RestaurantBannerService
     {
-        public RestorauntBannerServiceFake() : base(
+        public RestaurantBannerServiceFake() : base(
             null, 
             null, 
             null)

@@ -29,18 +29,18 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
         private readonly ITrackerClient _trackerClient;
-        private readonly RestorauntBannerService _restorauntBannerService;
+        private readonly RestaurantBannerService _restaurantBannerService;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             ITrackerClient trackerClient,
-            RestorauntBannerService restorauntBannerService)
+            RestaurantBannerService restaurantBannerService)
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _trackerClient = trackerClient;
-            _restorauntBannerService = restorauntBannerService;
+            _restaurantBannerService = restaurantBannerService;
         }
 
         private int[] CurrentProductsIds
@@ -142,7 +142,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
-            var result = _restorauntBannerService.GetBanners(countryId, departmentId, unitId);
+            var result = _restaurantBannerService.GetBanners(countryId, departmentId, unitId);
             return Json(result);
         }
 

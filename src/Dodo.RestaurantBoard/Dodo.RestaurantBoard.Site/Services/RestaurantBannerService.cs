@@ -10,13 +10,13 @@ using Dodo.Core.Services;
 
 namespace Dodo.RestaurantBoard.Site.Services
 {
-    public class RestorauntBannerService
+    public class RestaurantBannerService
     {
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IManagementService _managementService;
 
-        public RestorauntBannerService(
+        public RestaurantBannerService(
             IHostingEnvironment hostingEnvironment, 
             IDepartmentsStructureService departmentsStructureService, 
             IManagementService managementService)
