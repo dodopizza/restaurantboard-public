@@ -6,11 +6,11 @@ using System.Threading;
 
 namespace Dodo.RestaurantBoard.Site.Controllers
 {
-    public class LocalizedContext
+    public static class LocalizedContext
     {
         private const string _localizedResourcesFolder = "LocalizedResources";
 
-        public string LocalizedContent(string webRootPath, string contentPath)
+        public static string LocalizedContent(string webRootPath, string contentPath)
         {
             if (string.IsNullOrEmpty(contentPath))
                 throw new ArgumentNullException(nameof(contentPath));
@@ -29,7 +29,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             throw new FileNotFoundException(stringBuilder.ToString());
         }
 
-        private string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
+        private static string ConvertLocalPathToRelativeUrl(string path, int serverPathLength)
         {
             return path.Substring(serverPathLength).Replace('\\', '/');
         }
