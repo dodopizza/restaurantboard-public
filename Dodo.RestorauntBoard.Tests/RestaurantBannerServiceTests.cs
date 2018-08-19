@@ -17,13 +17,23 @@ namespace Dodo.RestaurantBoard.Tests
         {
             var restaurantBannerService = new RestaurantBannerServiceFake();
 
-            var defaultResult = restaurantBannerService.GetDefaultResult();
+            var actualResult = restaurantBannerService.GetDefaultResult();
 
-            Assert.Single(defaultResult);
+            Assert.Single(actualResult);
         }
 
         [Fact]
-        public void GetAvailableBanners_IfAvailableBannersEmpty_ShouldReturnDefaultBanner()
+        public void GetDefaultResult_SholudBeEqualToDefaultObject()
+        {
+            var restaurantBannerService = new RestaurantBannerServiceFake();
+
+            var actualResult = restaurantBannerService.GetDefaultResult();
+
+            Assert.Equal(restaurantBannerService.DefaultObject, actualResult.Single());
+        }
+
+        [Fact]
+        public void GetBanners_IfAvailableBannersEmpty_ShouldReturnDefaultBanner()
         {
             var restaurantBannerService = new RestaurantBannerServiceFake();
 
@@ -40,11 +50,19 @@ namespace Dodo.RestaurantBoard.Tests
     {
         public IEnumerable<object> DefaultResult { get; private set; }
 
+        public object DefaultObject { get; private set; }
+
         public RestaurantBannerServiceFake() : base(
             null, 
             null, 
             null)
         {
+        }
+
+        public override IEnumerable<object> GetDefaultResult()
+        {
+            DefaultResult = base.GetDefaultResult();
+            return DefaultResult;
         }
 
         protected override string GetDefaultBannerUrl()
@@ -57,10 +75,10 @@ namespace Dodo.RestaurantBoard.Tests
             return Enumerable.Empty<RestaurantBanner>();
         }
 
-        public override IEnumerable<object> GetDefaultResult()
+        protected override object GetDefaultObject()
         {
-            DefaultResult = base.GetDefaultResult();
-            return DefaultResult;
+            DefaultObject = base.GetDefaultObject();
+            return DefaultObject;
         }
     }
 }

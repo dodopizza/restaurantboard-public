@@ -53,12 +53,17 @@ namespace Dodo.RestaurantBoard.Site.Services
         {
             return new[] 
             {
-                new
-                {
-                    BannerUrl = GetDefaultBannerUrl(),
-                    DisplayTime = 60000
-                }
+                GetDefaultObject()
             };
+        }
+
+        protected virtual object GetDefaultObject()
+        {
+           return new
+           {
+               BannerUrl = GetDefaultBannerUrl(),
+               DisplayTime = 60000
+           };
         }
 
         protected virtual string GetDefaultBannerUrl()
