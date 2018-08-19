@@ -32,12 +32,14 @@ namespace Dodo.RestaurantBoard.Tests
                CountryId,
                UnitId);
 
-            Assert.Single(availableBanners);
+            Assert.Equal(restaurantBannerService.DefaultResult, availableBanners);
         }
     }
 
     public class RestaurantBannerServiceFake : RestaurantBannerService
     {
+        public IEnumerable<object> DefaultResult { get; private set; }
+
         public RestaurantBannerServiceFake() : base(
             null, 
             null, 
@@ -53,6 +55,12 @@ namespace Dodo.RestaurantBoard.Tests
         protected override IEnumerable<RestaurantBanner> GetAvailableBanners(int countryId, int departmentId, int unitId)
         {
             return Enumerable.Empty<RestaurantBanner>();
+        }
+
+        public override IEnumerable<object> GetDefaultResult()
+        {
+            DefaultResult = base.GetDefaultResult();
+            return DefaultResult;
         }
     }
 }

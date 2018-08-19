@@ -49,7 +49,7 @@ namespace Dodo.RestaurantBoard.Site.Services
             return result;
         }
 
-        public IEnumerable<object> GetDefaultResult()
+        public virtual IEnumerable<object> GetDefaultResult()
         {
             return new[] 
             {
