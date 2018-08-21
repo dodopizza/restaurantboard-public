@@ -1,35 +1,35 @@
-﻿using Dodo.Core.Common;
+﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Dodo.Core.Common;
+using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
+using Newtonsoft.Json;
 
 namespace Dodo.RestaurantBoard.Domain.Services
 {
-	public interface ITrackerClient
-	{
-		ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit);
-	}
-
 	public class TrackerClient : ITrackerClient
 	{
-		public ProductionOrder[] GetOrdersByType(Uuid unitUuid, OrderType type, OrderState[] states, int limit)
-		{
-			var orders = new[]
-			{
-				new ProductionOrder
-				{
-					Id = 55,
-					Number = 3,
-					ClientName = "Пупа"
-				},
-				new ProductionOrder
-				{
-					Id = 56,
-					Number = 4,
-					ClientName = "Лупа"
-				},
-			};
+		private readonly HttpClient _client;
 
-			return orders;
+		public TrackerClient(Uri baseUri)
+		{
+			_client = new HttpClient
+			{
+				BaseAddress = baseUri
+			};
+		}
+
+		public async Task<ProductionOrder[]> GetOrdersByTypeAsync(
+			Uuid unitUuid,
+			OrderType type,
+			int limit)
+		{
+			var url = $"api/orders/unit/{unitUuid}?type={type}&limit={limit}";
+			var json = await _client.GetStringAsync(url);
+
+			return JsonConvert.DeserializeObject<ProductionOrder[]>(json);
 		}
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 using Dodo.Core.Common;
 using Dodo.Core.DomainModel.Clients;
 using Dodo.Core.DomainModel.Departments.Departments;
@@ -86,17 +87,16 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet]
-        public JsonResult GetOrderReadinessToStationary(int unitId)
+        public async Task<JsonResult> GetOrderReadinessToStationary(int unitId)
         {
             const int maxCountOrders = 16;
 
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            var orders = _trackerClient
-                .GetOrdersByType(pizzeria.Uuid, OrderType.Stationary, new[] { OrderState.OnTheShelf }, maxCountOrders)
+            var orders = (await _trackerClient
+                .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
-
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };

@@ -11,11 +11,10 @@ namespace Dodo.Tracker.WebApi.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        [HttpGet("{unitUuid}/{type}")]
+        [HttpGet("unit/{unitUuid}")]
         public ActionResult<IEnumerable<ProductionOrder>> GetOrdersByType(
             [FromRoute] string unitUuid,
-            [FromRoute] OrderType type,
-            [FromQuery] OrderState[] states,
+            [FromQuery] OrderType type,
             [FromQuery] int limit)
         {
             var orders = new[]

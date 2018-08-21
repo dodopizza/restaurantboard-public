@@ -72,7 +72,7 @@ namespace Dodo.RestaurantBoard.Site.Core
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var container = AutofacConfig.Register(services);
+            var container = AutofacConfig.Register(services, Configuration);
             ApplicationContainer = container;
             return new AutofacServiceProvider(ApplicationContainer);
         }
@@ -90,10 +90,8 @@ namespace Dodo.RestaurantBoard.Site.Core
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
