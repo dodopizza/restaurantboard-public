@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Dodo.Core.DomainModel.Departments.Units;
+using Dodo.Core.DomainModel;
 using Dodo.Core.DomainModel.OrderProcessing;
 using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
@@ -10,12 +9,6 @@ using Dodo.Tracker.Contracts.Enums;
 
 namespace Dodo.Core.AppServices
 {
-    public class UnitOrders
-    {
-        public Pizzeria Unit { get; set; }
-        public List<RestaurantReadnessOrders> Orders { get; set; }
-    }
-
     public class PizzeriaOrdersService
     {
         private readonly ITrackerClient _trackerClient;
