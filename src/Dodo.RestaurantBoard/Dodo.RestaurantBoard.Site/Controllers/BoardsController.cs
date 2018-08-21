@@ -99,6 +99,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                 .ToArray();
 
             var clientTreatment = pizzeria.ClientTreatment;
+
             ClientIcon[] icons = { };
             if (clientTreatment == ClientTreatment.RandomImage)
             {
