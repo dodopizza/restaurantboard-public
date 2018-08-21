@@ -9,12 +9,17 @@ using Dodo.Tracker.Contracts.Enums;
 
 namespace Dodo.Core.AppServices
 {
-    public class PizzeriaOrdersService
+    public interface IUnitOrdersService
+    {
+        Task<UnitOrders> GetUnitOrders(int unitId);
+    }
+
+    public class UnitOrdersService : IUnitOrdersService
     {
         private readonly ITrackerClient _trackerClient;
         private readonly IDepartmentsStructureService _departmentsStructureService;
 
-        public PizzeriaOrdersService(
+        public UnitOrdersService(
             ITrackerClient trackerClient,
             IDepartmentsStructureService departmentsStructureService)
         {
