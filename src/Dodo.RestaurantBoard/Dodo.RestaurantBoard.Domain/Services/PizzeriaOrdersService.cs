@@ -4,9 +4,7 @@ using Dodo.Core.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Dodo.RestaurantBoard.Domain.Services
