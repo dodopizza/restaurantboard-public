@@ -7,10 +7,10 @@ namespace Tests.DSL
 {
     public class ObjectMother
     {
-        public Pizzeria CreatePizzeria()
+        public Pizzeria CreatePizzeriaWithId(int unitId)
         {
             return new Pizzeria(
-                id: 29,
+                id: unitId,
                 uuid: new Uuid("000D3A240C719A8711E68ABA13F83227"),
                 name: "Сык-1",
                 alias: string.Empty,

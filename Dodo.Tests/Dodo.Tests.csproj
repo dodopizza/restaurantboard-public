@@ -8,9 +8,11 @@
     <PackageReference Include="nunit" Version="3.10.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dodo.Core\Dodo.Core.csproj" />
     <ProjectReference Include="..\src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Domain\Dodo.RestaurantBoard.Domain.csproj" />
+    <ProjectReference Include="..\src\Dodo.RestaurantBoard\Dodo.RestaurantBoard.Site\Dodo.RestaurantBoard.Site.csproj" />
   </ItemGroup>
 </Project>

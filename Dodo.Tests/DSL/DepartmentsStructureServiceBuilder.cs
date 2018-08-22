@@ -19,7 +19,7 @@ namespace Tests.DSL
         {
             _service
                 .Setup(x => x.GetPizzeriaOrCache(id))
-                .Returns(_objectMother.CreatePizzeria());
+                .Returns(_objectMother.CreatePizzeriaWithId(id));
             return this;
         }
 
