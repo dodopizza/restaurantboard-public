@@ -89,14 +89,9 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public async Task<JsonResult> GetOrderReadinessToStationary(int unitId)
         {
-            const int maxCountOrders = 16;
-
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            var orders = (await _trackerClient
-                .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
-                .Select(MapToRestaurantReadnessOrders)
-                .ToArray();
+            var orders = await GetOrders(pizzeria);
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
@@ -130,6 +125,17 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             };
 
             return Json(result);
+        }
+
+        private async Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria)
+        {
+            const int maxCountOrders = 16;
+            
+            var orders = (await _trackerClient
+                    .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
+                .Select(MapToRestaurantReadnessOrders)
+                .ToArray();
+            return orders;
         }
 
         private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
