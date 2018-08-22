@@ -9,6 +9,10 @@ namespace Dodo.Core.DomainModel.OrderProcessing
 		public String ClientName { get; }		
 		public DateTime OrderReadyDateTime { get; }
 
+		public RestaurantReadnessOrders()
+		{
+		}
+
 		public RestaurantReadnessOrders(Int32 orderId, Int32 orderNumber, String clientName, DateTime orderReadyDateTime)
 		{
 			OrderId = orderId;
