@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Dodo.Core.AppServices;
 using Dodo.Core.Common;
@@ -7,6 +8,7 @@ using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using NUnit.Framework;
+using Tests.DSL;
 
 namespace Tests
 {
@@ -15,32 +17,18 @@ namespace Tests
         [Test]
         public async Task ShouldReturnOrders_ForUnitId()
         {
-            var unitOrdersService = new UnitOrdersService(
-                new TrackerClientStub(),
-                new DepartmentsStructureService());
+            var trackerClientStub = Create.TrackerClient
+                .WithFakeOrders(new ProductionOrder { ClientName = "Лупа" })
+                .Build();
+            var departmentStructureStub = Create.DepartmentsStructureService
+                .WithPizzeria(id: 29)
+                .Build();
+            var unitOrdersService = new UnitOrdersService(trackerClientStub, departmentStructureStub);
 
             var unitOrders = await unitOrdersService.GetUnitOrders(29);
 
-            Assert.AreEqual("Лупа", unitOrders.Orders[0].ClientName);
             Assert.AreEqual(29, unitOrders.Unit.Id);
-        }
-    }
-
-    public class TrackerClientStub : ITrackerClient
-    {
-        public Task<ProductionOrder[]> GetOrdersByTypeAsync(Uuid unitUuid, OrderType type, int limit)
-        {
-            var orders = new[]
-            {
-                new ProductionOrder
-                {
-                    Id = 56,
-                    Number = 4,
-                    ClientName = "Лупа",
-                    ChangeDate = DateTime.Now.AddMinutes(-3)
-                }
-            };
-            return Task.FromResult(orders);
+            Assert.AreEqual("Лупа", unitOrders.Orders.Single().ClientName);
         }
     }
 }
