@@ -31,13 +31,15 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IManagementService _managementService;
         private readonly ITrackerClient _trackerClient;
         private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IPizzeriaOrdersService _pizzeriaOrdersService;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
             ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
+            IHostingEnvironment hostingEnvironment,
+            IPizzeriaOrdersService pizzeriaOrdersService
         )
         {
             _departmentsStructureService = departmentsStructureService;
@@ -45,6 +47,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             _managementService = managementService;
             _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
+            _pizzeriaOrdersService = pizzeriaOrdersService;
         }
 
 
@@ -162,8 +165,13 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         #endregion Ресторан.Готовность заказов
     }
-    
-    public class PizzeriaOrdersService
+
+    public interface IPizzeriaOrdersService
+    {
+        Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria);
+    }
+
+    public class PizzeriaOrdersService : IPizzeriaOrdersService
     {
         private readonly ITrackerClient _trackerClient;
 
