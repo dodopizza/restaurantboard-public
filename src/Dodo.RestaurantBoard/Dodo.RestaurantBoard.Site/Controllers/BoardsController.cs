@@ -29,7 +29,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
         private readonly IManagementService _managementService;
-        private readonly ITrackerClient _trackerClient;
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IPizzeriaOrdersService _pizzeriaOrdersService;
 
@@ -37,7 +36,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
-            ITrackerClient trackerClient,
             IHostingEnvironment hostingEnvironment,
             IPizzeriaOrdersService pizzeriaOrdersService
         )
@@ -45,7 +43,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _managementService = managementService;
-            _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
             _pizzeriaOrdersService = pizzeriaOrdersService;
         }
@@ -94,7 +91,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         {
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            var orders = await new PizzeriaOrdersService(_trackerClient).GetOrders(pizzeria);
+            var orders = await _pizzeriaOrdersService.GetOrders(pizzeria);
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
@@ -164,35 +161,5 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         }
 
         #endregion Ресторан.Готовность заказов
-    }
-
-    public interface IPizzeriaOrdersService
-    {
-        Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria);
-    }
-
-    public class PizzeriaOrdersService : IPizzeriaOrdersService
-    {
-        private readonly ITrackerClient _trackerClient;
-
-        public PizzeriaOrdersService(ITrackerClient trackerClient)
-        {
-            _trackerClient = trackerClient;
-        }
-
-        public async Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria)
-        {
-            const int maxCountOrders = 16;
-
-            return (await _trackerClient
-                    .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
-                .Select(MapToRestaurantReadnessOrders)
-                .ToArray();
-        }
-        
-        private RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
-        {
-            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
-        }
     }
 }
