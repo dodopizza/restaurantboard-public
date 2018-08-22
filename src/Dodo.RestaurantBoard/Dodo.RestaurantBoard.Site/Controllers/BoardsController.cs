@@ -38,7 +38,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             IManagementService managementService,
             ITrackerClient trackerClient,
             IHostingEnvironment hostingEnvironment
-            )
+        )
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
@@ -91,7 +91,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         {
             var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
 
-            var orders = await GetOrders(pizzeria);
+            var orders = await new PizzeriaOrdersService(_trackerClient).GetOrders(pizzeria);
 
             var clientTreatment = pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
@@ -125,22 +125,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             };
 
             return Json(result);
-        }
-
-        private async Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria)
-        {
-            const int maxCountOrders = 16;
-            
-            var orders = (await _trackerClient
-                    .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
-                .Select(MapToRestaurantReadnessOrders)
-                .ToArray();
-            return orders;
-        }
-
-        private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
-        {
-            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
         }
 
         private static string GetIconPath(int orderNumber, IReadOnlyList<ClientIcon> icons, string fileStorageHost)
@@ -177,5 +161,30 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         }
 
         #endregion Ресторан.Готовность заказов
+    }
+    
+    public class PizzeriaOrdersService
+    {
+        private readonly ITrackerClient _trackerClient;
+
+        public PizzeriaOrdersService(ITrackerClient trackerClient)
+        {
+            _trackerClient = trackerClient;
+        }
+
+        public async Task<RestaurantReadnessOrders[]> GetOrders(Pizzeria pizzeria)
+        {
+            const int maxCountOrders = 16;
+
+            return (await _trackerClient
+                    .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
+                .Select(MapToRestaurantReadnessOrders)
+                .ToArray();
+        }
+        
+        private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
+        {
+            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
+        }
     }
 }
