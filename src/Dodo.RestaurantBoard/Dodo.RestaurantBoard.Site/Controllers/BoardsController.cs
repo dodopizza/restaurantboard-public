@@ -29,22 +29,20 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
         private readonly IManagementService _managementService;
-        private readonly ITrackerClient _trackerClient;
         private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IPizzeriaOrdersService pizzeriaOrdersService;
 
         public BoardsController(
             IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
-            ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
-            )
+            IHostingEnvironment hostingEnvironment, IPizzeriaOrdersService pizzeriaOrdersService)
         {
             _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _managementService = managementService;
-            _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
+            this.pizzeriaOrdersService = pizzeriaOrdersService;
         }
 
 
@@ -89,23 +87,16 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public async Task<JsonResult> GetOrderReadinessToStationary(int unitId)
         {
-            const int maxCountOrders = 16;
+            var pizzeriaOrders = await pizzeriaOrdersService.GetOrdersByUnitIdAsync(unitId);
 
-            var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
-
-            var orders = (await _trackerClient
-                .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
-                .Select(MapToRestaurantReadnessOrders)
-                .ToArray();
-
-            var clientTreatment = pizzeria.ClientTreatment;
+            var clientTreatment = pizzeriaOrders.Pizzeria.ClientTreatment;
             ClientIcon[] icons = { };
             if (clientTreatment == ClientTreatment.RandomImage)
             {
                 icons = _clientsService.GetIcons();
             }
 
-            var playTineParamIds = orders.Select(x => x.OrderId).ToArray();
+            var playTineParamIds = pizzeriaOrders.Orders.Select(x => x.OrderId).ToArray();
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
             CurrentProductsIds = playTineParamIds;
 
@@ -113,8 +104,8 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             {
                 PlayTune = (int)ViewData["PlayTune"],
                 NewOrderArrived = (int)ViewData["PlayTune"] == 1,
-                SongName = orders.Length == 0 ? DodoFMProxy.GetSongName() : string.Empty,
-                ClientOrders = orders.Select(
+                SongName = pizzeriaOrders.Orders.Length == 0 ? DodoFMProxy.GetSongName() : string.Empty,
+                ClientOrders = pizzeriaOrders.Orders.Select(
                         x => new
                         {
                             x.OrderId,
@@ -130,11 +121,6 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             };
 
             return Json(result);
-        }
-
-        private static RestaurantReadnessOrders MapToRestaurantReadnessOrders(ProductionOrder order)
-        {
-            return new RestaurantReadnessOrders(order.Id, order.Number, order.ClientName, order.ChangeDate ?? DateTime.Now);
         }
 
         private static string GetIconPath(int orderNumber, IReadOnlyList<ClientIcon> icons, string fileStorageHost)
