@@ -7,9 +7,14 @@ using Moq;
 
 namespace Dodo.RestaurantBoard.Site.Tests.DSL
 {
-    class ClientsServiceBuilder
+    public class ClientsServiceBuilder
     {
         private readonly Mock<IClientsService> _service;
+
+        public ClientsServiceBuilder()
+        {
+            _service = new Mock<IClientsService>();
+        }
 
         public ClientsServiceBuilder WithoutIcons()
         {
