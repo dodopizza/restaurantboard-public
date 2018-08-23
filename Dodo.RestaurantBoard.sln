@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.RestaurantBoard.Site",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dodo.Tracker.WebApi", "Dodo.Tracker.WebApi\Dodo.Tracker.WebApi.csproj", "{393846DC-A94D-41E7-84BC-31FBB0A2F958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodo.Tests", "Dodo.Tests\Dodo.Tests.csproj", "{ECF0EDB9-B69D-47FD-A0B5-C6151444833B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{393846DC-A94D-41E7-84BC-31FBB0A2F958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{393846DC-A94D-41E7-84BC-31FBB0A2F958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{393846DC-A94D-41E7-84BC-31FBB0A2F958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF0EDB9-B69D-47FD-A0B5-C6151444833B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF0EDB9-B69D-47FD-A0B5-C6151444833B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF0EDB9-B69D-47FD-A0B5-C6151444833B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF0EDB9-B69D-47FD-A0B5-C6151444833B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
