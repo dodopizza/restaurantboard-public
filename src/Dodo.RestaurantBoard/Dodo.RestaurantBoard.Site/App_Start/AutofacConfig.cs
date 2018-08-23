@@ -27,7 +27,8 @@ namespace Dodo.RestaurantBoard.Site
 			builder.RegisterType<DepartmentsStructureService>().As<IDepartmentsStructureService>().SingleInstance();
 			builder.RegisterType<ManagementService>().As<IManagementService>().SingleInstance();
 			builder.RegisterType<ClientService>().As<IClientsService>().SingleInstance();
-			builder.RegisterType<TrackerClient>()
+            builder.RegisterType<PizzeriaOrdersService>().As<IPizzeriaOrdersService>().SingleInstance();
+            builder.RegisterType<TrackerClient>()
 				.As<ITrackerClient>()
 				.WithParameter("baseUri", new Uri(configuration["Tracker:Uri"], UriKind.Absolute))
 				.SingleInstance();
