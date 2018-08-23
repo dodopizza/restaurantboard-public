@@ -8,13 +8,16 @@ namespace Dodo.RestaurantBoard.Test
 {
     public class TrackerClientStub : ITrackerClient
     {
+        private readonly ProductionOrder[] _orders;
+
+        public TrackerClientStub(ProductionOrder[] orders)
+        {
+            _orders = orders;
+        }
+
         public Task<ProductionOrder[]> GetOrdersByTypeAsync(Uuid unitUuid, OrderType type, int limit)
         {
-            return Task.FromResult(new[]
-            {
-                new ProductionOrder(),
-                new ProductionOrder(),
-            });
+            return Task.FromResult(_orders);
         }
     }
 }
