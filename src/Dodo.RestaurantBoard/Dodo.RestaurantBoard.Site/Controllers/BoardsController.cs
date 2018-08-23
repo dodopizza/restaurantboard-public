@@ -26,25 +26,23 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 {
     public class BoardsController : Controller
     {
-        private readonly IDepartmentsStructureService _departmentsStructureService;
         private readonly IClientsService _clientsService;
         private readonly IManagementService _managementService;
-        private readonly ITrackerClient _trackerClient;
         private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IPizzeriaOrdersService _pizzeriaOrdersService;
 
         public BoardsController(
-            IDepartmentsStructureService departmentsStructureService,
             IClientsService clientsService,
             IManagementService managementService,
-            ITrackerClient trackerClient,
-            IHostingEnvironment hostingEnvironment
+            IHostingEnvironment hostingEnvironment,
+            IPizzeriaOrdersService pizzeriaOrdersService
             )
         {
-            _departmentsStructureService = departmentsStructureService;
             _clientsService = clientsService;
             _managementService = managementService;
-            _trackerClient = trackerClient;
             _hostingEnvironment = hostingEnvironment;
+            _pizzeriaOrdersService = pizzeriaOrdersService;
+
         }
 
 
@@ -66,7 +64,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         public ActionResult Index()
         {
-            var unit = _departmentsStructureService.GetUnitOrCache(Uuid.Empty);
+            var unit = _pizzeriaOrdersService.GetUnitOrCache(Uuid.Empty);
 
             return RedirectToAction("OrdersReadinessToStationary", new { unitId = unit.Id });
         }
@@ -75,10 +73,10 @@ namespace Dodo.RestaurantBoard.Site.Controllers
 
         public ViewResult OrdersReadinessToStationary(int unitId)
         {
-            var department = _departmentsStructureService.GetDepartmentByUnitOrCache(unitId);
+            var department = _pizzeriaOrdersService.GetDepartmentByUnitOrCache(unitId);
             if (department == null) throw new ArgumentException(nameof(unitId));
 
-            var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
+            var pizzeria = _pizzeriaOrdersService.GetPizzeriaOrCache(unitId);
 
             bool isNewBoard = true;
             var model = new OrdersReadinessToStationaryModel(department.Id, department.Country.Id, unitId, isNewBoard, pizzeria.ClientTreatment);
@@ -91,9 +89,9 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         {
             const int maxCountOrders = 16;
 
-            var pizzeria = _departmentsStructureService.GetPizzeriaOrCache(unitId);
+            var pizzeria = _pizzeriaOrdersService.GetPizzeriaOrCache(unitId);
 
-            var orders = (await _trackerClient
+            var orders = (await _pizzeriaOrdersService
                 .GetOrdersByTypeAsync(pizzeria.Uuid, OrderType.Stationary, maxCountOrders))
                 .Select(MapToRestaurantReadnessOrders)
                 .ToArray();
@@ -146,7 +144,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public JsonResult GetRestaurantBannerUrl(int countryId, int departmentId, int unitId)
         {
-            var department = _departmentsStructureService.GetDepartmentOrCache<CityDepartment>(departmentId);
+            var department = _pizzeriaOrdersService.GetDepartmentOrCache<CityDepartment>(departmentId);
             var restaurantBanners = _managementService
                 .GetAvailableBanners(countryId, unitId, department.CurrentDateTime)
                 .Where(x => x.MenuSpecializationTypes.Any(q => q == department.MenuSpecializationType));
