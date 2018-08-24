@@ -9,7 +9,7 @@ namespace Dodo.Tests
     public class BoardsControllerTests
     {
         [Fact]
-        public async Task ShouldReturnOrder_WithLupaName()
+        public async Task ShouldReturnOrderFromGetOrderReadinessToStationary_AreEqualWithOrderFromPizzeriaOrders()
         {
             var clientName = "Лупа";
             var pizzeriaOrder = Create.PizzeriaOrder().With(clientName).Please();
