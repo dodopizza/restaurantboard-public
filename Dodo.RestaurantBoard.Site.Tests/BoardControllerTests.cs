@@ -26,8 +26,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             var jsonResult = await boardContoller.GetOrderReadinessToStationary(42);
             var orders = jsonResult.Value.GetValue<IEnumerable<object>>("ClientOrders").ToList();
 
-            Assert.Single(orders);
-            Assert.Equal("Buba", orders.First().GetValue<string>("ClientName"));
+            Assert.Equal("Buba", orders.Single().GetValue<string>("ClientName"));
         }
     }
 }
