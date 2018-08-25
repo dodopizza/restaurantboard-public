@@ -16,7 +16,7 @@ namespace Dodo.RestaurantBoard.Site.Tests.DSL
             _service = new Mock<ITrackerClient>();
         }
 
-        public TrackerClientBuilder With(ProductionOrder[] orders)
+        public TrackerClientBuilder WithOrders(ProductionOrder[] orders)
         {
             _service
                 .Setup(x => x.GetOrdersByTypeAsync(It.IsAny<Uuid>(), It.IsAny<OrderType>(), It.IsAny<int>()))
