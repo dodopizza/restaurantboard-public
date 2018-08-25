@@ -12,6 +12,7 @@ using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
 using Dodo.RestaurantBoard.Site.Models;
 using Dodo.RestaurantBoard.Site.Models.DodoFM;
+using Dodo.RestaurantBoard.Site.ViewModel;
 using Dodo.Tracker.Contracts;
 using Dodo.Tracker.Contracts.Enums;
 using Microsoft.AspNetCore.Hosting;
@@ -109,17 +110,17 @@ namespace Dodo.RestaurantBoard.Site.Controllers
             ViewData["PlayTune"] = playTineParamIds.Except(CurrentProductsIds).Any() ? 1 : 0;
             CurrentProductsIds = playTineParamIds;
 
-            var result = new
+            var result = new Board
             {
                 PlayTune = (int)ViewData["PlayTune"],
                 NewOrderArrived = (int)ViewData["PlayTune"] == 1,
                 SongName = orders.Length == 0 ? DodoFMProxy.GetSongName() : string.Empty,
                 ClientOrders = orders.Select(
-                        x => new
+                        x => new ClientOrder
                         {
-                            x.OrderId,
-                            x.OrderNumber,
-                            x.ClientName,
+                            OrderId = x.OrderId,
+                            OrderNumber = x.OrderNumber,
+                            ClientName = x.ClientName,
                             ClientIconPath = clientTreatment == ClientTreatment.RandomImage && icons.Any()
                                 ? GetIconPath(x.OrderNumber, icons, "https://wedevstorage.blob.core.windows.net/")
                                 : null,
@@ -127,6 +128,7 @@ namespace Dodo.RestaurantBoard.Site.Controllers
                             OrderReadyDateTime = x.OrderReadyDateTime.ToString(CultureInfo.CurrentUICulture)
                         })
                     .OrderByDescending(x => x.OrderReadyTimestamp)
+                    .ToArray()
             };
 
             return Json(result);

@@ -1,8 +1,9 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using System.Linq;
 using Dodo.RestaurantBoard.Site.Controllers;
 using Dodo.RestaurantBoard.Site.Tests.DSL;
+using Dodo.RestaurantBoard.Site.ViewModel;
 using Dodo.Tracker.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
@@ -12,7 +13,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
     public class BoardsControllerTests
     {
         [Fact]
-        public async void GetOrderReadinessToStationary_ShouldReturnAmountOfOrdersEqualsToReturnedFromTrackerClient()
+        public async void GetOrderReadinessToStationary_ShouldReturnOrderForJohnDoe()
         {
             var departmentStructureServiceStub = Create
                 .DepartmentsStructureServiceBuilder
@@ -28,15 +29,9 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 .Please();
             var boardsController = new BoardsController(departmentStructureServiceStub, clientsServiceStub, null, trackerClientStub, null);
 
-            var result = await boardsController.GetOrderReadinessToStationary(1);
+            var board = (await boardsController.GetOrderReadinessToStationary(unitId: 1)).Value as Board;
 
-            Assert.Equal(2, GetOrdersCount(result));
-        }
-
-        private int GetOrdersCount(JsonResult result)
-        {
-            var orders = (result.Value.GetType().GetProperty("ClientOrders").GetValue(result.Value) as IEnumerable<object>);
-            return orders?.Count() ?? 0;
+            Assert.Equal("John Doe", board.ClientOrders.Single().ClientName);
         }
 
         private ProductionOrder[] Orders()
@@ -47,16 +42,8 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 {
                     Id = 55,
                     Number = 3,
-                    ClientName = "œÛÔ‡",
+                    ClientName = "John Doe",
                     ChangeDate = DateTime.Now.AddMinutes(-5),
-                },
-
-                new ProductionOrder
-                {
-                    Id = 56,
-                    Number = 4,
-                    ClientName = "ÀÛÔ‡",
-                    ChangeDate = DateTime.Now.AddMinutes(-3),
                 }
             };
         }
