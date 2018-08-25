@@ -11,9 +11,9 @@ namespace Dodo.Tests.DSL
             return new PizzeriaOrderBuilder();
         }
 
-        public static BoardBuilder Board()
+        public static BoardControlerBuilder BoardController()
         {
-            return new BoardBuilder();
+            return new BoardControlerBuilder();
         }
     }
 }

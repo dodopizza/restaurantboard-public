@@ -1,4 +1,4 @@
-using Dodo.RestaurantBoard.Domain.Services;
+﻿using Dodo.RestaurantBoard.Domain.Services;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -11,15 +11,14 @@ namespace Dodo.Tests
         [Fact]
         public async Task ShouldReturnOrderFromGetOrderReadinessToStationary_AreEqualWithOrderFromPizzeriaOrders()
         {
-            var clientName = "����";
-            var pizzeriaOrder = Create.PizzeriaOrder().With(clientName).Please();
-            var board = Create.Board().With(pizzeriaOrder).Please();
+            var pizzeriaOrder = Create.PizzeriaOrder().AddClientWithName("Лупа").Please();
+            var board = Create.BoardController().With(pizzeriaOrder).Please();
 
             var order = (await board.GetOrderReadinessToStationary(unitId: 0)).Value as Order;
 
-            Assert.Equal(clientName, order.ClientOrders.First().ClientName);
+            Assert.Equal("Лупа", order.ClientOrders.Single().ClientName);
         }
 
-     
+
     }
 }

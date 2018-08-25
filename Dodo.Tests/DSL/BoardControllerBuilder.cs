@@ -4,11 +4,11 @@ using Dodo.RestaurantBoard.Site.Controllers;
 
 namespace Dodo.Tests.DSL
 {
-    public class BoardBuilder
+    public class BoardControlerBuilder
     {
         private IPizzeriaOrdersService _pizzeriaOrdersService;
 
-        public BoardBuilder With(IPizzeriaOrdersService pizzeriaOrdersService)
+        public BoardControlerBuilder With(IPizzeriaOrdersService pizzeriaOrdersService)
         {
             _pizzeriaOrdersService = pizzeriaOrdersService;
             return this;

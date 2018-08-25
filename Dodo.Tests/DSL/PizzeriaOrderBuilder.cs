@@ -7,7 +7,7 @@ namespace Dodo.Tests.DSL
     {
         string _clientName;      
 
-        public PizzeriaOrderBuilder With(string name)
+        public PizzeriaOrderBuilder AddClientWithName(string name)
         {
             _clientName = name;
             return this;
