@@ -5,10 +5,10 @@ using Xunit;
 
 namespace Dodo.RestaurantBoard.Test
 {
-    public class PizzeriaOrdersServiceTests
+    public class BoardsControllerTests
     {
         [Fact]
-        public void WhenGetOrderReadinessToStationaryWith2EmptyOrders_ShouldReturnJsonWith2Orders()
+        public void WhenGetOrderReadinessToStationaryWith2Orders_ShouldReturnOrderReadinessResultWith2CorrectOrders()
         {
             var orderForPupa = Create.ProductionOrder.For("Пупа")
                 .WithId(55).WithNumber(3).WithDate(1.JanOf(2018)).Please();
@@ -21,16 +21,17 @@ namespace Dodo.RestaurantBoard.Test
 
             var result = controller.GetOrderReadinessToStationary(10).Result.Value as IOrderReadinessResult;
 
-            AssertOrder(orderForLupa, result.ClientOrders[0]);
-            AssertOrder(orderForPupa, result.ClientOrders[1]);
+            Assert.Equal(2, result.ClientOrders.Count);
+            AssertOrderEquals(orderForLupa, result.ClientOrders[0]);
+            AssertOrderEquals(orderForPupa, result.ClientOrders[1]);
         }
 
-        private void AssertOrder(ProductionOrder expected, IClientOrder result)
+        private void AssertOrderEquals(ProductionOrder expected, IClientOrder actual)
         {
-            Assert.Equal(expected.Id, result.OrderId);
-            Assert.Equal(expected.Number, result.OrderNumber);
-            Assert.Equal(expected.ClientName, result.ClientName);
-            Assert.Equal(expected.ChangeDate.Value.Ticks, result.OrderReadyTimestamp);
+            Assert.Equal(expected.Id, actual.OrderId);
+            Assert.Equal(expected.Number, actual.OrderNumber);
+            Assert.Equal(expected.ClientName, actual.ClientName);
+            Assert.Equal(expected.ChangeDate.Value.Ticks, actual.OrderReadyTimestamp);
         }
     }
 }
