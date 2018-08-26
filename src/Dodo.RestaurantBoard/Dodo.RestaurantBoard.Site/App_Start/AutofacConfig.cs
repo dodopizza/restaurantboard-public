@@ -3,6 +3,8 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Dodo.Core.Services;
 using Dodo.RestaurantBoard.Domain.Services;
+using Dodo.RestaurantBoard.Site.AppServices;
+using Dodo.RestaurantBoard.Site.Core.AppServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +29,7 @@ namespace Dodo.RestaurantBoard.Site
 			builder.RegisterType<DepartmentsStructureService>().As<IDepartmentsStructureService>().SingleInstance();
 			builder.RegisterType<ManagementService>().As<IManagementService>().SingleInstance();
 			builder.RegisterType<ClientService>().As<IClientsService>().SingleInstance();
+			builder.RegisterType<TrackerService>().As<ITrackerService>().SingleInstance();
 			builder.RegisterType<TrackerClient>()
 				.As<ITrackerClient>()
 				.WithParameter("baseUri", new Uri(configuration["Tracker:Uri"], UriKind.Absolute))
