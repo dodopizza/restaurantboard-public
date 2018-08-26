@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Web.Script.Serialization;
-using Dodo.RestaurantBoard.Domain.Services;
-using Dodo.RestaurantBoard.Site.Controllers;
-using Dodo.RestaurantBoard.Site.ViewModels;
+﻿using Dodo.RestaurantBoard.Site.ViewModels;
 using Dodo.RestaurantBoard.Test.DSL;
+using Dodo.Tracker.Contracts;
 using Xunit;
 
 namespace Dodo.RestaurantBoard.Test
@@ -15,13 +10,27 @@ namespace Dodo.RestaurantBoard.Test
         [Fact]
         public void WhenGetOrderReadinessToStationaryWith2EmptyOrders_ShouldReturnJsonWith2Orders()
         {
-            var trackerClient = Create.TrackerClientBuilder.WithEmptyOrders(2).Please();
-            var service = Create.PizzeriaOrdersServiceBuilder.WithTrackerClient(trackerClient).Please();
-            var controller = Create.BoardsControllerBuilder.WithPizzeriaOrdersService(service).Please();
+            var orderForPupa = Create.ProductionOrder.For("Пупа")
+                .WithId(55).WithNumber(3).WithDate(1.JanOf(2018)).Please();
+            var orderForLupa = Create.ProductionOrder.For("Лупа")
+                .WithId(56).WithNumber(4).WithDate(2.JanOf(2018)).Please();
+            
+            var trackerClient = Create.TrackerClient.With(orderForPupa).With(orderForLupa).Please();
+            var service = Create.PizzeriaOrdersService.WithTrackerClient(trackerClient).Please();
+            var controller = Create.BoardsController.WithPizzeriaOrdersService(service).Please();
 
-            IOrderReadinessResult result = controller.GetOrderReadinessToStationary(10).Result.Value as IOrderReadinessResult;
+            var result = controller.GetOrderReadinessToStationary(10).Result.Value as IOrderReadinessResult;
 
-            Assert.Equal(2, result.ClientOrders.Count);
+            AssertOrder(orderForLupa, result.ClientOrders[0]);
+            AssertOrder(orderForPupa, result.ClientOrders[1]);
+        }
+
+        private void AssertOrder(ProductionOrder expected, IClientOrder result)
+        {
+            Assert.Equal(expected.Id, result.OrderId);
+            Assert.Equal(expected.Number, result.OrderNumber);
+            Assert.Equal(expected.ClientName, result.ClientName);
+            Assert.Equal(expected.ChangeDate.Value.Ticks, result.OrderReadyTimestamp);
         }
     }
 }
