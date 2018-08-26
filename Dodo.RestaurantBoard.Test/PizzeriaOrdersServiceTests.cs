@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Dodo.RestaurantBoard.Site.ViewModels;
+﻿using Dodo.RestaurantBoard.Site.ViewModels;
 using Dodo.RestaurantBoard.Test.DSL;
+using Dodo.Tracker.Contracts;
 using Xunit;
 
 namespace Dodo.RestaurantBoard.Test
@@ -21,33 +21,16 @@ namespace Dodo.RestaurantBoard.Test
 
             var result = controller.GetOrderReadinessToStationary(10).Result.Value as IOrderReadinessResult;
 
-            Assert.Equal(new OrderReadinessResult
-            {
-                PlayTune = 1,
-                NewOrderArrived = true,
-                SongName = "I will always love you",
-                ClientOrders = new List<IClientOrder>
-                {
-                    new ClientOrder
-                    {
-                        OrderId = 56,
-                        OrderNumber = 4,
-                        ClientName = "Лупа",
-                        ClientIconPath = null,
-                        OrderReadyTimestamp = 2.JanOf(2018).Ticks,
-                        OrderReadyDateTime = "02.01.2018 0:00:00"
-                    },
-                    new ClientOrder
-                    {
-                        OrderId = 55,
-                        OrderNumber = 3,
-                        ClientName = "Пупа",
-                        ClientIconPath = null,
-                        OrderReadyTimestamp = 1.JanOf(2018).Ticks,
-                        OrderReadyDateTime = "01.01.2018 0:00:00"
-                    }
-                }
-            }, result);
+            AssertOrder(orderForLupa, result.ClientOrders[0]);
+            AssertOrder(orderForPupa, result.ClientOrders[1]);
+        }
+
+        private void AssertOrder(ProductionOrder expected, IClientOrder result)
+        {
+            Assert.Equal(expected.Id, result.OrderId);
+            Assert.Equal(expected.Number, result.OrderNumber);
+            Assert.Equal(expected.ClientName, result.ClientName);
+            Assert.Equal(expected.ChangeDate.Value.Ticks, result.OrderReadyTimestamp);
         }
     }
 }
