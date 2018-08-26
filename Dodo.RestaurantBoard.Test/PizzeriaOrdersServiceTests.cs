@@ -1,4 +1,4 @@
-﻿using Dodo.RestaurantBoard.Site.ViewModels;
+using Dodo.RestaurantBoard.Site.ViewModels;
 using Dodo.RestaurantBoard.Test.DSL;
 using Dodo.Tracker.Contracts;
 using Xunit;
