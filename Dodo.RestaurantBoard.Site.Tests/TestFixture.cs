@@ -19,7 +19,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             _server = new TestServer(builder);
 
             Client = _server.CreateClient();
-            Client.BaseAddress = new Uri("http://localhost:5000");
+            //Client.BaseAddress = new Uri("http://localhost:5000");
         }
 
         public void Dispose()
