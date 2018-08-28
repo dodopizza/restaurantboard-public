@@ -16,7 +16,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
         }
 
         [Fact]
-        public async Task Test1()
+        public async Task RedirectToOrderReadinessToStationaryFromIndex()
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "");
 
@@ -24,8 +24,8 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             var responseMessage = await response.Content.ReadAsStringAsync();
 
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            Assert.Equal("success", responseMessage);
+            Assert.Equal(HttpStatusCode.Redirect, response.StatusCode);
+            Assert.Equal(new Uri("/Boards/OrdersReadinessToStationary?unitId=29", UriKind.Relative), response.Headers.Location);
         }
     }
 }
