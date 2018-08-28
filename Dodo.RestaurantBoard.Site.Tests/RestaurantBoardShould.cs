@@ -25,7 +25,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
             var responseMessage = await response.Content.ReadAsStringAsync();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            Assert.Equal("sucess", responseMessage);
+            Assert.Equal("success", responseMessage);
         }
     }
 }

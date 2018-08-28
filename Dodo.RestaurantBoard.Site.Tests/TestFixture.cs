@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using System;
+using System.IO;
 using System.Net.Http;
 
 namespace Dodo.RestaurantBoard.Site.Tests
@@ -14,12 +16,20 @@ namespace Dodo.RestaurantBoard.Site.Tests
         public TestFixture()
         {
             var builder = new WebHostBuilder()
-                .UseStartup<Core.Startup>();
+                .UseStartup<Core.Startup>()
+                .ConfigureAppConfiguration(
+                    (context, configBuilder) =>
+                    {
+                        configBuilder.SetBasePath(
+                            Path.Combine(
+                                Directory.GetCurrentDirectory(), 
+                                "..\\..\\..\\..\\src\\Dodo.RestaurantBoard\\Dodo.RestaurantBoard.Site"));
+                        configBuilder.AddJsonFile("appsettings.json");
+                    });
 
             _server = new TestServer(builder);
 
             Client = _server.CreateClient();
-            //Client.BaseAddress = new Uri("http://localhost:5000");
         }
 
         public void Dispose()
