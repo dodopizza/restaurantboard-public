@@ -60,43 +60,27 @@ namespace Dodo.RestaurantBoard.Site.Tests
             var request = new HttpRequestMessage(HttpMethod.Get, "/Boards/GetOrderReadinessToStationary?unitId=29");
 
             var response = await _client.SendAsync(request);
-
-            var responseMessage = await response.Content.ReadAsStringAsync();
-
-            dynamic returnedJson = JsonConvert.DeserializeObject(responseMessage);
-
-            List<ReturnedOrder> returnedOrders = returnedJson.clientOrders.ToObject<List<ReturnedOrder>>();
+            var returnedOrders = await GetOrders(response);
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            Assert.Equal(2, returnedOrders.Count);
-            Assert.Collection(returnedOrders,
-                item =>
-                {
-                    Assert.Equal("Jill", item.ClientName);
-                    Assert.Equal(2, item.OrderId);
-                    Assert.Equal(20, item.OrderNumber);
-                },
-                item =>
-                {
-                    Assert.Equal("John", item.ClientName);
-                    Assert.Equal(1, item.OrderId);
-                    Assert.Equal(10, item.OrderNumber);
-                });
+
+            AssertThat.ReturnedOrdersContainsInfoFromExpected(Reversed(expectedProductionOrders), returnedOrders);
         }
 
-        private class ReturnedOrder
+        private async Task<List<ReturnedOrder>> GetOrders(HttpResponseMessage responseMessage)
         {
-            public int OrderId { get; set; }
+            var contentString = await responseMessage.Content.ReadAsStringAsync();
 
-            public int OrderNumber { get; set; }
+            dynamic contentJson = JsonConvert.DeserializeObject(contentString);
 
-            public string ClientName { get; set; }
+            return contentJson.clientOrders.ToObject<List<ReturnedOrder>>();
+        }
 
-            public string ClientIconPath { get; set; }
-
-            public long OrderReadyTimestamp { get; set; }
-
-            public string OrderReadyDateTime { get; set; }
+        private T[] Reversed<T>(T[] initial)
+        {
+            var list = new List<T>(initial);
+            list.Reverse();
+            return list.ToArray();
         }
     }
 }
