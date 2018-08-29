@@ -5,6 +5,7 @@ using Dodo.Tracker.Contracts.Enums;
 using Moq;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
         }
 
         [Fact]
-        public async Task X()
+        public async Task ReturnExpectedOrders()
         {
             var expectedProductionOrders = new[]
                 {
@@ -64,8 +65,38 @@ namespace Dodo.RestaurantBoard.Site.Tests
 
             dynamic returnedJson = JsonConvert.DeserializeObject(responseMessage);
 
+            List<ReturnedOrder> returnedOrders = returnedJson.clientOrders.ToObject<List<ReturnedOrder>>();
+
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-            Assert.Equal(2, returnedJson.clientOrders.Count);
+            Assert.Equal(2, returnedOrders.Count);
+            Assert.Collection(returnedOrders,
+                item =>
+                {
+                    Assert.Equal("Jill", item.ClientName);
+                    Assert.Equal(2, item.OrderId);
+                    Assert.Equal(20, item.OrderNumber);
+                },
+                item =>
+                {
+                    Assert.Equal("John", item.ClientName);
+                    Assert.Equal(1, item.OrderId);
+                    Assert.Equal(10, item.OrderNumber);
+                });
+        }
+
+        private class ReturnedOrder
+        {
+            public int OrderId { get; set; }
+
+            public int OrderNumber { get; set; }
+
+            public string ClientName { get; set; }
+
+            public string ClientIconPath { get; set; }
+
+            public long OrderReadyTimestamp { get; set; }
+
+            public string OrderReadyDateTime { get; set; }
         }
     }
 }
