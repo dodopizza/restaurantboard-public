@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
 using System;
 using System.IO;
 using System.Net.Http;
@@ -13,7 +14,11 @@ namespace Dodo.RestaurantBoard.Site.Tests
     {
         private readonly TestServer _server;
 
+        private readonly Mock<ITrackerClient> _stubTrackerClient = new Mock<ITrackerClient>();
+
         public HttpClient Client { get; }
+
+        public Mock<ITrackerClient> StubTrackerClient => _stubTrackerClient;
 
         public TestFixture()
         {
@@ -29,7 +34,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
                 })
                 .ConfigureServices(services =>
                 {
-                    services.AddSingleton<ITrackerClient, StubTrackerClient>();
+                    services.AddSingleton(_stubTrackerClient.Object);
                 });
 
             _server = new TestServer(builder);
