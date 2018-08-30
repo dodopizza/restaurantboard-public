@@ -29,7 +29,7 @@ namespace Dodo.RestaurantBoard.Site.Tests
                     configBuilder.SetBasePath(
                         Path.Combine(
                             Directory.GetCurrentDirectory(),
-                            "..\\..\\..\\..\\src\\Dodo.RestaurantBoard\\Dodo.RestaurantBoard.Site"));
+                            "../../../../src/Dodo.RestaurantBoard/Dodo.RestaurantBoard.Site"));
                     configBuilder.AddJsonFile("appsettings.json");
                 })
                 .ConfigureServices(services =>
